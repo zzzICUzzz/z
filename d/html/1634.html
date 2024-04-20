@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Extubation management in the adult intensive care unit</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Extubation management in the adult intensive care unit</h1>
+<div class="utdArticleSection utdStyle" id="topicContent"><div id="topicTitle">Extubation management in the adult intensive care unit</div> <div class="authorSectionElem"><div class="authorsElementsLeft"><dl id="topicContributors"><dt><span> </span>Author:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Robert C Hyzy, MD</a></dd><dt><span> </span>Section Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Scott Manaker, MD, PhD</a></dd><dt><span> </span>Deputy Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Geraldine Finlay, MD</a></dd></dl></div><div class="authorsElementsRight"><div id="literatureReviewDate"><div class="litReviewSingleLine"><bdi><span class="emphasis">Literature review current through:</span> Jan 2024.</bdi></div><div class="litReviewSingleLine"><bdi><span class="emphasis">This topic last updated:</span> Apr 27, 2023.</bdi></div></div></div></div><div id="topicWhatsNewContainer"></div><div id="topicText"><p class="headingAnchor" id="H1"><span class="h1">INTRODUCTION</span><span class="headingEndMark"> — </span>Extubation refers to removal of the endotracheal tube. It is the final step in liberating a patient from mechanical ventilation.</p><p>Assessing the safety of extubation, the technique of extubation, and postextubation management are described in this topic. Extubation following anesthesia, and methods of weaning from mechanical ventilation are reviewed separately. (See  <a class="medical medical_review" href="/d/html/94224.html" rel="external">"Extubation following anesthesia"</a> and  <a class="medical medical_review" href="/d/html/94537.html" rel="external">"Emergence from general anesthesia"</a> and  <a class="medical medical_review" href="/d/html/1652.html" rel="external">"Weaning from mechanical ventilation: Readiness testing"</a> and  <a class="medical medical_review" href="/d/html/1650.html" rel="external">"Initial weaning strategy in mechanically ventilated adults"</a>.)</p><p class="headingAnchor" id="H2"><span class="h1">ASSESSING SAFETY OF EXTUBATION</span><span class="headingEndMark"> — </span>Extubation should not be performed until it has been determined that the patient's medical condition is stable, a weaning trial has been successful, the airway is patent, and any potential difficulties in reintubation have been identified. Most patients are extubated during daytime hours, although nocturnal extubation is appropriate in select circumstances.</p><p class="headingAnchor" id="H981740378"><span class="h2">Stable medical condition</span><span class="headingEndMark"> — </span>Patients cannot be extubated unless the condition for intubation is improved and the clinical criteria for weaning have been met (<a class="graphic graphic_table graphicRef62377" href="/d/graphic/62377.html" rel="external">table 1</a>). Readiness for weaning is discussed separately. (See  <a class="medical medical_review" href="/d/html/1652.html" rel="external">"Weaning from mechanical ventilation: Readiness testing"</a>.)</p><p class="headingAnchor" id="H498853455"><span class="h2">Successful weaning trial</span><span class="headingEndMark"> — </span>In general, most patients in the intensive care unit (ICU) should not be extubated unless a successful weaning trial has been passed. Exceptions include postoperative patients who are recovered for short periods in the ICU (eg, 24 hours) and patients undergoing terminal extubation. One study showed a decrease rate of reintubation at 48 hours when patients were rested back on the ventilator for an hour before extubation after the completion of a spontaneous breathing trial. This observation awaits further confirmation [<a href="#rid1">1</a>]. Further details on weaning including terminal weaning and weaning of patients requiring prolonged mechanical ventilation are provided separately. (See  <a class="medical medical_review" href="/d/html/16295.html" rel="external">"Withholding and withdrawing ventilatory support in adults in the intensive care unit", section on 'Withdrawal of ventilatory support'</a> and  <a class="medical medical_review" href="/d/html/1652.html" rel="external">"Weaning from mechanical ventilation: Readiness testing"</a> and  <a class="medical medical_review" href="/d/html/1650.html" rel="external">"Initial weaning strategy in mechanically ventilated adults"</a> and  <a class="medical medical_review" href="/d/html/1638.html" rel="external">"Management and prognosis of patients requiring prolonged mechanical ventilation", section on 'Weaning'</a> and  <a class="medical medical_review" href="/d/html/1652.html" rel="external">"Weaning from mechanical ventilation: Readiness testing", section on 'Rapid shallow breathing index'</a>.)</p><p class="headingAnchor" id="H3"><span class="h2">Assess airway protection</span><span class="headingEndMark"> — </span>Airway protection is the ability to guard against aspiration during spontaneous breathing. It requires sufficient cough strength and an adequate level of consciousness, each of which should be assessed prior to extubation. The amount of secretions should also be considered prior to extubation because airway protection is significantly more difficult when secretions are increased or difficult to expectorate (eg, dry or thick).</p><p>Universally accepted threshold levels of cough strength, level of consciousness, and suctioning frequency that prohibit extubation have not been established. For many patients, it is reasonable to delay extubation if the cough strength is weak, the Glasgow Coma Score (GCS) is &lt;8 (<a class="graphic graphic_table graphicRef81854" href="/d/graphic/81854.html" rel="external">table 2</a>), or suctioning is required more frequently than every two to three hours. However, the final decision to delay or proceed with extubation should be made on a case-by-case basis since delayed extubation is associated with adverse outcomes, such as ventilator-associated pneumonia and increased length of stay [<a href="#rid2">2</a>].</p><p>Extubation failure is highest when a combination of risk factors affecting airway patency is present. As an example, in one study when reduced cough peak expiratory flow rate (PEF ≤60 L/minute), increased sputum volume (&gt;2.5 mL/hour), and impaired neurologic function (inability to follow commands) were present, the incidence of extubation failure was 100 percent, compared with 3 percent when none of the risk factors were present (relative risk [RR] 23, 95% CI 3.2-167) [<a href="#rid3">3</a>].</p><p class="headingAnchor" id="H23549634"><span class="h3">Cough strength and secretion clearance</span><span class="headingEndMark"> — </span>The ability of the patient to cough and clear their own secretions following extubation should be assessed prior to extubation.</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Secretions</strong> – Although the volume of secretions can be measured at the bedside (via the suction canister), most clinicians assess secretion clearance by the frequency of suctioning. In general, those who require suctioning more than every two to three hours should not be extubated. The nature of secretions (eg, thick or thin) can also be examined bedside but thick secretions on their own is not a contraindication to extubation unless the cough is borderline or weak.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Cough</strong> – In most patients, cough strength is assessed informally during deep (endotracheal) suctioning at the bedside with or without gag reflex evaluation. However, a formal assessment may be useful in patients noted to have a weak cough on endotracheal suctioning or patients with neuromuscular disorders (eg, Parkinson disease, critical care myopathy). Several tests are available:</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>Spirometry – A spirometer (specifically designed for mechanical ventilators) is inserted into the ventilator circuit and the patient is then instructed to cough. The PEF during the cough is measured. Most experts use a cutoff of PEF ≤60 L/minute since this indicates a high likelihood of failure. Patients with a PEF ≤60 L/minute are five times more likely to require reintubation than patients with a PEF &gt;60 L/minute [<a href="#rid4">4,5</a>].</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>Index card – The endotracheal tube (ETT) is detached from the ventilator circuit and a card (eg, an index card) is held approximately 1 to 2 cm from the proximal end of the ETT. The patient is then instructed to cough. A patient who is unable to moisten the card with 3 to 4 coughs is three times more likely to fail extubation than a patient who can moisten the card [<a href="#rid6">6</a>].</p><p></p><p>The importance of cough strength and the amount of secretions was illustrated by several observational studies reporting that successful extubation directly correlated with strength of the spontaneous cough and inversely correlated with the frequency of suctioning [<a href="#rid2">2,3,6-8</a>]. As examples:</p><p class="bulletIndent1"><span class="glyph">●</span>An observational study of 130 patients who had passed a spontaneous breathing trial demonstrated that extubation failure was more likely among patients who were unable to cough on command or who had a PEF rate during a cough of &lt;35 L/minute (24 versus 3.5 percent, RR 6.9, 95% CI 2.0-24) [<a href="#rid7">7</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Another observational study enrolled 88 patients who had passed a spontaneous breathing trial [<a href="#rid3">3</a>]. Patients were more likely to fail extubation if their PEF during a cough was ≤60 L/minute (RR 4.8, 95% CI 1.4-16.2) or their secretions were &gt;2.5 mL/hour (RR 3.0, 95% CI 1.0-8.8).</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>A prospective observational study examined predictors of extubation failure in 225 patients who were mechanically ventilated for more than 24 hours. Ineffective cough was the strongest predictor of extubation failure and requirement for reintubation within one week (adjusted odds ratio [OR] 5.03, 95% CI 1.80-14.1) [<a href="#rid8">8</a>]. Additional risk factors included abundant secretions (OR 3.32, 95% CI 1.21-9.13) and duration of mechanical ventilation greater than seven days (OR 2.87, 95% CI 1.11-7.41). This study was limited by the use of semi-objective measures of cough strength and secretion volume.</p><p></p><p class="headingAnchor" id="H23549646"><span class="h3">Mental state</span><span class="headingEndMark"> — </span>Ideally, patients are extubated awake, alert, following commands, and preferably off sedatives. However, this is not always feasible and a small proportion of patients who are cooperative and arousable upon stimulation or receiving minimal sedation (eg, patients with resolving delirium on stable low-dose <a class="drug drug_general" data-topicid="8897" href="/d/drug information/8897.html" rel="external">dexmedetomidine</a> who are arousable) may be extubated with vigilant monitoring of the airway and mental status and prompt weaning of sedatives, once extubated.</p><p>The importance of level of consciousness has been demonstrated in observational studies:</p><p class="bulletIndent1"><span class="glyph">●</span>In a study of 100 neurosurgical patients, patients with a GCS ≥8 (<a class="graphic graphic_table graphicRef81854" href="/d/graphic/81854.html" rel="external">table 2</a>) were significantly more likely to undergo successful extubation than patients with a GCS &lt;8 (75 versus 37 percent) [<a href="#rid9">9</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>In another observational study of 88 patients, the inability to complete four commands (open eyes, follow object with eyes, grasp hand, stick out tongue) was associated with an increased risk of extubation failure (RR 4.3, 95% CI 1.8-10.4) [<a href="#rid3">3</a>].</p><p></p><p>The potential benefit of daily interruption of sedation in mechanically ventilated patients is discussed separately.</p><p class="headingAnchor" id="H4"><span class="h2">Assess risk for postextubation stridor</span><span class="headingEndMark"> — </span>Prior to extubation, all patients should be assessed for the risk of postextubation stridor. Postextubation stridor occurs in less than 10 percent of critically ill patients and is associated with increased rates of reintubation, prolonged duration of mechanical ventilation, and longer length of ICU stay [<a href="#rid10">10</a>]. Most cases are due to vocal cord edema related to the ETT; others include laryngeal injury, secretions, vocal cord dysfunction, and rarely tracheal stenosis or lesions. In those considered at high risk of postextubation stridor (see <a class="local">'Risk factors'</a> below), most experts use the cuff leak test to facilitate the decision to extubate. The cuff leak test is not performed in unselected patients since it has been demonstrated to be neither sensitive nor specific in this setting. Unfortunately, despite assessment, many cases may not be detectable until after extubation when patients present with postextubation stridor that may require reintubation. (See <a class="local">'Patients who fail due to postextubation stridor'</a> below.)</p><p class="headingAnchor" id="H1342818796"><span class="h3">Risk factors</span><span class="headingEndMark"> — </span>Risk factors for postextubation stridor include [<a href="#rid11">11-18</a>]:</p><p class="bulletIndent1"><span class="glyph">●</span>Prolonged intubation (variably defined as ≥36 hours to ≥6 days)</p><p class="bulletIndent1"><span class="glyph">●</span>Age greater than 80 years</p><p class="bulletIndent1"><span class="glyph">●</span>A large ETT (&gt;8 mm in men, &gt;7 mm in women)</p><p class="bulletIndent1"><span class="glyph">●</span>A ratio of ETT to laryngeal diameter greater than 45 percent on computed tomography</p><p class="bulletIndent1"><span class="glyph">●</span>A small ratio of patient height (in mm) to ETT diameter (in mm)</p><p class="bulletIndent1"><span class="glyph">●</span>An elevated acute physiology and chronic health evaluation (APACHE) II score</p><p class="bulletIndent1"><span class="glyph">●</span>A GCS score &lt;8 (<a class="graphic graphic_table graphicRef81854" href="/d/graphic/81854.html" rel="external">table 2</a>)</p><p class="bulletIndent1"><span class="glyph">●</span>Traumatic intubation</p><p class="bulletIndent1"><span class="glyph">●</span>Female gender</p><p class="bulletIndent1"><span class="glyph">●</span>A history of asthma</p><p class="bulletIndent1"><span class="glyph">●</span>Excessive tube mobility due to insufficient fixation</p><p class="bulletIndent1"><span class="glyph">●</span>Insufficient or lack of sedation</p><p class="bulletIndent1"><span class="glyph">●</span>Aspiration</p><p></p><p class="headingAnchor" id="H1875807941"><span class="h3">Patients not at risk</span><span class="headingEndMark"> — </span>Patients who have no risk factors for postextubation stridor should be extubated in the same manner as other patients and no assessment of the cuff leak test is necessary. (See <a class="local">'Extubation equipment and technique'</a> below.)</p><p class="headingAnchor" id="H2066671140"><span class="h3">Patients at risk</span><span class="headingEndMark"> — </span>Patients who have one or more risk factors for postextubation stridor should undergo a cuff leak test.</p><p class="headingAnchor" id="H5"><span class="h4">Cuff leak</span><span class="headingEndMark"> — </span>A "cuff leak" refers to normal airflow around the ETT after the cuff of the ETT is deflated. The absence of a leak suggests there is reduced space between the ETT and the larynx. This may be due to laryngeal edema, laryngeal injury, secretions, stenosis, or a large ETT within a relatively small larynx. Patients <strong>without</strong> a cuff leak are at increased risk for postextubation stridor.</p><p>The cuff leak can be detected qualitatively or quantitatively:</p><p class="bulletIndent1"><span class="glyph">●</span>Qualitative assessment is performed by deflating the cuff and then listening for air movement around the ETT using a stethoscope placed over the upper trachea. Air movement indicates that a cuff leak is present while no air movement suggests that it is absent and may indicate laryngeal obstruction.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Quantitative assessment is performed by deflating the ETT cuff and measuring the difference between the inspired and expired tidal volumes of ventilator-delivered breaths during <strong>volume</strong>-cycled mechanical ventilation. The lowest three expired tidal volumes obtained over six breaths are averaged and then subtracted from the inspired tidal volume to give the cuff leak volume [<a href="#rid19">19</a>]. Although ill-defined, we and other experts consider cuff leak volumes less than 110 mL or less than 12 to 24 percent of the delivered tidal volume as thresholds for determining diminished airway patency and risk for postextubation stridor from laryngeal edema (ie, "reduced" or "absent" cuff leak) [<a href="#rid12">12,14,19-22</a>]. Cuff leak volumes greater than or equal to 110 mL or greater than 24 percent of the delivered tidal volume is considered a normal cuff leak test.</p><p></p><p>The decision with how to proceed based upon the results of the cuff leak test is challenging. In general, for patients with risk factors for postextubation stridor, we use the following guidelines:</p><p class="bulletIndent1"><span class="glyph">●</span>In patients with a sufficient cuff leak (eg, sufficient air movement around the ETT or greater than or equal to 110 mL or greater than 24 percent of the delivered tidal volume), we proceed with extubation. (See <a class="local">'Extubation equipment and technique'</a> below.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>In patients with an absent or reduced cuff leak, we delay extubation and treat with glucocorticoids (for presumed laryngeal edema) for at least six to eight hours before re-assessing with another cuff leak test and/or extubation. (See <a class="local">'Risk factors'</a> above and <a class="local">'Glucocorticoids'</a> below.)</p><p></p><p>In the event that a cuff leak test is inadvertently performed in a patient <strong>without</strong> risk factors for postextubation stridor and in whom the leak is absent or reduced, glucocorticoid administration before extubation should be considered on an individual basis. If extubated, the threshold for reintubation should be low.</p><p>The absence of a cuff leak alone is an imperfect predictor of postextubation stridor with a reported sensitivity of 15 to 85 percent and a specificity of 70 to 99 percent [<a href="#rid10">10,12,13,19-21,23-26</a>]. The wide ranges likely reflect variability in the patient populations, how the cuff leak was measured, and what was considered an acceptable cuff leak. Best illustrating the poor sensitivity of the cuff leak test is a pooled analysis of nine studies that found a sensitivity and specificity of 56 and 92 percent, respectively [<a href="#rid23">23</a>]. A meta-analysis of 14 observational studies estimated that when used in select populations, the cuff leak test resulted in reduced rates of reintubation (2.4 versus 4.2 percent) and postextubation stridor (4 versus 7 percent) but at the expense of delayed extubation (9 percent absolute increase) [<a href="#rid27">27</a>]. In addition, certain conditions such as tracheomalacia may affect the utility of the test since it may increase the likelihood of a cuff leak.</p><p class="headingAnchor" id="H965316784"><span class="h4">Other tests</span><span class="headingEndMark"> — </span>Several other methods for evaluating the risk of postextubation stridor have been proposed but are not well-validated:</p><p class="bulletIndent1"><span class="glyph">●</span>Laryngeal ultrasonography is a simple, rapid, and noninvasive way to evaluate the width of the laryngeal air column during cuff deflation, thereby assessing the likelihood of postextubation stridor [<a href="#rid28">28,29</a>]. Although promising, this modality is not recommended for routine use until controlled clinical trials are performed.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Simultaneous assessment of both cough and cuff leak may improve prediction of postextubation stridor. After the cuff is deflated, the ETT is occluded and the patient is instructed to cough. The absence of both an audible cough and a cuff leak indicates the patient is 10 times more likely to develop postextubation stridor [<a href="#rid11">11</a>].</p><p></p><p class="headingAnchor" id="H6"><span class="h4">Glucocorticoids</span><span class="headingEndMark"> — </span>We and others limit glucocorticoid therapy to patients who are assessed to be at high risk of postextubation stridor and who have a reduced or absent cuff leak [<a href="#rid27">27,30,31</a>] (see <a class="local">'Assess risk for postextubation stridor'</a> above) and to patients who have failed extubation due to postextubation stridor. Since the overall incidence of postextubation laryngeal edema requiring reintubation is low (less than 5 percent), we believe this approach focuses therapy on those who are most likely to benefit and avoids unnecessarily prolonging mechanical ventilation for glucocorticoid therapy. We suggest that patients who have a reduced or absent cuff leak receive a short course of glucocorticoid therapy before extubation (four hours or more). <a class="drug drug_general" data-topicid="9639" href="/d/drug information/9639.html" rel="external">Methylprednisolone</a> (20 mg) administered intravenously every four hours for a total of four doses prior to extubation is an acceptable regimen. Alternatively, a single dose of 40 mg of methylprednisolone administered four hours prior to extubation may be used. Choosing one over the other should be at the discretion of the physician and depends upon the assessed risk of postextubation stridor in a given patient.</p><p>Supporting this strategy are the following studies:</p><p class="bulletIndent1"><span class="glyph">●</span>Randomized trials and meta-analyses of patients at increased risk for postextubation stridor, have found that the administration of multiple doses of glucocorticoids prior to extubation reduces the rates of postextubation stridor and reintubation [<a href="#rid14">14,15,27,31-39</a>]. As an example, a 2017 meta-analysis of three randomized trials reported that in patients who failed a cuff leak test, glucocorticoid administration resulted in reduced rates of reintubation (6 versus 17 percent; RR 0.32; 95% CI, 0.14-0.76) and postextubation stridor (11 versus 32 percent; RR 0.35;95% CI 0.20-0.63) [<a href="#rid27">27</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>In contrast, trials that enrolled unselected patients and administered a single dose of glucocorticoids shortly prior to extubation did not find significant improvement in the rates of postextubation stridor and reintubation [<a href="#rid33">33,34</a>].</p><p></p><p>The inconsistency among these studies may relate to differences in the risk of postextubation stridor among the patients studied and/or the duration of glucocorticoid therapy prior to extubation. We believe that selecting patients at risk for postextubation stridor for glucocorticoid therapy is a more important factor than the number of doses administered. This is supported by a randomized trial of 71 patients with a cuff leak of less than 24 percent of the tidal volume administered which reported that compared with placebo, a single dose of 40 mg of <a class="drug drug_general" data-topicid="9639" href="/d/drug information/9639.html" rel="external">methylprednisolone</a> four hours prior to extubation resulted in significantly decreased rates of postextubation stridor (16 versus 39 percent) and reintubation (8 versus 30 percent) [<a href="#rid36">36</a>].</p><p class="headingAnchor" id="H232819458"><span class="h2">Assess potential difficulty with reintubation</span><span class="headingEndMark"> — </span>Patients should be evaluated for any potential difficulty with reintubation, should extubation fail. This evaluation should focus on identifying factors that impair the ability of patients to protect their airway (eg, sedation, obesity, difficulty with first intubation) as well as factors that affect the operators ability to reintubate (operator fatigue, availability of experts skilled with difficult airways). These issues are discussed separately. (See  <a class="medical medical_review" href="/d/html/94224.html" rel="external">"Extubation following anesthesia", section on 'Difficulty re-establishing an airway'</a>.)</p><p class="headingAnchor" id="H2732642990"><span class="h2">Assess optimal timing (day or night)</span><span class="headingEndMark"> — </span>The optimal timing for extubation, (daytime [7 am to 6:59 pm] versus nighttime hours [7 pm to 6:59 am]) is unknown. Our practice is to extubate patients once successful weaning and extubation parameters have been met, provided that appropriate personnel are available. In general, this occurs during daytime hours. However, while not absolutely contraindicated, clinicians may perform after hours extubation among selected individuals in whom the risk of reintubation is assessed to be low (eg, patients undergoing terminal extubation, postoperative patients at low risk of reintubation). (See  <a class="medical medical_review" href="/d/html/1652.html" rel="external">"Weaning from mechanical ventilation: Readiness testing"</a> and  <a class="medical medical_review" href="/d/html/1650.html" rel="external">"Initial weaning strategy in mechanically ventilated adults"</a> and <a class="local">'Assessing safety of extubation'</a> above.)</p><p>Whether or not patients should be extubated only during daytime hours has not been prospectively studied and retrospective observational data have yielded conflicting information:</p><p class="bulletIndent1"><span class="glyph">●</span>In a retrospective study of 2240 patients, 31 percent were extubated at night and no differences in reintubation rates, length of stay, or mortality were reported when compared with patients extubated during day time hours [<a href="#rid40">40</a>]. Similarly, a retrospective study of almost 21,000 cardiac surgery patients reported no difference in the mortality or reintubation rates among those extubated during daytime or nighttime hours [<a href="#rid41">41</a>], although this study may have been biased by the selection of patients who were only undergoing routine extubation within 24 hours of surgery, and therefore likely to be at low risk of death and reintubation.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>In contrast, another retrospective study of almost 20,000 patients who were extubated at night, reported that compared with propensity-matched control patients extubated during day time hours, patients who were extubated at night time had increased ICU mortality (6 versus 5 percent for those intubated &lt;12 hours; 11 versus 6 percent for those intubated ≥12 hours) [<a href="#rid42">42</a>]. Compared with daytime extubation, nocturnal extubation had an inconsistent effect on the reintubation rate and length of stay. Methodologic flaws including the retrospective nature of the study, incomplete capture of the circumstances surrounding extubation, and analysis of older data (2000 to 2009) prohibit firm conclusions from this study.</p><p></p><p class="headingAnchor" id="H7"><span class="h1">EXTUBATION EQUIPMENT AND TECHNIQUE</span><span class="headingEndMark"> — </span>We typically use the following equipment and procedure when extubating patients. Tube feeds are typically held for one hour, sometimes more (eg, high residual volumes during feeding noted) prior to extubation, although limited data suggest no difference in the rate of extubation failure if enteral feeds are continued or held prior to extubation [<a href="#rid43">43</a>].</p><p class="headingAnchor" id="H3877943417"><span class="h2">Equipment</span><span class="headingEndMark"> — </span>The equipment needed includes separate oral and endotracheal suction catheters and tubing, tape cutters, a 10 mL syringe, and several types of oxygen delivery systems including low-flow and high-flow nasal cannulae, and high-flow simple facemasks. Ideally, the clinicians should estimate roughly how much oxygen will be needed to maintain peripheral oxygen saturations (SpO<sub>2</sub>) and set a target SpO<sub>2</sub> <strong>before</strong> extubation. In addition, equipment for noninvasive ventilation (NIV) should also be readily available for those in whom NIV is indicated or for those at increased risk of failing extubation. The SpO<sub>2</sub>, heart rate, respiratory rate, and blood pressure are monitored throughout the extubation process. (See  <a class="medical medical_review" href="/d/html/6394.html" rel="external">"Continuous oxygen delivery systems for the acute care of infants, children, and adults"</a> and  <a class="medical medical_review" href="/d/html/114077.html" rel="external">"Heated and humidified high-flow nasal oxygen in adults: Practical considerations and potential applications"</a> and  <a class="medical medical_review" href="/d/html/126295.html" rel="external">"Noninvasive ventilation in adults with acute respiratory failure: Practical aspects of initiation"</a>.)</p><p class="headingAnchor" id="H1842654087"><span class="h2">Position</span><span class="headingEndMark"> — </span>The patient is placed into an upright position or as upright as concomitant medical or surgical conditions allow. The technique is explained to the patient before and during removal.</p><p class="headingAnchor" id="H3829539596"><span class="h2">Removal</span><span class="headingEndMark"> — </span>Both the oral cavity and the lower airways (via the endotracheal tube [ETT]) are suctioned (two individual suction systems are advised). All ties or other securement devices holding the ETT in position are removed, carefully making sure that the ETT is not displaced in the process; this often requires two individuals, one to secure the ETT in place and one to free the ETT from securement devices. The syringe is attached to the cuff. Instructions are then given to the patient to take a deep breath and then exhale or cough. During exhalation/coughing, the cuff is quickly deflated and the ETT is removed in a single, smooth motion. The patient typically coughs during removal and residual oral secretions are suctioned again to avoid aspiration. Alternatively, many experts deflate the cuff with the inline suction catheter in place and then remove the ETT during exhalation or coughing while simultaneously suctioning residual secretions during ETT removal. Orogastric tubes are typically removed simultaneously, although some remain in place if a vital indication is present. Following extubation, supplemental oxygen is typically administered to reach the predefined peripheral saturation goal, although in some cases NIV is administered. (See <a class="local">'Postextubation management'</a> below.)</p><p class="headingAnchor" id="H8"><span class="h1">POSTEXTUBATION MANAGEMENT</span><span class="headingEndMark"> — </span>All patients should be closely monitored following extubation in the ICU. We adopt an individualized approach to postextubation support since one study has shown that a protocolized approach that supports all patients with either humidified high-flow oxygen via nasal cannulae (HFNC) or noninvasive ventilation (NIV) does not appear to impact the outcome [<a href="#rid44">44</a>].</p><p class="bulletIndent1"><span class="glyph">●</span>Most patients are at low risk of reintubation (approximately 80 to 85 percent), although the proportion varies and depends upon the ICU population [<a href="#rid45">45</a>]. Low-risk patients typically do well on low-flow oxygen and can be discharged from the ICU after 12 to 24 hours, provided no other indications for ICU care are present. (See <a class="local">'Patients at low risk of postextubation respiratory failure'</a> below.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>However, some patients are at high risk of reintubation (approximately 15 to 20 percent). Aggressive monitoring and management with continued medical therapies, oxygenation, and airway clearance measures may prevent reintubation in this population. Some experts extubate directly to HFNC or NIV, in select patients, to prevent reintubation. (See <a class="local">'Patients at high risk of postextubation respiratory failure'</a> below.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>A small proportion of patients (up to 14 percent) develop postextubation respiratory failure, which can be early (within minutes up to 12 hours after extubation), or delayed (&gt;12 hours after extubation). Therapies targeted at the suspected etiology of respiratory failure (eg, poor secretion clearance, heart failure/ischemia, increased work of breathing) should be promptly implemented. This may include suctioning (oral and nasotracheal), bronchodilator therapy, diuresis. In some cases, a trial of humidified HFNC and/or NIV may be necessary to avoid reintubation. (See <a class="local">'Patients with established postextubation respiratory failure'</a> below.)</p><p></p><p class="headingAnchor" id="H993066375"><span class="h2">Patients at low risk of postextubation respiratory failure</span></p><p class="headingAnchor" id="H3814198466"><span class="h3">Low-flow versus high-flow oxygen</span><span class="headingEndMark"> — </span>Every patient should be oxygenated following extubation. We prefer using devices that provide adequate oxygenation and comfort for the patient. For most patients, this goal is achieved with low-flow devices (nasal prongs, simple or venturi facemasks).</p><p>When higher flows of oxygen are required, simple high-flow facemasks or humidified high-flow nasal cannulae (HFNC) may be applied. Choosing among low-flow devices or HFNC should be individualized and depend upon factors including oxygen requirement, the etiology of respiratory failure, and patient preferences. For example, in patients with minimal oxygen requirements, low-flow devices often suffice, while patients with higher oxygen requirements (eg, patients with interstitial lung disease or pulmonary hypertension) may be suitable for HFNC. HFNC, in addition to improved oxygenation, may also provide a small amount of positive end-expiratory pressure (PEEP), and be better tolerated when compared with oxygen delivered through low or high-flow facemasks [<a href="#rid46">46,47</a>]. The mechanisms and benefits of HFNC are discussed separately (<a class="graphic graphic_table graphicRef115105" href="/d/graphic/115105.html" rel="external">table 3</a>). (See  <a class="medical medical_review" href="/d/html/114077.html" rel="external">"Heated and humidified high-flow nasal oxygen in adults: Practical considerations and potential applications", section on 'Mechanisms of clinical benefit'</a>.)</p><p>The efficacy of HFNC in the postextubation setting was best illustrated in a trial of 527 patients (mixed postsurgical and medical) who were mechanically ventilated for an average of only one to two days and considered to be at low risk for reintubation following extubation [<a href="#rid48">48</a>]. Compared with conventional low-flow oxygen therapy, at 72 hours, HFNC reduced the rate of reintubation (5 versus 12 percent) and the rate of respiratory failure (14 versus 8 percent). However, methodologic flaws such as imperfect blinding and the high proportion of postsurgical and neurologic patients, where HFNC may have improved secretion clearance, may have biased results in favor of HFNC. Although encouraging, this trial does not support the routine use of HFNC following extubation and further trials in select populations are needed. In contrast, a randomized trial of 220 patients who were extubated to either HFNC or standard low-flow oxygen following major abdominal surgery (not risk stratified) reported no difference in the rate of hypoxemic respiratory failure or other pulmonary outcomes; mortality was not reported [<a href="#rid49">49</a>].</p><p>HFNC is not routinely available in all institutions for adult use and it should only be administered by staff educated in its application. Technical details regarding its application and the use of HFNC as a treatment for acute respiratory failure in medical patients and postoperative populations as well as its efficacy compared with <strong>NIV</strong> in postextubation patients are discussed separately. (See  <a class="medical medical_review" href="/d/html/4401.html" rel="external">"Overview of the management of postoperative pulmonary complications", section on 'Postoperative respiratory failure'</a> and <a class="local">'High-flow oxygen via nasal cannulae'</a> below and  <a class="medical medical_review" href="/d/html/6394.html" rel="external">"Continuous oxygen delivery systems for the acute care of infants, children, and adults", section on 'Nasal cannula'</a>.)</p><p>Arterial blood gases and chest imaging are not routinely obtained in patients at low risk of reintubation but may be necessary in patients who deteriorate after endotracheal tube (ETT) removal. (See  <a class="medical medical_review" href="/d/html/1648.html" rel="external">"Arterial blood gases"</a>.)</p><p class="headingAnchor" id="H677622898"><span class="h2">Patients at high risk of postextubation respiratory failure</span><span class="headingEndMark"> — </span>For patients who are deemed at risk of postextubation respiratory failure, options include observation or a preventive intervention with NIV or HFNC, or both (see <a class="local">'At-risk patients'</a> below). While some institutions routinely utilize HFNC in the "at risk" population, there are no robust data to support routinely extubating patients at risk of postextubation respiratory failure to HFNC or NIV. Consequently, practice varies significantly with much of this decision at the discretion of the treating physician/respiratory therapist. We believe the choice between observation, and NIV and/or HFNC should be individualized and depends upon factors including the assessed degree of risk and type of respiratory failure (eg, hypoxic, hypercapnic), and oxygen and positive end expiratory pressure requirements of the patient, as well as local availability of and expertise in HFNC and NIV. In our practice, most patients at risk of postextubation respiratory failure undergo a brief period of observation with close monitoring, while a select few who are considered to be at the highest risk of failure may be extubated directly to NIV and/or HFNC (eg, patients who have already failed extubation previously, patients with neuromuscular disorders with a very weak cough who have declined tracheostomy, patients with a high oxygen requirement, and patients with hypercapnic COPD or heart failure). For example, patients with severe hypoxemic respiratory failure or a high oxygen requirement may benefit from HFNC [<a href="#rid50">50</a>], while those with hypercapnic respiratory failure or with cardiac failure may benefit from NIV.</p><p>The duration of such interventions is also unclear. However, most studies showing benefit have used either NIV or HFNC for roughly 6 to 24 hours following extubation. In all cases, follow up with clinical examination is necessary, so that a decision can be made to wean support should patients improve, or reintubate, earlier rather than later, should the patients fail either or both interventions. Early recognition of failure, with prompt reintubation is an important consideration whenever either of these modalities are employed.</p><p>Arterial blood gases are not routinely obtained in this population but may be helpful a few hours after extubation to ensure adequate gas exchange. Follow up imaging is also not routine unless the patient deteriorates following extubation.</p><p class="headingAnchor" id="H913206510"><span class="h3">At-risk patients</span><span class="headingEndMark"> — </span>It is estimated that 12 to 14 percent of patients who undergo planned extubation require reintubation within 48 to 72 hours, most within the first 24 hours [<a href="#rid8">8,45,51-54</a>]. Risk factors for reintubation that can be identified prior to extubation include:</p><p class="bulletIndent1"><span class="glyph">●</span>A weak cough (cough peak expiratory flow rate ≤60 L/minute) (see <a class="local">'Cough strength and secretion clearance'</a> above)</p><p class="bulletIndent1"><span class="glyph">●</span>Frequent suctioning (eg, every one to two hours, sputum volume &gt;2.5 mL/hour)</p><p class="bulletIndent1"><span class="glyph">●</span>Glasgow Coma Score &lt;8 (<a class="graphic graphic_table graphicRef81854" href="/d/graphic/81854.html" rel="external">table 2</a>)</p><p class="bulletIndent1"><span class="glyph">●</span>A positive fluid balance during the 24 hours preceding extubation</p><p class="bulletIndent1"><span class="glyph">●</span>Pneumonia as the reason for the initial intubation</p><p class="bulletIndent1"><span class="glyph">●</span>Patients who are ≥65 years old with severe chronic cardiac or respiratory disease</p><p class="bulletIndent1"><span class="glyph">●</span>A reduced or absent cuff leak, those with altered mental status (eg, delirium) (see <a class="local">'Cuff leak'</a> above)</p><p></p><p class="headingAnchor" id="H702213029"><span class="h3">Noninvasive ventilation</span><span class="headingEndMark"> — </span>Noninvasive ventilation (NIV) is <strong>not</strong> routinely administered following extubation as a preventive measure against reintubation but may be used in select patients assessed to be at risk of extubation failure. Among high risk patients, we and others [<a href="#rid55">55</a>] agree that patients likely to benefit are patients who have compensated hypercapnic respiratory failure during their pre-extubation spontaneous breathing trial (eg, patients with severe chronic obstructive pulmonary disease [COPD]) as well as patients with cardiac failure. Data from meta-analyses and randomized trials support the value of NIV as a preventive measure in these subgroups. However, despite data which suggest that NIV lowers the reintubation rate in this select group, our experience also suggests that many patients in this same setting can be successfully extubated without NIV. Thus, while not an absolute indication, the threshold to apply NIV following extubation should be low in this population. The role of NIV in patients with established acute hypercapnic respiratory failure which develops soon after extubation is discussed below. (See <a class="local">'Patients with established postextubation respiratory failure'</a> below.)</p><p>Evidence from randomized trials and meta-analyses of patients considered to be at risk of postextubation respiratory failure suggests that NIV may prevent postextubation respiratory failure if it is applied immediately after extubation [<a href="#rid56">56-61</a>]:</p><p class="bulletIndent1"><span class="glyph">●</span>One 2013 meta-analysis of 16 trials included 994 patients intubated for acute respiratory failure. Compared with invasive mechanical ventilation weaning strategies (eg, slow ventilator wean with decremental support), the early application of NIV following extubation reduced all-cause mortality (risk ratio [RR] 0.53, 95% CI 0.37-0.8) [<a href="#rid60">60</a>]. The mortality benefit was greatest in patients with respiratory failure complicating COPD when compared with mixed populations of patients intubated for other reasons (eg, postoperative, pneumonia, non-COPD) (RR 0.36, 95% CI 0.25-0.56 versus 0.81, 95% CI 0.47-1.4). Additional benefits included reduced length of ICU and hospital stay (mean difference 5.6 days and 6 days, respectively) and reduced rates of ventilator-associated pneumonia (RR 0.25, 95% CI 0.15-0.43). All benefits occurred without an increased risk of extubation failure and reintubation (RR 0.65, 95% CI 0.44-0.97). Methodologic differences in weaning strategies between studies and significant heterogeneity in the outcomes studied may limit confidence in the results.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>An updated 2022 meta-analysis of 28 trials totaling over 2000 patients with acute respiratory failure, almost half of whom had COPD, confirmed similar results [<a href="#rid62">62</a>]. NIV reduced mortality (RR 0.57, 95% CI 0.44-0.74; high quality), weaning failures (RR 0.59, 95% CI 0.43-0.81; high quality), pneumonia (RR 0.30, 95% CI 0.22-0.41; high quality), and ICU length of stay (mean difference -4.62 days, 95% CI -5.91 to -3.34). Benefits were most pronounced in patients with COPD compared with other patient populations.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>One trial randomly assigned 162 patients considered at risk of developing postextubation respiratory failure to receive conventional medical therapy with or without NIV for 24 hours immediately following extubation [<a href="#rid57">57</a>]. Patients were considered at risk of postextubation respiratory failure if they were 65 years or older, had an Acute Physiology and Chronic Health Evaluation (APACHE) II score &gt;12 on the day of extubation, or had required intubation due to cardiac failure. NIV was associated with lower ICU mortality (3 versus 14 percent), but not a lower reintubation rate, hospital mortality, or 90-day mortality. A pre-defined subgroup analysis found that the benefit of NIV was limited to patients who had hypercapnia (arterial carbon dioxide tension [PaCO<sub>2</sub>] &gt;45 mmHg) during a pre-extubation spontaneous breathing trial, 98 percent of whom had chronic lung disease.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Another trial randomly assigned 208 patients with chronic hypercapnic respiratory failure to undergo conventional extubation, followed by supplemental oxygen, or extubation followed by immediate NIV [<a href="#rid63">63</a>]. The group that received immediate NIV was less likely to develop postextubation acute respiratory failure, defined as tachypnea (&gt;30 breaths/minute), bradypnea (&lt;12 breaths/minute), hypoxemia (arterial oxygen saturation [SpO<sub>2</sub>] &lt;90 percent, arterial oxygen tension [PaO<sub>2</sub>] &lt;64 mmHg, or PaO<sub>2</sub>/fraction of inspired oxygen [FiO<sub>2</sub>] ≤130 mmHg despite supplemental oxygen at a flow rate &gt;6 L/minute or an FiO<sub>2</sub> ≥50 percent), respiratory acidosis (PaCO<sub>2</sub> increase of ≥10 percent and a pH ≤7.35), or clinical signs of acute respiratory failure (eg, diaphoresis, use of accessory respiratory muscles). However, there was no difference in the mortality or reintubation rates.</p><p></p><p>Use of NIV in patients with <strong>established</strong> acute respiratory failure following extubation is discussed below. (See <a class="local">'Patients with established postextubation respiratory failure'</a> below.)</p><p>Use of NIV in patients to extubate those who are ready to wean but have failed their spontaneous breathing trial (ie, early extubation) is discussed separately. (See  <a class="medical medical_review" href="/d/html/1650.html" rel="external">"Initial weaning strategy in mechanically ventilated adults", section on 'Weaning failure'</a>.)</p><p class="headingAnchor" id="H1284467886"><span class="h3">High-flow oxygen via nasal cannulae</span><span class="headingEndMark"> — </span>Humidified high-flow oxygen delivered via nasal cannulae (HFNC) is <strong>not</strong> routinely administered following extubation as a preventive measure against reintubation but may be used in select patients assessed to be at high risk of extubation failure as an alternative to NIV [<a href="#rid50">50</a>]. Those considered at risk and the principles of choosing among these modalities are discussed above. (See <a class="local">'At-risk patients'</a> above and <a class="local">'Patients at high risk of postextubation respiratory failure'</a> above.)</p><p>Trials that compare HFNC and NIV in the prevention of postextubation respiratory failure have been conflicting and suffer from flaws including a lack of standardized approach to oxygenation and ventilatory support following extubation, variable duration of therapy, and issues of inconsistency, indirectness, and imprecision [<a href="#rid50">50,64-68</a>]. As examples:</p><p class="bulletIndent1"><span class="glyph">●</span>Network meta-analyses suggest that both NIV and HFNC reduce the rate of intubation when compared with conventional oxygen therapy, with no advantage of one modality over the other. One meta-analysis of nine trials reported that compared with conventional oxygen therapy, HFNC reduced reintubation rates (relative risk [RR] 0.46, 95% CI 0.30-0.70) and the incidence of postextubation respiratory failure (RR 0.52, 95% CI 0.30-0.91) [<a href="#rid50">50</a>]. However, compared with NIV, HFNC had no effect on the rates of reintubation or postextubation respiratory failure. Another meta-analysis of 36 randomized trials reported similar results [<a href="#rid64">64</a>]; both NIV and HFNC reduced re-intubation rates following extubation when compared with conventional oxygen therapy, but rates were no different when NIV was compared with HFNC. Combining HFNC and NIV may be superior to either alone [<a href="#rid64">64</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>HFNC and NIV were compared in a randomized trial of 604 patients (mixed surgical and medical populations) who were extubated following mechanical ventilation and were deemed at risk of reintubation (eg, age &gt;65 years, APACHE II score &gt;12, body mass index [BMI] &gt;30, excess secretions, difficulty weaning, moderate to severe chronic obstructive lung disease, prolonged mechanical ventilation, airway patency issues) [<a href="#rid65">65</a>]. HFNC administered for 24 hours after extubation resulted in similar rates of reintubation when compared with NIV (23 versus 19 percent) and also resulted in a nonsignificant reduction in the rate of postextubation respiratory failure (26 versus 40 percent). While the ICU length of stay was lower in those treated with HFNC, there was no difference in the rates of mortality, sepsis, or multiorgan failure.</p><p></p><p class="bulletIndent1">Although there were 20 percent moderate to severe COPD patients included in this trial, these data are insufficient to make a robust recommendation in favor of HFNC for patients with COPD with chronic hypercapnia, a population in whom the evidence and guidelines favor NIV. (See <a class="local">'Noninvasive ventilation'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>In patients determined to be at "very high risk" of reintubation, NIV may be superior to HFNC. In a randomized trial of 162 such patients having at least four risk factors for reintubation, the rate of reintubation was lower in the NIV group compared with the HFNC group (23.3 versus 38.8 percent) [<a href="#rid68">68</a>]. Risk factors included age &gt;65 years, APACHE II score &gt;12 on extubation day, BMI &gt;30, inadequate secretions management, difficult or prolonged weaning, two or more comorbidities, acute heart failure indicating mechanical ventilation, moderate to severe COPD, airway patency problems, prolonged mechanical ventilation, or hypercapnia on finishing the spontaneous breathing trial.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>In post-cardiothoracic surgery patients, HFNC was reported to be equivalent to NIV in preventing reintubation [<a href="#rid66">66</a>]; this study included patients both at risk for and with overt respiratory failure following extubation. However, in abdominal surgery patients, NIV has been found to be superior to HFNC in preventing reintubation [<a href="#rid67">67</a>]. These trials are discussed in detail separately. (See  <a class="medical medical_review" href="/d/html/4401.html" rel="external">"Overview of the management of postoperative pulmonary complications", section on 'Postoperative respiratory failure'</a>.)</p><p></p><p>HFNC has also been compared with oxygen delivered via a venturi mask in a randomized trial [<a href="#rid69">69</a>]. Reintubation rates did not differ between the groups, although less rescue NIV was used in patients treated with HFNC.</p><p>The effect of HFNC on intubation rates in medical patients with acute respiratory failure [<a href="#rid70">70</a>] is discussed separately. (See  <a class="medical medical_review" href="/d/html/6394.html" rel="external">"Continuous oxygen delivery systems for the acute care of infants, children, and adults", section on 'Nasal cannula'</a>.)</p><p class="headingAnchor" id="H1808122696"><span class="h3">NIV plus HFNC</span><span class="headingEndMark"> — </span>While HFNC combined with NIV is <strong>not</strong> routinely administered as a preventive measure against reintubation in patients assessed to be at high risk of extubation failure, it may be an alternative to HFNC alone. The addition of NIV to HFNC was shown in one randomized trial to reduce reintubation rates in 648 patients at high risk of postextubation failure (11.8 versus 18.2 percent on day 7) without impacting mortality (6 versus 9 percent) [<a href="#rid71">71</a>]. This trial comprised mostly medical patients in whom "high risk" was defined as those with underlying cardiac or respiratory disorder or patients older than 65 years of age. NIV was administered (8 cm [inspiratory pressure] and 5 cm [expiratory pressure]) for at least 12 hours per day for 48 hours (mean total duration was 22 hours and mostly delivered at night during sleep) alternating with HFNC at 50 L/minute in between NIV sessions (mean total duration 42 hours). Post-hoc subgroup analysis suggested that patients with hypercapnic respiratory failure (at the end of their spontaneous breathing trial) are most likely to benefit (reintubation rates 8 versus 21 percent). In addition, 28-day mortality was lower in hypercapnic patients who had received NIV prior to developing postextubation respiratory failure than those who had received HFNC (3 versus 31 percent, p = 0.006), although the absolute numbers were small [<a href="#rid72">72</a>]. The benefit to the alternating strategy of NIV with HFNC, including reintubation and ICU mortality, was limited to patients who were obese or overweight (BMI &gt;25) [<a href="#rid73">73</a>]. Limitations of this analysis include the lack of blinding, use of HFNC as a comparator, use of NIV as a rescue therapy in one-third of patients in the HFNC group, and the considerable experience of the participating ICUs in NIV use, which may reduce generalizability of the NIV/HFNC combination. We continue to suggest an individualized approach to selecting postextubation support for patients at high risk of postextubation failure.</p><p class="headingAnchor" id="H1114331068"><span class="h2">Patients with established postextubation respiratory failure</span><span class="headingEndMark"> — </span>Up to 14 percent of patients who undergo planned extubation require reintubation, mostly within the first 24 hours. Similarly, over half of patients who undergo unplanned extubation require immediate reintubation. (See <a class="local">'At-risk patients'</a> above and <a class="local">'Patients with unplanned extubation'</a> below.)</p><p>Postextubation respiratory failure typically manifests as falling peripheral oxygen saturation, increasing respiratory rate, respiratory distress, and sometimes stridor. The most common etiologies are atelectasis from poor secretion clearance, heart failure, aspiration, bronchospasm, and laryngeal edema. The clinician should re-examine the patient for potential etiologies and, provided immediate re-intubation is not needed, in most cases an arterial blood gas (ABG) and chest radiograph are performed to help elucidate the nature and severity of respiratory failure and shed some light on the etiology.</p><p>As soon as it is suspected that a patient may be failing extubation, therapies targeted at the suspected etiology of respiratory failure and a simultaneous trial of HFNC or NIV should be immediately implemented rather than waiting for overt respiratory failure to occur on low-flow oxygen. The European Respiratory Society/American Thoracic Society suggest not using NIV once respiratory failure has already developed in the postextubation setting [<a href="#rid55">55</a>]. However, they acknowledge that the data are flawed and that more studies are required. Furthermore, the American College of Physicians made a recommendation that HFNC rather than low-flow oxygen be used in patients with postextubation respiratory failure [<a href="#rid74">74</a>] but did not extend their recommendation to facilitate the choice between HFNC and NIV. The principles that influence the choice between NIV and HFNC are discussed above. (See <a class="local">'Patients at high risk of postextubation respiratory failure'</a> above.)</p><p>Data regarding the role of NIV and HFNC in treating established postextubation respiratory failure are discussed in this section.</p><p class="bulletIndent1"><span class="glyph">●</span><strong>NIV</strong> – Most experts individualize NIV application in this setting since the role of NIV is unclear in patients with postextubation respiratory failure. While anecdotal evidence suggests that NIV may avoid intubation in some cases, available data suggest that NIV may be less effective and even potentially harmful when its application is delayed [<a href="#rid75">75-77</a>]. Thus, in this population, if NIV is administered, it should be started as soon as extubation failure is suspected and trials should be short (eg, one to two hours); if benefit is not demonstrated, the threshold to re-intubate should be low.</p><p></p><p class="bulletIndent1">Questionable benefit of NIV in this population was illustrated by a trial of 221 patients who developed respiratory failure after extubation and then were randomly assigned to receive conventional medical therapy with or without NIV [<a href="#rid75">75</a>]. Respiratory failure was defined as two or more of the following: respiratory acidosis (pH &lt;7.35 with a PaCO<sub>2</sub> &gt;45 mmHg), clinical signs of respiratory fatigue (ie, use of accessory muscles, intercostal retractions, paradoxical motion of the abdomen), a respiratory rate &gt;25 breaths/minute for two consecutive hours, or hypoxemia (arterial oxygen tension &lt;80 mmHg or arterial oxyhemoglobin saturation &lt;90 percent despite a fraction of inspired oxygen &gt;50 percent). All-cause mortality increased in the NIV group (25 versus 14 percent), resulting in early termination of the trial. However, the increased mortality seen in this trial may have been related to delayed reintubation since the median time from respiratory failure to reintubation was longer in the NIV group (12 versus 2.5 hours). In another meta-analysis of three trials that compared NIV with HFNC, both modalities had similar impact on mortality and reintubation rate, although a small increase in these outcomes among those treated with HFNC could not be excluded [<a href="#rid77">77</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>HFNC</strong> – Data are limited to support the use of HFNC in this population. In one meta-analysis of three studies of a mixed population of patients with acute postextubation respiratory failure (eg, medical and surgical patients, COPD), HFNC had little or no impact mortality or intubation rates compared with NIV [<a href="#rid77">77</a>]. When compared with low-flow oxygen, HFNC reduced reintubation rate (odds ratio [OR] 0.60, 95% CI 0.23-1.61) and improved patient comfort. However, this analysis was limited by heterogeneity, risk of bias, and imprecision. These limited data have led the American College of Physicians to make a recommendation that HFNC rather than low-flow oxygen be used in patients with postextubation respiratory failure [<a href="#rid74">74</a>]. Trials that discuss the role of HFNC in postoperative respiratory failure (that sometimes includes postextubation respiratory failure) are discussed in detail separately. (See  <a class="medical medical_review" href="/d/html/4401.html" rel="external">"Overview of the management of postoperative pulmonary complications", section on 'Postoperative respiratory failure'</a>.)</p><p></p><p>Despite therapy, some patients fail and require reintubation. During reintubation a careful inspection of the vocal cords (edema erosions, abnormal movement or masses) and upper airway (masses, secretions) are prudent. Measures should be taken to continue treatment before a second attempt is made to extubate (often one to two days or longer). Patents who fail extubation on more than one occasion generally require a tracheostomy, although exceptions exist when a clear cause for failure is identified and easily reversed. (See  <a class="medical medical_review" href="/d/html/4389.html" rel="external">"Tracheostomy: Rationale, indications, and contraindications"</a>.)</p><p>The impact of reintubation may depend upon the patient population. In medical ICU patients, reintubation is associated with increased hospital mortality, a longer ICU stay, longer hospitalization, and nosocomial pneumonia [<a href="#rid54">54,78,79</a>]. Mortality is highest among those who fail extubation late (&gt;12 hours after extubation) or who require reintubation for reasons unrelated to the airway (ie, respiratory failure, heart failure, or encephalopathy) [<a href="#rid51">51</a>]. Similarly, in most surgical patients, respiratory failure requiring reintubation in the postoperative period is associated with high morbidity, leading to a longer hospital stay, and increase in 30-day mortality [<a href="#rid80">80-82</a>]. In contrast, reintubation in cardiac surgery patients has not been shown to be associated with increased mortality [<a href="#rid83">83,84</a>].</p><p class="headingAnchor" id="H1173770234"><span class="h2">Special populations</span></p><p class="headingAnchor" id="H10"><span class="h3">Patients with unplanned extubation</span><span class="headingEndMark"> — </span>Unplanned extubation occurs in 3 to 12 percent of intubated patients [<a href="#rid52">52,85-93</a>]. It is more common in patients who are orally intubated than those who are nasally intubated [<a href="#rid85">85,90-93</a>]. It is also more frequent in patients whose ETT is not well secured or who are agitated, have low levels of sedation, or are physically restrained [<a href="#rid91">91,92,94,95</a>]. Most unplanned extubations occur within one day of planned extubation and are deliberate maneuvers by the patients rather than accidental [<a href="#rid96">96</a>].</p><p>Most patients who undergo unplanned extubation should be promptly assessed with a low threshold to reintubate immediately. This strategy is based upon reports which suggest that delayed reintubation is associated with increased mortality [<a href="#rid51">51</a>]. Increased mortality may be due to the technical difficulty associated with reintubation in this setting [<a href="#rid85">85,97,98</a>] and that unplanned extubation is associated with a longer duration of mechanical ventilation, ICU stay, and hospitalization [<a href="#rid99">99</a>]. In support, approximately 50 percent of patients who have undergone unplanned extubation require reintubation, often within 12 hours [<a href="#rid52">52,91</a>]. Reintubation is more common following accidental unplanned extubation and among patients who require full ventilatory support, have higher sedation scores, and have a significant oxygen requirement (ie, FiO<sub>2</sub> &gt;50 percent) [<a href="#rid85">85,90,92,94,97</a>].</p><p>Careful observation is appropriate for select patients who are clinically stable, have low ventilatory and oxygenation requirements, have a patent airway, and can protect their airway. These patients are at risk of reintubation and should be managed as such. (See <a class="local">'Patients at high risk of postextubation respiratory failure'</a> above.)</p><p>Strategies to avoid unplanned extubation are discussed separately. (See  <a class="medical medical_review" href="/d/html/1644.html" rel="external">"Complications of the endotracheal tube following initial placement: Prevention and management in adult intensive care unit patients", section on 'Displacement and unplanned extubation'</a>.)</p><p class="headingAnchor" id="H505865321"><span class="h3">Patients who fail due to postextubation stridor</span><span class="headingEndMark"> — </span>For patients whose initial trial of extubation failed due to stridor, prompt reintubation is warranted (sometimes with a smaller-sized ETT). Careful examination of the oral cavity upper airway and vocal cords for edema, and of the airway for size and secretions and abnormal lesions is prudent in order to determine a cause for stridor. In this population, we perform the following:</p><p class="bulletIndent1"><span class="glyph">●</span>Treat with a short course of glucocorticoids for presumed or observed laryngeal edema. (See <a class="local">'Glucocorticoids'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Perform a cuff leak test following treatment, provided the patient meets all other extubation criteria again (see <a class="local">'Cuff leak'</a> above):</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>If an appropriate cuff leak is detected, bedside extubation is generally safe. (See <a class="local">'Extubation equipment and technique'</a> above.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>If a cuff leak is reduced or absent despite a course of glucocorticoid therapy, extubation over an airway exchange catheter (AEC; eg, a Cook catheter) may facilitate successful reintubation without delay, if necessary [<a href="#rid100">100</a>]. AECs generally require supervision by anesthesiologists with expertise in difficult airway management and are discussed in detail separately. (See  <a class="medical medical_review" href="/d/html/94224.html" rel="external">"Extubation following anesthesia"</a>.)</p><p></p><p>Patients who fail a second trial of extubation generally require a tracheostomy. (See  <a class="medical medical_review" href="/d/html/4389.html" rel="external">"Tracheostomy: Rationale, indications, and contraindications"</a>.)</p><p class="headingAnchor" id="H1268506571"><span class="h1">REFEEDING</span><span class="headingEndMark"> — </span>There is little evidence and no guidelines to predict clinically significant swallowing dysfunction that may predispose a patient to aspiration following extubation. In our opinion, clinicians should weigh the benefits of feeding against the risk of aspiration in all cases and seek formal testing when patients are suspected to have a high risk of aspiration. Thus, the point at which patients can eat following extubation should be individualized and depends upon factors including duration of intubation, mental status, and underlying comorbidities (eg, neuromuscular disorders, critical care myopathy, poor level of consciousness) which may predispose patients to dysphagia and aspiration.</p><p class="bulletIndent1"><span class="glyph">●</span>As a general rule, patients intubated for short periods (eg, less than one week) can generally eat within a few hours after extubation; swallowing is initially typically observed with small amounts of ice chips or water and if tolerated, a solid diet is slowly introduced over the ensuing few days.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>However, many clinicians do not allow patients who have been intubated for a prolonged duration (eg, two weeks or longer) to eat for approximately 12 to 24 hours following extubation. In this population many experts request a bedside, and sometimes a formal radiographic and/or fiberoptic endoscopic evaluation of swallowing (FEES), before allowing the patient to eat; although such evaluations are thought to minimize the risk of aspiration from swallowing impairment, they ultimately lead to a delay in receiving adequate nutrition. As an example, in one case series, only around a quarter of patients received adequate nutrition (defined as at least 75 percent of their predicted daily requirement) during the first week following extubation [<a href="#rid101">101</a>]. (See  <a class="medical medical_review" href="/d/html/2237.html" rel="external">"Oropharyngeal dysphagia: Clinical features, diagnosis, and management"</a>.)</p><p></p><p class="headingAnchor" id="H12"><span class="h1">SUMMARY AND RECOMMENDATIONS</span></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Definition</strong> – Extubation refers to removal of the endotracheal tube (ETT). It is the final step in liberating a patient from mechanical ventilation. (See <a class="local">'Introduction'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Assessment</strong> – Extubation should not be ordered until it has been determined that the patient's medical condition is stable, a weaning trial has been successful, the airway is patent, and any potential difficulties in reintubation have been identified. Most patients are extubated during daytime hours, although nocturnal extubation is appropriate in select circumstances. (See <a class="local">'Assessing safety of extubation'</a> above.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>For most patients whose medical condition is improving, who passed their spontaneous breathing trial (<a class="graphic graphic_table graphicRef62377" href="/d/graphic/62377.html" rel="external">table 1</a>) with normal cough strength (eg, cough peak expiratory flow &gt;60 L/minute), Glasgow Coma Score ≥8 (<a class="graphic graphic_table graphicRef81854" href="/d/graphic/81854.html" rel="external">table 2</a>), and in whom suctioning is needed no less than every two to three hours, extubation is considered safe. In contrast, for most patients without any one of these features, extubation should be delayed while the etiology is corrected.</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>For most patients, a cuff leak does not need to be performed unless risk factors for postextubation stridor from laryngeal edema are present (eg, prolonged duration of intubation, traumatic intubation, large ETT, aspiration). (See <a class="local">'Patients at risk'</a> above.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>In patients with risk factors for postextubation stridor who have a cuff leak volume ≥110 mL or &gt;24 percent of the delivered tidal volume, we proceed with extubation. (See <a class="local">'Cuff leak'</a> above.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>For patients with risk factors for postextubation stridor who have a reduced or absent cuff leak, we suggest administering a short course of glucocorticoid therapy at least four hours prior to extubation, rather than no glucocorticoid therapy (<a class="grade" href="https://medilib.ir/uptodate/show/grade_5" rel="external">Grade 2B</a>). Typical regimens include <a class="drug drug_general" data-topicid="9639" href="/d/drug information/9639.html" rel="external">methylprednisolone</a> (20 mg) intravenously every four hours for a total of four doses prior to extubation or a single dose of 40 mg administered four hours prior to extubation. (See <a class="local">'Glucocorticoids'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Technique</strong> – The equipment needed for extubation includes oral and endotracheal suction catheters and tubing, tape cutters, and a 10 mL syringe, as well as several types of oxygen delivery systems including low-flow and high-flow nasal cannulae, high-flow simple facemasks, and access to noninvasive ventilator (NIV) equipment. The patient is placed into an upright position and the ETT is removed with the cuff deflated following oral and tracheal suctioning. (See <a class="local">'Extubation equipment and technique'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Postextubation management</strong> – Patients should be closely monitored following extubation in the intensive care unit (ICU). (See <a class="local">'Postextubation management'</a> above.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span><strong>Low-risk of reintubation</strong> – For most patients who are at <strong>low risk</strong> of reintubation, we suggest low-flow oxygen (nasal prongs, simple, or venturi facemasks) rather than oxygen delivered via high-flow nasal cannulae (HFNC) (<a class="grade" href="https://medilib.ir/uptodate/show/grade_6" rel="external">Grade 2C</a>). Most patients are in this category and can be discharged from the ICU after 12 to 24 hours, provided no other indications for ICU care are present. When higher flows of oxygen are required, HFNC may offer improved oxygenation and provide a small amount of positive end-expiratory pressure (PEEP). (See <a class="local">'Patients at low risk of postextubation respiratory failure'</a> above.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span><strong>High-risk of reintubation</strong> – For patients at <strong>high risk</strong> of reintubation, aggressive monitoring and management with continued medical therapies, oxygenation, and airway clearance measures should be performed to prevent reintubation. (See <a class="local">'Patients at high risk of postextubation respiratory failure'</a> above.)</p><p></p><p class="bulletIndent3"><span class="glyph">-</span>We do not routinely extubate patients at risk of postextubation respiratory failure to NIV or HFNC, or HFNC/NIV. However, select patients at the highest risk may benefit. Practice varies significantly with much of this decision at the discretion of the treating physician/respiratory therapist. We believe the choice between observation and NIV and/or HFNC should be individualized and depend upon factors including the degree of risk and type of respiratory failure (eg, hypoxic, hypercapnic), oxygen and positive end expiratory pressure requirements of the patient, and local availability of and expertise in HFNC and NIV.</p><p></p><p class="bulletIndent3"><span class="glyph">-</span>We extubate directly to HFNC or NIV (for roughly 6 to 24 hours) in a select group of patients who are assessed as having the highest risk. For example, patients with compensated hypercapnic respiratory failure during their pre-extubation spontaneous breathing trial (eg, patients with severe chronic obstructive pulmonary disease [COPD]) and patients with cardiac failure are more likely to benefit from NIV while patents with high oxygen requirements are more likely to benefit from HFNC. Patients who benefit from NIV may also benefit from combining NIV alternating with HFNC for non-NIV periods.</p><p></p><p class="bulletIndent2"><span class="glyph">•</span><strong>Established postextubation respiratory failure</strong> – A small proportion of patients (&lt;15 percent) develop postextubation respiratory failure, most of whom fail within the first 24 hours. As soon as it is suspected that a patient may be failing extubation, therapies targeted at the suspected etiology of respiratory failure (eg, poor secretion clearance, heart failure/ischemia, increased work of breathing) and a simultaneous trial of HFNC or NIV should be immediately implemented, rather than waiting for overt respiratory failure to occur. For patients who fail such therapy or develop definitive respiratory failure before treatment can be initiated, prompt reintubation is advised. (See <a class="local">'Patients with established postextubation respiratory failure'</a> above.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span><strong>Special populations</strong> – For many patients who undergo unplanned extubation, the threshold to reintubate should be low since 50 percent of patients require reintubation within the first 12 hours and delayed reintubation is associated with increased mortality. Careful observation is appropriate for select patients who are clinically stable, have low ventilatory and oxygenation requirements, have a patent airway, and can protect their airway. For patients whose initial trial of extubation failed due to stridor, prompt reintubation with careful examination of the upper airway and vocal cords for edema, secretions, and abnormal lesions is warranted. Suspected etiologies should be treated and extubation reattempted at a later date. (See <a class="local">'Special populations'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Nutrition</strong> – Following extubation, clinicians should assess the safety of refeeding. The timing of refeeding is individualized and depends upon factors including duration of intubation, mental status, and underlying comorbidities (eg, neuromuscular disorders, critical care myopathy, poor level of consciousness). Typically, most patients intubated for short periods (eg, less than one week) can generally eat within a few hours after extubation under direct supervision, while those who have been intubated for more prolonged periods or with comorbidities that increase the risk of aspiration may need formal assessment within 24 to 48 hours before feeding. (See <a class="local">'Refeeding'</a> above.)</p><p></p><p class="headingAnchor" id="H2919583775"><span class="h1">ACKNOWLEDGMENT</span><span class="headingEndMark"> — </span>The UpToDate editorial staff acknowledges Kristy Bauman, MD, who contributed to earlier versions of this topic review.</p></div><div class="headingAnchor" id="references"><ol id="reference"><li><a class="nounderline abstract_t">Fernandez MM, González-Castro A, Magret M, et al. Reconnection to mechanical ventilation for 1 h after a successful spontaneous breathing trial reduces reintubation in critically ill patients: a multicenter randomized controlled trial. Intensive Care Med 2017; 43:1660.</a></li><li><a class="nounderline abstract_t">Coplin WM, Pierson DJ, Cooley KD, et al. Implications of extubation delay in brain-injured patients meeting standard weaning criteria. Am J Respir Crit Care Med 2000; 161:1530.</a></li><li><a class="nounderline abstract_t">Salam A, Tilluckdharry L, Amoateng-Adjepong Y, Manthous CA. Neurologic status, cough, secretions and extubation outcomes. Intensive Care Med 2004; 30:1334.</a></li><li><a class="nounderline abstract_t">Epstein SK. Putting it all together to predict extubation outcome. Intensive Care Med 2004; 30:1255.</a></li><li><a class="nounderline abstract_t">Smina M, Salam A, Khamiees M, et al. Cough peak flows and extubation outcomes. Chest 2003; 124:262.</a></li><li><a class="nounderline abstract_t">Khamiees M, Raju P, DeGirolamo A, et al. Predictors of extubation outcome in patients who have successfully completed a spontaneous breathing trial. Chest 2001; 120:1262.</a></li><li><a class="nounderline abstract_t">Beuret P, Roux C, Auclair A, et al. Interest of an objective evaluation of cough during weaning from mechanical ventilation. Intensive Care Med 2009; 35:1090.</a></li><li><a class="nounderline abstract_t">Thille AW, Boissier F, Ben Ghezala H, et al. Risk factors for and prediction by caregivers of extubation failure in ICU patients: a prospective study. Crit Care Med 2015; 43:613.</a></li><li><a class="nounderline abstract_t">Namen AM, Ely EW, Tatter SB, et al. Predictors of successful extubation in neurosurgical patients. Am J Respir Crit Care Med 2001; 163:658.</a></li><li><a class="nounderline abstract_t">Schnell D, Planquette B, Berger A, et al. Cuff Leak Test for the Diagnosis of Post-Extubation Stridor. J Intensive Care Med 2017; :885066617700095.</a></li><li><a class="nounderline abstract_t">Maury E, Guglielminotti J, Alzieu M, et al. How to identify patients with no risk for postextubation stridor? J Crit Care 2004; 19:23.</a></li><li><a class="nounderline abstract_t">Kriner EJ, Shafazand S, Colice GL. The endotracheal tube cuff-leak test as a predictor for postextubation stridor. Respir Care 2005; 50:1632.</a></li><li><a class="nounderline abstract_t">Sukhupanyarak S. Risk factors evaluation and the cuff leak test as predictors for postextubation stridor. J Med Assoc Thai 2008; 91:648.</a></li><li><a class="nounderline abstract_t">Cheng KC, Hou CC, Huang HC, et al. Intravenous injection of methylprednisolone reduces the incidence of postextubation stridor in intensive care unit patients. Crit Care Med 2006; 34:1345.</a></li><li><a class="nounderline abstract_t">François B, Bellissant E, Gissot V, et al. 12-h pretreatment with methylprednisolone versus placebo for prevention of postextubation laryngeal oedema: a randomised double-blind trial. Lancet 2007; 369:1083.</a></li><li><a class="nounderline abstract_t">Santos PM, Afrassiabi A, Weymuller EA Jr. Risk factors associated with prolonged intubation and laryngeal injury. Otolaryngol Head Neck Surg 1994; 111:453.</a></li><li><a class="nounderline abstract_t">Friedman M, Baim H, Shelton V, et al. Laryngeal injuries secondary to nasogastric tubes. Ann Otol Rhinol Laryngol 1981; 90:469.</a></li><li><a class="nounderline abstract_t">Wittekamp BH, van Mook WN, Tjan DH, et al. Clinical review: post-extubation laryngeal edema and extubation failure in critically ill adult patients. Crit Care 2009; 13:233.</a></li><li><a class="nounderline abstract_t">Miller RL, Cole RP. Association between reduced cuff leak volume and postextubation stridor. Chest 1996; 110:1035.</a></li><li><a class="nounderline abstract_t">Jaber S, Chanques G, Matecki S, et al. Post-extubation stridor in intensive care unit patients. Risk factors evaluation and importance of the cuff-leak test. Intensive Care Med 2003; 29:69.</a></li><li><a class="nounderline abstract_t">De Bast Y, De Backer D, Moraine JJ, et al. The cuff leak test to predict failure of tracheal extubation for laryngeal edema. Intensive Care Med 2002; 28:1267.</a></li><li><a class="nounderline abstract_t">Lee CH, Peng MJ, Wu CL. Dexamethasone to prevent postextubation airway obstruction in adults: a prospective, randomized, double-blind, placebo-controlled study. Crit Care 2007; 11:R72.</a></li><li><a class="nounderline abstract_t">Ochoa ME, Marín Mdel C, Frutos-Vivar F, et al. Cuff-leak test for the diagnosis of upper airway obstruction in adults: a systematic review and meta-analysis. Intensive Care Med 2009; 35:1171.</a></li><li><a class="nounderline abstract_t">Zhou T, Zhang HP, Chen WW, et al. Cuff-leak test for predicting postextubation airway complications: a systematic review. J Evid Based Med 2011; 4:242.</a></li><li><a class="nounderline abstract_t">Fisher MM, Raper RF. The 'cuff-leak' test for extubation. Anaesthesia 1992; 47:10.</a></li><li><a class="nounderline abstract_t">Engoren M. Evaluation of the cuff-leak test in a cardiac surgery population. Chest 1999; 116:1029.</a></li><li><a class="nounderline abstract_t">Girard TD, Alhazzani W, Kress JP, et al. An Official American Thoracic Society/American College of Chest Physicians Clinical Practice Guideline: Liberation from Mechanical Ventilation in Critically Ill Adults. Rehabilitation Protocols, Ventilator Liberation Protocols, and Cuff Leak Tests. Am J Respir Crit Care Med 2017; 195:120.</a></li><li><a class="nounderline abstract_t">Ding LW, Wang HC, Wu HD, et al. Laryngeal ultrasound: a useful method in predicting post-extubation stridor. A pilot study. Eur Respir J 2006; 27:384.</a></li><li><a class="nounderline abstract_t">Sutherasan Y, Theerawit P, Hongphanut T, et al. Predicting laryngeal edema in intubated patients by portable intensive care unit ultrasound. J Crit Care 2013; 28:675.</a></li><li><a class="nounderline abstract_t">Ouellette DR, Patel S, Girard TD, et al. Liberation From Mechanical Ventilation in Critically Ill Adults: An Official American College of Chest Physicians/American Thoracic Society Clinical Practice Guideline: Inspiratory Pressure Augmentation During Spontaneous Breathing Trials, Protocols Minimizing Sedation, and Noninvasive Ventilation Immediately After Extubation. Chest 2017; 151:166.</a></li><li><a class="nounderline abstract_t">Schmidt GA, Girard TD, Kress JP, et al. Official Executive Summary of an American Thoracic Society/American College of Chest Physicians Clinical Practice Guideline: Liberation from Mechanical Ventilation in Critically Ill Adults. Am J Respir Crit Care Med 2017; 195:115.</a></li><li><a class="nounderline abstract_t">Darmon JY, Rauss A, Dreyfuss D, et al. Evaluation of risk factors for laryngeal edema after tracheal extubation in adults and its prevention by dexamethasone. A placebo-controlled, double-blind, multicenter study. Anesthesiology 1992; 77:245.</a></li><li><a class="nounderline abstract_t">Ho LI, Harn HJ, Lien TC, et al. Postextubation laryngeal edema in adults. Risk factor evaluation and prevention by hydrocortisone. Intensive Care Med 1996; 22:933.</a></li><li><a class="nounderline abstract_t">Khemani RG, Randolph A, Markovitz B. Corticosteroids for the prevention and treatment of post-extubation stridor in neonates, children and adults. Cochrane Database Syst Rev 2009; :CD001000.</a></li><li><a class="nounderline abstract_t">Fan T, Wang G, Mao B, et al. Prophylactic administration of parenteral steroids for preventing airway complications after extubation in adults: meta-analysis of randomised placebo controlled trials. BMJ 2008; 337:a1841.</a></li><li><a class="nounderline abstract_t">Cheng KC, Chen CM, Tan CK, et al. Methylprednisolone reduces the rates of postextubation stridor and reintubation associated with attenuated cytokine responses in critically ill patients. Minerva Anestesiol 2011; 77:503.</a></li><li><a class="nounderline abstract_t">McCaffrey J, Farrell C, Whiting P, et al. Corticosteroids to prevent extubation failure: a systematic review and meta-analysis. Intensive Care Med 2009; 35:977.</a></li><li><a class="nounderline abstract_t">Kuriyama A, Umakoshi N, Sun R. Prophylactic Corticosteroids for Prevention of Postextubation Stridor and Reintubation in Adults: A Systematic Review and Meta-analysis. Chest 2017; 151:1002.</a></li><li><a class="nounderline abstract_t">Jaber S, Jung B, Chanques G, et al. Effects of steroids on reintubation and post-extubation stridor in adults: meta-analysis of randomised controlled trials. Crit Care 2009; 13:R49.</a></li><li><a class="nounderline abstract_t">Tischenkel BR, Gong MN, Shiloh AL, et al. Daytime Versus Nighttime Extubations: A Comparison of Reintubation, Length of Stay, and Mortality. J Intensive Care Med 2016; 31:118.</a></li><li><a class="nounderline abstract_t">Krebs ED, Hawkins RB, Mehaffey JH, et al. Is routine extubation overnight safe in cardiac surgery patients? J Thorac Cardiovasc Surg 2019; 157:1533.</a></li><li><a class="nounderline abstract_t">Gershengorn HB, Scales DC, Kramer A, Wunsch H. Association Between Overnight Extubations and Outcomes in the Intensive Care Unit. JAMA Intern Med 2016; 176:1651.</a></li><li><a class="nounderline abstract_t">Landais M, Nay MA, Auchabie J, et al. Continued enteral nutrition until extubation compared with fasting before extubation in patients in the intensive care unit: an open-label, cluster-randomised, parallel-group, non-inferiority trial. Lancet Respir Med 2023; 11:319.</a></li><li><a class="nounderline abstract_t">Casey JD, Vaughan EM, Lloyd BD, et al. Protocolized Postextubation Respiratory Support to Prevent Reintubation: A Randomized Clinical Trial. Am J Respir Crit Care Med 2021; 204:294.</a></li><li><a class="nounderline abstract_t">Miltiades AN, Gershengorn HB, Hua M, et al. Cumulative Probability and Time to Reintubation in U.S. ICUs. Crit Care Med 2017; 45:835.</a></li><li><a class="nounderline abstract_t">Tiruvoipati R, Lewis D, Haji K, Botha J. High-flow nasal oxygen vs high-flow face mask: a randomized crossover trial in extubated patients. J Crit Care 2010; 25:463.</a></li><li><a class="nounderline abstract_t">Maggiore SM, Idone FA, Vaschetto R, et al. Nasal high-flow versus Venturi mask oxygen therapy after extubation. Effects on oxygenation, comfort, and clinical outcome. Am J Respir Crit Care Med 2014; 190:282.</a></li><li><a class="nounderline abstract_t">Hernández G, Vaquero C, González P, et al. Effect of Postextubation High-Flow Nasal Cannula vs Conventional Oxygen Therapy on Reintubation in Low-Risk Patients: A Randomized Clinical Trial. JAMA 2016; 315:1354.</a></li><li><a class="nounderline abstract_t">Futier E, Paugam-Burtz C, Godet T, et al. Effect of early postextubation high-flow nasal cannula vs conventional oxygen therapy on hypoxaemia in patients after major abdominal surgery: a French multicentre randomised controlled trial (OPERA). Intensive Care Med 2016; 42:1888.</a></li><li><a class="nounderline abstract_t">Rochwerg B, Einav S, Chaudhuri D, et al. The role for high flow nasal cannula as a respiratory support strategy in adults: a clinical practice guideline. Intensive Care Med 2020; 46:2226.</a></li><li><a class="nounderline abstract_t">Epstein SK, Ciubotaru RL. Independent effects of etiology of failure and time to reintubation on outcome for patients failing extubation. Am J Respir Crit Care Med 1998; 158:489.</a></li><li><a class="nounderline abstract_t">Esteban A, Anzueto A, Frutos F, et al. Characteristics and outcomes in adult patients receiving mechanical ventilation: a 28-day international study. JAMA 2002; 287:345.</a></li><li><a class="nounderline abstract_t">Frutos-Vivar F, Ferguson ND, Esteban A, et al. Risk factors for extubation failure in patients following a successful spontaneous breathing trial. Chest 2006; 130:1664.</a></li><li><a class="nounderline abstract_t">Thille AW, Harrois A, Schortgen F, et al. Outcomes of extubation failure in medical intensive care unit patients. Crit Care Med 2011; 39:2612.</a></li><li><a class="nounderline abstract_t">Rochwerg B, Brochard L, Elliott MW, et al. Official ERS/ATS clinical practice guidelines: noninvasive ventilation for acute respiratory failure. Eur Respir J 2017; 50.</a></li><li><a class="nounderline abstract_t">Nava S, Gregoretti C, Fanfulla F, et al. Noninvasive ventilation to prevent respiratory failure after extubation in high-risk patients. Crit Care Med 2005; 33:2465.</a></li><li><a class="nounderline abstract_t">Ferrer M, Valencia M, Nicolas JM, et al. Early noninvasive ventilation averts extubation failure in patients at risk: a randomized trial. Am J Respir Crit Care Med 2006; 173:164.</a></li><li><a class="nounderline abstract_t">El-Solh AA, Aquilina A, Pineda L, et al. Noninvasive ventilation for prevention of post-extubation respiratory failure in obese patients. Eur Respir J 2006; 28:588.</a></li><li><a class="nounderline abstract_t">Ferrer M, Sellarés J, Valencia M, et al. Non-invasive ventilation after extubation in hypercapnic patients with chronic respiratory disorders: randomised controlled trial. Lancet 2009; 374:1082.</a></li><li><a class="nounderline abstract_t">Burns KE, Meade MO, Premji A, Adhikari NK. Noninvasive positive-pressure ventilation as a weaning strategy for intubated adults with respiratory failure. Cochrane Database Syst Rev 2013; :CD004127.</a></li><li><a class="nounderline abstract_t">Khilnani GC, Galle AD, Hadda V, Sharma SK. Non-invasive ventilation after extubation in patients with chronic obstructive airways disease: a randomised controlled trial. Anaesth Intensive Care 2011; 39:217.</a></li><li><a class="nounderline abstract_t">Burns KEA, Stevenson J, Laird M, et al. Non-invasive ventilation versus invasive weaning in critically ill adults: a systematic review and meta-analysis. Thorax 2022; 77:752.</a></li><li><a class="nounderline abstract_t">Girault C, Bubenheim M, Abroug F, et al. Noninvasive ventilation and weaning in patients with chronic hypercapnic respiratory failure: a randomized multicenter trial. Am J Respir Crit Care Med 2011; 184:672.</a></li><li><a class="nounderline abstract_t">Fernando SM, Tran A, Sadeghirad B, et al. Noninvasive respiratory support following extubation in critically ill adults: a systematic review and network meta-analysis. Intensive Care Med 2022; 48:137.</a></li><li><a class="nounderline abstract_t">Hernández G, Vaquero C, Colinas L, et al. Effect of Postextubation High-Flow Nasal Cannula vs Noninvasive Ventilation on Reintubation and Postextubation Respiratory Failure in High-Risk Patients: A Randomized Clinical Trial. JAMA 2016; 316:1565.</a></li><li><a class="nounderline abstract_t">Stéphan F, Barrucand B, Petit P, et al. High-Flow Nasal Oxygen vs Noninvasive Positive Airway Pressure in Hypoxemic Patients After Cardiothoracic Surgery: A Randomized Clinical Trial. JAMA 2015; 313:2331.</a></li><li><a class="nounderline abstract_t">Jaber S, Lescot T, Futier E, et al. Effect of Noninvasive Ventilation on Tracheal Reintubation Among Patients With Hypoxemic Respiratory Failure Following Abdominal Surgery: A Randomized Clinical Trial. JAMA 2016; 315:1345.</a></li><li><a class="nounderline abstract_t">Hernández G, Paredes I, Moran F, et al. Effect of postextubation noninvasive ventilation with active humidification vs high-flow nasal cannula on reintubation in patients at very high risk for extubation failure: a randomized trial. Intensive Care Med 2022; 48:1751.</a></li><li><a class="nounderline abstract_t">Maggiore SM, Jaber S, Grieco DL, et al. High-Flow Versus VenturiMask Oxygen Therapy to Prevent Reintubation in Hypoxemic Patients after Extubation: A Multicenter Randomized Clinical Trial. Am J Respir Crit Care Med 2022; 206:1452.</a></li><li><a class="nounderline abstract_t">Frat JP, Thille AW, Mercat A, et al. High-flow oxygen through nasal cannula in acute hypoxemic respiratory failure. N Engl J Med 2015; 372:2185.</a></li><li><a class="nounderline abstract_t">Thille AW, Muller G, Gacouin A, et al. Effect of Postextubation High-Flow Nasal Oxygen With Noninvasive Ventilation vs High-Flow Nasal Oxygen Alone on Reintubation Among Patients at High Risk of Extubation Failure: A Randomized Clinical Trial. JAMA 2019; 322:1465.</a></li><li><a class="nounderline abstract_t">Thille AW, Monseau G, Coudroy R, et al. Non-invasive ventilation versus high-flow nasal oxygen for postextubation respiratory failure in ICU: a post-hoc analysis of a randomized clinical trial. Crit Care 2021; 25:221.</a></li><li><a class="nounderline abstract_t">Thille AW, Coudroy R, Nay MA, et al. Beneficial Effects of Noninvasive Ventilation after Extubation in Obese or Overweight Patients: A Post Hoc Analysis of a Randomized Clinical Trial. Am J Respir Crit Care Med 2022; 205:440.</a></li><li><a class="nounderline abstract_t">Qaseem A, Etxeandia-Ikobaltzeta I, Fitterman N, et al. Appropriate Use of High-Flow Nasal Oxygen in Hospitalized Patients for Initial or Postextubation Management of Acute Respiratory Failure: A Clinical Guideline From the American College of Physicians. Ann Intern Med 2021; 174:977.</a></li><li><a class="nounderline abstract_t">Esteban A, Frutos-Vivar F, Ferguson ND, et al. Noninvasive positive-pressure ventilation for respiratory failure after extubation. N Engl J Med 2004; 350:2452.</a></li><li><a class="nounderline abstract_t">Keenan SP, Powers C, McCormack DG, Block G. Noninvasive positive-pressure ventilation for postextubation respiratory distress: a randomized controlled trial. JAMA 2002; 287:3238.</a></li><li><a class="nounderline abstract_t">Baldomero AK, Melzer AC, Greer N, et al. Effectiveness and Harms of High-Flow Nasal Oxygen for Acute Respiratory Failure: An Evidence Report for a Clinical Guideline From the American College of Physicians. Ann Intern Med 2021; 174:952.</a></li><li><a class="nounderline abstract_t">Epstein SK, Ciubotaru RL, Wong JB. Effect of failed extubation on the outcome of mechanical ventilation. Chest 1997; 112:186.</a></li><li><a class="nounderline abstract_t">Torres A, Gatell JM, Aznar E, et al. Re-intubation increases the risk of nosocomial pneumonia in patients needing mechanical ventilation. Am J Respir Crit Care Med 1995; 152:137.</a></li><li><a class="nounderline abstract_t">Nafiu OO, Ramachandran SK, Ackwerh R, et al. Factors associated with and consequences of unplanned post-operative intubation in elderly vascular and general surgery patients. Eur J Anaesthesiol 2011; 28:220.</a></li><li><a class="nounderline abstract_t">Ramachandran SK, Nafiu OO, Ghaferi A, et al. Independent predictors and outcomes of unanticipated early postoperative tracheal intubation after nonemergent, noncardiac surgery. Anesthesiology 2011; 115:44.</a></li><li><a class="nounderline abstract_t">Brueckmann B, Villa-Uribe JL, Bateman BT, et al. Development and validation of a score for prediction of postoperative respiratory complications. Anesthesiology 2013; 118:1276.</a></li><li><a class="nounderline abstract_t">Rady MY, Ryan T. Perioperative predictors of extubation failure and the effect on clinical outcome after cardiac surgery. Crit Care Med 1999; 27:340.</a></li><li><a class="nounderline abstract_t">Reyes A, Vega G, Blancas R, et al. Early vs conventional extubation after cardiac surgery with cardiopulmonary bypass. Chest 1997; 112:193.</a></li><li><a class="nounderline abstract_t">Razek T, Gracias V, Sullivan D, et al. Assessing the need for reintubation: a prospective evaluation of unplanned endotracheal extubation. J Trauma 2000; 48:466.</a></li><li><a class="nounderline abstract_t">Coppolo DP, May JJ. Self-extubations. A 12-month experience. Chest 1990; 98:165.</a></li><li><a class="nounderline abstract_t">Vassal T, Anh NG, Gabillet JM, et al. Prospective evaluation of self-extubations in a medical intensive care unit. Intensive Care Med 1993; 19:340.</a></li><li><a class="nounderline abstract_t">Listello D, Sessler CN. Unplanned extubation. Clinical predictors for reintubation. Chest 1994; 105:1496.</a></li><li><a class="nounderline abstract_t">Tindol GA Jr, DiBenedetto RJ, Kosciuk L. Unplanned extubations. Chest 1994; 105:1804.</a></li><li><a class="nounderline abstract_t">Betbesé AJ, Pérez M, Bak E, et al. A prospective study of unplanned endotracheal extubation in intensive care unit patients. Crit Care Med 1998; 26:1180.</a></li><li><a class="nounderline abstract_t">Boulain T. Unplanned extubations in the adult intensive care unit: a prospective multicenter study. Association des Réanimateurs du Centre-Ouest. Am J Respir Crit Care Med 1998; 157:1131.</a></li><li><a class="nounderline abstract_t">Chevron V, Ménard JF, Richard JC, et al. Unplanned extubation: risk factors of development and predictive criteria for reintubation. Crit Care Med 1998; 26:1049.</a></li><li><a class="nounderline abstract_t">de Lassence A, Alberti C, Azoulay E, et al. Impact of unplanned extubation and reintubation after weaning on nosocomial pneumonia risk in the intensive care unit: a prospective multicenter study. Anesthesiology 2002; 97:148.</a></li><li><a class="nounderline abstract_t">Curry K, Cobb S, Kutash M, Diggs C. Characteristics associated with unplanned extubations in a surgical intensive care unit. Am J Crit Care 2008; 17:45.</a></li><li><a class="nounderline abstract_t">Chang LY, Wang KW, Chao YF. Influence of physical restraint on unplanned extubation of adult intensive care patients: a case-control study. Am J Crit Care 2008; 17:408.</a></li><li><a class="nounderline abstract_t">Moons P, Sels K, De Becker W, et al. Development of a risk assessment tool for deliberate self-extubation in intensive care patients. Intensive Care Med 2004; 30:1348.</a></li><li><a class="nounderline abstract_t">Krinsley JS, Barone JE. The drive to survive: unplanned extubation in the ICU. Chest 2005; 128:560.</a></li><li><a class="nounderline abstract_t">Epstein SK, Nevins ML, Chung J. Effect of unplanned extubation on outcome of mechanical ventilation. Am J Respir Crit Care Med 2000; 161:1912.</a></li><li><a class="nounderline abstract_t">de Larminat V, Montravers P, Dureuil B, Desmonts JM. Alteration in swallowing reflex after extubation in intensive care unit patients. Crit Care Med 1995; 23:486.</a></li><li><a class="nounderline abstract_t">Mort TC. Continuous airway access for the difficult extubation: the efficacy of the airway exchange catheter. Anesth Analg 2007; 105:1357.</a></li><li><a class="nounderline abstract_t">Peterson SJ, Tsai AA, Scala CM, et al. Adequacy of oral intake in critically ill patients 1 week after extubation. J Am Diet Assoc 2010; 110:427.</a></li></ol></div><div id="topicVersionRevision">Topic 1634 Version 49.0</div></div>
+<div class="row">
+<div class="col-12">
+<h4 style="text-align: center;padding: 20px;color: cadetblue;">References</h4>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/28936675" id="rid0" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>1 : Reconnection to mechanical ventilation for 1 h after a successful spontaneous breathing trial reduces reintubation in critically ill patients: a multicenter randomized controlled trial.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/10806150" id="rid1" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>2 : Implications of extubation delay in brain-injured patients meeting standard weaning criteria.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/14999444" id="rid2" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>3 : Neurologic status, cough, secretions and extubation outcomes.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/15160236" id="rid3" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>4 : Putting it all together to predict extubation outcome.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/12853532" id="rid4" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>5 : Cough peak flows and extubation outcomes.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/11591570" id="rid5" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>6 : Predictors of extubation outcome in patients who have successfully completed a spontaneous breathing trial.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/19169666" id="rid6" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>7 : Interest of an objective evaluation of cough during weaning from mechanical ventilation.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/25479115" id="rid7" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>8 : Risk factors for and prediction by caregivers of extubation failure in ICU patients: a prospective study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/11254520" id="rid8" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>9 : Predictors of successful extubation in neurosurgical patients.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/28343416" id="rid9" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>10 : Cuff Leak Test for the Diagnosis of Post-Extubation Stridor.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/15101002" id="rid10" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>11 : How to identify patients with no risk for postextubation stridor?</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/16318644" id="rid11" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>12 : The endotracheal tube cuff-leak test as a predictor for postextubation stridor.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/18672626" id="rid12" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>13 : Risk factors evaluation and the cuff leak test as predictors for postextubation stridor.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/16540947" id="rid13" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>14 : Intravenous injection of methylprednisolone reduces the incidence of postextubation stridor in intensive care unit patients.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/17398307" id="rid14" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>15 : 12-h pretreatment with methylprednisolone versus placebo for prevention of postextubation laryngeal oedema: a randomised double-blind trial.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/7936678" id="rid15" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>16 : Risk factors associated with prolonged intubation and laryngeal injury.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/7305202" id="rid16" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>17 : Laryngeal injuries secondary to nasogastric tubes.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/20017891" id="rid17" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>18 : Clinical review: post-extubation laryngeal edema and extubation failure in critically ill adult patients.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/8874265" id="rid18" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>19 : Association between reduced cuff leak volume and postextubation stridor.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/12528025" id="rid19" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>20 : Post-extubation stridor in intensive care unit patients. Risk factors evaluation and importance of the cuff-leak test.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/12209275" id="rid20" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>21 : The cuff leak test to predict failure of tracheal extubation for laryngeal edema.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/17605780" id="rid21" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>22 : Dexamethasone to prevent postextubation airway obstruction in adults: a prospective, randomized, double-blind, placebo-controlled study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/19399474" id="rid22" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>23 : Cuff-leak test for the diagnosis of upper airway obstruction in adults: a systematic review and meta-analysis.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/23672755" id="rid23" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>24 : Cuff-leak test for predicting postextubation airway complications: a systematic review.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/1536393" id="rid24" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>25 : The 'cuff-leak' test for extubation.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/10531170" id="rid25" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>26 : Evaluation of the cuff-leak test in a cardiac surgery population.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/27762595" id="rid26" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>27 : An Official American Thoracic Society/American College of Chest Physicians Clinical Practice Guideline: Liberation from Mechanical Ventilation in Critically Ill Adults. Rehabilitation Protocols, Ventilator Liberation Protocols, and Cuff Leak Tests.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/16452597" id="rid27" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>28 : Laryngeal ultrasound: a useful method in predicting post-extubation stridor. A pilot study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/23806246" id="rid28" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>29 : Predicting laryngeal edema in intubated patients by portable intensive care unit ultrasound.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/27818331" id="rid29" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>30 : Liberation From Mechanical Ventilation in Critically Ill Adults: An Official American College of Chest Physicians/American Thoracic Society Clinical Practice Guideline: Inspiratory Pressure Augmentation During Spontaneous Breathing Trials, Protocols Minimizing Sedation, and Noninvasive Ventilation Immediately After Extubation.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/27762608" id="rid30" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>31 : Official Executive Summary of an American Thoracic Society/American College of Chest Physicians Clinical Practice Guideline: Liberation from Mechanical Ventilation in Critically Ill Adults.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/1642342" id="rid31" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>32 : Evaluation of risk factors for laryngeal edema after tracheal extubation in adults and its prevention by dexamethasone. A placebo-controlled, double-blind, multicenter study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/8905428" id="rid32" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>33 : Postextubation laryngeal edema in adults. Risk factor evaluation and prevention by hydrocortisone.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/19588321" id="rid33" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>34 : Corticosteroids for the prevention and treatment of post-extubation stridor in neonates, children and adults.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/18936064" id="rid34" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>35 : Prophylactic administration of parenteral steroids for preventing airway complications after extubation in adults: meta-analysis of randomised placebo controlled trials.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/21540805" id="rid35" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>36 : Methylprednisolone reduces the rates of postextubation stridor and reintubation associated with attenuated cytokine responses in critically ill patients.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/19352621" id="rid36" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>37 : Corticosteroids to prevent extubation failure: a systematic review and meta-analysis.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/28232056" id="rid37" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>38 : Prophylactic Corticosteroids for Prevention of Postextubation Stridor and Reintubation in Adults: A Systematic Review and Meta-analysis.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/19344515" id="rid38" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>39 : Effects of steroids on reintubation and post-extubation stridor in adults: meta-analysis of randomised controlled trials.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/24763118" id="rid39" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>40 : Daytime Versus Nighttime Extubations: A Comparison of Reintubation, Length of Stay, and Mortality.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/30578055" id="rid40" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>41 : Is routine extubation overnight safe in cardiac surgery patients?</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/27598515" id="rid41" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>42 : Association Between Overnight Extubations and Outcomes in the Intensive Care Unit.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/36693402" id="rid42" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>43 : Continued enteral nutrition until extubation compared with fasting before extubation in patients in the intensive care unit: an open-label, cluster-randomised, parallel-group, non-inferiority trial.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/33794131" id="rid43" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>44 : Protocolized Postextubation Respiratory Support to Prevent Reintubation: A Randomized Clinical Trial.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/28288027" id="rid44" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>45 : Cumulative Probability and Time to Reintubation in U.S. ICUs.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/19781896" id="rid45" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>46 : High-flow nasal oxygen vs high-flow face mask: a randomized crossover trial in extubated patients.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/25003980" id="rid46" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>47 : Nasal high-flow versus Venturi mask oxygen therapy after extubation. Effects on oxygenation, comfort, and clinical outcome.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/26975498" id="rid47" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>48 : Effect of Postextubation High-Flow Nasal Cannula vs Conventional Oxygen Therapy on Reintubation in Low-Risk Patients: A Randomized Clinical Trial.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/27771739" id="rid48" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>49 : Effect of early postextubation high-flow nasal cannula vs conventional oxygen therapy on hypoxaemia in patients after major abdominal surgery: a French multicentre randomised controlled trial (OPERA).</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/33201321" id="rid49" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>50 : The role for high flow nasal cannula as a respiratory support strategy in adults: a clinical practice guideline.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/9700126" id="rid50" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>51 : Independent effects of etiology of failure and time to reintubation on outcome for patients failing extubation.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/11790214" id="rid51" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>52 : Characteristics and outcomes in adult patients receiving mechanical ventilation: a 28-day international study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/17166980" id="rid52" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>53 : Risk factors for extubation failure in patients following a successful spontaneous breathing trial.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/21765357" id="rid53" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>54 : Outcomes of extubation failure in medical intensive care unit patients.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/28860265" id="rid54" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>55 : Official ERS/ATS clinical practice guidelines: noninvasive ventilation for acute respiratory failure.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/16276167" id="rid55" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>56 : Noninvasive ventilation to prevent respiratory failure after extubation in high-risk patients.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/16224108" id="rid56" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>57 : Early noninvasive ventilation averts extubation failure in patients at risk: a randomized trial.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/16737982" id="rid57" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>58 : Noninvasive ventilation for prevention of post-extubation respiratory failure in obese patients.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/19682735" id="rid58" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>59 : Non-invasive ventilation after extubation in hypercapnic patients with chronic respiratory disorders: randomised controlled trial.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/24323843" id="rid59" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>60 : Noninvasive positive-pressure ventilation as a weaning strategy for intubated adults with respiratory failure.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/21485669" id="rid60" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>61 : Non-invasive ventilation after extubation in patients with chronic obstructive airways disease: a randomised controlled trial.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/34716282" id="rid61" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>62 : Non-invasive ventilation versus invasive weaning in critically ill adults: a systematic review and meta-analysis.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/21680944" id="rid62" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>63 : Noninvasive ventilation and weaning in patients with chronic hypercapnic respiratory failure: a randomized multicenter trial.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/34825256" id="rid63" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>64 : Noninvasive respiratory support following extubation in critically ill adults: a systematic review and network meta-analysis.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/27706464" id="rid64" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>65 : Effect of Postextubation High-Flow Nasal Cannula vs Noninvasive Ventilation on Reintubation and Postextubation Respiratory Failure in High-Risk Patients: A Randomized Clinical Trial.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/25980660" id="rid65" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>66 : High-Flow Nasal Oxygen vs Noninvasive Positive Airway Pressure in Hypoxemic Patients After Cardiothoracic Surgery: A Randomized Clinical Trial.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/26975890" id="rid66" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>67 : Effect of Noninvasive Ventilation on Tracheal Reintubation Among Patients With Hypoxemic Respiratory Failure Following Abdominal Surgery: A Randomized Clinical Trial.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/36400984" id="rid67" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>68 : Effect of postextubation noninvasive ventilation with active humidification vs high-flow nasal cannula on reintubation in patients at very high risk for extubation failure: a randomized trial.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/35849787" id="rid68" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>69 : High-Flow Versus VenturiMask Oxygen Therapy to Prevent Reintubation in Hypoxemic Patients after Extubation: A Multicenter Randomized Clinical Trial.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/25981908" id="rid69" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>70 : High-flow oxygen through nasal cannula in acute hypoxemic respiratory failure.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/31577036" id="rid70" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>71 : Effect of Postextubation High-Flow Nasal Oxygen With Noninvasive Ventilation vs High-Flow Nasal Oxygen Alone on Reintubation Among Patients at High Risk of Extubation Failure: A Randomized Clinical Trial.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/34183053" id="rid71" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>72 : Non-invasive ventilation versus high-flow nasal oxygen for postextubation respiratory failure in ICU: a post-hoc analysis of a randomized clinical trial.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/34813391" id="rid72" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>73 : Beneficial Effects of Noninvasive Ventilation after Extubation in Obese or Overweight Patients: A Post Hoc Analysis of a Randomized Clinical Trial.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/33900796" id="rid73" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>74 : Appropriate Use of High-Flow Nasal Oxygen in Hospitalized Patients for Initial or Postextubation Management of Acute Respiratory Failure: A Clinical Guideline From the American College of Physicians.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/15190137" id="rid74" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>75 : Noninvasive positive-pressure ventilation for respiratory failure after extubation.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/12076220" id="rid75" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>76 : Noninvasive positive-pressure ventilation for postextubation respiratory distress: a randomized controlled trial.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/33900793" id="rid76" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>77 : Effectiveness and Harms of High-Flow Nasal Oxygen for Acute Respiratory Failure: An Evidence Report for a Clinical Guideline From the American College of Physicians.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/9228375" id="rid77" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>78 : Effect of failed extubation on the outcome of mechanical ventilation.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/7599812" id="rid78" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>79 : Re-intubation increases the risk of nosocomial pneumonia in patients needing mechanical ventilation.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/21191304" id="rid79" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>80 : Factors associated with and consequences of unplanned post-operative intubation in elderly vascular and general surgery patients.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/21552116" id="rid80" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>81 : Independent predictors and outcomes of unanticipated early postoperative tracheal intubation after nonemergent, noncardiac surgery.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/23571640" id="rid81" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>82 : Development and validation of a score for prediction of postoperative respiratory complications.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/10075059" id="rid82" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>83 : Perioperative predictors of extubation failure and the effect on clinical outcome after cardiac surgery.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/9228376" id="rid83" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>84 : Early vs conventional extubation after cardiac surgery with cardiopulmonary bypass.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/10744285" id="rid84" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>85 : Assessing the need for reintubation: a prospective evaluation of unplanned endotracheal extubation.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/2361385" id="rid85" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>86 : Self-extubations. A 12-month experience.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/8227724" id="rid86" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>87 : Prospective evaluation of self-extubations in a medical intensive care unit.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/8181343" id="rid87" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>88 : Unplanned extubation. Clinical predictors for reintubation.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/8205881" id="rid88" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>89 : Unplanned extubations.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/9671366" id="rid89" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>90 : A prospective study of unplanned endotracheal extubation in intensive care unit patients.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/9563730" id="rid90" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>91 : Unplanned extubations in the adult intensive care unit: a prospective multicenter study. Association des Réanimateurs du Centre-Ouest.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/9635654" id="rid91" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>92 : Unplanned extubation: risk factors of development and predictive criteria for reintubation.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/12131116" id="rid92" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>93 : Impact of unplanned extubation and reintubation after weaning on nosocomial pneumonia risk in the intensive care unit: a prospective multicenter study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/18158389" id="rid93" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>94 : Characteristics associated with unplanned extubations in a surgical intensive care unit.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/18775996" id="rid94" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>95 : Influence of physical restraint on unplanned extubation of adult intensive care patients: a case-control study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/15045169" id="rid95" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>96 : Development of a risk assessment tool for deliberate self-extubation in intensive care patients.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/16100138" id="rid96" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>97 : The drive to survive: unplanned extubation in the ICU.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/10852766" id="rid97" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>98 : Effect of unplanned extubation on outcome of mechanical ventilation.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/7874899" id="rid98" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>99 : Alteration in swallowing reflex after extubation in intensive care unit patients.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/17959966" id="rid99" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>100 : Continuous airway access for the difficult extubation: the efficacy of the airway exchange catheter.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/20184993" id="rid100" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>101 : Adequacy of oral intake in critically ill patients 1 week after extubation.</p>
+</a>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

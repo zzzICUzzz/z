@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Calculator: CIWA-Ar Clinical Institute Withdrawal Assessment for Alcohol scale in adults</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Calculator: CIWA-Ar Clinical Institute Withdrawal Assessment for Alcohol scale in adults</h1>
+<div class="utdArticleSection" id="topicContentCalculator"><div id="topicText">
+<div id="mc3k">
+<form action="" id="CIWA_form" name="CIWA_form" onreset="rrclr(); document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
+<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
+<td align="left" bgcolor="#eeeeee">
+<span class="medCalcFontTitleBox">
+
+ 
+Calculator: CIWA-Ar Clinical Institute Withdrawal Assessment for Alcohol scale in adults
+</span></td></tr></tbody></table><br/> <br/>
+<div id="calc_main">
+<div id="calc_input">
+<center>
+<table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
+<tbody><tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">NAUSEA AND VOMITING: Ask "Do you feel sick to your stomach? Have you vomited?" Observation. </span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (0="" and="" aria-label="This button selects an option for: NAUSEA AND VOMITING: Ask " do="" feel="" have="" id="togel1" is="" name="cc1" nausea="" no="" observation..="" onclick="CIWA_fx();" option="" points)"="" sick="" stomach?="" the="" to="" type="radio" vomited?"="" vomiting="" you="" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel1');"> No nausea and no vomiting (0 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (1="" aria-label="This button selects an option for: NAUSEA AND VOMITING: Ask " do="" feel="" have="" id="togel2" is="" mild="" name="cc1" nausea="" no="" observation..="" onclick="CIWA_fx();" option="" point)"="" sick="" stomach?="" the="" to="" type="radio" vomited?"="" vomiting="" with="" you="" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel2');">Mild nausea with no vomiting (1 point)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input &nbsp;="" (2="" aria-label="This button selects an option for: NAUSEA AND VOMITING: Ask " do="" feel="" have="" id="togel3" is="" name="cc1" observation..="" onclick="CIWA_fx();" option="" points)"="" sick="" stomach?="" the="" to="" type="radio" vomited?"="" you="" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel3');">  (2 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input &nbsp;="" (3="" aria-label="This button selects an option for: NAUSEA AND VOMITING: Ask " do="" feel="" have="" id="togel4" is="" name="cc1" observation..="" onclick="CIWA_fx();" option="" points)"="" sick="" stomach?="" the="" to="" type="radio" vomited?"="" you="" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel4');">  (3 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (4="" aria-label="This button selects an option for: NAUSEA AND VOMITING: Ask " do="" dry="" feel="" have="" heaves="" id="togel5" intermittent="" is="" name="cc1" nausea="" observation..="" onclick="CIWA_fx();" option="" points)"="" sick="" stomach?="" the="" to="" type="radio" vomited?"="" with="" you="" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel5');"> Intermittent nausea with dry heaves (4 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input &nbsp;="" (5="" aria-label="This button selects an option for: NAUSEA AND VOMITING: Ask " do="" feel="" have="" id="togel6" is="" name="cc1" observation..="" onclick="CIWA_fx();" option="" points)"="" sick="" stomach?="" the="" to="" type="radio" vomited?"="" you="" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel6');">  (5 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input &nbsp;="" (6="" aria-label="This button selects an option for: NAUSEA AND VOMITING: Ask " do="" feel="" have="" id="togel7" is="" name="cc1" observation..="" onclick="CIWA_fx();" option="" points)"="" sick="" stomach?="" the="" to="" type="radio" vomited?"="" you="" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel7');">  (6 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (7="" and="" aria-label="This button selects an option for: NAUSEA AND VOMITING: Ask " constant="" do="" dry="" feel="" frequent="" have="" heaves,="" id="togel8" is="" name="cc1" nausea,="" observation..="" onclick="CIWA_fx();" option="" points)"="" sick="" stomach?="" the="" to="" type="radio" vomited?"="" vomiting="" you="" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel8');">Constant nausea, frequent dry heaves, and vomiting (7 points)</span></td></tr>
+<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">TREMOR: Arms extended and fingers spread apart. Observation. </span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: TREMOR: Arms extended and fingers spread apart. Observation.. The option is  No tremor (0 points)" id="togel9" name="cc2" onclick="CIWA_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel9');"> No tremor (0 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: TREMOR: Arms extended and fingers spread apart. Observation.. The option is Not visible, but can be felt fingertip to fingertip (1 point)" id="togel10" name="cc2" onclick="CIWA_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel10');">Not visible, but can be felt fingertip to fingertip (1 point)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: TREMOR: Arms extended and fingers spread apart. Observation.. The option is   (2 points)" id="togel11" name="cc2" onclick="CIWA_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel11');">  (2 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: TREMOR: Arms extended and fingers spread apart. Observation.. The option is   (3 points)" id="togel12" name="cc2" onclick="CIWA_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel12');">  (3 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: TREMOR: Arms extended and fingers spread apart. Observation.. The option is  Moderate, with patient's arms extended (4 points)" id="togel13" name="cc2" onclick="CIWA_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel13');"> Moderate, with patient's arms extended (4 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: TREMOR: Arms extended and fingers spread apart. Observation.. The option is   (5 points)" id="togel14" name="cc2" onclick="CIWA_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel14');">  (5 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: TREMOR: Arms extended and fingers spread apart. Observation.. The option is   (6 points)" id="togel15" name="cc2" onclick="CIWA_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel15');">  (6 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: TREMOR: Arms extended and fingers spread apart. Observation.. The option is Severe, even with arms not extended (7 points)" id="togel16" name="cc2" onclick="CIWA_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel16');">Severe, even with arms not extended (7 points)</span></td></tr>
+<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">PAROXYSMAL SWEATS: Observation. </span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: PAROXYSMAL SWEATS: Observation.. The option is  No sweat visible (0 points)" id="togel17" name="cc3" onclick="CIWA_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel17');"> No sweat visible (0 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: PAROXYSMAL SWEATS: Observation.. The option is Barely perceptible sweating, palms moist (1 point)" id="togel18" name="cc3" onclick="CIWA_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel18');">Barely perceptible sweating, palms moist (1 point)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: PAROXYSMAL SWEATS: Observation.. The option is   (2 points)" id="togel19" name="cc3" onclick="CIWA_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel19');">  (2 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: PAROXYSMAL SWEATS: Observation.. The option is   (3 points)" id="togel20" name="cc3" onclick="CIWA_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel20');">  (3 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: PAROXYSMAL SWEATS: Observation.. The option is  Beads of sweat obvious on forehead (4 points)" id="togel21" name="cc3" onclick="CIWA_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel21');"> Beads of sweat obvious on forehead (4 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: PAROXYSMAL SWEATS: Observation.. The option is   (5 points)" id="togel22" name="cc3" onclick="CIWA_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel22');">  (5 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: PAROXYSMAL SWEATS: Observation.. The option is   (6 points)" id="togel23" name="cc3" onclick="CIWA_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel23');">  (6 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: PAROXYSMAL SWEATS: Observation.. The option is Drenching sweats (7 points)" id="togel24" name="cc3" onclick="CIWA_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel24');">Drenching sweats (7 points)</span></td></tr>
+<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">ANXIETY: Ask "Do you feel nervous?" Observation. </span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (0="" anxiety,="" aria-label="This button selects an option for: ANXIETY: Ask " at="" do="" ease="" feel="" id="togel25" is="" name="cc4" nervous?"="" no="" observation..="" onclick="CIWA_fx();" option="" points)"="" the="" type="radio" you=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel25');"> No anxiety, at ease (0 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (1="" anxious="" aria-label="This button selects an option for: ANXIETY: Ask " do="" feel="" id="togel26" is="" mildly="" name="cc4" nervous?"="" observation..="" onclick="CIWA_fx();" option="" point)"="" the="" type="radio" you=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel26');">Mildly anxious (1 point)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input &nbsp;="" (2="" aria-label="This button selects an option for: ANXIETY: Ask " do="" feel="" id="togel27" is="" name="cc4" nervous?"="" observation..="" onclick="CIWA_fx();" option="" points)"="" the="" type="radio" you=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel27');">  (2 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input &nbsp;="" (3="" aria-label="This button selects an option for: ANXIETY: Ask " do="" feel="" id="togel28" is="" name="cc4" nervous?"="" observation..="" onclick="CIWA_fx();" option="" points)"="" the="" type="radio" you=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel28');">  (3 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (4="" anxiety="" anxious,="" aria-label="This button selects an option for: ANXIETY: Ask " do="" feel="" guarded,="" id="togel29" inferred="" is="" moderately="" name="cc4" nervous?"="" observation..="" onclick="CIWA_fx();" option="" or="" points)"="" so="" the="" type="radio" you=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel29');"> Moderately anxious, or guarded, so anxiety is inferred (4 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input &nbsp;="" (5="" aria-label="This button selects an option for: ANXIETY: Ask " do="" feel="" id="togel30" is="" name="cc4" nervous?"="" observation..="" onclick="CIWA_fx();" option="" points)"="" the="" type="radio" you=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel30');">  (5 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input &nbsp;="" (6="" aria-label="This button selects an option for: ANXIETY: Ask " do="" feel="" id="togel31" is="" name="cc4" nervous?"="" observation..="" onclick="CIWA_fx();" option="" points)"="" the="" type="radio" you=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel31');">  (6 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (7="" acute="" aria-label="This button selects an option for: ANXIETY: Ask " as="" delirium="" do="" equivalent="" feel="" id="togel32" in="" is="" name="cc4" nervous?"="" observation..="" onclick="CIWA_fx();" option="" or="" panic="" points)"="" reactions="" schizophrenic="" seen="" severe="" states="" the="" to="" type="radio" you=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel32');"> Equivalent to acute panic states as seen in severe delirium or acute schizophrenic reactions (7 points)</span></td></tr>
+<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">AGITATION: Observation. </span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: AGITATION: Observation.. The option is  Normal activity (0 points)" id="togel33" name="cc5" onclick="CIWA_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel33');"> Normal activity (0 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: AGITATION: Observation.. The option is Somewhat more than normal activity (1 point)" id="togel34" name="cc5" onclick="CIWA_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel34');">Somewhat more than normal activity (1 point)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: AGITATION: Observation.. The option is   (2 points)" id="togel35" name="cc5" onclick="CIWA_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel35');">  (2 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: AGITATION: Observation.. The option is   (3 points)" id="togel36" name="cc5" onclick="CIWA_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel36');">  (3 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: AGITATION: Observation.. The option is  Moderately fidgety and restless (4 points)" id="togel37" name="cc5" onclick="CIWA_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel37');"> Moderately fidgety and restless (4 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: AGITATION: Observation.. The option is   (5 points)" id="togel38" name="cc5" onclick="CIWA_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel38');">  (5 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: AGITATION: Observation.. The option is   (6 points)" id="togel39" name="cc5" onclick="CIWA_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel39');">  (6 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: AGITATION: Observation.. The option is Paces back and forth during most of the interview, or constantly thrashes about (7 points)" id="togel40" name="cc5" onclick="CIWA_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel40');">Paces back and forth during most of the interview, or constantly thrashes about (7 points)</span></td></tr>
+<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">TACTILE DISTURBANCES: Ask "Do you have any itching, pins and needles sensations, burning sensations, numbness, or the feeling of bugs crawling on or under your skin?" Observation. </span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (0="" and="" any="" aria-label="This button selects an option for: TACTILE DISTURBANCES: Ask " bugs="" burning="" crawling="" do="" feeling="" have="" id="togel41" is="" itching,="" name="cc6" needles="" none="" numbness,="" observation..="" of="" on="" onclick="CIWA_fx();" option="" or="" pins="" points)"="" sensations,="" skin?"="" the="" type="radio" under="" you="" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel41');"> None (0 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (1="" and="" any="" aria-label="This button selects an option for: TACTILE DISTURBANCES: Ask " bugs="" burning="" burning,="" crawling="" do="" feeling="" have="" id="togel42" is="" itching,="" mild="" name="cc6" needles="" needles,="" numbness="" numbness,="" observation..="" of="" on="" onclick="CIWA_fx();" option="" or="" pins="" point)"="" sensations,="" skin?"="" the="" type="radio" under="" very="" you="" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel42');">Very mild itching, pins and needles, burning, or numbness (1 point)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (2="" and="" any="" aria-label="This button selects an option for: TACTILE DISTURBANCES: Ask " bugs="" burning="" burning,="" crawling="" do="" feeling="" have="" id="togel43" is="" itching,="" mild="" name="cc6" needles="" needles,="" numbness="" numbness,="" observation..="" of="" on="" onclick="CIWA_fx();" option="" or="" pins="" points)"="" sensations,="" skin?"="" the="" type="radio" under="" you="" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel43');"> Mild itching, pins and needles, burning, or numbness (2 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (3="" and="" any="" aria-label="This button selects an option for: TACTILE DISTURBANCES: Ask " bugs="" burning="" burning,="" crawling="" do="" feeling="" have="" id="togel44" is="" itching,="" moderate="" name="cc6" needles="" needles,="" numbness="" numbness,="" observation..="" of="" on="" onclick="CIWA_fx();" option="" or="" pins="" points)"="" sensations,="" skin?"="" the="" type="radio" under="" you="" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel44');">Moderate itching, pins and needles, burning, or numbness (3 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (4="" and="" any="" aria-label="This button selects an option for: TACTILE DISTURBANCES: Ask " bugs="" burning="" crawling="" do="" feeling="" hallucinations="" have="" id="togel45" is="" itching,="" moderately="" name="cc6" needles="" numbness,="" observation..="" of="" on="" onclick="CIWA_fx();" option="" or="" pins="" points)"="" sensations,="" severe="" skin?"="" the="" type="radio" under="" you="" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel45');"> Moderately severe hallucinations (4 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (5="" and="" any="" aria-label="This button selects an option for: TACTILE DISTURBANCES: Ask " bugs="" burning="" crawling="" do="" feeling="" hallucinations="" have="" id="togel46" is="" itching,="" name="cc6" needles="" numbness,="" observation..="" of="" on="" onclick="CIWA_fx();" option="" or="" pins="" points)"="" sensations,="" severe="" skin?"="" the="" type="radio" under="" you="" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel46');">Severe hallucinations (5 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (6="" and="" any="" aria-label="This button selects an option for: TACTILE DISTURBANCES: Ask " bugs="" burning="" crawling="" do="" extremely="" feeling="" hallucinations="" have="" id="togel47" is="" itching,="" name="cc6" needles="" numbness,="" observation..="" of="" on="" onclick="CIWA_fx();" option="" or="" pins="" points)"="" sensations,="" severe="" skin?"="" the="" type="radio" under="" you="" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel47');"> Extremely severe hallucinations (6 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (7="" and="" any="" aria-label="This button selects an option for: TACTILE DISTURBANCES: Ask " bugs="" burning="" continuous="" crawling="" do="" feeling="" hallucinations="" have="" id="togel48" is="" itching,="" name="cc6" needles="" numbness,="" observation..="" of="" on="" onclick="CIWA_fx();" option="" or="" pins="" points)"="" sensations,="" skin?"="" the="" type="radio" under="" you="" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel48');">Continuous hallucinations (7 points)</span></td></tr>
+<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">AUDITORY DISTURBANCES: Ask "Are you more aware of sounds around you? Are they harsh? Do they frighten you? Are you hearing anything that is disturbing to you? Are you hearing things you know are not there?" Observation. </span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (0="" anything="" are="" aria-label="This button selects an option for: AUDITORY DISTURBANCES: Ask " around="" aware="" disturbing="" do="" frighten="" harsh?="" hearing="" id="togel49" is="" know="" more="" name="cc7" not="" observation..="" of="" onclick="CIWA_fx();" option="" points)"="" present="" sounds="" that="" the="" there?"="" they="" things="" to="" type="radio" you="" you?=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel49');"> Not present (0 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (1="" ability="" anything="" are="" aria-label="This button selects an option for: AUDITORY DISTURBANCES: Ask " around="" aware="" disturbing="" do="" frighten="" harsh?="" harshness="" hearing="" id="togel50" is="" know="" mild="" more="" name="cc7" not="" observation..="" of="" onclick="CIWA_fx();" option="" or="" point)"="" sounds="" that="" the="" there?"="" they="" things="" to="" type="radio" very="" you="" you?=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel50');">Very mild harshness or ability to frighten (1 point)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (2="" ability="" anything="" are="" aria-label="This button selects an option for: AUDITORY DISTURBANCES: Ask " around="" aware="" disturbing="" do="" frighten="" harsh?="" harshness="" hearing="" id="togel51" is="" know="" mild="" more="" name="cc7" not="" observation..="" of="" onclick="CIWA_fx();" option="" or="" points)"="" sounds="" that="" the="" there?"="" they="" things="" to="" type="radio" you="" you?=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel51');"> Mild harshness or ability to frighten (2 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (3="" ability="" anything="" are="" aria-label="This button selects an option for: AUDITORY DISTURBANCES: Ask " around="" aware="" disturbing="" do="" frighten="" harsh?="" harshness="" hearing="" id="togel52" is="" know="" moderate="" more="" name="cc7" not="" observation..="" of="" onclick="CIWA_fx();" option="" or="" points)"="" sounds="" that="" the="" there?"="" they="" things="" to="" type="radio" you="" you?=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel52');">Moderate harshness or ability to frighten (3 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (4="" anything="" are="" aria-label="This button selects an option for: AUDITORY DISTURBANCES: Ask " around="" aware="" disturbing="" do="" frighten="" hallucinations="" harsh?="" hearing="" id="togel53" is="" know="" moderately="" more="" name="cc7" not="" observation..="" of="" onclick="CIWA_fx();" option="" points)"="" severe="" sounds="" that="" the="" there?"="" they="" things="" to="" type="radio" you="" you?=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel53');"> Moderately severe hallucinations (4 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (5="" anything="" are="" aria-label="This button selects an option for: AUDITORY DISTURBANCES: Ask " around="" aware="" disturbing="" do="" frighten="" hallucinations="" harsh?="" hearing="" id="togel54" is="" know="" more="" name="cc7" not="" observation..="" of="" onclick="CIWA_fx();" option="" points)"="" severe="" sounds="" that="" the="" there?"="" they="" things="" to="" type="radio" you="" you?=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel54');">Severe hallucinations (5 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (6="" anything="" are="" aria-label="This button selects an option for: AUDITORY DISTURBANCES: Ask " around="" aware="" disturbing="" do="" extremely="" frighten="" hallucinations="" harsh?="" hearing="" id="togel55" is="" know="" more="" name="cc7" not="" observation..="" of="" onclick="CIWA_fx();" option="" points)"="" severe="" sounds="" that="" the="" there?"="" they="" things="" to="" type="radio" you="" you?=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel55');"> Extremely severe hallucinations (6 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (7="" anything="" are="" aria-label="This button selects an option for: AUDITORY DISTURBANCES: Ask " around="" aware="" continuous="" disturbing="" do="" frighten="" hallucinations="" harsh?="" hearing="" id="togel56" is="" know="" more="" name="cc7" not="" observation..="" of="" onclick="CIWA_fx();" option="" points)"="" sounds="" that="" the="" there?"="" they="" things="" to="" type="radio" you="" you?=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel56');">Continuous hallucinations (7 points)</span></td></tr>
+<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">VISUAL DISTURBANCES: Ask "Does the light appear to be too bright? Is its color different? Does it hurt your eyes? Are you seeing anything that is disturbing to you? Are you seeing things you know are not there?" Observation. </span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (0="" anything="" appear="" are="" aria-label="This button selects an option for: VISUAL DISTURBANCES: Ask " be="" bright?="" color="" different?="" disturbing="" does="" eyes?="" hurt="" id="togel57" is="" it="" its="" know="" light="" name="cc8" not="" observation..="" onclick="CIWA_fx();" option="" points)"="" present="" seeing="" that="" the="" there?"="" things="" to="" too="" type="radio" you="" you?="" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel57');"> Not present (0 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (1="" anything="" appear="" are="" aria-label="This button selects an option for: VISUAL DISTURBANCES: Ask " be="" bright?="" color="" different?="" disturbing="" does="" eyes?="" hurt="" id="togel58" is="" it="" its="" know="" light="" mild="" name="cc8" not="" observation..="" onclick="CIWA_fx();" option="" point)"="" seeing="" sensitivity="" that="" the="" there?"="" things="" to="" too="" type="radio" very="" you="" you?="" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel58');">Very mild sensitivity (1 point)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (2="" anything="" appear="" are="" aria-label="This button selects an option for: VISUAL DISTURBANCES: Ask " be="" bright?="" color="" different?="" disturbing="" does="" eyes?="" hurt="" id="togel59" is="" it="" its="" know="" light="" mild="" name="cc8" not="" observation..="" onclick="CIWA_fx();" option="" points)"="" seeing="" sensitivity="" that="" the="" there?"="" things="" to="" too="" type="radio" you="" you?="" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel59');"> Mild sensitivity (2 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (3="" anything="" appear="" are="" aria-label="This button selects an option for: VISUAL DISTURBANCES: Ask " be="" bright?="" color="" different?="" disturbing="" does="" eyes?="" hurt="" id="togel60" is="" it="" its="" know="" light="" moderate="" name="cc8" not="" observation..="" onclick="CIWA_fx();" option="" points)"="" seeing="" sensitivity="" that="" the="" there?"="" things="" to="" too="" type="radio" you="" you?="" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel60');">Moderate sensitivity (3 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (4="" anything="" appear="" are="" aria-label="This button selects an option for: VISUAL DISTURBANCES: Ask " be="" bright?="" color="" different?="" disturbing="" does="" eyes?="" hallucinations="" hurt="" id="togel61" is="" it="" its="" know="" light="" moderately="" name="cc8" not="" observation..="" onclick="CIWA_fx();" option="" points)"="" seeing="" severe="" that="" the="" there?"="" things="" to="" too="" type="radio" you="" you?="" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel61');"> Moderately severe hallucinations (4 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (5="" anything="" appear="" are="" aria-label="This button selects an option for: VISUAL DISTURBANCES: Ask " be="" bright?="" color="" different?="" disturbing="" does="" eyes?="" hallucinations="" hurt="" id="togel62" is="" it="" its="" know="" light="" name="cc8" not="" observation..="" onclick="CIWA_fx();" option="" points)"="" seeing="" severe="" that="" the="" there?"="" things="" to="" too="" type="radio" you="" you?="" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel62');">Severe hallucinations (5 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (6="" anything="" appear="" are="" aria-label="This button selects an option for: VISUAL DISTURBANCES: Ask " be="" bright?="" color="" different?="" disturbing="" does="" extremely="" eyes?="" hallucinations="" hurt="" id="togel63" is="" it="" its="" know="" light="" name="cc8" not="" observation..="" onclick="CIWA_fx();" option="" points)"="" seeing="" severe="" that="" the="" there?"="" things="" to="" too="" type="radio" you="" you?="" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel63');"> Extremely severe hallucinations (6 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (7="" anything="" appear="" are="" aria-label="This button selects an option for: VISUAL DISTURBANCES: Ask " be="" bright?="" color="" continuous="" different?="" disturbing="" does="" eyes?="" hallucinations="" hurt="" id="togel64" is="" it="" its="" know="" light="" name="cc8" not="" observation..="" onclick="CIWA_fx();" option="" points)"="" seeing="" that="" the="" there?"="" things="" to="" too="" type="radio" you="" you?="" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel64');">Continuous hallucinations (7 points)</span></td></tr>
+<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">HEADACHE, FULLNESS IN HEAD: Ask "Does your head feel different? Does it feel as if there is a band around your head?" Do not rate for dizziness or lightheadedness. Otherwise, rate severity. </span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (0="" a="" aria-label="This button selects an option for: HEADACHE, FULLNESS IN HEAD: Ask " around="" as="" band="" different?="" dizziness="" do="" does="" feel="" for="" head="" head?"="" id="togel65" if="" is="" it="" lightheadedness.="" name="cc9" not="" onclick="CIWA_fx();" option="" or="" otherwise,="" points)"="" present="" rate="" severity..="" the="" there="" type="radio" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel65');"> Not present (0 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (1="" a="" aria-label="This button selects an option for: HEADACHE, FULLNESS IN HEAD: Ask " around="" as="" band="" different?="" dizziness="" do="" does="" feel="" for="" head="" head?"="" id="togel66" if="" is="" it="" lightheadedness.="" mild="" name="cc9" not="" onclick="CIWA_fx();" option="" or="" otherwise,="" point)"="" rate="" severity..="" the="" there="" type="radio" very="" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel66');">Very mild (1 point)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (2="" a="" aria-label="This button selects an option for: HEADACHE, FULLNESS IN HEAD: Ask " around="" as="" band="" different?="" dizziness="" do="" does="" feel="" for="" head="" head?"="" id="togel67" if="" is="" it="" lightheadedness.="" mild="" name="cc9" not="" onclick="CIWA_fx();" option="" or="" otherwise,="" points)"="" rate="" severity..="" the="" there="" type="radio" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel67');">Mild (2 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (3="" a="" aria-label="This button selects an option for: HEADACHE, FULLNESS IN HEAD: Ask " around="" as="" band="" different?="" dizziness="" do="" does="" feel="" for="" head="" head?"="" id="togel68" if="" is="" it="" lightheadedness.="" moderate="" name="cc9" not="" onclick="CIWA_fx();" option="" or="" otherwise,="" points)"="" rate="" severity..="" the="" there="" type="radio" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel68');">Moderate (3 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (4="" a="" aria-label="This button selects an option for: HEADACHE, FULLNESS IN HEAD: Ask " around="" as="" band="" different?="" dizziness="" do="" does="" feel="" for="" head="" head?"="" id="togel69" if="" is="" it="" lightheadedness.="" moderately="" name="cc9" not="" onclick="CIWA_fx();" option="" or="" otherwise,="" points)"="" rate="" severe="" severity..="" the="" there="" type="radio" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel69');">Moderately severe (4 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (5="" a="" aria-label="This button selects an option for: HEADACHE, FULLNESS IN HEAD: Ask " around="" as="" band="" different?="" dizziness="" do="" does="" feel="" for="" head="" head?"="" id="togel70" if="" is="" it="" lightheadedness.="" name="cc9" not="" onclick="CIWA_fx();" option="" or="" otherwise,="" points)"="" rate="" severe="" severity..="" the="" there="" type="radio" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel70');">Severe (5 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (6="" a="" aria-label="This button selects an option for: HEADACHE, FULLNESS IN HEAD: Ask " around="" as="" band="" different?="" dizziness="" do="" does="" feel="" for="" head="" head?"="" id="togel71" if="" is="" it="" lightheadedness.="" name="cc9" not="" onclick="CIWA_fx();" option="" or="" otherwise,="" points)"="" rate="" severe="" severity..="" the="" there="" type="radio" very="" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel71');">Very severe (6 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (7="" a="" aria-label="This button selects an option for: HEADACHE, FULLNESS IN HEAD: Ask " around="" as="" band="" different?="" dizziness="" do="" does="" extremely="" feel="" for="" head="" head?"="" id="togel72" if="" is="" it="" lightheadedness.="" name="cc9" not="" onclick="CIWA_fx();" option="" or="" otherwise,="" points)"="" rate="" severe="" severity..="" the="" there="" type="radio" your=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel72');">Extremely severe (7 points)</span></td></tr>
+<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">ORIENTATION AND CLOUDING OF SENSORIUM: Ask "What day is this? Where are you? Who am I?" Count forward by 3. </span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (0="" 3..="" additions="" am="" and="" are="" aria-label="This button selects an option for: ORIENTATION AND CLOUDING OF SENSORIUM: Ask " by="" can="" count="" day="" do="" forward="" i?"="" id="togel73" is="" name="cc10" onclick="CIWA_fx();" option="" oriented="" points)"="" serial="" the="" this?="" type="radio" what="" where="" who="" you?=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel73');"> Oriented and can do serial additions (0 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (1="" 3..="" about="" additions="" am="" are="" aria-label="This button selects an option for: ORIENTATION AND CLOUDING OF SENSORIUM: Ask " by="" cannot="" count="" date="" day="" do="" forward="" i?"="" id="togel74" is="" name="cc10" onclick="CIWA_fx();" option="" or="" point)"="" serial="" the="" this?="" type="radio" uncertain="" what="" where="" who="" you?=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel74');">Cannot do serial additions or is uncertain about date (1 point)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (2="" 2="" 3..="" am="" are="" aria-label="This button selects an option for: ORIENTATION AND CLOUDING OF SENSORIUM: Ask " by="" calendar="" count="" date="" day="" days="" disoriented="" for="" forward="" i?"="" id="togel75" is="" more="" name="cc10" no="" onclick="CIWA_fx();" option="" points)"="" than="" the="" this?="" type="radio" what="" where="" who="" you?=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel75');"> Disoriented for date by no more than 2 calendar days (2 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (3="" 2="" 3..="" am="" are="" aria-label="This button selects an option for: ORIENTATION AND CLOUDING OF SENSORIUM: Ask " by="" calendar="" count="" date="" day="" days="" disoriented="" for="" forward="" i?"="" id="togel76" is="" more="" name="cc10" onclick="CIWA_fx();" option="" points)"="" than="" the="" this?="" type="radio" what="" where="" who="" you?=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel76');">Disoriented for date by more than 2 calendar days (3 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input (4="" 3..="" am="" and="" are="" aria-label="This button selects an option for: ORIENTATION AND CLOUDING OF SENSORIUM: Ask " by="" count="" day="" disoriented="" for="" forward="" i?"="" id="togel77" is="" name="cc10" onclick="CIWA_fx();" option="" or="" person="" place="" points)"="" the="" this?="" type="radio" what="" where="" who="" you?=""/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel77');"> Disoriented for place and/or person (4 points)</span></td></tr>
+</tbody></table>
+<span class="medCalcFontOne" id="inputchk"><br/> <br/><b>Important:</b> Inputs must be complete to perform calculation. <br/></span>
+</center>
+</div>
+<br/> <br/>
+<div id="calc_result">
+<span class="medCalcFontCCTabBold">
+Total criteria point count:
+</span>
+<input aria-label="This box holds the total criteria point count" aria-readonly="true" name="cctotal" size="6" type="text"/><br/> <br/>
+<center><input name="reset" type="reset" value="Reset form"/> </center>
+<br/> <br/>
+<div aria-label="This table highlights the result CIWA score interpretation. No result is highlighted" id="rr1_tag" tabindex="0">
+<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
+<td align="left" bgcolor="#eeeeee">
+<span class="medCalcFontTitleBox">
+
+
+CIWA score interpretation
+</span></td></tr></tbody></table><br/> <br/>
+</div>
+<center>
+<table border="1" cellpadding="4" cellspacing="0" summary="RRTable">
+<tbody><tr id="rr1_1"><td align="right" nowrap="nowrap" style="border-right: 0px;"><span class="medCalcFontOneBold">0 to 9 points:</span></td>
+<td align="left" style="border-left: 0px;"><span class="medCalcFontOne">Very mild withdrawal</span></td></tr>
+<tr id="rr1_2"><td align="right" nowrap="nowrap" style="border-right: 0px;"><span class="medCalcFontOneBold">10 to 15 points:</span></td>
+<td align="left" style="border-left: 0px;"><span class="medCalcFontOne">Mild withdrawal</span></td></tr>
+<tr id="rr1_3"><td align="right" nowrap="nowrap" style="border-right: 0px;"><span class="medCalcFontOneBold">16 to 20 points:</span></td>
+<td align="left" style="border-left: 0px;"><span class="medCalcFontOne">Modest withdrawal</span></td></tr>
+<tr id="rr1_4"><td align="right" nowrap="nowrap" style="border-right: 0px;"><span class="medCalcFontOneBold">21 to 67 points:</span></td>
+<td align="left" style="border-left: 0px;"><span class="medCalcFontOne">Severe withdrawal</span></td></tr>
+</tbody></table>
+</center>
+<br/> <br/>
+</div>
+</div>
+<br/> <br/>
+<div id="calc_hints">
+<span class="medCalcFontOne">
+</span>
+</div>
+<br/> <br/>
+<div id="calc_refs">
+<span class="medCalcFontRef"><b>References</b></span>
+<ol>
+<li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/7804089" style="color: green; text-decoration: none;" target="_blank">Stuppaeck CH, Barnas C, Guenther V, et al. Assessment of the alcohol withdrawal syndrome - validity and reliability of the translated and modified Clinical Institute Withdrawal Assessment for Alcohol scale (CIWA-A). Addiction 1994; 89:1287.</a></span></li>
+<li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/2597811" style="color: green; text-decoration: none;" target="_blank">Sullivan JT, Sykora K, Schneiderman J, et al. Assessment of alcohol withdrawal: The revised clinical institute withdrawal assessment for alcohol scale (CIWA-Ar). Br J Addiction 1989; 84:1353.</a></span></li>
+</ol>
+</div>
+</form>
+</div>
+<span class="calculatorVendorId" id="T1678215861">
+</span></div><div id="printDisclaimer">
+<b>Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.</b>
+<p>
+	Information on this page may not appear correctly if printed. </p>
+</div>
+<div id="disclaimerCalculator">
+<div class="medCalcFontTwo">
+<p class="header">Legal Notices and Disclaimer</p>
+<p>
+			All information contained in and produced by the EBMcalc system is provided
+			for educational purposes only. This information should not be used for the diagnosis or treatment
+			of any health problem or disease. 
+			<b>THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.</b>
+<a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">Click here for full notice and disclaimer.</a>
+</p>
+<p class="copy">EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC</p>
+</div>
+</div><div id="topicVersionRevision">Topic 13437 Version 12.0</div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

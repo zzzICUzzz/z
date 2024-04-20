@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Prognosis of cancer patients in the intensive care unit</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Prognosis of cancer patients in the intensive care unit</h1>
+<div class="utdArticleSection utdStyle" id="topicContent"><div id="topicTitle">Prognosis of cancer patients in the intensive care unit</div> <div class="authorSectionElem"><div class="authorsElementsLeft"><dl id="topicContributors"><dt><span> </span>Authors:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Neil Freedman, MD</a></dd><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Jennifer McArthur, DO</a></dd><dt><span> </span>Section Editors:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Paul J Hesketh, MD</a></dd><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Adrienne G Randolph, MD, MSc</a></dd><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Renee D Stapleton, MD, PhD</a></dd><dt><span> </span>Deputy Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Geraldine Finlay, MD</a></dd></dl></div><div class="authorsElementsRight"><div id="literatureReviewDate"><div class="litReviewSingleLine"><bdi><span class="emphasis">Literature review current through:</span> Jan 2024.</bdi></div><div class="litReviewSingleLine"><bdi><span class="emphasis">This topic last updated:</span> Oct 31, 2023.</bdi></div></div></div></div><div id="topicWhatsNewContainer"></div><div id="topicText"><p class="headingAnchor" id="H1"><span class="h1">INTRODUCTION</span><span class="headingEndMark"> — </span>Intensive care unit (ICU) admission may be required in patients with cancer for management of acute illnesses associated with the underlying malignancy or complications of therapy including those associated with hematopoietic cell transplantation.</p><p>Admission to an ICU is a traumatic event for cancer patients and their families. Discussion of the prognosis of cancer patients in the setting of a critical illness is a key factor for making clinical decisions in the ICU. The prognosis of critically ill patients with cancer and factors that determine their mortality are discussed in this topic.</p><p>The prognosis of critically ill patients without cancer who have respiratory failure, renal failure and sepsis are discussed separately. (See  <a class="medical medical_review" href="/d/html/1601.html" rel="external">"Acute respiratory distress syndrome: Prognosis and outcomes in adults"</a> and  <a class="medical medical_review" href="/d/html/6090.html" rel="external">"Prevention and management of acute kidney injury (acute renal failure) in children", section on 'Prognosis and outcome of acute kidney injury'</a> and  <a class="medical medical_review" href="/d/html/1657.html" rel="external">"Sepsis syndromes in adults: Epidemiology, definitions, clinical presentation, diagnosis, and prognosis"</a>.)</p><p class="headingAnchor" id="H11856762"><span class="h1">INDICATIONS FOR ADMISSION</span><span class="headingEndMark"> — </span>Patients with malignancy are at risk for acute life-threatening illnesses that require ICU admission. Leukemia and lymphoma are the most common hematologic cancers encountered in the ICU and lung cancer is the most common solid tumor in adults [<a href="#rid1">1</a>]. In addition, as many as 40 percent of allogeneic hematopoietic cell transplant (HCT) recipients develop one or more complications where transfer to an ICU is indicated [<a href="#rid2">2-5</a>].</p><p>Indications for ICU admission can be cancer-related (eg, critical organ infiltration, pulmonary embolus), treatment-related (eg, sepsis or drug toxicity) or due to co-morbid illnesses (eg, kidney disease, heart failure, chronic obstructive pulmonary disease [COPD] exacerbation). However, consistently, the most common reason for ICU admission in cancer patients is acute organ failure, usually one or more of the following [<a href="#rid2">2-4,6-23</a>]:</p><p class="bulletIndent1"><span class="glyph">●</span>Respiratory failure requiring ventilation</p><p class="bulletIndent1"><span class="glyph">●</span>Renal failure requiring renal replacement therapy</p><p class="bulletIndent1"><span class="glyph">●</span>Septic shock with cardiovascular failure requiring vasopressor support</p><p></p><p>Other common reasons for ICU care include pulmonary edema, electrolyte disturbances, neurologic impairment, acute airway obstruction, massive hemoptysis, adverse reactions to medication or blood products, and the need for postoperative observation.</p><p>Among patients who have received an allogeneic HCT, up to 13 percent require ICU admission and 30 percent of those admitted require mechanical ventilation, usually within 60 days of marrow infusion [<a href="#rid12">12,24-28</a>]. Additional indications for ICU admission in this population include mucositis, acute graft-versus-host disease, diffuse alveolar hemorrhage, cardiac dysfunction, hypertension, and veno-occlusive disease of the liver [<a href="#rid11">11,25,27</a>]. (See  <a class="medical medical_review" href="/d/html/4339.html" rel="external">"Pulmonary complications after allogeneic hematopoietic cell transplantation: Causes"</a> and  <a class="medical medical_review" href="/d/html/4342.html" rel="external">"Pulmonary complications after autologous hematopoietic cell transplantation"</a>.)</p><p class="headingAnchor" id="H272812574"><span class="h1">OVERALL PROGNOSIS</span><span class="headingEndMark"> — </span>Survival of critically ill patients with cancer varies with the population (children, adult, solid and hematologic malignancy, hematopoietic cell transplantation recipients) and the type of outcome (short versus long term survival) that is studied [<a href="#rid2">2,4,6-24,29-42</a>]. In addition, temporal changes in ICU mortality and differences in practices among centers may also contribute to variability in survival. However, consistent among studies is that the outcome is best determined by the nature and number of organ failures, rather than by the stage of the underlying malignancy.</p><p class="headingAnchor" id="H187323"><span class="h1">PROGNOSIS IN ADULTS</span><span class="headingEndMark"> — </span>A consistent trend toward ICU mortality rates close to those observed in the general population of critically ill adult patients (30 to 65 percent) has been reported [<a href="#rid5">5-7,10,17-23,29,31-33,38,40,43,44</a>]. This was best demonstrated in the largest study of a mixed population of critically ill patients with cancer that reported hospital-, 3-month, and 1-year mortality rates of 39, 47, and 57 percent, respectively [<a href="#rid23">23</a>]. The highest rates were in patients who were mechanically ventilated, on vasopressor support, or receiving renal replacement therapy (approximately 60 percent each). Mortality in critically ill patients with specific types of cancer and predictors of mortality are discussed in detail separately. (See <a class="local">'Special populations'</a> below and <a class="local">'Predictors of prognosis'</a> below.)</p><p>Similar to that reported in the general population, the highest mortality rates in oncologic patients are observed in those mechanically ventilated for acute respiratory failure and in those with greater than two-organ failure (see <a class="local">'Predictors of prognosis'</a> below):</p><p class="bulletIndent1"><span class="glyph">●</span>Adult oncology patients transferred to an ICU who do not require mechanical ventilation have approximately a 25 percent likelihood of dying before leaving the hospital, which is comparable to some ICU patients without cancer [<a href="#rid2">2,8,9,37</a>]. Regardless of the indication for intubation, once patients are mechanically ventilated, risk of death rises further, and is typically &gt;25 percent.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Adult oncology patients who require mechanical ventilation for acute respiratory failure experience an ICU mortality &gt;40 percent that increases to &gt;60 percent when respiratory failure is due to acute respiratory distress syndrome (ARDS) [<a href="#rid8">8,15,23,24,40,43-48</a>]. Rates are even higher, 70 to 100 percent, in hematopoietic cell transplantation (HCT) recipients with ARDS. Few adult oncology patients survive to discharge if mechanical ventilation is prolonged (typically &gt;14 days) [<a href="#rid9">9,13,14,38,49-51</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Multiple organ dysfunction syndrome portends the worst prognosis. Mortality in adults is typically &gt;60 percent when two or more organs fail and approaches 100 percent when four or more organs fail [<a href="#rid13">13,33,37,38,52-54</a>]. Common organ failures, other than respiratory failure, that predict mortality in critically ill adults and children with cancer are renal failure, septic shock, and, less commonly, hepatic failure.</p><p></p><p>Rates of death (ICU and hospital) due to sepsis in critically ill adult patients with cancer range from 28 to 60 percent [<a href="#rid17">17,20,21,55</a>]. Subgroup analysis in one large observational cohort series (Sepsis Occurrence of Acutely Ill Patients study [SOAP]) reported similar mortality in patients with and without cancer (27 versus 23 percent) [<a href="#rid36">36</a>]. Another eight-year retrospective observational study of adult cancer patients with septic shock reported a temporal reduction in 28 day mortality from 47 percent (1998 through 2001) to 28 percent (2002 through 2005), suggesting that sepsis-related mortality in critically ill patients with cancer approaches that reported in the general population [<a href="#rid20">20</a>]. Although unproven, improvements in the early recognition and supportive care of patients with sepsis may be responsible for this trend [<a href="#rid17">17,55</a>]. (See <a class="local">'Sepsis'</a> below.)</p><p class="headingAnchor" id="H361190526"><span class="h2">Special populations</span><span class="headingEndMark"> — </span>Prognosis in critically ill adult patients with cancer varies with the population that is studied. In general, compared to patients with solid and hematologic malignancies, adults with HCT recipients, especially those that underwent non-allogeneic (autologous) transplants, have a higher short term (ICU and hospital) and long term (&gt;3 months) mortality. In adult populations, the highest mortality rates are reported in patients who are mechanically ventilated for acute respiratory failure. Mortality from critical illness in adult and pediatric patients with solid and hematologic malignancy, and in patients with HCT is discussed in this section.</p><p class="headingAnchor" id="H1362496"><span class="h3">Solid and hematologic malignancy</span><span class="headingEndMark"> — </span>For adult patients with solid and hematologic malignancies, short term mortality, defined as ICU and hospital mortality, is best determined by the nature and number of organ failures, rather than by the stage of malignancy or complications due to therapy (eg, neutropenia). Small observational cohort studies of this population report ICU and hospital mortality rates that range from 22 to 74 percent, which approximates that of critically ill patients in the general population [<a href="#rid6">6,8-10,22,33,56-60</a>]. (See  <a class="medical medical_review" href="/d/html/1601.html" rel="external">"Acute respiratory distress syndrome: Prognosis and outcomes in adults"</a>.)</p><p class="bulletIndent1"><span class="glyph">●</span>Two observational cohort studies that followed a total of 137 patients admitted to the ICU due to newly diagnosed, untreated cancer reported ICU and hospital mortality rates of 48 and 60 percent, respectively [<a href="#rid6">6,22</a>]. Rates were highest in patients with respiratory failure requiring mechanical ventilation, a need for pressors, and hepatic failure [<a href="#rid6">6</a>]. (See <a class="local">'Predictors of prognosis'</a> below.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>A 5-year cohort study of patients with hematological malignancies who were treated in a cancer hospital reported ICU, in-hospital, and 6-month mortalities of 34, 46, and 59 percent, respectively [<a href="#rid33">33</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Among patients admitted to ICU due to complications of their therapy, respiratory failure is the most common indication for admission with reported ICU mortality of approximately 50 percent [<a href="#rid9">9,10</a>]. In one prospective study of 717 cancer patients who had begun treatment, the following factors were associated with increased mortality: mechanical ventilation, prolonged hospitalization prior to ICU admission, a high Sequential Organ Failure Assessment (SOFA) score, poor performance status, and recurring or progressing malignancy [<a href="#rid7">7</a>]. (See <a class="local">'Predictors of prognosis'</a> below.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Retrospective data in critically ill patients with lung cancer (ventilated and nonventilated) suggest an ICU mortality ranging from 22 to 43 percent, with higher rates in those for whom mechanical ventilation was required (38 to 74 percent) [<a href="#rid18">18,30,31</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>A retrospective study of 185 patients with ARDS and hematologic malignancies reported an overall ICU mortality of 57 percent, lower for patients with mild ARDS (50 percent) and higher for those with severe ARDS (67 percent) [<a href="#rid61">61</a>].</p><p></p><p>Studies that document outcomes in adult patients with solid and hematologic malignancies that survive ICU or hospital admission suggested a three-month mortality rate of 49 percent, with rates that appear to be influenced by factors such as malignancy type and need for mechanical ventilation [<a href="#rid6">6,22,34</a>].</p><p class="bulletIndent1"><span class="glyph">●</span>One single center prospective study of 483 patients compared mortality rates among cancer patients that survived an ICU admission [<a href="#rid34">34</a>]. Compared to patients with solid malignancy, higher mortality was observed in patients with hematologic malignancy at three months (42 versus 17 percent) and one year (66 versus 36 percent).</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Another retrospective study of 37 critically ill patients with hematologic malignancy that received intravenous chemotherapy in the ICU reported that, compared to nonventilated patients, patients who were mechanically ventilated had higher rates of death at six months (74 versus 54 percent) [<a href="#rid22">22</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>In a retrospective study of 105 critically ill patients with lung cancer, the six-month mortality was reported to be 74 percent with the highest risk of death observed in those with progressive cancer and those who required mechanical ventilation [<a href="#rid35">35</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Studies of patients discharged from the ICU suggest variable quality of life (QOL) in survivors. One study suggested QOL was poor in survivors at three months and worse for those with older age, comorbidities and hematologic malignancy [<a href="#rid34">34</a>]; another study suggested no difference between QOL in survivors compared to the cancer population in general [<a href="#rid23">23</a>].</p><p></p><p class="headingAnchor" id="H180529"><span class="h3">Hematopoietic cell transplant</span><span class="headingEndMark"> — </span>As with general oncology patients, ICU and hospital mortality in adult HCT recipients is determined by the nature and number of organ failures. Although reports of mortality in this population are often hampered by varying criteria among institutions for admission, mortality is typically high, particularly in those who undergo mechanical ventilation for respiratory failure (44 to 100 percent).</p><p class="bulletIndent1"><span class="glyph">●</span>HCT recipients who are admitted to the ICU but do not undergo mechanical ventilation have a hospital mortality rate ranging from 4 to 34 percent [<a href="#rid2">2,3,62</a>]. Examples of patients that are more likely to survive ICU admission in this category include patients with pulmonary edema, arrhythmias, and patients who require postsurgical observation.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>For HCT recipients who require mechanical ventilation, the hospital mortality rate ranges from 44 to 100 percent.</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>The largest 12-year (1980 to 1992) observational series of 865 patients (adult and children) who required mechanical ventilation after HCT reported a 30-day mortality of 94 percent [<a href="#rid25">25</a>]. Patients who were ventilated for less than 24 hours were excluded from the analysis, suggesting that prolonged mechanical ventilation is associated with poor outcome in this population. However, similar to the improved trends in ICU mortality observed in the general population, a trend toward improved survival of 16 percent was reported during the last five years of this study (1988 to 1992), suggesting that the prognosis is not as poor as originally thought.</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>Other smaller retrospective studies of mechanically ventilated adult HCT recipients that did not exclude patients intubated for short periods reported overall ICU and hospital mortality rates that range from 44 to 100 percent [<a href="#rid2">2-4,12,25-27,62-72</a>]. For example, in one study of 232 HCT recipients, 27 percent of all patients survived an initial episode of ventilatory support [<a href="#rid63">63</a>]. In another study of allogeneic HCT recipients, the overall ICU mortality was reported as 50 percent but was &gt;80 percent in those who were mechanically ventilated [<a href="#rid68">68</a>].</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>Several studies published since 1996 suggest that overall as a group, HCT recipients may have a better prognosis than originally reported. As an example, several retrospective studies in this population reported ICU mortality rates of 70 to 77 percent, and in-hospital mortality rates of 50 to 83 percent [<a href="#rid64">64,65,67,71</a>].</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>A retrospective analysis of 144 older patients who underwent allogeneic HCT suggested better ICU survival for patients who underwent a reduced-intensity conditioning regimen compared to those treated with myeloablative conditioning [<a href="#rid73">73</a>]. For patients surviving ICU admission, survival was 61 and 51 percent at 1 and 5 years, respectively.</p><p></p><p>There is a paucity of data reporting survival following hospital discharge in this population. Observational series suggest that the six-month survival for adult HCT patients with respiratory failure ranges from 3 to 20 percent but may be better in those not admitted for mechanical ventilation (27 percent) [<a href="#rid12">12,26,27,67-70</a>].</p><p>The approach to patients with common problems that complicate HCT are discussed separately. (See  <a class="medical medical_review" href="/d/html/1403.html" rel="external">"Overview of infections following hematopoietic cell transplantation"</a> and  <a class="medical medical_review" href="/d/html/15803.html" rel="external">"Early complications of hematopoietic cell transplantation"</a> and  <a class="medical medical_review" href="/d/html/14228.html" rel="external">"Long-term care of the adult hematopoietic cell transplantation survivor"</a> and  <a class="medical medical_review" href="/d/html/7197.html" rel="external">"Kidney disease following hematopoietic cell transplantation"</a>.)</p><p class="headingAnchor" id="H11855901"><span class="h2">Predictors of prognosis</span><span class="headingEndMark"> — </span>Prognosis in critically ill adult patients with cancer, including HCT recipients, is dictated by the etiology of the critical illness rather than by the prognosis from the underlying malignancy [<a href="#rid8">8,14,47,49,74-77</a>]. The major predictors of poor prognosis in this population are respiratory failure requiring mechanical ventilation (especially for acute respiratory distress syndrome), multiorgan failure (&gt;2 organs), and the need for vasopressor support (&gt;4 hours). In this section we discuss these among other factors that predict prognosis in association with indications for ICU admission that are commonly encountered in this population.</p><p class="headingAnchor" id="H3"><span class="h3">Respiratory failure</span></p><p class="headingAnchor" id="H5652395"><span class="h4">General</span><span class="headingEndMark"> — </span>In critically ill adult patients with cancer and in HCT recipients, the need for mechanical ventilation for respiratory failure is the most consistent predictor of poor prognosis and is typically associated with mortality &gt;40 percent [<a href="#rid6">6,7,10,22,25,33,48,59,60,62,65-67,71,72,78,79</a>]. Among patients with solid and hematologic malignancy, studies have reported a two- to ninefold increase in the risk of death associated with mechanical ventilation with the highest risk observed in those receiving intravenous chemotherapy in the ICU [<a href="#rid6">6,7,22,35</a>]. In HCT recipients, several studies reported high mortality (≥50 percent) in those who required mechanical ventilation for respiratory failure [<a href="#rid26">26,39,46,65,67,70,71,73,80</a>]; some studies reported a three- to fourfold increase in the risk of death in association with mechanical ventilation [<a href="#rid68">68,71</a>].</p><p>Factors that may contribute to the variable mortality rates include differences in indication for intubation (eg, postoperative observation, pneumonia, ARDS), the nature of the underlying malignancy, and in admission criteria and practices among different ICUs (eg, early versus delayed admission). Nonetheless, several common factors may worsen the prognosis for cancer patients who develop respiratory failure. These include:</p><p class="bulletIndent1"><span class="glyph">●</span>Severe hypoxemia prior to mechanical ventilation (arterial oxygen tension [PaO<sub>2</sub>] &lt;50 mmHg on room air), or a PaO<sub>2</sub>/fraction of inspired oxygen (FiO<sub>2</sub>) ratio &lt;150 on mechanical ventilation, predicts a mortality of approximately 70 to 100 percent regardless of the cause of respiratory failure [<a href="#rid81">81-83</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Mechanical ventilation for poorly reversible etiologies, such as ARDS, may be associated with a worse outcome than mechanical ventilation for acutely reversible etiologies (eg, pulmonary edema, pneumothorax, airway protection, postoperative observation) [<a href="#rid1">1,9,13,24,43,47,84</a>]. Additional examples of poorly reversible etiologies include lymphangitic carcinomatosis, extensive inoperable airway tumors, and disseminated mucormycosis.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Prolonged mechanical ventilation has been shown in many studies to be associated with poor outcome in critically ill patients with cancer and HCT recipients [<a href="#rid1">1,14,38,51</a>]. As an example, in one retrospective study of adult patients with inoperable lung cancer who required mechanical ventilation, 91 percent died in the ICU, and mortality was 100 percent for those who remained ventilator-dependent longer than six days [<a href="#rid51">51</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Mechanical ventilation in adult patients with underlying abnormal pulmonary function (eg, restrictive lung disease, emphysema in association with lung cancer) is associated with a high rate of death due to respiratory failure, particularly in HCT recipients [<a href="#rid31">31,46,85-88</a>].</p><p></p><p class="headingAnchor" id="H41780245"><span class="h4">Mode of mechanical ventilation</span><span class="headingEndMark"> — </span>Noninvasive ventilation (NIV) is often attempted as an alternative to endotracheal intubation for patients with or without cancer who develop respiratory distress [<a href="#rid45">45,89</a>]. The indications for NIV in patients with cancer should be the same as for patients without cancer. Small retrospective observational studies in oncologic patients suggest that those who are successfully ventilated with NIV have a better prognosis than those who require conventional intubation and mechanical ventilation, although that may be a reflection of patients who are "less sick" than those requiring invasive MV rather than a causal link [<a href="#rid45">45,48,90,91</a>]. (See  <a class="medical medical_review" href="/d/html/1636.html" rel="external">"Noninvasive ventilation in adults with acute respiratory failure: Benefits and contraindications"</a>.)</p><p class="bulletIndent1"><span class="glyph">●</span>In one retrospective study of 237 adult patients with cancer, 80 percent of patients received conventional mechanical ventilation for acute respiratory failure at presentation; the remaining 20 percent received NIV [<a href="#rid90">90</a>]. When the groups were matched for age and disease severity, patients who received NIV had a lower mortality (44 versus 71 percent; odds ratio [OR] 0.31, 95% CI 0.12-0.82), suggesting that a small number of patients with cancer may benefit from this mode of ventilation.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>A prospective observational study of 203 adult patients with cancer reported lower mortality rates in patients receiving NIV compared to those that were intubated for acute respiratory failure (48 versus 75 percent) [<a href="#rid45">45</a>]. In addition, the late application (&gt;48 hours after admission) or failure of NIV predicted poor prognosis in this population (OR 11, 95% CI 1.1-108 and OR 18, 95% CI 5-61, respectively).</p><p></p><p>The impact of other modes of mechanical ventilation on outcome due to respiratory failure in patients with malignancy is poorly studied. One small retrospective review of 150 pediatric hematopoietic cell transplantation recipients reported higher ICU mortality in patients receiving high frequency oscillatory ventilation (HFOV) [<a href="#rid53">53</a>]. Although no studies have reported similar outcomes in critically ill adults with cancer, HFOV has been shown to be potentially harmful as a first-line mode of mechanical ventilation in a general population of patients with acute respiratory distress syndrome [<a href="#rid92">92</a>]. (See  <a class="medical medical_review" href="/d/html/1639.html" rel="external">"High-frequency ventilation in adults"</a>.)</p><p class="headingAnchor" id="H184134"><span class="h4">Predisposing factors for respiratory failure</span><span class="headingEndMark"> — </span>Several risk factors for the development of respiratory failure have been identified in adult patients prior to HCT. The presence of these factors place patients at risk for ICU admission and poor outcome after transplant.</p><p class="bulletIndent1"><span class="glyph">●</span>Abnormal pulmonary function – Abnormalities in pulmonary function, prior to transplant are predictors of non-relapse mortality in HCT recipients [<a href="#rid46">46,80,85</a>]. Approximately one-third of this population have abnormal pulmonary function (usually restriction) prior to transplant and higher rates have been reported in those undergoing allogeneic HCT [<a href="#rid80">80,85</a>]. In both adult and pediatric patients, abnormal pulmonary function (eg, restrictive lung disease) pretransplant has been shown to be a predisposing factor for the development of respiratory failure and death [<a href="#rid46">46,85</a>]. (See  <a class="medical medical_review" href="/d/html/14228.html" rel="external">"Long-term care of the adult hematopoietic cell transplantation survivor"</a> and  <a class="medical medical_review" href="/d/html/16870.html" rel="external">"Determining eligibility for allogeneic hematopoietic cell transplantation"</a> and  <a class="medical medical_review" href="/d/html/16354.html" rel="external">"Determining eligibility for autologous hematopoietic cell transplantation"</a>.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Donor-recipient mismatch – Large retrospective cohorts of over 1000 adult HCT recipients have reported that incomplete match between donor and recipient HLA type is an independent predictor of respiratory failure [<a href="#rid26">26,63</a>]. (See  <a class="medical medical_review" href="/d/html/3535.html" rel="external">"Donor selection for hematopoietic cell transplantation"</a>.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Transplant type – Conflicting data exists regarding mortality in critically ill patients following allogeneic versus autologous HCT. Some observational studies suggest improved survival in critically ill patients with autologous HCT [<a href="#rid26">26,62,67</a>]; others report no impact of transplant type on mortality [<a href="#rid2">2,3,39,65</a>]. One retrospective analysis of 164 critically ill patients that received an allogeneic HCT suggested improved ICU mortality rates in those who had a reduced intensity conditioning (preparative) regimen compared to those who underwent a conventional myeloablative conditioning (24 versus 73 percent; OR 2.9) [<a href="#rid73">73</a>]. (See  <a class="medical medical_review" href="/d/html/3557.html" rel="external">"Preparative regimens for hematopoietic cell transplantation"</a>.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Graft-versus-host-disease – Patients who undergo allogeneic HCT are at risk of developing acute and chronic graft-versus-host disease (GVHD), a complication that is associated with worse prognosis overall. Although HCT recipients with GVHD are at risk of developing respiratory failure, its occurrence does not appear to consistently predict ICU prognosis [<a href="#rid2">2,33,39,46</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Other – Additional risk factors for respiratory failure or mechanical ventilation in HCT recipients include older age and active malignancy at the time of transplantation, baseline serum creatinine &gt;1.5 mg/dL, and baseline serum total bilirubin concentration &gt;1.4 mg/dL [<a href="#rid26">26,46</a>].</p><p></p><p>The pulmonary complications following HCT are discussed separately. (See  <a class="medical medical_review" href="/d/html/4339.html" rel="external">"Pulmonary complications after allogeneic hematopoietic cell transplantation: Causes"</a> and  <a class="medical medical_review" href="/d/html/4342.html" rel="external">"Pulmonary complications after autologous hematopoietic cell transplantation"</a>.)</p><p class="headingAnchor" id="H4"><span class="h3">Multiple organ dysfunction syndrome</span></p><p class="headingAnchor" id="H5652474"><span class="h4">General</span><span class="headingEndMark"> — </span>Multiple organ dysfunction syndrome in the ICU portends a poor prognosis, regardless of the population studied. Mortality in adults is typically &gt;60 percent when two or more organs fail and approaches 100 percent when four or more organs fail [<a href="#rid13">13,33,37,38,52-54</a>]. Among studies of critically ill oncology patients, independent of one another, the occurrence of the following organ failures consistently predict mortality [<a href="#rid18">18,23,36,47,62,64,67,68,72,78</a>]:</p><p class="bulletIndent1"><span class="glyph">●</span>Respiratory failure</p><p class="bulletIndent1"><span class="glyph">●</span>Renal failure</p><p class="bulletIndent1"><span class="glyph">●</span>Need for vasopressors (&gt;4 hours)</p><p class="bulletIndent1"><span class="glyph">●</span>Hepatic failure</p><p></p><p>Best illustrating the impact of organ failure on mortality in this population of critically ill patients are the following studies:</p><p class="bulletIndent1"><span class="glyph">●</span>One prospective multicenter study of a mixed population of adult critically ill patients with cancer reported that mortality in patients receiving vasoactive drugs or dialysis approximated that of patients with respiratory failure alone (58 and 59 versus 61 percent) [<a href="#rid23">23</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>A prospective observational study of 100 adult patients with solid and hematologic malignancies reported the best predictors of mortality were need for vasopressors (odds ratio [OR] 6.01, 95% CI 1.86-19.4) and the presence of hepatic failure (OR 7.76, 95% CI 1.25-48.27) [<a href="#rid6">6</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>A retrospective study of 124 critically ill adult patients with hematologic malignancy identified the following variables that were independently associated with death in the ICU: vasopressor requirement (OR 3.74, 95% CI 1.4-9.8) and urea &gt;0.75 g/L (this translates to a blood urea nitrogen [BUN] level of &gt;34 mg/dL; OR 9.4, 95% CI 4.2-26). The highest mortality was reported in patients who had leukopenia together with a need for pressor support and high urea (96 percent at 30 days) [<a href="#rid19">19</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>In a retrospective analysis of 139 adults with lung cancer, two independent predictors of death in the ICU were the need for vasopressors (OR 8.7, 95% CI 2.8-27) and two or more organ failures (OR 41, 95% CI 5.1-328) [<a href="#rid31">31</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>A 12-year retrospective study of 3635 adult and pediatric HCT recipients reported no survival in the 398 patients with respiratory failure who also had liver failure (total bilirubin &gt;4 mg/dL) and renal insufficiency (serum creatinine concentration &gt;2.0 mg/dL) [<a href="#rid25">25</a>]. Smaller studies have confirmed the adverse effect of combined hepatic and renal dysfunction on survival in this population [<a href="#rid44">44,67</a>].</p><p></p><p class="headingAnchor" id="H5652468"><span class="h4">Scoring systems</span><span class="headingEndMark"> — </span>Scoring systems can predict clinically meaningful outcome for adult ICU patients and are most often used for investigational purposes. The most commonly cited scoring systems are the Acute Physiologic and Chronic Health Evaluation (APACHE I–IV) score (<a class="calc calc_professional" href="/d/html/13445.html" rel="external">calculator 1</a>), the Simplified Acute physiology SCORE (SAPS), and the SOFA score. Although higher APACHE III and SAPS II scores on admission correlate with mortality in some studies, others suggest that they are less reliable in patients with cancer or hematopoietic cell transplantation recipients [<a href="#rid2">2,3,12,25,26,31,33,64,93,94</a>]. In contrast, a small number of studies of patients with solid and hematologic malignancies reported that increased risk of death was associated with a higher SOFA score (OR, 1.25, 95% CI 1.17-1.34), and the less commonly used logistic organ dysfunction score (hazard ratio 1.19, 95% CI 1.08-1.32) [<a href="#rid7">7,21,30,48,72,86</a>]. (See  <a class="medical medical_review" href="/d/html/1655.html" rel="external">"Predictive scoring systems in the intensive care unit"</a>.)</p><p class="headingAnchor" id="H13202887"><span class="h3">Sepsis</span><span class="headingEndMark"> — </span>Patients with cancer, particularly those on immunosuppressive therapy and HCT recipients, are at increased risk for acquiring sepsis as well as dying from sepsis with reported rates of ICU and hospital mortality ranging from 28 to 60 percent [<a href="#rid17">17,20,21,55,95-97</a>]. Several studies in this population reported a lower risk of death when patients were admitted earlier for ICU care and antibiotics were administered within two hours of the diagnosis (odds ratio [OR] 0.24, 95% CI 0.06-0.09) [<a href="#rid17">17,55</a>]. (See  <a class="medical medical_review" href="/d/html/1657.html" rel="external">"Sepsis syndromes in adults: Epidemiology, definitions, clinical presentation, diagnosis, and prognosis"</a>.)</p><p>Consistent predictors of poor outcome associated with sepsis (in addition to those listed in this section) in adult patients with cancer include the following [<a href="#rid21">21,23,33,36,97</a>]:</p><p class="bulletIndent1"><span class="glyph">●</span>Multiple organ failure – In one large observational cohort series, among patients with sepsis who had multiple organ failure (&gt;3 organs), higher mortality was observed in patients with cancer compared to those without cancer (75 versus 50 percent) [<a href="#rid36">36</a>]. In another retrospective study of 186 patients with cancer admitted to the ICU with sepsis, higher SOFA score was identified as an independent predictor of death at 28 days (OR 1.26, 95% CI 1.14-1.39) [<a href="#rid21">21</a>]. (See <a class="local">'General'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Pulmonary site of infection – In a multicenter study of 218 patients with cancer admitted to the ICU with septic shock of pulmonary origin, rates of ICU and hospital mortality were 56 and 62 percent, respectively [<a href="#rid55">55</a>]. Sepsis due to pulmonary infection was identified in another retrospective study as an independent predictor of death at 28 days (OR 2.9, 95% CI 1.4-7.6) [<a href="#rid21">21</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Fungal infection – Fungal sepsis, particularly invasive aspergillosis, in critically ill patients with cancer has particularly high rates of mortality (up to 80 percent) and is independent predictor of death (OR 2.4 to 4.0) [<a href="#rid21">21,23,33</a>].</p><p></p><p>Other predictors include elevated lactate levels [<a href="#rid60">60</a>] and polymicrobial infections and carbapenem-resistant gram-negative bacteria in patients with hematologic malignancies [<a href="#rid61">61,97</a>].</p><p>Although it might be expected that in patients with cancer who have sepsis, leukopenia would portend a poor prognosis, conflicting studies report variable outcomes in this population [<a href="#rid1">1,13,14,19,21,47</a>]. Although deterioration in oxygenation during leukopenic recovery may partially explain this conflict, evidence from retrospective studies suggests that it may be due to the duration of leukopenia such that when sepsis occurs in the setting of acute leukopenia that is transient, it is associated with reasonable outcomes; in contrast, when leukopenia is persistent or occurs in the setting of concomitant organ failure it is more likely to be associated with a poor outcome [<a href="#rid13">13,14,19,21,98</a>]. Best illustrating this are the following studies:</p><p class="bulletIndent1"><span class="glyph">●</span>One retrospective observational study of 186 patients with hematologic malignancies admitted to the ICU with sepsis compared patients who had received recent chemotherapy (within three weeks of ICU admission) to those who had received chemotherapy beyond three weeks of admission [<a href="#rid21">21</a>]. Patients with recent chemotherapy were more likely to be neutropenic. However, they were less likely to have pulmonary infiltrates or require mechanical ventilation. In addition, compared to those who had received therapy beyond three weeks of admission, those with recent therapy had lower ICU (33 versus 48 percent), hospital (45 versus 59 percent), and six-month (51 versus 63 percent) mortality rates.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>One retrospective observational study of 124 patients with hematologic malignancies admitted to the ICU (19 percent had sepsis), persistent leukopenia was identified as an independent predictor of death (OR 2.9, 95% CI 1.1-7.7) [<a href="#rid19">19</a>]. When leukopenia was added as variable for survival analysis in patients who also had renal insufficiency and a vasopressor requirement, mortality increased from 25 to &gt;65 percent.</p><p></p><p>The treatment and prognosis of sepsis and septic shock in patients without cancer, and the treatment of neutropenic fever syndromes in patients with cancer and HCT recipients are discussed separately. (See  <a class="medical medical_review" href="/d/html/1657.html" rel="external">"Sepsis syndromes in adults: Epidemiology, definitions, clinical presentation, diagnosis, and prognosis"</a> and  <a class="medical medical_review" href="/d/html/1613.html" rel="external">"Evaluation and management of suspected sepsis and septic shock in adults"</a> and  <a class="medical medical_review" href="/d/html/13951.html" rel="external">"Treatment and prevention of neutropenic fever syndromes in adult cancer patients at low risk for complications"</a> and  <a class="medical medical_review" href="/d/html/1400.html" rel="external">"Treatment of neutropenic fever syndromes in adults with hematologic malignancies and hematopoietic cell transplant recipients (high-risk patients)"</a>.)</p><p class="headingAnchor" id="H272813542"><span class="h3">Other</span><span class="headingEndMark"> — </span>Additional factors that have been less well validated as predictors of mortality in critically ill adult patients with cancer include patient-, disease- and procedure-related factors. Among these factors, poor performance status prior to ICU admission and refractory cancer are consistently reported in studies as predictors of worse survival. Survival does not appear to be affected by malignancy type, indication for HCT, need for blood transfusions, or use of a flow-directed balloon-tipped pulmonary artery catheter (Swan-Ganz catheter) [<a href="#rid2">2,3,12,15,42,93</a>].</p><p class="headingAnchor" id="H54954828"><span class="h4">Patient-related</span><span class="headingEndMark"> — </span>Poor performance status (eg, Karnofsky score &lt;70)  (<a class="graphic graphic_table graphicRef58785" href="/d/graphic/58785.html" rel="external">table 1</a>), Charlson comorbidity index of 3 to 4  (<a class="graphic graphic_table graphicRef72047" href="/d/graphic/72047.html" rel="external">table 2</a>), and HCT-specific comorbidity index ≥2  (<a class="graphic graphic_table graphicRef59272" href="/d/graphic/59272.html" rel="external">table 3</a>) are associated with poor prognosis in some studies of critically ill adult patients with cancer [<a href="#rid7">7,23,32,33,35,43,45,48,59,60,64,97</a>]. (See  <a class="medical medical_review" href="/d/html/2206.html" rel="external">"Survival estimates in advanced terminal cancer"</a>.)</p><p class="headingAnchor" id="H54954883"><span class="h4">Disease-related</span><span class="headingEndMark"> — </span>The following disease-related factors are associated with worse prognosis in the critically ill cancer adult patients: poor response to chemotherapy, stage IV cancer, cancer relapse after an initial response, progressive or recurrent disease, malignant infiltration of vital organs or the airway, poor marrow recovery post HCT, active graft-versus-host, delayed ICU or unplanned admission, and need for Advanced Cardiac life Support (ACLS) protocol [<a href="#rid8">8,13,14,18,19,23,31,48,49,60,61,72,79</a>].</p><p class="headingAnchor" id="H186149"><span class="h4">Procedure-related</span><span class="headingEndMark"> — </span>Diagnostic and therapeutic procedures have associated risk that can negatively impact outcomes in the ICU such that the indication for their performance needs to be justified. A single-center, retrospective study in adult HCT recipients reported a complication rate of 30 percent after fiberoptic bronchoscopy; of those complications, 5 percent were considered major [<a href="#rid99">99</a>]. Another retrospective study reported a complication rate of 19 percent for surgical lung biopsy in adult cancer patients [<a href="#rid100">100</a>]. In general, bronchoscopy with biopsy and surgical lung biopsy are considered high-risk procedures that have not been convincingly shown to favorably impact mortality in this population [<a href="#rid99">99-106</a>]. However, bronchoscopy and surgical biopsy can direct the prognosis on an individual basis, particularly when a highly reversible (pneumocystis jirovecii, small airway tumors) or irreversible (eg, extensive airway tumors) pathology is identified.</p><p class="bulletIndent1"><span class="glyph">●</span>One prospective trial randomly assigned 219 non-intubated adult patients with cancer and acute respiratory failure of unclear etiology to undergo conventional testing plus bronchoscopy with bronchoalveolar lavage (BAL) or conventional diagnostic testing alone [<a href="#rid101">101</a>]. Bronchoscopy with BAL did not affect the number of patients subsequently requiring mechanical ventilation (35.4 versus 38.7 percent) or mortality (30 versus 33 percent). The study was not adequately powered to assess diagnostic yield or safety of bronchoscopy in this population.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>In two retrospective studies of 358 critically ill adult patients with cancer or hematopoietic cell transplantation recipients, bronchoscopic-BAL or lung biopsy (bronchoscopic-transbronchial biopsy and surgical biopsy) resulted in therapeutic changes in under half of the cases [<a href="#rid99">99,102</a>]. However, subgroup analysis in only one of these studies reported that, compared to patients without therapeutic modification, those with therapeutic modification had a lower in-hospital mortality (38 versus 58 percent; OR 0.51, 95% CI 0.28-0.92).</p><p></p><p>The lack of convincing impact of bronchoscopy and lung biopsy in this adult population on the outcome is likely due to the significant number of cases where no consequent therapeutic modification is made or cases where life-sustaining care is withdrawn due to the identification of a noncurative cause for respiratory failure. The general indications and risk for bronchoscopy and surgical biopsy in high-risk populations are discussed in detail separately. (See  <a class="medical medical_review" href="/d/html/4400.html" rel="external">"Flexible bronchoscopy in adults: Indications and contraindications"</a> and  <a class="medical medical_review" href="/d/html/4398.html" rel="external">"Flexible bronchoscopy in adults: Overview"</a> and  <a class="medical medical_review" href="/d/html/15141.html" rel="external">"Overview of minimally invasive thoracic surgery"</a>.)</p><p class="headingAnchor" id="H185902"><span class="h2">Discussion of prognosis</span><span class="headingEndMark"> — </span>Discussions regarding prognosis should occur before or soon after ICU admission, particularly for those patients in whom the mortality is predicted to be high (eg, patients with HCT who are mechanically ventilated for acute respiratory failure). All patient or family meetings should discuss prognosis associated with the etiology of the acute illness in the context of life expectancy from the underlying malignancy. Clinicians should recognize that a dying patient may be ill-served by prolonged, non-palliative life support in an ICU. (See  <a class="medical medical_review" href="/d/html/1643.html" rel="external">"Communication in the ICU: Holding a meeting with families and caregivers"</a>.)</p><p>Although palliative care has not been shown to impact mortality of the critically ill adult patient in the ICU, it has been shown to improve survival and quality of life in ambulatory adult patients with cancer [<a href="#rid107">107</a>]. Palliation and end-of life decisions are a common occurrence in the ICU for patients with malignancy and recipients of HCT. Prognosis should be reassessed at frequent intervals with particular attention to the development of multiple organ dysfunction. For those in whom the prognosis is predicted to be poor during their ICU admission (eg, HCT recipients with multiorgan failure), early discussion of the likely outcome with caregivers and family is essential, often prompting withdrawal of care. In addition, studies in this population consistently describe a continued decline in life expectancy once patients are discharged from the ICU. When appropriate, patients or family members should be advised that an incurable malignancy may progress throughout the duration of a critical illness such that at the point of discharge from the ICU death from their underlying cancer might be expected. For those in whom survival is predicted to be poor following discharge, early palliative and end-of-life discussions may elicit the desire to avoid re-admission and or redirect care to palliation in the event that another acute life-threatening illness arises. (See  <a class="medical medical_review" href="/d/html/16295.html" rel="external">"Withholding and withdrawing ventilatory support in adults in the intensive care unit"</a> and  <a class="medical medical_review" href="/d/html/1643.html" rel="external">"Communication in the ICU: Holding a meeting with families and caregivers"</a>.)</p><p>Palliative care services are probably underutilized in the ICU and yet often prompt advance directives. In one study of adult patients with lung cancer admitted to the ICU, 64 percent with advanced stage IV disease were full code with no record of end-of-life discussions prior to admission [<a href="#rid30">30</a>]. In half of these patients, the code status was changed to a Do-Not-Resuscitate order within seven days of admission to the ICU. We and others suggest early palliative and end-of-life discussions by the intensivist, the oncologist, and/or by palliative care staff for critically ill patients with cancer admitted to the ICU, particularly those with a grim prognosis from their underlying malignancy or acute illness (eg, advanced or refractory cancer), those who do not progress toward recovery in the first several days of ICU care, and those for whom symptom palliation would improve the quality of life [<a href="#rid108">108</a>]. (See  <a class="medical medical_review" href="/d/html/83235.html" rel="external">"Palliative care: Issues in the intensive care unit in adults"</a>.)</p><p>The use of noninvasive ventilation (NIV) for palliative purposes is controversial. One small study of 23 adult patients with end-stage solid malignancies reported improved oxygenation and dyspnea with the application of NIV [<a href="#rid89">89</a>]. Using non-invasive ventilation for palliation of terminal dyspnea should be individualized and discussed with each patient or their designated caregiver on a case-by-case basis. (See  <a class="medical medical_review" href="/d/html/16296.html" rel="external">"Ethics in the intensive care unit: Responding to requests for potentially inappropriate therapies in adults"</a> and  <a class="medical medical_review" href="/d/html/16295.html" rel="external">"Withholding and withdrawing ventilatory support in adults in the intensive care unit"</a>.)</p><p class="headingAnchor" id="H184951"><span class="h1">PROGNOSIS IN CHILDREN</span><span class="headingEndMark"> — </span>Discussed below are studies that report prognosis and predicting factors in children with solid and hematologic malignancy as well as hematopoietic cell transplantation (HCT) recipients.</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Solid and hematologic malignancies</strong> – Few studies have analyzed outcomes in critically ill pediatric oncologic patients with solid and hematologic malignancy alone. Reports suggest that the overall ICU mortality ranges from 9 to 15 percent (ventilated and nonventilated), higher (40 to 60 percent) in those requiring mechanical ventilation [<a href="#rid109">109-111</a>].</p><p></p><p class="bulletIndent1">In pediatric patients, ICU mortality over time has improved but not improved as much as for adult cancer patients [<a href="#rid112">112</a>]. In general, HCT patients carry a higher mortality risk than oncology patients who have not undergone HCT [<a href="#rid109">109,113</a>]. Thus, outcomes in studies that include patients with HCT generally report high mortality rates. Underlying cancer diagnosis also influences outcomes, with hematologic malignancies, especially acute myeloid leukemia (AML), having a poorer prognosis than solid tumors [<a href="#rid113">113,114</a>]. Patients admitted with sepsis and those requiring invasive mechanical ventilation, inotropic support, or renal replacement therapy have the highest risk of mortality [<a href="#rid109">109-118</a>].</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>Best illustrating the mortality in pediatric populations is a meta-analysis of 31 studies published between 1981 and 2017 that encompassed 16,853 pediatric ICU (PICU) admissions which reported an overall PICU mortality was 27.8 percent [<a href="#rid112">112</a>]. Increased risk of mortality was associated with need for mechanical ventilation (odds ratio [OR] 18.49, 95% CI 13.79-24.78), inotropic support (OR 14.05, 95% CI 9.16-21.57), and continuous renal replacement therapy (CRRT; OR 3.24, 95% CI 1.31-8.04). The highest diagnosis-specific mortality was seen in patients admitted with sepsis at 46 percent.</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>A retrospective 11-year study of 553 pediatric patients with AML reported that compared to children without cancer, those with AML had a higher ICU mortality (19 versus 4 percent) [<a href="#rid114">114</a>]. Mortality did not exceed 40 percent in those with AML unless there were more than four organ failures.</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>A single-center retrospective study of 359 pediatric oncology patients (including a small number of HCT recipients) reported the overall ICU mortality at 17 percent. Higher mortality rates were observed in children with HCT compared to solid or hematologic malignancies (30 versus 12 percent) [<a href="#rid109">109</a>]. Six-month survival was 69 percent among non-HCT patients compared with 39 percent for HCT recipients.</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>A retrospective study of 200 pediatric oncology patients in Europe (including a small number of HCT recipients) admitted to the ICU had a PICU mortality of 9 percent [<a href="#rid110">110</a>]. Sixty-day mortality was 17.5 percent, with nearly half of the deaths occurring after terminal discharge from the PICU. The highest mortality rates were found in those admitted for respiratory failure (50 percent 60-day mortality), neurologic disease (33 percent 60-day mortality), and septic shock (31.8 percent 60-day mortality).</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>A retrospective review of 1927 critically ill pediatric oncology and HCT patients [<a href="#rid111">111</a>] also reported higher PICU mortality rates in those receiving CRRT when compared with the overall PICU mortality (54.5 percent versus 11 percent).</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>A prospective registry of critical deterioration events (CDEs) in 16 pediatric hematology/oncology centers in 10 Latin American countries reported on 553 CDEs (defined as need for transfer to the PICU or PICU interventions) [<a href="#rid117">117</a>]. CDEs were provided on the floor. In this resource-limited setting, CDEs had a mortality rate that was 29 percent, higher than what has been reported for PICU mortality in high-income countries, yet still reasonable.</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>In a global registry of 1747 pediatric cancer patients with coronavirus 2019 (COVID-19) from 50 countries, 11 percent developed severe illness with 9 percent requiring care in the PICU and a mortality rate of 3.8 percent. In a similar registry of 1196 pediatric cancer patients in the United States, 9 percent of patients with hematologic malignancies required PICU care with a 3 percent mortality rate, while 6 percent of solid tumor patients required PICU care with a mortality rate of 7 percent. Both studies showed better outcomes than adult cancer patients with COVID-19 infection who had a reported mortality rate of 28 percent, though significantly worse mortality than the general pediatric population with a mortality rate &lt;0.1 percent [<a href="#rid118">118</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>HCT recipients</strong> – While older studies reported high mortality rates (&gt;75 percent) in pediatric HCT recipients admitted to the ICU, several subsequent studies reported higher survival with mortality rates ranging from 32 to 62 percent with the highest rates in those who are mechanically ventilated [<a href="#rid41">41,53,119-122</a>].</p><p></p><p class="bulletIndent1">Small retrospective and prospective series have reported rates of survival following an ICU admission from 16 to 53 percent that appear to have improved over time [<a href="#rid39">39,41,42,119-130</a>]. Consistent risk factors include mechanical ventilation and acute kidney injury requiring renal replacement therapy as well as an underlying diagnosis of AML, and sepsis. As examples:</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>A retrospective study linking data from the Virtual PICU Systems (VPS) database and the Center for International Blood and Marrow Transplant Research (CIBMTR) database found 936 unique patients comprising 1532 PICU admissions [<a href="#rid124">124</a>]. PICU mortality was 17.4 percent, with 28.5 percent of patients ultimately dying. Mortality was increased in those with a need for advanced support. Mortality for invasive mechanical ventilation was 44 percent, CRRT 56 percent, and extracorporeal membrane oxygenation (ECMO) 77.8 percent. PICU mortality was independently associated with higher illness severity on admission, moderate/severe pre-HCT renal disease, pre-HCT recipient cytomegalovirus (CMV) positivity, underlying diagnosis of AML, and ICU admission fewer than 100 days after HCT.</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>A multi-center retrospective study of 129 critically ill pediatric allogeneic HCT patients reported a PICU mortality of 38 percent, 42 percent for those requiring invasive mechanical ventilation [<a href="#rid120">120</a>]. One-year outcomes of these PICU survivors were then compared with a matched cohort of 387 allogeneic HCT patients who did not require ICU care. Survival; rate of chronic graft-versus-host disease; and renal, pulmonary, and cardiac function at one year post-HCT did not differ between the two groups.</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>A multicenter retrospective cohort study reported a 33 percent PICU survival rate for HCT patients placed on venovenous ECMO [<a href="#rid131">131</a>]. Reports such as these have led to consensus statements from diverse groups, such as the Pediatric Acute Lung Injury and Sepsis Investigators Network's HCT and Cancer Immunotherapy subgroup, the Extracorporeal Life Support Organization, the Pediatric Diseases Working Party of the European Society for Blood and Marrow Transplantation, the supportive care committee of the Pediatric Transplantation &amp; Cellular Therapy Consortium, and the PICU Oncology Kids in Europe Research group of the European Society of Paediatric and Neonatal Intensive Care. While acknowledging that HCT patients are high-risk ECMO patients, these groups advocate for careful and individualized consideration of HCT patients' ECMO candidacy rather than universally declining all HCT patients from ECMO consideration [<a href="#rid132">132,133</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Predictors</strong> – Similar to other critically ill children, critically ill pediatric oncology patients with multiorgan failure, particularly those requiring mechanical ventilation, vasopressor support, and/or renal replacement therapy, have poor outcomes [<a href="#rid38">38,121-124,126,129,130</a>]. Several multicenter retrospective reviews of pediatric HCT recipients reported that receipt of vasopressor support and/or renal replacement therapy were predictors of lower six-month survival. Cancer-specific predictors include severe impairment of oxygenation, specific infections such as cytomegalovirus viremia and severe sepsis [<a href="#rid110">110-112,116,121,124,125</a>]. Several retrospective series have identified other potential factors that may influence outcome and deserve additional study. These include use of noninvasive ventilation, high frequency oscillatory ventilation (HFOV), and lung protective ventilation [<a href="#rid126">126-128</a>].</p><p></p><p class="headingAnchor" id="H8"><span class="h1">SUMMARY AND RECOMMENDATIONS</span></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Indications for ICU admission</strong> – Among the cancers, leukemia and lymphoma are the most common hematologic cancers, and lung cancer is the most common solid tumor encountered in the intensive care unit (ICU). Common indications for ICU admission are respiratory failure often requiring mechanical ventilation, renal failure necessitating renal replacement therapy, and sepsis requiring vasopressor support. (See <a class="local">'Indications for admission'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Prognosis in adults</strong> – The prognosis of critically ill adult patients with cancer is best determined by the nature and number of organ failures, rather than by the stage of the underlying malignancy. Mortality rates approximate those of critically ill patients without cancer. (See <a class="local">'Prognosis in adults'</a> above.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span><strong>Special populations</strong> – Prognosis in critically ill adult patients with cancer varies with the population that is studied. The highest mortality rates are reported in patients who are mechanically ventilated for acute respiratory failure. General adult oncology patients and hematopoietic cell transplant (HCT) recipients in this setting have an estimated mortality rate of &gt;40 percent and &gt;50 percent, respectively. (See <a class="local">'Special populations'</a> above.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span><strong>Prognosticators</strong> – The major predictors of poor prognosis in critically ill adult patients with cancer including HCT recipients are respiratory failure requiring mechanical ventilation (especially for acute respiratory distress syndrome), multiorgan failure (&gt;2 organs), and vasopressor support (&gt;4 hours). (See <a class="local">'Predictors of prognosis'</a> above.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span><strong>Prognosis discussion</strong> – Prognosis should be reassessed at frequent intervals with particular attention to the development of multiple organ dysfunction. We suggest early palliative and end-of-life discussions for critically ill adult patients with cancer, particularly those with a grim prognosis from their underlying malignancy or acute illness, those who do not progress toward recovery in the first several days of critical illness, and those for whom symptom palliation would improve the quality of life. (See <a class="local">'Discussion of prognosis'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Prognosis in children</strong> – In critically ill pediatric oncologic patients, reports suggest that the overall ICU mortality in those who were not mechanically ventilated ranges from 9 to 15 percent in those with solid and hematologic malignancy and from 32 to 62 percent in HCT recipients. Mortality is markedly higher in those requiring mechanical ventilation (40 to 60 percent) and sepsis (32 to 68 percent). Other risk factors for death include kidney injury requiring renal replacement therapy and underlying diagnosis of acute myeloid leukemia. (See <a class="local">'Prognosis in children'</a> above.)</p><p></p><p class="headingAnchor" id="H2848281505"><span class="h1">ACKNOWLEDGMENT</span><span class="headingEndMark"> — </span>The UpToDate editorial staff acknowledges John Hansen-Flaschen, MD, who contributed to earlier versions of this topic review.</p></div><div class="headingAnchor" id="references"><ol id="reference"><li><a class="nounderline abstract_t">Kress JP, Christenson J, Pohlman AS, et al. Outcomes of critically ill cancer patients in a university hospital setting. Am J Respir Crit Care Med 1999; 160:1957.</a></li><li><a class="nounderline abstract_t">Afessa B, Tefferi A, Hoagland HC, et al. Outcome of recipients of bone marrow transplants who require intensive-care unit support. Mayo Clin Proc 1992; 67:117.</a></li><li><a class="nounderline abstract_t">Paz HL, Crilley P, Weinar M, Brodsky I. Outcome of patients requiring medical ICU admission following bone marrow transplantation. Chest 1993; 104:527.</a></li><li><a class="nounderline abstract_t">Denardo SJ, Oye RK, Bellamy PE. Efficacy of intensive care for bone marrow transplant patients with respiratory failure. Crit Care Med 1989; 17:4.</a></li><li><a class="nounderline abstract_t">van Gestel JP, Bollen CW, van der Tweel I, et al. Intensive care unit mortality trends in children after hematopoietic stem cell transplantation: a meta-regression analysis. Crit Care Med 2008; 36:2898.</a></li><li><a class="nounderline abstract_t">Darmon M, Thiery G, Ciroldi M, et al. Intensive care in patients with newly diagnosed malignancies and a need for cancer chemotherapy. Crit Care Med 2005; 33:2488.</a></li><li><a class="nounderline abstract_t">Soares M, Caruso P, Silva E, et al. Characteristics and outcomes of patients with cancer requiring admission to intensive care units: a prospective multicenter study. Crit Care Med 2010; 38:9.</a></li><li><a class="nounderline abstract_t">Butt W, Barker G, Walker C, et al. Outcome of children with hematologic malignancy who are admitted to an intensive care unit. Crit Care Med 1988; 16:761.</a></li><li><a class="nounderline abstract_t">Hauser MJ, Tabak J, Baier H. Survival of patients with cancer in a medical critical care unit. Arch Intern Med 1982; 142:527.</a></li><li><a class="nounderline abstract_t">Staudinger T, Stoiser B, Müllner M, et al. Outcome and prognostic factors in critically ill cancer patients admitted to the intensive care unit. Crit Care Med 2000; 28:1322.</a></li><li><a class="nounderline abstract_t">Brochstein JA. Critical care issues in bone marrow transplantation. Crit Care Clin 1988; 4:147.</a></li><li><a class="nounderline abstract_t">Faber-Langendoen K, Caplan AL, McGlave PB. Survival of adult bone marrow transplant patients receiving mechanical ventilation: a case for restricted use. Bone Marrow Transplant 1993; 12:501.</a></li><li><a class="nounderline abstract_t">Lloyd-Thomas AR, Wright I, Lister TA, Hinds CJ. Prognosis of patients receiving intensive care for lifethreatening medical complications of haematological malignancy. Br Med J (Clin Res Ed) 1988; 296:1025.</a></li><li><a class="nounderline abstract_t">Schuster DP, Marion JM. Precedents for meaningful recovery during treatment in a medical intensive care unit. Outcome in patients with hematologic malignancy. Am J Med 1983; 75:402.</a></li><li><a class="nounderline abstract_t">Todd K, Wiley F, Landaw E, et al. Survival outcome among 54 intubated pediatric bone marrow transplant patients. Crit Care Med 1994; 22:171.</a></li><li><a class="nounderline abstract_t">Turnbull A, Goldiner P, Silverman D, Howland W. The role of an intensive care unit in a cancer center. An analysis of 1035 critically ill patients treated for life-threatening complications editorial. Cancer 1976; 37:82.</a></li><li><a class="nounderline abstract_t">Larché J, Azoulay E, Fieux F, et al. Improved survival of critically ill cancer patients with septic shock. Intensive Care Med 2003; 29:1688.</a></li><li><a class="nounderline abstract_t">Soares M, Darmon M, Salluh JIF, et al. Prognosis of lung cancer patients with life-threatening complications. Chest 2007; 131:840.</a></li><li><a class="nounderline abstract_t">Benoit DD, Vandewoude KH, Decruyenaere JM, et al. Outcome and early prognostic indicators in patients with a hematologic malignancy admitted to the intensive care unit for a life-threatening complication. Crit Care Med 2003; 31:104.</a></li><li><a class="nounderline abstract_t">Pène F, Percheron S, Lemiale V, et al. Temporal changes in management and outcome of septic shock in patients with malignancies in the intensive care unit. Crit Care Med 2008; 36:690.</a></li><li><a class="nounderline abstract_t">Vandijck DM, Benoit DD, Depuydt PO, et al. Impact of recent intravenous chemotherapy on outcome in severe sepsis and septic shock patients with hematological malignancies. Intensive Care Med 2008; 34:847.</a></li><li><a class="nounderline abstract_t">Benoit DD, Depuydt PO, Vandewoude KH, et al. Outcome in severely ill patients with hematological malignancies who received intravenous chemotherapy in the intensive care unit. Intensive Care Med 2006; 32:93.</a></li><li><a class="nounderline abstract_t">Azoulay E, Mokart D, Pène F, et al. Outcomes of critically ill patients with hematologic malignancies: prospective multicenter data from France and Belgium--a groupe de recherche respiratoire en réanimation onco-hématologique study. J Clin Oncol 2013; 31:2810.</a></li><li><a class="nounderline abstract_t">Bojko T, Notterman DA, Greenwald BM, et al. Acute hypoxemic respiratory failure in children following bone marrow transplantation: an outcome and pathologic study. Crit Care Med 1995; 23:755.</a></li><li><a class="nounderline abstract_t">Rubenfeld GD, Crawford SW. Withdrawing life support from mechanically ventilated recipients of bone marrow transplants: a case for evidence-based guidelines. Ann Intern Med 1996; 125:625.</a></li><li><a class="nounderline abstract_t">Crawford SW, Petersen FB. Long-term survival from respiratory failure after marrow transplantation for malignancy. Am Rev Respir Dis 1992; 145:510.</a></li><li><a class="nounderline abstract_t">Benz R, Schanz U, Maggiorini M, et al. Risk factors for ICU admission and ICU survival after allogeneic hematopoietic SCT. Bone Marrow Transplant 2014; 49:62.</a></li><li><a class="nounderline abstract_t">Chima RS, Abulebda K, Jodele S. Advances in critical care of the pediatric hematopoietic stem cell transplant patient. Pediatr Clin North Am 2013; 60:689.</a></li><li><a class="nounderline abstract_t">Villa F, Coppadoro A, Bellani G, et al. Etiology of respiratory failure is related to mortality in critically ill patients affected by a hematological malignancy: a retrospective study. Minerva Anestesiol 2010; 76:7.</a></li><li><a class="nounderline abstract_t">Reichner CA, Thompson JA, O'Brien S, et al. Outcome and code status of lung cancer patients admitted to the medical ICU. Chest 2006; 130:719.</a></li><li><a class="nounderline abstract_t">Adam AK, Soubani AO. Outcome and prognostic factors of lung cancer patients admitted to the medical intensive care unit. Eur Respir J 2008; 31:47.</a></li><li><a class="nounderline abstract_t">Boussat S, El'rini T, Dubiez A, et al. Predictive factors of death in primary lung cancer patients on admission to the intensive care unit. Intensive Care Med 2000; 26:1811.</a></li><li><a class="nounderline abstract_t">Bird GT, Farquhar-Smith P, Wigmore T, et al. Outcomes and prognostic factors in patients with haematological malignancy admitted to a specialist cancer intensive care unit: a 5 yr study. Br J Anaesth 2012; 108:452.</a></li><li><a class="nounderline abstract_t">Oeyen SG, Benoit DD, Annemans L, et al. Long-term outcomes and quality of life in critically ill patients with hematological or solid malignancies: a single center study. Intensive Care Med 2013; 39:889.</a></li><li><a class="nounderline abstract_t">Roques S, Parrot A, Lavole A, et al. Six-month prognosis of patients with lung cancer admitted to the intensive care unit. Intensive Care Med 2009; 35:2044.</a></li><li><a class="nounderline abstract_t">Taccone FS, Artigas AA, Sprung CL, et al. Characteristics and outcomes of cancer patients in European ICUs. Crit Care 2009; 13:R15.</a></li><li><a class="nounderline abstract_t">Bartlett RH, Morris AH, Fairley HB, et al. A prospective study of acute hypoxic respiratory failure. Chest 1986; 89:684.</a></li><li><a class="nounderline abstract_t">Keenan HT, Bratton SL, Martin LD, et al. Outcome of children who require mechanical ventilatory support after bone marrow transplantation. Crit Care Med 2000; 28:830.</a></li><li><a class="nounderline abstract_t">Díaz de Heredia C, Moreno A, Olivé T, et al. Role of the intensive care unit in children undergoing bone marrow transplantation with life-threatening complications. Bone Marrow Transplant 1999; 24:163.</a></li><li><a class="nounderline abstract_t">Hallahan AR, Shaw PJ, Rowell G, et al. Improved outcomes of children with malignancy admitted to a pediatric intensive care unit. Crit Care Med 2000; 28:3718.</a></li><li><a class="nounderline abstract_t">Hagen SA, Craig DM, Martin PL, et al. Mechanically ventilated pediatric stem cell transplant recipients: effect of cord blood transplant and organ dysfunction on outcome. Pediatr Crit Care Med 2003; 4:206.</a></li><li><a class="nounderline abstract_t">Rossi R, Shemie SD, Calderwood S. Prognosis of pediatric bone marrow transplant recipients requiring mechanical ventilation. Crit Care Med 1999; 27:1181.</a></li><li><a class="nounderline abstract_t">Soares M, Salluh JI, Spector N, Rocco JR. Characteristics and outcomes of cancer patients requiring mechanical ventilatory support for &gt;24 hrs. Crit Care Med 2005; 33:520.</a></li><li><a class="nounderline abstract_t">Khassawneh BY, White P Jr, Anaissie EJ, et al. Outcome from mechanical ventilation after autologous peripheral blood stem cell transplantation. Chest 2002; 121:185.</a></li><li><a class="nounderline abstract_t">Azoulay E, Thiéry G, Chevret S, et al. The prognosis of acute respiratory failure in critically ill cancer patients. Medicine (Baltimore) 2004; 83:360.</a></li><li><a class="nounderline abstract_t">Nichols DG, Walker LK, Wingard JR, et al. Predictors of acute respiratory failure after bone marrow transplantation in children. Crit Care Med 1994; 22:1485.</a></li><li><a class="nounderline abstract_t">Mokart D, van Craenenbroeck T, Lambert J, et al. Prognosis of acute respiratory distress syndrome in neutropenic cancer patients. Eur Respir J 2012; 40:169.</a></li><li><a class="nounderline abstract_t">Azevedo LC, Caruso P, Silva UV, et al. Outcomes for patients with cancer admitted to the ICU requiring ventilatory support: results from a prospective multicenter study. Chest 2014; 146:257.</a></li><li><a class="nounderline abstract_t">Peters SG, Meadows JA 3rd, Gracey DR. Outcome of respiratory failure in hematologic malignancy. Chest 1988; 94:99.</a></li><li><a class="nounderline abstract_t">Estopa R, Torres Marti A, Kastanos N, et al. Acute respiratory failure in severe hematologic disorders. Crit Care Med 1984; 12:26.</a></li><li><a class="nounderline abstract_t">Ewer MS, Ali MK, Atta MS, et al. Outcome of lung cancer patients requiring mechanical ventilation for pulmonary failure. JAMA 1986; 256:3364.</a></li><li><a class="nounderline abstract_t">Gillespie DJ, Marsh HM, Divertie MB, Meadows JA 3rd. Clinical outcome of respiratory failure in patients requiring prolonged (greater than 24 hours) mechanical ventilation. Chest 1986; 90:364.</a></li><li><a class="nounderline abstract_t">van Gestel JP, Bollen CW, Bierings MB, et al. Survival in a recent cohort of mechanically ventilated pediatric allogeneic hematopoietic stem cell transplantation recipients. Biol Blood Marrow Transplant 2008; 14:1385.</a></li><li><a class="nounderline abstract_t">Knaus WA, Draper EA, Wagner DP, Zimmerman JE. Prognosis in acute organ-system failure. Ann Surg 1985; 202:685.</a></li><li><a class="nounderline abstract_t">de Montmollin E, Tandjaoui-Lambiotte Y, Legrand M, et al. Outcomes in critically ill cancer patients with septic shock of pulmonary origin. Shock 2013; 39:250.</a></li><li><a class="nounderline abstract_t">McGrath S, Chatterjee F, Whiteley C, Ostermann M. ICU and 6-month outcome of oncology patients in the intensive care unit. QJM 2010; 103:397.</a></li><li><a class="nounderline abstract_t">Bos MM, Bakhshi-Raiez F, Dekker JW, et al. Outcomes of intensive care unit admissions after elective cancer surgery. Eur J Surg Oncol 2013; 39:584.</a></li><li><a class="nounderline abstract_t">Hill QA, Kelly RJ, Patalappa C, et al. Survival of patients with hematological malignancy admitted to the intensive care unit: prognostic factors and outcome compared to unselected medical intensive care unit admissions, a parallel group study. Leuk Lymphoma 2012; 53:282.</a></li><li><a class="nounderline abstract_t">Puxty K, McLoone P, Quasim T, et al. Survival in solid cancer patients following intensive care unit admission. Intensive Care Med 2014; 40:1409.</a></li><li><a class="nounderline abstract_t">Cuenca JA, Manjappachar NK, Ramírez CM, et al. Outcomes and Predictors of 28-Day Mortality in Patients With Solid Tumors and Septic Shock Defined by Third International Consensus Definitions for Sepsis and Septic Shock Criteria. Chest 2022; 162:1063.</a></li><li><a class="nounderline abstract_t">Seong GM, Lee Y, Hong SB, et al. Prognosis of Acute Respiratory Distress Syndrome in Patients With Hematological Malignancies. J Intensive Care Med 2020; 35:364.</a></li><li><a class="nounderline abstract_t">Price KJ, Thall PF, Kish SK, et al. Prognostic indicators for blood and marrow transplant patients admitted to an intensive care unit. Am J Respir Crit Care Med 1998; 158:876.</a></li><li><a class="nounderline abstract_t">Crawford SW, Schwartz DA, Petersen FB, Clark JG. Mechanical ventilation after marrow transplantation. Risk factors and clinical outcome. Am Rev Respir Dis 1988; 137:682.</a></li><li><a class="nounderline abstract_t">Jackson SR, Tweeddale MG, Barnett MJ, et al. Admission of bone marrow transplant recipients to the intensive care unit: outcome, survival and prognostic factors. Bone Marrow Transplant 1998; 21:697.</a></li><li><a class="nounderline abstract_t">Huaringa AJ, Leyva FJ, Giralt SA, et al. Outcome of bone marrow transplantation patients requiring mechanical ventilation. Crit Care Med 2000; 28:1014.</a></li><li><a class="nounderline abstract_t">Rosenow E 3rd. Respiratory failure in bone marrow transplant patients. Crit Care Med 2000; 28:1232.</a></li><li><a class="nounderline abstract_t">Scott PH, Morgan TJ, Durrant S, Boots RJ. Survival following mechanical ventilation of recipients of bone marrow transplants and peripheral blood stem cell transplants. Anaesth Intensive Care 2002; 30:289.</a></li><li><a class="nounderline abstract_t">Pène F, Aubron C, Azoulay E, et al. Outcome of critically ill allogeneic hematopoietic stem-cell transplantation recipients: a reappraisal of indications for organ failure supports. J Clin Oncol 2006; 24:643.</a></li><li><a class="nounderline abstract_t">Depuydt P, Kerre T, Noens L, et al. Outcome in critically ill patients with allogeneic BM or peripheral haematopoietic SCT: a single-centre experience. Bone Marrow Transplant 2011; 46:1186.</a></li><li><a class="nounderline abstract_t">Scales DC, Thiruchelvam D, Kiss A, et al. Intensive care outcomes in bone marrow transplant recipients: a population-based cohort analysis. Crit Care 2008; 12:R77.</a></li><li><a class="nounderline abstract_t">Allareddy V, Roy A, Rampa S, et al. Outcomes of stem cell transplant patients with acute respiratory failure requiring mechanical ventilation in the United States. Bone Marrow Transplant 2014; 49:1278.</a></li><li><a class="nounderline abstract_t">Platon L, Amigues L, Ceballos P, et al. A reappraisal of ICU and long-term outcome of allogeneic hematopoietic stem cell transplantation patients and reassessment of prognosis factors: results of a 5-year cohort study (2009-2013). Bone Marrow Transplant 2016; 51:256.</a></li><li><a class="nounderline abstract_t">Townsend WM, Holroyd A, Pearce R, et al. Improved intensive care unit survival for critically ill allogeneic haematopoietic stem cell transplant recipients following reduced intensity conditioning. Br J Haematol 2013; 161:578.</a></li><li class="breakAll">Goldiner P. Acute Respiratory Failure in Patients with Lymphoma. In: Hodgkins Disease, Lachner I (Ed), John Wiley and Sons Inc, New York 1976.</li><li><a class="nounderline abstract_t">Pearl, R, Rosenthal, M. ICU Survival in adult patients with acute leukemia. Anaesthesiology 1983; 59:A141.</a></li><li><a class="nounderline abstract_t">Pennington JE, Feldman NT. Pulmonary infiltrates and fever in patients with hematologic malignancy: assessment of transbronchial biopsy. Am J Med 1977; 62:581.</a></li><li><a class="nounderline abstract_t">Massion PB, Dive AM, Doyen C, et al. Prognosis of hematologic malignancies does not predict intensive care unit mortality. Crit Care Med 2002; 30:2260.</a></li><li><a class="nounderline abstract_t">Soares M, Salluh JI, Torres VB, et al. Short- and long-term outcomes of critically ill patients with cancer and prolonged ICU length of stay. Chest 2008; 134:520.</a></li><li><a class="nounderline abstract_t">Martos-Benítez FD, Soto-García A, Gutiérrez-Noyola A. Clinical characteristics and outcomes of cancer patients requiring intensive care unit admission: a prospective study. J Cancer Res Clin Oncol 2018; 144:717.</a></li><li><a class="nounderline abstract_t">Piñana JL, Martino R, Barba P, et al. Pulmonary function testing prior to reduced intensity conditioning allogeneic stem cell transplantation in an unselected patient cohort predicts posttransplantation pulmonary complications and outcome. Am J Hematol 2012; 87:9.</a></li><li><a class="nounderline abstract_t">Poe RH, Wahl GW, Qazi R, et al. Predictors of mortality in the immunocompromised patient with pulmonary infiltrates. Arch Intern Med 1986; 146:1304.</a></li><li><a class="nounderline abstract_t">Greenman RL, Goodall PT, King D. Lung biopsy in immunocompromised hosts. Am J Med 1975; 59:488.</a></li><li><a class="nounderline abstract_t">Hampshire PA, Welch CA, McCrossan LA, et al. Admission factors associated with hospital mortality in patients with haematological malignancy admitted to UK adult, general critical care units: a secondary analysis of the ICNARC Case Mix Programme Database. Crit Care 2009; 13:R137.</a></li><li><a class="nounderline abstract_t">Sheu CC, Gong MN, Zhai R, et al. Clinical characteristics and outcomes of sepsis-related vs non-sepsis-related ARDS. Chest 2010; 138:559.</a></li><li><a class="nounderline abstract_t">Crawford SW, Pepe M, Lin D, et al. Abnormalities of pulmonary function tests after marrow transplantation predict nonrelapse mortality. Am J Respir Crit Care Med 1995; 152:690.</a></li><li><a class="nounderline abstract_t">Toffart AC, Minet C, Raynard B, et al. Use of intensive care in patients with nonresectable lung cancer. Chest 2011; 139:101.</a></li><li><a class="nounderline abstract_t">Soubani AO, Ruckdeschel JC. The outcome of medical intensive care for lung cancer patients: the case for optimism. J Thorac Oncol 2011; 6:633.</a></li><li><a class="nounderline abstract_t">Bayraktar UD, Shpall EJ, Liu P, et al. Hematopoietic cell transplantation-specific comorbidity index predicts inpatient mortality and survival in patients who received allogeneic transplantation admitted to the intensive care unit. J Clin Oncol 2013; 31:4207.</a></li><li><a class="nounderline abstract_t">Cuomo A, Delmastro M, Ceriana P, et al. Noninvasive mechanical ventilation as a palliative treatment of acute respiratory failure in patients with end-stage solid cancer. Palliat Med 2004; 18:602.</a></li><li><a class="nounderline abstract_t">Azoulay E, Alberti C, Bornstain C, et al. Improved survival in cancer patients requiring mechanical ventilatory support: impact of noninvasive mechanical ventilatory support. Crit Care Med 2001; 29:519.</a></li><li><a class="nounderline abstract_t">Wermke M, Schiemanck S, Höffken G, et al. Respiratory failure in patients undergoing allogeneic hematopoietic SCT--a randomized trial on early non-invasive ventilation based on standard care hematology wards. Bone Marrow Transplant 2012; 47:574.</a></li><li><a class="nounderline abstract_t">Ferguson ND, Cook DJ, Guyatt GH, et al. High-frequency oscillation in early acute respiratory distress syndrome. N Engl J Med 2013; 368:795.</a></li><li><a class="nounderline abstract_t">Afessa B, Tefferi A, Dunn WF, et al. Intensive care unit support and Acute Physiology and Chronic Health Evaluation III performance in hematopoietic stem cell transplant recipients. Crit Care Med 2003; 31:1715.</a></li><li><a class="nounderline abstract_t">Sculier JP, Paesmans M, Markiewicz E, Berghmans T. Scoring systems in cancer patients admitted for an acute complication in a medical intensive care unit. Crit Care Med 2000; 28:2786.</a></li><li><a class="nounderline abstract_t">Danai PA, Moss M, Mannino DM, Martin GS. The epidemiology of sepsis in patients with malignancy. Chest 2006; 129:1432.</a></li><li><a class="nounderline abstract_t">Kumar G, Ahmad S, Taneja A, et al. Severe sepsis in hematopoietic stem cell transplant recipients*. Crit Care Med 2015; 43:411.</a></li><li><a class="nounderline abstract_t">Torres VB, Azevedo LC, Silva UV, et al. Sepsis-Associated Outcomes in Critically Ill Patients with Malignancies. Ann Am Thorac Soc 2015; 12:1185.</a></li><li><a class="nounderline abstract_t">Rhee CK, Kang JY, Kim YH, et al. Risk factors for acute respiratory distress syndrome during neutropenia recovery in patients with hematologic malignancies. Crit Care 2009; 13:R173.</a></li><li><a class="nounderline abstract_t">Gilbert CR, Lerner A, Baram M, Awsare BK. Utility of flexible bronchoscopy in the evaluation of pulmonary infiltrates in the hematopoietic stem cell transplant population -- a single center fourteen year experience. Arch Bronconeumol 2013; 49:189.</a></li><li><a class="nounderline abstract_t">Chang CH, Kao KC, Hu HC, et al. The utility of surgical lung biopsy in cancer patients with acute respiratory distress syndrome. J Cardiothorac Surg 2013; 8:128.</a></li><li><a class="nounderline abstract_t">Azoulay E, Mokart D, Lambert J, et al. Diagnostic strategy for hematology and oncology patients with acute respiratory failure: randomized controlled trial. Am J Respir Crit Care Med 2010; 182:1038.</a></li><li><a class="nounderline abstract_t">Yoo H, Suh GY, Jeong BH, et al. Etiologies, diagnostic strategies, and outcomes of diffuse pulmonary infiltrates causing acute respiratory failure in cancer patients: a retrospective observational study. Crit Care 2013; 17:R150.</a></li><li><a class="nounderline abstract_t">Messika J, Parquin F, Puyo P, et al. [Lung surgery in haematological patients: useful? hazardous?]. Rev Pneumol Clin 2011; 67:220.</a></li><li><a class="nounderline abstract_t">Robbins BE, Steiger Z, Wilson RF, et al. Diagnosis of acute diffuse pulmonary infiltrates in immunosuppressed patients by open biopsy of the lung. Surg Gynecol Obstet 1992; 175:8.</a></li><li><a class="nounderline abstract_t">Mariotte E, Schnell D, Scieux C, et al. Significance of herpesvirus 6 in BAL fluid of hematology patients with acute respiratory failure. Infection 2011; 39:225.</a></li><li><a class="nounderline abstract_t">Depuydt OE, Daeze C, Benoit D, et al. Diagnostic potential of open lung biopsy in mechanically ventilated patients with diffuse pulmonary infiltrates of unclear aetiology. Anaesth Intensive Care 2013; 41:610.</a></li><li><a class="nounderline abstract_t">Temel JS, Greer JA, Muzikansky A, et al. Early palliative care for patients with metastatic non-small-cell lung cancer. N Engl J Med 2010; 363:733.</a></li><li><a class="nounderline abstract_t">Simoff MJ, Lally B, Slade MG, et al. Symptom management in patients with lung cancer: Diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines. Chest 2013; 143:e455S.</a></li><li><a class="nounderline abstract_t">Fiser RT, West NK, Bush AJ, et al. Outcome of severe sepsis in pediatric oncology patients. Pediatr Crit Care Med 2005; 6:531.</a></li><li><a class="nounderline abstract_t">Rr P, Tan EEK, Sultana R, et al. Critical illness epidemiology and mortality risk in pediatric oncology. Pediatr Blood Cancer 2020; 67:e28242.</a></li><li><a class="nounderline abstract_t">Raymakers-Janssen PAMA, Lilien MR, Tibboel D, et al. Epidemiology and Outcome of Critically Ill Pediatric Cancer and Hematopoietic Stem Cell Transplant Patients Requiring Continuous Renal Replacement Therapy: A Retrospective Nationwide Cohort Study. Crit Care Med 2019; 47:e893.</a></li><li><a class="nounderline abstract_t">Wösten-van Asperen RM, van Gestel JPJ, van Grotel M, et al. PICU mortality of children with cancer admitted to pediatric intensive care unit a systematic review and meta-analysis. Crit Rev Oncol Hematol 2019; 142:153.</a></li><li><a class="nounderline abstract_t">Zinter MS, DuBois SG, Spicer A, et al. Pediatric cancer type predicts infection rate, need for critical care intervention, and mortality in the pediatric intensive care unit. Intensive Care Med 2014; 40:1536.</a></li><li><a class="nounderline abstract_t">Maude SL, Fitzgerald JC, Fisher BT, et al. Outcome of pediatric acute myeloid leukemia patients receiving intensive care in the United States. Pediatr Crit Care Med 2014; 15:112.</a></li><li><a class="nounderline abstract_t">Singer K, Subbaiah P, Hutchinson R, et al. Clinical course of sepsis in children with acute leukemia admitted to the pediatric intensive care unit. Pediatr Crit Care Med 2011; 12:649.</a></li><li><a class="nounderline abstract_t">Barking CTMM, Masjosthusmann K, Rellensmann G, et al. Treatment of Children With Cancer and/or Hematopoietic Stem Cell Transplantation in the Intensive Care Unit: Experience at a Large European Pediatric Cancer Center. J Pediatr Hematol Oncol 2020; 42:e583.</a></li><li><a class="nounderline abstract_t">Agulnik A, Cárdenas A, Carrillo AK, et al. Clinical and organizational risk factors for mortality during deterioration events among pediatric oncology patients in Latin America: A multicenter prospective cohort. Cancer 2021; 127:1668.</a></li><li><a class="nounderline abstract_t">Kahn AR, Schwalm CM, Wolfson JA, et al. COVID-19 in Children with Cancer. Curr Oncol Rep 2022; 24:295.</a></li><li><a class="nounderline abstract_t">Chima RS, Daniels RC, Kim MO, et al. Improved outcomes for stem cell transplant recipients requiring pediatric intensive care. Pediatr Crit Care Med 2012; 13:e336.</a></li><li><a class="nounderline abstract_t">Duncan CN, Lehmann LE, Cheifetz IM, et al. Clinical outcomes of children receiving intensive cardiopulmonary support during hematopoietic stem cell transplant. Pediatr Crit Care Med 2013; 14:261.</a></li><li><a class="nounderline abstract_t">van Gestel JP, Bierings MB, Dauger S, et al. Outcome of invasive mechanical ventilation after pediatric allogeneic hematopoietic SCT: results from a prospective, multicenter registry. Bone Marrow Transplant 2014; 49:1287.</a></li><li><a class="nounderline abstract_t">Zinter MS, Dvorak CC, Spicer A, et al. New Insights Into Multicenter PICU Mortality Among Pediatric Hematopoietic Stem Cell Transplant Patients. Crit Care Med 2015; 43:1986.</a></li><li><a class="nounderline abstract_t">Aspesberro F, Guthrie KA, Woolfrey AE, et al. Outcome of pediatric hematopoietic stem cell transplant recipients requiring mechanical ventilation. J Intensive Care Med 2014; 29:31.</a></li><li><a class="nounderline abstract_t">Zinter MS, Logan BR, Fretham C, et al. Comprehensive Prognostication in Critically Ill Pediatric Hematopoietic Cell Transplant Patients: Results from Merging the Center for International Blood and Marrow Transplant Research (CIBMTR) and Virtual Pediatric Systems (VPS) Registries. Biol Blood Marrow Transplant 2020; 26:333.</a></li><li><a class="nounderline abstract_t">Lindell RB, Gertz SJ, Rowan CM, et al. High Levels of Morbidity and Mortality Among Pediatric Hematopoietic Cell Transplant Recipients With Severe Sepsis: Insights From the Sepsis PRevalence, OUtcomes, and Therapies International Point Prevalence Study. Pediatr Crit Care Med 2017; 18:1114.</a></li><li><a class="nounderline abstract_t">Rowan CM, Gertz SJ, McArthur J, et al. Invasive Mechanical Ventilation and Mortality in Pediatric Hematopoietic Stem Cell Transplantation: A Multicenter Study. Pediatr Crit Care Med 2016; 17:294.</a></li><li><a class="nounderline abstract_t">Rowan CM, Loomis A, McArthur J, et al. High-Frequency Oscillatory Ventilation Use and Severe Pediatric ARDS in the Pediatric Hematopoietic Cell Transplant Recipient. Respir Care 2018; 63:404.</a></li><li><a class="nounderline abstract_t">Rowan CM, McArthur J, Hsing DD, et al. Acute Respiratory Failure in Pediatric Hematopoietic Cell Transplantation: A Multicenter Study. Crit Care Med 2018; 46:e967.</a></li><li><a class="nounderline abstract_t">Elbahlawan L, West NK, Avent Y, et al. Impact of continuous renal replacement therapy on oxygenation in children with acute lung injury after allogeneic hematopoietic stem cell transplantation. Pediatr Blood Cancer 2010; 55:540.</a></li><li><a class="nounderline abstract_t">Rajasekaran S, Jones DP, Avent Y, et al. Outcomes of hematopoietic stem cell transplant patients who received continuous renal replacement therapy in a pediatric oncology intensive care unit. Pediatr Crit Care Med 2010; 11:699.</a></li><li><a class="nounderline abstract_t">Bridges BC, Kilbaugh TJ, Barbaro RP, et al. Veno-Venous Extracorporeal Membrane Oxygenation for Children With Cancer or Hematopoietic Cell Transplant: A Ten Center Cohort. ASAIO J 2021; 67:923.</a></li><li><a class="nounderline abstract_t">Di Nardo M, Ahmad AH, Merli P, et al. Extracorporeal membrane oxygenation in children receiving haematopoietic cell transplantation and immune effector cell therapy: an international and multidisciplinary consensus statement. Lancet Child Adolesc Health 2022; 6:116.</a></li><li><a class="nounderline abstract_t">Zinter MS, McArthur J, Duncan C, et al. Candidacy for Extracorporeal Life Support in Children After Hematopoietic Cell Transplantation: A Position Paper From the Pediatric Acute Lung Injury and Sepsis Investigators Network's Hematopoietic Cell Transplant and Cancer Immunotherapy Subgroup. Pediatr Crit Care Med 2022; 23:205.</a></li></ol></div><div id="topicVersionRevision">Topic 1604 Version 29.0</div></div>
+<div class="row">
+<div class="col-12">
+<h4 style="text-align: center;padding: 20px;color: cadetblue;">References</h4>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/10588613" id="rid0" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>1 : Outcomes of critically ill cancer patients in a university hospital setting.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/1545573" id="rid1" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>2 : Outcome of recipients of bone marrow transplants who require intensive-care unit support.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/8339643" id="rid2" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>3 : Outcome of patients requiring medical ICU admission following bone marrow transplantation.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/2642401" id="rid3" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>4 : Efficacy of intensive care for bone marrow transplant patients with respiratory failure.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/18766109" id="rid4" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>5 : Intensive care unit mortality trends in children after hematopoietic stem cell transplantation: a meta-regression analysis.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/16276171" id="rid5" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>6 : Intensive care in patients with newly diagnosed malignancies and a need for cancer chemotherapy.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/19829101" id="rid6" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>7 : Characteristics and outcomes of patients with cancer requiring admission to intensive care units: a prospective multicenter study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/3396370" id="rid7" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>8 : Outcome of children with hematologic malignancy who are admitted to an intensive care unit.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/7065788" id="rid8" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>9 : Survival of patients with cancer in a medical critical care unit.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/10834673" id="rid9" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>10 : Outcome and prognostic factors in critically ill cancer patients admitted to the intensive care unit.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/3061576" id="rid10" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>11 : Critical care issues in bone marrow transplantation.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/8298561" id="rid11" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>12 : Survival of adult bone marrow transplant patients receiving mechanical ventilation: a case for restricted use.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/3130123" id="rid12" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>13 : Prognosis of patients receiving intensive care for lifethreatening medical complications of haematological malignancy.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/6577789" id="rid13" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>14 : Precedents for meaningful recovery during treatment in a medical intensive care unit. Outcome in patients with hematologic malignancy.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/8124961" id="rid14" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>15 : Survival outcome among 54 intubated pediatric bone marrow transplant patients.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/1247969" id="rid15" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>16 : The role of an intensive care unit in a cancer center. An analysis of 1035 critically ill patients treated for life-threatening complications editorial.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/13680115" id="rid16" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>17 : Improved survival of critically ill cancer patients with septic shock.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/17356101" id="rid17" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>18 : Prognosis of lung cancer patients with life-threatening complications.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/12545002" id="rid18" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>19 : Outcome and early prognostic indicators in patients with a hematologic malignancy admitted to the intensive care unit for a life-threatening complication.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/18431262" id="rid19" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>20 : Temporal changes in management and outcome of septic shock in patients with malignancies in the intensive care unit.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/18214437" id="rid20" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>21 : Impact of recent intravenous chemotherapy on outcome in severe sepsis and septic shock patients with hematological malignancies.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/16308681" id="rid21" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>22 : Outcome in severely ill patients with hematological malignancies who received intravenous chemotherapy in the intensive care unit.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/23752112" id="rid22" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>23 : Outcomes of critically ill patients with hematologic malignancies: prospective multicenter data from France and Belgium--a groupe de recherche respiratoire en réanimation onco-hématologique study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/7712767" id="rid23" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>24 : Acute hypoxemic respiratory failure in children following bone marrow transplantation: an outcome and pathologic study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/8849146" id="rid24" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>25 : Withdrawing life support from mechanically ventilated recipients of bone marrow transplants: a case for evidence-based guidelines.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/1546828" id="rid25" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>26 : Long-term survival from respiratory failure after marrow transplantation for malignancy.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/24056739" id="rid26" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>27 : Risk factors for ICU admission and ICU survival after allogeneic hematopoietic SCT.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/23639663" id="rid27" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>28 : Advances in critical care of the pediatric hematopoietic stem cell transplant patient.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/20125068" id="rid28" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>29 : Etiology of respiratory failure is related to mortality in critically ill patients affected by a hematological malignancy: a retrospective study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/16963668" id="rid29" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>30 : Outcome and code status of lung cancer patients admitted to the medical ICU.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/17715168" id="rid30" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>31 : Outcome and prognostic factors of lung cancer patients admitted to the medical intensive care unit.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/11271089" id="rid31" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>32 : Predictive factors of death in primary lung cancer patients on admission to the intensive care unit.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/22298243" id="rid32" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>33 : Outcomes and prognostic factors in patients with haematological malignancy admitted to a specialist cancer intensive care unit: a 5 yr study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/23248039" id="rid33" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>34 : Long-term outcomes and quality of life in critically ill patients with hematological or solid malignancies: a single center study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/19768453" id="rid34" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>35 : Six-month prognosis of patients with lung cancer admitted to the intensive care unit.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/19200368" id="rid35" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>36 : Characteristics and outcomes of cancer patients in European ICUs.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/3698698" id="rid36" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>37 : A prospective study of acute hypoxic respiratory failure.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/10752837" id="rid37" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>38 : Outcome of children who require mechanical ventilatory support after bone marrow transplantation.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/10455344" id="rid38" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>39 : Role of the intensive care unit in children undergoing bone marrow transplantation with life-threatening complications.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/11098979" id="rid39" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>40 : Improved outcomes of children with malignancy admitted to a pediatric intensive care unit.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/12749654" id="rid40" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>41 : Mechanically ventilated pediatric stem cell transplant recipients: effect of cord blood transplant and organ dysfunction on outcome.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/10397226" id="rid41" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>42 : Prognosis of pediatric bone marrow transplant recipients requiring mechanical ventilation.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/15753742" id="rid42" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>43 : Characteristics and outcomes of cancer patients requiring mechanical ventilatory support for&gt;24 hrs.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/11796449" id="rid43" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>44 : Outcome from mechanical ventilation after autologous peripheral blood stem cell transplantation.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/15525848" id="rid44" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>45 : The prognosis of acute respiratory failure in critically ill cancer patients.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/8062574" id="rid45" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>46 : Predictors of acute respiratory failure after bone marrow transplantation in children.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/22135281" id="rid46" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>47 : Prognosis of acute respiratory distress syndrome in neutropenic cancer patients.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/24480886" id="rid47" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>48 : Outcomes for patients with cancer admitted to the ICU requiring ventilatory support: results from a prospective multicenter study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/3383663" id="rid48" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>49 : Outcome of respiratory failure in hematologic malignancy.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/6690201" id="rid49" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>50 : Acute respiratory failure in severe hematologic disorders.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/3783887" id="rid50" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>51 : Outcome of lung cancer patients requiring mechanical ventilation for pulmonary failure.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/3743148" id="rid51" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>52 : Clinical outcome of respiratory failure in patients requiring prolonged (greater than 24 hours) mechanical ventilation.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/19041061" id="rid52" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>53 : Survival in a recent cohort of mechanically ventilated pediatric allogeneic hematopoietic stem cell transplantation recipients.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/4073980" id="rid53" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>54 : Prognosis in acute organ-system failure.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/23364436" id="rid54" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>55 : Outcomes in critically ill cancer patients with septic shock of pulmonary origin.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/20231238" id="rid55" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>56 : ICU and 6-month outcome of oncology patients in the intensive care unit.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/23490335" id="rid56" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>57 : Outcomes of intensive care unit admissions after elective cancer surgery.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/21846185" id="rid57" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>58 : Survival of patients with hematological malignancy admitted to the intensive care unit: prognostic factors and outcome compared to unselected medical intensive care unit admissions, a parallel group study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/25223853" id="rid58" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>59 : Survival in solid cancer patients following intensive care unit admission.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/35644244" id="rid59" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>60 : Outcomes and Predictors of 28-Day Mortality in Patients With Solid Tumors and Septic Shock Defined by Third International Consensus Definitions for Sepsis and Septic Shock Criteria.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/29343171" id="rid60" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>61 : Prognosis of Acute Respiratory Distress Syndrome in Patients With Hematological Malignancies.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/9731020" id="rid61" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>62 : Prognostic indicators for blood and marrow transplant patients admitted to an intensive care unit.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/3278664" id="rid62" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>63 : Mechanical ventilation after marrow transplantation. Risk factors and clinical outcome.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/9578310" id="rid63" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>64 : Admission of bone marrow transplant recipients to the intensive care unit: outcome, survival and prognostic factors.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/10809275" id="rid64" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>65 : Outcome of bone marrow transplantation patients requiring mechanical ventilation.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/10809318" id="rid65" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>66 : Respiratory failure in bone marrow transplant patients.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/12075635" id="rid66" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>67 : Survival following mechanical ventilation of recipients of bone marrow transplants and peripheral blood stem cell transplants.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/16380411" id="rid67" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>68 : Outcome of critically ill allogeneic hematopoietic stem-cell transplantation recipients: a reappraisal of indications for organ failure supports.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/21042315" id="rid68" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>69 : Outcome in critically ill patients with allogeneic BM or peripheral haematopoietic SCT: a single-centre experience.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/18547422" id="rid69" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>70 : Intensive care outcomes in bone marrow transplant recipients: a population-based cohort analysis.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/25111514" id="rid70" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>71 : Outcomes of stem cell transplant patients with acute respiratory failure requiring mechanical ventilation in the United States.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/26569092" id="rid71" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>72 : A reappraisal of ICU and long-term outcome of allogeneic hematopoietic stem cell transplantation patients and reassessment of prognosis factors: results of a 5-year cohort study (2009-2013).</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/23496350" id="rid72" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>73 : Improved intensive care unit survival for critically ill allogeneic haematopoietic stem cell transplant recipients following reduced intensity conditioning.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/23496350" id="rid73" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>74 : Improved intensive care unit survival for critically ill allogeneic haematopoietic stem cell transplant recipients following reduced intensity conditioning.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/" id="rid74" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>75 : ICU Survival in adult patients with acute leukemia</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/300566" id="rid75" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>76 : Pulmonary infiltrates and fever in patients with hematologic malignancy: assessment of transbronchial biopsy.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/12394954" id="rid76" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>77 : Prognosis of hematologic malignancies does not predict intensive care unit mortality.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/18641110" id="rid77" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>78 : Short- and long-term outcomes of critically ill patients with cancer and prolonged ICU length of stay.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/29362918" id="rid78" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>79 : Clinical characteristics and outcomes of cancer patients requiring intensive care unit admission: a prospective study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/22031451" id="rid79" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>80 : Pulmonary function testing prior to reduced intensity conditioning allogeneic stem cell transplantation in an unselected patient cohort predicts posttransplantation pulmonary complications and outcome.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/3487297" id="rid80" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>81 : Predictors of mortality in the immunocompromised patient with pulmonary infiltrates.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/1166857" id="rid81" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>82 : Lung biopsy in immunocompromised hosts.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/19706163" id="rid82" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>83 : Admission factors associated with hospital mortality in patients with haematological malignancy admitted to UK adult, general critical care units: a secondary analysis of the ICNARC Case Mix Programme Database.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/20507948" id="rid83" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>84 : Clinical characteristics and outcomes of sepsis-related vs non-sepsis-related ARDS.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/7633727" id="rid84" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>85 : Abnormalities of pulmonary function tests after marrow transplantation predict nonrelapse mortality.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/20634283" id="rid85" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>86 : Use of intensive care in patients with nonresectable lung cancer.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/21266923" id="rid86" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>87 : The outcome of medical intensive care for lung cancer patients: the case for optimism.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/24127454" id="rid87" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>88 : Hematopoietic cell transplantation-specific comorbidity index predicts inpatient mortality and survival in patients who received allogeneic transplantation admitted to the intensive care unit.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/15540668" id="rid88" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>89 : Noninvasive mechanical ventilation as a palliative treatment of acute respiratory failure in patients with end-stage solid cancer.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/11373414" id="rid89" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>90 : Improved survival in cancer patients requiring mechanical ventilatory support: impact of noninvasive mechanical ventilatory support.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/21927036" id="rid90" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>91 : Respiratory failure in patients undergoing allogeneic hematopoietic SCT--a randomized trial on early non-invasive ventilation based on standard care hematology wards.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/23339639" id="rid91" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>92 : High-frequency oscillation in early acute respiratory distress syndrome.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/12794410" id="rid92" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>93 : Intensive care unit support and Acute Physiology and Chronic Health Evaluation III performance in hematopoietic stem cell transplant recipients.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/10966251" id="rid93" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>94 : Scoring systems in cancer patients admitted for an acute complication in a medical intensive care unit.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/16778259" id="rid94" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>95 : The epidemiology of sepsis in patients with malignancy.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/25599465" id="rid95" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>96 : Severe sepsis in hematopoietic stem cell transplant recipients*.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/26086679" id="rid96" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>97 : Sepsis-Associated Outcomes in Critically Ill Patients with Malignancies.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/19886984" id="rid97" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>98 : Risk factors for acute respiratory distress syndrome during neutropenia recovery in patients with hematologic malignancies.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/23455477" id="rid98" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>99 : Utility of flexible bronchoscopy in the evaluation of pulmonary infiltrates in the hematopoietic stem cell transplant population -- a single center fourteen year experience.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/23680446" id="rid99" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>100 : The utility of surgical lung biopsy in cancer patients with acute respiratory distress syndrome.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/20581167" id="rid100" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>101 : Diagnostic strategy for hematology and oncology patients with acute respiratory failure: randomized controlled trial.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/23880212" id="rid101" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>102 : Etiologies, diagnostic strategies, and outcomes of diffuse pulmonary infiltrates causing acute respiratory failure in cancer patients: a retrospective observational study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/21920281" id="rid102" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>103 : [Lung surgery in haematological patients: useful? hazardous?].</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/1621206" id="rid103" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>104 : Diagnosis of acute diffuse pulmonary infiltrates in immunosuppressed patients by open biopsy of the lung.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/21538037" id="rid104" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>105 : Significance of herpesvirus 6 in BAL fluid of hematology patients with acute respiratory failure.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/23977912" id="rid105" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>106 : Diagnostic potential of open lung biopsy in mechanically ventilated patients with diffuse pulmonary infiltrates of unclear aetiology.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/20818875" id="rid106" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>107 : Early palliative care for patients with metastatic non-small-cell lung cancer.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/23649452" id="rid107" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>108 : Symptom management in patients with lung cancer: Diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/16148811" id="rid108" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>109 : Outcome of severe sepsis in pediatric oncology patients.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/32187445" id="rid109" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>110 : Critical illness epidemiology and mortality risk in pediatric oncology.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/31464768" id="rid110" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>111 : Epidemiology and Outcome of Critically Ill Pediatric Cancer and Hematopoietic Stem Cell Transplant Patients Requiring Continuous Renal Replacement Therapy: A Retrospective Nationwide Cohort Study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/31404827" id="rid111" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>112 : PICU mortality of children with cancer admitted to pediatric intensive care unit a systematic review and meta-analysis.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/25023526" id="rid112" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>113 : Pediatric cancer type predicts infection rate, need for critical care intervention, and mortality in the pediatric intensive care unit.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/24366507" id="rid113" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>114 : Outcome of pediatric acute myeloid leukemia patients receiving intensive care in the United States.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/21478790" id="rid114" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>115 : Clinical course of sepsis in children with acute leukemia admitted to the pediatric intensive care unit.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/31985550" id="rid115" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>116 : Treatment of Children With Cancer and/or Hematopoietic Stem Cell Transplantation in the Intensive Care Unit: Experience at a Large European Pediatric Cancer Center.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/33524166" id="rid116" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>117 : Clinical and organizational risk factors for mortality during deterioration events among pediatric oncology patients in Latin America: A multicenter prospective cohort.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/35113354" id="rid117" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>118 : COVID-19 in Children with Cancer.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/22791094" id="rid118" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>119 : Improved outcomes for stem cell transplant recipients requiring pediatric intensive care.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/23392372" id="rid119" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>120 : Clinical outcomes of children receiving intensive cardiopulmonary support during hematopoietic stem cell transplant.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/25068426" id="rid120" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>121 : Outcome of invasive mechanical ventilation after pediatric allogeneic hematopoietic SCT: results from a prospective, multicenter registry.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/26035280" id="rid121" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>122 : New Insights Into Multicenter PICU Mortality Among Pediatric Hematopoietic Stem Cell Transplant Patients.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/22904208" id="rid122" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>123 : Outcome of pediatric hematopoietic stem cell transplant recipients requiring mechanical ventilation.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/31563573" id="rid123" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>124 : Comprehensive Prognostication in Critically Ill Pediatric Hematopoietic Cell Transplant Patients: Results from Merging the Center for International Blood and Marrow Transplant Research (CIBMTR) and Virtual Pediatric Systems (VPS) Registries.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/28926489" id="rid124" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>125 : High Levels of Morbidity and Mortality Among Pediatric Hematopoietic Cell Transplant Recipients With Severe Sepsis: Insights From the Sepsis PRevalence, OUtcomes, and Therapies International Point Prevalence Study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/26910477" id="rid125" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>126 : Invasive Mechanical Ventilation and Mortality in Pediatric Hematopoietic Stem Cell Transplantation: A Multicenter Study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/29279362" id="rid126" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>127 : High-Frequency Oscillatory Ventilation Use and Severe Pediatric ARDS in the Pediatric Hematopoietic Cell Transplant Recipient.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/29965835" id="rid127" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>128 : Acute Respiratory Failure in Pediatric Hematopoietic Cell Transplantation: A Multicenter Study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/20658627" id="rid128" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>129 : Impact of continuous renal replacement therapy on oxygenation in children with acute lung injury after allogeneic hematopoietic stem cell transplantation.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/20495504" id="rid129" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>130 : Outcomes of hematopoietic stem cell transplant patients who received continuous renal replacement therapy in a pediatric oncology intensive care unit.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/33606393" id="rid130" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>131 : Veno-Venous Extracorporeal Membrane Oxygenation for Children With Cancer or Hematopoietic Cell Transplant: A Ten Center Cohort.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/34895512" id="rid131" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>132 : Extracorporeal membrane oxygenation in children receiving haematopoietic cell transplantation and immune effector cell therapy: an international and multidisciplinary consensus statement.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/34878420" id="rid132" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>133 : Candidacy for Extracorporeal Life Support in Children After Hematopoietic Cell Transplantation: A Position Paper From the Pediatric Acute Lung Injury and Sepsis Investigators Network's Hematopoietic Cell Transplant and Cancer Immunotherapy Subgroup.</p>
+</a>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

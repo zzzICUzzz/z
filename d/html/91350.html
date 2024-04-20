@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Calculator: National Institutes of Health Stroke Scale (NIHSS) score in adults</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Calculator: National Institutes of Health Stroke Scale (NIHSS) score in adults</h1>
+<div class="utdArticleSection" id="topicContentCalculator"><div id="topicText">
+<div id="mc3k">
+<form action="" id="NIHStrokeScore_form" name="NIHStrokeScore_form" onreset="document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
+<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
+<td align="left" bgcolor="#eeeeee">
+<span class="medCalcFontTitleBox">
+
+ 
+Calculator: National Institutes of Health Stroke Scale (NIHSS) score in adults
+</span></td></tr></tbody></table><br/> <br/>
+<div id="calc_main">
+<div id="calc_input">
+<center>
+<table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
+<tbody><tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">Level of consciousness </span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Level of consciousness. The option is Alert (0 points)" id="togel1" name="cc1" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel1');">Alert (0 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Level of consciousness. The option is  Not alert, but arousable with minimal stimulation (1 point)" id="togel2" name="cc1" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel2');"> Not alert, but arousable with minimal stimulation (1 point)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Level of consciousness. The option is  Not alert, requires repeated stimulation to attend (2 points)" id="togel3" name="cc1" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel3');"> Not alert, requires repeated stimulation to attend (2 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Level of consciousness. The option is  Responds only with reflex motor or autonomic effects or totally unresponsive, flaccid, and areflexic (3 points)" id="togel4" name="cc1" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel4');"> Responds only with reflex motor or autonomic effects or totally unresponsive, flaccid, and areflexic (3 points)</span></td></tr>
+<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">Patient knows month and own age </span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Patient knows month and own age. The option is Answers both correctly (0 points)" id="togel5" name="cc2" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel5');">Answers both correctly (0 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Patient knows month and own age. The option is  Answers one correctly (1 point)" id="togel6" name="cc2" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel6');"> Answers one correctly (1 point)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Patient knows month and own age. The option is Both incorrect (2 points)" id="togel7" name="cc2" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel7');">Both incorrect (2 points)</span></td></tr>
+<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">Patient opens and closes eyes and grips and releases the nonparetic hand on command </span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Patient opens and closes eyes and grips and releases the nonparetic hand on command. The option is Obeys both correctly (0 points)" id="togel8" name="cc3" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel8');">Obeys both correctly (0 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Patient opens and closes eyes and grips and releases the nonparetic hand on command. The option is  Obeys one correctly (1 point)" id="togel9" name="cc3" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel9');"> Obeys one correctly (1 point)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Patient opens and closes eyes and grips and releases the nonparetic hand on command. The option is Both incorrect (2 points)" id="togel10" name="cc3" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel10');">Both incorrect (2 points)</span></td></tr>
+<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">Best gaze (only horizontal eye movement) </span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Best gaze (only horizontal eye movement). The option is Normal (0 points)" id="togel11" name="cc4" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel11');">Normal (0 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Best gaze (only horizontal eye movement). The option is  Partial gaze palsy (1 point)" id="togel12" name="cc4" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel12');"> Partial gaze palsy (1 point)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Best gaze (only horizontal eye movement). The option is Forced deviation (2 points)" id="togel13" name="cc4" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel13');">Forced deviation (2 points)</span></td></tr>
+<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">Visual field testing </span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Visual field testing. The option is No visual loss (0 points)" id="togel14" name="cc5" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel14');">No visual loss (0 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Visual field testing. The option is Partial hemianopia (1 point)" id="togel15" name="cc5" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel15');">Partial hemianopia (1 point)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Visual field testing. The option is  Complete hemianopia (2 points)" id="togel16" name="cc5" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel16');"> Complete hemianopia (2 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Visual field testing. The option is Bilateral hemianopia (blind including cortical blindness) (3 points)" id="togel17" name="cc5" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel17');">Bilateral hemianopia (blind including cortical blindness) (3 points)</span></td></tr>
+<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">Facial paresis (ask patient to show teeth or raise eyebrows and close eye) </span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Facial paresis (ask patient to show teeth or raise eyebrows and close eye). The option is  Normal symmetrical movement (0 points)" id="togel18" name="cc6" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel18');"> Normal symmetrical movement (0 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Facial paresis (ask patient to show teeth or raise eyebrows and close eye). The option is Minor paralysis (flattened nasolabial fold, asymmetry on smiling) (1 point)" id="togel19" name="cc6" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel19');">Minor paralysis (flattened nasolabial fold, asymmetry on smiling) (1 point)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Facial paresis (ask patient to show teeth or raise eyebrows and close eye). The option is  Partial paralysis (total or near total paralysis of lower face) (2 points)" id="togel20" name="cc6" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel20');"> Partial paralysis (total or near total paralysis of lower face) (2 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Facial paresis (ask patient to show teeth or raise eyebrows and close eye). The option is  Complete paralysis of one or both sides (3 points)" id="togel21" name="cc6" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel21');"> Complete paralysis of one or both sides (3 points)</span></td></tr>
+<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">Motor function of right arm </span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Motor function of right arm. The option is No drift (0 points)" id="togel22" name="cc7" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel22');">No drift (0 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Motor function of right arm. The option is Drift (1 point)" id="togel23" name="cc7" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel23');">Drift (1 point)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Motor function of right arm. The option is Some effort against gravity (2 points)" id="togel24" name="cc7" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel24');">Some effort against gravity (2 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Motor function of right arm. The option is  No effort against gravity (3 points)" id="togel25" name="cc7" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel25');"> No effort against gravity (3 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Motor function of right arm. The option is No movement (4 points)" id="togel26" name="cc7" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel26');">No movement (4 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Motor function of right arm. The option is Untestable (amputation or joint fusion at the shoulder) (0 points)" id="togel27" name="cc7" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel27');">Untestable (amputation or joint fusion at the shoulder) (0 points)</span></td></tr>
+<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">Motor function of left arm </span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Motor function of left arm. The option is No drift (0 points)" id="togel28" name="cc8" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel28');">No drift (0 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Motor function of left arm. The option is Drift (1 point)" id="togel29" name="cc8" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel29');">Drift (1 point)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Motor function of left arm. The option is Some effort against gravity (2 points)" id="togel30" name="cc8" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel30');">Some effort against gravity (2 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Motor function of left arm. The option is  No effort against gravity (3 points)" id="togel31" name="cc8" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel31');"> No effort against gravity (3 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Motor function of left arm. The option is No movement (4 points)" id="togel32" name="cc8" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel32');">No movement (4 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Motor function of left arm. The option is Untestable (amputation or joint fusion at the shoulder) (0 points)" id="togel33" name="cc8" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel33');">Untestable (amputation or joint fusion at the shoulder) (0 points)</span></td></tr>
+<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">Motor function of right leg </span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Motor function of right leg. The option is No drift (0 points)" id="togel34" name="cc9" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel34');">No drift (0 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Motor function of right leg. The option is Drift (1 point)" id="togel35" name="cc9" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel35');">Drift (1 point)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Motor function of right leg. The option is Some effort against gravity (2 points)" id="togel36" name="cc9" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel36');">Some effort against gravity (2 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Motor function of right leg. The option is  No effort against gravity (3 points)" id="togel37" name="cc9" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel37');"> No effort against gravity (3 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Motor function of right leg. The option is No movement (4 points)" id="togel38" name="cc9" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel38');">No movement (4 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Motor function of right leg. The option is Untestable (amputation or joint fusion at the hip) (0 points)" id="togel39" name="cc9" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel39');">Untestable (amputation or joint fusion at the hip) (0 points)</span></td></tr>
+<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">Motor function of left leg </span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Motor function of left leg. The option is No drift (0 points)" id="togel40" name="cc10" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel40');">No drift (0 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Motor function of left leg. The option is Drift (1 point)" id="togel41" name="cc10" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel41');">Drift (1 point)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Motor function of left leg. The option is Some effort against gravity (2 points)" id="togel42" name="cc10" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel42');">Some effort against gravity (2 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Motor function of left leg. The option is  No effort against gravity (3 points)" id="togel43" name="cc10" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel43');"> No effort against gravity (3 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Motor function of left leg. The option is No movement (4 points)" id="togel44" name="cc10" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel44');">No movement (4 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Motor function of left leg. The option is Untestable (amputation or joint fusion at the hip) (0 points)" id="togel45" name="cc10" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel45');">Untestable (amputation or joint fusion at the hip) (0 points)</span></td></tr>
+<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">Limb ataxia </span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Limb ataxia. The option is Absent (0 points)" id="togel46" name="cc11" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel46');">Absent (0 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Limb ataxia. The option is Present in one limb (1 point)" id="togel47" name="cc11" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel47');">Present in one limb (1 point)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Limb ataxia. The option is Present in two limbs (2 points)" id="togel48" name="cc11" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel48');">Present in two limbs (2 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Limb ataxia. The option is Untestable (amputation or joint fusion) (0 points)" id="togel49" name="cc11" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel49');">Untestable (amputation or joint fusion) (0 points)</span></td></tr>
+<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">Sensory to pinprick or withdrawal from noxious stimulus </span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Sensory to pinprick or withdrawal from noxious stimulus. The option is Normal (0 points)" id="togel50" name="cc12" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel50');">Normal (0 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Sensory to pinprick or withdrawal from noxious stimulus. The option is Mild to moderate sensory loss (1 point)" id="togel51" name="cc12" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel51');">Mild to moderate sensory loss (1 point)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Sensory to pinprick or withdrawal from noxious stimulus. The option is Severe to total sensory loss (2 points)" id="togel52" name="cc12" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel52');">Severe to total sensory loss (2 points)</span></td></tr>
+<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">Language </span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Language. The option is No aphasia (0 points)" id="togel53" name="cc13" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel53');">No aphasia (0 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Language. The option is Mild to moderate aphasia (1 point)" id="togel54" name="cc13" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel54');">Mild to moderate aphasia (1 point)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Language. The option is Severe aphasia (2 points)" id="togel55" name="cc13" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel55');">Severe aphasia (2 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Language. The option is Mute, global aphasia (3 points)" id="togel56" name="cc13" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel56');">Mute, global aphasia (3 points)</span></td></tr>
+<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">Dysarthria </span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Dysarthria. The option is None (0 points)" id="togel57" name="cc14" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel57');">None (0 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Dysarthria. The option is Mild to moderate dysarthria (1 point)" id="togel58" name="cc14" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel58');">Mild to moderate dysarthria (1 point)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Dysarthria. The option is Severe dysarthria (2 points)" id="togel59" name="cc14" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel59');">Severe dysarthria (2 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Dysarthria. The option is Intubated or other physical barrier to producing speech (0 points)" id="togel60" name="cc14" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel60');">Intubated or other physical barrier to producing speech (0 points)</span></td></tr>
+<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">Extinction and inattention </span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Extinction and inattention. The option is No abnormality (0 points)" id="togel61" name="cc15" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel61');">No abnormality (0 points)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Extinction and inattention. The option is  Visual, tactile, auditory, spatial, or personal inattention or extinction to bilateral simultaneous stimulation in one of the sensory modalities (1 point)" id="togel62" name="cc15" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel62');"> Visual, tactile, auditory, spatial, or personal inattention or extinction to bilateral simultaneous stimulation in one of the sensory modalities (1 point)</span></td></tr>
+<tr><td width="20"><br/></td>
+<td align="right"><input aria-label="This button selects an option for: Extinction and inattention. The option is  Profound hemi-inattention or extinction to more than one modality (2 points)" id="togel63" name="cc15" onclick="NIHStrokeScore_fx();" type="radio"/></td>
+<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel63');"> Profound hemi-inattention or extinction to more than one modality (2 points)</span></td></tr>
+</tbody></table>
+<span class="medCalcFontOne" id="inputchk"><br/> <br/><b>Important:</b> Inputs must be complete to perform calculation. <br/></span>
+</center>
+</div>
+<br/> <br/>
+<div id="calc_result">
+<span class="medCalcFontCCTabBold">
+Total criteria point count:
+</span>
+<input aria-label="This box holds the total criteria point count" aria-readonly="true" name="cctotal" size="6" type="text"/><br/> <br/>
+<center><input name="reset" type="reset" value="Reset form"/> </center>
+</div>
+</div>
+<div id="calc_notes">
+<span class="medCalcFontOneBold">Notes</span>
+<ul class="medCalcFontOne">
+<li>This calculator is best used by a certified NIHSS examiner in conjunction with a copy of the full NIHSS, which provides a detailed description of how to test for each criterion and is available at the NIH <a href=" https://www.stroke.nih.gov/documents/NIH_Stroke_Scale_508C.pdf" style="text-decoration: none; color: green" target="_blank">website</a>.</li>
+</ul>
+</div>
+<br/> <br/>
+<div id="calc_refs">
+<span class="medCalcFontRef"><b>References</b></span>
+<ol>
+<li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/2749846" style="color: green; text-decoration: none;" target="_blank">Brott T, Adams HP Jr, Olinger CP, et al. Measurements of acute cerebral infarction: a clinical examination scale. Stroke 1989; 20:864.</a></span></li>
+</ol>
+</div>
+</form>
+</div>
+<span class="calculatorVendorId" id="T1678215879">
+</span></div><div id="printDisclaimer">
+<b>Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.</b>
+<p>
+	Information on this page may not appear correctly if printed. </p>
+</div>
+<div id="disclaimerCalculator">
+<div class="medCalcFontTwo">
+<p class="header">Legal Notices and Disclaimer</p>
+<p>
+			All information contained in and produced by the EBMcalc system is provided
+			for educational purposes only. This information should not be used for the diagnosis or treatment
+			of any health problem or disease. 
+			<b>THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.</b>
+<a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">Click here for full notice and disclaimer.</a>
+</p>
+<p class="copy">EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC</p>
+</div>
+</div><div id="topicVersionRevision">Topic 91350 Version 12.0</div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

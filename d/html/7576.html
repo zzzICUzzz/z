@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Tests for screening for colorectal cancer</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Tests for screening for colorectal cancer</h1>
+<div class="utdArticleSection utdStyle" id="topicContent"><div id="topicTitle">Tests for screening for colorectal cancer</div> <div class="authorSectionElem"><div class="authorsElementsLeft"><dl id="topicContributors"><dt><span> </span>Author:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Chyke Doubeni, MD, FRCS, MPH</a></dd><dt><span> </span>Section Editors:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Joann G Elmore, MD, MPH</a></dd><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">J Thomas Lamont, MD</a></dd><dt><span> </span>Deputy Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Jane Givens, MD, MSCE</a></dd></dl></div><div class="authorsElementsRight"><div id="literatureReviewDate"><div class="litReviewSingleLine"><bdi><span class="emphasis">Literature review current through:</span> Jan 2024.</bdi></div><div class="litReviewSingleLine"><bdi><span class="emphasis">This topic last updated:</span> Dec 07, 2023.</bdi></div></div></div></div><div id="topicWhatsNewContainer"></div><div id="topicText"><p class="headingAnchor" id="H1"><span class="h1">INTRODUCTION</span><span class="headingEndMark"> — </span>Colorectal cancer (CRC) is one of the most commonly occurring cancers and causes of cancer death [<a href="#rid1">1</a>]. Country-specific incidence and mortality rates are available from the World Health Organization <a class="external" href="/external-redirect?target_url=https%3A%2F%2Fgco.iarc.fr%2Ftoday%2Fdata%2Ffactsheets%2Fcancers%2F10_8_9-Colorectum-fact-sheet.pdf&amp;token=nyppQUPgLli%2FJuJZltXBYc%2B0rh%2BRQ5RteBM84QeWKEP1cbaVluZz1RvVxQjuHm8K2DhmYOXqBsZn5fKS8OJEj6g%2Fos0OTu51ugM0d1n%2FHJ0%3D&amp;TOPIC_ID=7576" target="_blank">GLOBOCAN database</a> [<a href="#rid2">2</a>]. Patients diagnosed at a localized stage have a much higher survival rate compared with those who have metastatic spread at the time of diagnosis.</p><p>Types of tests for CRC screening include stool-based testing to detect either hemoglobin in blood that may be coming from a lesion or DNA alterations suggestive of malignancy; direct visualization with endoscopy, either with a scope that allows for biopsy and lesion removal at the time of the test or with a tiny camera that visualizes lesions as it passes through the intestinal tract; and radiologic imaging to visualize lesions.</p><p>This topic will review characteristics of individual tests used for CRC screening. Strategies for CRC screening are discussed separately. (See  <a class="medical medical_review" href="/d/html/7565.html" rel="external">"Screening for colorectal cancer: Strategies in patients at average risk"</a> and  <a class="medical medical_review" href="/d/html/7572.html" rel="external">"Screening for colorectal cancer in patients with a family history of colorectal cancer or advanced polyp"</a>.)</p><p>Diagnostic testing for patients with symptoms or signs suggestive of CRC is described separately. (See  <a class="medical medical_review" href="/d/html/2496.html" rel="external">"Clinical presentation, diagnosis, and staging of colorectal cancer"</a>.)</p><p>Management of patients with colon polyps is described separately. (See  <a class="medical medical_review" href="/d/html/2594.html" rel="external">"Overview of colon polyps"</a>.)</p><p class="headingAnchor" id="H2644607067"><span class="h1">CLINICAL USE OF COLORECTAL CANCER SCREENING TESTS</span></p><p class="headingAnchor" id="H2290317101"><span class="h2">Selecting a screening test</span><span class="headingEndMark"> — </span>Multiple screening tests are available to detect colorectal cancer (CRC) and adenomatous polyps. Tests for CRC differ with regard to sensitivity and specificity  (<a class="graphic graphic_figure graphicRef116366" href="/d/graphic/116366.html" rel="external">figure 1</a>), evidence of effectiveness, convenience, safety, availability, and cost.</p><p>Strategies using the tests to screen patients at average risk and those at increased risk for CRC are discussed in detail separately. (See  <a class="medical medical_review" href="/d/html/7565.html" rel="external">"Screening for colorectal cancer: Strategies in patients at average risk", section on 'Choosing a screening test'</a> and  <a class="medical medical_review" href="/d/html/7572.html" rel="external">"Screening for colorectal cancer in patients with a family history of colorectal cancer or advanced polyp", section on 'Choosing a screening test'</a>.)</p><p class="headingAnchor" id="H1738288724"><span class="h2">Follow-up of abnormal test results</span><span class="headingEndMark"> — </span>A patient with any positive (ie, abnormal) screening test for CRC other than colonoscopy itself requires a timely colonoscopy to evaluate for adenomatous polyps (ie, adenomas) and CRC [<a href="#rid3">3</a>]. Specifics are described separately. (See  <a class="medical medical_review" href="/d/html/7565.html" rel="external">"Screening for colorectal cancer: Strategies in patients at average risk", section on 'Follow-up of abnormal results'</a>.)</p><p>Patients who have had adenomas identified may require periodic follow-up with colonoscopy to assess for new lesions because adenomas may lead to CRC over time. The frequency of testing depends on the type of polyps identified. This is discussed separately. (See  <a class="medical medical_review" href="/d/html/2594.html" rel="external">"Overview of colon polyps", section on 'Surveillance'</a>.)</p><p class="headingAnchor" id="H3583780373"><span class="h2">Follow-up of inadequate testing</span><span class="headingEndMark"> — </span>Patients with an incomplete or inadequate screening test for reasons described below should have the screening test repeated unless there was an abnormal finding that is being evaluated [<a href="#rid4">4-7</a>]. Whether a test was partially completed or not completed at all, the test should be repeated within three months. Some experts wait six months to repeat a colonoscopy if a poor preparation limited visibility of the colon mucosa.</p><p>Screening tests for CRC may be incomplete or inadequate for a number of reasons such as patient preparation (eg, inadequate laxative preparation for colonoscopy), anatomical factors (eg, contour of the colon that limits the passage of a scope), partial sampling (eg, completion of fewer than three cards during fecal occult blood testing [FOBT]), and equipment factors (eg, use of an outdated reagent to develop a stool test).</p><p class="headingAnchor" id="H3"><span class="h1">STOOL-BASED TESTS</span><span class="headingEndMark"> — </span>Several stool-based tests are available for colorectal cancer (CRC) screening. The effectiveness  (<a class="graphic graphic_figure graphicRef116366" href="/d/graphic/116366.html" rel="external">figure 1</a>) and frequency of screening vary among the tests.</p><p class="headingAnchor" id="H6"><span class="h2">Fecal immunochemical test (FIT) for blood</span><span class="headingEndMark"> — </span>FIT directly measures hemoglobin in the stool.</p><p class="headingAnchor" id="H279923960"><span class="h3">Test procedure</span><span class="headingEndMark"> — </span>FIT is performed on a small sample of stool that the patient provides in a special container. The frequency of testing varies in different locations, from annually in the United States to every two or three years in some countries.</p><p>FIT requires only one stool sample and does not require restrictions to medications or diet prior to providing the sample; foods with peroxidase activity do not produce a false-positive FIT. <a class="drug drug_general" data-topicid="8907" href="/d/drug information/8907.html" rel="external">Aspirin</a> and other nonsteroidal antiinflammatory drugs (NSAIDs) generally do not need to be temporarily discontinued to do a FIT test. In one observational study, FIT performance was better (higher sensitivity, only slightly lower specificity) among regular aspirin users compared with nonusers [<a href="#rid8">8</a>]. However, in another observational study, there was no difference among regular aspirin users and nonusers in the positive predictive value (PPV) of FIT for advanced adenoma or CRC [<a href="#rid9">9</a>]. A randomized trial found no difference in detection of advanced colorectal adenoma after a single dose of aspirin was given two days before FIT sample collection compared with no antecedent aspirin use [<a href="#rid10">10</a>].</p><p>We suggest using a FIT test that generates a quantitative result rather than only a qualitative result, if available. These two methods to determine the presence of blood in the stool differ chemically, but both report the result as either positive or negative for hemoglobin rather than providing a numerical value [<a href="#rid11">11</a>]. FIT that uses quantitative analysis is processed using standardized automated analyzers in certified laboratories and has the potential to produce more consistent results, with a higher PPV [<a href="#rid12">12,13</a>].</p><p>The patient may obtain the specimen collection kit at the clinician’s office, pharmacy, or by mail, depending on the protocol of the clinician’s office. The patient returns the FIT container (often by mail) to a laboratory for testing. Patients should be advised to return it within 24 hours of collection, because FIT sensitivity declines with delayed return after sampling. In one study, delayed return of the FIT more than five days after sampling, compared with no delay, was associated with a decreased rate of adenoma detection (odds ratio [OR] 0.6) [<a href="#rid14">14</a>].</p><p>Exposure to high ambient temperatures that accelerate hemoglobin degradation may decrease the sensitivity of FIT, although the impact of temperature on sample positivity rates is relatively small and the US Multisociety Task Force recommends that FIT mailing does not need to be adjusted based on ambient temperature [<a href="#rid15">15,16</a>]. Although the ideal ambient temperature range for FIT sample preservation is not known, specimens may be refrigerated prior to return to the laboratory.</p><p class="headingAnchor" id="H2959829137"><span class="h3">Advantages and disadvantages</span><span class="headingEndMark"> — </span>FIT is convenient for a patient to do. Dietary and medication restrictions are not needed. It does not require a bowel preparation, sedation, or time away from work or family (although if the FIT is positive, a colonoscopy will be advised for further evaluation). FIT requires only one sample rather than three days of samples as for guaiac-based fecal occult blood testing (gFOBT). (See <a class="local">'Follow-up of abnormal test results'</a> above.)</p><p>Because FIT is more convenient, it may have higher adherence. In a randomized trial of patients invited to participate in screening using one of three tests, participation rate was highest for FIT screening compared with FOBT or sigmoidoscopy (61 versus 49 versus 32 percent) [<a href="#rid17">17</a>].</p><p>FIT is more sensitive than gFOBT for colon lesions [<a href="#rid5">5,18</a>]. In addition, a positive FIT has high specificity for lower gastrointestinal bleeding. However, FIT can be positive due to an upper gastrointestinal bleed that is large enough for hemoglobin to escape degradation during transit.</p><p class="headingAnchor" id="H1064529907"><span class="h3">Evidence of effectiveness</span></p><p class="bulletIndent1"><span class="glyph">●</span><strong>CRC-related mortality </strong>– Studies suggest that FIT reduces the chance of dying from CRC  (<a class="graphic graphic_figure graphicRef116366" href="/d/graphic/116366.html" rel="external">figure 1</a>). The evidence of effectiveness of FIT is based on observational studies, indirect comparison with studies of other screening strategies that have undergone controlled trials, and modelling studies [<a href="#rid19">19</a>]. There are no randomized trials of FIT for screening among patients at average risk for CRC.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>CRC and advanced adenoma detection</strong> – In a meta-analysis of 19 studies evaluating FIT for detecting CRC in asymptomatic adults, with a reference standard of either colonoscopy or at least two years of follow-up, pooled sensitivity for one-time evaluation was 0.79 (95% CI 0.69-0.86) and specificity was 0.94 (95% CI 0.92-0.95) [<a href="#rid20">20</a>]. Similarly, in a review of two meta-analyses of average-risk populations, one-time FIT sensitivity was approximately 80 percent for detecting CRC [<a href="#rid15">15</a>]. The sensitivity and specificity of FIT for detection of advanced adenoma are lower than that for CRC and have been estimated as 25 to 56 percent for sensitivity and 68 to 96 percent for specificity [<a href="#rid15">15</a>].</p><p></p><p class="bulletIndent1">Successive testing improves sensitivity, although specificity and PPV are likely to decline. The trends for PPV are dissimilar for CRC versus adenoma detection. In one study, during four rounds of testing every two years with FIT, CRC detection rates fell with successive screening, likely representing the gradual culling of neoplasms in earlier rounds [<a href="#rid15">15,21</a>]. However, the detection rate and PPV of FIT for advanced adenoma were more stable during the four screening rounds.</p><p></p><p class="bulletIndent1">When compared with gFOBT, screening using FIT has higher detection rates for CRC and advanced adenomas due to higher sensitivity and higher screening participation rates with FIT [<a href="#rid15">15,22-24</a>]. Based on one meta-analysis, FIT was superior to gFOBT for detection of both CRC (RR 1.96, 95% CI 1.2–3.2) and advanced neoplasia (RR 2.28, 95% CI 1.68–3.10) with no loss of specificity [<a href="#rid25">25</a>].</p><p></p><p class="bulletIndent1">FIT appears to be less sensitive for detection of right-sided than of left-sided lesions [<a href="#rid26">26</a>]. In one study, mean stool hemoglobin concentration was lower for patients with right-sided CRC compared with left-sided CRC and also lower than the positivity threshold used for quantitative FIT in the United States [<a href="#rid27">27</a>]. In another study in Italy, people ages 50 to 69 years performed FIT every two years over a 12-year period [<a href="#rid28">28,29</a>]. Over the multiple rounds of FIT screening, the proportion of clinically important cancer cases that were missed or developed de novo before the next screening was due was relatively unchanged in the right colon while it declined in the left colon. This finding is consistent with a lower sensitivity of FIT for right-sided lesions, although the result could also occur from rightward shift of colon cancer with aging of the cohort over 12 years.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Effect of frequency of testing</strong> – FIT is usually done annually in the United States and typically less frequently in other countries. In a randomized trial in the Netherlands, screening by FIT (one sample) every three years, compared with screening yearly or every two years, resulted in the same positivity rate and a slightly higher participation rate in the second round of screening [<a href="#rid30">30</a>].</p><p></p><p class="headingAnchor" id="H2724406056"><span class="h2">Guaiac-based fecal occult blood test (gFOBT)</span><span class="headingEndMark"> — </span>Guaiac testing identifies hemoglobin by turning guaiac reagent-impregnated paper blue as the result of a peroxidase reaction.</p><p>Guaiac testing of stool samples can identify hemoglobin that may be present due to bleeding from a colon lesion or for other reasons.</p><p class="headingAnchor" id="H1233741682"><span class="h3">Test procedure</span><span class="headingEndMark"> — </span>gFOBT is usually performed annually.</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Selecting a sensitive gFOBT test</strong> – Guidelines generally recommend that gFOBT screening should only be performed using a highly sensitive guaiac reagent, such as Hemoccult SENSA, which has higher sensitivity than Hemoccult, Hemoccult-II, or Hemoccult-R, although it has lower specificity [<a href="#rid31">31,32</a>]. In a head-to-head comparison, sensitivity for CRC was reported for Hemoccult SENSA as 64 to 80 percent compared with nonrehydrated Hemoccult II at 25 to 38 percent; specificity was 87 to 90 percent for Hemoccult SENSA and 98 to 99 percent for Hemoccult II [<a href="#rid33">33-35</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Diet and medication use before and during testing</strong> – A restrictive diet during gFOBT testing may not be necessary, although eliminating red meat for three days is recommended by the manufacturer [<a href="#rid36">36</a>]. A systematic review found that advice to follow a restrictive diet did not reduce the gFOBT positivity rate, and restrictive diets decreased participation in screening [<a href="#rid36">36</a>].</p><p></p><p class="bulletIndent1">However, <a class="drug drug_general" data-topicid="9776" href="/d/drug information/9776.html" rel="external">vitamin C</a> intake should be restricted to &lt;250 mg per day (which is less than the typical dose in a multivitamin) for at least three days prior to sampling [<a href="#rid37">37-40</a>]. Large doses of vitamin C may cause false-negative test results [<a href="#rid40">40</a>].</p><p></p><p class="bulletIndent1">We do not ask patients to hold NSAIDs (including <a class="drug drug_general" data-topicid="8907" href="/d/drug information/8907.html" rel="external">aspirin</a>) or other antiplatelet therapy when collecting stool for gFOBT. While aspirin increases the risk for both upper and lower gastrointestinal bleeding and could decrease the PPV of gFOBT for significant colon disease, advice to hold these medications could deter patients from doing the screening test [<a href="#rid41">41</a>]. By contrast, the manufacturer recommends that patients avoid NSAIDs (other than one aspirin per day) for seven days prior to the test. (See  <a class="medical medical_review" href="/d/html/2544.html" rel="external">"Evaluation of occult gastrointestinal bleeding", section on 'Testing for occult blood'</a>.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Obtaining stool samples</strong> – gFOBT test cards are obtained from the clinician’s office in person or by mail. The test cards have an expiration date on the packaging, which should be reviewed. The patient uses one test card for each of three consecutive bowel movements obtained at home, applying two samples from a bowel movement on the card where indicated [<a href="#rid42">42</a>]. The cards are then brought or mailed together to a laboratory for testing. Cards sent in the mail have the potential to degrade if exposed to excessive ambient temperature.</p><p></p><p class="bulletIndent1">Stool for gFOBT should NOT be obtained during digital rectal examination (DRE). DRE may induce microtrauma and cause a false-positive result. Nonetheless, if an office gFOBT is obtained during DRE in an asymptomatic patient and found to be positive for blood, further workup with colonoscopy is indicated. (See <a class="local">'Follow-up of abnormal test results'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Sample processing</strong> – In the laboratory, gFOBT samples should not be rehydrated prior to processing [<a href="#rid43">43</a>]. Hydration increases test sensitivity but leads to an increased number of false-positive results. The test cards include a control section that the laboratory uses to verify that the control responds appropriately (positively) when the cards are developed by the laboratory. The reagent used for developing the test has an expiration date that should be checked prior to use.</p><p></p><p class="headingAnchor" id="H2029985733"><span class="h3">Advantages and disadvantages</span><span class="headingEndMark"> — </span>Advantages of gFOBT screening include that it is noninvasive and does not require bowel preparation or sedation. Additionally, a visit with a clinician is not needed to obtain the stool sample, perform the test, and interpret the result, which simplifies testing in resource-limited settings. However, the test is to be done annually, and sample collection takes a longer time than for FIT because three consecutive samples are required. If the gFOBT is positive, a colonoscopy is needed for further evaluation. Positive results may also occur with upper gastrointestinal bleeding. (See <a class="local">'Follow-up of abnormal test results'</a> above.)</p><p class="headingAnchor" id="H304443504"><span class="h3">Evidence of effectiveness</span><span class="headingEndMark"> — </span>The effectiveness of gFOBT for advanced adenoma and CRC is summarized in a figure  (<a class="graphic graphic_figure graphicRef116366" href="/d/graphic/116366.html" rel="external">figure 1</a>).</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Mortality reduction</strong> –<strong> </strong>Multiple randomized trials have found that screening with gFOBT reduces CRC mortality [<a href="#rid22">22,44</a>]. The trials assessed outcomes over the long term and used the less sensitive gFOBT tests available at the time the trials were conducted. All-cause mortality does not appear to be affected [<a href="#rid45">45-47</a>]. </p><p></p><p class="bulletIndent1">In one trial with 46,551 participants followed for 30 years, screening with gFOBT reduced CRC mortality; relative risk was 0.68 (95% CI 0.56-0.82) for annual screening and 0.78 (89% CI 0.65-0.93) for screening every two years [<a href="#rid48">48</a>]. The cumulative risk of CRC mortality was 0.02 percent for those screened annually and 0.03 for those not screened. Other studies have reported similar results [<a href="#rid22">22</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>CRC and advanced adenoma detection</strong> – In randomized trials and observational studies using different FOBTs, the sensitivity of gFOBT for detection of CRC ranged from 31 to 79 percent, and specificity ranged from 87 to 98 percent [<a href="#rid15">15,49</a>]. An older study suggested that sensitivity of a program of testing repeated yearly for five or six years may be around 90 percent [<a href="#rid50">50</a>].</p><p></p><p class="bulletIndent1">The sensitivity of gFOBT for advanced adenomas is substantially less than for CRC, although specificity is comparable  (<a class="graphic graphic_figure graphicRef116366" href="/d/graphic/116366.html" rel="external">figure 1</a>). Adenomatous polyps usually do not bleed so would escape detection by a test for hemoglobin in stool. In studies using different FOBTs for detection of significant or advanced adenoma or advanced neoplasia, sensitivities ranged from 7 to 20 percent with specificities of 92 to 99 percent [<a href="#rid15">15</a>].</p><p></p><p class="bulletIndent1">The detection rate with gFOBT for right-sided colon lesions is lower than for left-sided lesions [<a href="#rid27">27,29</a>]. This may be because right-side lesions may bleed less than left sided lesions [<a href="#rid27">27</a>], or it may be that hemoglobin degrades during transit through the colon.</p><p></p><p class="bulletIndent1">Compared with FIT, gFOBT may be less effective for detection of CRC and advanced adenoma. (See <a class="local">'Evidence of effectiveness'</a> above.)</p><p></p><p class="headingAnchor" id="H240481080"><span class="h2">Multitarget stool DNA tests with fecal immunochemical testing</span><span class="headingEndMark"> — </span>Multitarget stool DNA testing (sDNA-FIT, also known as MT-sDNA or FIT-DNA, called Cologuard in the United States), is a composite of tests that include molecular assays to test for DNA (KRAS) mutations, a gene amplification technique to test for methylation biomarkers associated with colorectal neoplasia, and an immunochemical assay (FIT) to test for hemoglobin from blood that may be shed into the stool by colorectal lesions. DNA shed into the stool by colorectal neoplasms may reveal genetic mutations and epigenetic changes occurring during carcinogenesis [<a href="#rid34">34,51-55</a>].</p><p class="headingAnchor" id="H699754165"><span class="h3">Test procedure</span><span class="headingEndMark"> — </span>The patient collects a full stool sample in a special collection kit. Testing every three years is recommended by some guidelines, although the optimal interval between screening fecal DNA tests is unknown. The US Preventive Services Task Force (USPSTF) endorses a strategy of MT-sDNA every one to three years [<a href="#rid56">56</a>].</p><p>The stool collection kit is available by prescription and is sent to the patient through the mail. No dietary or medication restrictions are necessary. Specific instructions, a large collection bucket for the stool, a liquid preservative, and a tube in which the patient places a small amount of stool are provided with the collection kit. The patient mails the collection kit containing the stool to the company for testing, so that it arrives within 72 hours after the stool was collected.</p><p class="headingAnchor" id="H410355332"><span class="h3">Advantages and disadvantages</span><span class="headingEndMark"> — </span>Testing is done at home, without the need for dietary or medication restrictions, laxative preparation, sedation, or time away from home or work. The frequency of testing (every three years) is potentially more convenient than annual testing with other stool-based screening methodologies. If the MT-sDNA is positive, a colonoscopy will be advised for further evaluation. (See <a class="local">'Follow-up of abnormal test results'</a> above.)</p><p>Patients may be deterred by the need to collect a full stool sample.</p><p>The implications of positive MT-sDNA testing in patients who are not found to have lesions on subsequent colonoscopy are uncertain but likely represent false positives. This is discussed separately. (See  <a class="medical medical_review" href="/d/html/7565.html" rel="external">"Screening for colorectal cancer: Strategies in patients at average risk", section on 'Follow-up of abnormal results'</a>.)</p><p class="headingAnchor" id="H2263404470"><span class="h3">Evidence of effectiveness</span><span class="headingEndMark"> — </span>The evidence of effectiveness of MT-sDNA is based on comparison with studies of other screening strategies and modelling studies  (<a class="graphic graphic_figure graphicRef116366" href="/d/graphic/116366.html" rel="external">figure 1</a>). There are no randomized trials of MT-sDNA for screening for CRC.</p><p>In a comparison of MT-sDNA with one round of FIT in 9989 people who also underwent colonoscopy, the sensitivity for CRC detection with MT-sDNA was 92 percent compared with FIT at 74 percent [<a href="#rid57">57</a>]. Sensitivity of MT-sDNA was not affected by CRC stage or location of the colon lesion. Specificity was lower for MT-sDNA than for FIT (87 versus 95 percent). However, since screening tests are performed at regular intervals, and the FIT testing interval is generally shorter than the interval for MT-sDNA testing (eg, yearly compared with every three years), results of only one round of screening may not represent the comparative effectiveness between the tests over a period of time.</p><p class="headingAnchor" id="H268906025"><span class="h2">Other</span><span class="headingEndMark"> — </span>Other stool-based tests may be available in the future. In a phase 3 clinical trial among individuals 45 years and older, a multitarget stool RNA (mt-sRNA) test has been found to have 94 percent sensitivity for detecting colorectal cancer, 46 percent sensitivity for detecting advanced adenomas, and 88 percent specificity for no lesions on colonoscopy [<a href="#rid58">58</a>].</p><p class="headingAnchor" id="H3066359966"><span class="h1">ENDOSCOPIC VISUALIZATION</span><span class="headingEndMark"> — </span>Endoscopic tests can directly visualize adenomatous polyps and colorectal cancer (CRC) within the field of vision of the endoscope. This provides the potential to remove polyps that may be adenomas that might progress to invasive CRC and to identify early-stage, more treatable CRC. The effectiveness of each method  (<a class="graphic graphic_figure graphicRef116366" href="/d/graphic/116366.html" rel="external">figure 1</a>) and frequency of screening vary among the tests.</p><p class="headingAnchor" id="H3512311102"><span class="h2">Colonoscopy</span><span class="headingEndMark"> — </span>In this topic, “colonoscopy” refers to optical colonoscopy, which has become the most commonly used CRC screening test in the United States, though in other countries it is used less commonly as a primary screening test. Colonoscopy is different from computed tomography colonography (CTC) that is described separately. (See <a class="local">'Computed tomography colonography'</a> below.)</p><p class="headingAnchor" id="H2801860388"><span class="h3">Test procedure</span><span class="headingEndMark"> — </span>Colonoscopy is performed by a trained clinician using a flexible fiberoptic endoscope to directly visualize the inside of the rectum, colon, and a portion of the terminal ileum. Colonoscopy as a screening test is usually performed every 10 years for a patient at average risk of CRC and more frequently for a patient at higher risk. (See  <a class="medical medical_review" href="/d/html/7572.html" rel="external">"Screening for colorectal cancer in patients with a family history of colorectal cancer or advanced polyp", section on 'How often to screen'</a>.)</p><p>If lesions are detected, they may be biopsied and/or removed. (See  <a class="medical medical_review" href="/d/html/13927.html" rel="external">"Overview of colonoscopy in adults", section on 'Diagnostic and therapeutic maneuvers'</a>.)</p><p>Prior to colonoscopy, dietary adjustment, adjustment of certain medications, and a rigorous bowel preparation are necessary (see  <a class="medical medical_review" href="/d/html/13927.html" rel="external">"Overview of colonoscopy in adults", section on 'Patient preparation'</a>). Specifics on how to determine whether <a class="drug drug_general" data-topicid="8907" href="/d/drug information/8907.html" rel="external">aspirin</a>, other nonsteroidal antiinflammatory drugs (NSAIDs), or anticoagulants need to be temporarily held for a colonoscopy are described separately. (See  <a class="medical medical_review" href="/d/html/2609.html" rel="external">"Management of anticoagulants in patients undergoing endoscopic procedures", section on 'Elective procedures'</a>.)</p><p>Sedation is generally used during colonoscopy in the United States, although in other countries sedation is frequently not used. When sedation is used, the patient must be accompanied when discharged and needs to avoid activities that require mental alertness for a specified period of time and until the sedative effect clears. (See  <a class="medical medical_review" href="/d/html/2567.html" rel="external">"Gastrointestinal endoscopy in adults: Procedural sedation administered by endoscopists"</a>.)</p><p>Special techniques are occasionally used in certain centers to improve visualization during colonoscopy. These are described separately. (See  <a class="medical medical_review" href="/d/html/2670.html" rel="external">"Chromoendoscopy"</a> and  <a class="medical medical_review" href="/d/html/2646.html" rel="external">"Magnification endoscopy"</a>.)</p><p class="headingAnchor" id="H1136611597"><span class="h3">Advantages and disadvantages</span><span class="headingEndMark"> — </span>Colonoscopy is the definitive test for detection of precancerous adenomas and CRC with high sensitivity and acceptable specificity  (<a class="graphic graphic_figure graphicRef116366" href="/d/graphic/116366.html" rel="external">figure 1</a>). Colonoscopy allows for detection and biopsy of polyps and CRC and removal of precancerous polyps, all during one test.</p><p>Disadvantages of colonoscopy as a screening test include the inconvenience of bowel preparation. (See  <a class="medical medical_review" href="/d/html/2665.html" rel="external">"Bowel preparation before colonoscopy in adults"</a>.)</p><p>Also, when conscious sedation is used, a recovery period is needed, and there is a potential for sedation-related complications. (See  <a class="medical medical_review" href="/d/html/2599.html" rel="external">"Adverse events related to procedural sedation for gastrointestinal endoscopy in adults"</a>.)</p><p>Colonoscopy procedural risks include the possibility of perforation, major bleeding, and infection. The risk of perforation is increased by comorbidities, increasing age, polypectomy, and less-experienced endoscopists [<a href="#rid59">59,60</a>]. Among frail patients, there is a potential for dehydration or electrolyte disturbances resulting from the bowel preparation. The risks from colonoscopy are described separately. (See  <a class="medical medical_review" href="/d/html/13927.html" rel="external">"Overview of colonoscopy in adults", section on 'Adverse events'</a>.)</p><p>Availability of colonoscopy may be limited by the need for specialized equipment and trained endoscopists and by the cost.</p><p class="headingAnchor" id="H2649236115"><span class="h3">Evidence of effectiveness</span></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Reduced CRC mortality</strong> – Studies suggest that screening colonoscopy reduces deaths due to CRC  (<a class="graphic graphic_figure graphicRef116366" href="/d/graphic/116366.html" rel="external">figure 1</a>). The evidence of effectiveness of colonoscopy is based on evidence from a single pragmatic clinical trial, observational studies, and indirect comparison with studies of other screening strategies that have undergone controlled trials [<a href="#rid61">61-64</a>]. Other clinical trials of the effectiveness of screening colonoscopy in average-risk patients are ongoing [<a href="#rid65">65-67</a>].</p><p></p><p class="bulletIndent1">In a meta-analysis of six observational studies, screening with colonoscopy was associated with a 40 to 60 percent lower incidence and risk of death from CRC compared with screening with sigmoidoscopy [<a href="#rid61">61</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Effectiveness for CRC incidence and lesion detection</strong></p><p></p><p class="bulletIndent2"><span class="glyph">•</span>The adenoma yield of population-based colonoscopy screening was studied in a randomized trial of 94,959 people aged 55 to 64 years at average risk for CRC who had colonoscopy screening or no screening [<a href="#rid68">68</a>]. Among those randomized to the colonoscopy group, 40 percent had screening colonoscopy. Of those screened, one-half percent were diagnosed with CRC, 31 percent had adenomas, and 10 percent had high-risk adenomas.</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>In a pragmatic, randomized trial among 84,585 adults 55 to 64 years of age in Poland, Norway, and Sweden, there were fewer cases of CRC among those invited to undergo a single screening colonoscopy than in the usual-care group (259 versus 622) over a median follow-up period of 10 years (risk ratio 0.82, 95% CI 0.70-0.93) [<a href="#rid69">69</a>]. The overall screening participation rate was 42 percent of those invited. In an analysis comparing everyone invited to screening (including those who did not undergo screening) with usual care, a mortality benefit of invitation to colonoscopy screening was not observed. However, in an adjusted analyses that mimicked a scenario in which 100 percent of participants assigned to screening had undergone colonoscopy, the estimated risk of CRC death at 10 years was 0.50 (95% CI 0.27-0.77), which is similar in magnitude of protection from death from prior observational studies.</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>For adenomatous polyps 6 mm or larger, a systematic review reported the sensitivity of colonoscopy for detection varied from 75 percent to 93 percent [<a href="#rid22">22</a>]. An earlier systematic review of studies of tandem colonoscopies among 465 patients found an overall miss rate for polyps of any size to be 22 percent, with a miss rate of 2 percent for adenomas ≥10 mm, 13 percent for adenomas 5 to 10 mm, and 25 percent for adenomas &lt;5 mm [<a href="#rid70">70</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Limitations</strong> – While colonoscopy is often considered the gold standard test, it does not detect all advanced adenomas and CRC.</p><p></p><p class="bulletIndent1">Some [<a href="#rid71">71-75</a>], but not all [<a href="#rid68">68,74</a>], studies find that colonoscopy is less effective in detecting and therefore also preventing death from right-sided compared with left-sided lesions. The potentially lower effectiveness of colonoscopy for right-sided CRC may reflect flaws in the design of some observational studies, incomplete colonoscopic examination of the right colon, or biologic differences in right-sided tumors, such as more flat or rapidly growing neoplasms [<a href="#rid76">76,77</a>].</p><p></p><p class="bulletIndent1">Some adenomas and cancers may be difficult to detect because of the contour or location of the lesion. Flat or depressed lesions, even if small, are at least as likely to represent advanced adenoma or CRC as raised or polypoid lesions and can be difficult to detect by colonoscopy. In a population-based study of over 5000 CRC patients, 2.9 percent were diagnosed with CRC an average of 26 months after an index colonoscopy, and over half of those were attributed to lesions missed during the colonoscopy [<a href="#rid76">76,78</a>]. Compared with other CRC patients, CRC diagnosed in the period after a colonoscopy was likely to be more proximal, smaller, and more often flat. In another study of patients who received both colonoscopy and CTC, 14 of 15 non-rectal neoplasms missed by colonoscopy were located on a mucosal fold and five of six missed rectal lesions were located within 10 cm of the anal verge [<a href="#rid79">79</a>]. The authors estimated that when state-of-the-art, three-dimensional CTC was used as a reference standard, the miss rate of colonoscopy for large adenomas (≥10 mm) was 12 percent.</p><p></p><p class="bulletIndent1">Identifying quality indicators that may be used to help improve performance of colonoscopy is an area of ongoing study; as an example, longer withdrawal time has been associated with higher rates of lesion detection. Some guidelines propose that an individual endoscopist's adenoma detection rate meet or exceed a specified frequency for a standard cohort of screened patients. These and other quality indicators are discussed in detail separately. (See  <a class="medical medical_review" href="/d/html/13927.html" rel="external">"Overview of colonoscopy in adults", section on 'Quality indicators'</a>.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Frequency of screening</strong> – Although there is limited evidence to determine the optimal frequency for screening colonoscopy for patients at average risk for CRC, available studies suggest that a 10-year interval is an acceptable strategy if the screening examination is negative and of adequate quality.</p><p></p><p class="bulletIndent1">According to several studies, a negative colonoscopy predicts a reduced risk of CRC for over 10 years after the negative examination [<a href="#rid80">80-82</a>]. In a large cohort study in Canada, the incidence of CRC following a negative colonoscopy remained reduced beyond 10 years (72 percent lower than expected based on population incidence) [<a href="#rid80">80</a>]. However, other studies suggest that the duration of decreased risk for right-sided CRC may be shorter (ie, seven years) [<a href="#rid82">82,83</a>]. Similar findings have been reported regarding the risk of right-sided adenomas [<a href="#rid84">84</a>].</p><p></p><p class="bulletIndent1">Follow-up intervals for patients undergoing surveillance because of a previously detected adenoma or CRC are discussed separately. (See  <a class="medical medical_review" href="/d/html/2594.html" rel="external">"Overview of colon polyps", section on 'Adenomatous polyps'</a> and  <a class="medical medical_review" href="/d/html/2493.html" rel="external">"Post-treatment surveillance after colorectal cancer treatment", section on 'Postoperative endoscopic surveillance'</a>.)</p><p></p><p class="headingAnchor" id="H11"><span class="h2">Sigmoidoscopy</span></p><p class="headingAnchor" id="H149110755"><span class="h3">Test procedure</span><span class="headingEndMark"> — </span>Sigmoidoscopy as a screening test is usually performed every five years. The 60 cm flexible fiberoptic sigmoidoscope reaches from the rectum up to the splenic flexure, allowing visualization of lesions, biopsy, and removal of polyps in the left-side of the colon only.</p><p>The sigmoidoscopy procedure can be done in an office setting without sedation. Sigmoidoscopy is performed by properly trained gastroenterologists, surgeons, primary care clinicians, and advanced practitioners [<a href="#rid85">85</a>]. Specifics on how to determine whether <a class="drug drug_general" data-topicid="8907" href="/d/drug information/8907.html" rel="external">aspirin</a>, other NSAIDs, or anticoagulants need to be temporarily held for a sigmoidoscopy are described separately. (See  <a class="medical medical_review" href="/d/html/2609.html" rel="external">"Management of anticoagulants in patients undergoing endoscopic procedures", section on 'Elective procedures'</a>.)</p><p>Bowel preparation is required. (See  <a class="medical medical_review" href="/d/html/2665.html" rel="external">"Bowel preparation before colonoscopy in adults", section on 'Flexible sigmoidoscopy preparation'</a>.)</p><p>If the sigmoidoscopy is positive, a colonoscopy will be advised for further evaluation. (See <a class="local">'Follow-up of abnormal test results'</a> above.)</p><p class="headingAnchor" id="H1387076043"><span class="h3">Advantages and disadvantages</span><span class="headingEndMark"> — </span>Sigmoidoscopy examines only the distal portion of the colon. However, 41 to 45 percent of CRCs are in the right side of the colon and may be missed on a sigmoidoscopy [<a href="#rid86">86</a>]. Adenoma distribution varies by age and sex and may also vary by social factors such as race. There is also a shift toward a greater prevalence of right-sided lesions with age. Females have a higher percentage of right-sided colon lesions than males. According to 2016 cases in the Surveillance, Epidemiology, and End Results (SEER) registry, 36.3 to 40.2 percent of CRC in males was in the right colon compared with 46.2 to 50.6 percent in females [<a href="#rid86">86</a>]</p><p>Colon perforation is the most important complication of sigmoidoscopy. In a Medicare population, perforation rates were 0.88 per 1000 sigmoidoscopies, about half that of colonoscopy (1.96 per 1000 colonoscopies, odds ratio [OR] 0.56) [<a href="#rid87">87</a>]. Comorbidities and older age increased the risk of perforation on sigmoidoscopy. Perforation increased the risk of death (OR 8.8, 95% CI 1.6-48.5) compared with no perforation.</p><p>Small polyps can be biopsied/removed during sigmoidoscopy. However, excision of larger lesions (&gt;1.0 cm) is usually done during a subsequent colonoscopy.</p><p>Bowel preparation is less intensive than for colonoscopy or CTC, and sedation is not needed.</p><p>Technical difficulties that prevent sigmoidoscopy from reaching an adequate depth (at least 40 cm) may be more common in women and older adults. A study in 15,406 people aged ≥50 years who underwent screening sigmoidoscopy found that an examination to less than 50 cm occurred in 10 percent of men and in 19 percent of women aged 50 to 59 years and in 22 percent of men and 32 percent of women aged ≥80 years [<a href="#rid88">88</a>].</p><p class="headingAnchor" id="H12"><span class="h3">Evidence of effectiveness</span><span class="headingEndMark"> — </span>Studies have shown screening sigmoidoscopy is associated with decreases in CRC incidence and mortality due to CRC  (<a class="graphic graphic_figure graphicRef116366" href="/d/graphic/116366.html" rel="external">figure 1</a>).</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Mortality reduction</strong> – In a meta-analysis of five randomized trials (four of which had at least 10 years of follow-up) comparing screening sigmoidoscopy with no screening or with usual care, sigmoidoscopy was associated with 28 percent reduction in the risk of dying from CRC (mortality risk 8 per 1000 in the control groups, 6 (95% CI 5-6) per 1000 with sigmoidoscopy; relative risk [RR] 0.72, 95% CI 0.65-0.79) in an intention-to-screen analysis [<a href="#rid44">44</a>]. In a screened-per-protocol analysis of these trials, sigmoidoscopy was associated with a 50 percent reduction in the risk of dying from CRC [<a href="#rid89">89</a>].</p><p></p><p class="bulletIndent1">The mortality benefit is durable after a single screening sigmoidoscopy. In a randomized trial of sigmoidoscopy performed in the United Kingdom, sigmoidoscopy was associated with a lower 17-year mortality rate both in intention-to-treat analysis (hazard ratio [HR] 0.70, 95% CI 0.62-0.79) and in screened-per-protocol analysis (0.59, 95% CI 0.49-0.70) [<a href="#rid90">90,91</a>].</p><p></p><p class="bulletIndent1">In a long-term follow-up of a SCORE trial comparing a single sigmoidoscopy with usual care among over 34,000 persons in Italy, after a median follow-up of 18.8 years, CRC mortality was reduced by 22 percent in the treatment group in intention-to-treat analysis (rate ratio 0.78, 95% CI 0.61-0.98) and by 39 percent in the per protocol analysis (rate ratio 0.61, 95% CI 0.44-0.84) [<a href="#rid92">92</a>].</p><p></p><p class="bulletIndent1">In a pooled analysis of four large-scale randomized trials of sigmoidoscopy screening conducted among 274,952 adults aged 55 to 64 years, there was a 21 percent reduction in CRC incidence in the screening group compared with the usual care group (RR 0.79, 95% CI 0.75-0.83) and a 2 percent reduction in all-cause mortality in the screened group (RR 0.98, 95% CI 0.95-1.00) after 15 years [<a href="#rid93">93</a>]. Reductions in incidence and mortality were confined to the distal colon and greater among men than women.</p><p></p><p class="bulletIndent1">As expected, the mortality reduction for CRC associated with sigmoidoscopy appears to be limited to distal CRC-related mortality [<a href="#rid94">94,95</a>]. Case-control studies have found that sigmoidoscopy reduces CRC mortality by about two-thirds in the part of the bowel examined and about one-third overall [<a href="#rid96">96-98</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Reduction in CRC incidence</strong> – In a meta-analysis of five randomized trials comparing screening sigmoidoscopy either with no screening or with usual care among patients followed for up to 13 years, sigmoidoscopy was associated with an 18 percent reduction in total CRC incidence (RR 0.82, 95% CI 0.73-0.91) in the intention-to-screen analysis [<a href="#rid89">89</a>]. Per protocol analyses have found that sigmoidoscopy is associated with an even greater percent reduction of CRC incidence (33 to 42 percent) [<a href="#rid61">61,89</a>]. A randomized trial of one-time sigmoidoscopy screening found a similar reduction in CRC incidence, 23 to 26 percent, at 11- and 17-year follow-up [<a href="#rid90">90,91</a>]. In the long-term follow-up of the SCORE trial of a one-time sigmoidoscopy, CRC incidence was reduced by 19 percent (rate ratio 0.81 95% CI 0.71-0.93) in the intention-to-treat (ITT) analysis and by 33 percent (rate ratio 0.67 05% CI 0.56-0.81) in the per protocol (PP) analysis at 15-year follow-up [<a href="#rid92">92</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Effect of screening frequency</strong> – Repeating sigmoidoscopy at five-year intervals appears to provide additional effectiveness over one-time screening. In one randomized trial, participants who had a negative first screening sigmoidoscopy were offered a second sigmoidoscopy at either three or five years [<a href="#rid99">99</a>]. CRC or advanced adenoma was found in 38 per 1000 persons at the first screen and in 50 per 1,000 in the first and second rounds of screening combined, which represented a 32 percent higher cumulative yield. Overall, a second screening examination identified one additional cancer and 17 advanced adenomas for every 1000 re-screenings.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Differences by sex</strong> – A number of studies have found that sigmoidoscopy is more effective in men than women, perhaps because of the higher proportion of right-sided (proximal) lesions in women. In one study, 66 percent of men with advanced colon lesions would have had their lesions detected with sigmoidoscopy alone, compared with 35 percent of women with advanced adenoma or CRC [<a href="#rid100">100</a>].</p><p></p><p class="bulletIndent1">Sigmoidoscopy is associated with a greater reduction in CRC-related mortality and CRC incidence in men as compared with women, particularly with increasing age among women. According to a pooled analysis of randomized trials (287,928 individuals), compared with no screening, sigmoidoscopy was associated with decreased CRC incidence in men (RR 0.76, 95% CI 0.70-0.83) and in women younger than 60 years (RR 0.71, 95% CI 0.59-0.84); however, in women 60 years and older, CRC incidence was similar among screened and non-screened (RR 0.90, 95% CI 0.80 to 1.02) [<a href="#rid101">101</a>]. A subsequent randomized trial in 98,678 patients found that one-time sigmoidoscopy led to a reduced incidence of CRC and reduced CRC-related mortality in men, but incidence and mortality rates were similar among screened versus non-screened women [<a href="#rid102">102</a>].</p><p></p><p class="headingAnchor" id="H14"><span class="h2">Sigmoidoscopy plus FIT or gFOBT</span><span class="headingEndMark"> — </span>While clinical trial data have not substantiated an added benefit of combined testing, there are theoretical advantages to using both fecal blood testing (fecal immunochemical test [FIT] or guaiac-based fecal occult blood test [gFOBT]) and sigmoidoscopy to screen a patient. Sigmoidoscopy directly visualizes part of the distal colon and thus may show lesions that FOBT might not detect, whereas FOBT and FIT may assess the entire colon, although they too are more effective for left-side lesions.</p><p>In a randomized trial, invited participants underwent either no screening, or one-time screening by sigmoidoscopy alone or sigmoidoscopy plus FIT [<a href="#rid103">103</a>]. At 11 years of follow-up, CRC mortality and CRC incidence were reduced in patients who underwent screening versus no screening; however, combined screening with FIT and sigmoidoscopy did not clearly improve outcomes over sigmoidoscopy alone.</p><p class="headingAnchor" id="H721063221"><span class="h2">Colon capsule endoscopy</span><span class="headingEndMark"> — </span>With colon capsule endoscopy, the patient swallows a capsule containing tiny wireless video cameras that take images as the capsule traverses the colon. Colon capsule endoscopy is approved by the US Food and Drug Administration (FDA) for use only in patients who had an incomplete colonoscopy, not as a screening option by itself. The colon capsule endoscopy procedure, advantages, and disadvantages are summarized below and are described separately. (See  <a class="medical medical_review" href="/d/html/2662.html" rel="external">"Wireless video capsule endoscopy", section on 'Colon capsule endoscopy'</a>.)</p><p>Colon capsule endoscopy requires a bowel preparation; however, it does not require sedation or dietary or medication adjustments. Colon capsule endoscopy does not allow for biopsy or polyp removal during the test because lesion detection is done by visualization with a camera that is not attached to any other instruments.</p><p>In a prospective study in asymptomatic patients using high-quality colonoscopy as the reference standard, capsule endoscopy identified subjects with ≥1 adenoma of ≥6 mm with sensitivity 88 percent and specificity 82 percent, and adenomas ≥10 mm with sensitivity 92 percent and specificity 95 percent [<a href="#rid104">104</a>]. Similar findings were seen in two other studies [<a href="#rid105">105,106</a>]. In another study of 50 patients, the capsule detected all three invasive CRCs [<a href="#rid106">106</a>]. The results of these studies, in which newer capsules were used, suggest improved performance over older capsules. A prior meta-analysis had reported lower sensitivity and specificity for colon capsule endoscopy, which likely reflects the older technology [<a href="#rid107">107,108</a>].</p><p class="headingAnchor" id="H2933767875"><span class="h1">RADIOLOGIC VISUALIZATION</span></p><p class="headingAnchor" id="H210776374"><span class="h2">Computed tomography colonography</span><span class="headingEndMark"> — </span>Computed tomography colonography (CTC) involves obtaining multiple, thin-slice CT data and using computers to construct images of the bowel mucosa in two and three dimensions, with other enhancements to assist in interpretation. CTC is usually performed every five years. Evidence of efficacy of CTC and other colorectal cancer (CRC) screening strategies are described in a figure  (<a class="graphic graphic_figure graphicRef116366" href="/d/graphic/116366.html" rel="external">figure 1</a>). The CTC procedure, advantages, and disadvantages are summarized below and are described in detail separately. (See  <a class="medical medical_review" href="/d/html/2526.html" rel="external">"Overview of computed tomographic colonography"</a>.)</p><p>Bowel preparation (laxative or non-laxative) is required before the procedure. An intravenous catheter may be inserted to allow administration of drugs such as <a class="drug drug_general" data-topicid="8493" href="/d/drug information/8493.html" rel="external">glucagon</a> to relax the bowel, if needed. Air or carbon dioxide is introduced into the rectum via a catheter and typically causes cramping. Images are obtained during a single 32-second breath hold.</p><p>Sedation is not required. Patients undergoing CTC are exposed to radiation. If the CTC shows a colon lesion, a colonoscopy will be advised for further evaluation. (See <a class="local">'Follow-up of abnormal test results'</a> above.)</p><p>Incidental radiologic findings in other organs may require additional testing. It is unclear if detection of such incidental findings improves patient health outcomes or results in additional harms.</p><p>There are no controlled trials of the effectiveness of screening CTC on CRC incidence or death. Sensitivity of CTC for the detection of cancers and adenomas ≥10 mm, based on seven studies, has been reported to range between 67 and 94 percent, with specificity of 96 to 98 percent [<a href="#rid22">22</a>]. Sensitivity of laxative-free CTC (which uses an oral preparation that tags stool so that it can be electronically cleansed from the radiographic images) is somewhat lower than for CTC with laxative bowel preparation [<a href="#rid109">109</a>].</p><p>CTC has been compared with colonoscopy. In one study of parallel programs for screening with either CTC (with follow-up colonoscopy if CTC is positive) or colonoscopy alone in the same institution, more than four times as many polyps were removed in the colonoscopy-alone group compared with the CTC group, but there was no difference in the number of large adenomas and small advanced adenomas removed [<a href="#rid110">110</a>]. These results suggest that CTC is similarly efficacious and may subject patients to fewer interventions in the colon.</p><p>In microsimulation models, screening average-risk individuals aged 50 to 75 years by CTC every five years may yield similar life years gained as colonoscopy every 10 years, sigmoidoscopy every 10 years with fecal immunochemical tests (FIT) yearly, and annual FIT alone  (<a class="graphic graphic_figure graphicRef116366" href="/d/graphic/116366.html" rel="external">figure 1</a>) [<a href="#rid19">19</a>].</p><p class="headingAnchor" id="H144938091"><span class="h2">Radiologic tests not used for screening</span><span class="headingEndMark"> — </span>Use of <a class="drug drug_general" data-topicid="9180" href="/d/drug information/9180.html" rel="external">barium</a> enema, either single-contrast or double-contrast (DCBE) has declined with increasing use of endoscopic and CT procedures that have better sensitivity and specificity. Barium enema tests are no longer recommended by expert groups as options for CRC screening and are no longer performed in some locations.</p><p class="headingAnchor" id="H15240639"><span class="h1">BLOOD-BASED MARKERS</span><span class="headingEndMark"> — </span>There is no evidence for the effectiveness of screening with plasma or serum markers in reducing the risk of colorectal cancer (CRC) death. Available blood-based markers primarily detect CRC, particularly more advanced CRC, rather than precancerous lesions. Their role in early detection is unclear, and they are not included in major society guidelines for screening.</p><p>CRC markers available for use in screening in the United States include:</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Septin 9</strong> – Septin 9 is a plasma assay that detects circulating methylated septin 9 DNA, which is hypermethylated in CRC but not in normal colon tissue [<a href="#rid111">111</a>]. The US Food and Drug Administration (FDA) approved an assay for septin-9 DNA (Epi proColon 2.0) as an aid for CRC detection in average-risk patients who refuse screening by any more sensitive guideline-recommended method; however, its sensitivity is considered inadequate as a primary screening strategy [<a href="#rid32">32,112</a>].</p><p></p><p class="bulletIndent1">In a study using a Septin 9 assay (Epi proColon 2.0) in patients selected based on known colonic findings from colonoscopy, sensitivity for CRC was 75 percent and specificity was 87 percent [<a href="#rid113">113</a>]. The assay was positive in 67 percent of stage I, 83 percent of stage II, 84 percent of stage III, and 100 percent of stage 4 cancers, and the false-positive rate was 4.7 percent. The sensitivity and specificity in an unselected (average-risk screening) population is not known.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Seven-gene biomarker test</strong> – The New York State Department of Health approved a seven-gene test (ColonSentry) to identify patients at increased risk of CRC to target those patients for monitoring to assure adherence with regular colonoscopy screening. However, it has not been shown that the test can detect early-stage cancers, for which treatment would be more effective than those at later stages, and test sensitivity (61 to 82 percent) and specificity (64 to 77 percent) were only fair for CRC at any stage in populations that included a substantial proportion of patients with known CRC [<a href="#rid114">114,115</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Tests in development or not used</strong> – Additional blood tests for gene expression are in development for patients unwilling to undergo initial colonoscopy. The potential to utilize combinations of serum markers has also been explored [<a href="#rid116">116,117</a>], but well-designed studies in unselected screening populations are needed to determine if there is clinical relevance.</p><p></p><p class="bulletIndent1">Carcinoembryonic antigen (CEA), a tumor marker, is not useful as a screening test for CRC. It may be used for surveillance of patients with CRC. (See  <a class="medical medical_review" href="/d/html/2496.html" rel="external">"Clinical presentation, diagnosis, and staging of colorectal cancer", section on 'Tumor markers'</a>.)</p><p></p><p class="headingAnchor" id="H2221707122"><span class="h1">SOCIETY GUIDELINE LINKS</span><span class="headingEndMark"> — </span>Links to society and government-sponsored guidelines from selected countries and regions around the world are provided separately. (See  <a class="medical medical_society_guidelines" href="/d/html/113846.html" rel="external">"Society guideline links: Screening for colorectal cancer"</a>.)</p><p class="headingAnchor" id="H24"><span class="h1">INFORMATION FOR PATIENTS</span><span class="headingEndMark"> — </span>UpToDate offers two types of patient education materials, "The Basics" and "Beyond the Basics." The Basics patient education pieces are written in plain language, at the 5<sup>th</sup> to 6<sup>th</sup> grade reading level, and they answer the four or five key questions a patient might have about a given condition. These articles are best for patients who want a general overview and who prefer short, easy-to-read materials. Beyond the Basics patient education pieces are longer, more sophisticated, and more detailed. These articles are written at the 10<sup>th</sup> to 12<sup>th</sup> grade reading level and are best for patients who want in-depth information and are comfortable with some medical jargon.</p><p>Here are the patient education articles that are relevant to this topic. We encourage you to print or e-mail these topics to your patients. (You can also locate patient education articles on a variety of subjects by searching on "patient info" and the keyword(s) of interest.)</p><p class="bulletIndent1"><span class="glyph">●</span>Basics topics (see  <a class="medical medical_basics" href="/d/html/16186.html" rel="external">"Patient education: Colon and rectal cancer screening (The Basics)"</a> and  <a class="medical medical_basics" href="/d/html/15413.html" rel="external">"Patient education: Colonoscopy (The Basics)"</a> and  <a class="medical medical_basics" href="/d/html/15726.html" rel="external">"Patient education: Colon polyps (The Basics)"</a> and  <a class="medical medical_basics" href="/d/html/15412.html" rel="external">"Patient education: Colon and rectal cancer (The Basics)"</a>) </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Beyond the Basics topics (see  <a class="medical medical_patient" href="/d/html/885.html" rel="external">"Patient education: Screening for colorectal cancer (Beyond the Basics)"</a> and  <a class="medical medical_patient" href="/d/html/2002.html" rel="external">"Patient education: Colonoscopy (Beyond the Basics)"</a> and  <a class="medical medical_patient" href="/d/html/2008.html" rel="external">"Patient education: Flexible sigmoidoscopy (Beyond the Basics)"</a> and  <a class="medical medical_patient" href="/d/html/2019.html" rel="external">"Patient education: Colon polyps (Beyond the Basics)"</a> and  <a class="medical medical_patient" href="/d/html/874.html" rel="external">"Patient education: Colon and rectal cancer (Beyond the Basics)"</a> and  <a class="medical medical_patient" href="/d/html/2017.html" rel="external">"Patient education: Blood in the stool (rectal bleeding) in adults (Beyond the Basics)"</a>)</p><p></p><p class="headingAnchor" id="H25"><span class="h1">SUMMARY AND RECOMMENDATIONS</span></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Multiple tests are available</strong> – Multiple screening tests are available to detect adenomatous polyps and colorectal cancer (CRC) before they become symptomatic. Tests for CRC differ with regard to sensitivity and specificity, frequency of testing, evidence of effectiveness  (<a class="graphic graphic_figure graphicRef116366" href="/d/graphic/116366.html" rel="external">figure 1</a>), convenience, safety, availability, and cost.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Screening strategies are based on risk</strong> – Strategies using the tests to screen patients at average risk and those at increased risk for CRC are discussed in detail separately. (See  <a class="medical medical_review" href="/d/html/7565.html" rel="external">"Screening for colorectal cancer: Strategies in patients at average risk", section on 'Choosing a screening test'</a> and  <a class="medical medical_review" href="/d/html/7572.html" rel="external">"Screening for colorectal cancer in patients with a family history of colorectal cancer or advanced polyp", section on 'Choosing a screening test'</a>.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Colonoscopy after abnormal test</strong> – A patient with any positive (ie, abnormal) screening test for CRC other than colonoscopy itself requires a timely colonoscopy to evaluate for adenomas and CRC. Specifics are described separately. (See  <a class="medical medical_review" href="/d/html/7565.html" rel="external">"Screening for colorectal cancer: Strategies in patients at average risk", section on 'Follow-up of abnormal results'</a>.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Stool-based tests</strong> – Stool-based screening tests for colon cancer are generally much more sensitive for detection of colorectal cancer than for precancerous adenoma polyps  (<a class="graphic graphic_figure graphicRef116366" href="/d/graphic/116366.html" rel="external">figure 1</a>). The frequency of testing differs among the tests. Stool-based tests include:</p><p></p><p class="bulletIndent2"><span class="glyph">•</span><strong>Fecal immunochemical tests</strong> – Fecal immunochemical tests (FIT) measure hemoglobin in the stool; a single stool sample is evaluated. Indirect evidence suggests that FIT reduces deaths due to CRC. (See <a class="local">'Fecal immunochemical test (FIT) for blood'</a> above.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span><strong>Guaiac-based fecal occult blood tests</strong> – Guaiac-based fecal occult blood tests (gFOBT) should be done using a highly sensitive guaiac reagent. One test card is used for each of three consecutive bowel movements obtained at home. Randomized trials have shown that screening with gFOBT reduces CRC-related mortality. (See <a class="local">'Guaiac-based fecal occult blood test (gFOBT)'</a> above.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span><strong>Multitarget stool DNA testing</strong> – Multitarget stool DNA testing (sDNA-FIT, also known as MT-sDNA, FIT-DNA, or Cologuard), is a composite of stool tests that include molecular assays for DNA mutations (a test for CRC-biomarkers), and FIT. Testing requires shipping an entire bowel movement obtained at home. Sensitivity for CRC appears to exceed that for FIT; evidence for improved clinical outcomes is indirect. (See <a class="local">'Multitarget stool DNA tests with fecal immunochemical testing'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Endoscopic tests</strong> – Endoscopic screening tests for colon cancer are generally highly sensitive for detection of CRC and adenomatous polyps within the reach of the scope being used  (<a class="graphic graphic_figure graphicRef116366" href="/d/graphic/116366.html" rel="external">figure 1</a>). Frequency of testing differs among the tests. Endoscopic tests include:</p><p></p><p class="bulletIndent2"><span class="glyph">•</span><strong>Colonoscopy</strong> – Colonoscopy allows for detection and biopsy of polyps and CRC and removal of precancerous polyps, all during one test. The procedure is associated with some risks and requires dietary and medication adjustment, and a bowel preparation; conscious sedation is often used. Colonoscopy detects precancerous adenomas and CRC with high sensitivity and acceptable specificity. At present, efficacy regarding clinical outcomes is limited to observational rather than randomized trials. (See <a class="local">'Colonoscopy'</a> above.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span><strong>Sigmoidoscopy</strong> – Sigmoidoscopy reaches from the rectum up to the splenic flexure, allowing visualization of lesions, biopsy, and removal of polyps in the left-side of the colon only. Bowel preparation is less intensive than for colonoscopy, and sedation is not needed. Randomized trials have shown that screening sigmoidoscopy reduces CRC-related mortality. (See <a class="local">'Sigmoidoscopy'</a> above.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span><strong>Combined tests</strong> – There are theoretical advantages to using both fecal blood testing (FIT or gFOBT) and sigmoidoscopy to screen a patient, although data have not substantiated an added benefit of combined testing. (See <a class="local">'Sigmoidoscopy plus FIT or gFOBT'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Other tests</strong></p><p></p><p class="bulletIndent2"><span class="glyph">•</span>Colon capsule endoscopy is approved by the US Food and Drug Administration (FDA) for use only in patients who had an incomplete colonoscopy, not as a screening option by itself. During the test, the patient swallows a capsule containing tiny wireless video cameras that take images as the capsule traverses the colon. Colon capsule endoscopy requires a bowel preparation; however, it does not require sedation or dietary or medication adjustments. This test appears to have a sensitivity and specificity similar to colonoscopy. (See <a class="local">'Colon capsule endoscopy'</a> above.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>Computed tomography colonography (CTC, formerly "virtual colonoscopy") uses thin-slice CT data to construct images of the bowel mucosa. Bowel preparation (laxative or non-laxative) is required before the procedure. Sedation is not required. CTC detects large (&gt;1 cm) polyps about as well as colonoscopy but is less sensitive for detection of smaller polyps. Incidental radiologic findings in other organs may require additional testing. Further studies are needed to define its efficacy for clinical outcomes. (See <a class="local">'Computed tomography colonography'</a> above.)</p><p></p><p class="headingAnchor" id="H29473172"><span class="h1">ACKNOWLEDGMENT</span><span class="headingEndMark"> — </span>The UpToDate editorial staff acknowledges Robert H Fletcher, MD, MSc, who contributed to an earlier version of this topic review.</p><p>The author, Dr. Chyke Doubeni, is a member of the US Preventive Services Task Force (USPSTF). This topic review does not necessarily represent the views and policies of the USPSTF.</p></div><div class="headingAnchor" id="references"><ol id="reference"><li><a class="nounderline abstract_t">Sung H, Ferlay J, Siegel RL, et al. Global Cancer Statistics 2020: GLOBOCAN Estimates of Incidence and Mortality Worldwide for 36 Cancers in 185 Countries. CA Cancer J Clin 2021; 71:209.</a></li><li class="breakAll">International Agency for Research on Cancer. Cancer fact sheets. Available at: https://gco.iarc.fr/today/fact-sheets-cancers (Accessed on March 17, 2019).</li><li><a class="nounderline abstract_t">Doubeni CA, Gabler NB, Wheeler CM, et al. Timely follow-up of positive cancer screening results: A systematic review and recommendations from the PROSPR Consortium. CA Cancer J Clin 2018; 68:199.</a></li><li><a class="nounderline abstract_t">Lopes G, Stern MC, Temin S, et al. Early Detection for Colorectal Cancer: ASCO Resource-Stratified Guideline. J Glob Oncol 2019; 5:1.</a></li><li><a class="nounderline abstract_t">Robertson DJ, Lee JK, Boland CR, et al. Recommendations on Fecal Immunochemical Testing to Screen for Colorectal Neoplasia: A Consensus Statement by the US Multi-Society Task Force on Colorectal Cancer. Gastroenterology 2017; 152:1217.</a></li><li><a class="nounderline abstract_t">Doubeni CA, Fedewa SA, Levin TR, et al. Modifiable Failures in the Colorectal Cancer Screening Process and Their Association With Risk of Death. Gastroenterology 2019; 156:63.</a></li><li class="breakAll">Erratum: Early detection for colorectal cancer: ASCO resource stratified guideline summary. Available online at: https://ascopubs.org/doi/10.1200/OP.22.00580 (Accessed on November 08, 2022).</li><li><a class="nounderline abstract_t">Brenner H, Tao S, Haug U. Low-dose aspirin use and performance of immunochemical fecal occult blood tests. JAMA 2010; 304:2513.</a></li><li><a class="nounderline abstract_t">Bujanda L, Lanas Á, Quintero E, et al. Effect of aspirin and antiplatelet drugs on the outcome of the fecal immunochemical test. Mayo Clin Proc 2013; 88:683.</a></li><li><a class="nounderline abstract_t">Brenner H, Calderazzo S, Seufferlein T, et al. Effect of a Single Aspirin Dose Prior to Fecal Immunochemical Testing on Test Sensitivity for Detecting Advanced Colorectal Neoplasms: A Randomized Clinical Trial. JAMA 2019; 321:1686.</a></li><li><a class="nounderline abstract_t">Robertson DJ, Lee JK, Boland CR, et al. Recommendations on Fecal Immunochemical Testing to Screen for Colorectal Neoplasia: A Consensus Statement by the US Multi-Society Task Force on Colorectal Cancer. Am J Gastroenterol 2017; 112:37.</a></li><li><a class="nounderline abstract_t">Park MJ, Choi KS, Lee YK, et al. A comparison of qualitative and quantitative fecal immunochemical tests in the Korean national colorectal cancer screening program. Scand J Gastroenterol 2012; 47:461.</a></li><li><a class="nounderline abstract_t">Huang Y, Li Q, Ge W, et al. Predictive power of quantitative and qualitative fecal immunochemical tests for hemoglobin in population screening for colorectal neoplasm. Eur J Cancer Prev 2014; 23:27.</a></li><li><a class="nounderline abstract_t">van Rossum LG, van Rijn AF, van Oijen MG, et al. False negative fecal occult blood tests due to delayed sample return in colorectal cancer screening. Int J Cancer 2009; 125:746.</a></li><li><a class="nounderline abstract_t">Robertson DJ, Lee JK, Boland CR, et al. Recommendations on fecal immunochemical testing to screen for colorectal neoplasia: a consensus statement by the US Multi-Society Task Force on colorectal cancer. Gastrointest Endosc 2017; 85:2.</a></li><li><a class="nounderline abstract_t">Doubeni CA, Jensen CD, Fedewa SA, et al. Fecal Immunochemical Test (FIT) for Colon Cancer Screening: Variable Performance with Ambient Temperature. J Am Board Fam Med 2016; 29:672.</a></li><li><a class="nounderline abstract_t">Hol L, van Leerdam ME, van Ballegooijen M, et al. Screening for colorectal cancer: randomised trial comparing guaiac-based and immunochemical faecal occult blood testing and flexible sigmoidoscopy. Gut 2010; 59:62.</a></li><li><a class="nounderline abstract_t">Young GP, Symonds EL, Allison JE, et al. Advances in Fecal Occult Blood Tests: the FIT revolution. Dig Dis Sci 2015; 60:609.</a></li><li><a class="nounderline abstract_t">Knudsen AB, Zauber AG, Rutter CM, et al. Estimation of Benefits, Burden, and Harms of Colorectal Cancer Screening Strategies: Modeling Study for the US Preventive Services Task Force. JAMA 2016; 315:2595.</a></li><li><a class="nounderline abstract_t">Lee JK, Liles EG, Bent S, et al. Accuracy of fecal immunochemical tests for colorectal cancer: systematic review and meta-analysis. Ann Intern Med 2014; 160:171.</a></li><li><a class="nounderline abstract_t">Crotta S, Segnan N, Paganin S, et al. High rate of advanced adenoma detection in 4 rounds of colorectal cancer screening with the fecal immunochemical test. Clin Gastroenterol Hepatol 2012; 10:633.</a></li><li><a class="nounderline abstract_t">Lin JS, Piper MA, Perdue LA, et al. Screening for Colorectal Cancer: Updated Evidence Report and Systematic Review for the US Preventive Services Task Force. JAMA 2016; 315:2576.</a></li><li><a class="nounderline abstract_t">Weinberg DS, Barkun A, Turner BJ. Colorectal Cancer Screening in the United States: What Is the Best FIT? Ann Intern Med 2017; 166:297.</a></li><li><a class="nounderline abstract_t">Guittet L, Bouvier V, Mariotte N, et al. Comparison of a guaiac and an immunochemical faecal occult blood test for the detection of colonic lesions according to lesion type and location. Br J Cancer 2009; 100:1230.</a></li><li><a class="nounderline abstract_t">Hassan C, Giorgi Rossi P, Camilloni L, et al. Meta-analysis: adherence to colorectal cancer screening and the detection rate for advanced neoplasia, according to the type of screening test. Aliment Pharmacol Ther 2012; 36:929.</a></li><li><a class="nounderline abstract_t">Wong MC, Ching JY, Chan VC, et al. Diagnostic Accuracy of a Qualitative Fecal Immunochemical Test Varies With Location of Neoplasia But Not Number of Specimens. Clin Gastroenterol Hepatol 2015; 13:1472.</a></li><li><a class="nounderline abstract_t">Selby K, Jensen CD, Lee JK, et al. Influence of Varying Quantitative Fecal Immunochemical Test Positivity Thresholds on Colorectal Cancer Detection: A Community-Based Cohort Study. Ann Intern Med 2018; 169:439.</a></li><li><a class="nounderline abstract_t">Zorzi M, Hassan C, Capodaglio G, et al. Divergent Long-Term Detection Rates of Proximal and Distal Advanced Neoplasia in Fecal Immunochemical Test Screening Programs: A Retrospective Cohort Study. Ann Intern Med 2018; 169:602.</a></li><li><a class="nounderline abstract_t">Doubeni CA, Levin TR. In Screening for Colorectal Cancer, Is the FIT Right for the Right Side of the Colon? Ann Intern Med 2018; 169:650.</a></li><li><a class="nounderline abstract_t">van Roon AH, Goede SL, van Ballegooijen M, et al. Random comparison of repeated faecal immunochemical testing at different intervals for population-based colorectal cancer screening. Gut 2013; 62:409.</a></li><li><a class="nounderline abstract_t">Levin B, Lieberman DA, McFarland B, et al. Screening and surveillance for the early detection of colorectal cancer and adenomatous polyps, 2008: a joint guideline from the American Cancer Society, the US Multi-Society Task Force on Colorectal Cancer, and the American College of Radiology. CA Cancer J Clin 2008; 58:130.</a></li><li><a class="nounderline abstract_t">US Preventive Services Task Force, Bibbins-Domingo K, Grossman DC, et al. Screening for Colorectal Cancer: US Preventive Services Task Force Recommendation Statement. JAMA 2016; 315:2564.</a></li><li><a class="nounderline abstract_t">Allison JE, Sakoda LC, Levin TR, et al. Screening for colorectal neoplasms with new fecal occult blood tests: update on performance characteristics. J Natl Cancer Inst 2007; 99:1462.</a></li><li><a class="nounderline abstract_t">Allison JE, Tekawa IS, Ransom LJ, Adrain AL. A comparison of fecal occult-blood tests for colorectal-cancer screening. N Engl J Med 1996; 334:155.</a></li><li><a class="nounderline abstract_t">Whitlock EP, Lin JS, Liles E, et al. Screening for colorectal cancer: a targeted, updated systematic review for the U.S. Preventive Services Task Force. Ann Intern Med 2008; 149:638.</a></li><li><a class="nounderline abstract_t">Pignone M, Campbell MK, Carr C, Phillips C. Meta-analysis of dietary restriction during fecal occult blood testing. Eff Clin Pract 2001; 4:150.</a></li><li><a class="nounderline abstract_t">Coles EF, Starnes EC. Use of HemoQuant assays to assess the effect of oral iron preparations on stool hemoccult tests. Am J Gastroenterol 1991; 86:1442.</a></li><li><a class="nounderline abstract_t">Anderson GD, Yuellig TR, Krone RE Jr. An investigation into the effects of oral iron supplementation on in vivo Hemoccult stool testing. Am J Gastroenterol 1990; 85:558.</a></li><li><a class="nounderline abstract_t">McDonnell WM, Ryan JA, Seeger DM, Elta GH. Effect of iron on the guaiac reaction. Gastroenterology 1989; 96:74.</a></li><li><a class="nounderline abstract_t">Jaffe RM, Kasten B, Young DS, MacLowry JD. False-negative stool occult blood tests caused by ingestion of ascorbic acid (vitamin C). Ann Intern Med 1975; 83:824.</a></li><li><a class="nounderline abstract_t">Sawhney MS, McDougall H, Nelson DB, Bond JH. Fecal occult blood test in patients on low-dose aspirin, warfarin, clopidogrel, or non-steroidal anti-inflammatory drugs. Dig Dis Sci 2010; 55:1637.</a></li><li><a class="nounderline abstract_t">Sox HC. Office-based testing for fecal occult blood: do only in case of emergency. Ann Intern Med 2005; 142:146.</a></li><li><a class="nounderline abstract_t">Duffy MJ, van Rossum LG, van Turenhout ST, et al. Use of faecal markers in screening for colorectal neoplasia: a European group on tumor markers position paper. Int J Cancer 2011; 128:3.</a></li><li><a class="nounderline abstract_t">Holme Ø, Bretthauer M, Fretheim A, et al. Flexible sigmoidoscopy versus faecal occult blood testing for colorectal cancer screening in asymptomatic individuals. Cochrane Database Syst Rev 2013; :CD009259.</a></li><li><a class="nounderline abstract_t">Costantini AS, Martini A, Puliti D, et al. Colorectal cancer mortality in two areas of Tuscany with different screening exposures. J Natl Cancer Inst 2008; 100:1818.</a></li><li><a class="nounderline abstract_t">Libby G, Brewster DH, McClements PL, et al. The impact of population-based faecal occult blood test screening on colorectal cancer mortality: a matched cohort study. Br J Cancer 2012; 107:255.</a></li><li><a class="nounderline abstract_t">Moayyedi P, Achkar E. Does fecal occult blood testing really reduce mortality? A reanalysis of systematic review data. Am J Gastroenterol 2006; 101:380.</a></li><li><a class="nounderline abstract_t">Shaukat A, Mongin SJ, Geisser MS, et al. Long-term mortality after screening for colorectal cancer. N Engl J Med 2013; 369:1106.</a></li><li class="breakAll">https://www.ncbi.nlm.nih.gov/books/NBK570833/ (Accessed on October 25, 2021).</li><li><a class="nounderline abstract_t">Church TR, Ederer F, Mandel JS. Fecal occult blood screening in the Minnesota study: sensitivity of the screening test. J Natl Cancer Inst 1997; 89:1440.</a></li><li><a class="nounderline abstract_t">Calistri D, Rengucci C, Bocchini R, et al. Fecal multiple molecular tests to detect colorectal cancer in stool. Clin Gastroenterol Hepatol 2003; 1:377.</a></li><li><a class="nounderline abstract_t">Dong SM, Traverso G, Johnson C, et al. Detecting colorectal cancer in stool with the use of multiple genetic targets. J Natl Cancer Inst 2001; 93:858.</a></li><li><a class="nounderline abstract_t">Lenhard K, Bommer GT, Asutay S, et al. Analysis of promoter methylation in stool: a novel method for the detection of colorectal cancer. Clin Gastroenterol Hepatol 2005; 3:142.</a></li><li><a class="nounderline abstract_t">Levin B. Molecular screening testing for colorectal cancer. Clin Cancer Res 2006; 12:5014.</a></li><li><a class="nounderline abstract_t">Ahlquist DA, Sargent DJ, Loprinzi CL, et al. Stool DNA and occult blood testing for screen detection of colorectal neoplasia. Ann Intern Med 2008; 149:441.</a></li><li><a class="nounderline abstract_t">US Preventive Services Task Force, Davidson KW, Barry MJ, et al. Screening for Colorectal Cancer: US Preventive Services Task Force Recommendation Statement. JAMA 2021; 325:1965.</a></li><li><a class="nounderline abstract_t">Imperiale TF, Ransohoff DF, Itzkowitz SH, et al. Multitarget stool DNA testing for colorectal-cancer screening. N Engl J Med 2014; 370:1287.</a></li><li><a class="nounderline abstract_t">Barnell EK, Wurtzler EM, La Rocca J, et al. Multitarget Stool RNA Test for Colorectal Cancer Screening. JAMA 2023; 330:1760.</a></li><li><a class="nounderline abstract_t">Rabeneck L, Paszat LF, Hilsden RJ, et al. Bleeding and perforation after outpatient colonoscopy and their risk factors in usual clinical practice. Gastroenterology 2008; 135:1899.</a></li><li><a class="nounderline abstract_t">Warren JL, Klabunde CN, Mariotto AB, et al. Adverse events after outpatient colonoscopy in the Medicare population. Ann Intern Med 2009; 150:849.</a></li><li><a class="nounderline abstract_t">Brenner H, Stock C, Hoffmeister M. Effect of screening sigmoidoscopy and screening colonoscopy on colorectal cancer incidence and mortality: systematic review and meta-analysis of randomised controlled trials and observational studies. BMJ 2014; 348:g2467.</a></li><li><a class="nounderline abstract_t">Zauber AG, Winawer SJ, O'Brien MJ, et al. Colonoscopic polypectomy and long-term prevention of colorectal-cancer deaths. N Engl J Med 2012; 366:687.</a></li><li><a class="nounderline abstract_t">Doubeni CA, Corley DA, Quinn VP, et al. Effectiveness of screening colonoscopy in reducing the risk of death from right and left colon cancer: a large community-based study. Gut 2016.</a></li><li><a class="nounderline abstract_t">Amri R, Bordeianou LG, Sylla P, Berger DL. Impact of screening colonoscopy on outcomes in colon cancer surgery. JAMA Surg 2013; 148:747.</a></li><li class="breakAll">http://ClinicalTrials.gov/ct2/show/NCT00906997 (Accessed on March 16, 2019).</li><li class="breakAll">http://clinicaltrials.gov/ct2/show/NCT01239082 (Accessed on March 16, 2019).</li><li><a class="nounderline abstract_t">Kaminski MF, Bretthauer M, Zauber AG, et al. The NordICC Study: rationale and design of a randomized trial on colonoscopy screening for colorectal cancer. Endoscopy 2012; 44:695.</a></li><li><a class="nounderline abstract_t">Bretthauer M, Kaminski MF, Løberg M, et al. Population-Based Colonoscopy Screening for Colorectal Cancer: A Randomized Clinical Trial. JAMA Intern Med 2016; 176:894.</a></li><li><a class="nounderline abstract_t">Bretthauer M, Løberg M, Wieszczy P, et al. Effect of Colonoscopy Screening on Risks of Colorectal Cancer and Related Death. N Engl J Med 2022; 387:1547.</a></li><li><a class="nounderline abstract_t">van Rijn JC, Reitsma JB, Stoker J, et al. Polyp miss rate determined by tandem colonoscopy: a systematic review. Am J Gastroenterol 2006; 101:343.</a></li><li><a class="nounderline abstract_t">Baxter NN, Goldwasser MA, Paszat LF, et al. Association of colonoscopy and death from colorectal cancer. Ann Intern Med 2009; 150:1.</a></li><li><a class="nounderline abstract_t">Singh H, Nugent Z, Demers AA, et al. The reduction in colorectal cancer mortality after colonoscopy varies by site of the cancer. Gastroenterology 2010; 139:1128.</a></li><li><a class="nounderline abstract_t">Brenner H, Hoffmeister M, Arndt V, et al. Protection from right- and left-sided colorectal neoplasms after colonoscopy: population-based study. J Natl Cancer Inst 2010; 102:89.</a></li><li><a class="nounderline abstract_t">Brenner H, Chang-Claude J, Seiler CM, et al. Protection from colorectal cancer after colonoscopy: a population-based, case-control study. Ann Intern Med 2011; 154:22.</a></li><li><a class="nounderline abstract_t">Doubeni CA, Weinmann S, Adams K, et al. Screening colonoscopy and risk for incident late-stage colorectal cancer diagnosis in average-risk adults: a nested case-control study. Ann Intern Med 2013; 158:312.</a></li><li><a class="nounderline abstract_t">Soetikno RM, Kaltenbach T, Rouse RV, et al. Prevalence of nonpolypoid (flat and depressed) colorectal neoplasms in asymptomatic and symptomatic adults. JAMA 2008; 299:1027.</a></li><li><a class="nounderline abstract_t">Azzoni C, Bottarelli L, Campanini N, et al. Distinct molecular patterns based on proximal and distal sporadic colorectal cancer: arguments for different mechanisms in the tumorigenesis. Int J Colorectal Dis 2007; 22:115.</a></li><li><a class="nounderline abstract_t">le Clercq CM, Bouwens MW, Rondagh EJ, et al. Postcolonoscopy colorectal cancers are preventable: a population-based study. Gut 2014; 63:957.</a></li><li><a class="nounderline abstract_t">Pickhardt PJ, Nugent PA, Mysliwiec PA, et al. Location of adenomas missed by optical colonoscopy. Ann Intern Med 2004; 141:352.</a></li><li><a class="nounderline abstract_t">Singh H, Turner D, Xue L, et al. Risk of developing colorectal cancer following a negative colonoscopy examination: evidence for a 10-year interval between colonoscopies. JAMA 2006; 295:2366.</a></li><li><a class="nounderline abstract_t">Brenner H, Haug U, Arndt V, et al. Low risk of colorectal cancer and advanced adenomas more than 10 years after negative colonoscopy. Gastroenterology 2010; 138:870.</a></li><li><a class="nounderline abstract_t">Lakoff J, Paszat LF, Saskin R, Rabeneck L. Risk of developing proximal versus distal colorectal cancer after a negative colonoscopy: a population-based study. Clin Gastroenterol Hepatol 2008; 6:1117.</a></li><li><a class="nounderline abstract_t">Imperiale TF, Glowinski EA, Lin-Cooper C, et al. Five-year risk of colorectal neoplasia after negative screening colonoscopy. N Engl J Med 2008; 359:1218.</a></li><li><a class="nounderline abstract_t">Lee JK, Jensen CD, Levin TR, et al. Long-term Risk of Colorectal Cancer and Related Deaths After a Colonoscopy With Normal Findings. JAMA Intern Med 2019; 179:153.</a></li><li><a class="nounderline abstract_t">Fletcher RH. Rationale for combining different screening strategies. Gastrointest Endosc Clin N Am 2002; 12:53.</a></li><li class="breakAll">SEER*Stat Database: Incidence - SEER 21 Regs Limited-Field Research Data + Hurricane Katrina Impacted Louisiana Cases, Nov 2018 Sub (2000-2016) &lt;Katrina/Rita Population Adjustment&gt; - Linked To County Attributes - Total U.S., 1969-2017 Counties, National Cancer Institute, DCCPS, Surveillance Research Program, released April 2019, based on the November 2018 submission. https://seer.cancer.gov/data/ (Accessed on June 05, 2019).</li><li><a class="nounderline abstract_t">Gatto NM, Frucht H, Sundararajan V, et al. Risk of perforation after colonoscopy and sigmoidoscopy: a population-based study. J Natl Cancer Inst 2003; 95:230.</a></li><li><a class="nounderline abstract_t">Walter LC, de Garmo P, Covinsky KE. Association of older age and female sex with inadequate reach of screening flexible sigmoidoscopy. Am J Med 2004; 116:174.</a></li><li><a class="nounderline abstract_t">Elmunzer BJ, Hayward RA, Schoenfeld PS, et al. Effect of flexible sigmoidoscopy-based screening on incidence and mortality of colorectal cancer: a systematic review and meta-analysis of randomized controlled trials. PLoS Med 2012; 9:e1001352.</a></li><li><a class="nounderline abstract_t">Atkin WS, Edwards R, Kralj-Hans I, et al. Once-only flexible sigmoidoscopy screening in prevention of colorectal cancer: a multicentre randomised controlled trial. Lancet 2010; 375:1624.</a></li><li><a class="nounderline abstract_t">Atkin W, Wooldrage K, Parkin DM, et al. Long term effects of once-only flexible sigmoidoscopy screening after 17 years of follow-up: the UK Flexible Sigmoidoscopy Screening randomised controlled trial. Lancet 2017; 389:1299.</a></li><li><a class="nounderline abstract_t">Senore C, Riggi E, Armaroli P, et al. Long-Term Follow-up of the Italian Flexible Sigmoidoscopy Screening Trial. Ann Intern Med 2022; 175:36.</a></li><li><a class="nounderline abstract_t">Juul FE, Cross AJ, Schoen RE, et al. 15-Year Benefits of Sigmoidoscopy Screening on Colorectal Cancer Incidence and Mortality : A Pooled Analysis of Randomized Trials. Ann Intern Med 2022; 175:1525.</a></li><li><a class="nounderline abstract_t">Schoen RE, Pinsky PF, Weissfeld JL, et al. Colorectal-cancer incidence and mortality with screening flexible sigmoidoscopy. N Engl J Med 2012; 366:2345.</a></li><li><a class="nounderline abstract_t">Nishihara R, Wu K, Lochhead P, et al. Long-term colorectal-cancer incidence and mortality after lower endoscopy. N Engl J Med 2013; 369:1095.</a></li><li><a class="nounderline abstract_t">Newcomb PA, Norfleet RG, Storer BE, et al. Screening sigmoidoscopy and colorectal cancer mortality. J Natl Cancer Inst 1992; 84:1572.</a></li><li><a class="nounderline abstract_t">Müller AD, Sonnenberg A. Protection by endoscopy against death from colorectal cancer. A case-control study among veterans. Arch Intern Med 1995; 155:1741.</a></li><li><a class="nounderline abstract_t">Selby JV, Friedman GD, Quesenberry CP Jr, Weiss NS. A case-control study of screening sigmoidoscopy and mortality from colorectal cancer. N Engl J Med 1992; 326:653.</a></li><li><a class="nounderline abstract_t">Weissfeld JL, Schoen RE, Pinsky PF, et al. Flexible sigmoidoscopy in the randomized prostate, lung, colorectal, and ovarian (PLCO) cancer screening trial: added yield from a second screening examination. J Natl Cancer Inst 2012; 104:280.</a></li><li><a class="nounderline abstract_t">Schoenfeld P, Cash B, Flood A, et al. Colonoscopic screening of average-risk women for colorectal neoplasia. N Engl J Med 2005; 352:2061.</a></li><li><a class="nounderline abstract_t">Holme Ø, Schoen RE, Senore C, et al. Effectiveness of flexible sigmoidoscopy screening in men and women and different age groups: pooled analysis of randomised trials. BMJ 2017; 356:i6673.</a></li><li><a class="nounderline abstract_t">Holme Ø, Løberg M, Kalager M, et al. Long-Term Effectiveness of Sigmoidoscopy Screening on Colorectal Cancer Incidence and Mortality in Women and Men: A Randomized Trial. Ann Intern Med 2018; 168:775.</a></li><li><a class="nounderline abstract_t">Holme Ø, Løberg M, Kalager M, et al. Effect of flexible sigmoidoscopy screening on colorectal cancer incidence and mortality: a randomized clinical trial. JAMA 2014; 312:606.</a></li><li><a class="nounderline abstract_t">Rex DK, Adler SN, Aisenberg J, et al. Accuracy of capsule colonoscopy in detecting colorectal polyps in a screening population. Gastroenterology 2015; 148:948.</a></li><li><a class="nounderline abstract_t">Spada C, Hassan C, Munoz-Navas M, et al. Second-generation colon capsule endoscopy compared with colonoscopy. Gastrointest Endosc 2011; 74:581.</a></li><li><a class="nounderline abstract_t">Rondonotti E, Borghi C, Mandelli G, et al. Accuracy of capsule colonoscopy and computed tomographic colonography in individuals with positive results from the fecal occult blood test. Clin Gastroenterol Hepatol 2014; 12:1303.</a></li><li><a class="nounderline abstract_t">Rokkas T, Papaxoinis K, Triantafyllou K, Ladas SD. A meta-analysis evaluating the accuracy of colon capsule endoscopy in detecting colon polyps. Gastrointest Endosc 2010; 71:792.</a></li><li><a class="nounderline abstract_t">Sacher-Huvelin S, Coron E, Gaudric M, et al. Colon capsule endoscopy vs. colonoscopy in patients at average or increased risk of colorectal cancer. Aliment Pharmacol Ther 2010; 32:1145.</a></li><li><a class="nounderline abstract_t">Zalis ME, Blake MA, Cai W, et al. Diagnostic accuracy of laxative-free computed tomographic colonography for detection of adenomatous polyps in asymptomatic adults: a prospective evaluation. Ann Intern Med 2012; 156:692.</a></li><li><a class="nounderline abstract_t">Kim DH, Pickhardt PJ, Taylor AJ, et al. CT colonography versus colonoscopy for the detection of advanced neoplasia. N Engl J Med 2007; 357:1403.</a></li><li class="breakAll">http://www.fda.gov/downloads/AdvisoryCommittees/CommitteesMeetingMaterials/MedicalDevices/MedicalDevicesAdvisoryCommittee/MolecularandClinicalGeneticsPanel/UCM390238.pdf (Accessed on April 25, 2016).</li><li class="breakAll">US Food and Drug Administration, April 12, 2016 http://www.accessdata.fda.gov/cdrh_docs/pdf13/P130001a.pdf.</li><li><a class="nounderline abstract_t">Jin P, Kang Q, Wang X, et al. Performance of a second-generation methylated SEPT9 test in detecting colorectal neoplasm. J Gastroenterol Hepatol 2015; 30:830.</a></li><li><a class="nounderline abstract_t">Marshall KW, Mohr S, Khettabi FE, et al. A blood-based biomarker panel for stratifying current risk for colorectal cancer. Int J Cancer 2010; 126:1177.</a></li><li><a class="nounderline abstract_t">Yip KT, Das PK, Suria D, et al. A case-controlled validation study of a blood-based seven-gene biomarker panel for colorectal cancer in Malaysia. J Exp Clin Cancer Res 2010; 29:128.</a></li><li><a class="nounderline abstract_t">Wild N, Andres H, Rollinger W, et al. A combination of serum markers for the early detection of colorectal cancer. Clin Cancer Res 2010; 16:6111.</a></li><li><a class="nounderline abstract_t">Werner S, Krause F, Rolny V, et al. Evaluation of a 5-Marker Blood Test for Colorectal Cancer Early Detection in a Colorectal Cancer Screening Setting. Clin Cancer Res 2016; 22:1725.</a></li></ol></div><div id="topicVersionRevision">Topic 7576 Version 109.0</div></div>
+<div class="row">
+<div class="col-12">
+<h4 style="text-align: center;padding: 20px;color: cadetblue;">References</h4>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/33538338" id="rid0" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>1 : Global Cancer Statistics 2020: GLOBOCAN Estimates of Incidence and Mortality Worldwide for 36 Cancers in 185 Countries.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/33538338" id="rid1" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>2 : Global Cancer Statistics 2020: GLOBOCAN Estimates of Incidence and Mortality Worldwide for 36 Cancers in 185 Countries.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/29603147" id="rid2" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>3 : Timely follow-up of positive cancer screening results: A systematic review and recommendations from the PROSPR Consortium.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/30802159" id="rid3" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>4 : Early Detection for Colorectal Cancer: ASCO Resource-Stratified Guideline.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/27769517" id="rid4" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>5 : Recommendations on Fecal Immunochemical Testing to Screen for Colorectal Neoplasia: A Consensus Statement by the US Multi-Society Task Force on Colorectal Cancer.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/30268788" id="rid5" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>6 : Modifiable Failures in the Colorectal Cancer Screening Process and Their Association With Risk of Death.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/30268788" id="rid6" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>7 : Modifiable Failures in the Colorectal Cancer Screening Process and Their Association With Risk of Death.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/21139112" id="rid7" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>8 : Low-dose aspirin use and performance of immunochemical fecal occult blood tests.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/23751980" id="rid8" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>9 : Effect of aspirin and antiplatelet drugs on the outcome of the fecal immunochemical test.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/31063574" id="rid9" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>10 : Effect of a Single Aspirin Dose Prior to Fecal Immunochemical Testing on Test Sensitivity for Detecting Advanced Colorectal Neoplasms: A Randomized Clinical Trial.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/27753435" id="rid10" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>11 : Recommendations on Fecal Immunochemical Testing to Screen for Colorectal Neoplasia: A Consensus Statement by the US Multi-Society Task Force on Colorectal Cancer.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/22428929" id="rid11" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>12 : A comparison of qualitative and quantitative fecal immunochemical tests in the Korean national colorectal cancer screening program.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/23942476" id="rid12" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>13 : Predictive power of quantitative and qualitative fecal immunochemical tests for hemoglobin in population screening for colorectal neoplasm.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/19408302" id="rid13" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>14 : False negative fecal occult blood tests due to delayed sample return in colorectal cancer screening.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/27769516" id="rid14" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>15 : Recommendations on fecal immunochemical testing to screen for colorectal neoplasia: a consensus statement by the US Multi-Society Task Force on colorectal cancer.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/28076249" id="rid15" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>16 : Fecal Immunochemical Test (FIT) for Colon Cancer Screening: Variable Performance with Ambient Temperature.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/19671542" id="rid16" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>17 : Screening for colorectal cancer: randomised trial comparing guaiac-based and immunochemical faecal occult blood testing and flexible sigmoidoscopy.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/25492500" id="rid17" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>18 : Advances in Fecal Occult Blood Tests: the FIT revolution.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/27305518" id="rid18" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>19 : Estimation of Benefits, Burden, and Harms of Colorectal Cancer Screening Strategies: Modeling Study for the US Preventive Services Task Force.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/24658694" id="rid19" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>20 : Accuracy of fecal immunochemical tests for colorectal cancer: systematic review and meta-analysis.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/22426085" id="rid20" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>21 : High rate of advanced adenoma detection in 4 rounds of colorectal cancer screening with the fecal immunochemical test.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/27305422" id="rid21" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>22 : Screening for Colorectal Cancer: Updated Evidence Report and Systematic Review for the US Preventive Services Task Force.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/27776358" id="rid22" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>23 : Colorectal Cancer Screening in the United States: What Is the Best FIT?</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/19337253" id="rid23" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>24 : Comparison of a guaiac and an immunochemical faecal occult blood test for the detection of colonic lesions according to lesion type and location.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/23035890" id="rid24" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>25 : Meta-analysis: adherence to colorectal cancer screening and the detection rate for advanced neoplasia, according to the type of screening test.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/25724708" id="rid25" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>26 : Diagnostic Accuracy of a Qualitative Fecal Immunochemical Test Varies With Location of Neoplasia But Not Number of Specimens.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/30242328" id="rid26" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>27 : Influence of Varying Quantitative Fecal Immunochemical Test Positivity Thresholds on Colorectal Cancer Detection: A Community-Based Cohort Study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/30285055" id="rid27" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>28 : Divergent Long-Term Detection Rates of Proximal and Distal Advanced Neoplasia in Fecal Immunochemical Test Screening Programs: A Retrospective Cohort Study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/30285038" id="rid28" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>29 : In Screening for Colorectal Cancer, Is the FIT Right for the Right Side of the Colon?</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/22387523" id="rid29" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>30 : Random comparison of repeated faecal immunochemical testing at different intervals for population-based colorectal cancer screening.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/18322143" id="rid30" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>31 : Screening and surveillance for the early detection of colorectal cancer and adenomatous polyps, 2008: a joint guideline from the American Cancer Society, the US Multi-Society Task Force on Colorectal Cancer, and the American College of Radiology.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/27304597" id="rid31" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>32 : Screening for Colorectal Cancer: US Preventive Services Task Force Recommendation Statement.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/17895475" id="rid32" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>33 : Screening for colorectal neoplasms with new fecal occult blood tests: update on performance characteristics.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/8531970" id="rid33" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>34 : A comparison of fecal occult-blood tests for colorectal-cancer screening.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/18838718" id="rid34" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>35 : Screening for colorectal cancer: a targeted, updated systematic review for the U.S. Preventive Services Task Force.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/11525101" id="rid35" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>36 : Meta-analysis of dietary restriction during fecal occult blood testing.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/1928035" id="rid36" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>37 : Use of HemoQuant assays to assess the effect of oral iron preparations on stool hemoccult tests.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/2186616" id="rid37" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>38 : An investigation into the effects of oral iron supplementation on in vivo Hemoccult stool testing.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/2909440" id="rid38" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>39 : Effect of iron on the guaiac reaction.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/1200528" id="rid39" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>40 : False-negative stool occult blood tests caused by ingestion of ascorbic acid (vitamin C).</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/20195757" id="rid40" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>41 : Fecal occult blood test in patients on low-dose aspirin, warfarin, clopidogrel, or non-steroidal anti-inflammatory drugs.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/15657163" id="rid41" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>42 : Office-based testing for fecal occult blood: do only in case of emergency.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/20824704" id="rid42" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>43 : Use of faecal markers in screening for colorectal neoplasia: a European group on tumor markers position paper.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/24085634" id="rid43" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>44 : Flexible sigmoidoscopy versus faecal occult blood testing for colorectal cancer screening in asymptomatic individuals.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/19066268" id="rid44" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>45 : Colorectal cancer mortality in two areas of Tuscany with different screening exposures.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/22735907" id="rid45" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>46 : The impact of population-based faecal occult blood test screening on colorectal cancer mortality: a matched cohort study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/16454847" id="rid46" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>47 : Does fecal occult blood testing really reduce mortality? A reanalysis of systematic review data.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/24047060" id="rid47" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>48 : Long-term mortality after screening for colorectal cancer.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/24047060" id="rid48" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>49 : Long-term mortality after screening for colorectal cancer.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/9326913" id="rid49" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>50 : Fecal occult blood screening in the Minnesota study: sensitivity of the screening test.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/15017656" id="rid50" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>51 : Fecal multiple molecular tests to detect colorectal cancer in stool.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/11390535" id="rid51" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>52 : Detecting colorectal cancer in stool with the use of multiple genetic targets.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/15704048" id="rid52" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>53 : Analysis of promoter methylation in stool: a novel method for the detection of colorectal cancer.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/16951215" id="rid53" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>54 : Molecular screening testing for colorectal cancer.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/18838724" id="rid54" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>55 : Stool DNA and occult blood testing for screen detection of colorectal neoplasia.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/34003218" id="rid55" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>56 : Screening for Colorectal Cancer: US Preventive Services Task Force Recommendation Statement.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/24645800" id="rid56" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>57 : Multitarget stool DNA testing for colorectal-cancer screening.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/37870871" id="rid57" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>58 : Multitarget Stool RNA Test for Colorectal Cancer Screening.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/18938166" id="rid58" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>59 : Bleeding and perforation after outpatient colonoscopy and their risk factors in usual clinical practice.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/19528563" id="rid59" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>60 : Adverse events after outpatient colonoscopy in the Medicare population.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/24922745" id="rid60" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>61 : Effect of screening sigmoidoscopy and screening colonoscopy on colorectal cancer incidence and mortality: systematic review and meta-analysis of randomised controlled trials and observational studies.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/22356322" id="rid61" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>62 : Colonoscopic polypectomy and long-term prevention of colorectal-cancer deaths.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/27733426" id="rid62" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>63 : Effectiveness of screening colonoscopy in reducing the risk of death from right and left colon cancer: a large community-based study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/23784448" id="rid63" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>64 : Impact of screening colonoscopy on outcomes in colon cancer surgery.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/23784448" id="rid64" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>65 : Impact of screening colonoscopy on outcomes in colon cancer surgery.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/23784448" id="rid65" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>66 : Impact of screening colonoscopy on outcomes in colon cancer surgery.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/22723185" id="rid66" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>67 : The NordICC Study: rationale and design of a randomized trial on colonoscopy screening for colorectal cancer.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/27214731" id="rid67" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>68 : Population-Based Colonoscopy Screening for Colorectal Cancer: A Randomized Clinical Trial.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/36214590" id="rid68" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>69 : Effect of Colonoscopy Screening on Risks of Colorectal Cancer and Related Death.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/16454841" id="rid69" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>70 : Polyp miss rate determined by tandem colonoscopy: a systematic review.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/19075198" id="rid70" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>71 : Association of colonoscopy and death from colorectal cancer.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/20600026" id="rid71" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>72 : The reduction in colorectal cancer mortality after colonoscopy varies by site of the cancer.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/20042716" id="rid72" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>73 : Protection from right- and left-sided colorectal neoplasms after colonoscopy: population-based study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/21200035" id="rid73" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>74 : Protection from colorectal cancer after colonoscopy: a population-based, case-control study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/23460054" id="rid74" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>75 : Screening colonoscopy and risk for incident late-stage colorectal cancer diagnosis in average-risk adults: a nested case-control study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/18319413" id="rid75" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>76 : Prevalence of nonpolypoid (flat and depressed) colorectal neoplasms in asymptomatic and symptomatic adults.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/17021745" id="rid76" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>77 : Distinct molecular patterns based on proximal and distal sporadic colorectal cancer: arguments for different mechanisms in the tumorigenesis.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/23744612" id="rid77" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>78 : Postcolonoscopy colorectal cancers are preventable: a population-based study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/15353426" id="rid78" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>79 : Location of adenomas missed by optical colonoscopy.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/16720822" id="rid79" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>80 : Risk of developing colorectal cancer following a negative colonoscopy examination: evidence for a 10-year interval between colonoscopies.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/19909750" id="rid80" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>81 : Low risk of colorectal cancer and advanced adenomas more than 10 years after negative colonoscopy.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/18691942" id="rid81" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>82 : Risk of developing proximal versus distal colorectal cancer after a negative colonoscopy: a population-based study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/18799558" id="rid82" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>83 : Five-year risk of colorectal neoplasia after negative screening colonoscopy.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/30556824" id="rid83" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>84 : Long-term Risk of Colorectal Cancer and Related Deaths After a Colonoscopy With Normal Findings.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/11916161" id="rid84" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>85 : Rationale for combining different screening strategies.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/11916161" id="rid85" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>86 : Rationale for combining different screening strategies.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/12569145" id="rid86" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>87 : Risk of perforation after colonoscopy and sigmoidoscopy: a population-based study.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/14749161" id="rid87" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>88 : Association of older age and female sex with inadequate reach of screening flexible sigmoidoscopy.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/23226108" id="rid88" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>89 : Effect of flexible sigmoidoscopy-based screening on incidence and mortality of colorectal cancer: a systematic review and meta-analysis of randomized controlled trials.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/20430429" id="rid89" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>90 : Once-only flexible sigmoidoscopy screening in prevention of colorectal cancer: a multicentre randomised controlled trial.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/28236467" id="rid90" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>91 : Long term effects of once-only flexible sigmoidoscopy screening after 17 years of follow-up: the UK Flexible Sigmoidoscopy Screening randomised controlled trial.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/34748376" id="rid91" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>92 : Long-Term Follow-up of the Italian Flexible Sigmoidoscopy Screening Trial.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/36215714" id="rid92" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>93 : 15-Year Benefits of Sigmoidoscopy Screening on Colorectal Cancer Incidence and Mortality : A Pooled Analysis of Randomized Trials.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/22612596" id="rid93" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>94 : Colorectal-cancer incidence and mortality with screening flexible sigmoidoscopy.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/24047059" id="rid94" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>95 : Long-term colorectal-cancer incidence and mortality after lower endoscopy.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/1404450" id="rid95" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>96 : Screening sigmoidoscopy and colorectal cancer mortality.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/7654107" id="rid96" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>97 : Protection by endoscopy against death from colorectal cancer. A case-control study among veterans.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/1736103" id="rid97" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>98 : A case-control study of screening sigmoidoscopy and mortality from colorectal cancer.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/22298838" id="rid98" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>99 : Flexible sigmoidoscopy in the randomized prostate, lung, colorectal, and ovarian (PLCO) cancer screening trial: added yield from a second screening examination.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/15901859" id="rid99" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>100 : Colonoscopic screening of average-risk women for colorectal neoplasia.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/28087510" id="rid100" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>101 : Effectiveness of flexible sigmoidoscopy screening in men and women and different age groups: pooled analysis of randomised trials.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/29710125" id="rid101" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>102 : Long-Term Effectiveness of Sigmoidoscopy Screening on Colorectal Cancer Incidence and Mortality in Women and Men: A Randomized Trial.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/25117129" id="rid102" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>103 : Effect of flexible sigmoidoscopy screening on colorectal cancer incidence and mortality: a randomized clinical trial.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/25620668" id="rid103" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>104 : Accuracy of capsule colonoscopy in detecting colorectal polyps in a screening population.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/21601200" id="rid104" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>105 : Second-generation colon capsule endoscopy compared with colonoscopy.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/24398064" id="rid105" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>106 : Accuracy of capsule colonoscopy and computed tomographic colonography in individuals with positive results from the fecal occult blood test.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/20363421" id="rid106" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>107 : A meta-analysis evaluating the accuracy of colon capsule endoscopy in detecting colon polyps.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/21039676" id="rid107" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>108 : Colon capsule endoscopy vs. colonoscopy in patients at average or increased risk of colorectal cancer.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/22586008" id="rid108" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>109 : Diagnostic accuracy of laxative-free computed tomographic colonography for detection of adenomatous polyps in asymptomatic adults: a prospective evaluation.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/17914041" id="rid109" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>110 : CT colonography versus colonoscopy for the detection of advanced neoplasia.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/17914041" id="rid110" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>111 : CT colonography versus colonoscopy for the detection of advanced neoplasia.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/17914041" id="rid111" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>112 : CT colonography versus colonoscopy for the detection of advanced neoplasia.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/25471329" id="rid112" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>113 : Performance of a second-generation methylated SEPT9 test in detecting colorectal neoplasm.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/19795455" id="rid113" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>114 : A blood-based biomarker panel for stratifying current risk for colorectal cancer.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/20846378" id="rid114" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>115 : A case-controlled validation study of a blood-based seven-gene biomarker panel for colorectal cancer in Malaysia.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/20798228" id="rid115" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>116 : A combination of serum markers for the early detection of colorectal cancer.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/26561557" id="rid116" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>117 : Evaluation of a 5-Marker Blood Test for Colorectal Cancer Early Detection in a Colorectal Cancer Screening Setting.</p>
+</a>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

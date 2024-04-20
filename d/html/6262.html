@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Approach to the child with persistent tearing</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Approach to the child with persistent tearing</h1>
+<div class="utdArticleSection utdStyle" id="topicContent"><div id="topicTitle">Approach to the child with persistent tearing</div> <div class="authorSectionElem"><div class="authorsElementsLeft"><dl id="topicContributors"><dt><span> </span>Authors:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">David K Coats, MD</a></dd><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Evelyn A Paysse, MD</a></dd><dt><span> </span>Section Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Scott E Olitsky, MD</a></dd><dt><span> </span>Deputy Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Carrie Armsby, MD, MPH</a></dd></dl></div><div class="authorsElementsRight"><div id="literatureReviewDate"><div class="litReviewSingleLine"><bdi><span class="emphasis">Literature review current through:</span> Jan 2024.</bdi></div><div class="litReviewSingleLine"><bdi><span class="emphasis">This topic last updated:</span> Jun 22, 2023.</bdi></div></div></div></div><div id="topicWhatsNewContainer"></div><div id="topicText"><p class="headingAnchor" id="H1"><span class="h1">INTRODUCTION</span><span class="headingEndMark"> — </span>Nasolacrimal duct obstruction is the most common cause of persistent tearing, infection, and ocular discharge in infants and children. The other causes range from mild, self-limited conditions to sight-threatening ocular emergencies (<a class="graphic graphic_table graphicRef63904" href="/d/graphic/63904.html" rel="external">table 1</a>). Associated signs and symptoms usually help to narrow the differential diagnosis and facilitate appropriate triage of children with these complaints.</p><p>The anatomy of the lacrimal system and the differential diagnosis, evaluation, and treatment for persistent tearing in infants and children are reviewed here. Nasolacrimal duct obstruction and conjunctivitis are discussed separately. (See  <a class="medical medical_review" href="/d/html/6274.html" rel="external">"Congenital nasolacrimal duct obstruction (dacryostenosis) and dacryocystocele"</a> and  <a class="medical medical_review" href="/d/html/6907.html" rel="external">"Conjunctivitis"</a>.)</p><p class="headingAnchor" id="H2"><span class="h1">ANATOMY AND PHYSIOLOGY OF THE LACRIMAL SYSTEM</span><span class="headingEndMark"> — </span>The function of tears is to keep the ocular surface moist and flushed clear of debris and bacteria. The tear film is partly responsible for corneal clarity and the transmission of a focused image to the retina.</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Tear production and drainage</strong> – Tears are produced by the lacrimal and accessory lacrimal glands. The lacrimal glands are located in the upper/outer quadrant of the orbit and produce "reflex" tears when the eye is irritated or stimulated by emotions [<a href="#rid1">1</a>]. The accessory lacrimal glands are scattered along the conjunctiva of the eyelid and produce the basal (resting) tears that keep the eye moist.</p><p></p><p class="bulletIndent1">Tears drain through the lacrimal drainage system, which begins at the punctum, a small opening on the medial surface of each eyelid (<a class="graphic graphic_figure graphicRef53429" href="/d/graphic/53429.html" rel="external">figure 1</a>). The punctum is the opening of the canaliculus, which drains into the common canaliculus and then into the lacrimal sac. There are two canaliculi for each eye (one on the upper and one on the lower eyelid). Tears that collect in the lacrimal sac drain through the nasolacrimal duct and into the nose via the inferior meatus, located below the inferior turbinate. The valve of Hasner, a mucosal flap at the distal end of the nasolacrimal duct, prevents air from entering the lacrimal sac when the nose is blown; the valve of Hasner is called the "membrane of Hasner" if it hasn't opened. Tears are swallowed after they pass from the nose into the posterior pharynx.</p><p></p><p class="bulletIndent1">Tear drainage is both passive and active. Gravity is responsible for passive drainage. Blinking facilitates active drainage by causing negative pressure in the canaliculus and lacrimal sac; the negative pressure draws tears into the lacrimal drainage system [<a href="#rid2">2</a>].</p><p></p><p class="bulletIndent1">The tear meniscus or tear lake is a small layer of tears above the lower eyelid that rests against the cornea and conjunctiva. Excessive tearing (epiphora) causes the level of the tear meniscus to elevate, and the tears flow over the eyelids onto the face.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Tear composition</strong> – The tear film is composed of three layers, each of different composition. The inner mucin layer smooths the surface of the eye and makes it wettable. The middle aqueous layer consists primarily of water and provides the bulk of the tear film. The outer lipid layer coats the other layers to slow evaporation [<a href="#rid1">1</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Functions of the tear film</strong> – Tears and the tear film have several functions, including:</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>Preventing the cornea and mucosal surfaces from drying</p><p class="bulletIndent2"><span class="glyph">•</span>Keeping the ocular surface flushed clear of debris and bacteria</p><p class="bulletIndent2"><span class="glyph">•</span>Smoothing the refractive surface of the eye (the cornea)</p><p class="bulletIndent2"><span class="glyph">•</span>Lubricating the ocular surface to ease eyelid closure</p><p class="bulletIndent2"><span class="glyph">•</span>Protecting from infection through secretory antibodies</p><p></p><p class="headingAnchor" id="H5"><span class="h1">ETIOLOGY OF PERSISTENT TEARING</span><span class="headingEndMark"> — </span>The causes of persistent tearing range from mild, self-limited conditions to sight-threatening ocular emergencies (<a class="graphic graphic_table graphicRef63904" href="/d/graphic/63904.html" rel="external">table 1</a>) [<a href="#rid3">3-6</a>]. Associated signs and symptoms usually help to narrow the differential diagnosis.</p><p class="headingAnchor" id="H6"><span class="h2">Nasolacrimal duct obstruction</span><span class="headingEndMark"> — </span>Nasolacrimal duct obstruction (dacryostenosis) is the most common cause of abnormal tearing in infants and children, particularly during the first year of life. Infants with nasolacrimal duct obstruction present with a history of chronic or intermittent tearing, debris on the eyelashes (mattering), and, occasionally, redness of the conjunctiva (<a class="graphic graphic_picture graphicRef62518" href="/d/graphic/62518.html" rel="external">picture 1</a>). On physical examination, the patient may have an increase in the size of the tear meniscus. Palpation of the lacrimal sac may cause reflux of tears and/or mucoid discharge into the eye through the puncta.</p><p>A bluish swelling of the skin overlying the lacrimal sac and superior displacement of the medial canthal tendon suggest the presence of a dacryocystocele (<a class="graphic graphic_picture graphicRef62273" href="/d/graphic/62273.html" rel="external">picture 2</a>). Infants with dacryocystoceles should be evaluated promptly by an ophthalmologist as they may require early intervention.</p><p>Nasolacrimal duct obstruction and dacryocystoceles are discussed in greater detail separately. (See  <a class="medical medical_review" href="/d/html/6274.html" rel="external">"Congenital nasolacrimal duct obstruction (dacryostenosis) and dacryocystocele"</a>.)</p><p class="headingAnchor" id="H3474386079"><span class="h2">Conjunctivitis</span><span class="headingEndMark"> — </span>Conjunctivitis (inflammation of the conjunctiva) is caused by infection, allergy, chemical exposure, or mechanical aggravation. The signs, symptoms, and treatment vary depending upon the etiology.</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Bacterial infection</strong> – Bacterial conjunctivitis typically causes a purulent discharge and diffuse conjunctival injection. (See  <a class="medical medical_review" href="/d/html/6907.html" rel="external">"Conjunctivitis", section on 'Bacterial conjunctivitis'</a>.)</p><p></p><p class="bulletIndent1">Ophthalmia neonatorum refers to bacterial conjunctivitis occurring in the neonatal period. It can be caused by gonococcal infection (typically presenting with copious discharge at two to five days of age) or chlamydial infection (typically presenting with a stringy mucopurulent discharge within the first 10 to 14 days of life). However, other bacteria can also cause conjunctivitis at this age (eg, skin and gastrointestinal flora). Evaluation and treatment are discussed in detail separately. (See  <a class="medical medical_review" href="/d/html/4983.html" rel="external">"Gonococcal infection in the newborn", section on 'Ophthalmia neonatorum'</a> and  <a class="medical medical_review" href="/d/html/4993.html" rel="external">"Chlamydia trachomatis infections in the newborn", section on 'Conjunctivitis'</a>.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Viral infection</strong> – Viral conjunctivitis typically presents with conjunctival injection, watery or mucoserous eye discharge, itching, and/or mild photophobia (<a class="graphic graphic_picture graphicRef56481" href="/d/graphic/56481.html" rel="external">picture 3</a>). It is often preceded by a respiratory infection; an enlarged, tender preauricular lymph node may be present. (See  <a class="medical medical_review" href="/d/html/6907.html" rel="external">"Conjunctivitis", section on 'Viral conjunctivitis'</a>.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Allergic conjunctivitis</strong> – Allergic conjunctivitis typically presents as bilateral redness, watery discharge, chemosis, and itching (<a class="graphic graphic_picture graphicRef79978" href="/d/graphic/79978.html" rel="external">picture 4</a>). Affected patients often have a history of atopy or seasonal allergy, and other allergic symptoms may be present (eg, rhinitis). (See  <a class="medical medical_review" href="/d/html/5547.html" rel="external">"Allergic conjunctivitis: Clinical manifestations and diagnosis"</a>.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Mechanical and chemical conjunctivitis</strong> – These usually are elicited by the history. (See  <a class="medical medical_review" href="/d/html/6907.html" rel="external">"Conjunctivitis", section on 'Noninfectious, noninflammatory conjunctivitis'</a>.)</p><p></p><p class="headingAnchor" id="H7"><span class="h2">Glaucoma</span><span class="headingEndMark"> — </span>Early-onset glaucoma is a sight-threatening condition and usually requires surgery for definitive treatment. It typically presents with chronic or intermittent tearing, photophobia, and/or corneal clouding.</p><p>The corneal clouding is caused by corneal edema resulting from increased intraocular pressure (IOP) and endothelial cell dysfunction. Corneal edema causes tremendous glare, which leads to photophobia.</p><p>In young children (ie, &lt;3 years old), elevated IOP also can cause stretching of the cornea and sclera, which increases the size of the globe (buphthalmos, or "ox eye"). Increased corneal size and buphthalmos help to distinguish congenital or early-onset glaucoma from other causes of persistent tearing. The normal corneal diameter is 10 mm in infants and increases to 12 mm by two years of age. A horizontal corneal diameter of &gt;12 mm or diameters that differ between eyes is abnormal and suggestive of glaucoma. Infants and children with these findings require prompt referral to an ophthalmologist.</p><p>Glaucoma in infants and children is discussed in greater detail separately. (See  <a class="medical medical_review" href="/d/html/6272.html" rel="external">"Overview of glaucoma in infants and children"</a> and  <a class="medical medical_review" href="/d/html/6273.html" rel="external">"Primary infantile glaucoma"</a>.)</p><p class="headingAnchor" id="H8"><span class="h2">Uveitis</span><span class="headingEndMark"> — </span>Uveitis is an inflammation of the pigmented portion of the eye (iris, ciliary body, and choroid). This condition is also called iritis or iridocyclitis. Uveitis can occur after blunt ocular trauma and in association with certain rheumatologic or systemic conditions (eg, juvenile idiopathic arthritis, Kawasaki disease, lupus, granulomatosis with polyangiitis, human leukocyte antigen [HLA] B27).</p><p>Children with uveitis typically complain of photophobia; deep, boring ocular pain; redness; tearing; and other signs. The exception occurs in children with uveitis associated with juvenile idiopathic arthritis who usually do not develop redness or pain. The onset may be acute or insidious.</p><p>On examination, the eyes are of normal size. Conjunctival injection, particularly of the area surrounding the limbus (ciliary injection), may be present. Slit lamp findings include anterior chamber cells and flare, posterior synechia, and keratic precipitants. Band keratopathy may occur in patients with chronic uveitis.</p><p>Uveitis is discussed in greater detail separately. (See  <a class="medical medical_review" href="/d/html/5581.html" rel="external">"Uveitis: Etiology, clinical manifestations, and diagnosis"</a>.)</p><p class="headingAnchor" id="H11"><span class="h2">Corneal abrasion or foreign body</span><span class="headingEndMark"> — </span>Children who have an occult corneal abrasion or foreign body usually present with photophobia, tearing, redness, and a history that is suggestive of a mechanism of injury.</p><p>Foreign bodies may be present on the surface of the cornea or on the bulbar or palpebral conjunctiva. Those that are under the upper eyelid may cause vertically oriented linear corneal abrasions.</p><p><a class="drug drug_pediatric" data-topicid="105145" href="/d/drug information/105145.html" rel="external">Fluorescein</a> examination may reveal the corneal abrasions; the foreign body is viewed either directly or with the slit lamp. Eversion of the upper lid should be performed if the foreign body is not evident on the cornea.</p><p>Corneal foreign bodies that cannot be easily removed with irrigation or a cotton-tipped applicator should be removed by an ophthalmologist.</p><p>Corneal abrasions and foreign bodies are discussed in greater detail separately. (See  <a class="medical medical_review" href="/d/html/6897.html" rel="external">"Corneal abrasions and corneal foreign bodies: Clinical manifestations and diagnosis"</a> and  <a class="medical medical_review" href="/d/html/90922.html" rel="external">"Corneal abrasions and corneal foreign bodies: Management"</a>.)</p><p class="headingAnchor" id="H12"><span class="h2">Eyelid abnormalities</span><span class="headingEndMark"> — </span>Anatomic abnormalities of the eyelids may cause tearing, redness, and foreign body sensation.</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Trichiasis (misdirected eyelashes)</strong> – Trichiasis can irritate the cornea due to cornea lash touch, causing reflex tearing and redness. It may be caused by either of the following:</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>Entropion, which is the in-turning of the eyelid and, if significant, is treated with surgical repair.</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>Epiblepharon, which is a fold of skin along the lower lid margin, just below the eyelashes (<a class="graphic graphic_picture graphicRef75573" href="/d/graphic/75573.html" rel="external">picture 5</a>). Children usually outgrow epiblepharon by two to three years of age.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Blepharitis</strong> – Blepharitis refers to inflammation or infection of the eyelids. It can cause mattering, itching, burning, tearing, and redness. Blepharitis is discussed in detail separately. (See  <a class="medical medical_review" href="/d/html/6915.html" rel="external">"Blepharitis"</a>.)</p><p></p><p class="headingAnchor" id="H13"><span class="h2">Trauma</span><span class="headingEndMark"> — </span>Trauma to the canaliculus or the nasolacrimal duct (eg, as may occur with a lid laceration or facial bone fracture) may lead to complete or partial obstruction of the lacrimal system. This can occur when the nasolacrimal duct or lacrimal sac is injured, repositioned, or heals with stenosis. These injuries require surgical treatment and/or stent placement to reestablish and preserve a patent lacrimal drainage system.</p><p class="headingAnchor" id="H14"><span class="h1">EVALUATION OF THE CHILD WITH PERSISTENT TEARING</span><span class="headingEndMark"> — </span>The evaluation of a child with persistent tearing begins with a history and physical examination. For the most common causes of abnormal tearing (eg, nasolacrimal duct obstruction, conjunctivitis, corneal abrasion), the history is often sufficient to suggest the diagnosis, which can then be confirmed on examination. Special tests to assess tear function and drainage can be performed if an abnormality of the lacrimal drainage system is suspected.</p><p class="headingAnchor" id="H15"><span class="h2">History</span><span class="headingEndMark"> — </span>Pertinent features of the patient's history will help to distinguish the likely diagnosis among the possible causes of tearing in infants and children (<a class="graphic graphic_table graphicRef63904" href="/d/graphic/63904.html" rel="external">table 1</a>). The age of the child can help narrow the differential diagnosis. As an example, nasolacrimal duct obstruction is the most common cause of tearing in children younger than one year of age, whereas conjunctivitis is more common in school-age children.</p><p>The examiner should ask about the timing and duration of the symptoms, associated signs and symptoms, what remedies have been tried, and whether the remedies were successful. For example, in a child presenting with tearing associated with redness and itching, parental report of symptom improvement with topical antihistamine drops supports the diagnosis of allergic conjunctivitis.</p><p>The presence or absence of associated signs or symptoms and exacerbating factors may suggest specific causes:</p><p class="bulletIndent1"><span class="glyph">●</span>Photophobia – Common in uveitis, glaucoma, and abnormalities involving the corneal epithelium.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Ocular itching – Prominent feature of allergic conjunctivitis.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Characteristics of the eye discharge – In nasolacrimal duct obstruction, it appears like normal tears and there is often mattering on the eyelashes; in viral and allergic conjunctivitis, it is typically watery or mucoserous; in bacterial conjunctivitis, it is typically purulent and may be copious.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Deep, boring pain – May occur with uveitis or acute glaucoma.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Foreign body sensation – Occurs with corneal abrasion, occult foreign body, and trichiasis.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Upper respiratory tract symptoms – Often are present with viral conjunctivitis.</p><p></p><p>In reviewing the past medical history, the clinician should ask if the child has any conditions that are associated with specific causes of persistent tearing, including:</p><p class="bulletIndent1"><span class="glyph">●</span>Inflammatory or autoimmune disorders (eg, juvenile idiopathic arthritis, systemic lupus erythematosus, Kawasaki disease), which are associated with uveitis (see  <a class="medical medical_review" href="/d/html/5581.html" rel="external">"Uveitis: Etiology, clinical manifestations, and diagnosis", section on 'Systemic immune-mediated causes'</a>)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Craniofacial syndromes, which can be associated with bony obstruction of the lacrimal drainage system (see  <a class="medical medical_review" href="/d/html/2926.html" rel="external">"Syndromes with craniofacial abnormalities"</a>)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Past facial or orbital trauma or facial surgery, which can contribute to obstruction of the lacrimal drainage system</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Asthma and/or allergic rhinitis, which are often associated with allergic conjunctivitis (see  <a class="medical medical_review" href="/d/html/5547.html" rel="external">"Allergic conjunctivitis: Clinical manifestations and diagnosis"</a>)</p><p></p><p>In addition, the child's medications should be reviewed since some systemic and topical medications can contribute to increased tearing through various mechanisms (eg, increased tear production, reduced drainage, conjunctival or corneal toxicity, nasolacrimal duct stenosis).</p><p class="headingAnchor" id="H16"><span class="h2">Physical examination</span><span class="headingEndMark"> — </span>A comprehensive eye examination includes visual acuity testing; examination of the ocular adnexa (ie, the structures surrounding the eye), anterior segment, pupils, confrontation visual fields, ocular motility, and fundus; and measurement of intraocular pressure (IOP). Findings in the ocular adnexa and anterior segment are particularly important in the child with persistent tearing.</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Visual acuity</strong> – When possible, visual acuity testing should be performed. Abnormal visual behavior (eg, not making eye contact, not tracking the examiner, not responding to facial expressions, not recognizing objects around them) in a child with tearing may be an indication of a vision-threatening disease (eg, congenital glaucoma). Assessment of vision in children is described in detail separately. (See  <a class="medical medical_review" href="/d/html/6261.html" rel="external">"Vision screening and assessment in infants and children"</a>.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Ocular adnexa</strong> – Evaluation of the child with persistent tearing should include examination of the ocular adnexa, including the eyelids (for blepharitis), eyelashes (for trichiasis), eyebrows, lacrimal glands, and lacrimal fossa, as well as palpation of the orbital bones. The examination of the lacrimal drainage apparatus is critical because most problems that cause tearing in children are related to lacrimal drainage apparatus abnormalities (<a class="graphic graphic_figure graphicRef53429" href="/d/graphic/53429.html" rel="external">figure 1</a>).</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>The eyelids can be gently everted to evaluate for the presence of a punctum in the medial corner of each eyelid</p><p class="bulletIndent2"><span class="glyph">•</span>The presence of anomalous lacrimal ducts that exit to the skin should be noted (<a class="graphic graphic_picture graphicRef64530" href="/d/graphic/64530.html" rel="external">picture 6</a>)</p><p class="bulletIndent2"><span class="glyph">•</span>The presence of redness or swelling near the punctum and discharge from the punctum should be noted</p><p class="bulletIndent2"><span class="glyph">•</span>The lacrimal sac, beneath the medial canthal tendon, should be inspected and palpated; swelling and/or redness of the lacrimal sac and discharge expressed from the punctum should be noted</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Anterior segment</strong> – The anterior segment consists of the conjunctiva, cornea, anterior chamber, iris, and lens (<a class="graphic graphic_figure graphicRef57690" href="/d/graphic/57690.html" rel="external">figure 2</a> and <a class="graphic graphic_figure graphicRef73347" href="/d/graphic/73347.html" rel="external">figure 3</a>). The anterior chamber is best examined with a slit lamp; however, if one is not available, the examiner can use a penlight with or without a magnifying lens (eg, a 20 diopter condensing lens). (See  <a class="medical medical_review" href="/d/html/259.html" rel="external">"Slit lamp examination"</a>.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>The conjunctiva is examined for signs of inflammation (eg, redness, chemosis, discharge).</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>The cornea is inspected for corneal abrasion, foreign body, scar, signs of uveitis (eg, keratic precipitants, band keratopathy), or signs of corneal ulcer. The diameter of the cornea should be measured if glaucoma is suspected; a horizontal corneal diameter greater than 12 mm or a diameter that is different for each eye is suggestive of glaucoma. (See <a class="local">'Glaucoma'</a> above.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>The anterior chamber is examined for inflammation (eg, cells and flare) or a cloudy appearance in the normally clear aqueous humor caused by white blood cells and proteinaceous exudate in the anterior chamber.</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>In children with tearing associated with photophobia, corneal cloudiness, and/or increased corneal diameter, the IOP should be measured, when possible. Tactile IOP may be assessed by digital examination by experienced examiners, but tonometry is preferred. Cooperation of the child is essential. Examination under anesthesia may be necessary if there is a strong suspicion of glaucoma. (See  <a class="medical medical_review" href="/d/html/6272.html" rel="external">"Overview of glaucoma in infants and children"</a>.)</p><p></p><p class="headingAnchor" id="H19"><span class="h1">SPECIAL TESTING OF THE LACRIMAL SYSTEM</span><span class="headingEndMark"> — </span>Special tests to assess tear function and drainage can be performed if an abnormality of the lacrimal drainage system is suspected.</p><p class="headingAnchor" id="H20"><span class="h2">Dye disappearance test</span><span class="headingEndMark"> — </span>The dye disappearance test is used to determine if tears are draining at the proper rate; abnormal drainage is diagnostic of nasolacrimal duct obstruction [<a href="#rid2">2</a>]. This test is not always necessary, since the diagnosis of nasolacrimal duct obstruction often can be made clinically. It is particularly helpful when symptoms are intermittent and not present at the time of the examination. The dye disappearance test is described in detail separately. (See  <a class="medical medical_review" href="/d/html/6274.html" rel="external">"Congenital nasolacrimal duct obstruction (dacryostenosis) and dacryocystocele", section on 'Evaluation and diagnosis'</a>.)</p><p class="headingAnchor" id="H21"><span class="h2">Basal secretion test</span><span class="headingEndMark"> — </span>The basal secretion test is used to evaluate basal tear production by the accessory lacrimal glands [<a href="#rid2">2</a>]. The test is performed in the following manner:</p><p class="bulletIndent1"><span class="glyph">●</span>Place a drop of topical anesthetic in the inferior cul-de-sac of each eye to anesthetize the eye and decrease the production of reflex tears.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Wipe away the excess tears.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Place a Whatman 41 filter paper strip, also called a Schirmer strip, into each inferior cul-de-sac between the eyelid and the conjunctiva near the temporal corner of the lower eyelid (<a class="graphic graphic_picture graphicRef52623" href="/d/graphic/52623.html" rel="external">picture 7</a>). Fold the strips at the notch, and place the small side in the cul-de-sac.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Leave the strips in the inferior cul-de-sac for five minutes. An advancing line of wetness on the strip becomes visible as basal tears are absorbed by the strips.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>After five minutes, carefully remove the strips. The distance from the notch in the filter paper to the edge of the tear line is measured in millimeters.</p><p></p><p>Normal basal tear secretion is 8 to 15 mm after five minutes. Overproduction of tears is indicated by a strip that becomes soaked by more than 15 mm during the test; dry eyes are indicated by a basal secretion rate of less than 8 mm.</p><p>Deficient tear formation can be caused by collagen vascular diseases (eg, juvenile idiopathic arthritis, systemic lupus erythematosus), graft-versus-host disease in bone marrow transplant patients, Graves disease, and other diseases.</p><p class="headingAnchor" id="H22"><span class="h2">Schirmer 1 test</span><span class="headingEndMark"> — </span>The Schirmer 1 test measures reflex tearing from the orbital and palpebral lobes of the lacrimal gland [<a href="#rid2">2</a>]. This test is performed in the same manner as the basal secretion test, except that the topical anesthetic is omitted. Reflex tearing is considered normal if between 10 and 25 mm of the strip is moistened after five minutes; greater than 25 mm of wetting indicates excessive tearing.</p><p class="headingAnchor" id="H23"><span class="h2">Tear breakup time</span><span class="headingEndMark"> — </span>The tear breakup time test provides information about the composition and function of the tears [<a href="#rid2">2</a>]. The tear breakup time is the length of time that the tear film forms an unbroken sheet of fluid over the cornea. The normal tear film forms an unbroken sheet of fluid over the cornea for at least 10 seconds before separating into its component layers. The tear breakup time is reduced in patients with an imbalance of components in the tear film; patients with such an imbalance often blink at an increased rate. The tear breakup time test requires a cooperative child and a slit lamp; it is performed as follows:</p><p class="bulletIndent1"><span class="glyph">●</span>Place a drop of fluorescein-stained <a class="drug drug_pediatric" data-topicid="12796" href="/d/drug information/12796.html" rel="external">saline</a> in the inferior cul-de-sac of each of the patient's eyes</p><p class="bulletIndent1"><span class="glyph">●</span>Wipe away the excess tears</p><p class="bulletIndent1"><span class="glyph">●</span>Place the child's head into the slit lamp in the normal fashion</p><p class="bulletIndent1"><span class="glyph">●</span>Focus on the cornea using the cobalt blue light of the slit lamp</p><p class="bulletIndent1"><span class="glyph">●</span>Have the child blink two or three times, and then keep his or her eyes open for approximately 15 seconds</p><p class="bulletIndent1"><span class="glyph">●</span>Observe the tear film</p><p></p><p>The surface of the tear film should remain smooth, and the green color of the <a class="drug drug_pediatric" data-topicid="105145" href="/d/drug information/105145.html" rel="external">fluorescein</a> dye should remain uniform for at least 10 seconds. Dry spots eventually develop on the cornea and appear as dark areas surrounded by the green of the fluorescein in the remainder of the tear film. The tear composition may be out of balance if dry spots are seen sooner than 10 seconds after the last blink.</p><p>Imbalance of tear composition is caused by autoimmune disorders such as systemic lupus erythematosus, rheumatoid arthritis, Graves disease, and scleroderma.</p><p class="headingAnchor" id="H1891610103"><span class="h1">REFERRAL</span><span class="headingEndMark"> — </span>Referral to an ophthalmologist is warranted in any of the following circumstances:</p><p class="bulletIndent1"><span class="glyph">●</span>Concern for glaucoma or a process involving the cornea (suggested by abnormal tearing associated with photophobia, blepharospasm, and/or large or asymmetric corneal diameters) or other sight-threatening condition (see  <a class="medical medical_review" href="/d/html/6272.html" rel="external">"Overview of glaucoma in infants and children"</a> and  <a class="medical medical_review" href="/d/html/6273.html" rel="external">"Primary infantile glaucoma"</a>)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Clinical findings suggesting dacryocystocele (a bluish swelling of the skin overlying the lacrimal sac and superior displacement of the medial canthal tendon (<a class="graphic graphic_picture graphicRef62273" href="/d/graphic/62273.html" rel="external">picture 2</a>)) since these lesions frequently require intervention (see  <a class="medical medical_review" href="/d/html/6274.html" rel="external">"Congenital nasolacrimal duct obstruction (dacryostenosis) and dacryocystocele", section on 'Dacryocystocele'</a>)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Impaired vision (ie, abnormal visual acuity testing or signs of anisometropia or amblyopia) (see  <a class="medical medical_review" href="/d/html/6261.html" rel="external">"Vision screening and assessment in infants and children"</a> and  <a class="medical medical_review" href="/d/html/6255.html" rel="external">"Amblyopia in children: Classification, screening, and evaluation"</a>)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Persistent symptoms of nasolacrimal duct obstruction (eg, in an infant, abnormal tearing that persists beyond the age of six to nine months since spontaneous resolution is uncommon after this age) (see  <a class="medical medical_review" href="/d/html/6274.html" rel="external">"Congenital nasolacrimal duct obstruction (dacryostenosis) and dacryocystocele", section on 'Natural history'</a>)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Corneal foreign body that cannot be easily removed with irrigation or a cotton-tipped applicator (see  <a class="medical medical_review" href="/d/html/6897.html" rel="external">"Corneal abrasions and corneal foreign bodies: Clinical manifestations and diagnosis"</a> and  <a class="medical medical_review" href="/d/html/90922.html" rel="external">"Corneal abrasions and corneal foreign bodies: Management"</a>)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Corneal opacity </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Symptoms that do not respond to standard treatment measures</p><p></p><p class="headingAnchor" id="H25519778"><span class="h1">INFORMATION FOR PATIENTS</span><span class="headingEndMark"> — </span>UpToDate offers two types of patient education materials, "The Basics" and "Beyond the Basics." The Basics patient education pieces are written in plain language, at the 5<sup>th</sup> to 6<sup>th</sup> grade reading level, and they answer the four or five key questions a patient might have about a given condition. These articles are best for patients who want a general overview and who prefer short, easy-to-read materials. Beyond the Basics patient education pieces are longer, more sophisticated, and more detailed. These articles are written at the 10<sup>th</sup> to 12<sup>th</sup> grade reading level and are best for patients who want in-depth information and are comfortable with some medical jargon.</p><p>Here are the patient education articles that are relevant to this topic. We encourage you to print or email these topics to your patients. (You can also locate patient education articles on a variety of subjects by searching on "patient info" and the keyword[s] of interest.)</p><p class="bulletIndent1"><span class="glyph">●</span>Basics topic (see  <a class="medical medical_basics" href="/d/html/16717.html" rel="external">"Patient education: Blocked tear ducts in babies (The Basics)"</a>)</p><p></p><p class="headingAnchor" id="H24"><span class="h1">SUMMARY AND RECOMMENDATIONS</span></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Functions of the tear film</strong> – Tears are produced by the lacrimal and accessory lacrimal glands and drain through the lacrimal drainage system (<a class="graphic graphic_figure graphicRef53429" href="/d/graphic/53429.html" rel="external">figure 1</a>). Tears and the tear film have several functions, including (see <a class="local">'Anatomy and physiology of the lacrimal system'</a> above):</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>Preventing the cornea and mucosal surfaces from drying</p><p class="bulletIndent2"><span class="glyph">•</span>Keeping the ocular surface flushed clear of debris and bacteria</p><p class="bulletIndent2"><span class="glyph">•</span>Smoothing the refractive surface of the eye (the cornea)</p><p class="bulletIndent2"><span class="glyph">•</span>Lubricating the ocular surface to ease eyelid closure</p><p class="bulletIndent2"><span class="glyph">•</span>Protecting from infection through secretory antibodies</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Causes of persistent tearing in children</strong> – Causes of persistent tearing in infants and children are summarized in the table (<a class="graphic graphic_table graphicRef63904" href="/d/graphic/63904.html" rel="external">table 1</a>). They range from mild, self-limited conditions to sight-threatening ocular emergencies. Associated signs and symptoms usually help to narrow the differential diagnosis. (See <a class="local">'Etiology of persistent tearing'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Evaluation</strong> – The evaluation of a child with persistent tearing begins with a history and physical examination. The history and examination are sufficient to make the diagnosis for most common causes of abnormal tearing (eg, nasolacrimal duct obstruction, conjunctivitis, corneal abrasion). Special tests to assess tear function and drainage can be performed if an abnormality of the lacrimal drainage system is suspected.</p><p></p><p class="bulletIndent2"><span class="glyph">•</span><strong>History</strong> – Important aspects of the history in the child with persistent tearing include age, associated signs and symptoms (photophobia, itching, pain), characteristics of the eye discharge, foreign body sensation, associated illnesses (eg, upper respiratory infection, systemic illness), and past medical history (chronic medical conditions, trauma, craniofacial abnormalities, medications). (See <a class="local">'History'</a> above.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span><strong>Eye examination</strong> – Comprehensive eye examination in the child with persistent tearing includes visual acuity testing; examination of the ocular adnexa (ie, the structures surrounding the eye, including the eyelids, eyelashes, eyebrows, lacrimal glands, lacrimal fossa, and orbital bones), the anterior segment, pupils, confrontation visual fields, ocular motility, and fundus; and measurement of intraocular pressure (IOP). (See <a class="local">'Physical examination'</a> above.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span><strong>Tests to assess tear function and drainage</strong> – Special tests of tear function and drainage may be indicated if an abnormality of the lacrimal drainage system is suspected. These include the dye disappearance test, basal secretion test, Schirmer 1 test, and tear breakup time. (See <a class="local">'Special testing of the lacrimal system'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Referral</strong> – Referral to an ophthalmologist is warranted if there is concern for glaucoma (suggested by abnormal tearing associated with photophobia, blepharospasm, and/or large or asymmetric corneal diameters) or other sight-threatening condition or if the evaluation reveals evidence of impaired vision. Other indications for referral are summarized above. (See <a class="local">'Referral'</a> above.)</p><p></p><p class="headingAnchor" id="H756474377"><span class="h1">ACKNOWLEDGMENTS</span><span class="headingEndMark"> — </span>The editorial staff at UpToDate acknowledges Michael Cassidy, COT, who contributed to an earlier version of this topic review.</p></div><div class="headingAnchor" id="references"><ol id="reference"><li class="breakAll">Lemp MA, Chacko B. Diagnosis and treatment of tear deficiencies. In: Duane's Clinical Ophthalmology, Tasman W, Jaeger EA (Eds), Lippincott-Raven, Philadelphia 1997. Vol 4.</li><li class="breakAll">Newell FW. The lacrimal apparatus. In: Ophthalmology: Principles and Concepts, 6th, CV Mosby, St. Louis 1986. p.254.</li><li><a class="nounderline abstract_t">Örge FH, Boente CS. The lacrimal system. Pediatr Clin North Am 2014; 61:529.</a></li><li><a class="nounderline abstract_t">Olitsky SE. Update on congenital nasolacrimal duct obstruction. Int Ophthalmol Clin 2014; 54:1.</a></li><li><a class="nounderline abstract_t">Maini R, MacEwen CJ, Young JD. The natural history of epiphora in childhood. Eye (Lond) 1998; 12 ( Pt 4):669.</a></li><li class="breakAll">Sauberan DP. Disorders of the Lacrimal Apparatus in Infancy and Childhood. In: Harley's Pediatric Ophthalmology, 6th Ed, Nelson LB, Olitsky SE (Eds), Lippincott Williams &amp; Wilkins, 2013.</li></ol></div><div id="topicVersionRevision">Topic 6262 Version 17.0</div></div>
+<div class="row">
+<div class="col-12">
+<h4 style="text-align: center;padding: 20px;color: cadetblue;">References</h4>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="javascript:alert('بدون لینک');" id="rid0" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>1 : Lemp MA, Chacko B. Diagnosis and treatment of tear deficiencies. In: Duane's Clinical Ophthalmology, Tasman W, Jaeger EA (Eds), Lippincott-Raven, Philadelphia 1997. Vol 4.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="javascript:alert('بدون لینک');" id="rid1" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>2 : Newell FW. The lacrimal apparatus. In: Ophthalmology: Principles and Concepts, 6th, CV Mosby, St. Louis 1986. p.254.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/24852150" id="rid2" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>3 : The lacrimal system.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/24879099" id="rid3" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>4 : Update on congenital nasolacrimal duct obstruction.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/9850262" id="rid4" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>5 : The natural history of epiphora in childhood.</p>
+</a>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

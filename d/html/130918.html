@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Robotic component separation techniques</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Robotic component separation techniques</h1>
+<div class="utdArticleSection utdStyle" id="topicContent"><div id="topicTitle">Robotic component separation techniques</div> <div class="authorSectionElem"><div class="authorsElementsLeft"><dl id="topicContributors"><dt><span> </span>Authors:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Clayton C Petro, MD</a></dd><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Lucas Beffa, MD</a></dd><dt><span> </span>Section Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Michael Rosen, MD</a></dd><dt><span> </span>Deputy Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Wenliang Chen, MD, PhD</a></dd></dl></div><div class="authorsElementsRight"><div id="literatureReviewDate"><div class="litReviewSingleLine"><bdi><span class="emphasis">Literature review current through:</span> Jan 2024.</bdi></div><div class="litReviewSingleLine"><bdi><span class="emphasis">This topic last updated:</span> Jan 27, 2023.</bdi></div></div></div></div><div id="topicWhatsNewContainer"></div><div id="topicText"><p class="headingAnchor" id="H3293848660"><span class="h1">INTRODUCTION</span><span class="headingEndMark"> — </span>Posterior component separation operations are unique in that they have robotic adaptations but no well-established laparoscopic equivalent. That is because they require precise dissection and intracorporeal suturing at difficult angles, which is feasible robotically with wristed instrumentation but technically challenging for most surgeons using traditional fixed laparoscopy [<a href="#rid1">1</a>]. </p><p>Robotic posterior component separations provide all of the benefits of retromuscular mesh repair via a minimally invasive approach, obviating a laparotomy. Early experiences have demonstrated advantages such as decreased wound morbidity and a shorter hospital stay, which may offset the cost of the robotic platform and longer operative times [<a href="#rid2">2-5</a>]. In particular, patients with a body mass index (BMI) &gt;35 kg/m<sup>2</sup> (often a relative contraindication to open reconstructions) may benefit from robotic repair as well [<a href="#rid6">6</a>]. </p><p>The impetuses to adopt robotic hernia repair are several, but at least one strong motive is the fear of complications related to intraperitoneal mesh, which are poorly defined. Intraperitoneal mesh has been the widely accepted approach to ventral hernia repair for decades. As this approach gained traction internationally, several negative sequelae became apparent, including mesh infections, mesh erosions, enteric fistulas to mesh, and significant intra-abdominal adhesions making reoperations difficult. </p><p>On the other hand, there are also complications associated with robotic dissections, including complete division of the linea alba, transection of the linea semilunaris, and intraparietal hernias related to posterior sheath disruption. The rates of these complications are not clear, but the negative effects are significant. These complications are not exclusive to robotic platforms and may also occur in open posterior component separations; however, it may be more challenging for a surgeon to correctly identify the planes and relevant anatomy robotically, particularly when first performing robotic hernia repairs. Therefore, robotic component separation techniques should be studied carefully and with as much guidance as possible to avoid patient morbidity. (See  <a class="medical medical_review" href="/d/html/130470.html" rel="external">"Overview of component separation", section on 'Linea semilunaris disruption'</a>.)</p><p>This topic will discuss robotic operations that mirror an open Rives-Stoppa retrorectus dissection and an open transversus abdominis release. Additional open component separation techniques can be found elsewhere. (See  <a class="medical medical_review" href="/d/html/130470.html" rel="external">"Overview of component separation"</a> and  <a class="medical medical_review" href="/d/html/130471.html" rel="external">"Open anterior component separation techniques"</a> and  <a class="medical medical_review" href="/d/html/130472.html" rel="external">"Open posterior component separation techniques"</a>.)</p><p>The techniques of robotic ventral hernia repair and robotic groin hernia repair are discussed in another topic. (See  <a class="medical medical_review" href="/d/html/122042.html" rel="external">"Robotic ventral hernia repair"</a> and  <a class="medical medical_review" href="/d/html/120860.html" rel="external">"Robotic groin hernia repair"</a>.)</p><p class="headingAnchor" id="H4253298193"><span class="h1">ROBOTIC TAR</span><span class="headingEndMark"> — </span>Robotic transversus abdominis release (TAR) offers a retromuscular-based repair utilizing a posterior component separation while also providing the benefits of a minimally invasive approach [<a href="#rid1">1,7</a>]. </p><p>In this transabdominal approach, a retrorectus dissection and TAR are performed robotically on each side of the abdomen, with the contralateral dissection requiring separate docking of the robot. Ultimately, the anterior fascial defect is closed, the posterior rectus sheath is reapproximated in the midline, and a retromuscular mesh is placed with significant mesh overlap.</p><p class="headingAnchor" id="H3507160422"><span class="h2">Indications</span><span class="headingEndMark"> — </span>A robotic TAR is required to repair ventral hernias between 7 and 15 cm wide or hernias &lt;7 cm wide with a narrow rectus complex (ie, the hernia width to rectus width ratio &gt;2)  (<a class="graphic graphic_algorithm graphicRef131968" href="/d/graphic/131968.html" rel="external">algorithm 1</a>) [<a href="#rid1">1,2</a>]. Wider hernia defects (eg, 15 to 20 cm) may be amenable to robotic repair, but the fascia may be difficult to close with a running locking stitch robotically under insufflation. For hernia defects &gt;7 cm, typically robotic TAR is performed bilaterally. Less frequently, unilateral TAR is performed in cases where the defect is off midline or has a lateral component on one side. Unilateral TAR may also be performed to augment a robotic Rives-Stoppa repair for hernias &lt;7 cm in a patient with a narrow rectus complex (hernia to rectus width ratio &gt;2). (See <a class="local">'Robotic Rives-Stoppa retrorectus dissection'</a> below.)</p><p class="headingAnchor" id="H455914770"><span class="h2">Operative steps</span><span class="headingEndMark"> — </span>The following steps are illustrated in this video  (<a class="graphic graphic_movie graphicRef134736" href="/d/graphic/134736.html" rel="external">movie 1</a>):</p><p class="bulletIndent1"><span class="glyph">●</span>The patient is supine with arms either tucked or extended to 90 degrees on an arm board. The operating table should be flexed to increase the space between the costal margin and anterior superior iliac spine. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Intra-abdominal access is typically achieved by an optical entry in either upper quadrant. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>After safely insufflating and clearing adhesions from the ipsilateral abdominal wall, three 8 mm robotic ports are then placed a hand's width apart as lateral as possible. When possible, the optical entry port can be one of these ports. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Next, the robot can be docked perpendicular to the patient with an Si system or from any position with an Xi system. The abdominal wall is cleared of all adhesions utilizing monopolar scissors in the dominant hand, a grasper in the nondominant hand (we prefer a Cadiere or fenestrated bipolar grasper), and the camera in the middle port. The use of cautery should be minimized next to bowel. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Once the abdominal wall is clear and hernia contents are reduced, the contralateral retrorectus space is entered by dividing the medial edge of the posterior rectus sheath just lateral to the hernia rim. Visualization of the rectus muscle belly will confirm that the appropriate plane is entered; otherwise, a broad diastasis can sometimes lead to injury of the linea alba.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>The medial posterior rectus sheath is divided superiorly to the costal margin and inferiorly below the arcuate line into the preperitoneal plane contiguous with the space of Retzius for at least 8 cm caudad and cephalad to the defect. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>The lateral extent of this dissection is the linea semilunaris, which is marked by laterally perforating neurovascular bundles that should be maintained. As in the open technique, there is at least one large perforator medially in the superior third of the dissection that needs to be sacrificed, and the inferior one-third dissection is also notable for exposure of the inferior epigastric vessels coursing cephalad. (See  <a class="medical medical_review" href="/d/html/130470.html" rel="external">"Overview of component separation", section on 'Blood vessels and nerves'</a>.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Next, the TAR is begun just medial to the neurovascular bundles starting on either side, opposite where the initial ports were placed. In the superior third, this is notable for division of the posterior lamella of the internal oblique (IO) to expose the underlying transversus abdominis (TA) muscle belly that is divided while maintaining the underlying peritoneum. The inferior two-thirds of the dissection are characterized by division of the posterior lamella of the IO and aponeurosis of the TA, again to expose the underlying peritoneum and transversalis fascia  (<a class="graphic graphic_figure graphicRef77053" href="/d/graphic/77053.html" rel="external">figure 1</a>). This division is aided by keeping tension on the posterior rectus sheath with the nondominant hand, and we prefer to use ProGrasp forceps for this.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Once the TA has been divided, the transversalis fascia should be swept down away from the TA muscle belly such that the "pretransversalis" plane can be developed laterally toward the retroperitoneum, liberating the peritoneum and associated posterior rectus sheath for substantial medialization. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>For additional liberation of the posterior sheath and peritoneum, the cord structures in males can be freed from the peritoneum, or in females the round ligament can be divided. Exposure of the psoas muscle can be more difficult on the robotic platform than open depending on the body habitus of the patient.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Once the contralateral dissection is complete, three mirror-image ports are placed on the contralateral side to perform the ipsilateral dissection. The height of the retromuscular dissection is measured, and the width of one side of the posterior layer is measured with a ruler. The width of the posterior layer dissection is then doubled, and the mesh is cut to that specification.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>At this point, a scrolled, uncoated medium-weight polypropylene mesh (or appropriately sized to fit the retromuscular space as described above) is rolled tightly and secured with dyed braided suture, leaving a 2 cm tail of the mesh unrolled. The mesh is inserted through a port on the contralateral side and then placed at the lateral extent of the retromuscular dissection underneath the contralaterally placed ports. The 2 cm tail of the mesh is then fixated to the lateral abdominal wall under the ports with braided absorbable suture, and the suture holding the scroll in place is divided.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>The robot is then undocked and redocked to the contralateral ports. Dissection will then continue on the initial entry side of the abdominal wall, with a retromuscular dissection that is exactly the same as the initial side. The three ports used for initial adhesiolysis are pulled back into the muscle, leaving holes in the peritoneal layer that is dropped down from the ports. The pretransversalis dissection on the initial entry side of the abdominal wall needs to keep the three defects in the peritoneum as small as possible or closed when developing the preperitoneal plane.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>The principles for the subxiphoid and retropubic dissection are the same as for the open technique. </p><p></p><p class="bulletIndent2"><span class="glyph">•</span>For the subxiphoid dissection, the lateral preperitoneal space is connected to the retroxiphoid preperitoneal fat plane by dividing the posterior rectus sheath, taking care not to detach the anterior rectus sheath from the linea alba or divide the medial fibers of the diaphragm. Working in the retroxiphoid space directly on the peritoneum and keeping diaphragm fibers "up" will lead to the diaphragm's central tendon for substantial superior overlap. (See  <a class="medical medical_review" href="/d/html/130472.html" rel="external">"Open posterior component separation techniques", section on 'Superior preperitoneal dissection'</a>.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>The inferior preperitoneal plane can typically be matured bluntly into the space of Retzius. However, in the setting of a previous low laparotomy, this can be more challenging, and care should be taken not to injure the bladder. The smooth muscle of the bladder bleeds easily, so any substantial bleeding in this area should cause concern for a bladder injury and be investigated by clamping the Foley catheter and filling it with <a class="drug drug_general" data-topicid="9929" href="/d/drug information/9929.html" rel="external">saline</a> and <a class="drug drug_general" data-topicid="9636" href="/d/drug information/9636.html" rel="external">methylene blue</a>. (See  <a class="medical medical_review" href="/d/html/130472.html" rel="external">"Open posterior component separation techniques", section on 'Inferior preperitoneal dissection'</a>.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Once the entire retromuscular pocket has been developed, we prefer to close any holes in the peritoneum with 3-0 braided absorbable suture and the posterior rectus sheaths with 2-0 absorbable self-locking suture to isolate the visceral from the large retromuscular space. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>At this point, the insufflation pressure can be decreased to 8 mmHg to ease closure of the anterior fascial defect, which we prefer to do with a running #1 slowly absorbable unidirectional barbed suture. Taking intermittent bites of hernia sac and subcutaneous tissue can help obliterate dead space and the potential for a postoperative seroma. Of note, if there was any tension limiting closure of the posterior rectus sheaths, the anterior fascia could be closed first to mitigate some of that tension. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>The mesh is then identified under the ports and unfurled along the closed posterior sheath to fill the retromuscular pocket, or the robot can be undocked and the scrolled mesh can be unrolled laparoscopically. For these cases, we do not typically perform additional fixation.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>One author (CP) leaves two No. 19 Blake drains in the retromuscular space through our upper lateral port sites. The other author (LB) will leave one 19 French round Blake drain in the retromuscular space on top of the mesh. </p><p></p><p class="headingAnchor" id="H199755671"><span class="h2">Hybrid robotic TAR</span><span class="headingEndMark"> — </span>In difficult cases where the anterior fascia is under significant tension or the patient has a large hernia sac and/or associated scar that needs to be excised, a robotic platform need not be entirely abandoned. In such cases, if the adhesiolysis and retromuscular dissection can be achieved using the robot, the scar and hernia sac can be excised, the mesh placed, and the anterior fascia closed through a laparotomy incision much smaller than would typically be done for a traditional open repair.</p><p class="headingAnchor" id="H4067423169"><span class="h2">Outcomes of robotic TAR</span><span class="headingEndMark"> — </span>Compared with historical controls of open TAR, robotic TAR has been associated with longer operative times but shorter length of stay, lower overall and wound complication rates, and similar readmission rates [<a href="#rid2">2,5</a>]. Likewise, the hybrid robotic TAR approach also reduced length of stay and wound morbidity [<a href="#rid8">8,9</a>]. While such retrospective reviews are potentially prone to selection bias, an ongoing randomized trial of open versus robotic TAR for hernias 7 to 15 cm wide will provide high-level evidence (NCT03007758). </p><p class="headingAnchor" id="H665050670"><span class="h1">ROBOTIC RIVES-STOPPA RETRORECTUS DISSECTION</span><span class="headingEndMark"> — </span>Those who standardized the transabdominal robotic transversus abdominis release (TAR) technique recognized that for smaller hernia defects, typically &lt;7 cm in the presence of a wide rectus complex, a posterior component separation was typically not necessary [<a href="#rid1">1</a>]. For these patients, the preperitoneal or retrorectus space provided a pocket for mesh placement with plenty of overlap. </p><p>A robotic dissection of the retrorectus space can be accomplished in two ways, transabdominal or extended totally extraperitoneal (eTEP). The transabdominal approach, which allows for direct visualization of the viscera, can be preferable if reduction of incarcerated hernia contents is challenging, as in the case of a small defect with a voluminous hernia sac, particularly with bowel involvement. Proponents of the extraperitoneal technique suggest that it is favorable in the context of a multiply reoperative abdomen since intra-abdominal adhesions do not need to be dealt with. That said, extreme care needs to be taken during the retromuscular dissection as inadvertent bowel injury can occur to the underlying viscera during dissection of the hernia sac or previous scars. The eTEP approach is favored by many for primary and concomitant epigastric, umbilical, or inguinal hernias. It is also favorable when intraperitoneal mesh is relatively contraindicated, such as in patients with Crohn’s disease.</p><p class="headingAnchor" id="H4275647225"><span class="h2">Indications</span><span class="headingEndMark"> — </span>Robotic Rives-Stoppa retrorectus dissections are usually performed for hernias &lt;7 cm wide with a wide rectus complex (ie, when the hernia to rectus width ratio is &lt;2)  (<a class="graphic graphic_algorithm graphicRef131968" href="/d/graphic/131968.html" rel="external">algorithm 1</a>).</p><p class="headingAnchor" id="H1474098918"><span class="h2">Transabdominal approach</span><span class="headingEndMark"> — </span>In this transabdominal technique, the retrorectus space is developed, the anterior fascial defect is closed, a retrorectus mesh is placed, and the retrorectus space is closed, all from an intraperitoneal perspective [<a href="#rid1">1,3</a>].</p><p class="headingAnchor" id="H2021355331"><span class="h3">Operative steps</span></p><p class="bulletIndent1"><span class="glyph">●</span>The same first five steps of the robotic TAR operation are performed in preparation for the retromuscular dissection. (See <a class="local">'Operative steps'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Instead of starting with the contralateral retrorectus dissection, the ipsilateral posterior rectus sheath is incised at least 5 cm from the ipsilateral edge of the hernia defect and at least 5 cm above and below the superior and inferior aspect of the hernia defect. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Next, an ipsilateral retrorectus dissection is performed from lateral to medial toward the linea alba. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>The medial edge of the posterior rectus sheath is then divided before it inserts into the linea alba, allowing entrance into the preperitoneal fat plane beneath the linea alba. This dissection is most easily initiated well above and below the midline fascial defect to take advantage of the robust preperitoneal fat and associated peritoneum in virgin areas of the midline. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Often, the hernia sac and associated fat can be reduced with the peritoneum and posterior rectus sheath. However, if a hole is made in the hernia sac or peritoneum, it can be closed later.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Next, the contralateral posterior rectus sheath is incised to expose the underlying rectus muscle and allow access to the contralateral retrorectus space. Beware that a large diastasis can pose a risk of inadvertent injury to the midline (linea alba), which should be quickly identified by recognizing that the rectus muscle is not visualized. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Once the contralateral retrorectus space is entered, the posterior rectus sheath can be divided to allow for a sufficient contralateral retrorectus dissection for at least 5 cm lateral to the anterior fascial defect or to the contralateral linea semilunaris identified by the lateral neurovascular bundles. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Once sufficient overlap is achieved in each direction (5 cm beyond each extent of the fascial defect), the insufflation can be decreased to allow for closure of the anterior fascial defect with a running #1 slowly absorbable unidirectional barbed suture. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>An uncoated piece of polypropylene is then placed in the retromuscular pocket, and suture fixation may be utilized, although it is often unnecessary, to secure it in position while closing the posterior rectus sheath flaps and any holes, typically with a running absorbable 3-0 self-locking suture.</p><p></p><p class="headingAnchor" id="H1490833291"><span class="h2">eTEP approach</span><span class="headingEndMark"> — </span>The robotic eTEP approach affords retromuscular mesh placement for small- to medium-sized defects (typically &lt;7 cm) without requiring intraperitoneal access or adhesiolysis [<a href="#rid10">10</a>]. </p><p>In this approach, the retrorectus space is directly accessed and the entire dissection stays extraperitoneal. Taking advantage of the underlying peritoneum and preperitoneal fat that bridge the adjacent posterior rectus sheaths, the contralateral retrorectus space is accessed by "crossing over" in the midline preperitoneal space while keeping the linea alba and anterior rectus fascia intact. The contralateral retrorectus space can then be matured and the contiguous hernia sac and contents reduced. Any defect in the posterior sheath or contiguous hernia sac as well as the anterior fascial defect can all be closed from the retrorectus position without necessarily requiring intraperitoneal access [<a href="#rid10">10</a>]. In cases where the posterior rectus sheath is under tension, a unilateral TAR can be added to the contralateral retrorectus dissection [<a href="#rid11">11</a>]. (See <a class="local">'Robotic TAR'</a> above.)</p><p>The technical tradeoff of the eTEP technique is the blind reduction of the hernia sac and its contents while crossing the midline, which can seem risky. Certainly, any difficulty or concern for a visceral injury can be mitigated by either opening the hernia sac itself or by placement of intraperitoneal ports on the contralateral side to safely allow for visualization of the incarcerated contents and safe reduction of the viscera from the abdominal wall [<a href="#rid12">12</a>]. </p><p>Robotic eTEP requires careful planning to ensure sufficient working space in the ipsilateral retrorectus pocket; the robot can be docked laterally, inferiorly, or superiorly, depending on the location of the hernia and the width of the rectus muscle. Typically a rectus of at least 6 cm wide is necessary for the lateral dock approach, which is used for hernias in the European Hernia Society (EHS) medial zone 2 (epigastric), 3 (umbilical), or 4 (infraumbilical) regions  (<a class="graphic graphic_figure graphicRef117996" href="/d/graphic/117996.html" rel="external">figure 2</a>). Narrower rectus complexes or zone 5 (suprapubic) hernias require superior docking, while zone 1 (subxiphoid) hernias require inferior docking  (<a class="graphic graphic_algorithm graphicRef131967" href="/d/graphic/131967.html" rel="external">algorithm 2</a>).</p><p>If the rectus space is wide enough to allow for a lateral eTEP dock but the ratio of the hernia to rectus width ratio is &gt;2, then the need for a unilaterally robotic TAR on the contralateral dissection should be anticipated. This is required approximately 10 to 22 percent of the time to relieve tension on the posterior rectus sheath closure [<a href="#rid11">11,13</a>]. A robotic TAR can be accomplished with the eTEP as well as the transabdominal approach.</p><p class="headingAnchor" id="H2199888345"><span class="h3">Operative steps: Lateral dock</span><span class="headingEndMark"> — </span>The standard technique of a robotic eTEP ventral hernia repair is illustrated in this video  (<a class="graphic graphic_movie graphicRef134772" href="/d/graphic/134772.html" rel="external">movie 2</a>) and outlined below:</p><p class="bulletIndent1"><span class="glyph">●</span>The patient is placed in a supine position with both arms tucked and the bed flexed at the hip to widen the space between the costal margin and the anterior superior iliac spine. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>In the upper abdomen, starting on either the right or left side, the retrorectus space is directly accessed with a 5 mm port and 0 degree laparoscope. It is critical not to enter the peritoneum at this step, or else insufflation will make the ensuing dissection difficult. As soon as the red muscle of the rectus is seen under the anterior rectus sheath, the operator of the laparoscope should drop their hands toward the patient's head and find a horizon with the posterior rectus sheath inferiorly and red rectus muscle belly anteriorly. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Alternatively, the initial retrorectus space can be accessed by making an incision 3 cm above the costal margin; the rectus abdominis muscle inserts a few centimeters above the costal margin, allowing access into the retrorectus space from this area [<a href="#rid14">14</a>]. Once the anterior rectus sheath is incised and the rectus muscle bluntly dissected, a regular or balloon trocar can be placed between the rectus muscle and the posterior sheath.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>The tip of the laparoscope should be advanced along this red/white horizon for at least a few additional centimeters before the laparoscope and port introducer are removed and the insufflation tubing connected. Here we use gentle insufflation pressure of 8 to 10 mmHg to prevent peritoneal insufflation just in case a small inadvertent defect was made in the peritoneum. If intraperitoneal insufflation occurs, then a contralateral venting port can be placed intraperitoneally under direct visualization with the Visiport technique. If visualization becomes limited, the pressure can be gradually increased to 10 to 12 mmHg. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Next, the retrorectus pocket is matured using blunt dissection with the 30 degree laparoscope and port. Retracting the camera into the port allows the surgeon to use the tip of the port to bluntly dissect without disrupting visualization. Sweeping the muscle belly directly off the posterior rectus sheath will prevent tunneling into the rectus belly or disruption of an epigastric perforator, which can be challenging to manage before an additional port is placed.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Once sufficient working space in the retrorectus pocket is created, the surgeon should work toward the lateral extent of the upper rectus space, which is distinguished by laterally perforating neurovascular bundles and visualization of the underlying transversus abdominis belly.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>At the lateral extent of the rectus space, an 8 mm robotic port is placed into the retrorectus pocket. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Using either a hook or scissors, the retrorectus space should be further developed from the linea semilunaris (demarcated by the neurovascular bundles) toward the midline. For most midline (epigastric, umbilical, infraumbilical) hernias, two additional 8 mm ports should be placed at the lateral edge of the retrorectus space that was just developed, taking care not to injure the lateral perforators or the inferior epigastric vessels [<a href="#rid15">15</a>]. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Once the ports are placed with sufficient retrorectus space to work, the robot can be docked with a camera in the middle, scissors in the cephalad hand, and an atraumatic grasper in the inferior hand. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Next, the rest of the retrorectus space should be developed to the medial edge of the rectus and typically the decussation of fibers in the midline, indicating fusion of the anterior and posterior rectus sheaths to form the linea alba.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Then, at the level of the upper port, the medial aspect of the posterior rectus sheath is incised approximately 0.5 cm below the linea alba to enter the preperitoneal plane beneath the linea alba without disrupting the anterior rectus sheath and linea alba junction.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>As the medial posterior rectus sheath is incised along that horizon (0.5 cm below the linea alba), the preperitoneal fat contiguous with the falciform ligament should be swept down with the peritoneum to mature the preperitoneal space and expose the underbelly of the linea alba. Often, small, occult epigastric hernias can be encountered as this fat is reduced.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>This dissection is continued inferiorly until the midline hernia sac is encountered. For primary defects, the hernia sac and incarcerated contents can often be reduced en bloc with the peritoneum and preperitoneal fat. Sometimes this is possible with hernia sacs from incisional hernias as well. Any difficulty with reducing the hernia sac, concern for incarcerated viscera, or visceral injury should prompt opening of the hernia sac (which can be closed later) to evaluate the contents, reduce them, and continue with dissecting out the hernia sac. If the dimensions or dissection planes of the hernia sac are unclear, dissection can cross over to the contralateral retrorectus space above or below the edge of the hernia sac to help stay oriented. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>The superior preperitoneal plane should be matured to the contralateral side without detaching the peritoneum from the contralateral posterior rectus sheath.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Cautery to the underbelly of the contralateral posterior rectus sheath will cause it to contract and confirm that the dissection is sufficiently lateral to divide the posterior rectus sheath and enter the contralateral retrorectus space. It is common to underestimate the width of a midline linea alba and associated diastasis, so care should be taken to visualize the rectus belly when the posterior rectus sheath is divided. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>The contralateral retrorectus space can be matured laterally to the linea semilunaris, again confirmed by the row of laterally perforating neurovascular bundles. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Ultimately, the superior retrorectus dissections can be carried down to circumferentially inscribe the midline hernia defect and aid its dissection. Once the hernia sac is reduced, the inferior retrorectus dissection can be carried down inferiorly into the space of Retzius. This creates a large retrorectus pocket.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>If it is not already done, the insufflation should be lowered to 8 mmHg to aid anterior fascial approximation with a running #1 slowly absorbable barbed unidirectional suture. While some authors advocate for plicating any associated diastasis to avoid a subsequent soft tissue bulge, we do not do it routinely, as diastasis plication can result in a soft tissue ridge. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Any holes in the posterior rectus sheath/peritoneum/hernia sac complex should be closed to isolate the underlying viscera. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>At this point, significant tension on the posterior sheath closure should prompt a contralateral TAR performed with the eTEP approach. This will offset the tension on the posterior sheath at the midline, thus reducing the potential for intraparietal hernias. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Once the posterior and anterior components are closed to complete the retromuscular pocket, an assistant port can be placed in the retromuscular pocket, and the dimension of the dissection can be measured. A mesh can then be cut and placed into the measured retrorectus space robotically. Alternatively, the robot can be undocked, and the retromuscular pocket can be measured laparoscopically. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>A piece of uncoated medium-weight polypropylene is cut to fit the dimensions of the retromuscular space and is placed, in our preference, without fixation. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>There should be a low threshold to leave a drain to prevent seroma formation, depending on the size of the retromuscular pocket and dead space.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Alternative techniques are required for subxiphoid hernias, suprapubic hernias, or when the ipsilateral retrorectus space is insufficient to provide adequate working space (&lt;6 cm). </p><p></p><p class="headingAnchor" id="H3090103761"><span class="h3">Operative steps: Inferior dock</span><span class="headingEndMark"> — </span>For isolated subxiphoid and paraumbilical hernias, the retrorectus space is accessed in the same fashion, and the midline crossover to the contralateral retrorectus space is done laparoscopically well below the hernia defect. Once enough space is made in both retrorectus spaces, robotic ports can be placed to perform the rest of the retromuscular dissection facing cephalad. </p><p class="headingAnchor" id="H1515959653"><span class="h3">Operative steps: Superior dock</span><span class="headingEndMark"> — </span>Likewise, for lower midline and suprapubic defects or when the ipsilateral retrorectus space is not wide enough to accommodate a side dock (&lt;6 cm), the superior dock can be utilized by performing the superior crossover laparoscopically to the contralateral retrorectus space. Next, the robotic ports are placed cephalad, and the dissection is completed facing caudad.</p><p class="headingAnchor" id="H416762537"><span class="h3">Outcomes</span><span class="headingEndMark"> — </span>Hernias &lt;7 cm that are potential eTEP candidates would otherwise most commonly be repaired by a minimally invasive intraperitoneal onlay mesh (IPOM). (See  <a class="medical medical_review" href="/d/html/122042.html" rel="external">"Robotic ventral hernia repair", section on 'Intraperitoneal onlay mesh'</a>.)</p><p>Propensity score-matched comparison of robotic intraperitoneal mesh repairs with eTEP repairs found that the eTEP approach was associated with fewer overall complications and fewer wound complications [<a href="#rid16">16</a>]. Other retrospective series reported less pain for eTEP patients compared with intraperitoneal mesh repairs in the postoperative period [<a href="#rid17">17,18</a>]. However, in the REVEAL trial, which randomly assigned 100 patients to either robotic eTEP or robotic IPOM repair of midline ventral hernias ≤7 cm, there was no difference in pain at postoperative day 7 or 30 [<a href="#rid19">19</a>]. Secondary outcomes also showed similar results in regards to same-day discharge, postoperative quality of life, and opioid consumption. Robotic IPOM did require less surgeon workload and a shorter operative time (107 versus 165 minutes) and resulted in fewer postoperative seromas than robotic eTEP repair. The cost saving of eTEP associated with less expensive mesh utilization was therefore offset by the longer operative time.</p><p>Even if eTEP repairs offer no benefit with regard to patient-reported outcomes or recurrence, some surgeons would favor extraperitoneal mesh to avoid the rare but devastating late mesh complication that can occur many years after intraperitoneal placement [<a href="#rid20">20</a>]. That said, the risk of long-term complications from intraperitoneal mesh must also be weighed against the risks associated with achieving extraperitoneal mesh placement, such as posterior sheath or peritoneal breakdown, or inappropriate dissection of the abdominal wall.</p><p class="headingAnchor" id="H558596484"><span class="h1">SOCIETY GUIDELINE LINKS</span><span class="headingEndMark"> — </span>Links to society and government-sponsored guidelines from selected countries and regions around the world are provided separately. (See  <a class="medical medical_society_guidelines" href="/d/html/117292.html" rel="external">"Society guideline links: Ventral hernia"</a> and  <a class="medical medical_society_guidelines" href="/d/html/116783.html" rel="external">"Society guideline links: Laparoscopic and robotic surgery"</a>.)</p><p class="headingAnchor" id="H1655951981"><span class="h1">SUMMARY AND RECOMMENDATIONS</span></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Benefits of robotic component separation</strong> – Robotic component separations provide all of the benefits of retromuscular mesh repair via a minimally invasive approach, obviating a laparotomy. Due to technical reasons, these robotic procedures do not have a well-established laparoscopic equivalent. (See <a class="local">'Introduction'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Selection of robotic techniques based on hernia width </strong> (<a class="graphic graphic_algorithm graphicRef131968" href="/d/graphic/131968.html" rel="external">algorithm 1</a>)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>For patients undergoing robotic repair of a ventral hernia &lt;7 cm wide, we suggest a Rives-Stoppa retrorectus repair rather than a transversus abdominis release (TAR) (<a class="grade" href="https://medilib.ir/uptodate/show/grade_6" rel="external">Grade 2C</a>). A unilateral TAR may be added in patients who have a narrow rectus complex (hernia to rectus width ratio &gt;2) to facilitate posterior sheath closure. (See <a class="local">'Robotic Rives-Stoppa retrorectus dissection'</a> above.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>For patients undergoing robotic repair of a ventral hernia between 7 and 15 cm wide, we suggest a transabdominal bilateral TAR rather than a Rives-Stoppa retrorectus repair. (<a class="grade" href="https://medilib.ir/uptodate/show/grade_6" rel="external">Grade 2C</a>). (See <a class="local">'Robotic TAR'</a> above.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>Ventral hernias wider than 15 cm may be challenging to repair robotically given the difficulty with suturing the anterior fascia under insufflation and should only be approached robotically in select cases based on surgeon experience and hernia characteristics. (See <a class="local">'Robotic TAR'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Robotic Rives-Stoppa retrorectus repair techniques </strong></p><p></p><p class="bulletIndent2"><span class="glyph">•</span>With the transabdominal technique, the retrorectus space is developed, the anterior fascial defect is closed, a retrorectus mesh is placed, and the retrorectus space is closed, all from an intraperitoneal perspective. (See <a class="local">'Transabdominal approach'</a> above.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>With the extended totally extraperitoneal (eTEP) approach, the retrorectus space is directly accessed while staying totally extraperitoneally without requiring intraperitoneal access or adhesiolysis. The contralateral retrorectus space is accessed by "crossing over" in the midline preperitoneal space while keeping the linea alba and anterior rectus fascia intact. (See <a class="local">'eTEP approach'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>eTEP</strong> <strong>robotic docking site selection </strong>– Robotic eTEP requires careful planning to ensure there is sufficient working space in the ipsilateral retrorectus pocket; the robot can be docked laterally, inferiorly, or superiorly, depending on the location of the hernia and the width of the rectus muscle  (<a class="graphic graphic_algorithm graphicRef131967" href="/d/graphic/131967.html" rel="external">algorithm 2</a>): </p><p></p><p class="bulletIndent2"><span class="glyph">•</span>Typically, a rectus complex of at least 6 cm wide is necessary for the lateral dock approach, which is used for hernias in the European Hernia Society (EHS) medial zone 2 (epigastric), 3 (umbilical), or 4 (infraumbilical) regions. </p><p></p><p class="bulletIndent2"><span class="glyph">•</span>Narrower rectus complexes or zone 5 (suprapubic) hernias require superior docking, </p><p></p><p class="bulletIndent2"><span class="glyph">•</span>Zone 1 (subxiphoid) hernias require inferior docking. (See <a class="local">'eTEP approach'</a> above.)</p></div><div class="headingAnchor" id="references"><ol id="reference"><li><a class="nounderline abstract_t">Warren JA, Cobb WS, Ewing JA, Carbonell AM. Standard laparoscopic versus robotic retromuscular ventral hernia repair. Surg Endosc 2017; 31:324.</a></li><li><a class="nounderline abstract_t">Martin-Del-Campo LA, Weltz AS, Belyansky I, Novitsky YW. Comparative analysis of perioperative outcomes of robotic versus open transversus abdominis release. Surg Endosc 2018; 32:840.</a></li><li><a class="nounderline abstract_t">Halpern DK, Howell RS, Boinpally H, et al. Ascending the Learning Curve of Robotic Abdominal Wall Reconstruction. JSLS 2019; 23.</a></li><li><a class="nounderline abstract_t">Carbonell AM, Warren JA, Prabhu AS, et al. Reducing Length of Stay Using a Robotic-assisted Approach for Retromuscular Ventral Hernia Repair: A Comparative Analysis From the Americas Hernia Society Quality Collaborative. Ann Surg 2018; 267:210.</a></li><li><a class="nounderline abstract_t">Bittner JG 4th, Alrefai S, Vy M, et al. Comparative analysis of open and robotic transversus abdominis release for ventral hernia repair. Surg Endosc 2018; 32:727.</a></li><li><a class="nounderline abstract_t">Addo A, Lu R, Broda A, et al. Impact of Body Mass Index (BMI) on perioperative outcomes following minimally invasive retromuscular abdominal wall reconstruction: a comparative analysis. Surg Endosc 2021; 35:5796.</a></li><li class="breakAll">Ballecer C. Robotic ventral hernia repair. In: Hernia Surgery: Current Principles, Novitsky YW (Ed), Springer, 2016. p.273.</li><li><a class="nounderline abstract_t">Abdu R, Vasyluk A, Reddy N, et al. Hybrid robotic transversus abdominis release versus open: propensity-matched analysis of 30-day outcomes. Hernia 2021; 25:1491.</a></li><li><a class="nounderline abstract_t">Halka JT, Vasyluk A, Demare A, et al. Hybrid robotic-assisted transversus abdominis release versus open transversus abdominis release: a comparison of short-term outcomes. Hernia 2019; 23:37.</a></li><li><a class="nounderline abstract_t">Belyansky I, Reza Zahiri H, Sanford Z, et al. Early operative outcomes of endoscopic (eTEP access) robotic-assisted retromuscular abdominal wall hernia repair. Hernia 2018; 22:837.</a></li><li><a class="nounderline abstract_t">Gokcal F, Morrison S, Kudsi OY. Robotic retromuscular ventral hernia repair and transversus abdominis release: short-term outcomes and risk factors associated with perioperative complications. Hernia 2019; 23:375.</a></li><li><a class="nounderline abstract_t">Mazzola Poli de Figueiredo S, Belyansky I, Lu R. Pitfalls and complications of enhanced-view totally extraperitoneal approach to abdominal wall reconstruction. Surg Endosc 2023; 37:3354.</a></li><li><a class="nounderline abstract_t">Santos DA, Limmer AR, Gibson HM, Ledet CR. The current state of robotic retromuscular repairs-a qualitative review of the literature. Surg Endosc 2021; 35:456.</a></li><li><a class="nounderline abstract_t">Daes J, Belyansky I. Anatomical Considerations and Tips for Laparoscopic and Robotic-Assisted Enhanced-View Totally Extraperitoneal Rives-Stoppa Repair for Midline Hernia. J Am Coll Surg 2021; 233:e1.</a></li><li><a class="nounderline abstract_t">Muysoms FE, Miserez M, Berrevoet F, et al. Classification of primary and incisional abdominal wall hernias. Hernia 2009; 13:407.</a></li><li><a class="nounderline abstract_t">Kudsi OY, Gokcal F, Chang K. Robotic intraperitoneal onlay versus totally extraperitoneal (TEP) retromuscular mesh ventral hernia repair: A propensity score matching analysis of short-term outcomes. Am J Surg 2020; 220:837.</a></li><li><a class="nounderline abstract_t">Penchev D, Kotashev G, Mutafchiyski V. Endoscopic enhanced-view totally extraperitoneal retromuscular approach for ventral hernia repair. Surg Endosc 2019; 33:3749.</a></li><li><a class="nounderline abstract_t">Kumar N, Palanisamy NV, Parthasarathi R, et al. A comparative prospective study of short-term outcomes of extended view totally extraperitoneal (e-TEP) repair versus laparoscopic intraperitoneal on lay mesh (IPOM) plus repair for ventral hernia. Surg Endosc 2021; 35:5072.</a></li><li><a class="nounderline abstract_t">Petro CC, Montelione KC, Zolin SJ, et al. Robotic eTEP versus IPOM evaluation: the REVEAL multicenter randomized clinical trial. Surg Endosc 2023; 37:2143.</a></li><li><a class="nounderline abstract_t">Muysoms FE, Bontinck J, Pletinckx P. Complications of mesh devices for intraperitoneal umbilical hernia repair: a word of caution. Hernia 2011; 15:463.</a></li></ol></div><div id="topicVersionRevision">Topic 130918 Version 7.0</div></div>
+<div class="row">
+<div class="col-12">
+<h4 style="text-align: center;padding: 20px;color: cadetblue;">References</h4>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/27287903" id="rid0" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>1 : Standard laparoscopic versus robotic retromuscular ventral hernia repair.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/28733746" id="rid1" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>2 : Comparative analysis of perioperative outcomes of robotic versus open transversus abdominis release.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/30846894" id="rid2" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>3 : Ascending the Learning Curve of Robotic Abdominal Wall Reconstruction.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/28350568" id="rid3" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>4 : Reducing Length of Stay Using a Robotic-assisted Approach for Retromuscular Ventral Hernia Repair: A Comparative Analysis From the Americas Hernia Society Quality Collaborative.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/28730275" id="rid4" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>5 : Comparative analysis of open and robotic transversus abdominis release for ventral hernia repair.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/33051760" id="rid5" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>6 : Impact of Body Mass Index (BMI) on perioperative outcomes following minimally invasive retromuscular abdominal wall reconstruction: a comparative analysis.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/33051760" id="rid6" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>7 : Impact of Body Mass Index (BMI) on perioperative outcomes following minimally invasive retromuscular abdominal wall reconstruction: a comparative analysis.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/32607651" id="rid7" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>8 : Hybrid robotic transversus abdominis release versus open: propensity-matched analysis of 30-day outcomes.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/30456551" id="rid8" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>9 : Hybrid robotic-assisted transversus abdominis release versus open transversus abdominis release: a comparison of short-term outcomes.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/29974283" id="rid9" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>10 : Early operative outcomes of endoscopic (eTEP access) robotic-assisted retromuscular abdominal wall hernia repair.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/30771032" id="rid10" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>11 : Robotic retromuscular ventral hernia repair and transversus abdominis release: short-term outcomes and risk factors associated with perioperative complications.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/36575221" id="rid11" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>12 : Pitfalls and complications of enhanced-view totally extraperitoneal approach to abdominal wall reconstruction.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/32926251" id="rid12" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>13 : The current state of robotic retromuscular repairs-a qualitative review of the literature.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/34020038" id="rid13" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>14 : Anatomical Considerations and Tips for Laparoscopic and Robotic-Assisted Enhanced-View Totally Extraperitoneal Rives-Stoppa Repair for Midline Hernia.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/19495920" id="rid14" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>15 : Classification of primary and incisional abdominal wall hernias.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/31973843" id="rid15" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>16 : Robotic intraperitoneal onlay versus totally extraperitoneal (TEP) retromuscular mesh ventral hernia repair: A propensity score matching analysis of short-term outcomes.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/30680657" id="rid16" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>17 : Endoscopic enhanced-view totally extraperitoneal retromuscular approach for ventral hernia repair.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/32968915" id="rid17" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>18 : A comparative prospective study of short-term outcomes of extended view totally extraperitoneal (e-TEP) repair versus laparoscopic intraperitoneal on lay mesh (IPOM) plus repair for ventral hernia.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/36323978" id="rid18" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>19 : Robotic eTEP versus IPOM evaluation: the REVEAL multicenter randomized clinical trial.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/20556448" id="rid19" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>20 : Complications of mesh devices for intraperitoneal umbilical hernia repair: a word of caution.</p>
+</a>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

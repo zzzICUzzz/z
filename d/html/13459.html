@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Calculator: QT interval correction (ECG) in adults and children</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Calculator: QT interval correction (ECG) in adults and children</h1>
+<div class="utdArticleSection" id="topicContentCalculator"><div id="topicText">
+<div id="mc3k">
+<form action="" id="QTIntervalCorrection_form" name="QTIntervalCorrection_form" onkeydown="formKeyDown(event);" onkeypress="resetInTime(); return validNumberField(event);" onkeyup="QTIntervalCorrection_fx();" onreset="document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
+<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
+<td align="left" bgcolor="#eeeeee">
+<span class="medCalcFontTitleBox">
+
+ 
+Calculator: QT interval correction (ECG) in adults and children
+</span></td></tr></tbody></table><br/> <br/>
+<div id="calc_main">
+<center>
+<span class="medCalcFontIO">
+Input
+</span>
+<br/> <br/>
+<table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
+<tbody><tr><td align="right" width="42%"><span class="medCalcFontOneBold">QT Interval</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value QT Interval" name="QT_Interval_param" onblur="QTIntervalCorrection_fx(); minMaxCheck();" onchange="QTIntervalCorrection_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <span style="white-space: nowrap;"><span class="medCalcFontOneBold">millisec</span>
+</span></td></tr>
+<tr><td align="right" width="42%"><span class="medCalcFontOneBold">ECG heart rate measure</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value ECG heart rate measure" name="ECG_heart_rate_measure_param" onblur="QTIntervalCorrection_fx(); minMaxCheck();" onchange="QTIntervalCorrection_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value ECG heart rate measure" class="medCalcFontSelect" name="ECG_heart_rate_measure_unit" onchange="QTIntervalCorrection_fx(); minMaxCheck();" style="width:280;">
+<option selected="selected" value="1|0|Heart rate (BPM)">Heart rate (BPM)</option>
+<option value="1|0|RR interval (millisec)">RR interval (millisec)</option>
+</select></td></tr>
+</tbody></table>
+</center>
+<br/> <br/><center><span class="medCalcFontIO">Results<span class="medCalcFontOne" id="inputchk"><br/> <br/><b>Important:</b> Inputs must be complete to perform calculation. <br/></span></span>
+<br/> <br/>
+<table cellpadding="4" class="medCalcResultBox" summary="EBMcalc Table">
+<tbody><tr><td colspan="3"> <br/></td></tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">Heart rate</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value Heart rate" aria-readonly="true" name="Heart_rate_param" size="6" type="text"/></td>
+<td align="left" valign="top"><span class="medCalcFontResultParam">
+<span style="white-space: nowrap;"><span class="medCalcFontResultParam">BPM</span>
+</span>
+</span></td>
+</tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">RR interval</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value RR interval" aria-readonly="true" name="RR_interval_param" size="6" type="text"/></td>
+<td align="left" valign="top"><span class="medCalcFontResultParam">
+<span style="white-space: nowrap;"><span class="medCalcFontResultParam">millisec</span>
+</span>
+</span></td>
+</tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">QT Interval corrected Bazett</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value QT Interval corrected Bazett" aria-readonly="true" name="QT_Interval_corrected_Bazett_param" size="6" type="text"/></td>
+<td align="left" valign="top"><span class="medCalcFontResultParam">
+<span style="white-space: nowrap;"><span class="medCalcFontResultParam">millisec</span>
+</span>
+</span></td>
+</tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">QT Interval corrected Fridericia</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value QT Interval corrected Fridericia" aria-readonly="true" name="QT_Interval_corrected_Fridericia_param" size="6" type="text"/></td>
+<td align="left" valign="top"><span class="medCalcFontResultParam">
+<span style="white-space: nowrap;"><span class="medCalcFontResultParam">millisec</span>
+</span>
+</span></td>
+</tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">QT Interval corrected Framingham</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value QT Interval corrected Framingham" aria-readonly="true" name="QT_Interval_corrected_Framingham_param" size="6" type="text"/></td>
+<td align="left" valign="top"><span class="medCalcFontResultParam">
+<span style="white-space: nowrap;"><span class="medCalcFontResultParam">millisec</span>
+</span>
+</span></td>
+</tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">QT Interval corrected Hodges</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value QT Interval corrected Hodges" aria-readonly="true" name="QT_Interval_corrected_Hodges_param" size="6" type="text"/></td>
+<td align="left" valign="top"><span class="medCalcFontResultParam">
+<span style="white-space: nowrap;"><span class="medCalcFontResultParam">millisec</span>
+</span>
+</span></td>
+</tr>
+<tr><td colspan="3"> <br/></td></tr>
+<tr><td align="center" colspan="3"><span class="medCalcFontResultParam">Decimal precision  </span>
+<select aria-label="Use this pulldown selector to set the decimal precision of calculations" class="medCalcFontSelect" name="decpts" onchange="QTIntervalCorrection_fx();">
+<option selected="selected">0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></td></tr>
+</tbody></table>
+</center><br/> <br/>
+<div id="calc_buttons">
+<center>
+<span class="medCalcFontOne">
+<input name="resetbutton" type="reset" value="Reset form"/>
+</span>
+</center>
+</div>
+</div><div id="pretextrefs">
+ 
+</div>
+<br/> <br/>
+<div id="calc_hints">
+<span class="medCalcFontOne">
+</span>
+</div>
+<div id="calc_tables_above_notes">
+</div>
+<br/> <br/>
+<div id="calc_notes">
+<span class="medCalcFontOneBold">Notes</span>
+<ul class="medCalcFontOne">
+<li>The input “ECG heart rate measure” is either the RR interval in milliseconds of the beat prior to the QT interval, or the heart rate in beats per minute.</li>
+<li>For more information on the clinical usefulness of the corrected QT interval calculations, please see UpToDate topics on basic electrocardiogram interpretation and both acquired and congenital long QT syndrome.</li>
+<li><b>ECG</b>: electrocardiogram; <b>BPM</b>: beats per minute.</li>
+</ul>
+</div>
+<br/> <br/>
+<span class="medCalcFontRef"><b>Equations used</b></span>
+<br/> <br/>
+<center>
+<div id="calc_equation">
+<table cellpadding="10" cellspacing="0" summary="EBMcalc Table"><tbody><tr><td class="medCalcFormuliBox"><span class="medCalcFontFormuli">QT_Interval_corrected_Bazett = QT_Interval / sqr(RR_interval/1000)</span></td></tr><tr><td class="medCalcFormuliBox"><span class="medCalcFontFormuli">QT_Interval_corrected_Fridericia = QT_Interval / (RR_interval/1000)<sup>1/3</sup></span></td></tr><tr><td class="medCalcFormuliBox"><span class="medCalcFontFormuli">QT_Interval_corrected_Framingham = QT_Interval + (0.154 * (1000 - RR_interval))</span></td></tr><tr><td class="medCalcFormuliBox"><span class="medCalcFontFormuli">QT_Interval_corrected_Hodges = QT_Interval + (1.75 * (Heart_rate - 60))</span></td></tr></tbody></table><br/> <br/>
+</div> </center>
+<div id="calc_tables">
+<br/> <br/>
+<span class="medCalcFontOneBold">Reference QT intervals for females</span>
+<br/> <br/>
+<center>
+<table border="1" cellpadding="3" cellspacing="0" class="medCalcFontOne" summary="EBMcalc Table" width="60%">
+<tbody><tr bgcolor="#cccccc" id="T1HR">
+<td align="center" id="T1HR_C1"><b>Formula</b></td><td align="center" id="T1HR_C2"><b>Lower limit of normal (millisec)</b></td><td align="center" id="T1HR_C3"><b>Upper limit of normal (millisec)</b></td></tr>
+<tr><td align="center" id="T1CellR1C1"><div id="T1R1C1"> Bazett</div></td><td align="center" id="T1CellR1C2"><div id="T1R1C2">355</div></td><td align="center" id="T1CellR1C3"><div id="T1R1C3">482</div></td></tr>
+<tr><td align="center" id="T1CellR2C1"><div id="T1R2C1">Fridericia</div></td><td align="center" id="T1CellR2C2"><div id="T1R2C2">348</div></td><td align="center" id="T1CellR2C3"><div id="T1R2C3">468</div></td></tr>
+<tr><td align="center" id="T1CellR3C1"><div id="T1R3C1">Framingham</div></td><td align="center" id="T1CellR3C2"><div id="T1R3C2">351</div></td><td align="center" id="T1CellR3C3"><div id="T1R3C3">467</div></td></tr>
+<tr><td align="center" id="T1CellR4C1"><div id="T1R4C1">Hodges</div></td><td align="center" id="T1CellR4C2"><div id="T1R4C2">348</div></td><td align="center" id="T1CellR4C3"><div id="T1R4C3">465</div></td></tr>
+</tbody></table></center>
+<br/> <br/>
+<span class="medCalcFontOneBold">Reference QT intervals for males</span>
+<br/> <br/>
+<center>
+<table border="1" cellpadding="3" cellspacing="0" class="medCalcFontOne" summary="EBMcalc Table" width="60%">
+<tbody><tr bgcolor="#cccccc" id="T2HR">
+<td align="center" id="T2HR_C1"><b>Formula</b></td><td align="center" id="T2HR_C2"><b>Lower limit of normal (millisec)</b></td><td align="center" id="T2HR_C3"><b>Upper limit of normal (millisec)</b></td></tr>
+<tr><td align="center" id="T2CellR1C1"><div id="T2R1C1"> Bazett</div></td><td align="center" id="T2CellR1C2"><div id="T2R1C2">346</div></td><td align="center" id="T2CellR1C3"><div id="T2R1C3">472</div></td></tr>
+<tr><td align="center" id="T2CellR2C1"><div id="T2R2C1">Fridericia</div></td><td align="center" id="T2CellR2C2"><div id="T2R2C2">349</div></td><td align="center" id="T2CellR2C3"><div id="T2R2C3">448</div></td></tr>
+<tr><td align="center" id="T2CellR3C1"><div id="T2R3C1">Framingham</div></td><td align="center" id="T2CellR3C2"><div id="T2R3C2">350</div></td><td align="center" id="T2CellR3C3"><div id="T2R3C3">449</div></td></tr>
+<tr><td align="center" id="T2CellR4C1"><div id="T2R4C1">Hodges</div></td><td align="center" id="T2CellR4C2"><div id="T2R4C2">351</div></td><td align="center" id="T2CellR4C3"><div id="T2R4C3">446</div></td></tr>
+</tbody></table></center>
+</div>
+<br/> <br/>
+<div id="calc_refs">
+<span class="medCalcFontRef"><b>References</b></span>
+<ol>
+<li><span class="medCalcFontRef">Bazett HC. An analysis of the time relationships of electrocardiograms. Heart 1920; 7:355.</span></li>
+<li><span class="medCalcFontRef">Fridericia L. Die systolendauer im Elektrokardiogramm bei normalen menschen und bei  herzkranken. Acta Med Scand 1920; 53:469.</span></li>
+<li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/1519533" style="color: green; text-decoration: none;" target="_blank">Sagie A, Larson MG, Goldberg RJ, et al. An improved method for adjusting the QT interval  for heart rate (the Framingham Heart Study). Am J Cardiol 1992; 70:797.</a></span></li>
+<li><span class="medCalcFontRef">Hodges MS, Salerno D, Erlinen D. Bazett's QT correction reviewed: evidence that a linear QT  correction for heart rate is better. J Am Coll Cardiol 1983; 1:694.</span></li>
+<li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/27317349" style="color: green; text-decoration: none;" target="_blank">Vandenberk B, Vandael E, Robyns T, et al. Which QT Correction Formulae to Use for QT Monitoring?  J Am Heart Assoc 2016; 5:e003264.</a></span></li>
+</ol>
+</div>
+</form>
+</div>
+<span class="calculatorVendorId" id="T1678215889">
+</span></div><div id="printDisclaimer">
+<b>Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.</b>
+<p>
+	Information on this page may not appear correctly if printed. </p>
+</div>
+<div id="disclaimerCalculator">
+<div class="medCalcFontTwo">
+<p class="header">Legal Notices and Disclaimer</p>
+<p>
+			All information contained in and produced by the EBMcalc system is provided
+			for educational purposes only. This information should not be used for the diagnosis or treatment
+			of any health problem or disease. 
+			<b>THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.</b>
+<a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">Click here for full notice and disclaimer.</a>
+</p>
+<p class="copy">EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC</p>
+</div>
+</div><div id="topicVersionRevision">Topic 13459 Version 13.0</div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

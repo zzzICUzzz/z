@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Component testing for animal-derived food allergies</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Component testing for animal-derived food allergies</h1>
+<div class="utdArticleSection utdStyle" id="topicContent"><div id="topicTitle">Component testing for animal-derived food allergies</div> <div class="authorSectionElem"><div class="authorsElementsLeft"><dl id="topicContributors"><dt><span> </span>Author:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Julie Wang, MD</a></dd><dt><span> </span>Section Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Scott H Sicherer, MD, FAAAAI</a></dd><dt><span> </span>Deputy Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Elizabeth TePas, MD, MS</a></dd></dl></div><div class="authorsElementsRight"><div id="literatureReviewDate"><div class="litReviewSingleLine"><bdi><span class="emphasis">Literature review current through:</span> Jan 2024.</bdi></div><div class="litReviewSingleLine"><bdi><span class="emphasis">This topic last updated:</span> Jul 19, 2023.</bdi></div></div></div></div><div id="topicWhatsNewContainer"></div><div id="topicText"><p class="headingAnchor" id="H12438194"><span class="h1">INTRODUCTION</span><span class="headingEndMark"> — </span>Advances in the identification of clinically relevant allergens and the development of recombinant proteins allow for assessment of immunoglobulin E (IgE) binding to individual proteins within an allergenic food. This type of testing is known as component-resolved diagnosis (CRD). Increased sensitivity and specificity can be achieved by assessing IgE binding to separate proteins, either purified native or recombinant, thereby providing improved diagnostic accuracy in terms of predicting clinical reactivity. CRD may also provide additional prognostic information regarding the severity or persistence of food allergies.</p><p>CRD is available for plant-derived and animal-derived foods. While CRD has shown to be informative for pollen-related food allergies, the usefulness of CRD for animal-derived food allergens is not as well defined.</p><p>CRD testing for animal-derived food allergies is reviewed here. Component testing for pollen-related, plant-derived food allergies is discussed separately, including an overview of CRD and the types of assays available. An overview of testing for food allergies is also presented separately. (See  <a class="medical medical_review" href="/d/html/95765.html" rel="external">"Component testing for pollen-related, plant-derived food allergies"</a> and  <a class="medical medical_review" href="/d/html/2396.html" rel="external">"Diagnostic evaluation of IgE-mediated food allergy"</a>.)</p><p class="headingAnchor" id="H12438200"><span class="h1">ALLERGEN-SPECIFIC USE/INTERPRETATION</span><span class="headingEndMark"> — </span>For cow's milk and hen's egg allergies, component-resolved diagnosis (CRD) allows identification of IgE binding to specific proteins, which may be informative to distinguish between different phenotypes of milk and egg allergy. For shrimp allergy, cross-reactive proteins with other arthropods (dust mite and cockroach) can result in positive tests that may not be clinically relevant, similar to what is seen in pollen-related, plant-derived food allergies. However, no single test result taken in isolation is reliable enough to negate the need for oral food challenges. Further studies are needed to determine the utility of IgE testing to individual proteins for these foods. (See  <a class="medical medical_review" href="/d/html/95765.html" rel="external">"Component testing for pollen-related, plant-derived food allergies"</a>.)</p><p class="headingAnchor" id="H12438207"><span class="h2">Cow's milk</span><span class="headingEndMark"> — </span>Casein (<em>Bos domesticus</em> [Bos d] 8) is the major allergen present in cow's milk, accounting for 75 to 80 percent of all milk proteins [<a href="#rid1">1</a>]. Beta-lactoglobulin (Bos d 5) forms a large portion of whey, accounting for approximately 10 percent of proteins in milk. Alpha-lactalbumin (Bos d 4) represents 25 percent of the whey fraction and comprises 5 percent of milk proteins. Sensitization to other minor components that can be measured include serum albumin (Bos d 6) and transferrin (Bos d lactoferrin). Additional studies are needed to determine the utility of component testing for milk allergy.</p><p>Studies have shown that serum specific IgE (sIgE) to caseins (Bos d 8) are associated with more persistent milk allergy [<a href="#rid2">2,3</a>] and more severe reactions to milk [<a href="#rid4">4</a>]. An Italian study found that assessing IgE reactivity to casein using a component-based allergen microarray provided improved positive and negative predictive values in the diagnosis of milk allergy when compared with standard sIgE testing to milk [<a href="#rid5">5</a>]. However, a German study reported that sIgE to individual components was not superior to IgE to milk in differentiating clinically reactive individuals from those who were sensitized but tolerant to milk [<a href="#rid6">6</a>].</p><p>The majority of milk-allergic children have specific IgE that binds to conformational epitopes and are therefore able to tolerate baked or extensively heated milk [<a href="#rid7">7</a>]. This finding has led to studies assessing the utility of component testing to predict baked milk tolerance. In a United States study, receiver-operating characteristic (ROC) analysis showed that sIgE to casein, sIgE to whole milk, and skin prick testing (SPT) with whole milk extract were comparable in predicting baked milk tolerance, with casein IgE performing somewhat better than milk IgE or SPT [<a href="#rid8">8</a>]. Diagnostic cutoff levels were determined, and the optimal level giving equal weight to sensitivity and specificity was 4.95 kU<sub>A</sub>/L for casein (sensitivity 74 percent and specificity 77 percent) and 9.97 kU<sub>A</sub>/L for milk (sensitivity 62 percent and specificity 85 percent). In order to achieve &gt;95 percent specificity, the levels would be 20.2 kU<sub>A</sub>/L for casein and 24.5 kU<sub>A</sub>/L for milk. However, another smaller study from the United States found differing results. In this study, SPT was reported to be the best predictor of baked milk tolerance [<a href="#rid9">9</a>]. Specific IgE to casein had poor sensitivity and specificity for predicting food challenge outcomes to baked milk. (See  <a class="medical medical_review" href="/d/html/2386.html" rel="external">"Milk allergy: Clinical features and diagnosis"</a>.)</p><p class="headingAnchor" id="H12438214"><span class="h2">Hen's egg</span><span class="headingEndMark"> — </span>Ovomucoid (<em>Gallus domesticus</em> [Gal d] 1), ovalbumin (Gal d 2), ovotransferrin (Gal d 3), and lysozyme (Gal d 4) are major allergens in hen's egg [<a href="#rid10">10</a>]. Similar to cow's milk allergy, the majority of individuals with egg allergy have IgE that primarily bind to conformational epitopes. Thus, many can tolerate extensively heated or baked egg [<a href="#rid11">11</a>]. Given the significant differences in patient populations and varying preparations of egg used in oral food challenges in the different studies, further investigation is warranted to explore the diagnostic value of sIgE testing to individual egg proteins. (See  <a class="medical medical_review" href="/d/html/2409.html" rel="external">"Egg allergy: Clinical features and diagnosis"</a>.)</p><p>An Italian study reported that IgE reactivity to Gal d 1 is a good predictor of egg allergy. In this study, 95 percent of Gal d 1 IgE-positive patients reacted to raw egg at food challenge, whereas 94 percent of Gal d 1 IgE-negative patients tolerated heated egg (boiled for 10 minutes) [<a href="#rid12">12</a>].</p><p>In a study from Japan of 108 egg-allergic children, IgE to Gal d 1 was the best predictor for reactivity to heated egg (90°C for 60 minutes), with the optimal cutpoint for Gal d 1 IgE being 4.4 kU<sub>A</sub>/L (76 percent sensitivity, 81 percent specificity) [<a href="#rid13">13</a>]. In regard to determining reactivity to raw egg, IgE to Gal d 1 and Gal d 2 were not superior to IgE to egg white.</p><p>The utility of measuring IgE to individual egg proteins for predicting tolerance to baked egg (within a wheat matrix: 350°F x 30 minutes for muffin and 500°F x 3 minutes for waffle) has been investigated in a few United States studies. In a cohort of 117 children, IgE to Gal d 2 was a better predictor of baked egg challenge outcome compared with IgE to egg white and Gal d 1 [<a href="#rid14">14</a>]. However, a different United States study reported that IgE to Gal d 1 was not superior to egg white SPT or sIgE in predicting outcome of baked egg challenges [<a href="#rid15">15</a>].</p><p class="headingAnchor" id="H12438221"><span class="h2">Shrimp</span><span class="headingEndMark"> — </span>Tropomyosin (Pen m 1 [<em>Penaeus monodon</em>, brown shrimp] and Pen a 1 [<em>Penaeus aztecus</em>, black tiger shrimp]) is considered the primary allergen in shrimp, with over 80 percent of shrimp-allergic individuals having IgE specific for this allergen [<a href="#rid16">16,17</a>]. Other allergens identified include arginine kinase (Pen m 2) and sarcoplasmic calcium-binding protein (Pen m 4).</p><p>Tropomyosin is an important muscle protein in arthropods and other animals, which results in crossreactivity between proteins found in shrimp, cockroach, and dust mites [<a href="#rid18">18,19</a>]. Studies have shown that individuals who have never ingested shellfish can have detectable IgE levels to shrimp due to primary sensitization to the environmental allergens [<a href="#rid20">20</a>]. (See  <a class="medical medical_review" href="/d/html/2400.html" rel="external">"Seafood allergies: Fish and shellfish", section on 'Shellfish'</a>.)</p><p>In two studies of patients from Brazil and Spain, measurement of sIgE to shrimp tropomyosin had similar sensitivity to SPT and shrimp-specific IgE but improved specificity [<a href="#rid21">21,22</a>].</p><p>Similar to the other allergens, no single test is reliable enough to negate the need for oral food challenges.</p><p class="headingAnchor" id="H3147680628"><span class="h2">Red meat allergy</span><span class="headingEndMark"> — </span>Delayed reactions to red meat are mediated by IgE to galactose-alpha-1,3-galactose (alpha-gal), a carbohydrate moiety that is abundantly expressed in most mammalian animals. Symptom onset typically begins three to six hours after ingestion. IgE immunoassays to alpha-gal are commercially available. However, the sensitivity and specificity of this test are relatively poor, so other diagnostic tests such as fresh meat testing and food challenge may be needed to confirm the diagnosis. (See  <a class="medical medical_review" href="/d/html/2393.html" rel="external">"Allergy to meats"</a>.)</p><p class="headingAnchor" id="H3260543846"><span class="h1">SOCIETY GUIDELINE LINKS</span><span class="headingEndMark"> — </span>Links to society and government-sponsored guidelines from selected countries and regions around the world are provided separately. (See  <a class="medical medical_society_guidelines" href="/d/html/109355.html" rel="external">"Society guideline links: Food allergy"</a>.)</p><p class="headingAnchor" id="H12438228"><span class="h1">SUMMARY</span></p><p class="bulletIndent1"><span class="glyph">●</span>The role of component-resolved diagnosis (CRD) in the diagnosis of immunoglobulin E (IgE) mediated allergies to animal-derived foods is not well established. (See <a class="local">'Introduction'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>CRD may offer increased specificity, but sensitivity is lacking when compared with traditional skin prick testing (SPT) and serum specific IgE (sIgE) testing for cow's milk, hen's egg, and shrimp. (See <a class="local">'Cow's milk'</a> above and <a class="local">'Hen's egg'</a> above and <a class="local">'Shrimp'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Specific IgE galactose-alpha-1,3-galactose (alpha-gal) testing may be informative for delayed red meat allergy, but sensitivity and specificity are poor. (See <a class="local">'Red meat allergy'</a> above and  <a class="medical medical_review" href="/d/html/2393.html" rel="external">"Allergy to meats"</a>.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>CRD for these foods may be used as an adjunct to standard allergy tests, but oral food challenges remain the gold standard for food allergy diagnosis. (See <a class="local">'Allergen-specific use/interpretation'</a> above.)</p><p></p></div><div class="headingAnchor" id="references"><ol id="reference"><li><a class="nounderline abstract_t">Wal JM. Bovine milk allergenicity. Ann Allergy Asthma Immunol 2004; 93:S2.</a></li><li><a class="nounderline abstract_t">Järvinen KM, Beyer K, Vila L, et al. B-cell epitopes as a screening instrument for persistent cow's milk allergy. J Allergy Clin Immunol 2002; 110:293.</a></li><li><a class="nounderline abstract_t">Ito K, Futamura M, Movérare R, et al. The usefulness of casein-specific IgE and IgG4 antibodies in cow's milk allergic children. Clin Mol Allergy 2012; 10:1.</a></li><li><a class="nounderline abstract_t">Cingolani A, Di Pillo S, Cerasa M, et al. Usefulness of nBos d 4, 5 and nBos d 8 Specific IgE Antibodies in Cow's Milk Allergic Children. Allergy Asthma Immunol Res 2014; 6:121.</a></li><li><a class="nounderline abstract_t">D'Urbano LE, Pellegrino K, Artesani MC, et al. Performance of a component-based allergen-microarray in the diagnosis of cow's milk and hen's egg allergy. Clin Exp Allergy 2010; 40:1561.</a></li><li><a class="nounderline abstract_t">Ott H, Baron JM, Heise R, et al. Clinical usefulness of microarray-based IgE detection in children with suspected food allergy. Allergy 2008; 63:1521.</a></li><li><a class="nounderline abstract_t">Nowak-Wegrzyn A, Bloom KA, Sicherer SH, et al. Tolerance to extensively heated milk in children with cow's milk allergy. J Allergy Clin Immunol 2008; 122:342.</a></li><li><a class="nounderline abstract_t">Caubet JC, Nowak-Węgrzyn A, Moshier E, et al. Utility of casein-specific IgE levels in predicting reactivity to baked milk. J Allergy Clin Immunol 2013; 131:222.</a></li><li><a class="nounderline abstract_t">Bartnikas LM, Sheehan WJ, Hoffman EB, et al. Predicting food challenge outcomes for baked milk: role of specific IgE and skin prick testing. Ann Allergy Asthma Immunol 2012; 109:309.</a></li><li><a class="nounderline abstract_t">Mine Y, Yang M. Recent advances in the understanding of egg allergens: basic, industrial, and clinical perspectives. J Agric Food Chem 2008; 56:4874.</a></li><li><a class="nounderline abstract_t">Lemon-Mulé H, Sampson HA, Sicherer SH, et al. Immunologic changes in children with egg allergy ingesting extensively heated egg. J Allergy Clin Immunol 2008; 122:977.</a></li><li><a class="nounderline abstract_t">Alessandri C, Zennaro D, Scala E, et al. Ovomucoid (Gal d 1) specific IgE detected by microarray system predict tolerability to boiled hen's egg and an increased risk to progress to multiple environmental allergen sensitisation. Clin Exp Allergy 2012; 42:441.</a></li><li><a class="nounderline abstract_t">Ando H, Movérare R, Kondo Y, et al. Utility of ovomucoid-specific IgE concentrations in predicting symptomatic egg allergy. J Allergy Clin Immunol 2008; 122:583.</a></li><li><a class="nounderline abstract_t">Caubet JC, Bencharitiwong R, Moshier E, et al. Significance of ovomucoid- and ovalbumin-specific IgE/IgG(4) ratios in egg allergy. J Allergy Clin Immunol 2012; 129:739.</a></li><li><a class="nounderline abstract_t">Bartnikas LM, Sheehan WJ, Larabee KS, et al. Ovomucoid is not superior to egg white testing in predicting tolerance to baked egg. J Allergy Clin Immunol Pract 2013; 1:354.</a></li><li><a class="nounderline abstract_t">Pascal M, Grishina G, Yang AC, et al. Molecular Diagnosis of Shrimp Allergy: Efficiency of Several Allergens to Predict Clinical Reactivity. J Allergy Clin Immunol Pract 2015; 3:521.</a></li><li><a class="nounderline abstract_t">Faber MA, Pascal M, El Kharbouchi O, et al. Shellfish allergens: tropomyosin and beyond. Allergy 2017; 72:842.</a></li><li><a class="nounderline abstract_t">Boquete M, Iraola V, Morales M, et al. Seafood hypersensitivity in mite sensitized individuals: is tropomyosin the only responsible allergen? Ann Allergy Asthma Immunol 2011; 106:223.</a></li><li><a class="nounderline abstract_t">Wang J, Calatroni A, Visness CM, Sampson HA. Correlation of specific IgE to shrimp with cockroach and dust mite exposure and sensitization in an inner-city population. J Allergy Clin Immunol 2011; 128:834.</a></li><li><a class="nounderline abstract_t">Fernandes J, Reshef A, Patton L, et al. Immunoglobulin E antibody reactivity to the major shrimp allergen, tropomyosin, in unexposed Orthodox Jews. Clin Exp Allergy 2003; 33:956.</a></li><li><a class="nounderline abstract_t">Yang AC, Arruda LK, Santos AB, et al. Measurement of IgE antibodies to shrimp tropomyosin is superior to skin prick testing with commercial extract and measurement of IgE to shrimp for predicting clinically relevant allergic reactions after shrimp ingestion. J Allergy Clin Immunol 2010; 125:872.</a></li><li><a class="nounderline abstract_t">Gámez C, Sánchez-García S, Ibáñez MD, et al. Tropomyosin IgE-positive results are a good predictor of shrimp allergy. Allergy 2011; 66:1375.</a></li></ol></div><div id="topicVersionRevision">Topic 95766 Version 10.0</div></div>
+<div class="row">
+<div class="col-12">
+<h4 style="text-align: center;padding: 20px;color: cadetblue;">References</h4>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/15562868" id="rid0" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>1 : Bovine milk allergenicity.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/12170271" id="rid1" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>2 : B-cell epitopes as a screening instrument for persistent cow's milk allergy.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/22212305" id="rid2" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>3 : The usefulness of casein-specific IgE and IgG4 antibodies in cow's milk allergic children.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/24587947" id="rid3" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>4 : Usefulness of nBos d 4, 5 and nBos d 8 Specific IgE Antibodies in Cow's Milk Allergic Children.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/20633029" id="rid4" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>5 : Performance of a component-based allergen-microarray in the diagnosis of cow's milk and hen's egg allergy.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/18925888" id="rid5" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>6 : Clinical usefulness of microarray-based IgE detection in children with suspected food allergy.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/18620743" id="rid6" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>7 : Tolerance to extensively heated milk in children with cow's milk allergy.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/22921870" id="rid7" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>8 : Utility of casein-specific IgE levels in predicting reactivity to baked milk.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/23062384" id="rid8" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>9 : Predicting food challenge outcomes for baked milk: role of specific IgE and skin prick testing.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/18543935" id="rid9" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>10 : Recent advances in the understanding of egg allergens: basic, industrial, and clinical perspectives.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/18851876" id="rid10" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>11 : Immunologic changes in children with egg allergy ingesting extensively heated egg.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/22168465" id="rid11" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>12 : Ovomucoid (Gal d 1) specific IgE detected by microarray system predict tolerability to boiled hen's egg and an increased risk to progress to multiple environmental allergen sensitisation.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/18692888" id="rid12" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>13 : Utility of ovomucoid-specific IgE concentrations in predicting symptomatic egg allergy.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/22277199" id="rid13" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>14 : Significance of ovomucoid- and ovalbumin-specific IgE/IgG(4) ratios in egg allergy.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/24013255" id="rid14" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>15 : Ovomucoid is not superior to egg white testing in predicting tolerance to baked egg.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/25769902" id="rid15" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>16 : Molecular Diagnosis of Shrimp Allergy: Efficiency of Several Allergens to Predict Clinical Reactivity.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/28027402" id="rid16" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>17 : Shellfish allergens: tropomyosin and beyond.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/21354024" id="rid17" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>18 : Seafood hypersensitivity in mite sensitized individuals: is tropomyosin the only responsible allergen?</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/21872304" id="rid18" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>19 : Correlation of specific IgE to shrimp with cockroach and dust mite exposure and sensitization in an inner-city population.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/12859453" id="rid19" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>20 : Immunoglobulin E antibody reactivity to the major shrimp allergen, tropomyosin, in unexposed Orthodox Jews.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/20226506" id="rid20" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>21 : Measurement of IgE antibodies to shrimp tropomyosin is superior to skin prick testing with commercial extract and measurement of IgE to shrimp for predicting clinically relevant allergic reactions after shrimp ingestion.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/21651567" id="rid21" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>22 : Tropomyosin IgE-positive results are a good predictor of shrimp allergy.</p>
+</a>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

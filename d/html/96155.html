@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>T-B-NK+ SCID: Management</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">T-B-NK+ SCID: Management</h1>
+<div class="utdArticleSection utdStyle" id="topicContent"><div id="topicTitle">T-B-NK+ SCID: Management</div> <div class="authorSectionElem"><div class="authorsElementsLeft"><dl id="topicContributors"><dt><span> </span>Author:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Morton J Cowan, MD</a></dd><dt><span> </span>Section Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Jennifer M Puck, MD</a></dd><dt><span> </span>Deputy Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Elizabeth TePas, MD, MS</a></dd></dl></div><div class="authorsElementsRight"><div id="literatureReviewDate"><div class="litReviewSingleLine"><bdi><span class="emphasis">Literature review current through:</span> Jan 2024.</bdi></div><div class="litReviewSingleLine"><bdi><span class="emphasis">This topic last updated:</span> Feb 08, 2023.</bdi></div></div></div></div><div id="topicWhatsNewContainer"></div><div id="topicText"><p class="headingAnchor" id="H2362041859"><span class="h1">INTRODUCTION</span><span class="headingEndMark"> — </span>An extreme form of severe combined immunodeficiency disease (SCID) is the T cell-negative (T-), B cell-negative (B-), natural killer cell-positive (NK+) SCID phenotype, which accounts for approximately one-quarter of all cases of SCID [<a href="#rid1">1</a>]. Children with T-B-NK+ SCID present early in life with serious infections, failure to thrive, low-to-absent T and B cell numbers and function, and normal numbers of NK cells. Typical SCID, by definition, leads to early death from overwhelming infection in the first year or two of life in the absence of definitive treatment.</p><p>Autosomal recessive defects in several genes, all involved in V(D)J recombination that randomly combines <strong>v</strong>ariable, <strong>d</strong>iverse, and <strong>j</strong>oining gene segments in lymphocytes, result in this form of SCID. Some of the proteins encoded by these genes are also involved in deoxyribonucleic acid (DNA) repair. Defects in all ubiquitously expressed DNA repair genes are associated with radiation/alkylating agent chemotherapy sensitivity, and some of them are associated with growth and developmental abnormalities.</p><p>The management of T-B-NK+ SCID is reviewed here. The primary treatment is hematopoietic cell transplantation (HCT). The pathogenesis, genetic defects, clinical manifestations including radiation sensitivity, and diagnosis are discussed in detail separately. An overview of SCID and the different forms of SCID are also presented separately. (See  <a class="medical medical_review" href="/d/html/3955.html" rel="external">"Severe combined immunodeficiency (SCID): An overview"</a> and  <a class="medical medical_review" href="/d/html/3912.html" rel="external">"Severe combined immunodeficiency (SCID): Specific defects"</a> and  <a class="medical medical_review" href="/d/html/3950.html" rel="external">"T-B-NK+ SCID: Pathogenesis, clinical manifestations, and diagnosis"</a>.)</p><p class="headingAnchor" id="H2362041932"><span class="h1">MANAGEMENT PRIOR TO DIAGNOSIS AND TRANSPLANTATION</span><span class="headingEndMark"> — </span>Infants suspected of immunodeficiency require special care and treatment before definitive diagnosis is made and correction is performed. This includes protective isolation, avoidance of live vaccines, and prophylaxis against infection (antimicrobials and <a class="drug drug_general" data-topicid="16471" href="/d/drug information/16471.html" rel="external">immune globulin</a> replacement therapy). For those patients suspected of radiation-sensitive SCID (RS-SCID), avoidance of exposure to unnecessary radiation is also important. These measures are discussed in greater detail separately. (See  <a class="medical medical_review" href="/d/html/3955.html" rel="external">"Severe combined immunodeficiency (SCID): An overview", section on 'Protective measures'</a>.)</p><p class="headingAnchor" id="H900717517"><span class="h1">APPROACH TO DEFINITIVE THERAPY</span><span class="headingEndMark"> — </span>Typical SCID is universally fatal in infancy without definitive treatment. These patients require definitive therapy to have a chance at survival. Hematopoietic cell transplantation (HCT) is the only confirmed curative therapy for children with T-B-NK+ SCID  (<a class="graphic graphic_table graphicRef134345" href="/d/graphic/134345.html" rel="external">table 1</a>), but outcomes depend upon the donor type available and the conditioning used [<a href="#rid2">2-5</a>]. Gene therapy (GT) for T-B-NK+ SCID remains experimental and in the early stages of clinical investigation. We recommend HCT with a human leukocyte antigen (HLA) matched related donor, if available, for infants with T-B-NK+ SCID. For patients without an HLA-matched related donor, we suggest HCT with an alternative donor, preferably a matched unrelated donor or, if one is not available, a haploidentical related donor or an unrelated cord blood donor. Patients without a matched related donor who have Artemis-deficient SCID (ART-SCID) are eligible for GT as part of a clinical trial (<a class="external" href="/external-redirect?target_url=https%3A%2F%2Fclinicaltrials.gov%2Fct2%2Fshow%2FNCT03538899&amp;token=nbsXe3i4qfUea5RCPRHtOS7yhoEzH%2BMCpwZ1%2F1ekxPNPMKVLjpmaYHe8zrXvzH2T%2BuJ969tBuKIiSIZEhXgBFg%3D%3D&amp;TOPIC_ID=96155" target="_blank">NCT03538899</a>) [<a href="#rid6">6</a>]. (See <a class="local">'Hematopoietic cell transplantation'</a> below and <a class="local">'Gene therapy'</a> below.)</p><p class="headingAnchor" id="H2362041938"><span class="h1">HEMATOPOIETIC CELL TRANSPLANTATION</span></p><p class="headingAnchor" id="H1545784398"><span class="h2">Outcomes</span><span class="headingEndMark"> — </span>As with all SCID hematopoietic cell transplantation (HCT) recipients, the outcome for T-B-NK+ SCID is best in those who have a human leukocyte antigen (HLA) matched related donor, usually a sibling [<a href="#rid3">3,7,8</a>]. T and B cell immune reconstitution appears better in patients with T-B-NK+ SCID who do not have radiation sensitivity (ie, recombination-activating gene SCID [RAG-SCID]) and who receive myeloablative or reduced-intensity conditioning. However, outcomes are not as good in patients with radiation-sensitive SCID (RS-SCID), who have a higher rate of infections, poorer survival, and more long-term complications when treated with alkylating therapy and/or ionizing radiation than those with T-B-NK+ SCID without radiation sensitivity [<a href="#rid9">9</a>]. In fact, it appears that patients with certain genotypes of RS-SCID (eg, ligase IV deficiency) do more poorly if treated with myeloablative and reduced-intensity conditioning [<a href="#rid9">9</a>]. (See  <a class="medical medical_review" href="/d/html/115988.html" rel="external">"Hematopoietic cell transplantation for severe combined immunodeficiencies"</a> and  <a class="medical medical_review" href="/d/html/3950.html" rel="external">"T-B-NK+ SCID: Pathogenesis, clinical manifestations, and diagnosis", section on 'Radiation-sensitive SCID due to DNA repair defects'</a>.)</p><p class="headingAnchor" id="H2378805606"><span class="h3">HLA-matched related donor</span><span class="headingEndMark"> — </span>In a multicenter, retrospective study of 145 children with either Artemis or RAG 1 and 2-deficient T-B-NK+ SCID (ART-SCID or RAG1/2-SCID), 88 percent of the 63 recipients of an HLA-matched related donor transplant without conditioning were long-term survivors (median follow-up 51 months for Artemis and 32 months for RAG defects) [<a href="#rid8">8</a>]. Similar results were seen in an earlier study of 16 patients with ART-SCID, who had an overall 75 percent long-term survival (median follow-up seven years) [<a href="#rid7">7</a>]. Patients were generally transplanted at an early age (mean 2.3 months) and had a relatively short interval between diagnosis and HCT (mean of 1.5 months). As an example, 7 of the 16 infants were diagnosed either in utero or at birth (because of a positive family history), with early transplantation prior to the onset of serious infections. The use of nonmyeloablative conditioning regimens in 14 of 16 initial transplants also likely contributed to the absence of mortality in the immediate posttransplant period and subsequent long-term survival, although the patients who received alkylating therapy as conditioning had increased late effects and poorer survival beyond two years compared with patients with non-RS-SCID [<a href="#rid8">8</a>]. (See <a class="local">'Conditioning regimens'</a> below.)</p><p class="headingAnchor" id="H3515638545"><span class="h3">HLA-matched unrelated donors</span><span class="headingEndMark"> — </span>Matched unrelated donors with varying conditioning regimens have been used to treat T-B-NK+ SCID. Anecdotal evidence suggests that these patients respond similarly to other SCID genotypes. However, there are no comparative data published in peer-reviewed literature to indicate any preferred alternative donor for T-B-NK+ SCID. As discussed below, the major concern for this type of SCID regardless of the donor is conditioning and whether the patient is radiation sensitive. (See <a class="local">'Conditioning regimens'</a> below.)</p><p class="headingAnchor" id="H3262700034"><span class="h3">Haploidential related donor</span><span class="headingEndMark"> — </span>Survival is lower in patients without an HLA-matched related donor. Only 52 percent of the 82 recipients of haploidentical related donor transplants in the first study discussed above were long-term survivors [<a href="#rid8">8</a>]. Survival in the haploidentical transplant group was 67 percent in patients who received myeloablative conditioning.</p><p>Successful engraftment of haploidentical T cell-depleted parental grafts is significantly reduced in children with T-B-NK+ SCID (unless maternal chimerism is present) compared with those with T-B+NK- SCID [<a href="#rid3">3,7,8</a>]. This is presumed to be due to the presence of normal functioning NK cells, which are known to mediate graft resistance.</p><p class="headingAnchor" id="H2362041950"><span class="h2">Conditioning regimens</span><span class="headingEndMark"> — </span>The best approach for conditioning for HCT in children with T-B-NK+ SCID is not yet defined, although ongoing studies in North America by the Primary Immune Deficiency Treatment Consortium (PIDTC), a consortium of 47 centers focused on HCT, gene therapy (GT), and enzyme replacement therapy for children with SCID, should help to shed light on this problem [<a href="#rid10">10</a>].</p><p>In an analysis of 640 children in North America with typical or leaky SCID who received HCT from an alternative donor (haplocompatible related, unrelated adult, or cord blood) between 1968 and 2010, the PIDTC found that, in general, patients with SCID had the best T cell immune reconstitution and were more likely to come off of <a class="drug drug_general" data-topicid="16471" href="/d/drug information/16471.html" rel="external">immune globulin</a> replacement therapy when they received either reduced-intensity or myeloablative conditioning rather than no conditioning or only immunosuppression [<a href="#rid3">3</a>]. Of importance, those with ART-SCID did significantly worse in terms of survival and immune reconstitution when compared with other genotypes such as interleukin 2 receptor common gamma chain (IL2RG; X-linked SCID [X-SCID]), Janus kinase 3 (JAK3), interleukin 7 receptor alpha chain (IL7RA), and RAG.</p><p>In a large, multicenter, retrospective study from Europe using the Stem Cell Transplant in Primary Immune Deficiency in Europe (SCETIDE) registry, 338 patients with SCID who underwent an HCT between 2006 and 2014 were evaluated for two-year overall and event-free survival [<a href="#rid5">5</a>]; 34 had ART-SCID, and 76 had RAG1- or RAG2-SCID. The results were relatively similar to that reported by the PIDTC [<a href="#rid3">3</a>], although the poorer survival in this T-B-NK+ subgroup compared with other SCID genotypes did not reach statistical significance at two years. In the PIDTC study, the patients with RAG-SCID had much better outcomes than those with ART-SCID, and HLA-matched sibling transplants were not included in the analysis. It is possible that the failure to achieve statistical significance in the European study was due to the inclusion of matched sibling recipients and the merging of patients with ART-SCID with those with RAG-SCID.</p><p>Myeloablative preparative regimens facilitate engraftment and immune reconstitution. However, these regimens also significantly increase transplant morbidity and mortality, especially in young infants with RS-SCID. As an example, patients with ART-SCID who are exposed to alkylating agents are at risk for late complications, such as pulmonary alveolar hemorrhage, absence of secondary teeth and other dental abnormalities, endocrinopathies, chronic graft-versus-host disease (GVHD), short stature, and decreased survival, that are not seen in other forms of SCID [<a href="#rid7">7,8,11</a>]. Patients with other genotypes of RS-SCID also have poorer survival when exposed to high-dose alkylating therapy [<a href="#rid12">12</a>].The North American experience with alkylating therapy to open marrow niches for patients with SCID undergoing HCT is predominantly with <a class="drug drug_general" data-topicid="9173" href="/d/drug information/9173.html" rel="external">busulfan</a> and, to a lesser extent, <a class="drug drug_general" data-topicid="9605" href="/d/drug information/9605.html" rel="external">melphalan</a> [<a href="#rid3">3</a>]. In Europe, there appears to be a growing experience with <a class="drug drug_general" data-topicid="134625" href="/d/drug information/134625.html" rel="external">treosulfan</a>, another alkylating agent similar to busulfan but with apparently fewer side effects [<a href="#rid13">13</a>]. Whether or not this agent will impact long-term outcomes for patients with RS-SCID remains to be determined.</p><p class="headingAnchor" id="H2362041956"><span class="h3">General approach in T-B-NK+ SCID</span><span class="headingEndMark"> — </span>The type and degree of pre-HCT conditioning in patients with T-B-NK+ SCID to a large degree depends upon donor availability, presence of maternal chimerism, and genotype [<a href="#rid3">3-5,7,8,14-17</a>]. In general, conditioning therapy is not needed to achieve at least T cell reconstitution when HLA-matched related donors are available. Some form of immunosuppression to prevent rejection and myeloablation to open marrow niches with an alkylating agent is often necessary for transplantation with alternative donors in order to achieve full and durable T and B cell immune reconstitution. When maternal cells are present in the patient, rejection of a maternal graft is eliminated. However, this is associated with an increased risk of GVHD [<a href="#rid18">18</a>].</p><p class="headingAnchor" id="H1461305794"><span class="h4">HLA-matched donor</span><span class="headingEndMark"> — </span>No conditioning is necessary for transplantation with HLA-matched related donors (and possibly with a perfectly matched unrelated donor) in order to achieve durable T cell reconstitution and, in limited cases, B cell reconstitution. An HLA-matched related donor may be used without conditioning therapy even with maternal engraftment.</p><p class="headingAnchor" id="H2452807621"><span class="h4">Maternal engraftment and no HLA-matched relative</span><span class="headingEndMark"> — </span>Patients with maternal engraftment are already tolerant of maternal cells. Thus, the mother should be used as the donor if maternal engraftment is present and an HLA-matched relative is unavailable. Under these circumstances, conditioning is not required, but T cell depletion of the graft (either by CD34 cell selection or T cell receptor [TCR] alpha/beta depletion) should be performed along with administration of pretransplant serotherapy with antithymocyte globulin (ATG) or <a class="drug drug_general" data-topicid="8725" href="/d/drug information/8725.html" rel="external">alemtuzumab</a> to minimize the risk of fatal GVHD [<a href="#rid18">18,19</a>].</p><p class="headingAnchor" id="H1946418886"><span class="h4">No HLA-matched relative or maternal engraftment</span><span class="headingEndMark"> — </span>Immunosuppressive conditioning is generally used for those children without maternal engraftment or an HLA-matched relative, although, in one study, approximately one-third of children with NK+ SCID without maternal engraftment and with no conditioning engrafted with haploidentical donors [<a href="#rid19">19</a>]. Thus, it is reasonable to attempt a haploidentical transplant without conditioning under certain circumstances, such as while searching for an unrelated donor, and to consider immunosuppression only if the graft is rejected, especially if the child has no active infections. In a retrospective review of 10 newly diagnosed patients with SCID, 9 of whom had either ART-SCID or RAG-SCID, low-exposure <a class="drug drug_general" data-topicid="9173" href="/d/drug information/9173.html" rel="external">busulfan</a> (median dose 5.9 mg/kg, range 4.8 to 9.1) was used along with other nonalkylating agents, although three patients with non-RS-SCID also received 10 mg/kg <a class="drug drug_general" data-topicid="9992" href="/d/drug information/9992.html" rel="external">thiotepa</a> [<a href="#rid20">20</a>]. Six of the 10 patients had full T and B cell reconstitution, including three patients with ART-SCID.</p><p>Most North American transplant centers use either <a class="drug drug_general" data-topicid="9173" href="/d/drug information/9173.html" rel="external">busulfan</a> or <a class="drug drug_general" data-topicid="9605" href="/d/drug information/9605.html" rel="external">melphalan</a> with <a class="drug drug_general" data-topicid="8452" href="/d/drug information/8452.html" rel="external">fludarabine</a> regimens for myeloablation when an HLA-matched related donor is not available for a child with SCID [<a href="#rid19">19,21,22</a>]. Fludarabine (a nonalkylating agent) has more specific T cell immunosuppressive activity, although it has little to no effect on NK cells. In addition, it is less toxic than <a class="drug drug_general" data-topicid="9308" href="/d/drug information/9308.html" rel="external">cyclophosphamide</a>, the previous drug of choice for immunosuppressive conditioning [<a href="#rid8">8</a>]. These myeloablative regimens are more likely to result in B cell reconstitution [<a href="#rid4">4</a>], but they are also associated with a higher mortality than the immunosuppressive regimens or no conditioning approaches, at least in patients with RS-SCID who have active infection at the time of HCT [<a href="#rid3">3,4,8,15</a>].</p><p>In one European study, for example, none of the T-B- SCID recipients who did not receive <a class="drug drug_general" data-topicid="9173" href="/d/drug information/9173.html" rel="external">busulfan</a> conditioning developed B cell function [<a href="#rid23">23</a>]. The failure to reconstitute B cell immunity in T-B-NK+ SCID suggests a more complex maturation process for the B cell lineage and absence of the selective advantage that appears to exist for donor T cells. The higher mortality seen with myeloablation is largely because children with SCID who are ill at the time of diagnosis with opportunistic infections and/or failure to thrive are more susceptible to toxic chemotherapy [<a href="#rid4">4</a>]. It is possible that replacing busulfan with <a class="drug drug_general" data-topicid="134625" href="/d/drug information/134625.html" rel="external">treosulfan</a> may reduce the toxicity associated with busulfan; however, this remains to be documented [<a href="#rid13">13</a>]. At one center, preliminary experience in this patient population that included newborns suggests that targeting lower exposures of busulfan using pharmacokinetic models in infants under 10 kg may achieve sufficient levels of donor stem cell chimerism to restore both T and B cell immunity while reducing toxicity [<a href="#rid20">20,24</a>].</p><p>There is some evidence in patients with DNA double-stranded break (DSB) repair defects other than ART-SCID that using regular doses of <a class="drug drug_general" data-topicid="8452" href="/d/drug information/8452.html" rel="external">fludarabine</a> with reduced doses of <a class="drug drug_general" data-topicid="9308" href="/d/drug information/9308.html" rel="external">cyclophosphamide</a> is effective in overcoming the NK cell-mediated graft resistance seen with fludarabine alone [<a href="#rid3">3</a>]. A potential alternative approach is the use of monoclonal antibodies (eg, <a class="drug drug_general" data-topicid="8725" href="/d/drug information/8725.html" rel="external">alemtuzumab</a>) or ATG that bind to NK cells and induce apoptosis as well as suppress NK function, therefore reducing graft resistance mediated by NK cells [<a href="#rid25">25,26</a>]. However, neither alemtuzumab nor ATG appears sufficiently effective in suppressing NK cell graft resistance in this patient population. The other agent that appears to be effective for NK cell-mediated rejection is <a class="drug drug_general" data-topicid="9992" href="/d/drug information/9992.html" rel="external">thiotepa</a>. Although it is an alkylating agent, it has been used at reduced dosing (8 mg/kg) with low-dose-exposure <a class="drug drug_general" data-topicid="9173" href="/d/drug information/9173.html" rel="external">busulfan</a> to successfully reconstitute T and B cell immunity in a small number of patients with ART-SCID [<a href="#rid27">27</a>]. However, the long-term effects of this combination remain to be determined.</p><p class="headingAnchor" id="H2362041962"><span class="h3">Approach in radiation-sensitive SCID</span><span class="headingEndMark"> — </span>Alkylating agents such as <a class="drug drug_general" data-topicid="9308" href="/d/drug information/9308.html" rel="external">cyclophosphamide</a> are more toxic in patients with RS-SCID  (<a class="graphic graphic_table graphicRef134345" href="/d/graphic/134345.html" rel="external">table 1</a>), even without preexisting infection and at any age [<a href="#rid8">8,9</a>]. Thus, the goal for these patients is to minimize the use of alkylators and, if possible, to avoid using more than one alkylator and minimize dosing [<a href="#rid7">7,9,12</a>]. The use of either no conditioning or immunosuppressive conditioning alone (eg, low-dose cyclophosphamide or possibly <a class="drug drug_general" data-topicid="9992" href="/d/drug information/9992.html" rel="external">thiotepa</a>) for the initial HCT with an alternative donor in children with non-RAG1 or RAG2 types of T-B-NK+ SCID is suggested to minimize the exposure to alkylating agents. Donor marrow "boosts" or repeat HCT with myeloablative conditioning are reserved for those cases in which the initial procedure results in inadequate T cell immune reconstitution or graft failure. A combination of <a class="drug drug_general" data-topicid="8452" href="/d/drug information/8452.html" rel="external">fludarabine</a>, low-dose cyclophosphamide (or thiotepa), and serotherapy with ATG or <a class="drug drug_general" data-topicid="8725" href="/d/drug information/8725.html" rel="external">alemtuzumab</a> (a monoclonal antibody that binds to CD52 on mature lymphocytes, leading to their destruction) can be used if immunosuppression is felt to be necessary. However, this regimen has not been formally evaluated to any degree in patients with RS-SCID and therefore should be used with caution. (See <a class="local">'General approach in T-B-NK+ SCID'</a> above.)</p><p>It is unknown whether a matched unrelated donor will engraft in this patient population without some immunosuppressive conditioning therapy. Published data indicate that this type of transplant can be performed successfully in some forms of SCID, mostly X-SCID and adenosine deaminase SCID (ADA-SCID) [<a href="#rid28">28</a>]. Unpublished results in a limited number of T-B-NK+ SCID are variable, and more studies are needed in this patient population. If T cell reconstitution can be obtained with a transplant without conditioning, especially in infants, then there is the option to do a boost transplant with therapy directed at opening marrow niches when the child is older and possibly less susceptible to alkylating agents to achieve B cell reconstitution.</p><p class="headingAnchor" id="H2528430931"><span class="h3">Specific defects</span></p><p class="headingAnchor" id="H1388762607"><span class="h4">RAG1/2 defects</span><span class="headingEndMark"> — </span>Patients with defects in recombination-activating gene (RAG) 1 or 2 tolerate aggressive conditioning regimens compared with non-RAG1 or RAG2 types of T-B-NK+ SCID because those with RAG1 or RAG2 defects are defective in T and B cell V(D)J recombination but do not have a defect in double-stranded DNA repair [<a href="#rid8">8</a>]. Most transplants for Omenn syndrome due to <em>RAG</em> pathogenic variants or other defects have used myeloablative and immunosuppressive conditioning, regardless of the donor-recipient match or donor source [<a href="#rid14">14,29-31</a>]. This is because Omenn syndrome patients have T cells, some of which are activated and can mediate a hyperinflammatory and autoimmune reaction [<a href="#rid32">32</a>]. Myeloablative regimens with reduced toxicity, such as those using targeted <a class="drug drug_general" data-topicid="9173" href="/d/drug information/9173.html" rel="external">busulfan</a> and <a class="drug drug_general" data-topicid="8452" href="/d/drug information/8452.html" rel="external">fludarabine</a>, may significantly improve long-term outcomes for these patients. However, if there is incomplete replacement of host with donor immunity, there is an increased likelihood of late effects from autoimmune and hyperinflammatory reactions. (See  <a class="medical medical_review" href="/d/html/3950.html" rel="external">"T-B-NK+ SCID: Pathogenesis, clinical manifestations, and diagnosis", section on 'Clinical variants'</a>.)</p><p class="headingAnchor" id="H145017763"><span class="h4">DCLRE1C (Artemis) defects</span><span class="headingEndMark"> — </span>Patients with ART-SCID (due to pathogenic variants in DNA cross-link repair protein 1C [<em>DCLRE1C</em>], the gene encoding Artemis) are more susceptible to adverse effects, particularly late toxicities, from conditioning regimens that include alkylating therapy and/or ionizing radiation. In one series, there was no difference in survival or the incidence of acute GVHD in patients with ART-SCID, regardless of exposure to alkylators, although a higher incidence of infection was seen. However, in patients surviving more than two years post-HCT, there was a significant association among short stature, abnormal dental development including absent secondary teeth, and late endocrine effects in patients with ART-SCID who received high-dose alkylator therapy prior to their transplant. In addition, these patients are at least theoretically at higher risk for malignancy secondary to radiotherapy due to their inability to effectively repair DNA, although no increased incidence of malignancy has been reported in children with ART-SCID to date [<a href="#rid7">7,8</a>]. Two patients with ART-SCID who received high-dose <a class="drug drug_general" data-topicid="9308" href="/d/drug information/9308.html" rel="external">cyclophosphamide</a> prior to matched sibling transplants died at 23 and 25 years posttransplant of multiple pulmonary hemorrhages and of hepatic carcinoma, respectively [<a href="#rid27">27</a>].</p><p>Conditioning with <a class="drug drug_general" data-topicid="9173" href="/d/drug information/9173.html" rel="external">busulfan</a> or some other alkylating agent that opens marrow niches appears to be required for adequate B cell reconstitution in children with ART-SCID. In a previously discussed study, two of the three Athabascan-speaking patients with ART-SCID who achieved B cell reconstitution received myeloablative conditioning regimens [<a href="#rid7">7</a>]. Unfortunately, only one is a long-term survivor, with complications including short stature, multiple endocrinopathies, and absence of permanent teeth. The use of an immunosuppressive conditioning regimen or no conditioning resulted in T cell, but not B cell, reconstitution in 11 of 12 initial transplants for Athabascan-speaking ART-SCID patients [<a href="#rid7">7</a>].</p><p class="headingAnchor" id="H2278280999"><span class="h4">Non-DCLRE1C double-stranded DNA break repair defects</span><span class="headingEndMark"> — </span>Results were reported in 87 patients from 38 centers in Europe and North America who received HCT for an inborn error of immunity (formerly primary immunodeficiency) and/or malignancy associated with defective genes involving DNA DSB repair including DNA ligase IV (<em>LIG4</em>), nibrin (<em>NBN</em>)<em>, </em>nonhomologous end joining factor 1 (<em>NHEJ1</em>), and ATM serine/threonine kinase (<em>ATM</em>) [<a href="#rid12">12</a>]. Of the 77 patients with DNA ligase IV deficiency, Cernunnos-XRCC4-like factor (XLF) deficiency, or Nijmegen breakage syndrome, survival was only 41 percent for those who received myeloablative conditioning (high-dose alkylator therapy) compared with 79 percent for those receiving reduced-intensity conditioning (including low-dose <a class="drug drug_general" data-topicid="9308" href="/d/drug information/9308.html" rel="external">cyclophosphamide</a>). The incidence of acute GVHD was high in this group of 87 patients, with 37 percent having grade 3 to 4 disease and 18 percent with chronic GVHD. Long-term outcomes other than survival and chronic GVHD were not reported in this retrospective multicenter study.</p><p>Avoiding conditioning with alkylating agents is the optimal goal in treating all patients with SCID and, in particular, those with RS-SCID. The possibility of using a monoclonal antibody (anti-c-Kit) that targets hematopoietic stem cells (HSCs) and opens marrow niches is being tested in an ongoing clinical trial for SCID (<a class="external" href="/external-redirect?target_url=https%3A%2F%2Fclinicaltrials.gov%2Fct2%2Fshow%2FNCT02963064&amp;token=nbsXe3i4qfUea5RCPRHtOS7yhoEzH%2BMCpwZ1%2F1ekxPOWNIWF%2Bnup6vYrE93Hc1af1UAXQHUJdqkljBRkrpVN7g%3D%3D&amp;TOPIC_ID=96155" target="_blank">NCT02963064</a>). Preliminary results in patients who previously received an allogeneic HCT but had poor immune reconstitution and were boosted following an infusion of anti-c-Kit suggest that the approach is safe, with enhancement of T cell immunity in some patients. Study in additional patients, including newly diagnosed patients with SCID, is needed to determine whether B cell engraftment occurs. Studies in animal models suggest that the use of immunotoxins targeting CD45+ cells or the combination of anti-c-Kit with a monoclonal antibody targeting the "don't eat me" receptor on phagocytic cells, CD47, may also be effective [<a href="#rid33">33</a>].</p><p class="headingAnchor" id="H2362041968"><span class="h1">GENE THERAPY</span><span class="headingEndMark"> — </span>Gene therapy (GT) has been successful for other forms of SCID such as X-linked SCID (X-SCID) and SCID due to adenosine deaminase deficiency (ADA-SCID), although its use in T-B-NK+ SCID is growing, in particular for Artemis-deficient SCID (ART-SCID) and recombination-activating gene 1 SCID (RAG1-SCID). (See  <a class="medical medical_review" href="/d/html/3938.html" rel="external">"Overview of gene therapy for inborn errors of immunity"</a>.)</p><p>ART-SCID GT may prove advantageous given the relatively poor outcomes of allogeneic transplants for this condition. In addition, autologous GT only requires low-dose conditioning, which is better tolerated in these patients than myeloablative conditioning due to their sensitivity to ionizing radiation and alkylating chemotherapy.</p><p>An investigational clinical trial of GT for ART-SCID is ongoing (<a class="external" href="/external-redirect?target_url=https%3A%2F%2Fclinicaltrials.gov%2Fct2%2Fshow%2FNCT03538899&amp;token=nbsXe3i4qfUea5RCPRHtOS7yhoEzH%2BMCpwZ1%2F1ekxPNPMKVLjpmaYHe8zrXvzH2T%2BuJ969tBuKIiSIZEhXgBFg%3D%3D&amp;TOPIC_ID=96155" target="_blank">NCT03538899</a>). Ten newly diagnosed infants have received autologous Artemis gene-transduced CD34+ hematopoietic stem cells (HSCs) following conditioning with very-low-exposure <a class="drug drug_general" data-topicid="9173" href="/d/drug information/9173.html" rel="external">busulfan</a> (cumulative area under the curve [cAUC] of 20 mg*hour/L) [<a href="#rid6">6</a>]. The standard cAUC for myeloablative therapy is 70 to 90 mg*hour/L. All 10 patients are making T and B cells, with T cell immunity reconstituting in six of seven evaluable patients by 24 months postinfusion. In addition, four patients have B cell reconstitution, with normal antibody responses to killed and attenuated live-viral vaccines, and no longer require <a class="drug drug_general" data-topicid="16471" href="/d/drug information/16471.html" rel="external">immune globulin</a> replacement. Several of the other patients are making immunoglobulin M (IgM), with evidence of normal B cell maturation. There have been no adverse events related to the GT or busulfan exposure.</p><p>For patients with RAG deficiency, including Omenn syndrome, successful GT should be curative, although studies in mouse models suggest a more complex process than with ART-SCID [<a href="#rid34">34</a>]. A European clinical trial of lentiviral gene insertion therapy for patients with RAG1-SCID is ongoing (<a class="external" href="/external-redirect?target_url=https%3A%2F%2Fclinicaltrials.gov%2Fct2%2Fshow%2FNCT04797260&amp;token=nbsXe3i4qfUea5RCPRHtOS7yhoEzH%2BMCpwZ1%2F1ekxPPDTT22osfl4yKnkTLi1IIB98ngVevv72yf3qietyLt2g%3D%3D&amp;TOPIC_ID=96155" target="_blank">NCT04797260</a>).</p><p class="headingAnchor" id="H2812674056"><span class="h1">SOCIETY GUIDELINE LINKS</span><span class="headingEndMark"> — </span>Links to society and government-sponsored guidelines from selected countries and regions around the world are provided separately. (See  <a class="medical medical_society_guidelines" href="/d/html/112831.html" rel="external">"Society guideline links: Inborn errors of immunity (previously called primary immunodeficiencies)"</a>.)</p><p class="headingAnchor" id="H2362041974"><span class="h1">SUMMARY AND RECOMMENDATIONS</span></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Initial management </strong>– Infants suspected of having an inborn error of immunity (formerly primary immunodeficiency) require special care and treatment before definitive correction is performed, including protective isolation, avoidance of live vaccines, and prophylaxis against infection (antimicrobials and <a class="drug drug_general" data-topicid="16471" href="/d/drug information/16471.html" rel="external">immune globulin</a> replacement therapy). (See <a class="local">'Management prior to diagnosis and transplantation'</a> above and  <a class="medical medical_review" href="/d/html/3955.html" rel="external">"Severe combined immunodeficiency (SCID): An overview", section on 'Protective measures'</a>.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Definitive therapy </strong>– Typical severe combined immunodeficiency (SCID) is universally fatal in infancy without definitive treatment. Hematopoietic cell transplantation (HCT) is the only confirmed curative therapy for children with T cell-negative (T-) B cell-negative (B-) natural killer cell-positive (NK+) SCID  (<a class="graphic graphic_table graphicRef134345" href="/d/graphic/134345.html" rel="external">table 1</a>), but outcomes depend upon the donor type available and conditioning regiment used. Gene therapy (GT) for Artemis-deficient T-B-NK+ SCID (ART-SCID) looks promising. GT for recombination-activating gene 1 SCID (RAG1-SCID) is still experimental and in the early stages of clinical investigation.</p><p></p><p class="bulletIndent1">We recommend HCT with a human leukocyte antigen (HLA) matched related donor, if available, for infants with T-B-NK+ SCID (<a class="grade" href="https://medilib.ir/uptodate/show/grade_2" rel="external">Grade 1B</a>). For patients without an HLA-matched related donor, we suggest HCT with a matched unrelated donor (<a class="grade" href="https://medilib.ir/uptodate/show/grade_6" rel="external">Grade 2C</a>). Alternatives include HCT with an haploidentical related donor or cord blood donor or, in patients with ART-SCID, GT as part of a clinical trial.</p><p></p><p class="bulletIndent2"><span class="glyph">•</span><strong>Hematopoietic cell transplantation </strong>– For patients who have an HLA-matched related donor, survival at two years posttransplant is approximately 75 to 90 percent. Survival after HLA-nonidentical transplantation is less favorable (approximately 35 to 50 percent at two years). (See <a class="local">'Outcomes'</a> above.)</p><p></p><p class="bulletIndent2">Myeloablative preparative regimens facilitate engraftment and immune reconstitution. However, these regimens may increase transplant morbidity and mortality, especially in young infants and those with radiation sensitivity. Studies are underway in patients with SCID (excluding radiation-sensitive SCID [RS-SCID]) to determine the degree of myeloablation necessary to achieve full and durable immune reconstitution with the goal of minimizing exposure. In general, conditioning therapy is not needed to achieve at least T cell reconstitution when HLA-matched sibling donors are available. When alternative donors are used, depending on the genotype, some form of immunosuppression and myeloablation is necessary. However, patients with RS-SCID are at increased risk of toxicity from alkylating agents, and, therefore, use of alkylators should be at least minimized in these patients. (See <a class="local">'General approach in T-B-NK+ SCID'</a> above and <a class="local">'Approach in radiation-sensitive SCID'</a> above.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span><strong>Gene therapy </strong>– GT has been successful for other forms of SCID such as X-linked SCID (X-SCID) and SCID due to adenosine deaminase deficiency (ADA-SCID), and the early experience in ART-SCID is encouraging. Results of gene therapy for RAG1-SCID are pending. (See <a class="local">'Gene therapy'</a> above and  <a class="medical medical_review" href="/d/html/3938.html" rel="external">"Overview of gene therapy for inborn errors of immunity"</a>.)</p><p></p><p class="headingAnchor" id="H2979634858"><span class="h1">ACKNOWLEDGMENT</span><span class="headingEndMark"> — </span>The UpToDate editorial staff acknowledges E Richard Stiehm, MD, who contributed as a Section Editor to earlier versions of this topic review.</p></div><div class="headingAnchor" id="references"><ol id="reference"><li><a class="nounderline abstract_t">Dvorak CC, Haddad E, Buckley RH, et al. The genetic landscape of severe combined immunodeficiency in the United States and Canada in the current era (2010-2018). J Allergy Clin Immunol 2019; 143:405.</a></li><li><a class="nounderline abstract_t">Çağdaş D, Özgür TT, Asal GT, et al. Two SCID cases with Cernunnos-XLF deficiency successfully treated by hematopoietic stem cell transplantation. Pediatr Transplant 2012; 16:E167.</a></li><li><a class="nounderline abstract_t">Haddad E, Logan BR, Griffith LM, et al. Genotype, phenotype and T cell counts at one year predict survival and long term immune reconstitution after transplantation in severe combined immune deficiency (SCID)--The Primary Immune Deficiency Treatment Consortium (PIDTC). Biol Blood Marrow Transplant 2017; 23:S133.</a></li><li><a class="nounderline abstract_t">Pai SY, Logan BR, Griffith LM, et al. Transplantation outcomes for severe combined immunodeficiency, 2000-2009. N Engl J Med 2014; 371:434.</a></li><li><a class="nounderline abstract_t">Lankester AC, Neven B, Mahlaoui N, et al. Hematopoietic cell transplantation in severe combined immunodeficiency: The SCETIDE 2006-2014 European cohort. J Allergy Clin Immunol 2022; 149:1744.</a></li><li><a class="nounderline abstract_t">Cowan MJ, Yu J, Facchino J, et al. Lentiviral Gene Therapy for Artemis-Deficient SCID. N Engl J Med 2022; 387:2344.</a></li><li><a class="nounderline abstract_t">O'Marcaigh AS, DeSantes K, Hu D, et al. Bone marrow transplantation for T-B- severe combined immunodeficiency disease in Athabascan-speaking native Americans. Bone Marrow Transplant 2001; 27:703.</a></li><li><a class="nounderline abstract_t">Schuetz C, Neven B, Dvorak CC, et al. SCID patients with ARTEMIS vs RAG deficiencies following HCT: increased risk of late toxicity in ARTEMIS-deficient SCID. Blood 2014; 123:281.</a></li><li><a class="nounderline abstract_t">Cowan MJ, Gennery AR. Radiation-sensitive severe combined immunodeficiency: The arguments for and against conditioning before hematopoietic cell transplantation--what to do? J Allergy Clin Immunol 2015; 136:1178.</a></li><li><a class="nounderline abstract_t">Griffith LM, Cowan MJ, Notarangelo LD, et al. Primary Immune Deficiency Treatment Consortium (PIDTC) report. J Allergy Clin Immunol 2014; 133:335.</a></li><li><a class="nounderline abstract_t">Cole BO, Welbury RR, Bond E, Abinun M. Dental manifestations in severe combined immunodeficiency following bone marrow transplantation. Bone Marrow Transplant 2000; 25:1007.</a></li><li><a class="nounderline abstract_t">Slack J, Albert MH, Balashov D, et al. Outcome of hematopoietic cell transplantation for DNA double-strand break repair disorders. J Allergy Clin Immunol 2018; 141:322.</a></li><li><a class="nounderline abstract_t">Slatter MA, Rao K, Amrolia P, et al. Treosulfan-based conditioning regimens for hematopoietic stem cell transplantation in children with primary immunodeficiency: United Kingdom experience. Blood 2011; 117:4367.</a></li><li><a class="nounderline abstract_t">Lanfranchi A, Verardi R, Tettoni K, et al. Haploidentical peripheral blood and marrow stem cell transplantation in nine cases of primary immunodeficiency. Haematologica 2000; 85:41.</a></li><li><a class="nounderline abstract_t">Friedrich W, Müller SM. Allogeneic stem cell transplantation for treatment of immunodeficiency. Springer Semin Immunopathol 2004; 26:109.</a></li><li><a class="nounderline abstract_t">Friedrich W, Hönig M. HLA-haploidentical donor transplantation in severe combined immunodeficiency. Immunol Allergy Clin North Am 2010; 30:31.</a></li><li><a class="nounderline abstract_t">Müller SM, Kohn T, Schulz AS, et al. Similar pattern of thymic-dependent T-cell reconstitution in infants with severe combined immunodeficiency after human leukocyte antigen (HLA)-identical and HLA-nonidentical stem cell transplantation. Blood 2000; 96:4344.</a></li><li><a class="nounderline abstract_t">Wahlstrom JT, Dvorak CC, Cowan MJ. Hematopoietic Stem Cell Transplantation for Severe Combined Immunodeficiency. Curr Pediatr Rep 2015; 3:1.</a></li><li><a class="nounderline abstract_t">Dvorak CC, Hung GY, Horn B, et al. Megadose CD34(+) cell grafts improve recovery of T cell engraftment but not B cell immunity in patients with severe combined immunodeficiency disease undergoing haplocompatible nonmyeloablative transplantation. Biol Blood Marrow Transplant 2008; 14:1125.</a></li><li><a class="nounderline abstract_t">Dvorak CC, Long-Boyle J, Dara J, et al. Low Exposure Busulfan Conditioning to Achieve Sufficient Multilineage Chimerism in Patients with Severe Combined Immunodeficiency. Biol Blood Marrow Transplant 2019; 25:1355.</a></li><li><a class="nounderline abstract_t">Veys P. Reduced intensity transplantation for primary immunodeficiency disorders. Pediatr Rep 2011; 3 Suppl 2:e11.</a></li><li><a class="nounderline abstract_t">Law J, Cowan MJ, Dvorak CC, et al. Busulfan, fludarabine, and alemtuzumab as a reduced toxicity regimen for children with malignant and nonmalignant diseases improves engraftment and graft-versus-host disease without delaying immune reconstitution. Biol Blood Marrow Transplant 2012; 18:1656.</a></li><li><a class="nounderline abstract_t">Haddad E, Landais P, Friedrich W, et al. Long-term immune reconstitution and outcome after HLA-nonidentical T-cell-depleted bone marrow transplantation for severe combined immunodeficiency: a European retrospective study of 116 patients. Blood 1998; 91:3646.</a></li><li><a class="nounderline abstract_t">Savic RM, Cowan MJ, Dvorak CC, et al. Effect of weight and maturation on busulfan clearance in infants and small children undergoing hematopoietic cell transplantation. Biol Blood Marrow Transplant 2013; 19:1608.</a></li><li><a class="nounderline abstract_t">Condiotti R, Nagler A. Campath-1G impairs human natural killer (NK) cell-mediated cytotoxicity. Bone Marrow Transplant 1996; 18:713.</a></li><li><a class="nounderline abstract_t">Stauch D, Dernier A, Sarmiento Marchese E, et al. Targeting of natural killer cells by rabbit antithymocyte globulin and campath-1H: similar effects independent of specificity. PLoS One 2009; 4:e4709.</a></li><li class="breakAll">Cowan MJ, University of California San Francisco, 2021, personal communication.</li><li><a class="nounderline abstract_t">Dvorak CC, Hassan A, Slatter MA, et al. Comparison of outcomes of hematopoietic stem cell transplantation without chemotherapy conditioning by using matched sibling and unrelated donors for treatment of severe combined immunodeficiency. J Allergy Clin Immunol 2014; 134:935.</a></li><li><a class="nounderline abstract_t">Tsuji Y, Imai K, Kajiwara M, et al. Hematopoietic stem cell transplantation for 30 patients with primary immunodeficiency diseases: 20 years experience of a single team. Bone Marrow Transplant 2006; 37:469.</a></li><li><a class="nounderline abstract_t">Rossi G, Zecca M, Giorgiani G, et al. Non-myeloablative stem cell transplantation for severe combined immunodeficiency--Omenn syndrome. Br J Haematol 2004; 125:406.</a></li><li><a class="nounderline abstract_t">Nahum A, Reid B, Grunebaum E, Roifman CM. Matched unrelated bone marrow transplant for Omenn syndrome. Immunol Res 2009; 44:25.</a></li><li><a class="nounderline abstract_t">Bosticardo M, Pala F, Notarangelo LD. RAG deficiencies: Recent advances in disease pathogenesis and novel therapeutic approaches. Eur J Immunol 2021; 51:1028.</a></li><li><a class="nounderline abstract_t">Cowan MJ, Kiem HP. Devouring the Hematopoietic Stem Cell: Setting the Table for Marrow Cell Transplantation. Mol Ther 2016; 24:1892.</a></li><li><a class="nounderline abstract_t">Lagresle-Peyrou C, Yates F, Malassis-Séris M, et al. Long-term immune reconstitution in RAG-1-deficient mice treated by retroviral gene therapy: a balance between efficiency and toxicity. Blood 2006; 107:63.</a></li></ol></div><div id="topicVersionRevision">Topic 96155 Version 13.0</div></div>
+<div class="row">
+<div class="col-12">
+<h4 style="text-align: center;padding: 20px;color: cadetblue;">References</h4>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/30193840" id="rid0" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>1 : The genetic landscape of severe combined immunodeficiency in the United States and Canada in the current era (2010-2018).</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/21535335" id="rid1" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>2 : Two SCID cases with Cernunnos-XLF deficiency successfully treated by hematopoietic stem cell transplantation.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/" id="rid2" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>3 : Genotype, phenotype and T cell counts at one year predict survival and long term immune reconstitution after transplantation in severe combined immune deficiency (SCID)--The Primary Immune Deficiency Treatment Consortium (PIDTC)</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/25075835" id="rid3" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>4 : Transplantation outcomes for severe combined immunodeficiency, 2000-2009.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/34718043" id="rid4" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>5 : Hematopoietic cell transplantation in severe combined immunodeficiency: The SCETIDE 2006-2014 European cohort.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/36546626" id="rid5" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>6 : Lentiviral Gene Therapy for Artemis-Deficient SCID.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/11360109" id="rid6" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>7 : Bone marrow transplantation for T-B- severe combined immunodeficiency disease in Athabascan-speaking native Americans.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/24144642" id="rid7" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>8 : SCID patients with ARTEMIS vs RAG deficiencies following HCT: increased risk of late toxicity in ARTEMIS-deficient SCID.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/26055221" id="rid8" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>9 : Radiation-sensitive severe combined immunodeficiency: The arguments for and against conditioning before hematopoietic cell transplantation--what to do?</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/24139498" id="rid9" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>10 : Primary Immune Deficiency Treatment Consortium (PIDTC) report.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/10800072" id="rid10" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>11 : Dental manifestations in severe combined immunodeficiency following bone marrow transplantation.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/28392333" id="rid11" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>12 : Outcome of hematopoietic cell transplantation for DNA double-strand break repair disorders.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/21325599" id="rid12" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>13 : Treosulfan-based conditioning regimens for hematopoietic stem cell transplantation in children with primary immunodeficiency: United Kingdom experience.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/11268323" id="rid13" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>14 : Haploidentical peripheral blood and marrow stem cell transplantation in nine cases of primary immunodeficiency.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/15368077" id="rid14" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>15 : Allogeneic stem cell transplantation for treatment of immunodeficiency.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/20113885" id="rid15" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>16 : HLA-haploidentical donor transplantation in severe combined immunodeficiency.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/11110711" id="rid16" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>17 : Similar pattern of thymic-dependent T-cell reconstitution in infants with severe combined immunodeficiency after human leukocyte antigen (HLA)-identical and HLA-nonidentical stem cell transplantation.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/25821657" id="rid17" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>18 : Hematopoietic Stem Cell Transplantation for Severe Combined Immunodeficiency.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/18804042" id="rid18" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>19 : Megadose CD34(+) cell grafts improve recovery of T cell engraftment but not B cell immunity in patients with severe combined immunodeficiency disease undergoing haplocompatible nonmyeloablative transplantation.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/30876930" id="rid19" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>20 : Low Exposure Busulfan Conditioning to Achieve Sufficient Multilineage Chimerism in Patients with Severe Combined Immunodeficiency.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/22053273" id="rid20" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>21 : Reduced intensity transplantation for primary immunodeficiency disorders.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/22609040" id="rid21" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>22 : Busulfan, fludarabine, and alemtuzumab as a reduced toxicity regimen for children with malignant and nonmalignant diseases improves engraftment and graft-versus-host disease without delaying immune reconstitution.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/9573000" id="rid22" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>23 : Long-term immune reconstitution and outcome after HLA-nonidentical T-cell-depleted bone marrow transplantation for severe combined immunodeficiency: a European retrospective study of 116 patients.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/24029650" id="rid23" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>24 : Effect of weight and maturation on busulfan clearance in infants and small children undergoing hematopoietic cell transplantation.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/8899185" id="rid24" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>25 : Campath-1G impairs human natural killer (NK) cell-mediated cytotoxicity.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/19266059" id="rid25" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>26 : Targeting of natural killer cells by rabbit antithymocyte globulin and campath-1H: similar effects independent of specificity.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/19266059" id="rid26" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>27 : Targeting of natural killer cells by rabbit antithymocyte globulin and campath-1H: similar effects independent of specificity.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/25109802" id="rid27" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>28 : Comparison of outcomes of hematopoietic stem cell transplantation without chemotherapy conditioning by using matched sibling and unrelated donors for treatment of severe combined immunodeficiency.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/16435016" id="rid28" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>29 : Hematopoietic stem cell transplantation for 30 patients with primary immunodeficiency diseases: 20 years experience of a single team.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/15086425" id="rid29" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>30 : Non-myeloablative stem cell transplantation for severe combined immunodeficiency--Omenn syndrome.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/18854956" id="rid30" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>31 : Matched unrelated bone marrow transplant for Omenn syndrome.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/33682138" id="rid31" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>32 : RAG deficiencies: Recent advances in disease pathogenesis and novel therapeutic approaches.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/27916993" id="rid32" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>33 : Devouring the Hematopoietic Stem Cell: Setting the Table for Marrow Cell Transplantation.</p>
+</a>
+</div>
+<div class="col-12" style="text-align: left;direction: ltr">
+<a href="https://pubmed.ncbi.nlm.nih.gov/16174758" id="rid33" target="_blank">
+<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>34 : Long-term immune reconstitution in RAG-1-deficient mice treated by retroviral gene therapy: a balance between efficiency and toxicity.</p>
+</a>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>
