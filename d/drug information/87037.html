@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Perampanel: Drug information</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Perampanel: Drug information</h1>
+<div class="utdArticleSection utdStyle" id="topicContent"><div id="drugTitle">Perampanel: Drug information</div><div class="clear"></div><div id="topicText">(For additional information <a class="drug drug_patient" data-topicid="87121" href="/d/html/87121.html" rel="external">see "Perampanel: Patient drug information"</a> and <a class="drug drug_pediatric" data-topicid="98094" href="/d/html/98094.html" rel="external">see "Perampanel: Pediatric drug information"</a>)<br/><br/>For abbreviations, symbols, and age group definitions used in Lexicomp (<a class="graphic graphic_table" href="/d/html/57469.html" rel="external">show table</a>)<div class="block black-box-warn drugH1Div" id="F15405059"><span class="drugH1">ALERT: US Boxed Warning</span>
+<div class="collapsible">
+<span class="collapsible-title">Serious psychiatric and behavioral reactions:</span>
+<div class="collapsible-wrap">
+<p style="text-indent:-2em;margin-left:2em;">Serious or life-threatening psychiatric and behavioral adverse reactions including aggression, hostility, irritability, anger, and homicidal ideation and threats have been reported in patients taking perampanel. These reactions occurred in patients with and without prior psychiatric history, prior aggressive behavior, or concomitant use of medications associated with hostility and aggression.</p>
+<p style="text-indent:-2em;margin-left:2em;">Advise patients and caregivers to contact a health care provider immediately if any of these reactions or changes in mood, behavior, or personality that are not typical for the patient are observed while taking perampanel or after discontinuing perampanel. Closely monitor patients, particularly during the titration period and at higher doses. Reduce perampanel if these symptoms occur, and discontinue the drug immediately if symptoms are severe or are worsening.</p></div>
+</div>
+</div>
+<div class="visuallyHidden drugH1Div" id="formulinkBodyPlaceholder"><span class="drugH1"></span></div>
+<div class="list ubnlist drugH1Div drugBrandNames" id="F22799659"><span class="drugH1">Brand Names: US</span>
+<ul>
+<li>Fycompa</li></ul></div>
+<div class="list canbnlist drugH1Div drugBrandNames" id="F52871520"><span class="drugH1">Brand Names: Canada</span>
+<ul>
+<li>Fycompa;</li>
+<li>TARO-Perampanel</li></ul></div>
+<div class="ex_sect_xr thclist drugH1Div drugBrandNames" id="F15405061"><span class="drugH1">Pharmacologic Category</span>
+<ul>
+<li>
+                        AMPA Glutamate Receptor Antagonist;</li>
+<li>
+                        Antiseizure Agent, Miscellaneous</li></ul></div>
+<div class="block doa drugH1Div" id="F15657532"><span class="drugH1">Dosing: Adult</span>
+<p style="text-indent:0em;display:inline">
+<b>Note:</b> Reduce the dosage in patients who experience serious psychiatric or behavioral reactions; discontinue immediately if symptoms are severe or worsening. Tablets and oral suspension may be used interchangeably.</p>
+<div class="collapsible-indication">
+<span class="collapsible-indication-title" data-indication-id="6812a6bc-9d43-4051-8f22-ce225deac916">Partial-onset seizures</span>
+<div class="collapsible-indication-wrap">
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Partial-onset seizures:</b>
+<b>Oral:</b></p>
+<p style="text-indent:-2em;margin-left:4em;">Patients <b>not</b> receiving enzyme-inducing AED regimens: Initial: 2 mg once daily at bedtime; may increase daily dose by 2 mg once daily no more frequently than at weekly intervals based on response and tolerability. Recommended maintenance dose: 8 to 12 mg once daily at bedtime; some patients may respond to 4 mg once daily; 12 mg once daily has resulted in somewhat greater reductions in seizure rates in some patients but with substantial increase in side effects.</p>
+<p style="text-indent:-2em;margin-left:4em;">Patients receiving enzyme-inducing AED regimens (eg, phenytoin, carbamazepine, oxcarbazepine): Initial: 4 mg once daily at bedtime; may increase daily dose by 2 mg once daily no more frequently than at weekly intervals based on response and tolerability. Maintenance dose has not been established; highest dose used in clinical trials was 12 mg once daily.</p></div>
+</div>
+<div class="collapsible-indication">
+<span class="collapsible-indication-title" data-indication-id="384a764e-de55-4b63-b918-c350f4d4f02e">Primary generalized tonic-clonic seizures</span>
+<div class="collapsible-indication-wrap">
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Primary generalized tonic-clonic seizures (adjunct):</b>
+<b>Oral:</b></p>
+<p style="text-indent:-2em;margin-left:4em;">Patients <b>not</b> receiving enzyme-inducing AED regimens: Initial: 2 mg once daily at bedtime; may increase dose by 2 mg once daily no more frequently than at weekly intervals based on response and tolerability. Recommended maintenance dose: 8 mg once daily at bedtime; if tolerated and further seizure control is needed, may increase up to 12 mg once daily (maximum dose: 12 mg once daily).</p>
+<p style="text-indent:-2em;margin-left:4em;">Patients receiving enzyme-inducing AED regimens (eg, phenytoin, carbamazepine, oxcarbazepine): Initial 4 mg once daily at bedtime; may increase daily dose by 2 mg once daily no more frequently than at weekly intervals based on response and tolerability. Maintenance dose has not been established; highest dose used in clinical trials was 12 mg once daily.</p></div>
+</div>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Dosage adjustment for concomitant therapy: </b>Significant drug interactions exist, requiring dose/frequency adjustment or avoidance. Consult drug interactions database for more information.</p></div>
+<div class="block dora drugH1Div" id="F50990727"><span class="drugH1">Dosing: Kidney Impairment: Adult</span>
+<p style="text-indent:-2em;margin-left:2em;">CrCl ≥50 mL/minute: No dosage adjustment necessary.</p>
+<p style="text-indent:-2em;margin-left:2em;">CrCl 30 to 49 mL/minute: No dosage adjustment necessary; monitor closely and consider slower titration based on response and tolerability.</p>
+<p style="text-indent:-2em;margin-left:2em;">CrCl &lt;30 mL/minute: Use not recommended (has not been studied).</p>
+<p style="text-indent:-2em;margin-left:2em;">Hemodialysis: Use not recommended (has not been studied).</p></div>
+<div class="block doha drugH1Div" id="F50988089"><span class="drugH1">Dosing: Hepatic Impairment: Adult</span>
+<p style="text-indent:-2em;margin-left:2em;">Mild impairment (Child-Pugh class A): Initial 2 mg once daily; may increase daily dose by 2 mg once daily no more frequently than every 2 weeks based on response and tolerability. Maximum: 6 mg once daily</p>
+<p style="text-indent:-2em;margin-left:2em;">Moderate impairment (Child-Pugh class B): Initial 2 mg once daily; may increase daily dose by 2 mg once daily no more frequently than every 2 weeks based on response and tolerability. Maximum: 4 mg once daily</p>
+<p style="text-indent:-2em;margin-left:2em;">Severe impairment (Child-Pugh class C): Use not recommended (has not been studied)</p></div>
+<div class="block doe drugH1Div" id="F15657534"><span class="drugH1">Dosing: Older Adult</span>
+<p style="text-indent:0em;display:inline">Refer to adult dosing. Increase dose no more frequently than every 2 weeks.</p></div>
+<div class="block dop drugH1Div" id="F15657531"><span class="drugH1">Dosing: Pediatric</span><p>(For additional information <a class="drug drug_pediatric" data-topicid="98094" href="/d/html/98094.html" rel="external">see "Perampanel: Pediatric drug information"</a>)</p>
+<p style="text-indent:0em;display:inline">
+<b>Note:</b> Dosing should be individualized based upon response and tolerability. Reduce the dosage in patients who experience serious psychiatric or behavioral reactions; discontinue immediately if symptoms are severe or worsening.</p>
+<div class="collapsible-indication">
+<span class="collapsible-indication-title" data-indication-id="1ddb79ff-dc8f-4ae5-a00e-e2c9d92b3a25">Partial seizures; adjunct or monotherapy</span>
+<div class="collapsible-indication-wrap">
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Partial seizures; adjunct or monotherapy:</b> Children ≥4 years and Adolescents: Oral:</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Patients </i>
+<b>
+<i>not</i></b>
+<i> receiving moderate or strong CYP3A4 inducers:</i> Initial: 2 mg once daily at bedtime; may increase daily dose by 2 mg increments no more frequently than at weekly intervals; recommended maintenance dose range: 8 to 12 mg once daily at bedtime; some patients may respond to doses of 4 mg/day. Although 12 mg doses showed somewhat greater efficacy (reduction in seizure rate) in some patients, the 12 mg dose was associated with substantially higher adverse effects; maximum daily dose: 12 mg/<b>day</b>.</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Patients receiving moderate or strong CYP3A4 inducers (eg, phenytoin, carbamazepine, oxcarbazepine):</i> Initial: 4 mg once daily at bedtime; may increase daily dose by 2 mg increments no more frequently than at weekly intervals; target maintenance dose range not established; maximum reported dose is 12 mg/<b>day</b>. Monitor patients closely for response and tolerability when inducer is being introduced or withdrawn from therapeutic regimen; perampanel dosing adjustment may be necessary.</p></div>
+</div>
+<div class="collapsible-indication">
+<span class="collapsible-indication-title" data-indication-id="384a764e-de55-4b63-b918-c350f4d4f02e">Primary generalized tonic-clonic seizures</span>
+<div class="collapsible-indication-wrap">
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Primary generalized tonic-clonic seizures (adjunct):</b> Children ≥12 years and Adolescents: Oral:</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Patients <b>not</b> receiving moderate or strong CYP3A4 inducers</i>: Initial: 2 mg once daily at bedtime; may increase dose by 2 mg once daily no more frequently than at weekly intervals based on response and tolerability. Recommended maintenance dose: 8 mg once daily at bedtime; some patients may require 12 mg once daily at bedtime for further seizure control and if tolerated; maximum daily dose: 12 mg/<b>day</b></p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Patients receiving moderate or strong CYP3A4 inducers (eg, phenytoin, carbamazepine, oxcarbazepine)</i>: Initial: 4 mg once daily at bedtime; may increase daily dose by 2 mg once daily no more frequently than at weekly intervals; individualize dose based on response and tolerability; in trials, the maximum reported dose was 12 mg/<b>day</b>. Monitor patients closely for response and tolerability when inducer is being introduced or withdrawn from therapeutic regimen; perampanel dosing adjustment may be necessary.</p></div>
+</div>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Dosage adjustment for concomitant therapy:</b> Significant drug interactions exist, requiring dose/frequency adjustment or avoidance. Consult drug interactions database for more information.</p></div>
+<div class="block dorp drugH1Div" id="F51153437"><span class="drugH1">Dosing: Kidney Impairment: Pediatric</span>
+<p style="text-indent:-2em;margin-left:2em;">Children ≥4 years and Adolescents:</p>
+<p style="text-indent:-2em;margin-left:4em;">Mild impairment: No dosage adjustment necessary.</p>
+<p style="text-indent:-2em;margin-left:4em;">Moderate impairment: There are no dosage adjustments provided in the manufacturer's labeling; use with caution, monitor closely, and consider slower titration based on response and tolerability.</p>
+<p style="text-indent:-2em;margin-left:4em;">Severe impairment: Use not recommended (has not been studied).</p>
+<p style="text-indent:-2em;margin-left:4em;">Hemodialysis: Use not recommended (has not been studied).</p></div>
+<div class="block dohp drugH1Div" id="F51153438"><span class="drugH1">Dosing: Hepatic Impairment: Pediatric</span>
+<p style="text-indent:-2em;margin-left:2em;">Children ≥4 years and Adolescents:</p>
+<p style="text-indent:-2em;margin-left:4em;">Mild impairment: Initial: 2 mg once daily; may increase daily dose by 2 mg no more frequently than every 2 weeks based on response and tolerability. Maximum daily dose: 6 mg/<b>day</b></p>
+<p style="text-indent:-2em;margin-left:4em;">Moderate impairment: Initial: 2 mg once daily; may increase daily dose by 2 mg after 2 weeks based on response and tolerability. Maximum daily dose: 4 mg/<b>day</b></p>
+<p style="text-indent:-2em;margin-left:4em;">Severe impairment: Use not recommended (has not been studied).</p></div>
+<div class="block adr drugH1Div" id="F15607863"><span class="drugH1">Adverse Reactions</span>
+<p style="text-indent:0em;display:inline">The following adverse drug reactions and incidences are derived from product labeling unless otherwise specified.</p>
+<p style="text-indent:-2em;margin-left:2em;">Many adverse effects are dose-related. Frequency not always defined.</p>
+<p style="text-indent:-2em;margin-left:4em;">Cardiovascular: Peripheral edema (2%)</p>
+<p style="text-indent:-2em;margin-left:4em;">Central nervous system: Dizziness (16% to ≤47%), vertigo (3% to ≤47%), hostility (≤12% to ≤20%), aggressive behavior (2% to ≤20%), drowsiness (9% to 18%), abnormal gait (4% to 16%), fatigue (8% to 15%), headache (12% to 13%), irritability (2% to 12%), falling (5% to 10%), ataxia (≤8%), equilibrium disturbance (3% to 5%), anxiety (2% to 5%), dysarthria (1% to 4%), hypoesthesia (3%), hypersomnia (1% to 3%), anger (1% to 3%), memory impaired (2%), paresthesia (2%), confusion (1% to 2%), euphoria (≤2%), mood changes (1% to 2%), agitation, altered mental status, delusion, disorientation, emotional lability, homicidal ideation, paranoia, psychiatric disturbance (worsening)</p>
+<p style="text-indent:-2em;margin-left:4em;">Dermatologic: Skin rash (4%)</p>
+<p style="text-indent:-2em;margin-left:4em;">Endocrine &amp; metabolic: Weight gain (4% to 9%), hyponatremia (2%)</p>
+<p style="text-indent:-2em;margin-left:4em;">Gastrointestinal: Vomiting (4% to 9%), nausea (6% to 8%), abdominal pain (5%), constipation (3%)</p>
+<p style="text-indent:-2em;margin-left:4em;">Genitourinary: Urinary tract infection (4%)</p>
+<p style="text-indent:-2em;margin-left:4em;">Hematologic &amp; oncologic: Bruise (2% to 6%)</p>
+<p style="text-indent:-2em;margin-left:4em;">Neuromuscular &amp; skeletal: Back pain (5%), sprain (4%), myalgia (3%), arthralgia (2% to 3%), limb pain (2% to 3%), musculoskeletal pain (2%), weakness (2%)</p>
+<p style="text-indent:-2em;margin-left:4em;">Ophthalmic: Blurred vision (3% to 4%), diplopia (3%)</p>
+<p style="text-indent:-2em;margin-left:4em;">Respiratory: Cough (4%), upper respiratory tract infection (4%), oropharyngeal pain (2%)</p>
+<p style="text-indent:-2em;margin-left:4em;">Miscellaneous: Head trauma (3%), laceration (2%), limb injury (1% to 2%)</p>
+<p style="text-indent:-2em;margin-left:2em;">&lt;1%, postmarketing, and/or case reports: Acute psychosis, delirium, DRESS syndrome, hallucination, increased serum triglycerides, suicidal ideation</p></div>
+<div class="block coi drugH1Div" id="F15607842"><span class="drugH1">Contraindications</span>
+<p style="text-indent:-2em;margin-left:2em;">There are no contraindications listed in manufacturer's US labeling.</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<i>Canadian labeling:</i> Hypersensitivity to perampanel or any component of the formulation.</p></div>
+<div class="block war drugH1Div" id="F15607843"><span class="drugH1">Warnings/Precautions</span>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>
+<i>Concerns related to adverse effects:</i></b></p>
+<p style="text-indent:-2em;margin-left:4em;">• CNS effects: Dizziness, fatigue (including lethargy and weakness), gait disturbances (including abnormal coordination, ataxia, and balance disorder), and somnolence may occur during therapy; patients should be cautioned about performing tasks that require alertness (eg, operating machinery, driving).</p>
+<p style="text-indent:-2em;margin-left:4em;">• Multiorgan hypersensitivity reactions: Potentially serious, sometimes fatal, drug reaction with eosinophilia and systemic symptoms (DRESS), also known as multiorgan hypersensitivity, has been reported in patients taking antiseizure drugs, including perampanel. Symptoms may include fever, rash, lymphadenopathy, eosinophilia, and/or facial swelling, in association with other organ system involvement (eg, hepatitis, nephritis, hematological abnormalities, myocarditis, myositis). Monitor for signs and symptoms of possible disparate manifestations associated with lymphatic, hepatic, renal, and/or hematologic organ systems. Early symptoms of hypersensitivity reactions (eg, fever, lymphadenopathy) may occur without rash; discontinuation and conversion to alternate therapy may be required.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Neuropsychiatric disorders: <b>[US Boxed Warning]: Dose-related serious or life-threatening neuropsychiatric events (including aggression, anger, homicidal ideation and threats, hostility, and irritability) have been reported most often occurring in first 6 weeks of therapy in patients with or without prior psychiatric history, prior aggressive behavior, or concomitant use of medications associated with hostility and aggression; monitor patients closely especially during dosage adjustments and when receiving higher doses. Adjust dose or immediately discontinue use if severe or worsening symptoms occur; permanently discontinue for persistent severe or worsening psychiatric symptoms or behaviors. Inform patients and caregivers to contact their healthcare provider immediately if they experience any atypical behavioral and/or mood changes while taking perampanel or after discontinuing perampanel.</b> Concurrent use with alcohol has been associated with significantly worsened mood and increased anger; patients should avoid the use of alcohol during therapy.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Suicidal ideation: Pooled analysis of trials involving various antiseizure medications (regardless of indication) showed an increased risk of suicidal thoughts/behavior (incidence rate: 0.43% treated patients compared to 0.24% of patients receiving placebo); risk observed as early as 1 week after initiation and continued through duration of trials (most trials ≤24 weeks). Monitor all patients for notable changes in behavior that might indicate suicidal thoughts or depression; notify health care provider immediately if symptoms occur.</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>
+<i>Disease-related concerns:</i></b></p>
+<p style="text-indent:-2em;margin-left:4em;">• Hepatic impairment: Not recommended for use in patients with severe impairment; dosage adjustment recommended for mild to moderate hepatic impairment.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Renal impairment: Not recommended for use in patients with severe impairment or on hemodialysis; use caution in patients with moderate impairment and consider slower titration.</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>
+<i>Special populations:</i></b></p>
+<p style="text-indent:-2em;margin-left:4em;">• Older adult: Use caution in elderly patients due to increased risk of dizziness, gait or coordination disturbances, somnolence, fatigue-related events, and falls; proceed slowly with dosing titration in patients ≥65 years of age.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Fall risk: Use with extreme caution in patients who are at risk of falls; use has been associated with falls and traumatic injury (including head injuries and bone fracture).</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>
+<i>Dosage forms specific issues:</i></b></p>
+<p style="text-indent:-2em;margin-left:4em;">• Lactose: Formulation may contain lactose.</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>
+<i>Other warnings/precautions:</i></b></p>
+<p style="text-indent:-2em;margin-left:4em;">• Withdrawal: Antiseizure medications should not be discontinued abruptly because of the possibility of increasing seizure frequency; therapy should be withdrawn gradually (≥1 week) to minimize the potential of increased seizure frequency, unless safety concerns require a more rapid withdrawal.</p></div>
+<div class="block foc drugH1Div" id="F22799660"><span class="drugH1">Dosage Forms: US</span>
+<p style="text-indent:0em;text-align:justify;display:inline">Excipient information presented when available (limited, particularly for generics); consult specific product labeling.</p>
+<p style="text-indent:-2em;margin-left:2em;text-align:justify;">Suspension, Oral: </p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">Fycompa: 0.5 mg/mL (340 mL) [contains sodium benzoate]</p>
+<p style="text-indent:-2em;margin-left:2em;text-align:justify;">Tablet, Oral: </p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">Fycompa: 2 mg, 4 mg, 6 mg, 8 mg</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">Fycompa: 10 mg, 12 mg [contains fd&amp;c blue #2 (indigo carm) aluminum lake]</p></div>
+<div class="block geq drugH1Div" id="F15594338"><span class="drugH1">Generic Equivalent Available: US</span>
+<p style="text-indent:0em;display:inline">No</p></div>
+<div class="block fee drugH1Div" id="F23613356"><span class="drugH1">Pricing: US</span>
+<p style="text-indent:-2em;margin-left:2em;text-align:justify;">
+<b>Suspension</b> (Fycompa Oral)</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">0.5 mg/mL (per mL): $5.59</p>
+<p style="text-indent:-2em;margin-left:2em;text-align:justify;">
+<b>Tablets</b> (Fycompa Oral)</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">2 mg (per each): $24.84</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">4 mg (per each): $49.08</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">6 mg (per each): $49.08</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">8 mg (per each): $49.08</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">10 mg (per each): $49.08</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">12 mg (per each): $49.08</p>
+<p style="text-indent:0em;">
+<b>Disclaimer: </b>A representative AWP (Average Wholesale Price) price or price range is provided as reference price only. A range is provided when more than one manufacturer's AWP price is available and uses the low and high price reported by the manufacturers to determine the range. The pricing data should be used for benchmarking purposes only, and as such should not be used alone to set or adjudicate any prices for reimbursement or purchasing functions or considered to be an exact price for a single product and/or manufacturer.  Medi-Span expressly disclaims all warranties of any kind or nature, whether express or implied, and assumes no liability with respect to accuracy of price or price range data published in its solutions.  In no event shall Medi-Span be liable for special, indirect, incidental, or consequential damages arising from use of price or price range data.  Pricing data is updated monthly.</p></div>
+<div class="block dinfoc drugH1Div" id="F52871521"><span class="drugH1">Dosage Forms: Canada</span>
+<p style="text-indent:0em;text-align:justify;display:inline">Excipient information presented when available (limited, particularly for generics); consult specific product labeling.</p>
+<p style="text-indent:-2em;margin-left:2em;text-align:justify;">Tablet, Oral: </p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">Fycompa: 2 mg, 4 mg, 6 mg, 8 mg</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">Fycompa: 10 mg, 12 mg [contains fd&amp;c blue #2 (indigo carm) aluminum lake]</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">Generic: 2 mg, 4 mg, 6 mg, 8 mg, 10 mg, 12 mg</p></div>
+<div class="block csi drugH1Div" id="F23599600"><span class="drugH1">Controlled Substance</span>
+<p style="text-indent:0em;display:inline">C-III</p></div>
+<div class="block adm drugH1Div" id="F15657538"><span class="drugH1">Administration: Adult</span>
+<p style="text-indent:-2em;margin-left:2em;">Tablets: Administer at bedtime without regard to food.</p>
+<p style="text-indent:-2em;margin-left:2em;margin-top:0em;">Oral suspension: Shake well before every administration. Use a calibrated measuring device to measure dose (a household teaspoon or tablespoon is not an adequate measuring device). Insert the provided adapter firmly into the neck of the bottle prior to use; adapter should remain in place for the duration of use. Insert the dosing syringe into the adapter and withdraw the dose from the inverted bottle. The cap should be replaced after each use; the cap fits properly when the adapter is in place.</p></div>
+<div class="block admp drugH1Div" id="F52614524"><span class="drugH1">Administration: Pediatric</span>
+<p style="text-indent:0em;display:inline">Oral: Administer at bedtime. May be administered without regard to meals.</p>
+<p style="text-indent:0em;margin-top:2em;">Oral suspension: Shake well before use. Use the provided graduated oral dosing syringe to measure dose (do not use household teaspoon). Insert the provided adapter firmly into the neck of the bottle prior to use; adapter should remain in place for the duration of use. Insert the dosing syringe into the adapter and withdraw the dose from the inverted bottle. The cap should be replaced after each use; the cap fits properly when the adapter is in place.</p></div>
+<div class="block meg drugH1Div" id="F15575719"><span class="drugH1">Medication Guide and/or Vaccine Information Statement (VIS)</span>
+<p style="text-indent:0em;display:inline">An FDA-approved patient medication guide, which is available with the product information and at <a href="/external-redirect?target_url=https%3A%2F%2Fwww.accessdata.fda.gov%2Fdrugsatfda_docs%2Flabel%2F2019%2F202834s016%2C208277s004lbl.pdf%23page%3D24&amp;token=gxRCYLPWjB5gtKp2EjTvytU1xovtyyBVXz0f9XF746Vqcge8N%2Ffgny2TlwJWza0DS9dlwroeI%2ByvbU7%2FcikNkve1setqqoLxY6y2%2BxuL7LoBziQb3GiFyu0wvr2N9qJR&amp;TOPIC_ID=87037" target="_blank">https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/202834s016,208277s004lbl.pdf#page=24</a>, must be dispensed with this medication.</p></div>
+<div class="block use drugH1Div" id="F15405063"><span class="drugH1">Use: Labeled Indications</span>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Partial-onset seizures:</b> Treatment of partial-onset seizures with or without secondarily generalized seizures as adjunct or monotherapy in patients with epilepsy who are ≥4 years of age.</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Primary generalized tonic-clonic seizures:</b> Treatment of primary generalized tonic-clonic seizures as adjunct therapy in patients with epilepsy who are ≥12 years of age.</p></div>
+<div class="block cyt drugH1Div" id="F15594443"><span class="drugH1">Metabolism/Transport Effects</span>
+<p style="text-indent:0em;display:inline">
+<b>Substrate</b> of CYP1A2 (minor), CYP2B6 (minor), CYP3A4 (major); <b>Note:</b> Assignment of Major/Minor substrate status based on clinically relevant drug interaction potential</p></div>
+<div class="block dri drugH1Div" id="F15594441"><span class="drugH1">Drug Interactions</span><br/><br/><div class="clear"></div><p xmlns=""></p><div class="inner" xmlns=""><p style="text-indent:0em;display:inline"><b>Note</b>: Interacting drugs may <b>not be individually listed below</b> if they are part of a group interaction (eg, individual drugs within “CYP3A4 Inducers [Strong]” are NOT listed).  For a complete list of drug interactions by individual drug name and detailed management recommendations, use the Lexicomp drug interactions program by clicking on the “Launch drug interactions program” link above.</p><p xmlns=""></p></div>
+<p style="text-indent:-2em;margin-left:2em;">Alcohol (Ethyl): Perampanel may enhance the CNS depressant effect of Alcohol (Ethyl). Alcohol may also worsen the negative behavioral and psychiatric effects of Perampanel. <i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Alizapride: May enhance the CNS depressant effect of CNS Depressants.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Azelastine (Nasal): May enhance the CNS depressant effect of CNS Depressants.<i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Blonanserin: CNS Depressants may enhance the CNS depressant effect of Blonanserin.  Management: Use caution if coadministering blonanserin and CNS depressants; dose reduction of the other CNS depressant may be required. Strong CNS depressants should not be coadministered with blonanserin.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Brexanolone: CNS Depressants may enhance the CNS depressant effect of Brexanolone. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Brimonidine (Topical): May enhance the CNS depressant effect of CNS Depressants.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Bromopride: May enhance the CNS depressant effect of CNS Depressants.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Bromperidol: May enhance the CNS depressant effect of CNS Depressants.<i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Buprenorphine: CNS Depressants may enhance the CNS depressant effect of Buprenorphine.  Management: Consider reduced doses of other CNS depressants, and avoiding such drugs in patients at high risk of buprenorphine overuse/self-injection. Initiate buprenorphine at lower doses in patients already receiving CNS depressants.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Cannabinoid-Containing Products: CNS Depressants may enhance the CNS depressant effect of Cannabinoid-Containing Products. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Chlormethiazole: May enhance the CNS depressant effect of CNS Depressants. Management: Monitor closely for evidence of excessive CNS depression. The chlormethiazole labeling states that an appropriately reduced dose should be used if such a combination must be used.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Chlorphenesin Carbamate: May enhance the adverse/toxic effect of CNS Depressants.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">CNS Depressants: Perampanel may enhance the CNS depressant effect of CNS Depressants. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">CYP3A4 Inducers (Moderate): May decrease the serum concentration of Perampanel. Management: Increase perampanel starting dose to 4 mg/day if used with moderate CYP3A4 inducers. Increase perampanel dose by 2 mg/day no more than once weekly based on response and tolerability. Dose adjustments may be needed if the inducer is discontinued.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">CYP3A4 Inducers (Strong): May decrease the serum concentration of Perampanel. Management: Increase perampanel starting dose to 4 mg/day if used  with strong CYP3A4 inducers. Increase perampanel dose by 2 mg/day no more than once weekly based on response and tolerability. Dose adjustments may be needed if the inducer is discontinued.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Daridorexant: May enhance the CNS depressant effect of CNS Depressants. Management: Dose reduction of daridorexant and/or any other CNS depressant may be necessary. Use of daridorexant with alcohol is not recommended, and the use of daridorexant with any other drug to treat insomnia is not recommended.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Desmopressin: Hyponatremia-Associated Agents may enhance the hyponatremic effect of Desmopressin. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">DexmedeTOMIDine: CNS Depressants may enhance the CNS depressant effect of DexmedeTOMIDine.  Management: Monitor for increased CNS depression during coadministration of dexmedetomidine and CNS depressants, and consider dose reductions of either agent to avoid excessive CNS depression.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Difelikefalin: May enhance the CNS depressant effect of CNS Depressants.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Dimethindene (Topical): May enhance the CNS depressant effect of CNS Depressants.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Doxylamine: CNS Depressants may enhance the CNS depressant effect of Doxylamine. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">DroPERidol: May enhance the CNS depressant effect of CNS Depressants. Management: Consider dose reductions of droperidol or of other CNS agents (eg, opioids, barbiturates) with concomitant use.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Esketamine: May enhance the CNS depressant effect of CNS Depressants.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Flunarizine: CNS Depressants may enhance the CNS depressant effect of Flunarizine. <i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Flunitrazepam: CNS Depressants may enhance the CNS depressant effect of Flunitrazepam.  Management: Reduce the dose of CNS depressants when combined with flunitrazepam and monitor patients for evidence of CNS depression (eg, sedation, respiratory depression). Use non-CNS depressant alternatives when available.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Fosphenytoin: May decrease the serum concentration of Perampanel. Management: Increase perampanel starting dose to 4 mg/day if used with fosphenytoin. Increase perampanel dose by 2 mg/day no more than once weekly based on response and tolerability. Dose adjustments may be needed if fosphenytoin is discontinued.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Hormonal Contraceptives: Perampanel may decrease the serum concentration of Hormonal Contraceptives.  Management: Patients should use an alternative, nonhormonal-based form of contraception during the concurrent use of perampanel and for 1 month after discontinuing perampanel.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">HydrOXYzine: May enhance the CNS depressant effect of CNS Depressants. Management: Consider a decrease in the CNS depressant dose, as appropriate, when used together with hydroxyzine. Increase monitoring of signs/symptoms of CNS depression in any patient receiving hydroxyzine together with another CNS depressant.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Ixabepilone: May enhance the CNS depressant effect of CNS Depressants.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Kava Kava: May enhance the CNS depressant effect of CNS Depressants.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Kratom: May enhance the CNS depressant effect of CNS Depressants.<i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Lemborexant: May enhance the CNS depressant effect of CNS Depressants. Management: Dosage adjustments of lemborexant and of concomitant CNS depressants may be necessary when administered together because of potentially additive CNS depressant effects. Close monitoring for CNS depressant effects is necessary.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Levonorgestrel (Systemic): Perampanel may decrease the serum concentration of Levonorgestrel (Systemic).  Management: Patients taking levonorgestrel-containing contraceptives should use an alternative, non-hormonal form of contraception during the concurrent use of perampanel and for 1 month after discontinuing perampanel.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Lisuride: May enhance the CNS depressant effect of CNS Depressants.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Lofexidine: May enhance the CNS depressant effect of CNS Depressants.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Magnesium Sulfate: May enhance the CNS depressant effect of CNS Depressants.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Mefloquine: May diminish the therapeutic effect of Antiseizure Agents. Mefloquine may decrease the serum concentration of Antiseizure Agents. Management: Mefloquine is contraindicated for malaria prophylaxis in persons with a history of seizures. If antiseizure drugs are being used for another indication, monitor antiseizure drug concentrations and treatment response closely with concurrent use.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Methotrimeprazine: CNS Depressants may enhance the CNS depressant effect of Methotrimeprazine. Methotrimeprazine may enhance the CNS depressant effect of CNS Depressants.  Management: Reduce the usual dose of CNS depressants by 50% if starting methotrimeprazine until the dose of methotrimeprazine is stable. Monitor patient closely for evidence of CNS depression.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Metoclopramide: May enhance the CNS depressant effect of CNS Depressants.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">MetyraPONE: Antiseizure Agents may diminish the diagnostic effect of MetyraPONE.  Management: Consider alternatives to the use of the metyrapone test in patients taking antiseizure agents.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">MetyroSINE: CNS Depressants may enhance the sedative effect of MetyroSINE. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Mianserin: May diminish the therapeutic effect of Antiseizure Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Minocycline (Systemic): May enhance the CNS depressant effect of CNS Depressants.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Nabilone: May enhance the CNS depressant effect of CNS Depressants.<i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Olopatadine (Nasal): May enhance the CNS depressant effect of CNS Depressants.<i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Opioid Agonists: CNS Depressants may enhance the CNS depressant effect of Opioid Agonists.  Management: Avoid concomitant use of opioid agonists and benzodiazepines or other CNS depressants when possible. These agents should only be combined if alternative treatment options are inadequate. If combined, limit the dosages and duration of each drug.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Orlistat: May decrease the serum concentration of Antiseizure Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Orphenadrine: CNS Depressants may enhance the CNS depressant effect of Orphenadrine. <i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">OXcarbazepine: Perampanel may increase the serum concentration of OXcarbazepine. OXcarbazepine may decrease the serum concentration of Perampanel.  Management: Increase the perampanel starting dose to 4 mg/day when perampanel is used with oxcarbazepine.  Patients receiving this combination should be followed closely for response to perampanel and oxcarbazepine toxicities.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Oxomemazine: May enhance the CNS depressant effect of CNS Depressants.<i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Oxybate Salt Products: CNS Depressants may enhance the CNS depressant effect of Oxybate Salt Products.  Management: Consider alternatives to this combination when possible. If combined, dose reduction or discontinuation of one or more CNS depressants (including the oxybate salt product) should be considered. Interrupt oxybate salt treatment during short-term opioid use<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">OxyCODONE: CNS Depressants may enhance the CNS depressant effect of OxyCODONE.  Management: Avoid concomitant use of oxycodone and benzodiazepines or other CNS depressants when possible. These agents should only be combined if alternative treatment options are inadequate. If combined, limit the dosages and duration of each drug.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Paraldehyde: CNS Depressants may enhance the CNS depressant effect of Paraldehyde. <i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Phenytoin: May decrease the serum concentration of Perampanel. Management: Increase perampanel starting dose to 4 mg/day if used with phenytoin. Increase perampanel dose by 2 mg/day no more than once weekly based on response and tolerability. Dose adjustments may be needed if phenytoin is discontinued.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Piribedil: CNS Depressants may enhance the CNS depressant effect of Piribedil. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Pramipexole: CNS Depressants may enhance the sedative effect of Pramipexole. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Procarbazine: May enhance the CNS depressant effect of CNS Depressants.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Ropeginterferon Alfa-2b: CNS Depressants may enhance the adverse/toxic effect of Ropeginterferon Alfa-2b. Specifically, the risk of neuropsychiatric adverse effects may be increased.  Management: Avoid coadministration of ropeginterferon alfa-2b and other CNS depressants. If this combination cannot be avoided, monitor patients for neuropsychiatric adverse effects (eg, depression, suicidal ideation, aggression, mania).<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">ROPINIRole: CNS Depressants may enhance the sedative effect of ROPINIRole. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Rotigotine: CNS Depressants may enhance the sedative effect of Rotigotine. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Rufinamide: May enhance the adverse/toxic effect of CNS Depressants. Specifically, sleepiness and dizziness may be enhanced.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Suvorexant: CNS Depressants may enhance the CNS depressant effect of Suvorexant.  Management: Dose reduction of suvorexant and/or any other CNS depressant may be necessary.  Use of suvorexant with alcohol is not recommended, and the use of suvorexant with any other drug to treat insomnia is not recommended.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Thalidomide: CNS Depressants may enhance the CNS depressant effect of Thalidomide. <i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Topiramate: May enhance the CNS depressant effect of Perampanel. Topiramate may decrease the serum concentration of Perampanel.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Trimeprazine: May enhance the CNS depressant effect of CNS Depressants.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Valerian: May enhance the CNS depressant effect of CNS Depressants.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Valproate Products: May enhance the CNS depressant effect of Perampanel. Perampanel may decrease the serum concentration of Valproate Products.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Zolpidem: CNS Depressants may enhance the CNS depressant effect of Zolpidem.  Management: Reduce the Intermezzo brand sublingual zolpidem adult dose to 1.75 mg for  men who are also receiving other CNS depressants. No such dose change is recommended for women. Avoid use with other CNS depressants at bedtime; avoid use with alcohol.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Zuranolone: May enhance the CNS depressant effect of CNS Depressants. Management: Consider alternatives to the use of zuranolone with other CNS depressants or alcohol. If combined, consider a zuranolone dose reduction and monitor patients closely for increased CNS depressant effects.<i> Risk D: Consider therapy modification</i></p></div>
+<div class="block rep_considerations drugH1Div" id="F49321151"><span class="drugH1">Reproductive Considerations</span>
+<p style="text-indent:0em;">Contraceptives containing levonorgestrel may be less effective; additional nonhormonal forms of contraception are recommended during therapy and for 1 month after the last dose of perampanel.</p></div>
+<div class="block pri drugH1Div" id="F15607840"><span class="drugH1">Pregnancy Considerations</span>
+<p style="text-indent:0em;">Outcome data following maternal use of perampanel during pregnancy are limited (Alicino 2021; Landmark 2021; Vazquez 2021).</p>
+<p style="text-indent:0em;margin-top:2em;">Data related to pharmacokinetic properties of perampanel during pregnancy are limited (Vazquez 2021). In general, baseline total and unbound perampanel serum concentrations can be measured twice prior to pregnancy during a period when seizure control is optimal, then as needed during pregnancy (Arfman 2020).</p>
+<p style="text-indent:0em;margin-top:2em;">Data collection to monitor pregnancy and infant outcomes following exposure to perampanel is ongoing. Patients exposed to perampanel during pregnancy are encouraged to enroll in the North American Antiepileptic Drug (NAAED) Pregnancy Registry by calling 1-888-233-2334. Additional information is available at www.aedpregnancyregistry.org.</p></div>
+<div class="block brc drugH1Div" id="F20617641"><span class="drugH1">Breastfeeding Considerations</span>
+<p style="text-indent:0em;display:inline">Perampanel is present in breast milk.</p>
+<p style="text-indent:-2em;margin-left:2em;">Data related to the presence of perampanel in breast milk are available from a case report. The patient was taking perampanel 8 mg once daily in combination with brivaracetam and lacosamide. Delivery occurred at 39 weeks gestation and the baby was fully breastfed. Perampanel breast milk concentrations were 0.31 micromole/L in the foremilk on postpartum day 5 (9.5 hours after the maternal dose). Foremilk and hindmilk perampanel concentrations were 0.15 micromole/L 5 weeks postpartum (13 hours after the maternal dose). Perampanel was measurable in the serum of the infant at delivery (0.23 micromole/L), 5 days postpartum (0.49 micromole/L) and 5 weeks postpartum (0.23 micromole/L). At 11 weeks postpartum the infant was partially breastfed and serum concentrations of perampanel were below the limit of detection (&lt;0.15 micromole/L). The baby had expected development at 1 year of age, and no reduced wakefulness or feeding problems (Landmark 2021).</p>
+<p style="text-indent:-2em;margin-left:2em;">According to the manufacturer, the decision to breastfeed during therapy should consider the risk of infant exposure, the benefits of breastfeeding to the infant, and benefits of treatment to the mother.</p></div>
+<div class="block mop drugH1Div" id="F15657540"><span class="drugH1">Monitoring Parameters</span>
+<p style="text-indent:0em;display:inline">Seizure frequency/duration; suicidality (eg, suicidal thoughts, depression, behavioral changes) during therapy and for at least 1 month after discontinuation; weight</p></div>
+<div class="block pha drugH1Div" id="F15607880"><span class="drugH1">Mechanism of Action</span>
+<p style="text-indent:0em;display:inline">The exact mechanism by which perampanel exerts antiseizure activity is not definitively known; it is a noncompetitive antagonist of the ionotropic alpha-amino-3-hydroxy-5-methyl-4-isoxazolepropionic acid (AMPA) glutamate receptor on postsynaptic neurons. Glutamate is a primary excitatory neurotransmitter in the central nervous center causing many neurological disorders from neuronal over excitation.</p></div>
+<div class="block phk drugH1Div" id="F15607885"><span class="drugH1">Pharmacokinetics (Adult Data Unless Noted)</span>
+<p style="text-indent:0em;display:inline">
+<b>Note: </b>Pharmacokinetic data are similar in pediatric patients ≥4 years as adults.</p>
+<p style="text-indent:-2em;margin-left:2em;">Absorption: Rapid and complete; food slows rate of absorption</p>
+<p style="text-indent:-2em;margin-left:2em;">Protein binding: ~95% to 96%; primarily albumin and alpha<sub>1</sub>-acid glycoprotein</p>
+<p style="text-indent:-2em;margin-left:2em;">Metabolism: Extensive via primary oxidation mediated by CYP3A4/5, and to a lesser extent by CYP1A2 and CYP2B6, and sequential glucuronidation</p>
+<p style="text-indent:-2em;margin-left:2em;">Half-life elimination: ~105 hours</p>
+<p style="text-indent:-2em;margin-left:2em;">Time to peak: 0.5 to 2.5 hours; delayed ~1 to 3 hours with food</p>
+<p style="text-indent:-2em;margin-left:2em;">Excretion: Tablet: Feces (48%); urine (22%)</p></div>
+<div class="block phksp drugH1Div" id="F51160022"><span class="drugH1">Pharmacokinetics: Additional Considerations (Adult Data Unless Noted)</span>
+<p style="text-indent:-2em;margin-left:2em;">Altered kidney function: Apparent clearance decreased by 27% in patients with mild renal impairment (CrCl 50 to 80 mL/minute), with a corresponding 37% increase in AUC.</p>
+<p style="text-indent:-2em;margin-left:2em;">Hepatic function impairment: The total (free and protein bound) exposure (AUC<sub>0-inf</sub>) of perampanel was 50% greater in mild hepatic impairment and more than doubled (2.55-fold) in moderate hepatic impairment. The AUC<sub>0-∞</sub> of free perampanel in mild and moderate hepatic impairment was 1.8-fold and 3.3-fold greater, respectively. The half-life was prolonged in mild impairment (306 vs 125 hours) and moderate impairment (295 vs 139 hours).</p></div>
+<div class="list fbnlist drugH1Div drugBrandNames" id="F22059514"><span class="drugH1">Brand Names: International</span><div class="ibn-search drugBrandNames"></div>
+<div class="collapsible-indication brand-names-accordion drugBrandNames"><span class="collapsible-indication-title">International Brand Names by Country</span><div class="collapsible-indication-wrap-frame drugBrandNames"><div class="collapsible-indication-wrap drugBrandNames">For country code abbreviations (<a class="graphic graphic_table" href="/d/html/116421.html" rel="external">show table</a>)<br xmlns=""/><br/><ul>
+<li>
+<span class="countryCode">(AE)</span> <span class="country">United Arab Emirates</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(AR)</span> <span class="country">Argentina</span><span class="countrySeparator">: </span><span class="drugName">Fycompa | Pyxis</span>;</li>
+<li>
+<span class="countryCode">(AT)</span> <span class="country">Austria</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(AU)</span> <span class="country">Australia</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(BE)</span> <span class="country">Belgium</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(BR)</span> <span class="country">Brazil</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(CH)</span> <span class="country">Switzerland</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(CL)</span> <span class="country">Chile</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(CO)</span> <span class="country">Colombia</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(CZ)</span> <span class="country">Czech Republic</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(DE)</span> <span class="country">Germany</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(EC)</span> <span class="country">Ecuador</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(EE)</span> <span class="country">Estonia</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(ES)</span> <span class="country">Spain</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(FI)</span> <span class="country">Finland</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(FR)</span> <span class="country">France</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(GB)</span> <span class="country">United Kingdom</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(GR)</span> <span class="country">Greece</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(HK)</span> <span class="country">Hong Kong</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(HU)</span> <span class="country">Hungary</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(ID)</span> <span class="country">Indonesia</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(IE)</span> <span class="country">Ireland</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(IN)</span> <span class="country">India</span><span class="countrySeparator">: </span><span class="drugName">Addperam | Ampanel | Exinol | Fycompa | Hetram | Peramnel | Perampa | Perampil | Percompa | Perepsy | Torpanel</span>;</li>
+<li>
+<span class="countryCode">(IT)</span> <span class="country">Italy</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(JO)</span> <span class="country">Jordan</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(JP)</span> <span class="country">Japan</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(KR)</span> <span class="country">Korea, Republic of</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(KW)</span> <span class="country">Kuwait</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(LB)</span> <span class="country">Lebanon</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(LT)</span> <span class="country">Lithuania</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(LU)</span> <span class="country">Luxembourg</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(LV)</span> <span class="country">Latvia</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(MX)</span> <span class="country">Mexico</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(MY)</span> <span class="country">Malaysia</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(NL)</span> <span class="country">Netherlands</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(NO)</span> <span class="country">Norway</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(NZ)</span> <span class="country">New Zealand</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(PH)</span> <span class="country">Philippines</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(PK)</span> <span class="country">Pakistan</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(PL)</span> <span class="country">Poland</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(PR)</span> <span class="country">Puerto Rico</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(PT)</span> <span class="country">Portugal</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(PY)</span> <span class="country">Paraguay</span><span class="countrySeparator">: </span><span class="drugName">Pyxis</span>;</li>
+<li>
+<span class="countryCode">(QA)</span> <span class="country">Qatar</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(RU)</span> <span class="country">Russian Federation</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(SA)</span> <span class="country">Saudi Arabia</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(SE)</span> <span class="country">Sweden</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(SG)</span> <span class="country">Singapore</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(SK)</span> <span class="country">Slovakia</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(TH)</span> <span class="country">Thailand</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(TW)</span> <span class="country">Taiwan</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span>;</li>
+<li>
+<span class="countryCode">(ZA)</span> <span class="country">South Africa</span><span class="countrySeparator">: </span><span class="drugName">Fycompa</span></li></ul></div>
+</div>
+</div>
+</div>
+</div><div class="headingAnchor" id="references"><ol id="reference">
+<li>
+<div class="reference" id="lexi-content-ref-34761195">
+<a name="34761195"></a>Alicino AM, Falcicchio G, Boero G, et al. Perampanel during pregnancy: description of four cases. <i>Epilepsy Behav Rep</i>. 2021;16:100490. doi:10.1016/j.ebr.2021.100490<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/perampanel-drug-information/abstract-text/34761195/pubmed" id="34761195" target="_blank">34761195</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-31912315">
+<a name="31912315"></a>Arfman IJ, Wammes-van der Heijden EA, Ter Horst PGJ, Lambrechts DA, Wegner I, Touw DJ. Therapeutic drug monitoring of antiepileptic drugs in women with epilepsy before, during, and after pregnancy. <i>Clin Pharmacokinet</i>. 2020;59(4):427-445. doi:10.1007/s40262-019-00845-2<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/perampanel-drug-information/abstract-text/31912315/pubmed" id="31912315" target="_blank">31912315</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-22843280">
+<a name="22843280"></a>French JA, Krauss GL, Biton V, et al, "Adjunctive Perampanel for Refractory Partial-Onset Seizures: Randomized Phase III Study 304," <i>Neurology</i>, 2012, 79(6):589-96.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/perampanel-drug-information/abstract-text/22843280/pubmed" id="22843280" target="_blank">22843280</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-Fycompa.1">
+<a name="Fycompa.1"></a>Fycompa (perampanel) [prescribing information]. Nutley, NJ: Eisai Inc; June 2023.</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-Fycompa.2">
+<a name="Fycompa.2"></a>Fycompa (perampanel) [product monograph]. Mississauga, Ontario, Canada: Eisai Limited; January 2021.</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-21883097">
+<a name="21883097"></a>Krauss GL, Bar M, Biton V, et al, "Tolerability and Safety of Perampanel: Two Randomized Dose-Escalation Studies," <i>Acta Neurol Scand</i>, 2012, 125(1):8-15.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/perampanel-drug-information/abstract-text/21883097/pubmed" id="21883097" target="_blank">21883097</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-22517103">
+<a name="22517103"></a>Krauss GL, Serratosa JM, Villanueva V, et al, "Randomized Phase III Study 306: Adjunctive Perampanel for Refractory Partial-Onset Seizures," <i>Neurology</i>, 2012, 78(18):1408-15.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/perampanel-drug-information/abstract-text/22517103/pubmed" id="22517103" target="_blank">22517103</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-33935028">
+<a name="33935028"></a>Landmark CJ, Rektorli L, Burns ML, Revdal E, Johannessen SI, Brodtkorb E. Pharmacokinetic data on brivaracetam, lacosamide and perampanel during pregnancy and lactation. <i>Epileptic Disord</i>. 2021;23(2):426-431. doi:10.1684/epd.2021.1273<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/perampanel-drug-information/abstract-text/33935028/pubmed" id="33935028" target="_blank">33935028</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-33666943">
+<a name="33666943"></a>Vazquez B, Tomson T, Dobrinsky C, Schuck E, O'Brien TJ. Perampanel and pregnancy. <i>Epilepsia</i>. 2021;62(3):698-708. doi:10.1111/epi.16821<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/perampanel-drug-information/abstract-text/33666943/pubmed" id="33666943" target="_blank">33666943</a>]</span>
+</div>
+</li></ol></div><div id="topicVersionRevision">Topic 87037 Version 291.0</div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

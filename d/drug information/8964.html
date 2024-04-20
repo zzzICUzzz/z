@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Ioversol: Drug information</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Ioversol: Drug information</h1>
+<div class="utdArticleSection utdStyle" id="topicContent"><div id="drugTitle">Ioversol: Drug information</div><div class="clear"></div><div id="topicText">(For additional information <a class="drug drug_patient" data-topicid="12215" href="/d/html/12215.html" rel="external">see "Ioversol: Patient drug information"</a>)<br/><br/>For abbreviations, symbols, and age group definitions used in Lexicomp (<a class="graphic graphic_table" href="/d/html/57469.html" rel="external">show table</a>)<div class="block black-box-warn drugH1Div" id="F9520848"><span class="drugH1">ALERT: US Boxed Warning</span>
+<div class="collapsible">
+<span class="collapsible-title">Appropriate use:</span>
+<div class="collapsible-wrap">
+<p style="text-indent:-2em;margin-left:4em;">Not for intrathecal use. Inadvertent intrathecal administration may cause death, convulsions, cerebral hemorrhage, coma, paralysis, arachnoiditis, acute renal failure, cardiac arrest, seizures, rhabdomyolysis, hyperthermia, and brain edema.</p></div>
+</div>
+</div>
+<div class="visuallyHidden drugH1Div" id="formulinkBodyPlaceholder"><span class="drugH1"></span></div>
+<div class="list ubnlist drugH1Div drugBrandNames" id="F184022"><span class="drugH1">Brand Names: US</span>
+<ul>
+<li>Optiray 240 [DSC];</li>
+<li>Optiray 300 [DSC];</li>
+<li>Optiray 320 [DSC];</li>
+<li>Optiray 350 [DSC]</li></ul></div>
+<div class="list canbnlist drugH1Div drugBrandNames" id="F52867246"><span class="drugH1">Brand Names: Canada</span>
+<ul>
+<li>Optiray 240;</li>
+<li>Optiray 240 Ultraject;</li>
+<li>Optiray 300;</li>
+<li>Optiray 320;</li>
+<li>Optiray 320 Ultraject;</li>
+<li>Optiray 350;</li>
+<li>Optiray 350 Ultraject</li></ul></div>
+<div class="ex_sect_xr thclist drugH1Div drugBrandNames" id="F184025"><span class="drugH1">Pharmacologic Category</span>
+<ul>
+<li>
+                        Iodinated Contrast Media;</li>
+<li>
+                        Radiological/Contrast Media (Nonionic, Low Osmolality)</li></ul></div>
+<div class="block doa drugH1Div" id="F9524681"><span class="drugH1">Dosing: Adult</span>
+<p style="text-indent:0em;display:inline">Dosing is based on numerous variables including: Type of examination, route of administration, patient age/weight and product; consult specific product information for detailed dosing information.</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Dosage adjustment for concomitant therapy: </b>Significant drug interactions exist, requiring dose/frequency adjustment or avoidance. Consult drug interactions database for more information.</p></div>
+<div class="block dora drugH1Div" id="F50990579"><span class="drugH1">Dosing: Kidney Impairment: Adult</span>
+<p style="text-indent:0em;display:inline">There are no dosage adjustments provided in the manufacturer’s labeling. Use caution in severe impairment, anuria, and in setting of combined renal and hepatic disease.</p></div>
+<div class="block doha drugH1Div" id="F50987934"><span class="drugH1">Dosing: Hepatic Impairment: Adult</span>
+<p style="text-indent:0em;display:inline">There are no dosage adjustments provided in the manufacturer’s labeling. Use caution in patients with combined hepatic and renal disease.</p></div>
+<div class="block doe drugH1Div" id="F9524682"><span class="drugH1">Dosing: Older Adult</span>
+<p style="text-indent:0em;display:inline">Refer to adult dosing.</p></div>
+<div class="block dop drugH1Div" id="F9524680"><span class="drugH1">Dosing: Pediatric</span>
+<p style="text-indent:0em;display:inline">Refer to adult dosing.</p></div>
+<div class="block dorp drugH1Div" id="F51113928"><span class="drugH1">Dosing: Kidney Impairment: Pediatric</span>
+<p style="text-indent:0em;display:inline">There are no dosage adjustments provided in the manufacturer’s labeling. Use caution in severe impairment, anuria, and in setting of combined renal and hepatic disease.</p></div>
+<div class="block dohp drugH1Div" id="F51113929"><span class="drugH1">Dosing: Hepatic Impairment: Pediatric</span>
+<p style="text-indent:0em;display:inline">There are no dosage adjustments provided in the manufacturer’s labeling. Use caution in patients with combined hepatic and renal disease.</p></div>
+<div class="block adr drugH1Div" id="F9521836"><span class="drugH1">Adverse Reactions</span>
+<p style="text-indent:0em;display:inline">The following adverse drug reactions are derived from product labeling unless otherwise specified.</p>
+<p style="text-indent:-2em;margin-left:2em;">Frequency not defined:</p>
+<p style="text-indent:-2em;margin-left:4em;">Cardiovascular: Acute myocardial infarction, arterial spasm, atrioventricular block (including complete atrioventricular block), bradycardia, cardiac arrhythmia (including atrioventricular nodal arrhythmia, ventricular fibrillation), chest pain, flushing, hypertension, hypotension, palpitations, presyncope, pseudoaneurysm, vasodilation, vasospasm</p>
+<p style="text-indent:-2em;margin-left:4em;">Dermatologic: Hyperhidrosis, skin rash</p>
+<p style="text-indent:-2em;margin-left:4em;">Endocrine &amp; metabolic: Acidosis</p>
+<p style="text-indent:-2em;margin-left:4em;">Gastrointestinal: Abdominal pain, dysphagia, xerostomia</p>
+<p style="text-indent:-2em;margin-left:4em;">Genitourinary: Urinary retention</p>
+<p style="text-indent:-2em;margin-left:4em;">Hypersensitivity: Facial swelling</p>
+<p style="text-indent:-2em;margin-left:4em;">Local: Pain at injection site</p>
+<p style="text-indent:-2em;margin-left:4em;">Nervous system: Aphasia, asthenia, cerebral infarction, chills, disorientation, dizziness, fatigue, hallucination (including visual hallucination), malaise, myasthenia, pain, paresthesia, tremor</p>
+<p style="text-indent:-2em;margin-left:4em;">Neuromuscular &amp; skeletal: Back pain</p>
+<p style="text-indent:-2em;margin-left:4em;">Ophthalmic: Periorbital edema</p>
+<p style="text-indent:-2em;margin-left:4em;">Otic: Tinnitus</p>
+<p style="text-indent:-2em;margin-left:4em;">Renal: Polyuria, renal pain</p>
+<p style="text-indent:-2em;margin-left:4em;">Respiratory: Cough, dyspnea, hyperventilation, hypoxia, laryngeal edema, nasal congestion, pulmonary edema, sneezing</p>
+<p style="text-indent:-2em;margin-left:4em;">Miscellaneous: Fever, swelling</p>
+<p style="text-indent:-2em;margin-left:2em;">Postmarketing:</p>
+<p style="text-indent:-2em;margin-left:4em;">Cardiovascular: Angina pectoris (Floriani 1996), coronary artery vasospasm, depression of ST segment on ECG (Floriani 1996), ECG abnormality, extrasystoles, phlebitis, tachycardia, thrombosis</p>
+<p style="text-indent:-2em;margin-left:4em;">Dermatologic: Acute generalized exanthematous pustulosis (Hammerbeck 2009), erythema of skin (Floriani 1996), maculopapular rash (van der Molen 2022), pruritus (Floriani 1996), skin discoloration, Stevens-Johnson syndrome, toxic epidermal necrolysis, urticaria (Floriani 1996)</p>
+<p style="text-indent:-2em;margin-left:4em;">Endocrine &amp; metabolic: Hyperthyroidism, hypothyroidism (including premature infants, infants, and children ≤3 years with underlying medical conditions may be more vulnerable) (FDA Safety Alert March 30, 2022)</p>
+<p style="text-indent:-2em;margin-left:4em;">Gastrointestinal: Dysgeusia (Floriani 1996), nausea (Floriani 1996), sialadentis (Zhang 2015), sialorrhea, vomiting (Floriani 1996)</p>
+<p style="text-indent:-2em;margin-left:4em;">Hypersensitivity: Anaphylactic shock (van der Molen 2022), drug reaction with eosinophilia and systemic symptoms, facial edema, hypersensitivity reaction (van der Molen 2022), nonimmune anaphylaxis (van der Molen 2022), tongue edema, type IV hypersensitivity reaction (Gomez Gratacos 2022)</p>
+<p style="text-indent:-2em;margin-left:4em;">Local: Hematoma at injection site (Floriani 1996)</p>
+<p style="text-indent:-2em;margin-left:4em;">Nervous system: Amnesia, anxiety (Floriani 1996), confusion (Floriani 1996), drowsiness, encephalopathy (Zhang 2020), feeling hot, headache (Floriani 1996), hypoesthesia, loss of consciousness, seizure, vertigo (Floriani 1996), voice disorder</p>
+<p style="text-indent:-2em;margin-left:4em;">Neuromuscular &amp; skeletal: Dyskinesia, laryngospasm, muscle spasm (Floriani 1996)</p>
+<p style="text-indent:-2em;margin-left:4em;">Ophthalmic: Blurred vision (Floriani 1996), conjunctivitis, transient blindness</p>
+<p style="text-indent:-2em;margin-left:4em;">Renal: Increased serum creatinine (Hernandez 2009), renal disease (contrast induced nephropathy) (Hernandez 2009)</p>
+<p style="text-indent:-2em;margin-left:4em;">Respiratory: Airway obstruction, asthma, bronchospasm, cyanosis, rhinitis (Floriani 1996), throat irritation</p></div>
+<div class="block coi drugH1Div" id="F184016"><span class="drugH1">Contraindications</span>
+<p style="text-indent:-2em;margin-left:2em;">Symptomatic hyperthyroidism.</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<i>Canadian labeling: </i>Hypersensitivity to ioversol or any component of the formulation; clinically significant impairment of both hepatic and renal function</p></div>
+<div class="block war drugH1Div" id="F9520849"><span class="drugH1">Warnings/Precautions</span>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>
+<i>Concerns related to adverse effects:</i></b></p>
+<p style="text-indent:-2em;margin-left:4em;">• Contrast media reactions: Adverse reactions (including delayed reactions) have occurred, including serious and life-threatening reactions. Use extreme caution with history of previous reaction to contrast dye, iodine-based contrast media or patients with a known clinical hypersensitivity (eg, bronchial asthma, hay fever or food allergies). Obtain allergy and hypersensitivity history prior to administration. Pretesting for allergic reaction may not reliably predict potential for reaction. Premedication with antihistamines and corticosteroids should be considered to reduce incidence and severity of reaction. Monitor closely for a period of time after administration. A higher incidence of adverse reactions was reported in patients also receiving general anesthesia.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Contrast-associated nephropathy: May occur. Use caution in patients with significant underlying renal impairment and/or concurrent renal and hepatic impairment, especially when large doses are required. Patients should be well hydrated before and after examination.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Dermatological effects: Severe cutaneous adverse reactions (including Stevens-Johnson syndrome [SJS], toxic epidermal necrolysis [TEN], acute generalized exanthematous pustulosis [AGEP], drug reaction with eosinophilia and systemic symptoms [DRESS]) have occurred 1 hour to several weeks after administration; reaction severity may increase and time to onset may decrease with repeat administration. Avoid use in patients with a history of a severe cutaneous adverse reaction to ioversol.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Extravasation: May be a vesicant; ensure proper needle/catheter/line placement prior to and during administration. Monitor infusion site. Avoid infiltration. Infiltration may result in tissue necrosis, particularly in patients with severe arterial or venous disease.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Thromboembolic events: Serious, rarely fatal, thromboembolic events causing MI and stroke have been reported during angiographic procedures with both ionic and nonionic contrast media. Ionic iodinated contrast media may inhibit blood coagulation (more than nonionic contrast media). Use meticulous intravascular administration techniques during angiographic procedures. Clotting may occur when in vitro blood remains in contact with syringes containing nonionic contrast media; use of plastic syringes in place of glass syringes has been reported to decrease but not eliminate the likelihood of in vitro clotting.</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>
+<i>Disease-related concerns:</i></b></p>
+<p style="text-indent:-2em;margin-left:4em;">• Cardiovascular disease: Use with caution in severe cardiovascular disease and HF; transitory increase in circulatory osmotic load could occur. Observe patients with HF for several hours following the procedure to detect delayed hemodynamic disturbances which may be associated with a transitory increase in the circulating osmotic load. Perform selective coronary angiography only if the anticipated benefit outweighs potential risks. Preparatory dehydration may contribute to acute renal failure in patients with advanced vascular disease; avoid fluid restriction and maintain normal hydration in these patients.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Diabetes: Preparatory dehydration may contribute to acute renal failure in patients with advanced vascular disease; avoid fluid restriction and maintain normal hydration in these patients.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Hepatic impairment: Use with caution in patients with combined renal and hepatic disease.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Homocystinuria: Avoid angiography in patients with homocystinuria; may be at risk for thrombosis and embolism.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Hyperthyroidism: Thyroid storm following intravascular administration of iodinated contrast media have occurred in patients with hyperthyroidism or with an autonomously functioning thyroid nodule.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Multiple myeloma: Use with caution in multiple myeloma; use of intravascular contrast agents may lead to renal impairment, especially with concurrent dehydration. Partial dehydration in preparation for procedures may precipitate myeloma protein in renal tubules and is not recommended in myeloma patients.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Myasthenia gravis: Use may worsen myasthenia gravis (MG); use with caution and monitor for worsening MG (AAN [Narayanaswami 2021]).</p>
+<p style="text-indent:-2em;margin-left:4em;">• Pheochromocytoma: Use with extreme caution in patients with pheochromocytoma (known or suspected). Minimize the amount of contrast agent used and closely monitor blood pressure throughout procedure. Therapy for treatment of hypertensive crisis should be readily available.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Pulmonary disease: The inherent risks of angiocardiography in patients with chronic pulmonary emphysema must be weighed against the necessity for performing this procedure.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Renal impairment: Use with caution in patients with severe renal disease, combined renal and hepatic disease or anuria. May be associated with deterioration of renal function and/or increases in serum creatinine, particularly in diabetics, elderly, advanced vascular disease, and those who are dehydrated.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Sickle cell disease: Use with caution in homozygous sickle cell patients; administration of contrast media may result in sickling.</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>
+<i>Special populations:</i></b></p>
+<p style="text-indent:-2em;margin-left:4em;">• Pediatrics: Pediatric patients at higher risk of experiencing any adverse events during contrast medium administration may include those having asthma, sensitivity to medication or allergens, heart failure, serum creatinine &gt;1.5 mg/dL, or those &lt;12 months of age. Thyroid dysfunction, including transient thyroid suppression or hypothyroidism, has been reported in pediatric patients 0 to 3 years of age following single exposure and multiple exposures to iodinated contrast media; risk increases with younger age, very low birth weight, prematurity, underlying medical conditions affecting thyroid function, neonatal or pediatric intensive care admission, and congenital cardiac conditions (may be greatest risk due to requiring higher doses during invasive cardiac procedures).</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>
+<i>Other warnings/precautions:</i></b></p>
+<p style="text-indent:-2em;margin-left:4em;">• Appropriate use: <i>Intravascular administration:</i> In angiographic procedures, during catheter manipulations and contrast medium injection, a possibility of dislodging plaques or damaging (or perforating) vessel walls exists. Ensure proper catheter placement with test injections.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Trained personnel: Clinicians using radiopaque contrast agents should be well trained in diagnosis and management of emergencies that may arise from the use of these agents. Resuscitative equipment, oxygen, and other resuscitative drugs should be available for immediate use during and for 30 to 60 minutes after administration (delayed reactions have occurred).</p></div>
+<div class="block foc drugH1Div" id="F184013"><span class="drugH1">Dosage Forms: US</span>
+<p style="text-indent:0em;text-align:justify;display:inline">Excipient information presented when available (limited, particularly for generics); consult specific product labeling.  [DSC] = Discontinued product</p>
+<p style="text-indent:-2em;margin-left:2em;text-align:justify;">Solution, Injection: </p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">Optiray 240: 51% (50 mL [DSC], 100 mL [DSC], 125 mL [DSC], 200 mL [DSC]) [contains edetate (edta) calcium disodium]</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">Optiray 300: 64% (50 mL [DSC], 100 mL [DSC], 150 mL [DSC], 200 mL [DSC], 500 mL [DSC]) [contains edetate (edta) calcium disodium]</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">Optiray 320: 68% (20 mL [DSC], 30 mL [DSC], 50 mL [DSC], 75 mL [DSC], 100 mL [DSC], 125 mL [DSC], 150 mL [DSC], 200 mL [DSC]) [contains edetate (edta) calcium disodium]</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">Optiray 350: 74% (50 mL [DSC], 75 mL [DSC], 100 mL [DSC], 125 mL [DSC], 150 mL [DSC], 200 mL [DSC], 250 mL [DSC], 500 mL [DSC]) [contains edetate (edta) calcium disodium]</p></div>
+<div class="block geq drugH1Div" id="F184009"><span class="drugH1">Generic Equivalent Available: US</span>
+<p style="text-indent:0em;display:inline">No</p></div>
+<div class="block fee drugH1Div" id="F16323209"><span class="drugH1">Pricing: US</span>
+<p style="text-indent:-2em;margin-left:2em;text-align:justify;">
+<b>Solution</b> (Optiray 240 Injection)</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">51% (per mL): $0.40</p>
+<p style="text-indent:-2em;margin-left:2em;text-align:justify;">
+<b>Solution</b> (Optiray 300 Injection)</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">64% (per mL): $0.42</p>
+<p style="text-indent:-2em;margin-left:2em;text-align:justify;">
+<b>Solution</b> (Optiray 320 Injection)</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">68% (per mL): $0.46</p>
+<p style="text-indent:-2em;margin-left:2em;text-align:justify;">
+<b>Solution</b> (Optiray 350 Injection)</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">74% (per mL): $0.49</p>
+<p style="text-indent:0em;">
+<b>Disclaimer: </b>A representative AWP (Average Wholesale Price) price or price range is provided as reference price only. A range is provided when more than one manufacturer's AWP price is available and uses the low and high price reported by the manufacturers to determine the range. The pricing data should be used for benchmarking purposes only, and as such should not be used alone to set or adjudicate any prices for reimbursement or purchasing functions or considered to be an exact price for a single product and/or manufacturer.  Medi-Span expressly disclaims all warranties of any kind or nature, whether express or implied, and assumes no liability with respect to accuracy of price or price range data published in its solutions.  In no event shall Medi-Span be liable for special, indirect, incidental, or consequential damages arising from use of price or price range data.  Pricing data is updated monthly.</p></div>
+<div class="block dinfoc drugH1Div" id="F52867247"><span class="drugH1">Dosage Forms: Canada</span>
+<p style="text-indent:0em;text-align:justify;display:inline">Excipient information presented when available (limited, particularly for generics); consult specific product labeling.</p>
+<p style="text-indent:-2em;margin-left:2em;text-align:justify;">Solution, Injection: </p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">Optiray 240: 51% (15 mL, 50 mL, 100 mL, 200 mL) [contains edetate (edta) calcium disodium]</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">Optiray 300: 64% (30 mL, 50 mL, 100 mL) [contains edetate (edta) calcium disodium]</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">Optiray 320: 68% (20 mL, 30 mL, 50 mL, 75 mL, 100 mL, 125 mL, 150 mL, 200 mL) [contains edetate (edta) calcium disodium]</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">Optiray 350: 74% (50 mL, 100 mL, 150 mL, 200 mL) [contains edetate (edta) calcium disodium]</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">Optiray 240 Ultraject: 51% (50 mL, 125 mL) [contains edetate (edta) calcium disodium]</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">Optiray 320 Ultraject: 68% (50 mL, 75 mL, 100 mL, 125 mL) [contains edetate (edta) calcium disodium]</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">Optiray 350 Ultraject: 74% (50 mL, 100 mL, 150 mL) [contains edetate (edta) calcium disodium]</p></div>
+<div class="block adm drugH1Div" id="F9524683"><span class="drugH1">Administration: Adult</span>
+<p style="text-indent:0em;display:inline">Hydrate well prior to and following administration. Premedication with antihistamines or corticosteroids may be considered in some patients to minimize the potential for allergic reactions. Intravenous doses should be at or close to body temperature prior to administration. In angiography, use meticulous intravascular administration technique to minimize thrombotic events including use of plastic syringes, frequent catheter flushing, and close attention to catheter and guidewire manipulation. When administering large doses (eg, aortography, ventriculography), several minutes should elapse between each injection to allow for subsidence of possible hemodynamic disturbances. <b>Not for intrathecal use.</b></p>
+<p style="text-indent:-2em;margin-left:2em;margin-top:2em;">May be a vesicant; ensure proper needle or catheter placement prior to and during infusion; avoid infiltration.</p>
+<p style="text-indent:0em;margin-top:2em;">
+<b>Extravasation management: </b>If extravasation occurs, stop infusion immediately and disconnect; remove needle/cannula; elevate extremity. Aspiration of extravasated contrast media is not recommended (ACR 2023). Information conflicts regarding the use of hyaluronidase; the American College of Radiology (ACR) Manual on Contrast Media does not recommend hyaluronidase in the management of contrast media extravasation (ACR 2023); other sources suggest its utility in extravasation management for inoperable cases with compartment syndrome (Stefanos 2023).</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>If using hyaluronidase:</i>
+<b>Intradermal or SUBQ:</b> Dose varies based on the size of infiltration; inject a total of 5 to 250 units (~100 mL contrast reabsorbed per 15 units of hyaluronidase) around the site of extravasation (Stefanos 2023).</p></div>
+<div class="block admp drugH1Div" id="F52613075"><span class="drugH1">Administration: Pediatric</span>
+<p style="text-indent:0em;display:inline">Parenteral: For IV and intra-arterial use only; <b>not for intrathecal use</b>. Administer at body or room temperature. Hydrate well prior to and following administration. Premedication with antihistamines or corticosteroids may be considered in some patients to minimize the potential for allergic reactions. In angiocardiography, use meticulous intravascular administration technique to minimize thrombotic events including use of plastic syringes, frequent catheter flushing, and close attention to catheter and guidewire manipulation.</p>
+<p style="text-indent:0em;margin-top:2em;">Vesicant; ensure proper needle or catheter placement prior to and during infusion; avoid infiltration. If extravasation occurs, stop infusion immediately and disconnect; remove needle/cannula; elevate extremity. Aspiration of extravasated contrast media is not recommended (ACR 2018). Information conflicts regarding the use of hyaluronidase; the American College of Radiology (ACR) Manual on Contrast Media does not recommend hyaluronidase in the management of contrast media extravasation (ACR 2018); other sources suggest its utility in extravasation management (Bellin 2002; Reynolds 2014) (see Management of Drug Extravasations for more details).</p></div>
+<div class="block use drugH1Div" id="F184014"><span class="drugH1">Use: Labeled Indications</span>
+<p style="text-indent:-2em;margin-left:2em;">Ioversol 74%:</p>
+<p style="text-indent:-2em;margin-left:4em;">Adults: Peripheral and coronary arteriography and left ventriculography; contrast-enhanced, computed, tomographic imaging of the head and body; IV excretory urography; IV digital subtraction angiography and venography.</p>
+<p style="text-indent:-2em;margin-left:4em;">Pediatric: Angiocardiography.</p>
+<p style="text-indent:-2em;margin-left:2em;">Ioversol 68%:</p>
+<p style="text-indent:-2em;margin-left:4em;">Adults: Angiography throughout the cardiovascular system, including cerebral, coronary, peripheral, visceral and renal arteriography, venography, aortography, and left ventriculography; contrast-enhanced, computed, tomographic imaging of the head and body; IV excretory urography.</p>
+<p style="text-indent:-2em;margin-left:4em;">Pediatric: Angiocardiography; contrast-enhanced, computed, tomographic imaging of the head and body; IV excretory urography.</p>
+<p style="text-indent:-2em;margin-left:2em;">Ioversol 64%:</p>
+<p style="text-indent:-2em;margin-left:4em;">Adults: Cerebral angiography and peripheral arteriography; contrast-enhanced, computed, tomographic imaging of the head and body; venography; IV excretory urography.</p>
+<p style="text-indent:-2em;margin-left:2em;">Ioversol 51%:</p>
+<p style="text-indent:-2em;margin-left:4em;">Adults: Cerebral angiography and venography; contrast-enhanced, computed, tomographic imaging of the head and body; IV excretory urography.</p></div>
+<div class="block cyt drugH1Div" id="F13299535"><span class="drugH1">Metabolism/Transport Effects</span>
+<p style="text-indent:0em;display:inline">None known.</p></div>
+<div class="block dri drugH1Div" id="F6221113"><span class="drugH1">Drug Interactions</span><br/><br/><div class="clear"></div><p xmlns=""></p><div class="inner" xmlns=""><p style="text-indent:0em;display:inline"><b>Note</b>: Interacting drugs may <b>not be individually listed below</b> if they are part of a group interaction (eg, individual drugs within “CYP3A4 Inducers [Strong]” are NOT listed).  For a complete list of drug interactions by individual drug name and detailed management recommendations, use the Lexicomp drug interactions program by clicking on the “Launch drug interactions program” link above.</p><p xmlns=""></p></div>
+<p style="text-indent:-2em;margin-left:2em;">Aldesleukin: May enhance the potential for allergic or hypersensitivity reactions to Iodinated Contrast Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Loop Diuretics: May enhance the nephrotoxic effect of Iodinated Contrast Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">MetFORMIN: Iodinated Contrast Agents may enhance the adverse/toxic effect of MetFORMIN. Renal dysfunction that may be caused by iodinated contrast agents may lead to metformin-associated lactic acidosis.  Management: Management advice varies. Refer to the full drug interaction monograph content for details.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Sodium Iodide I131: Iodinated Contrast Agents may diminish the therapeutic effect of Sodium Iodide I131.  Management: Discontinue iodinated contrast agents before sodium iodide I-131 administration, and avoid concurrent use. Stop water soluble agents 2 months before, and stop lipophilic agents 6 months before, sodium iodide I-131 administration.<i> Risk X: Avoid combination</i></p></div>
+<div class="block pri drugH1Div" id="F184018"><span class="drugH1">Pregnancy Considerations</span>
+<p style="text-indent:0em;">Ioversol crosses the placenta and can be detected in the newborn's gut at birth (Hill 2007; Muñoz-Fraile 2014; Saigal 2007).</p>
+<p style="text-indent:0em;margin-top:2em;">Due to theoretical concerns that exposure to free iodide may adversely affect the fetus, use should be avoided unless absolutely required to obtain diagnostic information that will influence the care of the mother or fetus during pregnancy (ACOG 723 2017; ACR 2018).</p></div>
+<div class="block brc drugH1Div" id="F184019"><span class="drugH1">Breastfeeding Considerations</span>
+<p style="text-indent:-2em;margin-left:2em;">Iodinated contrast media may be present in breast milk (ACOG 723 2017; ACR 2018).</p>
+<p style="text-indent:-2em;margin-left:2em;">Because of the low expected excretion of iodinated contrast agents into breast milk and the low absorption from an infant’s GI tract, breastfeeding may be continued without interruption after use (ACOG 723 2017; ACR 2018). Theoretically, the taste of milk could be altered if it contains contrast media. Women who prefer to temporarily withhold breastfeeding may express and discard milk from both breasts during a period of 8 to 24 hours after the administration of contrast media. They can pump and store milk prior to the procedure then bottle feed using the stored milk during this time (ACR 2018). According to the manufacturer, the decision to breastfeed during therapy should consider the risk of infant exposure, the benefits of breastfeeding to the infant, and benefits of treatment to the mother.</p></div>
+<div class="block mop drugH1Div" id="F29888467"><span class="drugH1">Monitoring Parameters</span>
+<p style="text-indent:-2em;margin-left:2em;">ECG, vital signs (coronary arteriography and left ventriculography); signs and symptoms of hypersensitivity; renal function. Monitor infusion site.</p>
+<p style="text-indent:-2em;margin-left:2em;">Pediatric patients 0 to 3 years of age: Individualize thyroid function monitoring based on underlying risk factors, especially in term and preterm neonates.</p></div>
+<div class="block pha drugH1Div" id="F9524674"><span class="drugH1">Mechanism of Action</span>
+<p style="text-indent:0em;display:inline">Opacification of vessels and anatomical structures in the path of flow of the contrast media which allows for radiographic visualization.</p></div>
+<div class="block phk drugH1Div" id="F9524676"><span class="drugH1">Pharmacokinetics (Adult Data Unless Noted)</span>
+<p style="text-indent:-2em;margin-left:2em;">Metabolism: None</p>
+<p style="text-indent:-2em;margin-left:2em;">Half-life elimination: 1.5 hours; prolonged with renal impairment</p>
+<p style="text-indent:-2em;margin-left:2em;">Excretion: Urine: &gt;95% eliminated unchanged in urine 24 hours postadministration</p></div>
+<div class="list fbnlist drugH1Div drugBrandNames" id="F6038661"><span class="drugH1">Brand Names: International</span><div class="ibn-search drugBrandNames"></div>
+<div class="collapsible-indication brand-names-accordion drugBrandNames"><span class="collapsible-indication-title">International Brand Names by Country</span><div class="collapsible-indication-wrap-frame drugBrandNames"><div class="collapsible-indication-wrap drugBrandNames">For country code abbreviations (<a class="graphic graphic_table" href="/d/html/116421.html" rel="external">show table</a>)<br xmlns=""/><br/><ul>
+<li>
+<span class="countryCode">(AR)</span> <span class="country">Argentina</span><span class="countrySeparator">: </span><span class="drugName">Optiray</span>;</li>
+<li>
+<span class="countryCode">(AT)</span> <span class="country">Austria</span><span class="countrySeparator">: </span><span class="drugName">Optiray</span>;</li>
+<li>
+<span class="countryCode">(AU)</span> <span class="country">Australia</span><span class="countrySeparator">: </span><span class="drugName">Optiray | Optiray 240</span>;</li>
+<li>
+<span class="countryCode">(BG)</span> <span class="country">Bulgaria</span><span class="countrySeparator">: </span><span class="drugName">Optiray</span>;</li>
+<li>
+<span class="countryCode">(BR)</span> <span class="country">Brazil</span><span class="countrySeparator">: </span><span class="drugName">Optiray</span>;</li>
+<li>
+<span class="countryCode">(DE)</span> <span class="country">Germany</span><span class="countrySeparator">: </span><span class="drugName">Optiray | Optiray 160 | Optiray 240</span>;</li>
+<li>
+<span class="countryCode">(FI)</span> <span class="country">Finland</span><span class="countrySeparator">: </span><span class="drugName">Optiray</span>;</li>
+<li>
+<span class="countryCode">(GB)</span> <span class="country">United Kingdom</span><span class="countrySeparator">: </span><span class="drugName">Optiray</span>;</li>
+<li>
+<span class="countryCode">(GR)</span> <span class="country">Greece</span><span class="countrySeparator">: </span><span class="drugName">Optiray</span>;</li>
+<li>
+<span class="countryCode">(HU)</span> <span class="country">Hungary</span><span class="countrySeparator">: </span><span class="drugName">Optiray</span>;</li>
+<li>
+<span class="countryCode">(IT)</span> <span class="country">Italy</span><span class="countrySeparator">: </span><span class="drugName">Optiray</span>;</li>
+<li>
+<span class="countryCode">(JP)</span> <span class="country">Japan</span><span class="countrySeparator">: </span><span class="drugName">Optiray</span>;</li>
+<li>
+<span class="countryCode">(KR)</span> <span class="country">Korea, Republic of</span><span class="countrySeparator">: </span><span class="drugName">Optiray</span>;</li>
+<li>
+<span class="countryCode">(LU)</span> <span class="country">Luxembourg</span><span class="countrySeparator">: </span><span class="drugName">Optiray</span>;</li>
+<li>
+<span class="countryCode">(NO)</span> <span class="country">Norway</span><span class="countrySeparator">: </span><span class="drugName">Optiray</span>;</li>
+<li>
+<span class="countryCode">(PE)</span> <span class="country">Peru</span><span class="countrySeparator">: </span><span class="drugName">Optiray | Optiray 240 | Optiray 320 | Optiray 350</span>;</li>
+<li>
+<span class="countryCode">(PR)</span> <span class="country">Puerto Rico</span><span class="countrySeparator">: </span><span class="drugName">Optiray</span>;</li>
+<li>
+<span class="countryCode">(PT)</span> <span class="country">Portugal</span><span class="countrySeparator">: </span><span class="drugName">Optiray | Optiray 240</span>;</li>
+<li>
+<span class="countryCode">(PY)</span> <span class="country">Paraguay</span><span class="countrySeparator">: </span><span class="drugName">Optiray 320</span>;</li>
+<li>
+<span class="countryCode">(RU)</span> <span class="country">Russian Federation</span><span class="countrySeparator">: </span><span class="drugName">Optiray</span>;</li>
+<li>
+<span class="countryCode">(SE)</span> <span class="country">Sweden</span><span class="countrySeparator">: </span><span class="drugName">Optiray</span>;</li>
+<li>
+<span class="countryCode">(SG)</span> <span class="country">Singapore</span><span class="countrySeparator">: </span><span class="drugName">Optiray</span>;</li>
+<li>
+<span class="countryCode">(TH)</span> <span class="country">Thailand</span><span class="countrySeparator">: </span><span class="drugName">Optiray 350</span>;</li>
+<li>
+<span class="countryCode">(TW)</span> <span class="country">Taiwan</span><span class="countrySeparator">: </span><span class="drugName">Optiray</span>;</li>
+<li>
+<span class="countryCode">(UY)</span> <span class="country">Uruguay</span><span class="countrySeparator">: </span><span class="drugName">Optiray</span></li></ul></div>
+</div>
+</div>
+</div>
+</div><div class="headingAnchor" id="references"><ol id="reference">
+<li>
+<div class="reference" id="lexi-content-ref-28937575">
+<a name="28937575"></a>American College of Obstetricians and Gynecologists (ACOG) Committee on Obstetric Practice. Committee opinion no. 723: guidelines for diagnostic imaging during pregnancy and lactation. <i>Obstet Gynecol</i>. 2017;130(4):e210-e216. Erratum in: <i>Obstet Gynecol</i>. 2018;132(3):786.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/ioversol-drug-information/abstract-text/28937575/pubmed" id="28937575" target="_blank">28937575</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference">
+                  American College of Radiology (ACR) Committee on Drugs and Contrast Media. ACR manual on contrast media. Version 10.3. 2018. https://www.acr.org/-/media/ACR/Files/Clinical-Resources/Contrast_Media.pdf. Accessed October 17, 2018.</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-ACR.2">
+<a name="ACR.2"></a>American College of Radiology (ACR) Committee on Drugs and Contrast Media. ACR manual on contrast media. https://www.acr.org/-/media/ACR/Files/Clinical-Resources/Contrast_Media.pdf. Published 2023. Accessed May 17, 2023.</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-12386778">
+<a name="12386778"></a>Bellin MF, Jakobsen JA, Tomassin I, et al; Contrast Media Safety Committee Of The European Society Of Urogenital Radiology. Contrast medium extravasation injury: guidelines for prevention and management. <i>Eur Radiol</i>. 2002;12(11):2807-2812. doi: 10.1007/s00330-002-1630-9.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/ioversol-drug-information/abstract-text/12386778/pubmed" id="12386778" target="_blank">12386778</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference">
+                  FDA Safety Alert. MedWatch. FDA recommends thyroid monitoring in babies and young children who receive injections of iodine-containing contrast media for medical imaging. Food and Drug Administration. <a href="https://www.fda.gov/drugs/drug-safety-and-availability/fda-recommends-thyroid-monitoring-babies-and-young-children-who-receive-injections-iodine-containing" target="_blank">https://www.fda.gov/drugs/drug-safety-and-availability/fda-recommends-thyroid-monitoring-babies-and-young-children-who-receive-injections-iodine-containing</a>. Updated March 30, 2022. Accessed March 31, 2022.</div>
+</li>
+<li>
+<div class="reference">
+                  Floriani I, Ciceri M, Torri V, Tinazzi A, Jahn H, Noseda A. Clinical profile of ioversol. A metaanalysis of 57 randomized, double-blind clinical trials. <i>Invest Radiol</i>. 1996;31(8):479-491. doi:10.1097/00004424-199608000-00003</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-35687812">
+<a name="35687812"></a>Gómez Gratacos AR, Joyanes Romo JB, Meneses Sotomayor JV, Martin Iglesias MA, Palacios Cañas A, Gómez Torrijos E. Maculopapular rash due to delayed-type hypersensitivity from ioversol with positive patch tests. <i>Contact Dermatitis</i>. 2022;87(4):379-381. doi:10.1111/cod.14171<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/ioversol-drug-information/abstract-text/35687812/pubmed" id="35687812" target="_blank">35687812</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-19528424">
+<a name="19528424"></a>Hammerbeck AA, Daniels NH, Callen JP. Ioversol-induced acute generalized exanthematous pustulosis: a case report. <i>Arch Dermatol</i>. 2009;145(6):683-687. doi:10.1001/archdermatol.2009.100<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/ioversol-drug-information/abstract-text/19528424/pubmed" id="19528424" target="_blank">19528424</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-20038403">
+<a name="20038403"></a>Hernández F, Mora L, García-Tejada J, et al. Comparison of iodixanol and ioversol for the prevention of contrast-induced nephropathy in diabetic patients after coronary angiography or angioplasty. <i>Rev Esp Cardiol</i>. 2009;62(12):1373-1380. doi:10.1016/s1885-5857(09)73531-5<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/ioversol-drug-information/abstract-text/20038403/pubmed" id="20038403" target="_blank">20038403</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-17323055">
+<a name="17323055"></a>Hill BJ, Saigal G, Patel S, Abdenour GE Jr. Transplacental passage of non-ionic contrast agents resulting in fetal bowel opacification: a mimic of pneumoperitoneum in the newborn. <i>Pediatr Radiol</i>. 2007;37(4):396-398.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/ioversol-drug-information/abstract-text/17323055/pubmed" id="17323055" target="_blank">17323055</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-25056357">
+<a name="25056357"></a>Muñoz-Fraile B, Coca-Robinot D, Bergón-Sendín E, Orbea C, Gloria del P, Pallás-Alonso C. Bowel opacification in a very low weight born infant due to maternal administration of iodinated contrast agent. <i>Arch Dis Child Fetal Neonatal Ed</i>. 2014;99(6):F474.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/ioversol-drug-information/abstract-text/25056357/pubmed" id="25056357" target="_blank">25056357</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-33144515">
+<a name="33144515"></a>Narayanaswami P, Sanders DB, Wolfe G, et al. International consensus guidance for management of myasthenia gravis: 2020 update. <i>Neurology</i>. 2021;96(3):114-122. doi:10.1212/WNL.0000000000011124<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/ioversol-drug-information/abstract-text/33144515/pubmed" id="33144515" target="_blank">33144515</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference">
+                  Optiray 350, Optiray 320, Optiray 300 (ioversol injection) [prescribing information]. Raleigh, NC: Liebel-Flarsheim Company LLC; February 2023.</div>
+</li>
+<li>
+<div class="reference">
+                  Optiray 240, 300, 320, 350 (ioversol injection) [product monograph]. Pointe-Claire, Quebec, Canada: Liebel-Flarsheim Canada Inc; November 2021.</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-24420913">
+<a name="24420913"></a>Reynolds PM, MacLaren R, Mueller SW, Fish DN, Kiser TH. Management of extravasation injuries: a focused evaluation of noncytotoxic medications. <i>Pharmacotherapy</i>. 2014;34(6):617-632. doi: 10.1002/phar.1396.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/ioversol-drug-information/abstract-text/24420913/pubmed" id="24420913" target="_blank">24420913</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-17476497">
+<a name="17476497"></a>Saigal G, Abdenour GE. Another case of transplacental passage of the non-ionic contrast agent ioversol. <i>Pediatr Radiol</i>. 2007;37(7):726-727.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/ioversol-drug-information/abstract-text/17476497/pubmed" id="17476497" target="_blank">17476497</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-36938775">
+<a name="36938775"></a>Stefanos SS, Kiser TH, MacLaren R, Mueller SW, Reynolds PM. Management of noncytotoxic extravasation injuries: a focused update on medications, treatment strategies, and peripheral administration of vasopressors and hypertonic saline. <i>Pharmacotherapy.</i> 2023;43(4):321-337. doi:10.1002/phar.2794<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/ioversol-drug-information/abstract-text/36938775/pubmed" id="36938775" target="_blank">36938775</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-35312790">
+<a name="35312790"></a>van der Molen AJ, Dekkers IA, Bedioune I, Darmon-Kern E. A systematic review of the incidence of hypersensitivity reactions and post-contrast acute kidney injury after ioversol in more than 57,000 patients: part 1-intravenous administration. <i>Eur Radiol</i>. 2022;32(8):5532-5545. doi:10.1007/s00330-022-08636-3<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/ioversol-drug-information/abstract-text/35312790/pubmed" id="35312790" target="_blank">35312790</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-26287428">
+<a name="26287428"></a>Zhang G, Li Y, Zhang R, et al. Acute submandibular swelling complicating arteriography with iodide contrast: a case report and literature review. <i>Medicine (Baltimore)</i>. 2015;94(33):e1380. doi:10.1097/MD.0000000000001380<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/ioversol-drug-information/abstract-text/26287428/pubmed" id="26287428" target="_blank">26287428</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-31895151">
+<a name="31895151"></a>Zhang G, Wang H, Zhao L, et al. Contrast-induced encephalopathy resulting from use of ioversol and iopromide. <i>Clin Neuropharmacol</i>. 2020;43(1):15-19. doi:10.1097/WNF.0000000000000374<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/ioversol-drug-information/abstract-text/31895151/pubmed" id="31895151" target="_blank">31895151</a>]</span>
+</div>
+</li></ol></div><div id="topicVersionRevision">Topic 8964 Version 163.0</div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Daprodustat: Drug information</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Daprodustat: Drug information</h1>
+<div class="utdArticleSection utdStyle" id="topicContent"><div id="drugTitle">Daprodustat: Drug information</div><div class="clear"></div><div id="topicText">(For additional information <a class="drug drug_patient" data-topicid="140756" href="/d/html/140756.html" rel="external">see "Daprodustat: Patient drug information"</a>)<br/><br/>For abbreviations, symbols, and age group definitions used in Lexicomp (<a class="graphic graphic_table" href="/d/html/57469.html" rel="external">show table</a>)<div class="block black-box-warn drugH1Div" id="F57856063"><span class="drugH1">ALERT: US Boxed Warning</span>
+<div class="collapsible">
+<span class="collapsible-title">Increased risk of death, myocardial infarction, stroke, venous thromboembolism, and thrombosis of vascular access</span>
+<div class="collapsible-wrap">
+<p style="text-indent:0em;">Daprodustat increases the risk of thrombotic vascular events, including major adverse cardiovascular events. Targeting a Hb level &gt;11 g/dL is expected to further increase the risk of death and arterial venous thrombotic events, as occurs with erythropoietin-stimulating agents, which also increase erythropoietin levels. No trial has identified a Hb target level, dose of daprodustat, or dosing strategy that does not increase these risks. Use the lowest dose of daprodustat sufficient to reduce the need for RBC transfusions.</p></div>
+</div>
+</div>
+<div class="visuallyHidden drugH1Div" id="formulinkBodyPlaceholder"><span class="drugH1"></span></div>
+<div class="list ubnlist drugH1Div drugBrandNames" id="F58720681"><span class="drugH1">Brand Names: US</span>
+<ul>
+<li>Jesduvroq</li></ul></div>
+<div class="ex_sect_xr thclist drugH1Div drugBrandNames" id="F57856066"><span class="drugH1">Pharmacologic Category</span>
+<ul>
+<li>
+                        Hypoxia-Inducible Factor Prolyl Hydroxylase Inhibitor</li></ul></div>
+<div class="block doa drugH1Div" id="F57972451"><span class="drugH1">Dosing: Adult</span>
+<p style="text-indent:0em;display:inline">
+<b>Note:</b> Correct and exclude other causes of anemia (eg, vitamin deficiencies, metabolic or chronic inflammatory conditions, bleeding) prior to therapy.<b> Iron supplementation:</b> Ensure adequate iron stores before initiating and throughout therapy. The manufacturer recommends supplemental iron be administered if serum ferritin is &lt;100 ng/mL or serum transferrin saturation is &lt;20%; however, the threshold for iron replacement should be individualized based on clinical considerations (eg, trends in Hb level, goals of therapy) (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-KDIGO.1']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-KDIGO.1'])">Ref</a></span>). Most patients with chronic kidney disease will require iron supplementation during the course of therapy.</p>
+<div class="collapsible-indication">
+<span class="collapsible-indication-title" data-indication-id="41d04c29-d2e2-40fe-8ef8-0f987c725559">Anemia due to chronic kidney disease</span>
+<div class="collapsible-indication-wrap">
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Anemia due to chronic kidney disease (dialysis-dependent): Oral:</b></p>
+<p style="text-indent:-2em;margin-left:4em;">
+<b>Initial dose: </b></p>
+<table border="1" frame="border" rules="all" style="margin-left:4em;">
+<caption style="text-align:left;">
+<b>Patients Not Receiving an Erythropoietin-Stimulating Agent</b></caption>
+<colgroup><col align="left"/>
+<col align="left"/>
+</colgroup><thead valign="middle">
+<tr>
+<th align="left">
+<p style="text-indent:0em;">
+<b>Pretreatment hemoglobin level</b></p></th>
+<th align="left">
+<p style="text-indent:0em;">
+<b>Initial dose</b></p></th></tr></thead>
+<tbody valign="middle">
+<tr>
+<td align="left">
+<p style="text-indent:0em;">&lt;9 g/dL</p></td>
+<td align="left">
+<p style="text-indent:0em;">4 mg once daily</p></td></tr>
+<tr>
+<td align="left">
+<p style="text-indent:0em;">≥9 to ≤10 g/dL</p></td>
+<td align="left">
+<p style="text-indent:0em;">2 mg once daily</p></td></tr>
+<tr>
+<td align="left">
+<p style="text-indent:0em;">&gt;10 g/dL</p></td>
+<td align="left">
+<p style="text-indent:0em;">1 mg once daily</p></td></tr></tbody></table>
+<table border="1" frame="border" rules="all" style="margin-left:4em;">
+<caption style="text-align:left;">
+<b>Patients Being Switched From an Erythropoietin-Stimulating Agent</b></caption>
+<colgroup><col align="left"/>
+<col align="left"/>
+<col align="left"/>
+<col align="left"/>
+</colgroup><thead valign="top">
+<tr>
+<th align="left" colspan="3">
+<p style="text-indent:0em;">
+<b>Current dose of erythropoietin-stimulating agent</b></p></th>
+<th align="left" rowspan="2">
+<p style="text-indent:0em;">Initial daprodustat dose</p></th></tr>
+<tr>
+<th align="left">
+<p style="text-indent:0em;">
+<b>Epoetin alfa (IV)<sup>a</sup></b></p></th>
+<th align="left">
+<p style="text-indent:0em;">
+<b>Darbepoetin alfa (IV or SUBQ)</b></p></th>
+<th align="left">
+<p style="text-indent:0em;">Methoxy PEG-epoetin beta (IV or SUBQ)</p></th></tr></thead>
+<tfoot valign="top">
+<tr>
+<td align="left" colspan="4">
+<p style="text-indent:0em;">
+<sup>a </sup>For patients receiving SUBQ epoetin alfa, multiply the SUBQ dose received per week by 1.42 to obtain the weekly IV dose.</p></td></tr></tfoot>
+<tbody valign="top">
+<tr>
+<td align="left">
+<p style="text-indent:0em;">≤2,000 units per week</p></td>
+<td align="left">
+<p style="text-indent:0em;">20 to 30 mcg per 4 weeks</p></td>
+<td align="left">
+<p style="text-indent:0em;">30 to 40 mcg per month</p></td>
+<td align="left">
+<p style="text-indent:0em;">4 mg once daily</p></td></tr>
+<tr>
+<td align="left">
+<p style="text-indent:0em;">&gt;2,000 to &lt;10,000 units per week</p></td>
+<td align="left">
+<p style="text-indent:0em;">&gt;30 to 150 mcg per 4 weeks</p></td>
+<td align="left">
+<p style="text-indent:0em;">&gt;40 to 180 mcg per month</p></td>
+<td align="left">
+<p style="text-indent:0em;">6 mg once daily</p></td></tr>
+<tr>
+<td align="left">
+<p style="text-indent:0em;">≥10,000 to &lt;20,000 units per week</p></td>
+<td align="left">
+<p style="text-indent:0em;">&gt;150 to 300 mcg per 4 weeks</p></td>
+<td align="left">
+<p style="text-indent:0em;">&gt;180 to 360 mcg per month</p></td>
+<td align="left">
+<p style="text-indent:0em;">8 mg once daily</p></td></tr>
+<tr>
+<td align="left">
+<p style="text-indent:0em;">≥20,000 units per week</p></td>
+<td align="left">
+<p style="text-indent:0em;">&gt;300 units per 4 weeks</p></td>
+<td align="left">
+<p style="text-indent:0em;">&gt;360 mcg per month</p></td>
+<td align="left">
+<p style="text-indent:0em;">12 mg once daily</p></td></tr></tbody></table>
+<p style="text-indent:-2em;margin-left:4em;">
+<b>Dosage adjustment:</b> Do not increase the dose more frequently than once every 4 weeks. When adjusting doses, consider Hb rate of rise, rate of decline, and variability.</p>
+<p style="text-indent:-2em;margin-left:6em;">
+<i>When making dose adjustments: </i>Increase or decrease by 1 dose level at a time (see table below). Maximum dose according to the manufacturer’s labeling is 24 mg once daily. However, some experts avoid doses &gt;12 mg/day due to lack of safety data (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-Berns.1']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-Berns.1'])">Ref</a></span>).</p>
+<p style="text-indent:-2em;margin-left:6em;">
+<i>If Hb increases rapidly (eg, &gt;1 g/dL over 2 weeks or &gt;2 g/dL over 4 weeks):</i> Decrease dose or hold therapy depending on Hb level and rate of increase (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-Berns.1','lexi-content-ref-Manu.1']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-Berns.1','lexi-content-ref-Manu.1'])">Ref</a></span>).</p>
+<p style="text-indent:-2em;margin-left:6em;">
+<i>If Hb &gt;11 g/dL:</i> Decrease dose.</p>
+<p style="text-indent:-2em;margin-left:6em;">
+<i>If Hb &gt;12 g/dL:</i> Interrupt treatment. When the Hb falls within treatment range, treatment may be restarted at 1 dose level lower (see table below).</p>
+<p style="text-indent:-2em;margin-left:6em;">
+<i>Lack of Hb response: </i>Discontinue treatment after 24 weeks (or sooner) if no meaningful Hb increase is achieved; avoid repeated dose escalations without Hb improvement. Identify and treat underlying causes of inadequate response before restarting therapy (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-Berns.1','lexi-content-ref-Manu.1']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-Berns.1','lexi-content-ref-Manu.1'])">Ref</a></span>).</p>
+<table border="1" frame="border" rules="all" style="margin-left:4em;">
+<caption style="text-align:left;">
+<b>Dose Levels of Daprodustat</b></caption>
+<colgroup><col align="left"/>
+<col align="left"/>
+<col align="left"/>
+<col align="left"/>
+<col align="left"/>
+<col align="left"/>
+<col align="left"/>
+<col align="left"/>
+</colgroup><tfoot valign="top">
+<tr>
+<td align="left" colspan="8">
+<p style="text-indent:0em;">
+<sup>a</sup> Some experts avoid doses &gt;12 mg once daily due to lack of safety data (Berns 2023).</p></td></tr></tfoot>
+<tbody valign="middle">
+<tr>
+<td align="left">
+<p style="text-indent:0em;">1 mg once daily</p></td>
+<td align="left">
+<p style="text-indent:0em;">2 mg once daily</p></td>
+<td align="left">
+<p style="text-indent:0em;">4 mg once daily</p></td>
+<td align="left">
+<p style="text-indent:0em;">6 mg once daily</p></td>
+<td align="left">
+<p style="text-indent:0em;">8 mg once daily</p></td>
+<td align="left">
+<p style="text-indent:0em;">12 mg once daily</p></td>
+<td align="left">
+<p style="text-indent:0em;">16 mg once daily<sup>a</sup></p></td>
+<td align="left">
+<p style="text-indent:0em;">24 mg once daily (maximum dose)<sup>a</sup></p></td></tr></tbody></table></div>
+</div>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Dosage adjustment for concomitant therapy:</b> Significant drug interactions exist, requiring dose/frequency adjustment or avoidance. Consult drug interactions database for more information.</p></div>
+<div class="block dora drugH1Div" id="F57972493"><span class="drugH1">Dosing: Kidney Impairment: Adult</span>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Altered kidney function:</b> Not indicated for use in patients with chronic kidney disease not receiving dialysis.</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Hemodialysis, intermittent (thrice weekly):</b> Not significantly dialyzable: No dosage adjustment necessary (indicated for use in this population). May be administered without regard to dialysis timing.</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Peritoneal dialysis:</b> Not significantly dialyzable: No dosage adjustment necessary (indicated for use in this population).</p></div>
+<div class="block doha drugH1Div" id="F57972494"><span class="drugH1">Dosing: Hepatic Impairment: Adult</span>
+<p style="text-indent:-2em;margin-left:2em;">Mild impairment (Child-Pugh class A): No dosage adjustment necessary.</p>
+<p style="text-indent:-2em;margin-left:2em;">Moderate impairment (Child-Pugh class B): Administer 50% of usual recommended dose, except in patients in whom the usual recommended dose is 1 mg daily.</p>
+<p style="text-indent:-2em;margin-left:2em;">Severe impairment (Child-Pugh class C): Use is not recommended.</p></div>
+<div class="block doe drugH1Div" id="F57972492"><span class="drugH1">Dosing: Older Adult</span>
+<p style="text-indent:0em;display:inline">Refer to adult dosing.</p></div>
+<div class="block arsc drugH1Div" id="F58137736"><span class="drugH1">Adverse Reactions (Significant): Considerations</span>
+<div class="collapsible">
+<span class="collapsible-title">Gastrointestinal events</span>
+<div class="collapsible-wrap">
+<p style="text-indent:-2em;margin-left:2em;">Gastrointestinal events, including <b>gastrointestinal erosions </b>(including esophageal erosions) and gastrointestinal bleeding have been reported with daprodustat. In a clinical trial comparing daprodustat to an erythropoiesis-stimulating agent for the treatment of anemia in patients on dialysis, the incidence of esophageal or gastric erosions was similar between groups (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-34739194']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-34739194'])">Ref</a></span>).</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Risk factors:</i></p>
+<p style="text-indent:-2em;margin-left:6em;">• History of gastrointestinal erosion and/or peptic ulcer disease</p>
+<p style="text-indent:-2em;margin-left:6em;">• Use of concomitant medications that increase the risk of gastrointestinal erosion</p>
+<p style="text-indent:-2em;margin-left:6em;">• Current tobacco and/or alcohol use</p></div>
+</div>
+<div class="collapsible">
+<span class="collapsible-title">Malignancy</span>
+<div class="collapsible-wrap">
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Malignant neoplasm</b> has rarely been reported with daprodustat. In clinical studies, the incidence of malignancy was similar between patients treated with daprodustat and patients treated with erythropoiesis-stimulating agents. Current data is insufficient to determine if an increased risk of malignancy can be linked with daprodustat treatment (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-35312234']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-35312234'])">Ref</a></span>).</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Mechanism:</i> Related to the pharmacologic action; daprodustat increases the transcription of hypoxia-inducible factor (HIF)-responsive genes, including vascular endothelial growth factor (VEGF). Upregulation of VEGF results in increased tumor angiogenesis (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-35312234']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-35312234'])">Ref</a></span>).</p></div>
+</div>
+<div class="collapsible">
+<span class="collapsible-title">Thrombotic vascular events</span>
+<div class="collapsible-wrap">
+<p style="text-indent:-2em;margin-left:2em;">Daprodustat may increase the risk of thrombotic vascular events, including major cardiovascular events (MACE). Arterial and venous thrombotic events (eg, <b>acute</b>
+<b>myocardial infarction</b>, <b>cerebrovascular accident</b>, <b>venous thromboembolism</b>, vascular access thrombosis) may be fatal. In clinical studies, the incidence of thromboembolic events was similar between patients treated with daprodustat and patients treated with erythropoiesis-stimulating agents (Nangaku 2022). An increased risk of hospitalization for <b>heart failure</b>, <b>exacerbation of hypertension,</b> and <b>hypertensive crisis</b> have also been reported. In clinical trials comparing daprodustat to erythropoiesis-stimulating agents for the treatment of anemia in patients on dialysis, the incidence of MACE was similar between groups (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-35260241','lexi-content-ref-34739194']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-35260241','lexi-content-ref-34739194'])">Ref</a></span>).</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Mechanism:</i> Related to the pharmacologic action; daprodustat increases the transcription of hypoxia-inducible factor (HIF)-responsive genes, resulting in increased endogenous erythropoietin. Potential mechanisms for erythropoietin-induced thrombosis include increased blood viscosity, increased subendothelium platelet adhesion, enhanced thrombin generation, and/or depressed levels of proteins C and S. Erythropoietin-induced hypertension may be due to increased blood viscosity, increased vascular reactivity, or catecholamine release and renin-angiotensin system activation (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-14499855']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-14499855'])">Ref</a></span>).</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Risk factors:</i></p>
+<p style="text-indent:-2em;margin-left:6em;">• Preexisting cardiovascular disease, especially acute coronary syndrome (including myocardial infarction within the past 3 months)</p>
+<p style="text-indent:-2em;margin-left:6em;">• Preexisting cerebrovascular disease (especially cerebrovascular event within the past 3 months)</p>
+<p style="text-indent:-2em;margin-left:6em;">• Rapid rise in hemoglobin (&gt;1 g/dL over 2 weeks)</p>
+<p style="text-indent:-2em;margin-left:6em;">• Target hemoglobin &gt;11 g/dL</p>
+<p style="text-indent:-2em;margin-left:6em;">• Iron deficiency (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-35312234']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-35312234'])">Ref</a></span>)</p>
+<p style="text-indent:-2em;margin-left:6em;">• Preexisting heart failure</p></div>
+</div>
+</div>
+<div class="block adr drugH1Div" id="F57861855"><span class="drugH1">Adverse Reactions</span>
+<p style="text-indent:0em;display:inline">The following adverse drug reactions and incidences are derived from product labeling unless otherwise specified. Adverse reactions reported in adults.</p>
+<p style="text-indent:-2em;margin-left:2em;">&gt;10%:</p>
+<p style="text-indent:-2em;margin-left:4em;">Cardiovascular: Exacerbation of hypertension (24%; serious: 3%)<span class="lexi-table-link-container"> (<a aria-label="Exacerbation of Hypertension table link" class="lexi-table-link" data-table-id="lexi-content-exacerbation-of-hypertension" onclick="event.preventDefault(); window.mobileShowLexiTable &amp;&amp; mobileShowLexiTable('lexi-content-exacerbation-of-hypertension')">table 1</a>)</span><span class="table-link" style="display:none;">Exacerbation of Hypertension</span></p>
+<table border="1" class="lexi-modal-content" data-hyperlink="yes" data-table-id="Exacerbation of Hypertension" frame="border" id="lexi-content-exacerbation-of-hypertension" rules="all">
+<caption style="text-align:center;">
+<b>Daprodustat: Adverse Reaction: Exacerbation of Hypertension</b></caption>
+<colgroup><col align="left"/>
+<col align="left"/>
+<col align="left"/>
+<col align="left"/>
+</colgroup><thead>
+<tr>
+<th align="left">
+<p style="text-indent:0em;text-align:left;">
+<b>Drug (Daprodustat)</b></p></th>
+<th align="left">
+<p style="text-indent:0em;text-align:left;">
+<b>Comparator (Recombinant Human Erythropoietin)</b></p></th>
+<th align="left">
+<p style="text-indent:0em;text-align:left;">
+<b>Number of Patients (Daprodustat)</b></p></th>
+<th align="left">
+<p style="text-indent:0em;text-align:left;">
+<b>Number of Patients (Recombinant Human Erythropoietin)</b></p></th></tr></thead>
+<tbody>
+<tr>
+<td align="left">
+<p style="text-indent:0em;text-align:left;">24%</p></td>
+<td align="left">
+<p style="text-indent:0em;text-align:left;">24%</p></td>
+<td align="left">
+<p style="text-indent:0em;text-align:left;">1,482</p></td>
+<td align="left">
+<p style="text-indent:0em;text-align:left;">1,474</p></td></tr>
+<tr>
+<td align="left">
+<p style="text-indent:0em;text-align:left;">Severe: 3%</p></td>
+<td align="left">
+<p style="text-indent:0em;text-align:left;">3%</p></td>
+<td align="left">
+<p style="text-indent:0em;text-align:left;">1,482</p></td>
+<td align="left">
+<p style="text-indent:0em;text-align:left;">1,474</p></td></tr></tbody></table>
+<p style="text-indent:-2em;margin-left:4em;">Gastrointestinal: Abdominal pain (11%)<span class="lexi-table-link-container"> (<a aria-label="Gastrointestinal Erosion table link" class="lexi-table-link" data-table-id="lexi-content-gastrointestinal-erosion" onclick="event.preventDefault(); window.mobileShowLexiTable &amp;&amp; mobileShowLexiTable('lexi-content-gastrointestinal-erosion')">table 2</a>)</span><span class="table-link" style="display:none;">Gastrointestinal Erosion</span></p>
+<table border="1" class="lexi-modal-content" data-hyperlink="yes" data-table-id="Gastrointestinal Erosion" frame="border" id="lexi-content-gastrointestinal-erosion" rules="all">
+<caption style="text-align:center;">
+<b>Daprodustat: Adverse Reaction: Gastrointestinal Erosion</b></caption>
+<colgroup><col align="left"/>
+<col align="left"/>
+<col align="left"/>
+<col align="left"/>
+<col align="left"/>
+</colgroup><thead>
+<tr>
+<th align="left">
+<p style="text-indent:0em;text-align:left;">
+<b>Drug (Daprodustat)</b></p></th>
+<th align="left">
+<p style="text-indent:0em;text-align:left;">
+<b>Comparator (Recombinant Human Erythropoietin)</b></p></th>
+<th align="left">
+<p style="text-indent:0em;text-align:left;">
+<b>Number of Patients (Daprodustat)</b></p></th>
+<th align="left">
+<p style="text-indent:0em;text-align:left;">
+<b>Number of Patients (Recombinant Human Erythropoietin)</b></p></th>
+<th align="left">
+<p style="text-indent:0em;text-align:left;">
+<b>Comments</b></p></th></tr></thead>
+<tbody>
+<tr>
+<td align="left">
+<p style="text-indent:0em;text-align:left;">6%</p></td>
+<td align="left">
+<p style="text-indent:0em;text-align:left;">7%</p></td>
+<td align="left">
+<p style="text-indent:0em;text-align:left;">1,482</p></td>
+<td align="left">
+<p style="text-indent:0em;text-align:left;">1,474</p></td>
+<td align="left">
+<p style="text-indent:0em;text-align:left;">Gastric or esophageal erosion</p></td></tr></tbody></table>
+<p style="text-indent:-2em;margin-left:2em;">1% to 10%:</p>
+<p style="text-indent:-2em;margin-left:4em;">Gastrointestinal: Gastrointestinal erosion (≤6%; including esophageal erosions)</p>
+<p style="text-indent:-2em;margin-left:4em;">Hematologic &amp; oncologic: Malignant neoplasm (4%)<span class="lexi-table-link-container"> (<a aria-label="Malignant Neoplasm table link" class="lexi-table-link" data-table-id="lexi-content-malignant-neoplasm" onclick="event.preventDefault(); window.mobileShowLexiTable &amp;&amp; mobileShowLexiTable('lexi-content-malignant-neoplasm')">table 3</a>)</span><span class="table-link" style="display:none;">Malignant Neoplasm</span></p>
+<table border="1" class="lexi-modal-content" data-hyperlink="yes" data-table-id="Malignant Neoplasm" frame="border" id="lexi-content-malignant-neoplasm" rules="all">
+<caption style="text-align:center;">
+<b>Daprodustat: Adverse Reaction: Malignant Neoplasm</b></caption>
+<colgroup><col align="left"/>
+<col align="left"/>
+<col align="left"/>
+<col align="left"/>
+</colgroup><thead>
+<tr>
+<th align="left">
+<p style="text-indent:0em;text-align:left;">
+<b>Drug (Daprodustat)</b></p></th>
+<th align="left">
+<p style="text-indent:0em;text-align:left;">
+<b>Comparator (Recombinant Human Erythropoietin)</b></p></th>
+<th align="left">
+<p style="text-indent:0em;text-align:left;">
+<b>Number of Patients (Daprodustat)</b></p></th>
+<th align="left">
+<p style="text-indent:0em;text-align:left;">
+<b>Number of Patients (Recombinant Human Erythropoietin)</b></p></th></tr></thead>
+<tbody>
+<tr>
+<td align="left">
+<p style="text-indent:0em;text-align:left;">4%</p></td>
+<td align="left">
+<p style="text-indent:0em;text-align:left;">5%</p></td>
+<td align="left">
+<p style="text-indent:0em;text-align:left;">1,482</p></td>
+<td align="left">
+<p style="text-indent:0em;text-align:left;">1,474</p></td></tr></tbody></table>
+<p style="text-indent:-2em;margin-left:4em;">Hypersensitivity: Hypersensitivity reaction (7%)</p>
+<p style="text-indent:-2em;margin-left:4em;">Nervous system: Dizziness (7%)</p>
+<p style="text-indent:-2em;margin-left:2em;">Frequency not defined:</p>
+<p style="text-indent:-2em;margin-left:4em;">Cardiovascular: Acute myocardial infarction, deep vein thrombosis, heart failure, hypertensive crisis, pulmonary embolism, thrombosis (vascular access), venous thromboembolism</p>
+<p style="text-indent:-2em;margin-left:4em;">Nervous system: Cerebrovascular accident</p></div>
+<div class="block coi drugH1Div" id="F57856069"><span class="drugH1">Contraindications</span>
+<p style="text-indent:-2em;margin-left:2em;">Concomitant use with strong CYP2C8 inhibitors (eg, gemfibrozil); uncontrolled hypertension.</p>
+<p style="text-indent:-2em;margin-left:2em;">Significant drug interactions exist, requiring dose/frequency adjustment or avoidance. Consult drug interactions database for more information.</p></div>
+<div class="block war drugH1Div" id="F57972388"><span class="drugH1">Warnings/Precautions</span>
+<p style="text-indent:-2em;margin-left:2em;">
+<i>
+<b>Disease-related concerns:</b></i></p>
+<p style="text-indent:-2em;margin-left:4em;">• Chronic kidney disease (patients not on dialysis): Patients with nondialysis-dependent chronic kidney disease (CKD) experienced an increased risk of CV mortality, stroke, thromboembolism, hospitalization for heart failure, serious GI erosions, and acute kidney injury compared to patients who received recombinant human erythropoietin products in a large trial. Use in not recommended in these patients.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Hepatic impairment: Initial dose reductions are recommended in patients with moderate impairment (Child-Pugh class B). Use is not recommended in patients with severe impairment (Child-Pugh class C).</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<i>
+<b>Other warnings/precautions:</b></i></p>
+<p style="text-indent:-2em;margin-left:4em;">• Abuse: Intentional nontherapeutic use of daprodustat may be seen in athletes due to its effects on erythropoiesis. Misuse by healthy persons may lead to polycythemia, which can lead to life-threatening CV events (eg, stroke, MI, thromboembolism).</p>
+<p style="text-indent:-2em;margin-left:4em;">• Factors impairing erythropoiesis: Prior to treatment, correct or exclude deficiencies of vitamin B<sub>12</sub>, and/or folate, as well as other factors that may impair erythropoiesis (metabolic or chronic inflammatory conditions, infections, bleeding). Ensure adequate iron stores before initiating and throughout therapy. The manufacturer recommends supplemental iron be administered if serum ferritin is &lt;100 ng/mL or serum transferrin saturation is &lt;20%; however, the threshold for iron replacement should be individualized based on clinical considerations (eg, trends in Hb level, goals of therapy) (KDIGO 2012). Most patients with CKD will require iron supplementation during the course of therapy<b>.</b></p></div>
+<div class="block foc drugH1Div" id="F58720682"><span class="drugH1">Dosage Forms: US</span>
+<p style="text-indent:0em;text-align:justify;display:inline">Excipient information presented when available (limited, particularly for generics); consult specific product labeling.</p>
+<p style="text-indent:-2em;margin-left:2em;text-align:justify;">Tablet, Oral: </p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">Jesduvroq: 1 mg, 2 mg, 4 mg, 6 mg, 8 mg</p></div>
+<div class="block geq drugH1Div" id="F58720680"><span class="drugH1">Generic Equivalent Available: US</span>
+<p style="text-indent:0em;display:inline">No</p></div>
+<div class="block fee drugH1Div" id="F58787043"><span class="drugH1">Pricing: US</span>
+<p style="text-indent:-2em;margin-left:2em;text-align:justify;">
+<b>Tablets</b> (Jesduvroq Oral)</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">1 mg (per each): $4.69</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">2 mg (per each): $9.38</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">4 mg (per each): $18.77</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">6 mg (per each): $28.15</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">8 mg (per each): $37.54</p>
+<p style="text-indent:0em;">
+<b>Disclaimer: </b>A representative AWP (Average Wholesale Price) price or price range is provided as reference price only. A range is provided when more than one manufacturer's AWP price is available and uses the low and high price reported by the manufacturers to determine the range. The pricing data should be used for benchmarking purposes only, and as such should not be used alone to set or adjudicate any prices for reimbursement or purchasing functions or considered to be an exact price for a single product and/or manufacturer.  Medi-Span expressly disclaims all warranties of any kind or nature, whether express or implied, and assumes no liability with respect to accuracy of price or price range data published in its solutions.  In no event shall Medi-Span be liable for special, indirect, incidental, or consequential damages arising from use of price or price range data.  Pricing data is updated monthly.</p></div>
+<div class="block adm drugH1Div" id="F57972495"><span class="drugH1">Administration: Adult</span>
+<p style="text-indent:0em;display:inline">
+<b>Oral:</b> Administer without regard to meals. Swallow whole; do not cut, chew, or crush tablets.</p></div>
+<div class="block meg drugH1Div" id="F57892200"><span class="drugH1">Medication Guide and/or Vaccine Information Statement (VIS)</span>
+<p style="text-indent:0em;display:inline">An FDA-approved patient medication guide, which is available with the product information and at <a href="/external-redirect?target_url=https%3A%2F%2Fwww.accessdata.fda.gov%2Fdrugsatfda_docs%2Flabel%2F2023%2F216951s000lbl.pdf%23page%3D23&amp;token=D9IOjNQ6xnijnOYBx34L58tCvKdoWJfPu6VBAwHos%2B8Hb46eSqbOQdYEbTtyfjyCDt%2FVk6A8uxBIxcRgW8%2FsMWcBM06bIm%2FcOCa6N3c9MQ4sWwXd8BxPdVIUZmXFAF4z&amp;TOPIC_ID=140715" target="_blank">https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/216951s000lbl.pdf#page=23</a>, must be dispensed with this medication.</p></div>
+<div class="block use drugH1Div" id="F57856068"><span class="drugH1">Use: Labeled Indications</span>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Anemia due to chronic kidney disease (dialysis-dependent): </b>Treatment of anemia due to chronic kidney disease (CKD) in adults who have been receiving dialysis for at least 4 months.</p>
+<p style="text-indent:-2em;margin-left:2em;">Limitations of use: Has not been shown to improve quality of life, fatigue, or patient well-being; not indicated as a substitute for RBC transfusions in patients who require immediate correction of anemia or treatment of anemia of CKD in patients who are not on dialysis.</p></div>
+<div class="block cyt drugH1Div" id="F57878411"><span class="drugH1">Metabolism/Transport Effects</span>
+<p style="text-indent:0em;display:inline">
+<b>Substrate</b> of BCRP/ABCG2, CYP2C8 (major), CYP3A4 (minor), OAT1/3; <b>Note:</b> Assignment of Major/Minor substrate status based on clinically relevant drug interaction potential</p></div>
+<div class="block dri drugH1Div" id="F57878408"><span class="drugH1">Drug Interactions</span><br/><br/><div class="clear"></div><p xmlns=""></p><div class="inner" xmlns=""><p style="text-indent:0em;display:inline"><b>Note</b>: Interacting drugs may <b>not be individually listed below</b> if they are part of a group interaction (eg, individual drugs within “CYP3A4 Inducers [Strong]” are NOT listed).  For a complete list of drug interactions by individual drug name and detailed management recommendations, use the Lexicomp drug interactions program by clicking on the “Launch drug interactions program” link above.</p><p xmlns=""></p></div>
+<p style="text-indent:-2em;margin-left:2em;">Androgens: Hypertension-Associated Agents may enhance the hypertensive effect of Androgens. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">CYP2C8 Inducers (Moderate): May decrease the serum concentration of Daprodustat.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">CYP2C8 Inhibitors (Moderate): May increase the serum concentration of Daprodustat. Management: Reduce the daprodustat starting dose by half if combined with moderate CYP2C8 inhibitors, unless the dose is 1 mg, then no dose adjustment is required. Monitor hemoglobin and adjust daprodustat dose when starting or stopping moderate CYP2C8 inhibitors.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">CYP2C8 Inhibitors (Strong): May increase the serum concentration of Daprodustat.<i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">CYP2C8 Inhibitors (Weak): May increase the serum concentration of Daprodustat.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Lumacaftor and Ivacaftor: May decrease the serum concentration of CYP2C8 Substrates (High Risk with Inhibitors or Inducers). Lumacaftor and Ivacaftor may increase the serum concentration of CYP2C8 Substrates (High Risk with Inhibitors or Inducers).<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Solriamfetol: May enhance the hypertensive effect of Hypertension-Associated Agents.<i> Risk C: Monitor therapy</i></p></div>
+<div class="block pri drugH1Div" id="F57972364"><span class="drugH1">Pregnancy Considerations</span>
+<p style="text-indent:0em;display:inline">Adverse events were observed in animal reproduction studies at doses also causing maternal toxicity.</p></div>
+<div class="block brc drugH1Div" id="F57972365"><span class="drugH1">Breastfeeding Considerations</span>
+<p style="text-indent:-2em;margin-left:2em;">It is not known if daprodustat is present in breast milk.</p>
+<p style="text-indent:-2em;margin-left:2em;">Due to the potential for serious adverse reactions, breastfeeding is not recommended by the manufacturer during treatment and for 1 week after the last daprodustat dose.</p></div>
+<div class="block mop drugH1Div" id="F57972497"><span class="drugH1">Monitoring Parameters</span>
+<p style="text-indent:0em;display:inline">Assess liver function (ALT, AST, alkaline phosphatase, and total bilirubin) prior to initiation and repeat if the patient develops signs or symptoms consistent with liver disease; transferrin saturation and serum ferritin (prior to and during treatment) to ensure adequate stores before initiating and throughout therapy; Hb (every 2 weeks for the first month after initiation and following dose adjustments and then monthly thereafter); BP; signs and symptoms of myocardial infarction, stroke, venous thromboembolism, or thrombosis of vascular access; signs and symptoms of heart failure; signs and symptoms of gastric and esophageal erosions and GI bleeding.</p></div>
+<div class="block pha drugH1Div" id="F57972401"><span class="drugH1">Mechanism of Action</span>
+<p style="text-indent:0em;display:inline">Daprodustat increases the transcription of HIF (hypoxia-inducible factor)-responsive genes (including erythropoietin) through the reversible inhibition of HIF-PH1, PH2 and PH3 (IC<sub>50</sub> in the low nM range), resulting in stabilization and nuclear accumulation of HIF-1α and HIF-2α transcription factors.</p></div>
+<div class="block phk drugH1Div" id="F57972402"><span class="drugH1">Pharmacokinetics (Adult Data Unless Noted)</span>
+<p style="text-indent:-2em;margin-left:2em;">Onset:</p>
+<p style="text-indent:-2em;margin-left:4em;">Increases in endogenous erythropoietin: 6 to 8 hours.</p>
+<p style="text-indent:-2em;margin-left:4em;">Peak increases in reticulocyte counts: 7 to 15 days.</p>
+<p style="text-indent:-2em;margin-left:4em;">Hb steady state levels: ~4 weeks in patients previously receiving erythropoietin-stimulating agents (ESAs), ~16 to 20 weeks in patients who had not been receiving an ESA.</p>
+<p style="text-indent:-2em;margin-left:2em;">Distribution: V<sub>dss</sub>: 14.3 L.</p>
+<p style="text-indent:-2em;margin-left:2em;">Protein binding: &gt;99%.</p>
+<p style="text-indent:-2em;margin-left:2em;">Metabolism: In vitro: Primarily by CYP2C8 (95% contribution), with a minor contribution by CYP3A4 (5%).</p>
+<p style="text-indent:-2em;margin-left:2em;">Bioavailability: 65%.</p>
+<p style="text-indent:-2em;margin-left:2em;">Half-life elimination: ~1 to 4 hours.</p>
+<p style="text-indent:-2em;margin-left:2em;">Time to peak: 1 to 4 hours.</p>
+<p style="text-indent:-2em;margin-left:2em;">Excretion: Feces: 74% (primarily metabolites); Urine: 21% (primarily metabolites).</p>
+<p style="text-indent:-2em;margin-left:4em;">Clearance: 18.9 L/hour.</p></div>
+<div class="block phksp drugH1Div" id="F57972411"><span class="drugH1">Pharmacokinetics: Additional Considerations (Adult Data Unless Noted)</span>
+<p style="text-indent:-2em;margin-left:2em;">Hepatic function: Following a single 6 mg dose, C<sub>max</sub> was similar, and AUC increased by 1.5-fold in patients with mild impairment (Child-Pugh class A) compared to healthy volunteers. C<sub>max </sub>and AUC were increased 2-fold, respectively in patients with moderate impairment (Child-Pugh class B) compared to healthy volunteers.</p>
+<p style="text-indent:-2em;margin-left:4em;">Unbound concentrations: C<sub>max </sub>and AUC increased by 1.6 and 2.2-fold, respectively in patients with mild impairment (Child-Pugh class A) compared to healthy volunteers. AUC increased by 2.3-fold in patients with moderate impairment (Child-Pugh class B) compared to healthy volunteers.</p></div>
+</div><div class="headingAnchor" id="references"><ol id="reference">
+<li>
+<div class="reference" id="lexi-content-ref-Berns.1">
+<a name="Berns.1"></a>Berns JS, Qunibi WY. Treatment of anemia in patients on dialysis. Post TW, ed. UpToDate. Waltham, MA: UpToDate Inc. <a href="https://www.uptodate.com" target="_blank">https://www.uptodate.com</a>. Accessed January 24, 2024.</div>
+</li>
+<li>
+<div class="reference">
+                  Jesduvroq (daprodustat) [prescribing information]. Durham, NC: GlaxoSmithKline; February 2023.</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-KDIGO.1">
+<a name="KDIGO.1"></a>Kidney Disease: Improving Global Outcomes (KDIGO) Anemia Work Group. KDIGO clinical practice guideline for anemia in chronic kidney disease. <i>Kidney Int Suppl</i>. 2012;2(suppl):S279-S335. https://kdigo.org/guidelines/anemia-in-ckd/. Published August 2012.</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-35312234">
+<a name="35312234"></a>Nangaku M, Akizawa T, Nagakubo T, et al. Safety of daprodustat in patients with anemia of chronic kidney disease: a pooled analysis of phase 3 studies in Japan. <i>Ther Apher Dial</i>. 2022;26(6):1065-1078. doi:10.1111/1744-9987.13839<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/daprodustat-drug-information/abstract-text/35312234/pubmed" id="35312234" target="_blank">35312234</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-35260241">
+<a name="35260241"></a>Patoulias D, Papadopoulos C, Doumas M. Meta-analysis addressing the cardiovascular safety of daprodustat in patients with chronic kidney disease undergoing dialysis or not. <i>Am J Cardiol</i>. 2022;170:166-167. doi:10.1016/j.amjcard.2022.02.003<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/daprodustat-drug-information/abstract-text/35260241/pubmed" id="35260241" target="_blank">35260241</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-Manu.1">
+<a name="Manu.1"></a>Refer to manufacturer’s labeling.</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-34739194">
+<a name="34739194"></a>Singh AK, Carroll K, Perkovic V, et al. Daprodustat for the treatment of anemia in patients undergoing dialysis. <i>N Engl J Med</i>. 2021;385(25):2325-2335. doi:10.1056/NEJMoa2113379<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/daprodustat-drug-information/abstract-text/34739194/pubmed" id="34739194" target="_blank">34739194</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-14499855">
+<a name="14499855"></a>Smith KJ, Bleyer AJ, Little WC, Sane DC. The cardiovascular effects of erythropoietin. <i>Cardiovasc Res</i>. 2003;59(3):538-548. doi:10.1016/s0008-6363(03)00468-1<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/daprodustat-drug-information/abstract-text/14499855/pubmed" id="14499855" target="_blank">14499855</a>]</span>
+</div>
+</li></ol></div><div id="topicVersionRevision">Topic 140715 Version 19.0</div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

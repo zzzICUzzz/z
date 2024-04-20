@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Calfactant: Pediatric drug information</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Calfactant: Pediatric drug information</h1>
+<div class="utdArticleSection utdStyle" id="topicContent"><div id="drugTitle">Calfactant: Pediatric drug information</div><div class="clear"></div><div id="topicText">(For additional information <a class="drug drug_general" data-topicid="8834" href="/d/html/8834.html" rel="external">see "Calfactant: Drug information"</a>)<br/><br/>For abbreviations, symbols, and age group definitions used in Lexicomp (<a class="graphic graphic_table" href="/d/html/57469.html" rel="external">show table</a>)<div class="visuallyHidden drugH1Div" id="formulinkBodyPlaceholder"><span class="drugH1"></span></div>
+<div class="list ubnlist drugH1Div drugBrandNames" id="F144833"><span class="drugH1">Brand Names: US</span>
+<ul>
+<li>Infasurf</li></ul></div>
+<div class="list_set htclist drugH1Div drugBrandNames" id="F1057146"><span class="drugH1">Therapeutic Category</span>
+<ul>
+<li>
+<span class="list-set-name">Lung Surfactant</span></li></ul></div>
+<div class="block don drugH1Div" id="F53462392"><span class="drugH1">Dosing: Neonatal</span>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Dosage guidance:</b></p>
+<p style="text-indent:-2em;margin-left:4em;">
+<b>Dosage form information:</b> 1 mL of calfactant contains 35 mg of phospholipid.</p>
+<div class="collapsible-indication">
+<span class="collapsible-indication-title" data-indication-id="75bab727-4453-4780-9867-692e28a13743">Respiratory distress syndrome</span>
+<div class="collapsible-indication-wrap">
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Respiratory distress syndrome (RDS): </b>
+<b>Note: </b>For newborns who do not require mechanical ventilation for severe RDS, current guidelines recommend using continuous positive airway pressure (CPAP) immediately after birth with subsequent selective surfactant administration (AAP [Polin 2014]); routine prophylactic surfactant administration is no longer recommended (Banerjee 2019; CPS [Ng 2021]; Sweet 2023).</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Rescue treatment:</i></p>
+<p style="text-indent:-2em;margin-left:6em;">Endotracheal administration: <b>Note: </b>Use for INSURE (INtubation-SURfactant-Extubation) technique or patients requiring invasive respiratory support (eg, mechanical ventilation):</p>
+<p style="text-indent:-2em;margin-left:8em;">Newborns ≤72 hours: Endotracheal: 3 mL/kg as soon as the diagnosis of RDS is made; additional doses may be administered if patient remains intubated and requires at least 30% inspired fraction of oxygen (FiO<sub>2</sub>) to maintain a PaO<sub>2</sub> ≤80 torr; dosing more often than every 12 hours is typically not required unless surfactant is being inactivated by an infectious process, meconium, or blood; doses should not be given more frequently than every 6 hours; up to 4 doses may be administered if evidence of respiratory distress continues (AAP [Polin 2014]; Bloom 2005; manufacturer's labeling).</p>
+<p style="text-indent:-2em;margin-left:6em;">Less invasive methods of surfactant administration:</p>
+<p style="text-indent:-2em;margin-left:8em;">
+<i>Minimally invasive surfactant administration (MISA)</i>: Very limited data available; optimal dose not established: <b>Note: </b>Use in patients requiring noninvasive respiratory support.</p>
+<p style="text-indent:-2em;margin-left:10em;">GA &lt;32 weeks: Intratracheal: 2 to 2.85 mL/kg; dosing based on a trial in neonates receiving nasal CPAP for RDS treatment (n=151; GA: 30.6 weeks ± 1.6 weeks; birth weight: 1,427.6 ± 290.2 g); patients received MISA within 6 hours of life; repeat doses were allowed with progressive RDS symptoms and a FiO<sub>2</sub> ≥40% (Han 2020).</p>
+<p style="text-indent:-2em;margin-left:8em;">
+<i>Aerosolized delivery:</i> Very limited data available; optimal dose and nebulizer have not been established:</p>
+<p style="text-indent:-2em;margin-left:10em;">GA ≥23 weeks: Nebulization: 6 mL/kg; initial doses usually administered within first 12 hours of life; repeat doses may be administered no more frequently than every 4 hours for up to 3 doses during the first 3 days of life if there is evidence of a positive response to the first dose. Dosing based on a prospective trial in neonates receiving nasal CPAP, high-flow nasal cannula, or noninvasive ventilation for RDS treatment who were randomized to aerosolized calfactant (n=230; GA: 33.2 weeks ± 3.2 weeks) or usual care (liquid surfactant) (Cummings 2020).</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Prophylactic</i>
+<i> therapy:</i>
+<b>Note: </b>Routine prophylactic surfactant administration is no longer recommended (Banerjee 2019; CPS [Ng 2021]; Sweet 2023).</p>
+<p style="text-indent:-2em;margin-left:6em;">Premature neonates (&lt;29 weeks' gestation): Endotracheal: 3 mL/kg as soon as possible after birth, preferably within 30 minutes.</p></div>
+</div>
+</div>
+<div class="block dop drugH1Div" id="F144837"><span class="drugH1">Dosing: Pediatric</span>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Dosage guidance:</b></p>
+<p style="text-indent:-2em;margin-left:4em;">
+<b>Dosage form information:</b> 1 mL of calfactant contains 35 mg of phospholipid.</p>
+<div class="collapsible-indication">
+<span class="collapsible-indication-title" data-indication-id="75bab727-4453-4780-9867-692e28a13743">Respiratory distress syndrome</span>
+<div class="collapsible-indication-wrap">
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Respiratory distress syndrome (RDS): Note: </b>For newborns who do not require mechanical ventilation for severe RDS, current guidelines recommend using continuous positive airway pressure (CPAP) immediately after birth with subsequent selective surfactant administration (AAP [Polin 2014]); routine prophylactic surfactant administration is no longer recommended (Banerjee 2019; CPS [Ng 2021]; Sweet 2023).</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Rescue treatment:</i></p>
+<p style="text-indent:-2em;margin-left:6em;">Endotracheal administration: <b>Note: </b>Use for INSURE (INtubation-SURfactant-Extubation) technique or patients requiring invasive respiratory support (eg, mechanical ventilation):</p>
+<p style="text-indent:-2em;margin-left:8em;">Newborns ≤72 hours: Endotracheal: 3 mL/kg as soon as the diagnosis of RDS is made; additional doses may be administered if patient remains intubated and requires at least 30% inspired fraction of oxygen (FiO<sub>2</sub>) to maintain a PaO<sub>2</sub> ≤80 torr; dosing more often than every 12 hours is typically not required unless surfactant is being inactivated by an infectious process, meconium, or blood; doses should not be given more frequently than every 6 hours; up to 4 doses may be administered if evidence of respiratory distress continues (AAP [Polin 2014]; Bloom 2005; manufacturer's labeling).</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Prophylactic therapy:</i>
+<b>Note: </b>Routine prophylactic surfactant administration is no longer recommended (Banerjee 2019; CPS [Ng 2021]; Sweet 2023).</p>
+<p style="text-indent:-2em;margin-left:6em;">Premature newborns (&lt;29 weeks gestation): Endotracheal: 3 mL/kg as soon as possible after birth, preferably within 30 minutes.</p></div>
+</div>
+</div>
+<div class="block dorp drugH1Div" id="F51083849"><span class="drugH1">Dosing: Kidney Impairment: Pediatric</span>
+<p style="text-indent:0em;display:inline">There are no dosage adjustments provided in the manufacturer's labeling.</p></div>
+<div class="block dohp drugH1Div" id="F51083850"><span class="drugH1">Dosing: Hepatic Impairment: Pediatric</span>
+<p style="text-indent:0em;display:inline">There are no dosage adjustments provided in the manufacturer's labeling.</p></div>
+<div class="block adr drugH1Div" id="F144818"><span class="drugH1">Adverse Reactions</span>
+<p style="text-indent:0em;display:inline">The following adverse drug reactions and incidences are derived from product labeling unless otherwise specified.</p>
+<p style="text-indent:-2em;margin-left:2em;">&gt;10%:</p>
+<p style="text-indent:-2em;margin-left:4em;">Cardiovascular: Bradycardia (34%)</p>
+<p style="text-indent:-2em;margin-left:4em;">Gastrointestinal: Endotracheal tube reflux (21%)</p>
+<p style="text-indent:-2em;margin-left:4em;">Respiratory: Cyanosis (65%), airway obstruction (16% to 39%)</p></div>
+<div class="block coi drugH1Div" id="F25595601"><span class="drugH1">Contraindications</span>
+<p style="text-indent:0em;"> There are no contraindications listed in the manufacturer's labeling. </p></div>
+<div class="block war drugH1Div" id="F144815"><span class="drugH1">Warnings/Precautions</span>
+<p style="text-indent:-2em;margin-left:2em;text-align:justify;">
+<b>
+<i>Concerns related to adverse effects:</i></b></p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">• Transient adverse effects: Transient episodes of bradycardia, decreased oxygen saturation, endotracheal tube blockage or reflux of calfactant into endotracheal tube may occur. Discontinue dosing procedure and initiate measures to alleviate the condition; may reinstitute after the patient is stable.</p>
+<p style="text-indent:-2em;margin-left:2em;text-align:justify;">
+<b>
+<i>Other warnings/precautions:</i></b></p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">• Administration: For intratracheal administration only.</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">• Monitoring: Produces rapid improvements in lung oxygenation and compliance that may require frequent adjustments to oxygen delivery and ventilator settings.</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">• Trained personnel: Rapidly affects oxygenation and lung compliance; restrict use to a highly-supervised clinical setting with immediate availability of clinicians experienced in intubation and ventilatory management of premature infants.</p></div>
+<div class="block foc drugH1Div" id="F144823"><span class="drugH1">Dosage Forms: US</span>
+<p style="text-indent:0em;text-align:justify;display:inline">Excipient information presented when available (limited, particularly for generics); consult specific product labeling.</p>
+<p style="text-indent:-2em;margin-left:2em;text-align:justify;">Suspension, Intratracheal: </p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">Infasurf: 35 mg phospholipids and 0.7 mg protein per mL (3 mL, 6 mL)</p></div>
+<div class="block geq drugH1Div" id="F144811"><span class="drugH1">Generic Equivalent Available: US</span>
+<p style="text-indent:0em;display:inline">No</p></div>
+<div class="block fee drugH1Div" id="F16323037"><span class="drugH1">Pricing: US</span>
+<p style="text-indent:-2em;margin-left:2em;text-align:justify;">
+<b>Suspension</b> (Infasurf Intratracheal)</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">35 mg/mL 0.9% (per mL): $181.79</p>
+<p style="text-indent:0em;">
+<b>Disclaimer: </b>A representative AWP (Average Wholesale Price) price or price range is provided as reference price only. A range is provided when more than one manufacturer's AWP price is available and uses the low and high price reported by the manufacturers to determine the range. The pricing data should be used for benchmarking purposes only, and as such should not be used alone to set or adjudicate any prices for reimbursement or purchasing functions or considered to be an exact price for a single product and/or manufacturer.  Medi-Span expressly disclaims all warranties of any kind or nature, whether express or implied, and assumes no liability with respect to accuracy of price or price range data published in its solutions.  In no event shall Medi-Span be liable for special, indirect, incidental, or consequential damages arising from use of price or price range data.  Pricing data is updated monthly.</p></div>
+<div class="block admp drugH1Div" id="F52612352"><span class="drugH1">Administration: Pediatric</span>
+<p style="text-indent:0em;display:inline">Gently swirl vial to redisperse suspension; do not shake. Slowly draw dose into a syringe using a 20-gauge or larger needle taking care to avoid excessive foaming. Warming of vial prior to administration is not necessary.</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<i>Endotracheal tube:</i>
+<b>Note: </b>Utilized for INSURE (INtubation-SURfactant-Extubation) technique or patients who are mechanically ventilated.</p>
+<p style="text-indent:-2em;margin-left:4em;">Before administering, ensure proper placement and patency of the endotracheal tube. Administer dose in 2 equally divided aliquots into the endotracheal tube either via a side-port adapter into the endotracheal tube or via a 5-French feeding catheter inserted into the endotracheal tube; after each instillation, reposition the infant with either the right or left side dependent; administration is made while ventilation is continued over 20 to 30 breaths for each aliquot, with small bursts timed only during the inspiratory cycles; a pause followed by evaluation of the respiratory status and repositioning should separate the 2 aliquots; calfactant dosage has also been divided into 4 equal aliquots and administered with repositioning in 4 different positions (prone, supine, right and left lateral).</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<i>Intratracheal:</i> Minimally invasive surfactant administration (MISA): Administration via a thin catheter (eg, 3-French to 5-French) has been suggested as a less invasive method. The catheter is placed between the vocal cords under direct laryngoscopy and the surfactant dose is administered over 1 to 5 minutes as small boluses; administration should be slowed if apnea, bradycardia, or surfactant reflux occurs (Han 2020; Herting 2020).</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<i>Nebulization:</i> Administer via a Solarys nebulizer with a distal end resembling a pacifier inserted into the mouth of the patient. The rate of delivery was 0.2 ± 0.02 mL/minute continuously, not synchronized with inspiration (Cummings 2020).</p></div>
+<div class="block sts drugH1Div" id="F144831"><span class="drugH1">Storage/Stability</span>
+<p style="text-indent:0em;display:inline">Gentle swirling or agitation of the vial of suspension is often necessary for redispersion. <b>Do not shake</b>. Visible flecks of the suspension and foaming under the surface are normal. Calfactant should be stored upright (3 mL vial) and under refrigeration at 2°C to 8°C (36°F to 46°F); protect from light; document date and time removed from refrigeration. Warming before administration is not necessary. Unopened and unused vials of calfactant that have been warmed to room temperature can be returned to refrigeration storage within 24 hours for future use. Repeated warming to room temperature should be avoided. Each single-use vial should be entered only once and the vial with any unused material should be discarded after the initial entry.</p></div>
+<div class="block usep drugH1Div" id="F53565813"><span class="drugH1">Use</span>
+<p style="text-indent:0em;display:inline">Prevention of respiratory distress syndrome (RDS) in premature infants at significant risk for RDS (FDA approved in newborns &lt;29 weeks gestational age); treatment of RDS in neonates with clinical and radiologic confirmation and requiring mechanical ventilation (FDA approved in newborns ≤72 hours of age).</p></div>
+<div class="block cyt drugH1Div" id="F13298945"><span class="drugH1">Metabolism/Transport Effects</span>
+<p style="text-indent:0em;display:inline">None known.</p></div>
+<div class="block dri drugH1Div" id="F6218819"><span class="drugH1">Drug Interactions</span><br/><br/><div class="clear"></div><p xmlns=""></p><div class="inner" xmlns=""><p style="text-indent:0em;display:inline"><b>Note</b>: Interacting drugs may <b>not be individually listed below</b> if they are part of a group interaction (eg, individual drugs within “CYP3A4 Inducers [Strong]” are NOT listed).  For a complete list of drug interactions by individual drug name and detailed management recommendations, use the Lexicomp drug interactions program by clicking on the “Launch drug interactions program” link above.</p><p xmlns=""></p></div>
+<p style="text-indent:-2em;margin-left:2em;">Bradycardia-Causing Agents: May enhance the bradycardic effect of other Bradycardia-Causing Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Ceritinib: Bradycardia-Causing Agents may enhance the bradycardic effect of Ceritinib.  Management: If this combination cannot be avoided, monitor patients for evidence of symptomatic bradycardia, and closely monitor blood pressure and heart rate during therapy.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Etrasimod: May enhance the bradycardic effect of Bradycardia-Causing Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Fexinidazole: Bradycardia-Causing Agents may enhance the arrhythmogenic effect of Fexinidazole. <i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Fingolimod: Bradycardia-Causing Agents may enhance the bradycardic effect of Fingolimod.  Management: Consult with the prescriber of any bradycardia-causing agent to see if the agent could be switched to an agent that does not cause bradycardia prior to initiating fingolimod. If combined, perform continuous ECG monitoring after the first fingolimod dose.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Ivabradine: Bradycardia-Causing Agents may enhance the bradycardic effect of Ivabradine. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Lacosamide: Bradycardia-Causing Agents may enhance the AV-blocking effect of Lacosamide. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Midodrine: May enhance the bradycardic effect of Bradycardia-Causing Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Ozanimod: May enhance the bradycardic effect of Bradycardia-Causing Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Ponesimod: Bradycardia-Causing Agents may enhance the bradycardic effect of Ponesimod.  Management: Avoid coadministration of ponesimod with drugs that may cause bradycardia when possible. If combined, monitor heart rate closely and consider obtaining a cardiology consult. Do not initiate ponesimod in patients on beta-blockers if HR is less than 55 bpm.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Siponimod: Bradycardia-Causing Agents may enhance the bradycardic effect of Siponimod.  Management: Avoid coadministration of siponimod with drugs that may cause bradycardia. If combined, consider obtaining a cardiology consult regarding patient monitoring.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Tofacitinib: May enhance the bradycardic effect of Bradycardia-Causing Agents.<i> Risk C: Monitor therapy</i></p></div>
+<div class="block mopp drugH1Div" id="F53565798"><span class="drugH1">Monitoring Parameters</span>
+<p style="text-indent:0em;display:inline">Continuous heart rate and transcutaneous O<sub>2</sub> saturation should be monitored during administration; transcutaneous CO<sub>2</sub> and blood gases following administration to prevent hyperoxia and hypocarbia.</p></div>
+<div class="block pha drugH1Div" id="F144814"><span class="drugH1">Mechanism of Action</span>
+<p style="text-indent:0em;display:inline">Endogenous lung surfactant is essential for effective ventilation because it modifies alveolar surface tension, thereby stabilizing the alveoli. Lung surfactant deficiency is the cause of respiratory distress syndrome (RDS) in premature infants and lung surfactant restores surface activity to the lungs of these infants.</p></div>
+<div class="block phk drugH1Div" id="F144827"><span class="drugH1">Pharmacokinetics (Adult Data Unless Noted)</span>
+<p style="text-indent:0em;display:inline">No human studies of absorption, biotransformation, or excretion have been performed</p></div>
+<div class="list fbnlist drugH1Div drugBrandNames" id="F24672835"><span class="drugH1">Brand Names: International</span><div class="ibn-search drugBrandNames"></div>
+<div class="collapsible-indication brand-names-accordion drugBrandNames"><span class="collapsible-indication-title">International Brand Names by Country</span><div class="collapsible-indication-wrap-frame drugBrandNames"><div class="collapsible-indication-wrap drugBrandNames">For country code abbreviations (<a class="graphic graphic_table" href="/d/html/116421.html" rel="external">show table</a>)<br xmlns=""/><br/><ul>
+<li>
+<span class="countryCode">(CO)</span> <span class="country">Colombia</span><span class="countrySeparator">: </span><span class="drugName">Infasurf</span>;</li>
+<li>
+<span class="countryCode">(KR)</span> <span class="country">Korea, Republic of</span><span class="countrySeparator">: </span><span class="drugName">Infasurf</span>;</li>
+<li>
+<span class="countryCode">(MY)</span> <span class="country">Malaysia</span><span class="countrySeparator">: </span><span class="drugName">Infasurf</span>;</li>
+<li>
+<span class="countryCode">(PR)</span> <span class="country">Puerto Rico</span><span class="countrySeparator">: </span><span class="drugName">Infasurf</span>;</li>
+<li>
+<span class="countryCode">(TN)</span> <span class="country">Tunisia</span><span class="countrySeparator">: </span><span class="drugName">Infasurf</span>;</li>
+<li>
+<span class="countryCode">(UA)</span> <span class="country">Ukraine</span><span class="countrySeparator">: </span><span class="drugName">Infasurf</span></li></ul></div>
+</div>
+</div>
+</div>
+</div><div class="headingAnchor" id="references"><ol id="reference">
+<li>
+<div class="reference" id="lexi-content-ref-30780152">
+<a name="30780152"></a>Banerjee S, Fernandez R, Fox GF, et al. Surfactant replacement therapy for respiratory distress syndrome in preterm infants: United Kingdom national consensus. <i>Pediatr Res</i>. 2019;86(1):12-14. doi:10.1038/s41390-019-0344-5<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/calfactant-pediatric-drug-information/abstract-text/30780152/pubmed" id="30780152" target="_blank">30780152</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-16061594">
+<a name="16061594"></a>Bloom BT, Clark RH; Infasurf Survanta Clinical Trial Group. Comparison of infasurf (calfactant) and survanta (beractant) in the prevention and treatment of respiratory distress syndrome. <i>Pediatrics.</i> 2005;116(2):392-399.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/calfactant-pediatric-drug-information/abstract-text/16061594/pubmed" id="16061594" target="_blank">16061594</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-33060258">
+<a name="33060258"></a>Cummings JJ, Gerday E, Minton S, et al; AERO-02 STUDY INVESTIGATORS. Aerosolized calfactant for newborns with respiratory distress: A randomized trial. <i>Pediatrics</i>. 2020;146(5):e20193967. doi:10.1542/peds.2019-3967<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/calfactant-pediatric-drug-information/abstract-text/33060258/pubmed" id="33060258" target="_blank">33060258</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-32457854">
+<a name="32457854"></a>Han T, Liu H, Zhang H, Guo M, et al. Minimally Invasive Surfactant Administration for the treatment of neonatal respiratory distress syndrome: A multicenter randomized study in China. <i>Front Pediatr</i>. 2020;8:182. doi:10.3389/fped.2020.00182<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/calfactant-pediatric-drug-information/abstract-text/32457854/pubmed" id="32457854" target="_blank">32457854</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-32068592">
+<a name="32068592"></a>Herting E, Härtel C, Göpel W. Less invasive surfactant administration: Best practices and unanswered questions. <i>Curr Opin Pediatr</i>. 2020;32(2):228-234. doi:10.1097/MOP.0000000000000878<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/calfactant-pediatric-drug-information/abstract-text/32068592/pubmed" id="32068592" target="_blank">32068592</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference">
+                  Infasurf (calfactant) [prescribing information]. Amherst, NY: ONY Biotech Inc; March 2018.</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-10920152">
+<a name="10920152"></a>Kattwinkel J, Bloom BT, Delmore P, et al. High- versus low-threshold surfactant retreatment for neonatal respiratory distress syndrome. <i>Pediatrics.</i> 2000;106(2 Pt 1):282-288.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/calfactant-pediatric-drug-information/abstract-text/10920152/pubmed" id="10920152" target="_blank">10920152</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-33552321">
+<a name="33552321"></a>Ng EH, Shah V. Guidelines for surfactant replacement therapy in neonates. <i>Paediatr Child Health</i>. 2021;26(1):35-49. doi:10.1093/pch/pxaa116<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/calfactant-pediatric-drug-information/abstract-text/33552321/pubmed" id="33552321" target="_blank">33552321</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-24379227">
+<a name="24379227"></a>Polin RA, Carlo WA; Committee on Fetus and Newborn, American Academy of Pediatrics. Surfactant replacement therapy for preterm and term neonates with respiratory distress. <i>Pediatrics</i>. 2014;133(1):156-163.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/calfactant-pediatric-drug-information/abstract-text/24379227/pubmed" id="24379227" target="_blank">24379227</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-36863329">
+<a name="36863329"></a>Sweet DG, Carnielli VP, Greisen G, et al. European consensus guidelines on the management of respiratory distress syndrome: 2022 update. <i>Neonatology</i>. 2023;120(1):3-23. doi:10.1159/000528914<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/calfactant-pediatric-drug-information/abstract-text/36863329/pubmed" id="36863329" target="_blank">36863329</a>]</span>
+</div>
+</li></ol></div><div id="topicVersionRevision">Topic 13109 Version 127.0</div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

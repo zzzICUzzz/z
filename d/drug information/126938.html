@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Tazemetostat: Pediatric drug information</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Tazemetostat: Pediatric drug information</h1>
+<div class="utdArticleSection utdStyle" id="topicContent"><div id="drugTitle">Tazemetostat: Pediatric drug information</div><div class="clear"></div><div id="topicText">(For additional information <a class="drug drug_general" data-topicid="126937" href="/d/html/126937.html" rel="external">see "Tazemetostat: Drug information"</a> and <a class="drug drug_patient" data-topicid="126939" href="/d/html/126939.html" rel="external">see "Tazemetostat: Patient drug information"</a>)<br/><br/>For abbreviations, symbols, and age group definitions used in Lexicomp (<a class="graphic graphic_table" href="/d/html/57469.html" rel="external">show table</a>)<div class="visuallyHidden drugH1Div" id="formulinkBodyPlaceholder"><span class="drugH1"></span></div>
+<div class="list ubnlist drugH1Div drugBrandNames" id="F54084847"><span class="drugH1">Brand Names: US</span>
+<ul>
+<li>Tazverik</li></ul></div>
+<div class="list_set htclist drugH1Div drugBrandNames" id="F54080098"><span class="drugH1">Therapeutic Category</span>
+<ul>
+<li>
+<span class="list-set-name">Antineoplastic Agent, EZH2-Inhibitor</span>;</li>
+<li>
+<span class="list-set-name">Antineoplastic Agent, Histone Methyltransferase (HMT) Inhibitor</span></li></ul></div>
+<div class="block dop drugH1Div" id="F54082152"><span class="drugH1">Dosing: Pediatric</span>
+<div class="collapsible-indication">
+<span class="collapsible-indication-title" data-indication-id="a48489cf-d715-4be8-a887-2f5ad098ae1b">Epithelioid sarcoma, metastatic or locally advanced</span>
+<div class="collapsible-indication-wrap">
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Epithelioid sarcoma, metastatic or locally advanced:</b> Adolescents ≥16 years: Oral: 800 mg twice daily until disease progression or unacceptable toxicity.</p></div>
+</div>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Dosage adjustment for concomitant therapy: </b>Significant drug interactions exist, requiring dose/frequency adjustment or avoidance. Consult drug interactions database for more information.</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Dosage adjustment for toxicity:</b></p>
+<p style="text-indent:-2em;margin-left:4em;">
+<b>Dose reductions:</b></p>
+<p style="text-indent:-2em;margin-left:6em;">First dose reduction: Oral: Tazemetostat 600 mg twice daily.</p>
+<p style="text-indent:-2em;margin-left:6em;">Second dose reduction: Oral: Tazemetostat 400 mg twice daily.</p>
+<p style="text-indent:-2em;margin-left:6em;">
+<b>Note:</b> Discontinue permanently if unable to tolerate tazemetostat 400 mg twice daily.</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Dosage adjustment for neutropenia (neutrophil count &lt;1 x 10<sup>9</sup>/L):</i> Hold tazemetostat until neutrophil count ≥1 x 10<sup>9</sup>/L or baseline, then resume as follows:</p>
+<p style="text-indent:-2em;margin-left:6em;">If first occurrence: Resume tazemetostat at same dose.</p>
+<p style="text-indent:-2em;margin-left:6em;">For second or third occurrence: Resume tazemetostat at reduced dose.</p>
+<p style="text-indent:-2em;margin-left:6em;">After fourth occurrence: Permanently discontinue tazemetostat.</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Dosage adjustment for thrombocytopenia (platelet count &lt;50 x 10<sup>9</sup>/L):</i> Hold tazemetostat until platelet count ≥75 x 10<sup>9</sup>/L or baseline, then resume as follows:</p>
+<p style="text-indent:-2em;margin-left:6em;">For first and second occurrence: Resume tazemetostat at reduced dose.</p>
+<p style="text-indent:-2em;margin-left:6em;">After third occurrence: Permanently discontinue tazemetostat.</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Dosage adjustment for anemia (hemoglobin &lt;8 g/dL):</i> Hold tazemetostat until improved to least grade 1 or baseline, then resume at the same or reduced dose.</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Dosage adjustment for other grade 3 adverse reactions:</i> Hold tazemetostat until improved to at least grade 1 or baseline, then resume as follows:</p>
+<p style="text-indent:-2em;margin-left:6em;">For first and second occurrence: Resume tazemetostat at reduced dose.</p>
+<p style="text-indent:-2em;margin-left:6em;">After third occurrence: Permanently discontinue tazemetostat.</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Dosage adjustment for other grade 4 adverse reactions:</i> Hold tazemetostat until improved to at least grade 1 or baseline, then resume as follows:</p>
+<p style="text-indent:-2em;margin-left:6em;">For first occurrence: Resume tazemetostat at reduced dose.</p>
+<p style="text-indent:-2em;margin-left:6em;">After second occurrence: Permanently discontinue tazemetostat.</p></div>
+<div class="block dorp drugH1Div" id="F54082173"><span class="drugH1">Dosing: Kidney Impairment: Pediatric</span>
+<p style="text-indent:-2em;margin-left:2em;">Adolescents ≥16 years:</p>
+<p style="text-indent:-2em;margin-left:4em;">Mild to severe impairment: No dosage adjustment needed.</p>
+<p style="text-indent:-2em;margin-left:4em;">End-stage renal disease: No dosage adjustment needed.</p></div>
+<div class="block dohp drugH1Div" id="F54082178"><span class="drugH1">Dosing: Hepatic Impairment: Pediatric</span>
+<p style="text-indent:-2em;margin-left:2em;">Adolescents ≥16 years:</p>
+<p style="text-indent:-2em;margin-left:4em;">Mild impairment (total bilirubin &gt;1 to 1.5 x ULN or AST &gt; ULN): No dosage adjustment necessary.</p>
+<p style="text-indent:-2em;margin-left:4em;">Moderate (total bilirubin &gt;1.5 to 3 x ULN) or severe (total bilirubin &gt;3 x ULN) impairment: There are no dosage adjustments provided in the manufacturer's labeling (has not been studied).</p></div>
+<div class="block doa drugH1Div" id="F54091129"><span class="drugH1">Dosing: Adult</span><p>(For additional information <a class="drug drug_general" data-topicid="126937" href="/d/html/126937.html" rel="external">see "Tazemetostat: Drug information"</a>)</p>
+<div class="collapsible-indication">
+<span class="collapsible-indication-title" data-indication-id="a48489cf-d715-4be8-a887-2f5ad098ae1b">Epithelioid sarcoma, metastatic or locally advanced</span>
+<div class="collapsible-indication-wrap">
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Epithelioid sarcoma, metastatic or locally advanced:</b>
+<b>Oral:</b> 800 mg twice daily until disease progression or unacceptable toxicity (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-Stacchiotti.2019']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-Stacchiotti.2019'])">Ref</a></span>).</p></div>
+</div>
+<div class="collapsible-indication">
+<span class="collapsible-indication-title" data-indication-id="e2f2327a-7d4d-4783-b667-cd31a033c052">Follicular lymphoma, relapsed/refractory, EZH2 mutation-positive</span>
+<div class="collapsible-indication-wrap">
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Follicular lymphoma, relapsed/refractory, EZH2 mutation-</b>
+<b>positive:</b>
+<b>Oral:</b> 800 mg twice daily until disease progression or unacceptable toxicity (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-33035457']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-33035457'])">Ref</a></span>).</p></div>
+</div>
+<div class="collapsible-indication">
+<span class="collapsible-indication-title" data-indication-id="d6dc1703-fee2-464f-85db-664c33516b3e">Follicular lymphoma, relapsed/refractory, salvage therapy</span>
+<div class="collapsible-indication-wrap">
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Follicular lymphoma, relapsed/refractory, salvage therapy:</b>
+<b>Oral:</b> 800 mg twice daily until disease progression or unacceptable toxicity (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-33035457']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-33035457'])">Ref</a></span>).</p></div>
+</div>
+<p style="text-indent:-2em;margin-left:2em;">
+<i>Missed dose:</i> If a dose is missed or vomited, do not take an additional dose; continue with the next scheduled dose.</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Dosage adjustment for concomitant therapy:</b> Significant drug interactions exist, requiring dose/frequency adjustment or avoidance. Consult drug interactions database for more information.</p></div>
+<div class="block dora drugH1Div" id="F54091138"><span class="drugH1">Dosing: Kidney Impairment: Adult</span>
+<p style="text-indent:0em;display:inline">No dosage adjustment necessary.</p></div>
+<div class="block doha drugH1Div" id="F54091139"><span class="drugH1">Dosing: Hepatic Impairment: Adult</span>
+<p style="text-indent:-2em;margin-left:2em;">Mild impairment (total bilirubin &gt;1 to 1.5 times ULN or AST &gt; ULN): No dosage adjustment necessary.</p>
+<p style="text-indent:-2em;margin-left:2em;">Moderate (total bilirubin &gt;1.5 to 3 times ULN) or severe (total bilirubin &gt;3 times ULN) impairment: There are no dosage adjustments provided in the manufacturer's labeling (has not been studied).</p></div>
+<div class="block arsc drugH1Div" id="F55469180"><span class="drugH1">Adverse Reactions (Significant): Considerations</span>
+<div class="collapsible">
+<span class="collapsible-title">Hematologic effects</span>
+<div class="collapsible-wrap">
+<p style="text-indent:-2em;margin-left:2em;">Tazemetostat may cause dose-limiting bone marrow suppression; <b>decreased hemoglobin</b> (including<b> anemia</b>), <b>decreased neutrophils</b>, <b>decreased platelet count</b>, <b>decreased white blood cell count</b>, and <b>lymphocytopenia</b> have been reported. Hematologic effects may be reversible following dosage modification, interruption of therapy, and/or discontinuation.</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Mechanism</i>: Dose-related; exact mechanism is unknown.</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Onset: </i>May occur at any time during treatment (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-29650362']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-29650362'])">Ref</a></span>).</p></div>
+</div>
+<div class="collapsible">
+<span class="collapsible-title">Secondary malignancies</span>
+<div class="collapsible-wrap">
+<p style="text-indent:-2em;margin-left:2em;">Tazemetostat may increase the risk of developing secondary malignancies. <b>Myelodysplastic syndromes</b>, <b>acute myelocytic leukemia</b>, and B-cell <b>acute lymphocytic leukemia</b> have been reported.</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Mechanism: </i>Time-related. Exact mechanism is unknown; impact of disease process and concurrent medications must be considered.</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Onset: </i>Delayed; myelodysplastic syndrome and acute myelocytic leukemia were reported after &gt;1 year of treatment with tazemetostat in one clinical trial (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-33035457']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-33035457'])">Ref</a></span>).</p></div>
+</div>
+</div>
+<div class="block adr drugH1Div" id="F54079810"><span class="drugH1">Adverse Reactions</span>
+<p style="text-indent:0em;display:inline">The following adverse drug reactions and incidences are derived from product labeling unless otherwise specified.</p>
+<p style="text-indent:-2em;margin-left:2em;">&gt;10%:</p>
+<p style="text-indent:-2em;margin-left:4em;">Dermatologic: Alopecia, skin rash</p>
+<p style="text-indent:-2em;margin-left:4em;">Endocrine &amp; metabolic: Decreased serum albumin, decreased serum calcium, decreased serum glucose, decreased serum phosphate, decreased serum potassium, decreased serum sodium, increased serum glucose, increased serum potassium, increased serum triglycerides, weight loss</p>
+<p style="text-indent:-2em;margin-left:4em;">Gastrointestinal: Abdominal pain, constipation, decreased appetite, diarrhea, nausea, vomiting</p>
+<p style="text-indent:-2em;margin-left:4em;">Genitourinary: Urinary tract infection</p>
+<p style="text-indent:-2em;margin-left:4em;">Hematologic &amp; oncologic: Decreased hemoglobin (including anemia), decreased neutrophils, decreased platelet count, decreased white blood cell count, hemorrhage (including cerebral hemorrhage, hemoptysis, pulmonary hemorrhage, rectal hemorrhage, wound hemorrhage), lymphocytopenia, prolonged partial thromboplastin time</p>
+<p style="text-indent:-2em;margin-left:4em;">Hepatic: Increased serum alanine aminotransferase, increased serum alkaline phosphatase, increased serum aspartate aminotransferase</p>
+<p style="text-indent:-2em;margin-left:4em;">Nervous system: Fatigue (including asthenia), headache, pain</p>
+<p style="text-indent:-2em;margin-left:4em;">Neuromuscular &amp; skeletal: Musculoskeletal pain</p>
+<p style="text-indent:-2em;margin-left:4em;">Renal: Increased serum creatinine</p>
+<p style="text-indent:-2em;margin-left:4em;">Respiratory: Cough, dyspnea, lower respiratory tract infection, upper respiratory tract infection</p>
+<p style="text-indent:-2em;margin-left:2em;">1% to 10%:</p>
+<p style="text-indent:-2em;margin-left:4em;">Dermatologic: Skin infection</p>
+<p style="text-indent:-2em;margin-left:4em;">Hematologic &amp; oncologic: Acute lymphocytic leukemia (B-cell), acute myelocytic leukemia, myelodysplastic syndrome</p>
+<p style="text-indent:-2em;margin-left:4em;">Infection: Herpes zoster infection, sepsis</p>
+<p style="text-indent:-2em;margin-left:4em;">Respiratory: Pleural effusion, pneumonia, respiratory distress</p>
+<p style="text-indent:-2em;margin-left:4em;">Miscellaneous: Fever</p>
+<p style="text-indent:-2em;margin-left:2em;">&lt;1%: Hematologic &amp; oncologic: T-cell lymphoma</p></div>
+<div class="block coi drugH1Div" id="F54057928"><span class="drugH1">Contraindications</span>
+<p style="text-indent:0em;">There are no contraindications listed in the manufacturer's labeling.</p></div>
+<div class="block war drugH1Div" id="F54091116"><span class="drugH1">Warnings/Precautions</span>
+<p style="text-indent:0em;">
+<b>
+<i>Other warnings/precautions: </i></b></p>
+<p style="text-indent:-2em;margin-left:4em;">• Appropriate use: Select patients for tazemetostat treatment of relapsed/refractory follicular lymphoma (excluding salvage therapy) based on the presence of EZH2 mutation of codons Y646, A682, or A692 in tumor specimens. Information on approved tests is available at <a href="/external-redirect?target_url=http%3A%2F%2Fwww.fda.gov%2FCompanionDiagnostics&amp;token=SHauxSdf9qNc6lLK16E8IPc%2BkYYsON95PtA1EteUbfjUoJYJ%2BuveJw2PtFUTXMkK&amp;TOPIC_ID=126938" target="_blank">http://www.fda.gov/CompanionDiagnostics</a>.</p></div>
+<div class="block foc drugH1Div" id="F54084848"><span class="drugH1">Dosage Forms: US</span>
+<p style="text-indent:0em;text-align:justify;display:inline">Excipient information presented when available (limited, particularly for generics); consult specific product labeling.</p>
+<p style="text-indent:-2em;margin-left:2em;text-align:justify;">Tablet, Oral: </p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">Tazverik: 200 mg</p></div>
+<div class="block geq drugH1Div" id="F54084846"><span class="drugH1">Generic Equivalent Available: US</span>
+<p style="text-indent:0em;display:inline">No</p></div>
+<div class="block fee drugH1Div" id="F54172946"><span class="drugH1">Pricing: US</span>
+<p style="text-indent:-2em;margin-left:2em;text-align:justify;">
+<b>Tablets</b> (Tazverik Oral)</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">200 mg (per each): $94.25</p>
+<p style="text-indent:0em;">
+<b>Disclaimer: </b>A representative AWP (Average Wholesale Price) price or price range is provided as reference price only. A range is provided when more than one manufacturer's AWP price is available and uses the low and high price reported by the manufacturers to determine the range. The pricing data should be used for benchmarking purposes only, and as such should not be used alone to set or adjudicate any prices for reimbursement or purchasing functions or considered to be an exact price for a single product and/or manufacturer.  Medi-Span expressly disclaims all warranties of any kind or nature, whether express or implied, and assumes no liability with respect to accuracy of price or price range data published in its solutions.  In no event shall Medi-Span be liable for special, indirect, incidental, or consequential damages arising from use of price or price range data.  Pricing data is updated monthly.</p></div>
+<div class="block accres drugH1Div" id="F54497697"><span class="drugH1">Prescribing and Access Restrictions</span>
+<p style="text-indent:0em;">Tazemetostat is available through a specialty pharmacy and specialty distributors. For further information, contact 833-437-4669 or https://www.tazverik.com/Content/pdf/ordering-and-distribution-sheet.pdf.</p></div>
+<div class="block admp drugH1Div" id="F54082179"><span class="drugH1">Administration: Pediatric</span>
+<p style="text-indent:0em;display:inline">
+<b>Oral:</b> Swallow tablet whole; do not cut, crush, or chew. Administer without regard to food. Do not administer an additional dose for a missed dose or for vomiting; resume with next scheduled dose.</p></div>
+<div class="block adm drugH1Div" id="F54091141"><span class="drugH1">Administration: Adult</span>
+<p style="text-indent:0em;display:inline">
+<b>Oral:</b> May administer with or without food. Swallow tablets whole; do not cut, crush, or chew.</p></div>
+<div class="block hazard drugH1Div" id="F54091118"><span class="drugH1">Hazardous Drugs Handling Considerations</span>
+<p style="text-indent:0em;">This medication is not on the NIOSH (2016) list; however, it may meet the criteria for a hazardous drug. Tazemetostat may cause carcinogenicity and teratogenicity.</p>
+<p style="text-indent:0em;margin-top:2em;">Use appropriate precautions for receiving, handling, storage, preparation, dispensing, transporting, administration, and disposal. Follow NIOSH and USP 800 recommendations <b>and</b> institution-specific policies/procedures for appropriate containment strategy (NIOSH 2016; USP-NF 2020).</p>
+<p style="text-indent:0em;margin-top:2em;">
+<b>Note:</b> Facilities may perform risk assessment of some hazardous drugs to determine if appropriate for alternative handling and containment strategies (USP-NF 2020). Refer to institution-specific handling policies/procedures.</p></div>
+<div class="block sts drugH1Div" id="F54091119"><span class="drugH1">Storage/Stability</span>
+<p style="text-indent:0em;display:inline">Do not store above 30°C (86°F).</p></div>
+<div class="block meg drugH1Div" id="F54062300"><span class="drugH1">Medication Guide and/or Vaccine Information Statement (VIS)</span>
+<p style="text-indent:0em;display:inline">An FDA-approved patient medication guide, which is available with the product information and as follows, must be dispensed with this medication:</p>
+<p style="text-indent:-2em;margin-left:4em;">Tazverik: <a href="/external-redirect?target_url=https%3A%2F%2Fwww.accessdata.fda.gov%2Fdrugsatfda_docs%2Flabel%2F2023%2F211723s004lbl.pdf%23page%3D17&amp;token=Y2%2FVvG%2BS%2FAhL6DC1j%2BPwjDAxzuiP6KlDyINUorLzIEB8w6HxC8cdBNo6hBvRiTBWgPCEpml%2FXhYjV0DifTvzMTkCLrQf3vrCreXuqdTnh%2BRP%2BsWvwPTERjbkNfD93AwD&amp;TOPIC_ID=126938" target="_blank">https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/211723s004lbl.pdf#page=17</a></p></div>
+<div class="block usep drugH1Div" id="F54080096"><span class="drugH1">Use</span>
+<p style="text-indent:0em;display:inline">Treatment of metastatic or locally advanced epithelioid sarcoma not eligible for complete resection (FDA approved in ages ≥16 years and adults); treatment of relapsed or refractory follicular lymphoma in patients whose tumors are positive for an EZH2 mutation (as detected by an approved test) and who have received at least 2 prior systemic therapies (FDA approved in adults); treatment of relapsed or refractory follicular lymphoma in patients who have no satisfactory alternative treatment options (FDA approved in adults).</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Note:</b> Indication approved under accelerated approval based on overall response rate and duration of response; continued approval may be contingent upon confirmatory trials.</p></div>
+<div class="block mst drugH1Div" id="F54088650"><span class="drugH1">Medication Safety Issues</span>
+<div class="collapsible">
+<span class="collapsible-title">Sound-alike/look-alike issues:</span>
+<div class="collapsible-wrap">
+<p style="text-indent:-2em;margin-left:4em;">Tazemetostat may be confused with belinostat, panobinostat, vorinostat.</p></div>
+</div>
+<div class="collapsible">
+<span class="collapsible-title">High alert medication:</span>
+<div class="collapsible-wrap">
+<p style="text-indent:-2em;margin-left:4em;">This medication is in a class the Institute for Safe Medication Practices includes among its list of drug classes which have a heightened risk of causing significant patient harm when used in error.</p></div>
+</div>
+</div>
+<div class="block cyt drugH1Div" id="F54084956"><span class="drugH1">Metabolism/Transport Effects</span>
+<p style="text-indent:0em;display:inline">
+<b>Substrate</b> of CYP3A4 (major), P-glycoprotein/ABCB1 (minor); <b>Note:</b> Assignment of Major/Minor substrate status based on clinically relevant drug interaction potential; <b>Inhibits</b> CYP2C8 (weak); <b>Induces</b> CYP3A4 (weak)</p></div>
+<div class="block dri drugH1Div" id="F54084953"><span class="drugH1">Drug Interactions</span><br/><br/><div class="clear"></div><p xmlns=""></p><div class="inner" xmlns=""><p style="text-indent:0em;display:inline"><b>Note</b>: Interacting drugs may <b>not be individually listed below</b> if they are part of a group interaction (eg, individual drugs within “CYP3A4 Inducers [Strong]” are NOT listed).  For a complete list of drug interactions by individual drug name and detailed management recommendations, use the Lexicomp drug interactions program by clicking on the “Launch drug interactions program” link above.</p><p xmlns=""></p></div>
+<p style="text-indent:-2em;margin-left:2em;">5-Aminosalicylic Acid Derivatives: May enhance the myelosuppressive effect of Myelosuppressive Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Abrocitinib: May enhance the immunosuppressive effect of Immunosuppressants (Miscellaneous Oncologic Agents).<i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Antithymocyte Globulin (Equine): Immunosuppressants (Miscellaneous Oncologic Agents) may enhance the adverse/toxic effect of Antithymocyte Globulin (Equine). Specifically, these effects may be unmasked if the dose of immunosuppressive therapy is reduced. Immunosuppressants (Miscellaneous Oncologic Agents) may enhance the immunosuppressive effect of Antithymocyte Globulin (Equine). Specifically, infections may occur with greater severity and/or atypical presentations. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Atogepant: CYP3A4 Inducers (Weak) may decrease the serum concentration of Atogepant.  Management: For treatment of episodic migraine, the recommended dose of atogepant is 30 mg once daily or 60 mg once daily when combined with CYP3A4 inducers. When used for treatment of chronic migraine, use of atogepant with CYP3A4 inducers should be avoided.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Baricitinib: Immunosuppressants (Miscellaneous Oncologic Agents) may enhance the immunosuppressive effect of Baricitinib. <i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">BCG (Intravesical): Myelosuppressive Agents may diminish the therapeutic effect of BCG (Intravesical). <i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">BCG Products: Immunosuppressants (Miscellaneous Oncologic Agents) may enhance the adverse/toxic effect of BCG Products. Specifically, the risk of vaccine-associated infection may be increased. Immunosuppressants (Miscellaneous Oncologic Agents) may diminish the therapeutic effect of BCG Products. <i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Brincidofovir: Immunosuppressants (Miscellaneous Oncologic Agents) may diminish the therapeutic effect of Brincidofovir. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Brivudine: May enhance the adverse/toxic effect of Immunosuppressants (Miscellaneous Oncologic Agents).<i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Chikungunya Vaccine (Live): Immunosuppressants (Miscellaneous Oncologic Agents) may enhance the adverse/toxic effect of Chikungunya Vaccine (Live). Specifically, the risk of vaccine-associated infection may be increased. Immunosuppressants (Miscellaneous Oncologic Agents) may diminish the therapeutic effect of Chikungunya Vaccine (Live). <i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Chloramphenicol (Ophthalmic): May enhance the adverse/toxic effect of Myelosuppressive Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Chloramphenicol (Systemic): Myelosuppressive Agents may enhance the myelosuppressive effect of Chloramphenicol (Systemic). <i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Cladribine: May enhance the myelosuppressive effect of Myelosuppressive Agents.<i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Cladribine: Immunosuppressants (Miscellaneous Oncologic Agents) may enhance the immunosuppressive effect of Cladribine. <i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Clofazimine: May increase the serum concentration of CYP3A4 Substrates (High risk with Inhibitors).<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">CloZAPine: Myelosuppressive Agents may enhance the adverse/toxic effect of CloZAPine. Specifically, the risk for neutropenia may be increased. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">CloZAPine: CYP3A4 Inducers (Weak) may decrease the serum concentration of CloZAPine. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Coccidioides immitis Skin Test: Immunosuppressants (Miscellaneous Oncologic Agents) may diminish the diagnostic effect of Coccidioides immitis Skin Test.  Management: Consider discontinuing these oncologic agents several weeks prior to coccidioides immitis skin antigen testing to increase the likelihood of accurate diagnostic results.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">COVID-19 Vaccine (Adenovirus Vector): Immunosuppressants (Miscellaneous Oncologic Agents) may diminish the therapeutic effect of COVID-19 Vaccine (Adenovirus Vector).  Management: Administer a 2nd dose using an mRNA COVID-19 vaccine (at least 4 weeks after the primary vaccine dose) and a bivalent booster dose (at least 2 months after the additional mRNA dose or any other boosters).<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">COVID-19 Vaccine (Inactivated Virus): Immunosuppressants (Miscellaneous Oncologic Agents) may diminish the therapeutic effect of COVID-19 Vaccine (Inactivated Virus). <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">COVID-19 Vaccine (mRNA): Immunosuppressants (Miscellaneous Oncologic Agents) may diminish the therapeutic effect of COVID-19 Vaccine (mRNA).  Management: Give a 3-dose primary series for all patients aged 6 months and older taking immunosuppressive medications or therapies. Booster doses are recommended for certain age groups. See CDC guidance for details.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">COVID-19 Vaccine (Subunit): Immunosuppressants (Miscellaneous Oncologic Agents) may diminish the therapeutic effect of COVID-19 Vaccine (Subunit). <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">COVID-19 Vaccine (Virus-like Particles): Immunosuppressants (Miscellaneous Oncologic Agents) may diminish the therapeutic effect of COVID-19 Vaccine (Virus-like Particles). <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">CYP3A4 Inducers (Moderate): May decrease the serum concentration of Tazemetostat.<i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">CYP3A4 Inducers (Strong): May decrease the serum concentration of Tazemetostat.<i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">CYP3A4 Inhibitors (Moderate): May increase the serum concentration of Tazemetostat. Management: Avoid when possible. If combined, reduce tazemetostat dose from 800 mg twice daily to 400 mg twice daily, from 600 mg twice daily to 400 mg in AM and 200 mg in PM, or from 400 mg twice daily to 200 mg twice daily.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">CYP3A4 Inhibitors (Strong): May increase the serum concentration of Tazemetostat.<i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Daprodustat: CYP2C8 Inhibitors (Weak) may increase the serum concentration of Daprodustat. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Deferiprone: Myelosuppressive Agents may enhance the neutropenic effect of Deferiprone.  Management: Avoid the concomitant use of deferiprone and myelosuppressive agents whenever possible. If this combination cannot be avoided, monitor the absolute neutrophil count more closely.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Dengue Tetravalent Vaccine (Live): Immunosuppressants (Miscellaneous Oncologic Agents) may enhance the adverse/toxic effect of Dengue Tetravalent Vaccine (Live). Specifically, the risk of vaccine-associated infection may be increased. Immunosuppressants (Miscellaneous Oncologic Agents) may diminish the therapeutic effect of Dengue Tetravalent Vaccine (Live). <i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Denosumab: May enhance the immunosuppressive effect of Immunosuppressants (Miscellaneous Oncologic Agents). Management: Consider the risk of serious infections versus the potential benefits of coadministration of denosumab and immunosuppressants. If combined, monitor patients for signs/symptoms of serious infections.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Deucravacitinib: May enhance the immunosuppressive effect of Immunosuppressants (Miscellaneous Oncologic Agents).<i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Dipyrone: May enhance the adverse/toxic effect of Myelosuppressive Agents. Specifically, the risk for agranulocytosis and pancytopenia may be increased<i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Etrasimod: May enhance the immunosuppressive effect of Immunosuppressants (Miscellaneous Oncologic Agents).<i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Fexinidazole: May increase the serum concentration of CYP3A4 Substrates (High risk with Inhibitors).<i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Fexinidazole: Myelosuppressive Agents may enhance the myelosuppressive effect of Fexinidazole. <i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Filgotinib: May enhance the immunosuppressive effect of Immunosuppressants (Miscellaneous Oncologic Agents).<i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Fusidic Acid (Systemic): May increase the serum concentration of CYP3A4 Substrates (High risk with Inhibitors).<i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Hormonal Contraceptives: Tazemetostat may decrease the serum concentration of Hormonal Contraceptives.  Management: Individuals of childbearing potential should use a non-hormonal contraceptive method during treatment with tazemetostat and for 6 months after. Males with partners of childbearing potential should use contraception during treatment and for 3 months after.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Inebilizumab: Immunosuppressants (Miscellaneous Oncologic Agents) may enhance the immunosuppressive effect of Inebilizumab. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Influenza Virus Vaccines: Immunosuppressants (Miscellaneous Oncologic Agents) may diminish the therapeutic effect of Influenza Virus Vaccines.  Management: Administer influenza vaccines at least 2 weeks prior to initiating immunosuppressants if possible. If vaccination occurs less than 2 weeks prior to or during therapy, revaccinate at least 3 months after therapy discontinued if immune competence restored.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Leflunomide: Immunosuppressants (Miscellaneous Oncologic Agents) may enhance the immunosuppressive effect of Leflunomide.  Management: Increase the frequency of chronic monitoring of platelet, white blood cell count, and hemoglobin or hematocrit to monthly, instead of every 6 to 8 weeks, if leflunomide is coadministered with immunosuppressive agents.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Mumps- Rubella- or Varicella-Containing Live Vaccines: May enhance the adverse/toxic effect of Immunosuppressants (Miscellaneous Oncologic Agents). Specifically, the risk of vaccine-associated infection may be increased. Immunosuppressants (Miscellaneous Oncologic Agents) may diminish the therapeutic effect of Mumps- Rubella- or Varicella-Containing Live Vaccines.<i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Nadofaragene Firadenovec: Immunosuppressants (Miscellaneous Oncologic Agents) may enhance the adverse/toxic effect of Nadofaragene Firadenovec. Specifically, the risk of disseminated adenovirus infection may be increased. <i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Natalizumab: Immunosuppressants (Miscellaneous Oncologic Agents) may enhance the immunosuppressive effect of Natalizumab. <i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">NiMODipine: CYP3A4 Inducers (Weak) may decrease the serum concentration of NiMODipine. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Ocrelizumab: Immunosuppressants (Miscellaneous Oncologic Agents) may enhance the immunosuppressive effect of Ocrelizumab. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Ofatumumab: Immunosuppressants (Miscellaneous Oncologic Agents) may enhance the immunosuppressive effect of Ofatumumab. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Olaparib: Myelosuppressive Agents may enhance the myelosuppressive effect of Olaparib. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Pidotimod: Immunosuppressants (Miscellaneous Oncologic Agents) may diminish the therapeutic effect of Pidotimod. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Pimecrolimus: May enhance the immunosuppressive effect of Immunosuppressants (Miscellaneous Oncologic Agents).<i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Pneumococcal Vaccines: Immunosuppressants (Miscellaneous Oncologic Agents) may diminish the therapeutic effect of Pneumococcal Vaccines. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Poliovirus Vaccine (Live/Trivalent/Oral): Immunosuppressants (Miscellaneous Oncologic Agents) may enhance the adverse/toxic effect of Poliovirus Vaccine (Live/Trivalent/Oral). Specifically, the risk of vaccine-associated infection may be increased. Immunosuppressants (Miscellaneous Oncologic Agents) may diminish the therapeutic effect of Poliovirus Vaccine (Live/Trivalent/Oral). <i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Polymethylmethacrylate: Immunosuppressants (Miscellaneous Oncologic Agents) may enhance the potential for allergic or hypersensitivity reactions to Polymethylmethacrylate.  Management: Use caution when considering use of bovine collagen-containing implants such as the polymethylmethacrylate-based Bellafill brand implant in patients who are receiving immunosuppressants. Consider use of additional skin tests prior to administration.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Promazine: May enhance the myelosuppressive effect of Myelosuppressive Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Rabies Vaccine: Immunosuppressants (Miscellaneous Oncologic Agents) may diminish the therapeutic effect of Rabies Vaccine.  Management: Complete rabies vaccination at least 2 weeks before initiation of immunosuppressant therapy if possible. If combined, check for rabies antibody titers, and if vaccination is for post exposure prophylaxis, administer a 5th dose of the vaccine.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Repaglinide: CYP2C8 Inhibitors (Weak) may increase the serum concentration of Repaglinide. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Ritlecitinib: Immunosuppressants (Miscellaneous Oncologic Agents) may enhance the immunosuppressive effect of Ritlecitinib. <i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Ropeginterferon Alfa-2b: Myelosuppressive Agents may enhance the myelosuppressive effect of Ropeginterferon Alfa-2b.  Management: Avoid coadministration of ropeginterferon alfa-2b and other myelosuppressive agents. If this combination cannot be avoided, monitor patients for excessive myelosuppressive effects.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Ruxolitinib (Topical): Immunosuppressants (Miscellaneous Oncologic Agents) may enhance the immunosuppressive effect of Ruxolitinib (Topical). <i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Selpercatinib: CYP3A4 Inducers (Weak) may decrease the serum concentration of Selpercatinib. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Sipuleucel-T: Immunosuppressants (Miscellaneous Oncologic Agents) may diminish the therapeutic effect of Sipuleucel-T.  Management: Consider reducing the dose or discontinuing the use of immunosuppressants prior to initiating sipuleucel-T therapy.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Sirolimus (Conventional): CYP3A4 Inducers (Weak) may decrease the serum concentration of Sirolimus (Conventional). <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Sirolimus (Protein Bound): CYP3A4 Inducers (Weak) may decrease the serum concentration of Sirolimus (Protein Bound). <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Sphingosine 1-Phosphate (S1P) Receptor Modulator: May enhance the immunosuppressive effect of Immunosuppressants (Miscellaneous Oncologic Agents).<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Tacrolimus (Systemic): CYP3A4 Inducers (Weak) may decrease the serum concentration of Tacrolimus (Systemic). <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Tacrolimus (Topical): Immunosuppressants (Miscellaneous Oncologic Agents) may enhance the immunosuppressive effect of Tacrolimus (Topical). <i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Talimogene Laherparepvec: Immunosuppressants (Miscellaneous Oncologic Agents) may enhance the adverse/toxic effect of Talimogene Laherparepvec. Specifically, the risk of infection from the live, attenuated herpes simplex virus contained in talimogene laherparepvec may be increased. <i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Tertomotide: Immunosuppressants (Miscellaneous Oncologic Agents) may diminish the therapeutic effect of Tertomotide. <i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Tofacitinib: Immunosuppressants (Miscellaneous Oncologic Agents) may enhance the immunosuppressive effect of Tofacitinib. <i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Typhoid Vaccine: Immunosuppressants (Miscellaneous Oncologic Agents) may enhance the adverse/toxic effect of Typhoid Vaccine. Specifically, the risk of vaccine-associated infection may be increased. Immunosuppressants (Miscellaneous Oncologic Agents) may diminish the therapeutic effect of Typhoid Vaccine. <i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Ublituximab: Immunosuppressants (Miscellaneous Oncologic Agents) may enhance the immunosuppressive effect of Ublituximab. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Ubrogepant: CYP3A4 Inducers (Weak) may decrease the serum concentration of Ubrogepant.  Management: Use an initial ubrogepant dose of 100 mg and second dose (if needed) of 100 mg when used with a weak CYP3A4 inducer.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Upadacitinib: Immunosuppressants (Miscellaneous Oncologic Agents) may enhance the immunosuppressive effect of Upadacitinib. <i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Vaccines (Inactivated/Non-Replicating): Immunosuppressants (Miscellaneous Oncologic Agents) may diminish the therapeutic effect of Vaccines (Inactivated/Non-Replicating).  Management: Give inactivated vaccines at least 2 weeks prior to initiation of immunosuppressants when possible. Patients vaccinated less than 14 days before initiating or during therapy should be revaccinated at least 3 after therapy is complete.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Vaccines (Live): Immunosuppressants (Miscellaneous Oncologic Agents) may enhance the adverse/toxic effect of Vaccines (Live). Specifically, the risk of vaccine-associated infection may be increased. Immunosuppressants (Miscellaneous Oncologic Agents) may diminish the therapeutic effect of Vaccines (Live). <i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Yellow Fever Vaccine: Immunosuppressants (Miscellaneous Oncologic Agents) may enhance the adverse/toxic effect of Yellow Fever Vaccine. Specifically, the risk of vaccine-associated infection may be increased. Immunosuppressants (Miscellaneous Oncologic Agents) may diminish the therapeutic effect of Yellow Fever Vaccine. <i> Risk X: Avoid combination</i></p></div>
+<div class="block rep_considerations drugH1Div" id="F54088653"><span class="drugH1">Reproductive Considerations</span>
+<p style="text-indent:0em;">Evaluate pregnancy status prior to use in females of reproductive potential. Females of reproductive potential should use effective nonhormonal contraception during therapy and for 6 months after the last tazemetostat dose. Males with female partners of reproductive potential should use effective contraception during therapy and for at least 3 months after the last dose of tazemetostat.</p></div>
+<div class="block pri drugH1Div" id="F54088652"><span class="drugH1">Pregnancy Considerations</span>
+<p style="text-indent:0em;">Based on the mechanism of action, and data from animal reproduction studies, in utero exposure to tazemetostat may cause fetal harm.</p></div>
+<div class="block mopp drugH1Div" id="F54082180"><span class="drugH1">Monitoring Parameters</span>
+<p style="text-indent:-2em;margin-left:2em;">Baseline: Pregnancy status prior to use in females of reproductive potential, total bilirubin, liver function tests.</p>
+<p style="text-indent:-2em;margin-left:2em;">During treatment: CBC with differential; monitor (long-term) for development of secondary malignancies.</p>
+<p style="text-indent:-2em;margin-left:2em;">The American Society of Clinical Oncology hepatitis B virus (HBV) screening and management provisional clinical opinion (ASCO [Hwang 2020]) recommends HBV screening with hepatitis B surface antigen (HBsAg), hepatitis B core antibody (anti-HBc), total Ig or IgG, and antibody to hepatitis B surface antigen (anti-HBs) prior to beginning (or at the beginning of) systemic anticancer therapy; do not delay treatment for screening/results. Detection of chronic or past HBV infection requires a risk assessment to determine antiviral prophylaxis requirements, monitoring, and follow-up.​</p></div>
+<div class="block pha drugH1Div" id="F54091120"><span class="drugH1">Mechanism of Action</span>
+<p style="text-indent:0em;display:inline">Tazemetostat is a potent and selective inhibitor of histone methyltransferase EZH2 (enhancer of zeste homolog 2); it also inhibits some EZH2 gain-of-function mutations (including Y646X and A687V), as well as EZH1. EZH2 is overexpressed or mutated in many cancer types and plays a role in tumor proliferation. SWItch/Sucrose Non-Fermentable (SWI/SNF) complex aids in facilitating gene expression and terminal differentiation; altered EZH2 upregulation and loss-of-function mutations in SWI/SNF are oncogenic in many human cancers; tazemetostat has antitumor activity in EZH2-mutant cell lines (Italiano 2018). Tazemetostat suppressed B-cell lymphoma cell lines proliferation in vitro, and showed antitumor activity in an animal model of B-cell lymphoma with or without EZH2 gain-of-function mutations; tazemetostat demonstrated increased inhibition of lymphoma cell line proliferation with mutant EZH2.</p></div>
+<div class="block phk drugH1Div" id="F54091121"><span class="drugH1">Pharmacokinetics (Adult Data Unless Noted)</span>
+<p style="text-indent:-2em;margin-left:2em;">Distribution: V<sub>ss</sub>/F: 1,230 L.</p>
+<p style="text-indent:-2em;margin-left:2em;">Protein binding: 88%.</p>
+<p style="text-indent:-2em;margin-left:2em;">Metabolism: Via CYP3A to form the inactive major metabolites M5 (EPZ-6930) and M3 (EPZ006931); M5 is further metabolized by CYP3A.</p>
+<p style="text-indent:-2em;margin-left:2em;">Bioavailability: ~33%.</p>
+<p style="text-indent:-2em;margin-left:2em;">Half-life elimination: 3.1 hours.</p>
+<p style="text-indent:-2em;margin-left:2em;">Time to peak: 1 to 2 hours.</p>
+<p style="text-indent:-2em;margin-left:2em;">Excretion: Feces: 79%; urine: 15%.</p>
+<p style="text-indent:-2em;margin-left:4em;">Clearance: 274 L/hour.</p></div>
+<div class="list fbnlist drugH1Div drugBrandNames" id="F56522014"><span class="drugH1">Brand Names: International</span><div class="ibn-search drugBrandNames"></div>
+<div class="collapsible-indication brand-names-accordion drugBrandNames"><span class="collapsible-indication-title">International Brand Names by Country</span><div class="collapsible-indication-wrap-frame drugBrandNames"><div class="collapsible-indication-wrap drugBrandNames">For country code abbreviations (<a class="graphic graphic_table" href="/d/html/116421.html" rel="external">show table</a>)<br xmlns=""/><br/><ul>
+<li>
+<span class="countryCode">(PR)</span> <span class="country">Puerto Rico</span><span class="countrySeparator">: </span><span class="drugName">Tazverik</span></li></ul></div>
+</div>
+</div>
+</div>
+</div><div class="headingAnchor" id="references"><ol id="reference">
+<li>
+<div class="reference" id="lexi-content-ref-HazardousDrugs.2020">
+<a name="HazardousDrugs.2020"></a>&lt;800&gt; Hazardous Drugs–Handling in Healthcare Settings. <i>United States Pharmacopeia and National Formulary </i>(USP 43-NF 38). Rockville, MD: United States Pharmacopeia Convention; 2020:74-92.</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-32716741">
+<a name="32716741"></a>Hwang JP, Feld JJ, Hammond SP, et al. Hepatitis B virus screening and management for patients with cancer prior to therapy: ASCO provisional clinical opinion update. <i>J Clin Oncol</i>. 2020;38(31):3698-3715. doi:10.1200/JCO.20.01757<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/tazemetostat-pediatric-drug-information/abstract-text/32716741/pubmed" id="32716741" target="_blank">32716741</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-29650362">
+<a name="29650362"></a>Italiano A, Soria JC, Toulmonde M, et al. Tazemetostat, an EZH2 inhibitor, in relapsed or refractory B-cell non-Hodgkin lymphoma and advanced solid tumours: a first-in-human, open-label, phase 1 study. <i>Lancet Oncol</i>. 2018;19(5):649-659. doi:10.1016/S1470-2045(18)30145-1<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/tazemetostat-pediatric-drug-information/abstract-text/29650362/pubmed" id="29650362" target="_blank">29650362</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-33035457">
+<a name="33035457"></a>Morschhauser F, Tilly H, Chaidos A, et al. Tazemetostat for patients with relapsed or refractory follicular lymphoma: an open-label, single-arm, multicentre, phase 2 trial. <i>Lancet Oncol</i>. 2020;21(11):1433-1442. doi:10.1016/S1470-2045(20)30441-1<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/tazemetostat-pediatric-drug-information/abstract-text/33035457/pubmed" id="33035457" target="_blank">33035457</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-Stacchiotti.2019">
+<a name="Stacchiotti.2019"></a>Stacchiotti S, Schoffski P, Jones R, et al. Safety and efficacy of tazemetostat, a first-in-class EZH2 inhibitor, in patients (pts) with epithelioid sarcoma (ES) (NCT02601950). <i>J Clin Oncol</i>. 2019;37(15s: 11003) [abstract 11003 from 2019 ASCO Annual Meeting].</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-Tazverik.2020.07">
+<a name="Tazverik.2020.07"></a>Tazverik (tazemetostat) [prescribing information]. Cambridge, MA: Epizyme, Inc; July 2020.</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-Tazverik.2020.07">
+<a name="Tazverik.2020.07"></a>Tazverik (tazemetostat) [prescribing information]. Cambridge, MA: Epizyme, Inc; November 2023.</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-CDC.2016">
+<a name="CDC.2016"></a>US Department of Health and Human Services; Centers for Disease Control and Prevention; National Institute for Occupational Safety and Health. NIOSH list of antineoplastic and other hazardous drugs in healthcare settings 2016. Updated September 2016. Accessed January 27, 2020. <a href="https://www.cdc.gov/niosh/docs/2016-161/" target="_blank">https://www.cdc.gov/niosh/docs/2016-161/</a>.</div>
+</li></ol></div><div id="topicVersionRevision">Topic 126938 Version 100.0</div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Atracurium: Drug information</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Atracurium: Drug information</h1>
+<div class="utdArticleSection utdStyle" id="topicContent"><div id="drugTitle">Atracurium: Drug information</div><div class="clear"></div><div id="topicText"><div class="visuallyHidden drugH1Div" id="formulinkBodyPlaceholder"><span class="drugH1"></span></div>
+(For additional information <a class="drug drug_patient" data-topicid="11579" href="/d/html/11579.html" rel="external">see "Atracurium: Patient drug information"</a> and <a class="drug drug_pediatric" data-topicid="12862" href="/d/html/12862.html" rel="external">see "Atracurium: Pediatric drug information"</a>)<br/><br/>For abbreviations, symbols, and age group definitions used in Lexicomp (<a class="graphic graphic_table" href="/d/html/57469.html" rel="external">show table</a>)<div class="ex_sect_xr thclist drugH1Div drugBrandNames" id="F137882"><span class="drugH1">Pharmacologic Category</span>
+<ul>
+<li>
+                        Neuromuscular Blocker Agent, Nondepolarizing</li></ul></div>
+<div class="block doa drugH1Div" id="F137864"><span class="drugH1">Dosing: Adult</span>
+<p style="text-indent:0em;display:inline">
+<b>Note:</b> Dose to effect; doses must be individualized due to interpatient variability. Ensure adequate pain control and sedation prior to and during administration of neuromuscular blockade to achieve deep sedation (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-27755068']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-27755068'])">Ref</a></span>).</p>
+<div class="collapsible-indication">
+<span class="collapsible-indication-title" data-indication-id="38640283-a956-46af-97ac-08ec13a3be59">Mechanically ventilated patients during surgery, neuromuscular blockade</span>
+<div class="collapsible-indication-wrap">
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Mechanically ventilated patients during surgery, neuromuscular blockade (adjunctive therapy): </b></p>
+<p style="text-indent:-2em;margin-left:4em;">
+<b>Note: </b>Inhaled anesthetic agents (eg, desflurane, isoflurane, enflurane, sevoflurane) prolong the duration of action of atracurium. Use lower end of the dosing range; redosing interval guided by monitoring with a peripheral nerve stimulator.</p>
+<p style="text-indent:-2em;margin-left:4em;">Initial: <b>IV: </b>Loading dose of 0.25 to 0.6 mg/kg (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-Gropper.1','lexi-content-ref-manu.1']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-Gropper.1','lexi-content-ref-manu.1'])">Ref</a></span>).</p>
+<p style="text-indent:-2em;margin-left:4em;">Maintenance:</p>
+<p style="text-indent:-2em;margin-left:6em;">Intermittent dosing: <b>IV: </b>0.08 to 0.1 mg/kg every ~15- to 25-minute intervals according to desired clinical response.</p>
+<p style="text-indent:-2em;margin-left:6em;">Continuous infusion: <b>IV:</b> Initial: 4 to 12 mcg/kg/minute; titrate based on response; usual dosage range: 2 to 15 mcg/kg/minute (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-Gropper.1','lexi-content-ref-manu.1']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-Gropper.1','lexi-content-ref-manu.1'])">Ref</a></span>).</p></div>
+</div>
+<div class="collapsible-indication">
+<span class="collapsible-indication-title" data-indication-id="6e5c8628-830c-459d-9865-418fbbf3ded5">Mechanically ventilated patients in the ICU, neuromuscular blockade</span>
+<div class="collapsible-indication-wrap">
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Mechanically ventilated patients in the ICU, neuromuscular blockade: </b></p>
+<p style="text-indent:-2em;margin-left:4em;">
+<b>Note:</b> May use to facilitate mechanical ventilation (eg, moderate to severe acute respiratory distress syndrome [ARDS]), for refractory, life-threatening status asthmaticus, or for shivering from therapeutic hypothermia (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-33104824','lexi-content-ref-27755068','lexi-content-ref-34605781']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-33104824','lexi-content-ref-27755068','lexi-content-ref-34605781'])">Ref</a></span>).</p>
+<p style="text-indent:-2em;margin-left:4em;">Continuous infusion: <b>IV: </b>Initial: Loading dose of 0.4 to 0.6 mg/kg, followed by continuous infusion of 4 to 12 mcg/kg/minute; adjust rate every ~10 minutes according to desired clinical response and/or peripheral nerve stimulation; usual dosage range: 2 to 20 mcg/kg/minute (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-28102521','lexi-content-ref-28351905','lexi-content-ref-33002927','lexi-content-ref-11902255','lexi-content-ref-27755068','lexi-content-ref-9372675','lexi-content-ref-manu.1']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-28102521','lexi-content-ref-28351905','lexi-content-ref-33002927','lexi-content-ref-11902255','lexi-content-ref-27755068','lexi-content-ref-9372675','lexi-content-ref-manu.1'])">Ref</a></span>).</p>
+<p style="text-indent:-2em;margin-left:4em;">Intermittent dosing: <b>IV: </b>Initial: Loading dose of 0.4 to 0.6 mg/kg, followed by 0.08 to 0.1 mg/kg every ~15 to 25 minutes according to desired clinical response (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-Gropper.1','lexi-content-ref-manu.1']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-Gropper.1','lexi-content-ref-manu.1'])">Ref</a></span>).</p></div>
+</div>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Dosage adjustment for concomitant therapy: </b>Significant drug interactions exist, requiring dose/frequency adjustment or avoidance. Consult drug interactions database for more information.</p></div>
+<div class="block dora drugH1Div" id="F50990777"><span class="drugH1">Dosing: Kidney Impairment: Adult</span>
+<p style="text-indent:0em;display:inline">No dosage adjustment necessary.</p></div>
+<div class="block doha drugH1Div" id="F50987948"><span class="drugH1">Dosing: Hepatic Impairment: Adult</span>
+<p style="text-indent:0em;display:inline">No dosage adjustment necessary.</p></div>
+<div class="block doo drugH1Div" id="F20330540"><span class="drugH1">Dosing: Obesity: Adult</span>
+<p style="text-indent:0em;display:inline">Obese and morbidly obese patients should be dosed using ideal body weight or an adjusted body weight (ie, between IBW and total body weight [TBW]) (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-14625670','lexi-content-ref-27755068']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-14625670','lexi-content-ref-27755068'])">Ref</a></span>). In a bariatric surgical population of morbidly obese patients who were administered an induction dose of atracurium based on TBW as compared to IBW, time to recovery of twitch response was prolonged (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-21143499']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-21143499'])">Ref</a></span>).</p></div>
+<div class="block doe drugH1Div" id="F137865"><span class="drugH1">Dosing: Older Adult</span>
+<p style="text-indent:0em;display:inline">Refer to adult dosing.</p></div>
+<div class="block dop drugH1Div" id="F137876"><span class="drugH1">Dosing: Pediatric</span><p>(For additional information <a class="drug drug_pediatric" data-topicid="12862" href="/d/html/12862.html" rel="external">see "Atracurium: Pediatric drug information"</a>)</p>
+<p style="text-indent:0em;display:inline">
+<b>Note: </b>Ensure adequate pain control and sedation prior to and during administration of neuromuscular blockade. Dose to effect; doses must be individualized due to interpatient variability. Maintenance doses in infants and children may need to be administered with slightly greater frequency compared to adults. Dosing in obese patients should be calculated using ideal body weight (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-17683408']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-17683408'])">Ref</a></span>):</p>
+<div class="collapsible-indication">
+<span class="collapsible-indication-title" data-indication-id="e257107d-cfc8-4139-8489-2af70c1690f9">Neuromuscular blockade</span>
+<div class="collapsible-indication-wrap">
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Neuromuscular blockade: </b></p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>ICU paralysis (eg, facilitate mechanical ventilation)</i> (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-21923445','lexi-content-ref-10446832','lexi-content-ref-17683408']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-21923445','lexi-content-ref-10446832','lexi-content-ref-17683408'])">Ref</a></span>):</p>
+<p style="text-indent:-2em;margin-left:6em;">Infants, Children, and Adolescents:</p>
+<p style="text-indent:-2em;margin-left:8em;">Initial bolus: IV: 0.3 to 0.6 mg/kg/dose; repeat additional doses as needed to maintain desired neuromuscular blockade or begin continuous infusion.</p>
+<p style="text-indent:-2em;margin-left:8em;">Continuous IV infusion: Initial: 5 to 12 <b>mcg</b>/kg/minute (0.3 to 0.7 mg/kg/<b>hour</b>); range: 5 to 40 <b>mcg</b>/kg/minute (0.3 to 2.4 mg/kg/<b>hour</b>).</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Adjunct to surgical anesthesia:</i></p>
+<p style="text-indent:-2em;margin-left:6em;">Bolus doses:</p>
+<p style="text-indent:-2em;margin-left:8em;">Infants and Children &lt;2 years: Initial: IV: 0.3 to 0.4 mg/kg once, followed by additional doses as needed to maintain neuromuscular blockade.</p>
+<p style="text-indent:-2em;margin-left:8em;">Children ≥2 years and Adolescents: IV: 0.4 to 0.5 mg/kg once as initial dose, then administer 0.08 to 0.1 mg/kg/dose 20 to 45 minutes after the initial dose to maintain neuromuscular blockade; repeat dose every 15 to 25 minutes as needed. <b>Note: </b>Initial dose should be reduced to 0.3 to 0.4 mg/kg in patients with significant cardiovascular disease or with history of increased risk of histamine release (eg, asthma, severe anaphylactoid reaction).</p>
+<p style="text-indent:-2em;margin-left:6em;">Continuous IV infusion in operating room during extended surgical procedures:</p>
+<p style="text-indent:-2em;margin-left:8em;">Infants and Children &lt;2 years: Continuous IV infusion: Initial: 6 to 14 <b>mcg</b>/kg/minute (0.4 to 0.8 mg/kg/<b>hour</b>) initiated at the first signs of recovery from initial bolus; titrate until desired neuromuscular blockade is achieved (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-3753829','lexi-content-ref-3341579']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-3753829','lexi-content-ref-3341579'])">Ref</a></span>).</p>
+<p style="text-indent:-2em;margin-left:8em;">Children ≥2 years and Adolescents: Continuous IV infusion: Initial: 9 to 10 <b>mcg</b>/kg/minute (0.5 to 0.6 mg/kg/<b>hour</b>), initiate infusion at initial signs of recovery from bolus dose, titrate until desired neuromuscular blockade is achieved; block is usually maintained by a rate of 5 to 9 <b>mcg</b>/kg/minute (0.3 to 0.5 mg/kg/<b>hour</b>); range: 2 to 15 <b>mcg</b>/kg/minute (0.1 to 0.9 mg/kg/<b>hour</b>).</p></div>
+</div>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Dosage adjustment for concomitant therapy:</b> Significant drug interactions exist, requiring dose/frequency adjustment or avoidance. Consult drug interactions database for more information.</p></div>
+<div class="block dorp drugH1Div" id="F51065120"><span class="drugH1">Dosing: Kidney Impairment: Pediatric</span>
+<p style="text-indent:0em;display:inline">Infants, Children, and Adolescents: No dosage adjustment necessary.</p></div>
+<div class="block dohp drugH1Div" id="F51065121"><span class="drugH1">Dosing: Hepatic Impairment: Pediatric</span>
+<p style="text-indent:0em;display:inline">Infants, Children, and Adolescents: No dosage adjustment necessary.</p></div>
+<div class="block adr drugH1Div" id="F137835"><span class="drugH1">Adverse Reactions</span>
+<p style="text-indent:0em;display:inline">The following adverse drug reactions and incidences are derived from product labeling unless otherwise specified. Frequency not defined. Adverse reactions are mild, rare, and generally suggestive of histamine release.</p>
+<p style="text-indent:-2em;margin-left:2em;">1% to 10%: Cardiovascular: Flushing</p>
+<p style="text-indent:-2em;margin-left:2em;">&lt;1%, postmarketing, and/or case reports: Bradycardia, bronchospasm, dyspnea, erythema, hypersensitivity reaction, hypotension, increased bronchial secretions, injection site reaction, laryngospasm, pruritus, seizure, tachycardia, urticaria, wheezing</p></div>
+<div class="block coi drugH1Div" id="F137849"><span class="drugH1">Contraindications</span>
+<p style="text-indent:0em;margin-left:0em;display:inline">Hypersensitivity to atracurium or any component of the formulation; known hypersensitivity to benzyl alcohol (multiple dose vials)</p></div>
+<div class="block war drugH1Div" id="F137833"><span class="drugH1">Warnings/Precautions</span>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>
+<i>Concerns related to adverse effects:</i></b></p>
+<p style="text-indent:-2em;margin-left:4em;">• Anaphylaxis: Severe anaphylactic reactions have been reported with atracurium use; some life-threatening and fatal. Appropriate emergency treatment (including epinephrine 1 mg/mL) should be immediately available during use. Use caution in patients with previous anaphylactic reactions to other neuromuscular blocking agents.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Bradycardia: May be more common with atracurium than with other neuromuscular-blocking agents since it has no clinically significant effects on heart rate to counteract the bradycardia produced by anesthetics.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Prolonged paralysis: Some patients may experience prolonged recovery of neuromuscular function after administration (especially after prolonged use). Patients should be adequately recovered prior to extubation. Other factors associated with prolonged recovery should be considered (eg, corticosteroid use, patient condition).</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>
+<i>Disease-related concerns:</i></b></p>
+<p style="text-indent:-2em;margin-left:4em;">• Burn injury: Resistance may occur in burn patients (≥20% of total body surface area), usually several days after the injury, and may persist for several months after wound healing (Han 2009).</p>
+<p style="text-indent:-2em;margin-left:4em;">• Conditions that may <i>antagonize</i> neuromuscular blockade (decreased paralysis): Respiratory alkalosis, hypercalcemia, demyelinating lesions, peripheral neuropathies, denervation, and muscle trauma may result in antagonism of neuromuscular blockade (ACCM/SCCM/ASHP [Murray 2002]; Greenberg 2013; Gropper 2019; Naguib 2002).</p>
+<p style="text-indent:-2em;margin-left:4em;">• Conditions that may <i>potentiate</i> neuromuscular blockade (increased paralysis): Electrolyte abnormalities (eg, severe hypocalcemia, severe hypokalemia, hypermagnesemia), neuromuscular diseases, metabolic acidosis, respiratory acidosis, Eaton-Lambert syndrome and myasthenia gravis may result in potentiation of neuromuscular blockade (Greenberg 2013; Gropper 2019; Naguib 2002).</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>
+<i>Special populations:</i></b></p>
+<p style="text-indent:-2em;margin-left:4em;">• Older adults: Use with caution in older adults; effects and duration are more variable.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Immobilized patients: Resistance may occur in patients who are immobilized.</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>
+<i>Dosage form specific issues:</i></b></p>
+<p style="text-indent:-2em;margin-left:4em;">• Benzyl alcohol and derivatives: Some dosage forms may contain benzyl alcohol; large amounts of benzyl alcohol (≥99 mg/kg/day) have been associated with a potentially fatal toxicity (“gasping syndrome”) in neonates; the “gasping syndrome” consists of metabolic acidosis, respiratory distress, gasping respirations, CNS dysfunction (including convulsions, intracranial hemorrhage), hypotension and cardiovascular collapse (AAP ["Inactive" 1997]; CDC 1982); some data suggests that benzoate displaces bilirubin from protein binding sites (Ahlfors 2001); avoid or use dosage forms containing benzyl alcohol with caution in neonates. See manufacturer's labeling.</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>
+<i>Other warnings/precautions:</i></b></p>
+<p style="text-indent:-2em;margin-left:4em;">• Appropriate use: Maintenance of an adequate airway and respiratory support is critical. Resistance may develop with chronic treatment. All patients should receive eye care including liberal use of lubricating drops, gel, or ointment, and eyelids should remain closed during continuous neuromuscular blockade to protect against damage to the cornea (ulceration and drying).</p>
+<p style="text-indent:-2em;margin-left:4em;">• Experienced personnel: Should be administered by adequately trained individuals familiar with its use.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Histamine release: Reduce initial dosage and inject slowly (over 1 to 2 minutes) in patients in whom substantial histamine release would be potentially hazardous (eg, patients with clinically-important cardiovascular disease).</p>
+<p style="text-indent:-2em;margin-left:4em;">• Risk of medication errors: Accidental administration may be fatal. Confirm proper selection of intended product, store vial so the cap and ferrule are intact and the possibility of selecting the wrong product is minimized, and ensure that the intended dose is clearly labeled and communicated, when applicable.</p></div>
+<div class="block foc drugH1Div" id="F137843"><span class="drugH1">Dosage Forms: US</span>
+<p style="text-indent:0em;text-align:justify;display:inline">Excipient information presented when available (limited, particularly for generics); consult specific product labeling.</p>
+<p style="text-indent:-2em;margin-left:2em;text-align:justify;">Solution, Intravenous, as besylate: </p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">Generic: 100 mg/10 mL (10 mL)</p>
+<p style="text-indent:-2em;margin-left:2em;text-align:justify;">Solution, Intravenous, as besylate [preservative free]: </p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">Generic: 50 mg/5 mL (5 mL)</p></div>
+<div class="block geq drugH1Div" id="F137829"><span class="drugH1">Generic Equivalent Available: US</span>
+<p style="text-indent:0em;display:inline">Yes</p></div>
+<div class="block fee drugH1Div" id="F16323004"><span class="drugH1">Pricing: US</span>
+<p style="text-indent:-2em;margin-left:2em;text-align:justify;">
+<b>Solution</b> (Atracurium Besylate Intravenous)</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">50 mg/5 mL (per mL): $1.14 - $1.90</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">100 mg/10 mL (per mL): $1.13 - $1.90</p>
+<p style="text-indent:0em;">
+<b>Disclaimer: </b>A representative AWP (Average Wholesale Price) price or price range is provided as reference price only. A range is provided when more than one manufacturer's AWP price is available and uses the low and high price reported by the manufacturers to determine the range. The pricing data should be used for benchmarking purposes only, and as such should not be used alone to set or adjudicate any prices for reimbursement or purchasing functions or considered to be an exact price for a single product and/or manufacturer.  Medi-Span expressly disclaims all warranties of any kind or nature, whether express or implied, and assumes no liability with respect to accuracy of price or price range data published in its solutions.  In no event shall Medi-Span be liable for special, indirect, incidental, or consequential damages arising from use of price or price range data.  Pricing data is updated monthly.</p></div>
+<div class="block adm drugH1Div" id="F137846"><span class="drugH1">Administration: Adult</span>
+<p style="text-indent:0em;display:inline">
+<b>IV:</b> Administer undiluted as a bolus injection; do <b>not</b> administer IM (excessive tissue irritation). Continuous infusion administration requires the use of an infusion pump. Do not administer with alkaline solutions in the same syringe or simultaneously in the same IV line. Use infusion solutions within 24 hours of preparation.</p></div>
+<div class="block admp drugH1Div" id="F52612275"><span class="drugH1">Administration: Pediatric</span>
+<p style="text-indent:-2em;margin-left:2em;">Parenteral: For IV use only; do not administer IM due to tissue irritation.</p>
+<p style="text-indent:-2em;margin-left:4em;">IV bolus: Administer undiluted as IV bolus injection.</p>
+<p style="text-indent:-2em;margin-left:4em;">Continuous IV infusions: Further dilute in a compatible fluid and administer via an infusion pump.</p></div>
+<div class="block uica drugH1Div" id="F44337478"><span class="drugH1">Usual Infusion Concentrations: Adult</span>
+<p style="text-indent:0em;display:inline">
+<b>IV infusion:</b> 20 mg in 100 mL (concentration: 0.2 mg/mL) <b>or</b> 50 mg in 100 mL (concentration: 0.5 mg/mL) <b>or</b> 250 mg in 250 mL (concentration: 1 mg/mL) <b>or</b> 500 mg in 100 mL (concentration: 5 mg/mL) of D5W, D5NS, or NS.</p></div>
+<div class="block use drugH1Div" id="F137844"><span class="drugH1">Use: Labeled Indications</span>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Mechanically ventilated patients during surgery, neuromuscular blockade:</b> As an adjunct to general anesthesia, to facilitate endotracheal intubation, and to provide skeletal muscle relaxation during surgery.</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Mechanically ventilated patients in the ICU, neuromuscular blockade: </b>To facilitate endotracheal intubation and to provide skeletal muscle relaxation mechanical ventilation in ICU patients.</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Note:</b> Neuromuscular blockade does not provide pain control, sedation, or amnestic effects. Appropriate analgesic and sedative mediations should be used before and during administration of neuromuscular blockade to achieve deep sedation.</p></div>
+<div class="block mst drugH1Div" id="F2973355"><span class="drugH1">Medication Safety Issues</span>
+<div class="collapsible">
+<span class="collapsible-title">High alert medication:</span>
+<div class="collapsible-wrap">
+<p style="text-indent:-2em;margin-left:4em;">The Institute for Safe Medication Practices (ISMP) includes this medication among its list of drugs which have a heightened risk of causing significant patient harm when used in error.</p></div>
+</div>
+<div class="collapsible">
+<span class="collapsible-title">Other safety concerns:</span>
+<div class="collapsible-wrap">
+<p style="text-indent:-2em;margin-left:4em;">According to the 2020 to 2021<i> ISMP Targeted Medication Safety Best Practices for Hospitals</i>, neuromuscular blockers should be segregated, sequestered, and differentiated from all other medication wherever they are stored. This includes:</p>
+<p style="text-indent:-2em;margin-left:6em;">Only storing in places within the hospital that they are routinely used.</p>
+<p style="text-indent:-2em;margin-left:6em;">Placing in sealed boxes or in rapid sequence intubation kits (preferred).</p>
+<p style="text-indent:-2em;margin-left:6em;">Limiting availability in automated dispensing cabinets to perioperative, labor and delivery, critical care, and emergency departments only.</p>
+<p style="text-indent:-2em;margin-left:6em;">Placing in separate lidded containers within the pharmacy refrigerator or other isolated pharmacy storage area.</p>
+<p style="text-indent:-2em;margin-left:6em;">Affixing an auxiliary label to clearly communicate respiratory paralysis will occur and ventilation required on all storage bins and/or automated dispensing pockets/drawers (exception anesthesia-prepared syringes) stating one of the following:</p>
+<p style="text-indent:-2em;margin-left:8em;">
+<b>Warning: Causes Respiratory Arrest – Patient Must Be Ventilated </b></p>
+<p style="text-indent:-2em;margin-left:8em;">
+<b>Warning: Paralyzing Agent – Causes Respiratory Arrest </b></p>
+<p style="text-indent:-2em;margin-left:8em;">
+<b>Warning: Causes Respiratory Paralysis – Patient Must Be Ventilated</b></p></div>
+</div>
+</div>
+<div class="block cyt drugH1Div" id="F13298793"><span class="drugH1">Metabolism/Transport Effects</span>
+<p style="text-indent:0em;display:inline">None known.</p></div>
+<div class="block dri drugH1Div" id="F137837"><span class="drugH1">Drug Interactions</span><br/><br/><div class="clear"></div><p xmlns=""></p><div class="inner" xmlns=""><p style="text-indent:0em;display:inline"><b>Note</b>: Interacting drugs may <b>not be individually listed below</b> if they are part of a group interaction (eg, individual drugs within “CYP3A4 Inducers [Strong]” are NOT listed).  For a complete list of drug interactions by individual drug name and detailed management recommendations, use the Lexicomp drug interactions program by clicking on the “Launch drug interactions program” link above.</p><p xmlns=""></p></div>
+<p style="text-indent:-2em;margin-left:2em;">Acetylcholinesterase Inhibitors: May diminish the neuromuscular-blocking effect of Neuromuscular-Blocking Agents (Nondepolarizing).<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Aminoglycosides: May enhance the therapeutic effect of Neuromuscular-Blocking Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Bacitracin (Systemic): May enhance the neuromuscular-blocking effect of Neuromuscular-Blocking Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Botulinum Toxin-Containing Products: May enhance the neuromuscular-blocking effect of Neuromuscular-Blocking Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Bromperidol: May enhance the neuromuscular-blocking effect of Neuromuscular-Blocking Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Calcium Channel Blockers: May enhance the neuromuscular-blocking effect of Neuromuscular-Blocking Agents (Nondepolarizing).<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Capreomycin: May enhance the neuromuscular-blocking effect of Neuromuscular-Blocking Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">CarBAMazepine: May decrease the serum concentration of Neuromuscular-Blocking Agents (Nondepolarizing).<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Cardiac Glycosides: Neuromuscular-Blocking Agents may enhance the arrhythmogenic effect of Cardiac Glycosides. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Clindamycin (Topical): May enhance the neuromuscular-blocking effect of Neuromuscular-Blocking Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Colistimethate: May enhance the neuromuscular-blocking effect of Neuromuscular-Blocking Agents. Management: If possible, avoid concomitant use of these products. Monitor for deeper, prolonged neuromuscular-blocking effects (respiratory paralysis) in patients receiving concomitant neuromuscular-blocking agents and colistimethate.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Corticosteroids (Systemic): Neuromuscular-Blocking Agents (Nondepolarizing) may enhance the adverse neuromuscular effect of Corticosteroids (Systemic). Increased muscle weakness, possibly progressing to polyneuropathies and myopathies, may occur.  Management: If concomitant therapy is required, use the lowest dose for the shortest duration to limit the risk of myopathy or neuropathy. Monitor for new onset or worsening muscle weakness, reduction or loss of deep tendon reflexes, and peripheral sensory decriments<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">CycloSPORINE (Systemic): May enhance the neuromuscular-blocking effect of Neuromuscular-Blocking Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Fosphenytoin-Phenytoin: May diminish the neuromuscular-blocking effect of Neuromuscular-Blocking Agents (Nondepolarizing). Fosphenytoin-Phenytoin may enhance the neuromuscular-blocking effect of Neuromuscular-Blocking Agents (Nondepolarizing). Fosphenytoin-Phenytoin may decrease the serum concentration of Neuromuscular-Blocking Agents (Nondepolarizing).<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Inhalational Anesthetics: May enhance the neuromuscular-blocking effect of Neuromuscular-Blocking Agents (Nondepolarizing). Management: When initiating a non-depolarizing neuromuscular blocking agent (NMBA) in a patient receiving an inhalational anesthetic, initial NMBA doses should be reduced 15% to 25% and doses of continuous infusions should be reduced 30% to 60%.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Ketorolac (Nasal): May enhance the adverse/toxic effect of Neuromuscular-Blocking Agents (Nondepolarizing). Specifically, episodes of apnea have been reported in patients using this combination.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Ketorolac (Systemic): May enhance the adverse/toxic effect of Neuromuscular-Blocking Agents (Nondepolarizing). Specifically, episodes of apnea have been reported in patients using this combination.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Lincosamide Antibiotics: May enhance the neuromuscular-blocking effect of Neuromuscular-Blocking Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Lithium: May enhance the neuromuscular-blocking effect of Neuromuscular-Blocking Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Local Anesthetics: May enhance the neuromuscular-blocking effect of Neuromuscular-Blocking Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Loop Diuretics: May diminish the neuromuscular-blocking effect of Neuromuscular-Blocking Agents. Loop Diuretics may enhance the neuromuscular-blocking effect of Neuromuscular-Blocking Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Magnesium Salts: May enhance the neuromuscular-blocking effect of Neuromuscular-Blocking Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Minocycline (Systemic): May enhance the neuromuscular-blocking effect of Neuromuscular-Blocking Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Pholcodine: May enhance the adverse/toxic effect of Neuromuscular-Blocking Agents. Specifically, anaphylaxis has been reported.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Polymyxin B: May enhance the neuromuscular-blocking effect of Neuromuscular-Blocking Agents. Management: If possible, avoid concomitant use of neuromuscular-blocking agents and polymyxin B. If concomitant use cannot be avoided, monitor for deeper, prolonged neuromuscular-blocking effects (eg, respiratory paralysis) in patients receiving this combination.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Procainamide: May enhance the neuromuscular-blocking effect of Neuromuscular-Blocking Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">QuiNIDine: May enhance the neuromuscular-blocking effect of Neuromuscular-Blocking Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">QuiNINE: May enhance the neuromuscular-blocking effect of Neuromuscular-Blocking Agents.<i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Tetracyclines: May enhance the neuromuscular-blocking effect of Neuromuscular-Blocking Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Thiazide and Thiazide-Like Diuretics: May enhance the neuromuscular-blocking effect of Neuromuscular-Blocking Agents (Nondepolarizing).<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Trimebutine: May enhance the neuromuscular-blocking effect of Neuromuscular-Blocking Agents (Nondepolarizing).<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Vancomycin: May enhance the neuromuscular-blocking effect of Neuromuscular-Blocking Agents.<i> Risk C: Monitor therapy</i></p></div>
+<div class="block pri drugH1Div" id="F13273269"><span class="drugH1">Pregnancy Considerations</span>
+<p style="text-indent:0em;">Small amounts of atracurium have been shown to cross the placenta when given to women during cesarean section.</p></div>
+<div class="block brc drugH1Div" id="F20547478"><span class="drugH1">Breastfeeding Considerations</span>
+<p style="text-indent:0em;display:inline">It is not known if atracurium is present in breast milk. The manufacturer recommends that caution be exercised when administering atracurium to breastfeeding women.</p></div>
+<div class="block mop drugH1Div" id="F137841"><span class="drugH1">Monitoring Parameters</span>
+<p style="text-indent:-2em;margin-left:2em;">Vital signs (heart rate, blood pressure, respiratory rate); degree of muscle paralysis (eg, presence of spontaneous movement, ventilator asynchrony, shivering, and consider use of a peripheral nerve stimulator with train of four monitoring along with clinical assessments)</p>
+<p style="text-indent:-2em;margin-left:2em;">In the ICU setting, limiting the duration of paralysis and providing a physiotherapy regimen in patients requiring continuous paralysis is suggested.</p></div>
+<div class="block pha drugH1Div" id="F137832"><span class="drugH1">Mechanism of Action</span>
+<p style="text-indent:0em;display:inline">Blocks neural transmission at the myoneural junction by binding with cholinergic receptor sites</p></div>
+<div class="block phk drugH1Div" id="F137848"><span class="drugH1">Pharmacokinetics (Adult Data Unless Noted)</span>
+<p style="text-indent:-2em;margin-left:2em;">Onset of action (dose dependent): 2 to 3 minutes; Peak effect: 3 to 5 minutes.</p>
+<p style="text-indent:-2em;margin-left:2em;">Duration: Recovery begins in 20 to 35 minutes following initial dose of 0.4 to 0.5 mg/kg under balanced anesthesia; recovery to 95% of control takes 60 to 70 minutes; hypothermia may prolong the duration of action.</p>
+<p style="text-indent:-2em;margin-left:2em;">Distribution (Fisher 1990): V<sub>d</sub>:</p>
+<p style="text-indent:-2em;margin-left:4em;">Infants: 0.21 ± 0.12 L/kg.</p>
+<p style="text-indent:-2em;margin-left:4em;">Children: 0.13 ± 0.04 L/kg.</p>
+<p style="text-indent:-2em;margin-left:4em;">Adults: 0.1 ± 0.02 L/kg.</p>
+<p style="text-indent:-2em;margin-left:2em;">Metabolism: Undergoes ester hydrolysis and Hofmann elimination (nonbiologic process independent of kidney, hepatic, or enzymatic function); metabolites have no neuromuscular blocking properties; laudanosine, a product of Hofmann elimination, is a CNS stimulant and can accumulate with prolonged use. Laudanosine is hepatically metabolized.</p>
+<p style="text-indent:-2em;margin-left:2em;">Half-life elimination:</p>
+<p style="text-indent:-2em;margin-left:4em;">Infants: 20 ± 5.1 minutes (Fisher 1990).</p>
+<p style="text-indent:-2em;margin-left:4em;">Children: 17.2 ± 5.1 minutes (Fisher 1990).</p>
+<p style="text-indent:-2em;margin-left:4em;">Adults: Biphasic: Initial (distribution): 2 minutes; Terminal: 20 minutes.</p>
+<p style="text-indent:-2em;margin-left:2em;">Excretion: Urine (&lt;5%).</p>
+<p style="text-indent:-2em;margin-left:4em;">Clearance (Fisher 1990):</p>
+<p style="text-indent:-2em;margin-left:6em;">Infants: 7.9 ± 0.2 mL/kg/minute.</p>
+<p style="text-indent:-2em;margin-left:6em;">Children: 6.8 ± 1.6 mL/kg/minute.</p>
+<p style="text-indent:-2em;margin-left:6em;">Adults: 5.3 ± 0.9 mL/kg/minute.</p></div>
+<div class="list fbnlist drugH1Div drugBrandNames" id="F2869366"><span class="drugH1">Brand Names: International</span><div class="ibn-search drugBrandNames"></div>
+<div class="collapsible-indication brand-names-accordion drugBrandNames"><span class="collapsible-indication-title">International Brand Names by Country</span><div class="collapsible-indication-wrap-frame drugBrandNames"><div class="collapsible-indication-wrap drugBrandNames">For country code abbreviations (<a class="graphic graphic_table" href="/d/html/116421.html" rel="external">show table</a>)<br xmlns=""/><br/><ul>
+<li>
+<span class="countryCode">(AR)</span> <span class="country">Argentina</span><span class="countrySeparator">: </span><span class="drugName">Atracurio gray | Atracurium northia | Atracurium pharmavial | Gelolagar | Tracuron</span>;</li>
+<li>
+<span class="countryCode">(AT)</span> <span class="country">Austria</span><span class="countrySeparator">: </span><span class="drugName">Atracurium hameln | Atracuriumbes deltaselect | Tracrium</span>;</li>
+<li>
+<span class="countryCode">(AU)</span> <span class="country">Australia</span><span class="countrySeparator">: </span><span class="drugName">Atracurium</span>;</li>
+<li>
+<span class="countryCode">(BD)</span> <span class="country">Bangladesh</span><span class="countrySeparator">: </span><span class="drugName">Atrelax | Tracrium</span>;</li>
+<li>
+<span class="countryCode">(BE)</span> <span class="country">Belgium</span><span class="countrySeparator">: </span><span class="drugName">Tracrium</span>;</li>
+<li>
+<span class="countryCode">(BG)</span> <span class="country">Bulgaria</span><span class="countrySeparator">: </span><span class="drugName">Atracurium kalceks</span>;</li>
+<li>
+<span class="countryCode">(BR)</span> <span class="country">Brazil</span><span class="countrySeparator">: </span><span class="drugName">Besilato de atracurio | Besilato de atracurio basi | Tracrium | Tracur</span>;</li>
+<li>
+<span class="countryCode">(CH)</span> <span class="country">Switzerland</span><span class="countrySeparator">: </span><span class="drugName">Atracurium Labatec | Tracrium</span>;</li>
+<li>
+<span class="countryCode">(CN)</span> <span class="country">China</span><span class="countrySeparator">: </span><span class="drugName">Atracurium</span>;</li>
+<li>
+<span class="countryCode">(CO)</span> <span class="country">Colombia</span><span class="countrySeparator">: </span><span class="drugName">Tracrium</span>;</li>
+<li>
+<span class="countryCode">(CZ)</span> <span class="country">Czech Republic</span><span class="countrySeparator">: </span><span class="drugName">Atracurium kalceks</span>;</li>
+<li>
+<span class="countryCode">(DE)</span> <span class="country">Germany</span><span class="countrySeparator">: </span><span class="drugName">Atracurium | Atracurium Actavis | Atracurium hikma | Tracrium</span>;</li>
+<li>
+<span class="countryCode">(DO)</span> <span class="country">Dominican Republic</span><span class="countrySeparator">: </span><span class="drugName">Atracurio libra | Tracur</span>;</li>
+<li>
+<span class="countryCode">(EC)</span> <span class="country">Ecuador</span><span class="countrySeparator">: </span><span class="drugName">Atracur | Tracrium</span>;</li>
+<li>
+<span class="countryCode">(EE)</span> <span class="country">Estonia</span><span class="countrySeparator">: </span><span class="drugName">Atracurium | Atrasyl | Tracrium</span>;</li>
+<li>
+<span class="countryCode">(EG)</span> <span class="country">Egypt</span><span class="countrySeparator">: </span><span class="drugName">Atrabesylate | Atracurium | Faulcurium | Tracrium | Trathesia</span>;</li>
+<li>
+<span class="countryCode">(ES)</span> <span class="country">Spain</span><span class="countrySeparator">: </span><span class="drugName">Atracurio inibsa | Atracurio rovi | Besilato de atracurio hameln | Besilato de Atracurio Inibsa | Tracrium</span>;</li>
+<li>
+<span class="countryCode">(FI)</span> <span class="country">Finland</span><span class="countrySeparator">: </span><span class="drugName">Atracurium alpharm | Tracium | Tracrium</span>;</li>
+<li>
+<span class="countryCode">(FR)</span> <span class="country">France</span><span class="countrySeparator">: </span><span class="drugName">Atracurium hikma | Tracrium</span>;</li>
+<li>
+<span class="countryCode">(GB)</span> <span class="country">United Kingdom</span><span class="countrySeparator">: </span><span class="drugName">Atracurium | Tracrium</span>;</li>
+<li>
+<span class="countryCode">(GR)</span> <span class="country">Greece</span><span class="countrySeparator">: </span><span class="drugName">Tracrium</span>;</li>
+<li>
+<span class="countryCode">(HU)</span> <span class="country">Hungary</span><span class="countrySeparator">: </span><span class="drugName">Atracurium besilate kalceks | Tracrium</span>;</li>
+<li>
+<span class="countryCode">(ID)</span> <span class="country">Indonesia</span><span class="countrySeparator">: </span><span class="drugName">Atracurium | Atracurium besylat | Farelax | Notrixum | Tracrium</span>;</li>
+<li>
+<span class="countryCode">(IE)</span> <span class="country">Ireland</span><span class="countrySeparator">: </span><span class="drugName">Atracurium | Tracrium</span>;</li>
+<li>
+<span class="countryCode">(IL)</span> <span class="country">Israel</span><span class="countrySeparator">: </span><span class="drugName">Tracrium</span>;</li>
+<li>
+<span class="countryCode">(IN)</span> <span class="country">India</span><span class="countrySeparator">: </span><span class="drugName">Acris | Arium | Artacil | Atacurium | Atcuron | Atraaish k | Atracade | Atrager | Crimat | Kabitran | Tracrium | Troycurium</span>;</li>
+<li>
+<span class="countryCode">(IT)</span> <span class="country">Italy</span><span class="countrySeparator">: </span><span class="drugName">Acurmil | Tracrium</span>;</li>
+<li>
+<span class="countryCode">(JO)</span> <span class="country">Jordan</span><span class="countrySeparator">: </span><span class="drugName">Atacure | Retalex | Tracrium</span>;</li>
+<li>
+<span class="countryCode">(KE)</span> <span class="country">Kenya</span><span class="countrySeparator">: </span><span class="drugName">Acuron | Artacil | Atracurium | Atracurium besylate</span>;</li>
+<li>
+<span class="countryCode">(KR)</span> <span class="country">Korea, Republic of</span><span class="countrySeparator">: </span><span class="drugName">Acrium | Aculex | Atra | Tracrium</span>;</li>
+<li>
+<span class="countryCode">(KW)</span> <span class="country">Kuwait</span><span class="countrySeparator">: </span><span class="drugName">Tracrium</span>;</li>
+<li>
+<span class="countryCode">(LB)</span> <span class="country">Lebanon</span><span class="countrySeparator">: </span><span class="drugName">Tracrium</span>;</li>
+<li>
+<span class="countryCode">(LT)</span> <span class="country">Lithuania</span><span class="countrySeparator">: </span><span class="drugName">Atracurium hikma | Tracrium</span>;</li>
+<li>
+<span class="countryCode">(LU)</span> <span class="country">Luxembourg</span><span class="countrySeparator">: </span><span class="drugName">Tracrium</span>;</li>
+<li>
+<span class="countryCode">(LV)</span> <span class="country">Latvia</span><span class="countrySeparator">: </span><span class="drugName">Atracurium | Atracurium besilate kalceks | Tracrium</span>;</li>
+<li>
+<span class="countryCode">(MA)</span> <span class="country">Morocco</span><span class="countrySeparator">: </span><span class="drugName">Tracrium</span>;</li>
+<li>
+<span class="countryCode">(MX)</span> <span class="country">Mexico</span><span class="countrySeparator">: </span><span class="drugName">Atracurio | Atracurio Senosiain | Relatrac | Tracrium</span>;</li>
+<li>
+<span class="countryCode">(MY)</span> <span class="country">Malaysia</span><span class="countrySeparator">: </span><span class="drugName">Atracurium | Atracurium hameln | Atracurium kalceks | Atralex | Notrixum</span>;</li>
+<li>
+<span class="countryCode">(NL)</span> <span class="country">Netherlands</span><span class="countrySeparator">: </span><span class="drugName">Atracurium | Atracuriumdibesilaat | Tracrium</span>;</li>
+<li>
+<span class="countryCode">(NO)</span> <span class="country">Norway</span><span class="countrySeparator">: </span><span class="drugName">Atracurium | Tracrium | Tracrium aspen</span>;</li>
+<li>
+<span class="countryCode">(NZ)</span> <span class="country">New Zealand</span><span class="countrySeparator">: </span><span class="drugName">Atracurium besylat</span>;</li>
+<li>
+<span class="countryCode">(PE)</span> <span class="country">Peru</span><span class="countrySeparator">: </span><span class="drugName">Atracurio</span>;</li>
+<li>
+<span class="countryCode">(PH)</span> <span class="country">Philippines</span><span class="countrySeparator">: </span><span class="drugName">Atracor | Atracurium besylate | Atracurium Hospira | Atravell | Atrium | Tracrium</span>;</li>
+<li>
+<span class="countryCode">(PK)</span> <span class="country">Pakistan</span><span class="countrySeparator">: </span><span class="drugName">Acuron | Atrelax | Efacurim | Relaxtron | Tracrium | Tracur</span>;</li>
+<li>
+<span class="countryCode">(PL)</span> <span class="country">Poland</span><span class="countrySeparator">: </span><span class="drugName">Tracrium</span>;</li>
+<li>
+<span class="countryCode">(PR)</span> <span class="country">Puerto Rico</span><span class="countrySeparator">: </span><span class="drugName">Atracurium besylate | Tracrium</span>;</li>
+<li>
+<span class="countryCode">(PT)</span> <span class="country">Portugal</span><span class="countrySeparator">: </span><span class="drugName">Besilato de atracurio basi | Besilato de atracurio hikma | Besilato de atracurio queenlabs | Faulcurium | Tracrium</span>;</li>
+<li>
+<span class="countryCode">(PY)</span> <span class="country">Paraguay</span><span class="countrySeparator">: </span><span class="drugName">Arium | Atracurio libra | Atracurium northia | Tracur | Tracurix</span>;</li>
+<li>
+<span class="countryCode">(QA)</span> <span class="country">Qatar</span><span class="countrySeparator">: </span><span class="drugName">Atacure | Neucurium | Tracrium</span>;</li>
+<li>
+<span class="countryCode">(RO)</span> <span class="country">Romania</span><span class="countrySeparator">: </span><span class="drugName">Atracurium kalceks</span>;</li>
+<li>
+<span class="countryCode">(RU)</span> <span class="country">Russian Federation</span><span class="countrySeparator">: </span><span class="drugName">Atracuria besylate | Atracurium besilat | Atracurium medargo | Atracurium novo | Notrixum | Ridelat c | Tracrium</span>;</li>
+<li>
+<span class="countryCode">(SA)</span> <span class="country">Saudi Arabia</span><span class="countrySeparator">: </span><span class="drugName">Atacure | Atracurium besylate</span>;</li>
+<li>
+<span class="countryCode">(SE)</span> <span class="country">Sweden</span><span class="countrySeparator">: </span><span class="drugName">Tracrium</span>;</li>
+<li>
+<span class="countryCode">(SG)</span> <span class="country">Singapore</span><span class="countrySeparator">: </span><span class="drugName">Atracurium | Atracurium hameln</span>;</li>
+<li>
+<span class="countryCode">(SI)</span> <span class="country">Slovenia</span><span class="countrySeparator">: </span><span class="drugName">Tracrium</span>;</li>
+<li>
+<span class="countryCode">(SK)</span> <span class="country">Slovakia</span><span class="countrySeparator">: </span><span class="drugName">Atracurium kalceks</span>;</li>
+<li>
+<span class="countryCode">(TH)</span> <span class="country">Thailand</span><span class="countrySeparator">: </span><span class="drugName">Notrixum</span>;</li>
+<li>
+<span class="countryCode">(TN)</span> <span class="country">Tunisia</span><span class="countrySeparator">: </span><span class="drugName">Atracurium</span>;</li>
+<li>
+<span class="countryCode">(TR)</span> <span class="country">Turkey</span><span class="countrySeparator">: </span><span class="drugName">Atracurium | Atrasyl | Dematrac | Neucurium</span>;</li>
+<li>
+<span class="countryCode">(TW)</span> <span class="country">Taiwan</span><span class="countrySeparator">: </span><span class="drugName">Atracurium | Atracurium besylat | Atracurium besylate | Genso | Tracrium</span>;</li>
+<li>
+<span class="countryCode">(UA)</span> <span class="country">Ukraine</span><span class="countrySeparator">: </span><span class="drugName">Intuban</span>;</li>
+<li>
+<span class="countryCode">(UY)</span> <span class="country">Uruguay</span><span class="countrySeparator">: </span><span class="drugName">Atracur | Atracurio | Atracurium | Tracrium | Tracur | Tracurix</span>;</li>
+<li>
+<span class="countryCode">(VE)</span> <span class="country">Venezuela, Bolivarian Republic of</span><span class="countrySeparator">: </span><span class="drugName">Tracrium</span>;</li>
+<li>
+<span class="countryCode">(ZA)</span> <span class="country">South Africa</span><span class="countrySeparator">: </span><span class="drugName">Atracurium | Tracrium</span>;</li>
+<li>
+<span class="countryCode">(ZW)</span> <span class="country">Zimbabwe</span><span class="countrySeparator">: </span><span class="drugName">Tracrium</span></li></ul></div>
+</div>
+</div>
+</div>
+</div><div class="headingAnchor" id="references"><ol id="reference">
+<li>
+<div class="reference" id="lexi-content-ref-11487763">
+<a name="11487763"></a>Ahlfors CE. Benzyl alcohol, kernicterus, and unbound bilirubin. <i>J Pediatr</i>. 2001;139(2):317-319.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/atracurium-drug-information/abstract-text/11487763/pubmed" id="11487763" target="_blank">11487763</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-33104824">
+<a name="33104824"></a>Alhazzani W, Belley-Cote E, Møller MH, et al. Neuromuscular blockade in patients with ARDS: a rapid practice guideline. <i>Intensive Care Med</i>. 2020;46(11):1977-1986. doi:10.1007/s00134-020-06227-8<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/atracurium-drug-information/abstract-text/33104824/pubmed" id="33104824" target="_blank">33104824</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference">
+                  Atracurium Besylate Injection [prescribing information]. Chicago, IL: Meitheal Pharmaceuticals Inc; March 2018.</div>
+</li>
+<li>
+<div class="reference">
+                  Atracurium Besylate Injection [prescribing information]. Lake Forest, IL: Hospira, Inc; July 2018.</div>
+</li>
+<li>
+<div class="reference">
+                  Atracurium Besylate Injection [prescribing information]. Rockford, IL: Mylan Institutional; July 2018.</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-28102521">
+<a name="28102521"></a>Bouju P, Tadié JM, Barbarot N, et al. Clinical assessment and train-of-four measurements in critically ill patients treated with recommended doses of cisatracurium or atracurium for neuromuscular blockade: a prospective descriptive study. <i>Ann Intensive Care</i>. 2017;7(1):10. doi:10.1186/s13613-017-0234-0<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/atracurium-drug-information/abstract-text/28102521/pubmed" id="28102521" target="_blank">28102521</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-6810084">
+<a name="6810084"></a>Centers for Disease Control (CDC). Neonatal deaths associated with use of benzyl alcohol—United States. <i>MMWR Morb Mortal Wkly Rep</i>. 1982;31(22):290-291. <a href="https://www.cdc.gov/mmwr/preview/mmwrhtml/00001109.htm" target="_blank">http://www.cdc.gov/mmwr/preview/mmwrhtml/00001109.htm</a>
+<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/atracurium-drug-information/abstract-text/6810084/pubmed" id="6810084" target="_blank">6810084</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-11696136">
+<a name="11696136"></a>Clarkson A, Choonara I, Martin P. Suspected Toxicity of Atracurium in the Neonate. <i>Paediatr Anaesth</i>. 2001;11(5):631-632.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/atracurium-drug-information/abstract-text/11696136/pubmed" id="11696136" target="_blank">11696136</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-2827933">
+<a name="2827933"></a>Costarino AT, Polin RA. Neuromuscular relaxants in the neonate. <i>Clin Perinatol</i>. 1987;14(4):965-989.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/atracurium-drug-information/abstract-text/2827933/pubmed" id="2827933" target="_blank">2827933</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-14625670">
+<a name="14625670"></a>Erstad BL. Dosing of Medications in Morbidly Obese Patients in the Intensive Care Unit Setting. <i>Intensive Care Med</i>. 2004;30(1):18-32. doi:10.1007/s00134-003-2059-6<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/atracurium-drug-information/abstract-text/14625670/pubmed" id="14625670" target="_blank">14625670</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-34605781">
+<a name="34605781"></a>Evans L, Rhodes A, Alhazzani W, et al. Surviving Sepsis Campaign: international guidelines for management of sepsis and septic shock 2021. <i>Crit Care Med</i>. 2021;49(11):e1063-e1143. doi:10.1097/CCM.0000000000005337<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/atracurium-drug-information/abstract-text/34605781/pubmed" id="34605781" target="_blank">34605781</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-2360737">
+<a name="2360737"></a>Fisher DM, Canfell PC, Spellman MJ, Miller RD. Pharmacokinetics and pharmacodynamics of atracurium in infants and children. <i>Anesthesiology</i>. 1990;73(1):33-37. doi:10.1097/00000542-199007000-00006<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/atracurium-drug-information/abstract-text/2360737/pubmed" id="2360737" target="_blank">2360737</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-3341579">
+<a name="3341579"></a>Goudsouzian NG. Atracurium infusion in infants. <i>Anesthesiology</i>. 1988;68(2):267-269.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/atracurium-drug-information/abstract-text/3341579/pubmed" id="3341579" target="_blank">3341579</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-3753829">
+<a name="3753829"></a>Goudsouzian N, Martyn J, Rudd GD, Liu LM, Lineberry CG. Continuous infusion of atracurium in children. <i>Anesthesiology</i>. 1986;64(2):171-174.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/atracurium-drug-information/abstract-text/3753829/pubmed" id="3753829" target="_blank">3753829</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-23591211">
+<a name="23591211"></a>Greenberg SB, Vender J. The use of neuromuscular blocking agents in the ICU: where are we now? <i>Crit Care Med</i>. 2013;41(5):1332-1344.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/atracurium-drug-information/abstract-text/23591211/pubmed" id="23591211" target="_blank">23591211</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-Gropper.1">
+<a name="Gropper.1"></a>Gropper M, Eriksson L, Fleisher L, Wiener-Kronish J, Cohen N, Leslie K, eds. <i>Miller’s Anesthesia</i>. 19th ed. Churchill Livingstone; 2019.</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-19029093">
+<a name="19029093"></a>Han TH, Martyn JAJ. Onset and effectiveness of rocuronium for rapid onset of paralysis in patients with major burns: priming or large bolus. <i>Br J Anaesth</i>. 2009;102(1):55-60.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/atracurium-drug-information/abstract-text/19029093/pubmed" id="19029093" target="_blank">19029093</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-Harper.1988">
+<a name="Harper.1988"></a>Harper NJN, Pollard BJ, Edwards D, et al. Stability of atracurium in dilute solutions. <i>Br J Anaesth</i>. 60. 1988. 344P-345P.</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-9024461">
+<a name="9024461"></a>"Inactive" ingredients in pharmaceutical products: update (subject review). American Academy of Pediatrics (AAP) Committee on Drugs. <i>Pediatrics</i>. 1997;99(2):268-278.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/atracurium-drug-information/abstract-text/9024461/pubmed" id="9024461" target="_blank">9024461</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-ISMP.1">
+<a name="ISMP.1"></a>Institute for Safe Medication Practice (ISMP). <i>ISMP Targeted Medication Safety Best Practices for Hospitals</i>. https://ismp.org/guidelines/best-practices-hospitals. Published February 21, 2020. Accessed August 4, 2020.</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-21923445">
+<a name="21923445"></a>Johnson PN, Miller J, Gormley AK. Continuous-infusion neuromuscular blocking agents in critically ill neonates and children. <i>Pharmacotherapy</i>. 2011;31(6):609-620. doi:10.1592/phco.31.6.609<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/atracurium-drug-information/abstract-text/21923445/pubmed" id="21923445" target="_blank">21923445</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-3377949">
+<a name="3377949"></a>Kalli I, Meretoja OA. Infusion of Atracurium in Neonates, Infants and Children. A Study of Dose Requirements. <i>Br J Anaesth</i>. 1988;60(6):651-654.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/atracurium-drug-information/abstract-text/3377949/pubmed" id="3377949" target="_blank">3377949</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-10446832">
+<a name="10446832"></a>Martin LD, Bratton SL, O'Rourke PP. Clinical Uses and Controversies of Neuromuscular Blocking Agents in Infants and Children. <i>Crit Care Med</i>. 1999;27(7):1358-1368.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/atracurium-drug-information/abstract-text/10446832/pubmed" id="10446832" target="_blank">10446832</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-3157332">
+<a name="3157332"></a>Mehta MP, Choi WW, Gergis SD, Sokoll MD, Adolphson AJ. Facilitation of rapid endotracheal intubations with divided doses of nondepolarizing neuromuscular blocking drugs. <i>Anesthesiology</i>. 1985;62(4):392-395.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/atracurium-drug-information/abstract-text/3157332/pubmed" id="3157332" target="_blank">3157332</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-7826787">
+<a name="7826787"></a>Meretoja OA, Taivainen T, Jalkanen L, et al. Synergism Between Atracurium and Vecuronium in Infants and Children During Nitrous Oxide-Oxygen-Alfentanil Anaesthesia. <i>Br J Anaesth</i>. 1994;73(5):605-607.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/atracurium-drug-information/abstract-text/7826787/pubmed" id="7826787" target="_blank">7826787</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-28351905">
+<a name="28351905"></a>Moore L, Kramer CJ, Delcoix-Lopes S, Modrykamien AM. Comparison of cisatracurium versus atracurium in early ARDS. <i>Respir Care</i>. 2017;62(7):947-952. doi:10.4187/respcare.05102<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/atracurium-drug-information/abstract-text/28351905/pubmed" id="28351905" target="_blank">28351905</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-11902255">
+<a name="11902255"></a>Murray MJ, Cowen J, DeBlock H, et al; Task Force of the American College of Critical Care Medicine (ACCM) of the Society of Critical Care Medicine (SCCM), American Society of Health-System Pharmacists, American College of Chest Physicians. Clinical practice guidelines for sustained neuromuscular blockade in the adult critically ill patient. <i>Crit Care Med</i>. 2002;30(1):142-156. doi:10.1097/00003246-200201000-00021<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/atracurium-drug-information/abstract-text/11902255/pubmed" id="11902255" target="_blank">11902255</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-27755068">
+<a name="27755068"></a>Murray MJ, DeBlock H, Erstad B, et al. Clinical practice guidelines for sustained neuromuscular blockade in the adult critically ill patient. <i>Crit Care Med</i>. 2016;44(11):2079-2103. doi:10.1097/CCM.0000000000002027<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/atracurium-drug-information/abstract-text/27755068/pubmed" id="27755068" target="_blank">27755068</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-11753022">
+<a name="11753022"></a>Naguib M, Flood P, McArdle JJ, Brenner HR. Advances in neurobiology of the neuromuscular junction. Implications for the anesthesiologist. <i>Anesthesiology</i>. 2002;96(1):202-31.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/atracurium-drug-information/abstract-text/11753022/pubmed" id="11753022" target="_blank">11753022</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-3213921">
+<a name="3213921"></a>Peat SJ, Potter DR, Hunter JM. The Prolonged Use of Atracurium in a Patient With Tetanus. <i>Anaesthesia</i>. 1988;43(11):962-963.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/atracurium-drug-information/abstract-text/3213921/pubmed" id="3213921" target="_blank">3213921</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-8270720">
+<a name="8270720"></a>Piotrowski A. Comparison of atracurium and pancuronium in mechanically ventilated neonates. <i>Intensive Care Med</i>. 1993;19(7):401-405. doi:10.1007/BF01724880<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/atracurium-drug-information/abstract-text/8270720/pubmed" id="8270720" target="_blank">8270720</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-17683408">
+<a name="17683408"></a>Playfor S, Jenkins I, Boyles C, et al. Consensus guidelines for sustained neuromuscular blockade in critically ill children. <i>Paediatr Anaesth</i>. 2007;17(9):881-887.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/atracurium-drug-information/abstract-text/17683408/pubmed" id="17683408" target="_blank">17683408</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-manu.1">
+<a name="manu.1"></a>Refer to manufacturer's labeling.</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-33002927">
+<a name="33002927"></a>Rezaiguia-Delclaux S, Laverdure F, Genty T, et al. Neuromuscular blockade monitoring in acute respiratory distress syndrome: randomized controlled trial of clinical assessment alone or with peripheral nerve stimulation. <i>Anesth Analg</i>. 2021;132(4):1051-1059. doi:10.1213/ANE.0000000000005174<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/atracurium-drug-information/abstract-text/33002927/pubmed" id="33002927" target="_blank">33002927</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-9372675">
+<a name="9372675"></a>Strange C, Vaughan L, Franklin C, Johnson J. Comparison of train-of-four and best clinical assessment during continuous paralysis. <i>Am J Respir Crit Care Med</i>. 1997;156(5):1556-1561. doi:10.1164/ajrccm.156.5.9701079<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/atracurium-drug-information/abstract-text/9372675/pubmed" id="9372675" target="_blank">9372675</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-21143499">
+<a name="21143499"></a>van Kralingen S, van de Garde EM, Knibbe CA, et al. Comparative Evaluation of Atracurium Dosed on Ideal Body Weight vs. Total Body Weight in Morbidly Obese Patients. <i>Br J Clin Pharmacol</i>. 2011;71(1):34-40.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/atracurium-drug-information/abstract-text/21143499/pubmed" id="21143499" target="_blank">21143499</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-3548792">
+<a name="3548792"></a>Yate PM, Flynn PJ, Arnold RW, et al. Clinical Experience and Plasma Laudanosine Concentrations During the Infusion of Atracurium in the Intensive Therapy Unit. <i>Br J Anaesth</i>. 1987;59(2):211-217.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/atracurium-drug-information/abstract-text/3548792/pubmed" id="3548792" target="_blank">3548792</a>]</span>
+</div>
+</li></ol></div><div id="topicVersionRevision">Topic 8973 Version 226.0</div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

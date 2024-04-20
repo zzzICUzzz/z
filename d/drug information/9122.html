@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Beractant: Drug information</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Beractant: Drug information</h1>
+<div class="utdArticleSection utdStyle" id="topicContent"><div id="drugTitle">Beractant: Drug information</div><div class="clear"></div><div id="topicText">(For additional information <a class="drug drug_pediatric" data-topicid="13040" href="/d/html/13040.html" rel="external">see "Beractant: Pediatric drug information"</a>)<br/><br/>For abbreviations, symbols, and age group definitions used in Lexicomp (<a class="graphic graphic_table" href="/d/html/57469.html" rel="external">show table</a>)<div class="visuallyHidden drugH1Div" id="formulinkBodyPlaceholder"><span class="drugH1"></span></div>
+<div class="list ubnlist drugH1Div drugBrandNames" id="F140419"><span class="drugH1">Brand Names: US</span>
+<ul>
+<li>Survanta</li></ul></div>
+<div class="list canbnlist drugH1Div drugBrandNames" id="F52866056"><span class="drugH1">Brand Names: Canada</span>
+<ul>
+<li>Survanta</li></ul></div>
+<div class="ex_sect_xr thclist drugH1Div drugBrandNames" id="F140446"><span class="drugH1">Pharmacologic Category</span>
+<ul>
+<li>
+                        Lung Surfactant</li></ul></div>
+<div class="block dop drugH1Div" id="F140433"><span class="drugH1">Dosing: Pediatric</span><p>(For additional information <a class="drug drug_pediatric" data-topicid="13040" href="/d/html/13040.html" rel="external">see "Beractant: Pediatric drug information"</a>)</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Dosage guidance: </b></p>
+<p style="text-indent:-2em;margin-left:4em;">
+<b>Dosage form information: </b>1 mL of beractant contains 25 mg of phospholipids.</p>
+<div class="collapsible-indication">
+<span class="collapsible-indication-title" data-indication-id="75bab727-4453-4780-9867-692e28a13743">Respiratory distress syndrome</span>
+<div class="collapsible-indication-wrap">
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Respiratory distress syndrome (RDS): Note:</b> For newborns who do not require mechanical ventilation for severe RDS, current guidelines recommend using continuous positive airway pressure (CPAP) immediately after birth with subsequent selective surfactant administration (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-24379227']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-24379227'])">Ref</a></span>); routine prophylactic surfactant administration is no longer recommended (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-30780152','lexi-content-ref-33552321','lexi-content-ref-36863329']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-30780152','lexi-content-ref-33552321','lexi-content-ref-36863329'])">Ref</a></span>).</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Rescue treatment: </i></p>
+<p style="text-indent:-2em;margin-left:6em;">Endotracheal administration: <b>Note: </b>Use for INSURE technique (INtubation-SURfactant-Extubation) or patients requiring invasive respiratory support (eg, mechanical ventilation):</p>
+<p style="text-indent:-2em;margin-left:8em;">Preterm neonates: Endotracheal: 4 mL/kg following a diagnosis of significant RDS; additional doses may be administered if patient remains intubated and requires at least 30% inspired fraction of oxygen (FiO<sub>2</sub>) to maintain adequate oxygenation; dosing more often than every 12 hours is typically not required unless surfactant is being inactivated by an infectious process, meconium, or blood; doses should not be given more frequently than every 6 hours; up to 4 doses may be administered if evidence of respiratory distress continues (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-24379227','lexi-content-ref-16061594','lexi-content-ref-33552321','lexi-content-ref-Manu.1']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-24379227','lexi-content-ref-16061594','lexi-content-ref-33552321','lexi-content-ref-Manu.1'])">Ref</a></span>).</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Prophylactic therapy:</i>
+<b>Note: </b>Routine prophylactic surfactant administration is no longer recommended (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-30780152','lexi-content-ref-33552321','lexi-content-ref-36863329']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-30780152','lexi-content-ref-33552321','lexi-content-ref-36863329'])">Ref</a></span>).</p>
+<p style="text-indent:-2em;margin-left:6em;">Preterm neonates: Endotracheal: 4 mL/kg as soon as possible after birth, preferably within 15 minutes.</p></div>
+</div>
+</div>
+<div class="block dorp drugH1Div" id="F51073909"><span class="drugH1">Dosing: Kidney Impairment: Pediatric</span>
+<p style="text-indent:0em;display:inline">There are no dosage adjustments provided in the manufacturer's labeling.</p></div>
+<div class="block dohp drugH1Div" id="F51073910"><span class="drugH1">Dosing: Hepatic Impairment: Pediatric</span>
+<p style="text-indent:0em;display:inline">There are no dosage adjustments provided in the manufacturer's labeling.</p></div>
+<div class="block adr drugH1Div" id="F140405"><span class="drugH1">Adverse Reactions</span>
+<p style="text-indent:0em;display:inline">The following adverse drug reactions and incidences are derived from product labeling unless otherwise specified. Frequency not defined. The following occurred during the dosing procedure:</p>
+<p style="text-indent:-2em;margin-left:2em;">&gt;10%: Cardiovascular: Bradycardia (transient)</p>
+<p style="text-indent:-2em;margin-left:2em;">1% to 10%: Respiratory: Oxygen desaturation</p>
+<p style="text-indent:-2em;margin-left:2em;">&lt;1%, postmarketing, and/or case reports: Apnea, emphysema (pulmonary interstitial), hypercapnia, hypertension, hypotension, increased susceptibility to infection (post-treatment nosocomial sepsis), low blood CO2, obstruction of endotracheal tube, pallor, pneumothorax (including pneumopericardium), vasoconstriction</p></div>
+<div class="block coi drugH1Div" id="F10242448"><span class="drugH1">Contraindications</span>
+<p style="text-indent:0em;display:inline">There are no contraindications listed in the manufacturer's labeling</p></div>
+<div class="block war drugH1Div" id="F140402"><span class="drugH1">Warnings/Precautions</span>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>
+<i>Concerns related to adverse effects:</i></b></p>
+<p style="text-indent:-2em;margin-left:4em;">• Mucous plugs: Marked impairment of ventilation during or shortly after dosing may indicate mucous plugging of the endotracheal tube; suctioning all neonates prior to administration may decrease chance of endotracheal tube obstruction. Replace endotracheal tube immediately if obstruction is not removed with suctioning.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Nosocomial sepsis: There is an increased risk of post-treatment nosocomial sepsis in treated neonates this increased risk was not associated with increased mortality.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Transient adverse effects: Transient episodes of bradycardia and decreased oxygen saturation may occur. Discontinue dosing procedure and initiate measures to alleviate the condition; may reinstitute after the patient is stable. Rales and moist breath sounds may occur; endotracheal suctioning or other remedial action is necessary if clear-cut signs of airway obstruction are present.</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>
+<i>Other warnings/precautions:</i></b></p>
+<p style="text-indent:-2em;margin-left:4em;">• Administration: Intended for endotracheal administration only.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Appropriate use: Use in neonates &lt;600 grams birth weight or &gt;1,750 grams birth weight has not been evaluated.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Lung oxygenation/lung compliance: Produces rapid improvements in lung oxygenation and compliance that may require frequent adjustments to oxygen delivery and ventilator settings; hyperoxia may occur within minutes of administration.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Trained personnel: Rapidly affects oxygenation and lung compliance; restrict use to a highly-supervised clinical setting with immediate availability of clinicians experienced in intubation and ventilatory management of premature neonates.</p></div>
+<div class="block foc drugH1Div" id="F140410"><span class="drugH1">Dosage Forms: US</span>
+<p style="text-indent:0em;text-align:justify;display:inline">Excipient information presented when available (limited, particularly for generics); consult specific product labeling.</p>
+<p style="text-indent:-2em;margin-left:2em;text-align:justify;">Suspension, Intratracheal: </p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">Survanta: Phospholipids 25 mg/mL (4 mL, 8 mL)</p></div>
+<div class="block geq drugH1Div" id="F140398"><span class="drugH1">Generic Equivalent Available: US</span>
+<p style="text-indent:0em;display:inline">No</p></div>
+<div class="block fee drugH1Div" id="F16323016"><span class="drugH1">Pricing: US</span>
+<p style="text-indent:-2em;margin-left:2em;text-align:justify;">
+<b>Suspension</b> (Survanta Intratracheal)</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">25 mg/mL 0.9% (per mL): $114.90</p>
+<p style="text-indent:0em;">
+<b>Disclaimer: </b>A representative AWP (Average Wholesale Price) price or price range is provided as reference price only. A range is provided when more than one manufacturer's AWP price is available and uses the low and high price reported by the manufacturers to determine the range. The pricing data should be used for benchmarking purposes only, and as such should not be used alone to set or adjudicate any prices for reimbursement or purchasing functions or considered to be an exact price for a single product and/or manufacturer.  Medi-Span expressly disclaims all warranties of any kind or nature, whether express or implied, and assumes no liability with respect to accuracy of price or price range data published in its solutions.  In no event shall Medi-Span be liable for special, indirect, incidental, or consequential damages arising from use of price or price range data.  Pricing data is updated monthly.</p></div>
+<div class="block dinfoc drugH1Div" id="F52866057"><span class="drugH1">Dosage Forms: Canada</span>
+<p style="text-indent:0em;text-align:justify;display:inline">Excipient information presented when available (limited, particularly for generics); consult specific product labeling.</p>
+<p style="text-indent:-2em;margin-left:2em;text-align:justify;">Suspension, Intratracheal: </p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">Survanta: Phospholipids 25 mg/mL (4 mL, 8 mL)</p></div>
+<div class="block admp drugH1Div" id="F52612299"><span class="drugH1">Administration: Pediatric</span>
+<p style="text-indent:0em;display:inline">Specific administration method may vary with ventilation technique.</p>
+<p style="text-indent:-2em;margin-left:2em;">Endotracheal/Intratracheal: Allow beractant to stand at room temperature for 20 minutes or warm in the hand for at least 8 minutes prior to administration; artificial warming methods should NOT be used. Inspect solution to verify complete mixing of the suspension; do not shake; if settling occurs during storage, gently swirl. Slowly draw dose into a syringe using a 20-gauge or larger needle, taking care to avoid excessive foaming. Suction neonate prior to administration.</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Endotracheal tube:</i>
+<b>Note: </b>Utilized for INSURE (INtubation-SURfactant-Extubation) technique or patients who are mechanically ventilated.</p>
+<p style="text-indent:-2em;margin-left:6em;">Before administering, ensure proper placement and patency of the endotracheal tube. Patient may be suctioned prior to administration. The neonate should be stable before proceeding with administration. Insert a 5-French end-hole catheter into the neonate's endotracheal tube. Administer the dose in four 1 mL/kg aliquots. Each quarter-dose is instilled over 2 to 3 seconds followed by at least 30 seconds of manual ventilation or until stable; each quarter-dose is administered with the neonate in a different position; slightly downward inclination with head turned to the right, then repeat with head turned to the left; then slightly upward inclination with head turned to the right, then repeat with head turned to the left. Following administration of one full dose, withhold suctioning for 1 hour unless signs of significant airway obstruction. Beractant has also been administered in 2 equal aliquots in 2 positions (inclined to the right and inclined to the left) as well as a single aliquot in a neutral position (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-16061594','lexi-content-ref-29734454','lexi-content-ref-30526187']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-16061594','lexi-content-ref-29734454','lexi-content-ref-30526187'])">Ref</a></span>).</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Intratracheal:</i> Minimally invasive surfactant therapy (MIST)/less invasive surfactant administration (LISA): Administration via a thin feeding catheter (3-French to 5-French) or a semi-rigid 16-gauge vascular catheter that is placed under direct laryngoscopy has also been reported in studies. Surfactant dose is administered over 1 to 3 minutes as small boluses; administration should be slowed if apnea, bradycardia, desaturation, or surfactant reflux occurs (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-30823947','lexi-content-ref-32068592','lexi-content-ref-17359406','lexi-content-ref-29479196','lexi-content-ref-30526187','lexi-content-ref-31818537']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-30823947','lexi-content-ref-32068592','lexi-content-ref-17359406','lexi-content-ref-29479196','lexi-content-ref-30526187','lexi-content-ref-31818537'])">Ref</a></span>).</p></div>
+<div class="block use drugH1Div" id="F140411"><span class="drugH1">Use: Labeled Indications</span>
+<p style="text-indent:0em;display:inline">
+<b>Respiratory distress syndrome:</b> Prevention of respiratory distress syndrome (RDS) in premature neonates with birth weight &lt;1,250 g or with evidence of surfactant deficiency (administer within 15 minutes of birth); treatment of RDS in neonates with x-ray confirmation of RDS and requiring mechanical ventilation (administer within 8 hours of birth).</p></div>
+<div class="block mst drugH1Div" id="F140451"><span class="drugH1">Medication Safety Issues</span>
+<div class="collapsible">
+<span class="collapsible-title">Sound-alike/look-alike issues:</span>
+<div class="collapsible-wrap">
+<p style="text-indent:-2em;margin-left:4em;">Survanta may be confused with Sufenta</p></div>
+</div>
+</div>
+<div class="block cyt drugH1Div" id="F13298853"><span class="drugH1">Metabolism/Transport Effects</span>
+<p style="text-indent:0em;display:inline">None known.</p></div>
+<div class="block dri drugH1Div" id="F140406"><span class="drugH1">Drug Interactions</span><br/><br/><div class="clear"></div><p xmlns=""></p><div class="inner" xmlns=""><p style="text-indent:0em;display:inline"><b>Note</b>: Interacting drugs may <b>not be individually listed below</b> if they are part of a group interaction (eg, individual drugs within “CYP3A4 Inducers [Strong]” are NOT listed).  For a complete list of drug interactions by individual drug name and detailed management recommendations, use the Lexicomp drug interactions program by clicking on the “Launch drug interactions program” link above.</p><p xmlns=""></p></div>
+<p style="text-indent:-2em;margin-left:2em;">Bradycardia-Causing Agents: May enhance the bradycardic effect of other Bradycardia-Causing Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Ceritinib: Bradycardia-Causing Agents may enhance the bradycardic effect of Ceritinib.  Management: If this combination cannot be avoided, monitor patients for evidence of symptomatic bradycardia, and closely monitor blood pressure and heart rate during therapy.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Etrasimod: May enhance the bradycardic effect of Bradycardia-Causing Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Fexinidazole: Bradycardia-Causing Agents may enhance the arrhythmogenic effect of Fexinidazole. <i> Risk X: Avoid combination</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Fingolimod: Bradycardia-Causing Agents may enhance the bradycardic effect of Fingolimod.  Management: Consult with the prescriber of any bradycardia-causing agent to see if the agent could be switched to an agent that does not cause bradycardia prior to initiating fingolimod. If combined, perform continuous ECG monitoring after the first fingolimod dose.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Ivabradine: Bradycardia-Causing Agents may enhance the bradycardic effect of Ivabradine. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Lacosamide: Bradycardia-Causing Agents may enhance the AV-blocking effect of Lacosamide. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Midodrine: May enhance the bradycardic effect of Bradycardia-Causing Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Ozanimod: May enhance the bradycardic effect of Bradycardia-Causing Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Ponesimod: Bradycardia-Causing Agents may enhance the bradycardic effect of Ponesimod.  Management: Avoid coadministration of ponesimod with drugs that may cause bradycardia when possible. If combined, monitor heart rate closely and consider obtaining a cardiology consult. Do not initiate ponesimod in patients on beta-blockers if HR is less than 55 bpm.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Siponimod: Bradycardia-Causing Agents may enhance the bradycardic effect of Siponimod.  Management: Avoid coadministration of siponimod with drugs that may cause bradycardia. If combined, consider obtaining a cardiology consult regarding patient monitoring.<i> Risk D: Consider therapy modification</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Tofacitinib: May enhance the bradycardic effect of Bradycardia-Causing Agents.<i> Risk C: Monitor therapy</i></p></div>
+<div class="block pri drugH1Div" id="F17916770"><span class="drugH1">Pregnancy Considerations</span>
+<p style="text-indent:0em;display:inline">Beractant is only indicated for use in premature neonates</p></div>
+<div class="block brc drugH1Div" id="F46584610"><span class="drugH1">Breastfeeding Considerations</span>
+<p style="text-indent:0em;display:inline">Beractant is only indicated for use in premature neonates</p></div>
+<div class="block mop drugH1Div" id="F140408"><span class="drugH1">Monitoring Parameters</span>
+<p style="text-indent:0em;display:inline">Continuous heart rate and peripheral O<sub>2</sub> saturation should be monitored during administration; peripheral O<sub>2</sub> saturation, transcutaneous CO<sub>2</sub>, with confirmatory blood gas analysis as needed following administration to prevent postdosing hyperoxia and hypocarbia. If mechanically ventilated, monitor respiratory parameters to minimize volutrauma following improvement in lung compliance.</p></div>
+<div class="block pha drugH1Div" id="F140401"><span class="drugH1">Mechanism of Action</span>
+<p style="text-indent:0em;display:inline">Replaces deficient or ineffective endogenous lung surfactant in neonates with respiratory distress syndrome (RDS) or in neonates at risk of developing RDS. Surfactant prevents the alveoli from collapsing during expiration by lowering surface tension between air and alveolar surfaces.</p></div>
+<div class="block phk drugH1Div" id="F140414"><span class="drugH1">Pharmacokinetics (Adult Data Unless Noted)</span>
+<p style="text-indent:0em;display:inline">Onset of action: Improved oxygenation: Within minutes</p></div>
+<div class="list fbnlist drugH1Div drugBrandNames" id="F140416"><span class="drugH1">Brand Names: International</span><div class="ibn-search drugBrandNames"></div>
+<div class="collapsible-indication brand-names-accordion drugBrandNames"><span class="collapsible-indication-title">International Brand Names by Country</span><div class="collapsible-indication-wrap-frame drugBrandNames"><div class="collapsible-indication-wrap drugBrandNames">For country code abbreviations (<a class="graphic graphic_table" href="/d/html/116421.html" rel="external">show table</a>)<br xmlns=""/><br/><ul>
+<li>
+<span class="countryCode">(AE)</span> <span class="country">United Arab Emirates</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(AR)</span> <span class="country">Argentina</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(AT)</span> <span class="country">Austria</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(AU)</span> <span class="country">Australia</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(BD)</span> <span class="country">Bangladesh</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(BE)</span> <span class="country">Belgium</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(BG)</span> <span class="country">Bulgaria</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(BR)</span> <span class="country">Brazil</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(CL)</span> <span class="country">Chile</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(CO)</span> <span class="country">Colombia</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(CZ)</span> <span class="country">Czech Republic</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(DE)</span> <span class="country">Germany</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(DO)</span> <span class="country">Dominican Republic</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(EC)</span> <span class="country">Ecuador</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(EG)</span> <span class="country">Egypt</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(ES)</span> <span class="country">Spain</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(FR)</span> <span class="country">France</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(GB)</span> <span class="country">United Kingdom</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(GR)</span> <span class="country">Greece</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(HK)</span> <span class="country">Hong Kong</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(HU)</span> <span class="country">Hungary</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(ID)</span> <span class="country">Indonesia</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(IN)</span> <span class="country">India</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(KE)</span> <span class="country">Kenya</span><span class="countrySeparator">: </span><span class="drugName">Survanta sterile</span>;</li>
+<li>
+<span class="countryCode">(KW)</span> <span class="country">Kuwait</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(LB)</span> <span class="country">Lebanon</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(MX)</span> <span class="country">Mexico</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(MY)</span> <span class="country">Malaysia</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(NG)</span> <span class="country">Nigeria</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(NO)</span> <span class="country">Norway</span><span class="countrySeparator">: </span><span class="drugName">Survanta-vent</span>;</li>
+<li>
+<span class="countryCode">(NZ)</span> <span class="country">New Zealand</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(PE)</span> <span class="country">Peru</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(PH)</span> <span class="country">Philippines</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(PK)</span> <span class="country">Pakistan</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(PL)</span> <span class="country">Poland</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(PR)</span> <span class="country">Puerto Rico</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(PT)</span> <span class="country">Portugal</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(PY)</span> <span class="country">Paraguay</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(QA)</span> <span class="country">Qatar</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(RU)</span> <span class="country">Russian Federation</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(SA)</span> <span class="country">Saudi Arabia</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(SE)</span> <span class="country">Sweden</span><span class="countrySeparator">: </span><span class="drugName">Survanta-vent</span>;</li>
+<li>
+<span class="countryCode">(SG)</span> <span class="country">Singapore</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(SI)</span> <span class="country">Slovenia</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(SK)</span> <span class="country">Slovakia</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(TH)</span> <span class="country">Thailand</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(TR)</span> <span class="country">Turkey</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(TW)</span> <span class="country">Taiwan</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(UA)</span> <span class="country">Ukraine</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(UG)</span> <span class="country">Uganda</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span>;</li>
+<li>
+<span class="countryCode">(ZA)</span> <span class="country">South Africa</span><span class="countrySeparator">: </span><span class="drugName">Survanta</span></li></ul></div>
+</div>
+</div>
+</div>
+</div><div class="headingAnchor" id="references"><ol id="reference">
+<li>
+<div class="reference" id="lexi-content-ref-30780152">
+<a name="30780152"></a>Banerjee S, Fernandez R, Fox GF, et al. Surfactant replacement therapy for respiratory distress syndrome in preterm infants: United Kingdom national consensus. <i>Pediatr Res</i>. 2019;86(1):12-14. doi:10.1038/s41390-019-0344-5<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/beractant-drug-information/abstract-text/30780152/pubmed" id="30780152" target="_blank">30780152</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-16061594">
+<a name="16061594"></a>Bloom BT, Clark RH; Infasurf Survanta Clinical Trial Group. Comparison of Infasurf (calfactant) and Survanta (beractant) in the prevention and treatment of respiratory distress syndrome. <i>Pediatrics</i>. 2005;116(2):392-399. doi:10.1542/peds.2004-2783<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/beractant-drug-information/abstract-text/16061594/pubmed" id="16061594" target="_blank">16061594</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-8545223">
+<a name="8545223"></a>Findlay RD, Taeusch HW, Walther FJ. Surfactant replacement therapy for meconium aspiration syndrome. <i>Pediatrics</i>. 1996;97(1):48-52.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/beractant-drug-information/abstract-text/8545223/pubmed" id="8545223" target="_blank">8545223</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-30823947">
+<a name="30823947"></a>Halim A, Shirazi H, Riaz S, Gul SS, Ali W. Less invasive surfactant administration in preterm infants with respiratory distress syndrome. <i>J Coll Physicians Surg Pak</i>. 2019;29(3):226-330. doi:10.29271/jcpsp.2019.03.226<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/beractant-drug-information/abstract-text/30823947/pubmed" id="30823947" target="_blank">30823947</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-32068592">
+<a name="32068592"></a>Herting E, Härtel C, Göpel W. Less invasive surfactant administration: best practices and unanswered questions. <i>Curr Opin Pediatr</i>. 2020;32(2):228-234. doi:10.1097/MOP.0000000000000878<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/beractant-drug-information/abstract-text/32068592/pubmed" id="32068592" target="_blank">32068592</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-29734454">
+<a name="29734454"></a>Kovey K, Barnes K, Beckett RD, Rice M. The efficacy of neutral position beractant administration in neonates. <i>Am J Perinatol</i>. 2018;35(13):1303-1307. doi:10.1055/s-0038-1649483<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/beractant-drug-information/abstract-text/29734454/pubmed" id="29734454" target="_blank">29734454</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-17359406">
+<a name="17359406"></a>Kribs A, Pillekamp F, Hünseler C, Vierzig A, Roth B. Early administration of surfactant in spontaneous breathing with nCPAP: feasibility and outcome in extremely premature infants (postmenstrual age ≤27 weeks). <i>Paediatr Anaesth</i>. 2007;17(4):364-369.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/beractant-drug-information/abstract-text/17359406/pubmed" id="17359406" target="_blank">17359406</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-9469998">
+<a name="9469998"></a>Lotze A, Mitchell BR, Bulas DI, Zola EM, Shalwitz RA, Gunkel JH. Multicenter study of surfactant (beractant) use in the treatment of term infants with severe respiratory failure. Survanta in Term Infants Study Group. <i>J Pediatr</i>. 1998;132(1):40-47.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/beractant-drug-information/abstract-text/9469998/pubmed" id="9469998" target="_blank">9469998</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-33552321">
+<a name="33552321"></a>Ng EH, Shah V. Guidelines for surfactant replacement therapy in neonates. <i>Paediatr Child Health</i>. 2021;26(1):35-49. doi:10.1093/pch/pxaa116<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/beractant-drug-information/abstract-text/33552321/pubmed" id="33552321" target="_blank">33552321</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-29479196">
+<a name="29479196"></a>Olivier F, Nadeau S, Bélanger S, et al. Efficacy of minimally invasive surfactant therapy in moderate and late preterm infants: A multicentre randomized control trial. <i>Paediatr Child Health</i>. 2017;22(3):120-124. doi:10.1093/pch/pxx033<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/beractant-drug-information/abstract-text/29479196/pubmed" id="29479196" target="_blank">29479196</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-24379227">
+<a name="24379227"></a>Polin RA, Carlo WA, Committee on Fetus and Newborn, American Academy of Pediatrics. Surfactant replacement therapy for preterm and term neonates with respiratory distress. <i>Pediatrics.</i> 2014;133(1):156-163.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/beractant-drug-information/abstract-text/24379227/pubmed" id="24379227" target="_blank">24379227</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-30526187">
+<a name="30526187"></a>Ramos-Navarro C, Sánchez-Luna M, Zeballos-Sarrato S, González-Pacheco N. Three-year perinatal outcomes of less invasive beractant administration in preterm infants with respiratory distress syndrome. <i>J Matern Fetal Neonatal Med</i>. 2020;33(16):2704-2710. doi:10.1080/14767058.2018.1557633<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/beractant-drug-information/abstract-text/30526187/pubmed" id="30526187" target="_blank">30526187</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-Manu.1">
+<a name="Manu.1"></a>Refer to manufacturer's labeling.</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-Survanta.1">
+<a name="Survanta.1"></a>Survanta (beractant) [prescribing information]. North Chicago, IL; AbbVie Inc; October 2020.</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-36863329">
+<a name="36863329"></a>Sweet DG, Carnielli VP, Greisen G, et al. European consensus guidelines on the management of Respiratory distress syndrome: 2022 Update. <i>Neonatology</i>. 2023;120(1):3-23. doi: 10.1159/000528914<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/beractant-drug-information/abstract-text/36863329/pubmed" id="36863329" target="_blank">36863329</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-31818537">
+<a name="31818537"></a>Wang XA, Chen LJ, Chen SM, Su PH, Chen JY. Minimally invasive surfactant therapy versus intubation for surfactant administration in very low birth weight infants with respiratory distress syndrome. <i>Pediatr Neonatol</i>. 2020;61(2):210-215. doi:10.1016/j.pedneo.2019.11.002<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/beractant-drug-information/abstract-text/31818537/pubmed" id="31818537" target="_blank">31818537</a>]</span>
+</div>
+</li></ol></div><div id="topicVersionRevision">Topic 9122 Version 142.0</div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

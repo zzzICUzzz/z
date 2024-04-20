@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Rasburicase: Pediatric drug information</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Rasburicase: Pediatric drug information</h1>
+<div class="utdArticleSection utdStyle" id="topicContent"><div id="drugTitle">Rasburicase: Pediatric drug information</div><div class="clear"></div><div id="topicText">(For additional information <a class="drug drug_general" data-topicid="10189" href="/d/html/10189.html" rel="external">see "Rasburicase: Drug information"</a> and <a class="drug drug_patient" data-topicid="11023" href="/d/html/11023.html" rel="external">see "Rasburicase: Patient drug information"</a>)<br/><br/>For abbreviations, symbols, and age group definitions used in Lexicomp (<a class="graphic graphic_table" href="/d/html/57469.html" rel="external">show table</a>)<div class="block black-box-warn drugH1Div" id="F5709399"><span class="drugH1">ALERT: US Boxed Warning</span>
+<div class="collapsible">
+<span class="collapsible-title">Hypersensitivity reactions:</span>
+<div class="collapsible-wrap">
+<p style="text-indent:-2em;margin-left:2em;">Rasburicase may cause serious and fatal hypersensitivity reactions, including anaphylaxis. Immediately and permanently discontinue rasburicase in patients who experience a serious hypersensitivity reaction.</p></div>
+</div>
+<div class="collapsible">
+<span class="collapsible-title">Hemolysis:</span>
+<div class="collapsible-wrap">
+<p style="text-indent:-2em;margin-left:2em;">Do not administer rasburicase to patients with glucose-6-phosphate dehydrogenase (G6PD) deficiency. Immediately and permanently discontinue rasburicase in patients developing hemolysis. Screen patients at higher risk for G6PD deficiency (eg, patients of African or Mediterranean ancestry) prior to starting rasburicase.</p></div>
+</div>
+<div class="collapsible">
+<span class="collapsible-title">Methemoglobinemia:</span>
+<div class="collapsible-wrap">
+<p style="text-indent:-2em;margin-left:2em;">Rasburicase can result in methemoglobinemia in some patients. Immediately and permanently discontinue rasburicase in patients developing methemoglobinemia.</p></div>
+</div>
+<div class="collapsible">
+<span class="collapsible-title">Interference with uric acid measurements:</span>
+<div class="collapsible-wrap">
+<p style="text-indent:-2em;margin-left:2em;">Rasburicase enzymatically degrades uric acid in blood samples left at room temperature. Collect blood samples in prechilled tubes containing heparin and immediately immerse and maintain sample in an ice water bath. Assay plasma samples within 4 hours of collection.</p></div>
+</div>
+</div>
+<div class="visuallyHidden drugH1Div" id="formulinkBodyPlaceholder"><span class="drugH1"></span></div>
+<div class="list ubnlist drugH1Div drugBrandNames" id="F217416"><span class="drugH1">Brand Names: US</span>
+<ul>
+<li>Elitek</li></ul></div>
+<div class="list canbnlist drugH1Div drugBrandNames" id="F52868131"><span class="drugH1">Brand Names: Canada</span>
+<ul>
+<li>Fasturtec</li></ul></div>
+<div class="list_set htclist drugH1Div drugBrandNames" id="F1061808"><span class="drugH1">Therapeutic Category</span>
+<ul>
+<li>
+<span class="list-set-name">Enzyme</span>;</li>
+<li>
+<span class="list-set-name">Uric Acid Lowering Agent</span></li></ul></div>
+<div class="block dop drugH1Div" id="F217427"><span class="drugH1">Dosing: Pediatric</span>
+<div class="collapsible-indication">
+<span class="collapsible-indication-title" data-indication-id="155f2ded-8d85-48d4-9b62-093d309c30f8">Hyperuricemia associated with malignancy</span>
+<div class="collapsible-indication-wrap">
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Hyperuricemia associated with malignancy:</b></p>
+<p style="text-indent:-2em;margin-left:4em;">
+<b>Note:</b> Although weight-directed dosing (mg/kg) with multiple days of therapy is described in the prescribing information and guidelines, (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-18509186','lexi-content-ref-25876990','lexi-content-ref-manu.1']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-18509186','lexi-content-ref-25876990','lexi-content-ref-manu.1'])">Ref</a></span>) recent reports have described cost-reducing practice trends using fixed doses, lower maximum doses, and/or fewer doses while maintaining efficacy (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-28872997','lexi-content-ref-33039358','lexi-content-ref-25838646','lexi-content-ref-15725482','lexi-content-ref-30369730','lexi-content-ref-29905398','lexi-content-ref-28480955','lexi-content-ref-27888526']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-28872997','lexi-content-ref-33039358','lexi-content-ref-25838646','lexi-content-ref-15725482','lexi-content-ref-30369730','lexi-content-ref-29905398','lexi-content-ref-28480955','lexi-content-ref-27888526'])">Ref</a></span>); optimal regimen not established.</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Fixed dosing:</i></p>
+<p style="text-indent:-2em;margin-left:6em;">
+<b>Note:</b> Various regimens have been reported with doses that are fixed based on <span style="text-decoration: underline">rounding to nearest 1.5 mg vial size</span>. Dosing presented is a synthesis of various reported experience; refer to specific protocols.</p>
+<p style="text-indent:-2em;margin-left:6em;">Infants: Very limited data available: IV: 0.15 to 0.2 mg/kg/dose once; maximum dose: 1.5 mg/dose. Additional doses may be needed once daily based on serum uric acid levels (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-28480955','lexi-content-ref-27888526']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-28480955','lexi-content-ref-27888526'])">Ref</a></span>).</p>
+<p style="text-indent:-2em;margin-left:6em;">Children and Adolescents: Limited data available:</p>
+<p style="text-indent:-2em;margin-left:8em;">Weight ≤30 kg: IV: 1.5 mg once. Additional doses may be needed once daily based on serum uric acid levels (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-28872997','lexi-content-ref-33039358','lexi-content-ref-30369730']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-28872997','lexi-content-ref-33039358','lexi-content-ref-30369730'])">Ref</a></span>).</p>
+<p style="text-indent:-2em;margin-left:8em;">Weight &gt;30 to ≤60 kg: IV: 1.5 mg, 3 mg, or 6 mg once. Additional doses may be needed once daily based on serum uric acid levels (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-33039358','lexi-content-ref-25876990','lexi-content-ref-30369730','lexi-content-ref-29905398']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-33039358','lexi-content-ref-25876990','lexi-content-ref-30369730','lexi-content-ref-29905398'])">Ref</a></span>).</p>
+<p style="text-indent:-2em;margin-left:8em;">Weight &gt;60 to ≤90 kg: IV: 3 mg, 4.5 mg, or 6 mg once. Additional doses may be needed once daily based on serum uric acid levels (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-33039358','lexi-content-ref-25876990','lexi-content-ref-29905398']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-33039358','lexi-content-ref-25876990','lexi-content-ref-29905398'])">Ref</a></span>).</p>
+<p style="text-indent:-2em;margin-left:8em;">Weight &gt;90 kg: IV: 6 mg once. Additional doses may be needed once daily based on serum uric acid levels (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-33039358','lexi-content-ref-29905398']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-33039358','lexi-content-ref-29905398'])">Ref</a></span>).</p>
+<p style="text-indent:-2em;margin-left:6em;">Dosing based on various types of study design. The largest report (n=105 for age &lt;18 years, n=81 for &gt;18 years) utilized a weight-based dose of 0.15 mg/kg with a lower maximum dose of 1.5 mg for all patients; based on this dosing all patients ≥10 kg would receive the 1.5 mg dose (Philips 2018). In another report, a set 1.5 mg fixed dose in all patients (n=18, age range: 8 months to 14 years) regardless of weight was used; when the fixed 1.5 mg dose was broken down to weight-based for subjects included, the mean dose was 0.085 mg/kg and the heaviest patient (age 13 years) received 0.04 mg/kg/dose (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-28872997']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-28872997'])">Ref</a></span>). Another trial included 24 pediatric patients (and 31 adults) and utilized a lower dose of 0.05 mg/kg, which was then rounded to the nearest vial size so patients received a fixed dose of 1.5 mg, 3 mg, or 6 mg (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-33039358']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-33039358'])">Ref</a></span>). Another report described 48 patients ≥30 kg receiving a fixed dose of 6 mg (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-29905398']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-29905398'])">Ref</a></span>).</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Weight-directed dosing:</i></p>
+<p style="text-indent:-2em;margin-left:6em;">Infants, Children, and Adolescents: IV: 0.05 to 0.2 mg/kg/dose once daily for 1 to 7 days (average: 2 to 3 days; manufacturer's labeling: up to 5 days) (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-18509186','lexi-content-ref-manu.1']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-18509186','lexi-content-ref-manu.1'])">Ref</a></span>); duration of treatment dependent on plasma uric acid levels and clinical judgment (patients with significant tumor burden may require an increase to twice daily); the following dose levels are recommended based on risk of tumor lysis syndrome (TLS):</p>
+<p style="text-indent:-2em;margin-left:8em;">High risk and baseline uric acid level &gt;7.5 mg/dL: 0.2 mg/kg/dose once daily (duration is based on plasma uric acid levels).</p>
+<p style="text-indent:-2em;margin-left:8em;">Intermediate risk and baseline uric acid level &lt;7.5 mg/dL: 0.15 mg/kg/dose once daily (duration is based on plasma uric acid levels); may consider managing initially with a single dose.</p>
+<p style="text-indent:-2em;margin-left:8em;">Low risk and baseline uric acid level &lt;7.5 mg/dL: 0.1 mg/kg/dose once daily (duration is based on clinical judgment); a dose of 0.05 mg/kg was used (with good results) in one trial.</p></div>
+</div>
+</div>
+<div class="block dorp drugH1Div" id="F51159945"><span class="drugH1">Dosing: Kidney Impairment: Pediatric</span>
+<p style="text-indent:0em;display:inline">There are no dosage adjustments provided in the manufacturer's labeling.</p></div>
+<div class="block dohp drugH1Div" id="F51159946"><span class="drugH1">Dosing: Hepatic Impairment: Pediatric</span>
+<p style="text-indent:0em;display:inline">There are no dosage adjustments provided in the manufacturer's labeling.</p></div>
+<div class="block doa drugH1Div" id="F217417"><span class="drugH1">Dosing: Adult</span><p>(For additional information <a class="drug drug_general" data-topicid="10189" href="/d/html/10189.html" rel="external">see "Rasburicase: Drug information"</a>)</p>
+<div class="collapsible-indication">
+<span class="collapsible-indication-title" data-indication-id="155f2ded-8d85-48d4-9b62-093d309c30f8">Hyperuricemia associated with malignancy</span>
+<div class="collapsible-indication-wrap">
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Hyperuricemia associated with malignancy:</b>
+<b>IV:</b> 0.1 to 0.2 mg/kg once daily for 1 to 7 days (average of 2 to 3 days) with the duration of treatment dependent on plasma uric acid levels and clinical judgment (patients with significant tumor burden may require an increase to twice daily); the following dose levels are recommended based on risk of tumor lysis syndrome (TLS) (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-18509186']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-18509186'])">Ref</a></span>):</p>
+<p style="text-indent:-2em;margin-left:4em;">High risk: <b>IV: </b>0.2 mg/kg once daily (duration is based on plasma uric acid levels).</p>
+<p style="text-indent:-2em;margin-left:4em;">Intermediate risk: <b>IV: </b>0.15 mg/kg once daily (duration is based on plasma uric acid levels).</p>
+<p style="text-indent:-2em;margin-left:4em;">Low risk: <b>IV: </b>0.1 mg/kg once daily (duration is based on clinical judgment).</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Single-dose rasburicase (off-label dosing):</i>
+<b>IV: </b>0.15 mg/kg (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-19250141','lexi-content-ref-15725482']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-19250141','lexi-content-ref-15725482'])">Ref</a></span>) <b>or</b> 3 to 7.5 mg as a single dose (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-Hutcherson.1','lexi-content-ref-23456733','lexi-content-ref-16716134','lexi-content-ref-18503395','lexi-content-ref-16708061']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-Hutcherson.1','lexi-content-ref-23456733','lexi-content-ref-16716134','lexi-content-ref-18503395','lexi-content-ref-16708061'])">Ref</a></span>); repeat doses (1.5 to 6 mg) may be needed based on serum uric acid levels. A meta-analysis of 10 studies determined that the pooled response rate of single-dose rasburicase (doses ranging from 0.05 mg/kg to 0.2 mg/kg) was not inferior to daily rasburicase dosing while allowing for cost savings; monitor closely in case an additional dose may be needed (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-23550846']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-23550846'])">Ref</a></span>). Another meta-analysis of 15 studies determined that a single 6 mg dose was sufficient to lower and maintain uric acid and creatinine levels in adult patients with TLS; if the uric acid level is &lt;12 mg/dL, single doses of 3 mg or 4.5 mg may be considered with close monitoring and if needed, repeat doses (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-27888526']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-27888526'])">Ref</a></span>).</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Prevention in high-risk patients with hematologic malignancies (off-label dosing):</i>
+<b>IV:</b> 3 mg as a single dose (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-25876990']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-25876990'])">Ref</a></span>).</p>
+<p style="text-indent:-2em;margin-left:4em;">
+<i>Manufacturer's labeling:</i>
+<b>IV:</b> 0.2 mg/kg once daily for up to 5 days (use beyond 5 days or administration of more than 1 course is not recommended).</p></div>
+</div>
+</div>
+<div class="block dora drugH1Div" id="F50990372"><span class="drugH1">Dosing: Kidney Impairment: Adult</span>
+<p style="text-indent:0em;display:inline">The renal dosing recommendations are based upon the best available evidence and clinical expertise. Senior Editorial Team: Bruce Mueller, PharmD, FCCP, FASN, FNKF; Jason A. Roberts, PhD, BPharm (Hons), B App Sc, FSHP, FISAC; Michael Heung, MD, MS.</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Altered kidney function:</b> No dosage adjustment necessary for any degree of kidney dysfunction (minimal excretion by the kidney) (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-16597166','lexi-content-ref-18418005','lexi-content-ref-Expert.DOR']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-16597166','lexi-content-ref-18418005','lexi-content-ref-Expert.DOR'])">Ref</a></span>).</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Hemodialysis, intermittent (thrice weekly):</b> Unlikely to be significantly dialyzed (large molecular weight): No supplemental dose or dosage adjustment necessary (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-Expert.DOR']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-Expert.DOR'])">Ref</a></span>).</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>Peritoneal dialysis: </b>Unlikely to be significantly dialyzed (large molecular weight): No dosage adjustment necessary (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-Expert.DOR']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-Expert.DOR'])">Ref</a></span>).</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>CRRT:</b> No dosage adjustment necessary (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-Expert.DOR']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-Expert.DOR'])">Ref</a></span>).</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>PIRRT (eg, sustained, low-efficiency diafiltration):</b> No dosage adjustment necessary (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-Expert.DOR']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-Expert.DOR'])">Ref</a></span>).</p></div>
+<div class="block doha drugH1Div" id="F50987755"><span class="drugH1">Dosing: Hepatic Impairment: Adult</span>
+<p style="text-indent:0em;display:inline">There are no dosage adjustments provided in the manufacturer's labeling; however, baseline liver enzymes did not impact rasburicase pharmacokinetics.</p></div>
+<div class="block adr drugH1Div" id="F217392"><span class="drugH1">Adverse Reactions</span>
+<p style="text-indent:0em;display:inline">The following adverse drug reactions and incidences are derived from product labeling unless otherwise specified. Adverse reactions reported in infants, children, adolescents, and adults unless otherwise indicated.</p>
+<p style="text-indent:-2em;margin-left:2em;">&gt;10%:</p>
+<p style="text-indent:-2em;margin-left:4em;">Cardiovascular: Peripheral edema (adults: 50%)</p>
+<p style="text-indent:-2em;margin-left:4em;">Dermatologic: Skin rash (13%; serious: &lt;1%)</p>
+<p style="text-indent:-2em;margin-left:4em;">Endocrine &amp; metabolic: Hypervolemia (adults: 12%), hypophosphatemia (adults: 17%)</p>
+<p style="text-indent:-2em;margin-left:4em;">Gastrointestinal: Abdominal pain (20% to 22%), constipation (20%), diarrhea (20%), nausea (27% to 58%), stomatitis (15%), vomiting (38% to 50%)</p>
+<p style="text-indent:-2em;margin-left:4em;">Hepatic: Hyperbilirubinemia (16%), increased serum alanine aminotransferase (adults: 11%)</p>
+<p style="text-indent:-2em;margin-left:4em;">Immunologic: Antibody development (infants, children, and adolescents: 11%; adults [IgE]: 6%), development of IgG antibodies (adults: 18%; neutralizing 8%)</p>
+<p style="text-indent:-2em;margin-left:4em;">Infection: Sepsis (adults: 12%)</p>
+<p style="text-indent:-2em;margin-left:4em;">Nervous system: Anxiety (adults: 24%), headache (26%)</p>
+<p style="text-indent:-2em;margin-left:4em;">Respiratory: Pharyngolaryngeal pain (adults: 14%)</p>
+<p style="text-indent:-2em;margin-left:4em;">Miscellaneous: Fever (46%)</p>
+<p style="text-indent:-2em;margin-left:2em;">1% to 10%:</p>
+<p style="text-indent:-2em;margin-left:4em;">Endocrine &amp; metabolic: Hyperphosphatemia (adults: 10%)</p>
+<p style="text-indent:-2em;margin-left:4em;">Hypersensitivity: Hypersensitivity reaction (adults: 4%)</p>
+<p style="text-indent:-2em;margin-left:2em;">&lt;1%:</p>
+<p style="text-indent:-2em;margin-left:4em;">Hematologic &amp; oncologic: Hemolysis, methemoglobinemia</p>
+<p style="text-indent:-2em;margin-left:4em;">Hypersensitivity: Anaphylaxis</p>
+<p style="text-indent:-2em;margin-left:2em;">Frequency not defined:</p>
+<p style="text-indent:-2em;margin-left:4em;">Cardiovascular: Ischemic heart disease, supraventricular cardiac arrhythmia</p>
+<p style="text-indent:-2em;margin-left:4em;">Gastrointestinal: Gastrointestinal infection</p>
+<p style="text-indent:-2em;margin-left:4em;">Respiratory: Pulmonary hemorrhage, respiratory failure</p>
+<p style="text-indent:-2em;margin-left:2em;">Postmarketing:</p>
+<p style="text-indent:-2em;margin-left:4em;">Nervous system: Seizure</p>
+<p style="text-indent:-2em;margin-left:4em;">Neuromuscular &amp; skeletal: Muscle spasm</p></div>
+<div class="block coi drugH1Div" id="F217405"><span class="drugH1">Contraindications</span>
+<p style="text-indent:0em;display:inline">History of anaphylaxis or severe hypersensitivity to rasburicase or any component of the formulation; history of hemolytic reaction or methemoglobinemia associated with rasburicase; glucose-6-phosphatase dehydrogenase (G6PD) deficiency </p></div>
+<div class="block war drugH1Div" id="F217390"><span class="drugH1">Warnings/Precautions</span>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>
+<i>Concerns related to adverse effects:</i></b></p>
+<p style="text-indent:-2em;margin-left:4em;">• Hemolysis: Rasburicase may cause hemolysis (&lt;1%). Severe hemolytic reactions occurred within 2 to 4 days of rasburicase initiation. Screen patients at higher risk for G6PD deficiency (eg, patients of African or Mediterranean descent) prior to therapy.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Hypersensitivity: Serious and fatal hypersensitivity reactions (including anaphylaxis) have been reported. Reactions may occur at any time during treatment (including the initial dose); signs and symptoms may include bronchospasm, chest pain/tightness, dyspnea, hypotension, hypoxia, shock, or urticaria. The safety and efficacy of more than one course of administration has not been established.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Methemoglobinemia: Methemoglobinemia has been reported (&lt;1%), including cases of serious hypoxemia requiring medical intervention. Initiate appropriate treatment (eg, transfusion, methylene blue) if methemoglobinemia occurs.</p>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>
+<i>Other warnings/precautions:</i></b></p>
+<p style="text-indent:-2em;margin-left:4em;">• Hydration: Patients at risk for tumor lysis syndrome should receive appropriate IV hydration as part of uric acid management; however, alkalinization (with sodium bicarbonate) concurrently with rasburicase is not recommended (Coiffier 2008).</p>
+<p style="text-indent:-2em;margin-left:4em;">• Multiple courses: Rasburicase is immunogenic and can elicit an antibody response; efficacy may be reduced with subsequent courses of therapy.</p>
+<p style="text-indent:-2em;margin-left:4em;">• Uric acid degradation: Enzymatic degradation of uric acid in blood samples will occur if left at room temperature, which may interfere with serum uric acid measurements; specific guidelines for the collection of plasma uric acid samples must be followed, including collection in prechilled tubes with heparin anticoagulant, immediate ice water bath immersion and assay within 4 hours (sample should remain on ice until analyzed).</p></div>
+<div class="block foc drugH1Div" id="F217400"><span class="drugH1">Dosage Forms: US</span>
+<p style="text-indent:0em;text-align:justify;display:inline">Excipient information presented when available (limited, particularly for generics); consult specific product labeling.</p>
+<p style="text-indent:-2em;margin-left:2em;text-align:justify;">Solution Reconstituted, Intravenous [preservative free]: </p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">Elitek: 1.5 mg (1 ea); 7.5 mg (1 ea)</p></div>
+<div class="block geq drugH1Div" id="F217386"><span class="drugH1">Generic Equivalent Available: US</span>
+<p style="text-indent:0em;display:inline">No</p></div>
+<div class="block fee drugH1Div" id="F16323780"><span class="drugH1">Pricing: US</span>
+<p style="text-indent:-2em;margin-left:2em;text-align:justify;">
+<b>Solution (reconstituted)</b> (Elitek Intravenous)</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">1.5 mg (per each): $1,289.42</p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">7.5 mg (per each): $6,447.08</p>
+<p style="text-indent:0em;">
+<b>Disclaimer: </b>A representative AWP (Average Wholesale Price) price or price range is provided as reference price only. A range is provided when more than one manufacturer's AWP price is available and uses the low and high price reported by the manufacturers to determine the range. The pricing data should be used for benchmarking purposes only, and as such should not be used alone to set or adjudicate any prices for reimbursement or purchasing functions or considered to be an exact price for a single product and/or manufacturer.  Medi-Span expressly disclaims all warranties of any kind or nature, whether express or implied, and assumes no liability with respect to accuracy of price or price range data published in its solutions.  In no event shall Medi-Span be liable for special, indirect, incidental, or consequential damages arising from use of price or price range data.  Pricing data is updated monthly.</p></div>
+<div class="block dinfoc drugH1Div" id="F52868132"><span class="drugH1">Dosage Forms: Canada</span>
+<p style="text-indent:0em;text-align:justify;display:inline">Excipient information presented when available (limited, particularly for generics); consult specific product labeling.</p>
+<p style="text-indent:-2em;margin-left:2em;text-align:justify;">Solution Reconstituted, Intravenous: </p>
+<p style="text-indent:-2em;margin-left:4em;text-align:justify;">Fasturtec: 1.5 mg (1 ea)</p></div>
+<div class="block admp drugH1Div" id="F52613808"><span class="drugH1">Administration: Pediatric</span>
+<p style="text-indent:0em;display:inline">IV: Infuse over 30 minutes; do <b>not</b> administer as a bolus infusion. During administration, do not filter or mix with other medications. If not possible to administer through a separate line, IV line should be flushed with at least 15 mL NS prior to and following rasburicase infusion. The optimal timing of rasburicase administration (with respect to chemotherapy administration) is not specified in the manufacturer's labeling. In some studies, chemotherapy was administered 4 to 24 hours after the first rasburicase dose (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-20713865','lexi-content-ref-19701676','lexi-content-ref-22015451']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-20713865','lexi-content-ref-19701676','lexi-content-ref-22015451'])">Ref</a></span>); however, rasburicase generally may be administered irrespective of chemotherapy timing.</p></div>
+<div class="block adm drugH1Div" id="F217402"><span class="drugH1">Administration: Adult</span>
+<p style="text-indent:-2em;margin-left:2em;">
+<b>IV:</b> IV infusion over 30 minutes; do <b>not</b> administer as a bolus. Do <b>not</b> filter during infusion. Infuse through a separate line or flush IV line with at least 15 mL saline prior to and following rasburicase infusion.</p>
+<p style="text-indent:-2em;margin-left:2em;">The optimal timing of rasburicase administration (with respect to chemotherapy administration) is not specified in the manufacturer's labeling. In some studies, chemotherapy was administered 4 to 24 hours after the first rasburicase dose (<span class="ref-callout-list"><a aria-label="list of references" class="ref-callout-list-link" lexi-content-ref-id="['lexi-content-ref-20713865','lexi-content-ref-19701676','lexi-content-ref-22015451']" onclick="event.preventDefault(); window.mobileOpenReferences &amp;&amp; mobileOpenReferences(['lexi-content-ref-20713865','lexi-content-ref-19701676','lexi-content-ref-22015451'])">Ref</a></span>); however, rasburicase generally may be administered irrespective of chemotherapy timing.</p></div>
+<div class="block sts drugH1Div" id="F217412"><span class="drugH1">Storage/Stability</span>
+<p style="text-indent:0em;display:inline">The lyophilized drug product and the diluent for reconstitution should be stored at 2°C to 8°C (36°F to 46°F); do not freeze. Protect from light. Reconstituted solution and solution diluted for infusion may be stored for up to 24 hours at 2°C to 8°C (36°F to 46°F). Discard unused product.</p></div>
+<div class="block usep drugH1Div" id="F53568669"><span class="drugH1">Use</span>
+<p style="text-indent:0em;display:inline">Initial management of plasma uric acid levels in patients with leukemia, lymphoma, and solid tumor malignancies who are receiving anticancer therapy expected to result in tumor lysis and subsequent elevation of plasma uric acid (FDA approved in ages ≥1 month and adults).</p></div>
+<div class="block cyt drugH1Div" id="F13299985"><span class="drugH1">Metabolism/Transport Effects</span>
+<p style="text-indent:0em;display:inline">None known.</p></div>
+<div class="block dri drugH1Div" id="F6222722"><span class="drugH1">Drug Interactions</span><br/><br/><div class="clear"></div><p xmlns=""></p><div class="inner" xmlns=""><p style="text-indent:0em;display:inline"><b>Note</b>: Interacting drugs may <b>not be individually listed below</b> if they are part of a group interaction (eg, individual drugs within “CYP3A4 Inducers [Strong]” are NOT listed).  For a complete list of drug interactions by individual drug name and detailed management recommendations, use the Lexicomp drug interactions program by clicking on the “Launch drug interactions program” link above.</p><p xmlns=""></p></div>
+<p style="text-indent:-2em;margin-left:2em;">Dapsone (Topical): May enhance the adverse/toxic effect of Methemoglobinemia Associated Agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Local Anesthetics: Methemoglobinemia Associated Agents may enhance the adverse/toxic effect of Local Anesthetics. Specifically, the risk for methemoglobinemia may be increased. <i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Nitric Oxide: May enhance the adverse/toxic effect of Methemoglobinemia Associated Agents. Combinations of these agents may increase the likelihood of significant methemoglobinemia.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Prilocaine: Methemoglobinemia Associated Agents may enhance the adverse/toxic effect of Prilocaine. Combinations of these agents may increase the likelihood of significant methemoglobinemia.  Management: Monitor patients for signs of methemoglobinemia (e.g., hypoxia, cyanosis) when prilocaine is used in combination with other agents associated with development of methemoglobinemia.  Avoid lidocaine/prilocaine in infants receiving such agents.<i> Risk C: Monitor therapy</i></p>
+<p style="text-indent:-2em;margin-left:2em;">Sodium Nitrite: Methemoglobinemia Associated Agents may enhance the adverse/toxic effect of Sodium Nitrite. Combinations of these agents may increase the likelihood of significant methemoglobinemia. <i> Risk C: Monitor therapy</i></p></div>
+<div class="block pri drugH1Div" id="F217407"><span class="drugH1">Pregnancy Considerations</span>
+<p style="text-indent:0em;display:inline">Based on data from animal reproduction studies, in utero exposure to rasburicase may cause fetal harm. Outcome data related to the use of rasburicase in pregnancy are limited (Middeke 2014).</p></div>
+<div class="block mopp drugH1Div" id="F53568652"><span class="drugH1">Monitoring Parameters</span>
+<p style="text-indent:0em;display:inline">Plasma uric acid levels (every 6 to 8 hours until tumor lysis syndrome resolution), electrolytes, hydration status, CBC, G6PD deficiency screening (in patients at high risk for deficiency); monitor for hypersensitivity.</p></div>
+<div class="block pha drugH1Div" id="F217389"><span class="drugH1">Mechanism of Action</span>
+<p style="text-indent:0em;display:inline">Rasburicase is a recombinant urate-oxidase enzyme, which converts uric acid to allantoin (an inactive and soluble metabolite of uric acid); it does not inhibit the formation of uric acid.</p></div>
+<div class="block phk drugH1Div" id="F217404"><span class="drugH1">Pharmacokinetics (Adult Data Unless Noted)</span>
+<p style="text-indent:-2em;margin-left:2em;">Onset: Uric acid levels decrease within 4 hours of initial administration.</p>
+<p style="text-indent:-2em;margin-left:2em;">Distribution: Pediatric patients: 110 to 127 mL/kg; Adults: ~76 to 138 mL/kg.</p>
+<p style="text-indent:-2em;margin-left:2em;">Half-life elimination: ~16 to 23 hours.</p></div>
+<div class="block phksp drugH1Div" id="F51220841"><span class="drugH1">Pharmacokinetics: Additional Considerations (Adult Data Unless Noted)</span>
+<p style="text-indent:-2em;margin-left:2em;">Race/ethnicity: The geometric mean values of body weight-normalized clearance were approximately 40% lower in Japanese patients than in White patients.</p></div>
+<div class="list fbnlist drugH1Div drugBrandNames" id="F6038797"><span class="drugH1">Brand Names: International</span><div class="ibn-search drugBrandNames"></div>
+<div class="collapsible-indication brand-names-accordion drugBrandNames"><span class="collapsible-indication-title">International Brand Names by Country</span><div class="collapsible-indication-wrap-frame drugBrandNames"><div class="collapsible-indication-wrap drugBrandNames">For country code abbreviations (<a class="graphic graphic_table" href="/d/html/116421.html" rel="external">show table</a>)<br xmlns=""/><br/><ul>
+<li>
+<span class="countryCode">(AE)</span> <span class="country">United Arab Emirates</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(AR)</span> <span class="country">Argentina</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(AT)</span> <span class="country">Austria</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(AU)</span> <span class="country">Australia</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(BE)</span> <span class="country">Belgium</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(BR)</span> <span class="country">Brazil</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(CO)</span> <span class="country">Colombia</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(CZ)</span> <span class="country">Czech Republic</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(DE)</span> <span class="country">Germany</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(EE)</span> <span class="country">Estonia</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(EG)</span> <span class="country">Egypt</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(ES)</span> <span class="country">Spain</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(FI)</span> <span class="country">Finland</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(FR)</span> <span class="country">France</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(GB)</span> <span class="country">United Kingdom</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(GR)</span> <span class="country">Greece</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(HK)</span> <span class="country">Hong Kong</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(IE)</span> <span class="country">Ireland</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(IN)</span> <span class="country">India</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec | Rasbelon | Rasburnat | Rasby | Rasuric</span>;</li>
+<li>
+<span class="countryCode">(IT)</span> <span class="country">Italy</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(JP)</span> <span class="country">Japan</span><span class="countrySeparator">: </span><span class="drugName">Rasuritek</span>;</li>
+<li>
+<span class="countryCode">(KR)</span> <span class="country">Korea, Republic of</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(KW)</span> <span class="country">Kuwait</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(LT)</span> <span class="country">Lithuania</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(LV)</span> <span class="country">Latvia</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(MY)</span> <span class="country">Malaysia</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(NL)</span> <span class="country">Netherlands</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(NO)</span> <span class="country">Norway</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(NZ)</span> <span class="country">New Zealand</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(PL)</span> <span class="country">Poland</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(PR)</span> <span class="country">Puerto Rico</span><span class="countrySeparator">: </span><span class="drugName">Elitek</span>;</li>
+<li>
+<span class="countryCode">(PT)</span> <span class="country">Portugal</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(SA)</span> <span class="country">Saudi Arabia</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(SE)</span> <span class="country">Sweden</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(SG)</span> <span class="country">Singapore</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(SI)</span> <span class="country">Slovenia</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(SK)</span> <span class="country">Slovakia</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(TN)</span> <span class="country">Tunisia</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span>;</li>
+<li>
+<span class="countryCode">(TW)</span> <span class="country">Taiwan</span><span class="countrySeparator">: </span><span class="drugName">Fasturtec</span></li></ul></div>
+</div>
+</div>
+</div>
+</div><div class="headingAnchor" id="references"><ol id="reference">
+<li>
+<div class="reference" id="lexi-content-ref-15292497">
+<a name="15292497"></a>Arnold TM, Reuter JP, Delman BS, et al. Use of Single-Dose Rasburicase in an Obese Female. <i>Ann Pharmacother</i>. 2004;38(9):1428-1431.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/rasburicase-pediatric-drug-information/abstract-text/15292497/pubmed" id="15292497" target="_blank">15292497</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-19250141">
+<a name="19250141"></a>Campara M, Shord SS, Haaf CM. Single-Dose Rasburicase for Tumour Lysis Syndrome in Adults: Weight-Based Approach. <i>J Clin Pharm Ther</i>. 2009;34(2):207-213.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/rasburicase-pediatric-drug-information/abstract-text/19250141/pubmed" id="19250141" target="_blank">19250141</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-18509186">
+<a name="18509186"></a>Coiffier B, Altman A, Pui CH, et al. Guidelines for the Management of Pediatric and Adult Tumor Lysis Syndrome: An Evidence-Based Review. <i>J Clin Oncol</i>. 2008;26(16):2767-2778.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/rasburicase-pediatric-drug-information/abstract-text/18509186/pubmed" id="18509186" target="_blank">18509186</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-14581437">
+<a name="14581437"></a>Coiffier B, Mounier N, Bologna S, et al. Efficacy and Safety of Rasburicase (Recombinant Urate Oxidase) for the Prevention and Treatment of Hyperuricemia During Induction Chemotherapy of Aggressive Non-Hodgkin’s Lymphoma: Results of GRAALI (Groupe d’Etude des Lymphomes de l'Adulte Trial on Rasburicase Activity in Adult Lymphoma) Study. <i>J Clin Oncol</i>. 2003;21(23):4402-4406.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/rasburicase-pediatric-drug-information/abstract-text/14581437/pubmed" id="14581437" target="_blank">14581437</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-20713865">
+<a name="20713865"></a>Cortes J, Moore JO, Maziarz RT, et al. Control of Plasma Uric Acid in Adults at Risk for Tumor Lysis Syndrome: Efficacy and Safety of Rasburicase Alone and Rasburicase Followed by Allopurinol Compared With Allopurinol Alone – Results of a Multicenter Phase III Study. <i>J Clin Oncol</i>. 2010;28(27):4207-4213.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/rasburicase-pediatric-drug-information/abstract-text/20713865/pubmed" id="20713865" target="_blank">20713865</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-Elitek.1">
+<a name="Elitek.1"></a>Elitek (rasburicase) [prescribing information]. Bridgewater, NJ: Sanofi-Aventis; December 2019.</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-Expert.DOR">
+<a name="Expert.DOR"></a>Expert opinion. Senior Renal Editorial Team: Bruce Mueller, PharmD, FCCP, FASN, FNKF; Jason A. Roberts, PhD, BPharm (Hons), B App Sc, FSHP, FISAC; Michael Heung, MD, MS</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-Fasturtec.1">
+<a name="Fasturtec.1"></a>Fasturtec (rasburicase) [product monograph]. Laval, Quebec, Canada: Sanofi-Aventis Canada Inc; August 2016.</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-23550846">
+<a name="23550846"></a>Feng X, Dong K, Pham D, et al. Efficacy and cost of single-dose rasburicase in prevention and treatment of adult tumour lysis syndrome: a meta-analysis. <i>J Clin Pharm Ther</i>. 2013;38(4):301-308. doi:10.1111/jcpt.12061<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/rasburicase-pediatric-drug-information/abstract-text/23550846/pubmed" id="23550846" target="_blank">23550846</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-28872997">
+<a name="28872997"></a>Gopakumar KG, Thankamony P, Seetharam S, P K. Treatment of tumor lysis syndrome in children with leukemia/lymphoma in resource-limited settings-efficacy of a fixed low-dose rasburicase. <i>Pediatr Hematol Oncol</i>. 2017;34(4):206-211. doi:10.1080/08880018.2017.1348415<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/rasburicase-pediatric-drug-information/abstract-text/28872997/pubmed" id="28872997" target="_blank">28872997</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-33039358">
+<a name="33039358"></a>Gupta G, Seth T, Garg V, et al. Efficacy of single low-dose rasburicase in management of tumor lysis syndrome in leukemia and lymphoma patients. <i>Clin Lymphoma Myeloma Leuk</i>. 2021;21(1):e99-e104. doi:10.1016/j.clml.2020.08.024<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/rasburicase-pediatric-drug-information/abstract-text/33039358/pubmed" id="33039358" target="_blank">33039358</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-Hutcherson.1">
+<a name="Hutcherson.1"></a>Hutcherson DA, Gammon DC, Bhatt MS, et al. Reduced-Dose Rasburicase in the Treatment of Adults With Hyperuricemia Associated With Malignancy. <i>Pharmacother</i>. 2006;26(2):242-247.</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-25876990">
+<a name="25876990"></a>Jones GL, Will A, Jackson GH, Webb NJ, Rule S; British Committee for Standards in Haematology. Guidelines for the management of tumour lysis syndrome in adults and children with haematological malignancies on behalf of the British Committee for Standards in Haematology. <i>Br J Haematol</i>. 2015;169(5):661-671.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/rasburicase-pediatric-drug-information/abstract-text/25876990/pubmed" id="25876990" target="_blank">25876990</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-19701676">
+<a name="19701676"></a>Kikuchi A, Kigasawa H, Tsurusawa M, et al. A study of rasburicase for the management of hyperuricemia in pediatric patients with newly diagnosed hematologic malignancies at high risk for tumor lysis syndrome. <i>Int J Hematol</i>. 2009;90(4):492-500.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/rasburicase-pediatric-drug-information/abstract-text/19701676/pubmed" id="19701676" target="_blank">19701676</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-25838646">
+<a name="25838646"></a>Latha SM, Krishnaprasadh D, Murugapriya P, Scott JX. Single dose rasburicase in the management of tumor lysis syndrome in childhood acute lymphoblastic leukemia: A case series. <i>Indian J Nephrol</i>. 2015;25(2):91-94. doi:10.4103/0971-4065.139092<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/rasburicase-pediatric-drug-information/abstract-text/25838646/pubmed" id="25838646" target="_blank">25838646</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-14565793">
+<a name="14565793"></a>Lee AC, Li CH, So KT, et al. Treatment of Impending Tumor Lysis With Single-Dose Rasburicase. <i>Ann Pharmacother</i>. 2003;37(11):1614-1617.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/rasburicase-pediatric-drug-information/abstract-text/14565793/pubmed" id="14565793" target="_blank">14565793</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-15725482">
+<a name="15725482"></a>Liu CY, Sims-McCallum RP, Schiffer CA. A single dose of rasburicase is sufficient for the treatment of hyperuricemia in patients receiving chemotherapy. <i>Leuk Res</i>. 2005;29(4):463-465.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/rasburicase-pediatric-drug-information/abstract-text/15725482/pubmed" id="15725482" target="_blank">15725482</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-23456733">
+<a name="23456733"></a>McBride A, Lathon SC, Boehmer L, Augustin KM, Butler SK, Westervelt P. Comparative evaluation of a single fixed dosing and weight-based dosing of rasburicase for tumor lysis syndrome. <i>Pharmacotherapy</i>. 2013;33(3):295-303.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/rasburicase-pediatric-drug-information/abstract-text/23456733/pubmed" id="23456733" target="_blank">23456733</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-16716134">
+<a name="16716134"></a>McDonnell AM, Lenz KL, Frei-Lahr DA, et al. Single-Dose Rasburicase 6 mg in the Management of Tumor Lysis Syndrome in Adults. <i>Pharmacother</i>. 2006;26(6):806-812.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/rasburicase-pediatric-drug-information/abstract-text/16716134/pubmed" id="16716134" target="_blank">16716134</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-23820942">
+<a name="23820942"></a>Middeke JM, Bruck N, Parmentier S, Bornhäuser M, Schetelig J. Use of rasburicase in a pregnant woman with acute lymphoblastic leukaemia and imminent tumour lysis syndrome. <i>Ann Hematol</i>. 2014;93(3):531-532. doi:10.1007/s00277-013-1836-8<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/rasburicase-pediatric-drug-information/abstract-text/23820942/pubmed" id="23820942" target="_blank">23820942</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-16597166">
+<a name="16597166"></a>Oldfield V, Perry CM. Rasburicase: a review of its use in the management of anticancer therapy-induced hyperuricaemia. <i>Drugs</i>. 2006;66(4):529-545. doi:10.2165/00003495-200666040-00008<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/rasburicase-pediatric-drug-information/abstract-text/16597166/pubmed" id="16597166" target="_blank">16597166</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-30369730">
+<a name="30369730"></a>Philips A, Radhakrishnan V, Ganesan P, et al. Efficacy of single dose rasburicase (1.5 mg) for prophylaxis and management of laboratory tumor lysis syndrome. <i>Indian J Hematol Blood Transfus</i>. 2018;34(4):618-622. doi:10.1007/s12288-018-0938-9<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/rasburicase-pediatric-drug-information/abstract-text/30369730/pubmed" id="30369730" target="_blank">30369730</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-11157020">
+<a name="11157020"></a>Pui CH, Mahmoud HH, Wiley JM, et al. Recombinant Urate Oxidase for the Prophylaxis or Treatment of Hyperuricemia in Patients With Leukemia or Lymphoma. <i>J Clin Oncol</i>. 2001;19(3):697-704.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/rasburicase-pediatric-drug-information/abstract-text/11157020/pubmed" id="11157020" target="_blank">11157020</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-18503395">
+<a name="18503395"></a>Reeves DJ, Bestul DJ. Evaluation of a Single Fixed Dose of Rasburicase 7.5 mg for the Treatment of Hyperuricemia in Adults With Cancer. <i>Pharmacother</i>. 2008;28(6):685-690.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/rasburicase-pediatric-drug-information/abstract-text/18503395/pubmed" id="18503395" target="_blank">18503395</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-manu.1">
+<a name="manu.1"></a>Refer to manufacturer's labeling.</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-24787449">
+<a name="24787449"></a>Relling MV, McDonagh EM, Chang T, et al. Clinical Pharmacogenetics Implementation Consortium (CPIC) guidelines for rasburicase therapy in the context of G6PD deficiency genotype. <i>Clin Pharmacol Ther</i>. 2014;96(2):169-174.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/rasburicase-pediatric-drug-information/abstract-text/24787449/pubmed" id="24787449" target="_blank">24787449</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-Sanofi.1">
+<a name="Sanofi.1"></a>Sanofi manufacturer communication. Elitek (rasburicase). August 19, 2021. Data on file.</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-29905398">
+<a name="29905398"></a>Savva DA, Herrera N, Rohatgi R. Comparison of fixed versus traditional weight-based dosing of rasburicase in a pediatric population. <i>Pediatr Blood Cancer</i>. 2018;65(10):e27236. doi:10.1002/pbc.27236<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/rasburicase-pediatric-drug-information/abstract-text/29905398/pubmed" id="29905398" target="_blank">29905398</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-18418005">
+<a name="18418005"></a>Sestigiani E, Mandreoli M, Guardigli M, et al. Efficacy and (pharmaco)kinetics of one single dose of rasburicase in patients with chronic kidney disease. <i>Nephron Clin Pract</i>. 2008;108(4):c265-271. doi:10.1159/000126906<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/rasburicase-pediatric-drug-information/abstract-text/18418005/pubmed" id="18418005" target="_blank">18418005</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-Smetzer.1">
+<a name="Smetzer.1"></a>Smetzer J, Cohen M, eds. Elitek diluent can be filtered. <i>ISMP Medication Safety Alert! Acute Care Edition</i>. 2017;22(10):3-4. http://www.ismp.org/newsletters/acutecare/issue.aspx?id=1150. Accessed June 7, 2017.</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-28480955">
+<a name="28480955"></a>Syrimi E, Gunasekera S, Norton A, Velangi M, Motwani J, Hiwarkar P. Single dose rasburicase is a clinically effective pharmacoeconomic approach for preventing tumour lysis syndrome in children with high tumour burden. <i>Br J Haematol</i>. 2018;181(5):696-698. doi:10.1111/bjh.14689<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/rasburicase-pediatric-drug-information/abstract-text/28480955/pubmed" id="28480955" target="_blank">28480955</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-16708061">
+<a name="16708061"></a>Trifilio S, Gordon L, Singhall S, et al. Reduced Dose Rasburicase (Recombinant Xanthine Oxidase) in Adult Cancer Patients With Hyperuricemia. <i>Bone Marrow Transplant</i>. 2006;37(11):997-1001.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/rasburicase-pediatric-drug-information/abstract-text/16708061/pubmed" id="16708061" target="_blank">16708061</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-22015451">
+<a name="22015451"></a>Vadhan-Raj S, Fayad LE, Fanale MA, et al. A Randomized Trial of a Single-Dose Rasburicase Versus Five-Daily Doses in Patients at Risk for Tumor Lysis Syndrome. <i>Ann Oncol</i>. 2012;23(6):1640-1645.<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/rasburicase-pediatric-drug-information/abstract-text/22015451/pubmed" id="22015451" target="_blank">22015451</a>]</span>
+</div>
+</li>
+<li>
+<div class="reference" id="lexi-content-ref-27888526">
+<a name="27888526"></a>Yu X, Liu L, Nie X, et al. The optimal single-dose regimen of rasburicase for management of tumour lysis syndrome in children and adults: a systematic review and meta-analysis. <i>J Clin Pharm Ther</i>. 2017;42(1):18-26. doi:10.1111/jcpt.12479<span class="pubmed-id"> [PubMed <a href="https://www.uptodate.com/contents/rasburicase-pediatric-drug-information/abstract-text/27888526/pubmed" id="27888526" target="_blank">27888526</a>]</span>
+</div>
+</li></ol></div><div id="topicVersionRevision">Topic 12760 Version 133.0</div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>
