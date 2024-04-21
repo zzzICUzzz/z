@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Using a graph to take a history from a patient with functional symptoms</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Using a graph to take a history from a patient with functional symptoms</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Using a graph to take a history from a patient with functional symptoms</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_reference">Reproduced with permission from: Stone J, Carson A, Sharpe M. Functional symptoms and signs in neurology: Assessment and diagnosis. J Neurol Neurosurg Psychiatry 2005; 76:i2. BMJ Publishing Group Ltd. Copyright © 2005.</div><div id="graphicVersion">Graphic 88078 Version 1.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

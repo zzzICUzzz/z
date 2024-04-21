@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Management algorithm for patients with abnormal mammograms</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Management algorithm for patients with abnormal mammograms</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Management algorithm for patients with abnormal mammograms</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_footnotes">US: ultrasound; BI-RADS: Breast Imaging-Reporting and Data System.<br/>* BI-RADS 4C and 5 lesions require surgical evaluation prior to percutaneous biopsy. The presence and size of a mass may influence the choice of biopsy method.<br/>¶ Not all high-risk benign lesions require surgical excision; practices also vary between excision and observation for lesions with atypia. Refer to UpToDate topic on atypia and lobular carcinoma in situ for details.</div><div id="graphicVersion">Graphic 65978 Version 4.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

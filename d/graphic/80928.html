@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Decision tree</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Decision tree</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Decision tree</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_lgnd">A decision tree starts with a decision node (square), which represents the decision to be made, followed by chance nodes (circles), which represent the possible events given the choices. Each outcome is associated with a probability (p<sub>1</sub> through p<sub>4</sub>) that represents its likelihood of occurring. Each branch eventually ends in a terminal node or outcome (boxes) representing the value of that outcome.</div><div id="graphicVersion">Graphic 80928 Version 1.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

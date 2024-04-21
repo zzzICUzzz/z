@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Cardiac arrest airway algorithm</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Cardiac arrest airway algorithm</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Cardiac arrest airway algorithm</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_footnotes"><p>* Assess for effective ventilation clinically by observing chest rise, mask or device seal, and bag compliance while squeezing.</p>
+¶ Other reasons for intubation include airway soiled with emesis or blood, need for a procedure.</div><div class="graphic_reference">Adapted from Brown: The Walls Manual of Emergency Airway Management, 6th edition, Philadelphia, Wolters Kluwer, 2022 and The Difficult Airway Course (<a href="https://www.theairwaysite.com/" target="_blank">www.theairwaysite.com</a>). Used with permission.</div><div id="graphicVersion">Graphic 140481 Version 1.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

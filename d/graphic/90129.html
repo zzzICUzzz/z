@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Algorithm for diagnosing progressive multifocal leukoencephalopathy</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Algorithm for diagnosing progressive multifocal leukoencephalopathy</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Algorithm for diagnosing progressive multifocal leukoencephalopathy</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_footnotes">CNS: central nervous system; CSF: cerebrospinal fluid; FLAIR: fluid-attenuated inversion recovery; JCV: JC virus; PML: progressive multifocal leukoencephalopathy; PCR: polymerase chain reaction; PRES: posterior reversible encephalopathy syndrome; VZV: varicella-zoster virus.</div><div class="graphic_reference">Reproduced with permission from: Berger JR, Aksamit AJ, Clifford DB, et al. PML diagnostic criteria: consensus statement from the AAN Neuroinfectious Disease Section. Neurology 2013; 80:1430. DOI: <a href="https://www.neurology.org/doi/10.1212/WNL.0b013e31828c2fa1" target="_blank">10.1212/WNL.0b013e31828c2fa1</a>. Copyright © 2013 American Academy of Neurology. Unauthorized reproduction of this material is prohibited.</div><div id="graphicVersion">Graphic 90129 Version 10.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

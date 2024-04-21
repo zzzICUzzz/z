@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Train-of-four count (TOFC) - Moderate block</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Train-of-four count (TOFC) - Moderate block</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Train-of-four count (TOFC) - Moderate block</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_lgnd">Pattern of TOF stimulation (lower panel) and the evoked muscle response during partial (moderate) neuromuscular block (upper panel). Note there is no muscle response to the fourth TOF stimulus. For further information, refer to UpToDate content on monitoring neuromuscular blockade.</div><div class="graphic_footnotes">mA: milliamperes; T<sub innerhtml="">1</sub>: first twitch in sequence; T<sub innerhtml="">2</sub>: second twitch in sequence; T<sub>3</sub>: third twitch in sequence; T<sub>4</sub>: fourth twitch in sequence; TOF: train-of-four; TOFC: train-of-four count.</div><div id="graphicVersion">Graphic 114139 Version 3.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

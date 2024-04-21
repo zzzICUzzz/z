@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Simplified pacemaker algorithm for use with rate adaptive pacemakers</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Simplified pacemaker algorithm for use with rate adaptive pacemakers</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Simplified pacemaker algorithm for use with rate adaptive pacemakers</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_lgnd">Simplified algorithm for the choice of pacemaker mode assuming that a rate-responsive pacemaker (DDDR or VVIR) will be used.</div><div class="graphic_reference">Courtesy of MD McGoon, MD.</div><div id="graphicVersion">Graphic 76446 Version 2.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

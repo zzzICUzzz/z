@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Ventilator flow and pressure waveforms</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Ventilator flow and pressure waveforms</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Ventilator flow and pressure waveforms</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_lgnd">Airway pressure (Paw) and flow rate shown for constant, decelerating, and sinusoidal inspiratory flow waveforms. Inspiratory time and tidal volume were held constant. Peak inspiratory airway pressures are similar with all waveforms, but mean airway pressure is highest with the decelerating inspiratory flow wave.</div><div class="graphic_reference">Redrawn from Banner, MJ, Lanpontang, S, In: Current Respiratory Care, Kacmarek, RM, Stoller, JK (Eds), BC Decker, Philadelphia, 1988.</div><div id="graphicVersion">Graphic 75089 Version 2.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

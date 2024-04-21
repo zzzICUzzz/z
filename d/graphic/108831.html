@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Algorithm for initial treatment of SMVT in responsive patients with a pulse</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Algorithm for initial treatment of SMVT in responsive patients with a pulse</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Algorithm for initial treatment of SMVT in responsive patients with a pulse</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_footnotes">SMVT: sustained monomorphic ventricular tachycardia; CV: cardioversion.<br/>* Hemodynamically unstable patients have evidence of hemodynamic compromise, such as hypotension, altered mental status, chest pain, or heart failure. Hemodynamically stable patients should have none of these findings.<br/>¶ Initial choice of pharmacologic agents includes:
+
+<ul>
+<li>Intravenous lidocaine (1 to 1.5 mg/kg [typically 75 to 100 mg] at a rate of 25 to 50 mg/minute; lower doses of 0.5 to 0.75 mg/kg can be repeated every 5 to 10 minutes as needed), which may be more effective in the setting of acute myocardial ischemia or infarction</li>
+<li>Intravenous procainamide (20 to 50 mg/minute until arrhythmia terminates or a maximum dose of 17 mg/kg is administered)</li>
+<li>Intravenous amiodarone (150 mg IV over 10 minutes, followed by 1 mg/minute for the next six hours; bolus can be repeated if VT recurs)</li>
+</ul>
+
+Δ Electrical cardioversion should be synchronized if possible, using 100-joule biphasic shock or 200-joule monophasic shock. If first shock is unsuccessful, energy level should be escalated on subsequent shocks.<br/><span class="lozenge">◊</span> Conditions associated with SMVT include myocardial ischemia, electrolyte disturbances (eg, hypokalemia, hypomagnesemia), drug-related proarrhythmia, and heart failure.</div><div id="graphicVersion">Graphic 108831 Version 1.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

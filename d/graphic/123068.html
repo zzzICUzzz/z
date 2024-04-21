@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Target controlled infusion using a three compartment model</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Target controlled infusion using a three compartment model</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Target controlled infusion using a three compartment model</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_lgnd">Target controlled infusion using a three compartment model used for a single medication infusion (eg, propofol) in a particular patient.</div><div class="graphic_reference">Adapted by permission from Springer: Current Anesthesiology Reports. Morton NS. Total intravenous anesthesia (TIVA) and Target Controlled Infusions (TCI) in Children. Curr Anesthesiol Rep 2013, 3:37. Copyright © 2012. <a href="https://link.springer.com/journal/40140" target="_blank">https://link.springer.com/journal/40140</a>.</div><div id="graphicVersion">Graphic 123068 Version 6.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

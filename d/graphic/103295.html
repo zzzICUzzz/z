@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Algorithm for evaluation of the patient with suspected sick sinus syndrome (SSS)</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Algorithm for evaluation of the patient with suspected sick sinus syndrome (SSS)</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Algorithm for evaluation of the patient with suspected sick sinus syndrome (SSS)</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_footnotes">H&amp;P: history and physical; ECG: electrocardiogram; ETT: exercise treadmill test; PPM: permanent pacemaker; SSS: sick sinus syndrome.</div><div id="graphicVersion">Graphic 103295 Version 1.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

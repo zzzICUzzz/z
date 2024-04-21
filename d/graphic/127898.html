@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Example of how patients are managed based on risk estimates (using a common low-grade screening abnormality, HPV-positive ASC-US)</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Example of how patients are managed based on risk estimates (using a common low-grade screening abnormality, HPV-positive ASC-US)</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Example of how patients are managed based on risk estimates (using a common low-grade screening abnormality, HPV-positive ASC-US)</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_lgnd">The initial screening result would lead to colposcopy (immediate risk 4.2%). Colposcopy of less than CIN 2 has a 5-year risk of 3.2% (1-year return). At the 1-year return visit, a second HPV-positive ASC-US result has an immediate risk of 3.1% (1-year return). If the patient has a repeat abnormal screen at the next follow-up, colposcopy is recommended. If the HPV-based test is negative, return in 3 years is recommended. NA, not applicable because stable risk estimates are not available.</div><div class="graphic_footnotes">HPV: human papillomavirus; ASC-US: atypical squamous cells of undetermined significance; CIN: cervical intraepithelial neoplasia; NILM: negative for intraepithelial lesion or malignancy; NA: not applicable because stable risk estimates are not available.</div><div class="graphic_reference">From: Perkins RB, Guido RS, Castle PE, et al. 2019 ASCCP Risk-Based Management Consensus Guidelines for Abnormal Cervical Cancer Screening Tests and Cancer Precursors. J Low Genit Tract Dis 2020; 24:102. DOI: <a href="https://journals.lww.com/jlgtd/FullText/2020/04000/2019_ASCCP_Risk_Based_Management_Consensus.3.aspx" target="_blank">10.1097/LGT.0000000000000525</a>. Copyright © 2020 the American Society for Colposcopy and Cervical Pathology. Reproduced with permission from Wolters Kluwer Health. Unauthorized reproduction of this material is prohibited.</div><div id="graphicVersion">Graphic 127898 Version 3.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

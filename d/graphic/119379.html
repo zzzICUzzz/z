@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Algorithmic approach to risk stratification of asymptomatic patients with Wolff-Parkinson-White ECG pattern</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Algorithmic approach to risk stratification of asymptomatic patients with Wolff-Parkinson-White ECG pattern</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Algorithmic approach to risk stratification of asymptomatic patients with Wolff-Parkinson-White ECG pattern</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_footnotes"><p>AF: atrial fibrillation; AVRT: atrioventricular reentrant tachycardia; ECG: electrocardiogram; EPS: electrophysiology studies; WPW: Wolff-Parkinson-White.</p>
+<p>* Preexcitation on the surface ECG is identified by a short PR interval (less than 120 milliseconds) leading into QRS, which is widened with a slurred upstroke (delta wave). Preexcitation is defined as intermittent when an ECG at any point in time shows the loss of preexcitation.</p>
+<p>¶ In patients who are unable to perform exercise testing (eg, very young patients), ambulatory ECG monitoring or, rarely, sodium channel blocker challenge with procainamide is an alternative to assess for persistent or intermittent preexcitation.</p>
+<p>Δ All approaches to risk stratification in patients with ventricular preexcitation are imperfect and can be associated with false positives as well as false negatives.</p>
+<p>◊ Options for invasive EPS include the standard transvenous intracardiac EPS or a transesophageal atrial EPS.</p>
+<p>§ Refer to the UpToDate topic on treatment of symptomatic arrhythmias in patients with WPW.</p>
+¥ For most asymptomatic patients with preexcitation and no high-risk features identified on EPS, particularly those over age 35 to 40 years, we suggest observation. However, in some asymptomatic patients, particularly children, some electrophysiologists discuss and/or proceed with catheter ablation as a therapeutic option even in the absence of high-risk features. Refer to UpToDate content on treatment of WPW for additional information.</div><div id="graphicVersion">Graphic 119379 Version 4.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

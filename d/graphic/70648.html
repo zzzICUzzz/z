@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Algorithm (Milstein) to localize accessory pathway in preexcitation syndrome</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Algorithm (Milstein) to localize accessory pathway in preexcitation syndrome</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Algorithm (Milstein) to localize accessory pathway in preexcitation syndrome</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_lgnd">Mapping algorithm for localization of accessory pathway in the preexcitation syndrome using the morphology of the delta wave on the electrocardiogram.</div><div class="graphic_footnotes">LBBB: left bundle branch block; RAS: right anteroseptal; LL: left lateral; PS: posteroseptal; RL: right lateral.<br/>* + QRS ≥90 msec in L1 and rS in V1 and V2.</div><div class="graphic_reference">Reproduced with permission from Milstein S, Sharma AD, Guiraudon GM, et al. Pacing Clin Electrophysiol 1987; 10:555. Copyright © 1987 Futura Publishing Company.</div><div id="graphicVersion">Graphic 70648 Version 5.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Evaluation of a simple decision tree</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Evaluation of a simple decision tree</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Evaluation of a simple decision tree</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_lgnd">The expected value of any node is simply the probability-weighted average of the outcomes across all of the branches of the node. This is calculated by taking the sum of each branch's value times its probability. For Choice 1 above, the average life expectancy of a cohort of patients undergoing that therapy would consist of the combination of 45 percent who lived 10 years and 55 percent who lived 12 years, for an average of 11.1 years.</div><div id="graphicVersion">Graphic 64670 Version 1.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

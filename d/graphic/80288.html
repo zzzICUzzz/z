@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Diagnosis of obstructive sleep apnea (OSA) algorithm</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Diagnosis of obstructive sleep apnea (OSA) algorithm</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Diagnosis of obstructive sleep apnea (OSA) algorithm</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_footnotes">OSA: obstructive sleep apnea; AHI: apnea-hypopnea index.<br/>* Excessive daytime sleepiness is a common complaint with multiple potential causes. For additional information, refer to UpToDate topic text on the evaluation of excessive daytime sleepiness.<br/>¶ Mission-critical workers should only have in-laboratory polysomnography (not home sleep apnea testing).<br/>Δ Such as resistant hypertension, unexplained pulmonary hypertension, or secondary polycythemia.</div><div id="graphicVersion">Graphic 80288 Version 9.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

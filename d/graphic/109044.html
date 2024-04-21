@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>CT 3D reconstruction of a cuboid fracture</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">CT 3D reconstruction of a cuboid fracture</h1>
+<div class="graphic"><div class="figure"><div class="ttl">CT 3D reconstruction of a cuboid fracture</div><div class="cntnt"><img src="data:jpeg;base64,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"/></div><div class="graphic_lgnd">The image above shows a three-dimensional (3D) reconstruction of a CT scan of the left foot. The image is in an anterolateral orientation and shows an isolated cuboid fracture that is minimally displaced (arrow).</div><div class="graphic_footnotes">CT: computed tomography.</div><div class="graphic_reference">Courtesy of Anthony Beutler, MD, and Shane Larson, MD.</div><div id="graphicVersion">Graphic 109044 Version 1.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

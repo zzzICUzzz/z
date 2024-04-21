@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Definition of sensitivity, specificity, and predictive values</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Definition of sensitivity, specificity, and predictive values</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Definition of sensitivity, specificity, and predictive values</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_footnotes">TN (true negative): negative exercise ECG and negative angiogram; TP (true positive): positive exercise ECG and positive angiogram; FN (false negative): negative exercise ECG and positive angiogram; FP (false positive): positive exercise ECG and negative angiogram.</div><div id="graphicVersion">Graphic 50121 Version 3.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

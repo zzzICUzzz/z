@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Algorithm for identifying causes of bleeding symptoms in children based on results of coagulation screen</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Algorithm for identifying causes of bleeding symptoms in children based on results of coagulation screen</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Algorithm for identifying causes of bleeding symptoms in children based on results of coagulation screen</div><div class="cntnt"><img src="data:png;base64,iVBORw0KGgoAAAANSUhEUgAAAmYAAAEjBAMAAABqf9D7AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAJ1BMVEX///8AAACIiIhHR0e5ublqamoiIiKZmZnd3d0zMzMRERHu7u7Nzc3U5GWWAAAbm0lEQVR42uydz28b1xHHZ3/wh34cdsjlL0kHMoxZWLksJSt20MtuogiB0MMysty4zYEU7DpodFg6hlEnF7IGHEfOQTRioK17sAUHcmAdqNYVGudCIZdUf1XnLSlDPyyasp6sjTlfUOSa4o7nfTjv7ZvVzj4AFovFYrFYLBaLxQqWFHwV9Tmz17YTM2NmzIyZMbNfATPFZmYvbX4Oz+1lphuqxcwObn5oMXpmPzOOs27NHyRGsyNeCb0ZNObgivIRZjZwwaL3CpX7ACX8pRF3nKu4qOKi01hjZvSoAaxEnkBo+XvdZ2ZDfZr6Jr1XuLMKYIJmgZPdas3Rw7GnmBnFmQfRNKTH8bN0m9nvinjNUM/Re3m4AlBIbHjgQBWT9HBgnpnReHYpemZFXTND5RXVKOiryofL69dGKc7UJz4zGPyC4gy2WuLBzNrNL+EnNHYVk+Vq0riVWVWmH1a+avjjmWA29DDzXxrPQMUEPZjZ3uarZZ7THrL5uRGbmXHuxMyCw0xf7PxD8/Z/YE8OFb3EzETzw7aDf0NEe+nfeC3ZnNMwvpeZjpm6f1bbmG0yM/q5AU5tEvIAp2BCT7pzmrtk72WW1iza0rIw4DEz+pknZgXB7BIxS5nEbLMFUcw8zYy0cmj5m2m13GYWspgZ/ZwF5849YqYvE7P0u9Q3V8Sv6tOm9qnpx1l9Ov2j22YWYWYdZnifmBERYrYZ1/54D2BYJJ2h34voEpuYaTKzPX0TiNl6UzALxWk88yBESacR+nRMs/zNtD+ycd/ceQwQzCjS8Fo6Ssx0E/SHFWLmljKWv/mcGR8DOnON9vZ3vezAcw2/+ZHF3j/Pc1rOnZgZM2NmzIyZMbNDNZ+vc5QpgxEwM2bGzJgZM2MxM2bGzF67MMAyODLeGN+YGTNjZuwXM2Nm7BszY7FYLBaLdbIy97+VD6qvThCcWC8HmZkyFjGCx+z0o0Az+1MQmS3MQwa999D9Bt18rl5J4HKVtoLCbPw3BjnmOFXhWB3vB4GZPjrbjKkPJvX05PCjgq1kL9w2ITIaGGZXYwY55mTbjkXNIDALIXqmnp6Ipq/A2Twodh7MG5gODLOvKgY55rQd+xlTQWD2zFaXzVCZmE0Omx1ml/XgMPOqFGdmh9nFoUAw+xKiY5i0iZkYz9qu5ZIBYhb2x7O2Y7PJQDBjsVgsFovFYrHeJBnsGzNjZuwXM2Nm7BszY2ZSpPTBBf3SmQXRL2bGzJgZM2NmzCyQ5qItBX6RYOdbMIZrspySakw+s6F49YtRCXbWz6aKTVlOSTV2DGFbQnQlmAkhJqT5JNXYMTDbRGxJMDOMOCbNJ6nGjoHZrvtbH0FFtOQ5JdWYfGYRTEmxU0VPnlNSjR3DXOPhAylmBkck+iTV2DEwy2WlmFFjEn2SauwYmNXlzISiaZmzxnSwmemS7NgynbKDzawfdGhmMk6ZSjz7Ku9k7jEyMyR8R4a8r1taP1GYGTNjZsyMmR12h6HHL/r/d0+Idq7o23tDJ7ra7MWU6r7oLIJ5csxUjFfpeB+xMJ2zwlnE7FGYFfGUf8CPSWGmYayEaIWnsYytqoqZWkCYlW9ltSxonmKPr4azKX30KMym9DEwdy8xfRRmrtOiz8+AA8lyVS0PuEFhprnEbKmp2IXxjWxKfQDwnihVvYm/VexivLNy14y/hLRmdWtoCb0pWO0w0zPJVury7Ig3oeI/lUYq2sCPGgl6tnOHYDZIXyV8TMxiK8Rsg/rAQ7Scv2eapZETZbblEbN5CoDCswtZzFAcTA6PFezCT3eV9z//8e32yl2r+oMV/SXMILQ8FUlvMxvTrLhYfHpiszWnZAvasvKBu/SzpRyKWbWm2EOjxCyVy6ntU9ths2oV34qf7HiWEGskrQlmKmZTW7boTqk8UTylfOiq5/2Vu84hptMv65vjWC6it83MUMumWHx64jrMKPb1sKfMIF73DjeepcgtVSy3nNpAtXzRD2bTsUqnYifbN8m3rL4smEGFxrM1EEt35aHw0wLF2cbb7ZW7VgFWVCNU7tLQqBkqTwE8ZzbgmrSPiLNJYqZZmx+4QM+2U+s9zsT4N2ALZhH0xzOVAqxqld5KnDwzijRMF6CaTUGhRke/rFjAqz2eGSG3lKTxrFzNGGLFroMbWkzuZEZHORO2xzP7+nCl8lEDv6007Hk4HLMtslVOQUUtRxdgqPGDiLNs8YcTZNbWerPLlKrtvNCzZs+TKn3fLzc78fXdIedn87+KPGAvs2KmduiJ6F5mOsY4d+LciZlJ38E5VENnuiWP1pGYmS/x63UzU/BSxc8W7Vdl5qebcfjYSWqxqOngpaMxw+SM748ZYGbeuHAi/+px1k43hx5TxlC5bTq1i0djRokcHUp27REoZmFcVLzNWodZoXKf5mddbkN0ADM/3YxYxGzunCmW6wZNJJkJdSKVHCkmIpjomVmF8tXhdIeZ+ufMUzOVy7RM4VZjTa8gWaXnE46zy4p3YTvOCndWKd/schuiA5j56eaATczOx6hvniNmlnPT2nr/km6GrSpA9V89x1nYTYXK28woIYkNj4UsU7hlTw26juYubWVPNs7+gwkFF7eZ5eEK5ZtdbkN00Hgm0k2auBuaWzSdrx+LHKN+y9OuitDLOpEG/rVHZkMldDHZ2mZmaeeNSFkvm75b8/WaE0as1k6WWbV5T/FgBzPKN7vchuigvilGnHmfWV2MZ03B7Ka1+X6bWdh1emUWGR1wU/7UuM1s6ZoxTHmv6bs1P5jNUW5CzyfK7Bu8vJuZGDgOvg1RN2ZrQMdNN0TMNLGudP02jWdtZipWemUWbSR3MsM4bW2PZzAfwUq0gV9j4w2Z0+rL8ue0+48cBc4DDslMxUfMjPNNZsbMmBkzY2aBZsbXOXIt4smbY2bMjJkxM2bWt8z6oR5ddnl7P9SjSy9v74N6dOnl7X1Qjy69vL0f6tFll7f3Qz267PL2fqhHl13e3g/16LLL2/uhHl12eXtf1KNLNsd6kd7o87Qy73oqL0E15CW5Ek1tn1xQ5MWWwsyYGTNjZv3JzC+/0eLH2VBxjdRrY6Yv9jIxffxSZlqnGuB5edK6DQuYLqa235ttmi8q+DK62SDdhdAkXsXzWPYP/TetyJr4JL1guguzEGZsJwk5cfXy0ZnpT6A+Dn+AuTDGKa8J2wd8b9tXt+WfPx3IrIHZ5xVzz9urufqoYmvZ7ffy3TvUC22AuAzxmT1BO7cvKjWHFpaEw+JlV9HrTmbCVMgNjelGaDF65qjMBkRN2iqcXm/9o3U37N38HODGwbG+g9l6rQdmVbFW8rv4WSOhmyn6bkJWm9kMGt/gJ5gyNXwkFvksVO6rGHuiLr+A2U4bseKICNcvYQczmJ3yN+jFZxbFTKfQfS8zmNKNQfvofdNnNgcLA+98/85Y2INHoqjxf2jlMq0kljJQzDRF7UIEE3X8WJTbZ/AvmChhayD7UmYYh8jopLjS2tqaFpn+o2d2m9mKbkxF1/JgFmr+VuHO6qYNV8LePma7bfh3TtDciV3MtPafF+ilE2f16Xah+z5med1QapKYbT59op45c+YB+TwBcBZO/5+983lqI7nieGt+SELSQS1GQgIOo4xXXvAeBrFkK/EeZrxeV0Iuo8W41sllRGFDZTkMLpeckAuCKso4e0D2EruWHMwPF3HgIIPXVSYX4d24yuSfynvdEgZJSELgH9ioLI8kzHj6o9ev3/d19xuCewxC8mj2wgKwEfXtAu5YYNvtQ4Kt4TYXWW3Azv5KoyPQXrcj3sTLH8gQxswblYJp2gbnwbXr7NVIBuz3UrW+ue8cqSV0pdH9dtbL7ayXMwv00Jtso3t1O3OOiVnLJ1bg0blHFrezL8h07BbuMRB019c44SGqrlu4Y4Ftt1c8wCwRztdmxt0XuSZFwUY6APpF/HD7LinamRDswz7O7Yytfwc727pbOQaUnwN3BD/Wi8zgd4jiXb3jwAs8uAwfsJl7cpNvdC8bAywZvip5+Oj+jLuqPxvk34UfDfBnNttwLIzhHgNgdmEBL1w1Zyxzak7A7fbArIsQn9PSCLN4JDpLz+fQF+GHLVHCx83xGHixKDDj/gxejQi0U16rxmzvOSQ2n5NyRD5uaqVxUyuNmzt5Ii2mgZmVilWOmwUYN1P022Nh5o8Q8luSysO4mccxIE4d3GMAzAzcMiPSkEDT3y+iP7OB2U54MZavPQY09RDVQ8ZnP1S8+OYdxbQVsYZYLRmtHb8OMPMnVgd4xhpg1kBMe6qdTvXmKbMPl9kzVf6B2lxHJohbjZAt+64/5O8cJL+Z/JiYmY03NNDZP2kW43tkRo1xe0Balh4Oigvvs52xK44HD8/sCSYeSLKidkuJmdJAQ7uGCTLDABWZter37H65W9YHr+YJROPS4qqQjDaGPxdzKrVz08x6iiUTdg2gl0xs02kIHK0iM7+Cg2fVoONA7US6VjgzcgRmrrldZnFK1dDKkO179eqVmoJfBmY+dWJjuL6d4eW0WFWLNzarnfrKO82zT1egRUkehCGzQPBwfZMxGxokMXqLtiUhxu9vd1Ksnt4AGTGxRsH12E80Wp/Z1SGyt2+2pX5li91yPH91osDk+KRrSm+QmY75FCdG4UJe6KkmFnSVMYNWeHOt6Qir4uAQadkqMcOSfz2xZ3RAjdOf1Xjkl1h74RJNqFtGPWZSR38eFD30TZCDS541UIKPJMYMaxSMbjkN2JkUNZk/w+pojNnOhi0sS4/JoPAvMo921r3RILNAqrXAcgwPFeibylHtDJdLjW9izTlWxQF7a77ETETR2XImKH6mEPGzdflzRbSWiMfO1LUzmVIHlBYwy+AChmg3HY1yZqxGgbsRZjPFcROrozFmRLADIX8YRHHif1HuzxpkBorzAeYYpGgivKEnwvkj21mOzjjAjJVLgEtZ1kvM3A4mNy4HxbM2Ec9SOhyUv40S/8r9umPAliHMAbM+bmfCuiLbS0IwIa3yGgUNMSs9tqq0UKrvyPeeqsWRWY4BTNZ3QydNJIX2jQF9BFoxDXaWZ+USCLnzl9XXdrZ9YQFzftzO4JUMdka6HtZlNkG8ncBsvOTPeiL2eCQ4E1vlNQrcTiraMLNjCPVkGpu8BDYb+cNibOP8Yix/VGbQitu51ufMn+0fNwPpnIFZPJH7M7A42eqn6hO1qfhMsN+1DlCOPm42++jPN8Ms3m58xMzm367e5PNOgp6snNtDCAI91ZsHM3NdDJYZDB6fGMmq0fNJZVZRaTd5/Ha2/YFp9BIzhbVO2c/MrIJ2b0NFrG8W7Yk9Db48iwXO0M5enlHa4pGCYubWsRaRItKFdBjHZniOuXJtUjo05F/5QJg1YWcQ6bwYFiCm7hxmBc6AWeewFAqsy7piGn04witd+bsmiwGTO6z8tk8lGY9dl5l5ZGbJ8iZKtPoQp1XvdtXmnbRRXm29Bye2/wshuEgfKmxCZowVeJ+llulZDOEht+66WD75zc6hum7oICgut1tMPACzdksKeii1FYzAyQhRUjRsotYgyXEacRmZ7CTZ+r1TGZ9Z+zGZh05ulOU11GQJAf6FPmPPXJy2F5S2J7lRh9kDUd/5iksvEFwKzmbiE82BFXjvDayYokXwYPS5Kia/OTNQDALE1MoSEw/ATFmSggHolZxZbwDsjOzaGVxSBuxM+LFSO8nWcdkZ105SZwWzPQsbtCbtTHU7YqYovWRkBm2EJ5oDK/A+Qr4wpdyXeCCD4KjKJr/ZOcAqdYIx9c43KB7Qn+1cDpI4tTizlzGw3DZgxv1ZGJhJiyF/qCoz061u/Y55SCKlqaCn6C/pNpnCn87ZBjb7lenN1aSbjqXoFDhRlsWwSSoCapp7VBrWQAuDO2YF1sRzPe34Fnoe63Z84UlVZlhwvSi95F07+8/QDqZhklIUbAS+7D52YMwqJ79rZOxqPaS16swEOyFad14MY0LExOSGz+kn5Cp8933e9UMy80STWKjSQCfKshhoQ8iMeVTomz51YlM3J8m2oYlnOjDVt/mgmPHgC0+qMvPmwiXpJVsp7s+etw+xOxyAP0BHJtIxPHBmWOX9WJiV7tRRzsy/ct9NKSh0kp0EZonwNqVTixEh/ad0AzvXynJBThILVRroRFlXKjFjHhWYZSdd0yq8zKA/Sy2xt6WMB1t4cuiYtvroievN3pRGxzHgyhr8D+gAfGocDr4Jh2SNK4Ss9h1eo4OTyc+jnRFcooGW4zIS0ir3qF1oZ92byGy70Atf/fYdfFvKeLCFJ8fDjFV5f2N5DWqSLNg+qy/qoTnh/GLsKaZZr2/RhVkaPTyzWXpNBn8WxiUaf8vZwGwmtso96g73Z8hMpvfEMzTM3pa6HVt4cjq/+d7pzVNmb6Ch1QeLj5KZbB2ge8wDmCU/bmbVgvcDY/hTZnuZjUPslmtzq9nvc624Ox4XeacjpjfXCoFdli6AVMgaGVFNRwpsNvWUGWemdgOzqTn8gacj8fdV6JugGECoEq/SPZlkzIjbYrOpb5GZeZCo3J9C194JM8OcUbO3e+4TXMWt4ayy6XYICNWfaRsIWGR2LgUS1FODWbUtLfGwGeFSK1vY/bA7n3UayWsovIx/yStoTIDvZr7Md8KsFLzfhmD7imjFJ7EQ9jWJMctzO8O68HhTMufX4tmOFovNph6Ev9qWFqxvjsdViNtfu0Z9viGNXsXOXict3pGdFYP3r9rnXXRYorkp9FXxCDJ7XvJn/ZG25xQE7D/ET3MRi82m1mBW3NJi97QWMwslZgNkCAnSf7oyFvEvz7EJelGzazNTzNyYKzOgxqjT3+5oE/muFM0aeN5ZqmBmkK3kuEFbpXSbqI0sht5mfOYyav17/0hD3fz1lhbhu+fFzEKJ2fZTTITgXRYxDxk3CM9C1NboumIWel26qIIbXfKsaW4H9Lnrwihh2WPMDLKVHNuG5nP6xQeiRd4bZq4atXnK7Ky4pUXGWzKyzEKJWcsn2CB2l0VCvMvfsQVH0yqpZ2ckgXtEFM9olEQ14XMbmH2NZxqBn0m5L9lKjgzRspROq/D+xGmn11ta8A4oPLOAzAIK21TSi3bWi8xaLL7gaFOto9GB2TxnZi8Ja5r/sbprZzwzyFZywFl9Dhsp+k4is+KWFvRnPLOA4yZmhvwR3LTE7rJISALHTZaFqMuMPigyQ39G/piXi/7sZUzBzCBbySHTe1I6IqoiHftgNHoLj0D0o8e0yUNe3Wleg0gdp8xOal5DtLxK3YzPKbOyAMGrHBN+b1o9eBaYRfQ9+gfDTKQLEHDjTe94zN2spNCLM+fKAcykNRw1a8SCJ4UZpWw9RqEX5xJ5zN1sN1dJbTuruxahBrO9TqPKd6K9bTtj6zESbC6RxUJNMhun4/wWiLigCMIvfv9D4XosT/jLLB2H4ArnxDfgwzjtzncdzGx/KqQuM7jwys/f4BjA1mPM/7+98/lp44ji+LDrNT/KgcGLMYbDwgZL5LReC1pEDzZJqxb14ICQmp5wUguU5GDSirZRD6kiVUlzaROhUHGhKmorlYM5FLXuBRqlSvirOt+Z3dTrXTb8cKysmbl4jZYBf/Q8O+/Ne9/HzxLPwgz92dACkSChiLmTNd7/8J+VWgWH6ri0sInHOffYSu1rnTD/McR38oRCjmFnekufm8jHoBtoendmZmiByJNjmDsp+h/etuIV4l7CWcQ597wV/2KJMP8xhNkCubZKi3eokU27YeLBMm/tOcSLXR7Qojm6WvqZFtltpjrO06I2X9Q7x693f1ZoBn4w++5zwYy5kzXe/1ABsx7n0rEz/JDZGfMfQ5ghFNI5PEmUFeKGibn8EaLFENTI9W5n8oX89c4+dpv4brKFeaJ1e9pmMeMtEMGMrWei/yHqFHCozi87xHrGjW+U7n9SDWHWPV78iqY+TDwrkpdhYtHaU49BUGOZvA05CzvWh9AyZ8YW5ntDlWj7AZlX/LYd9txUbuTLsRRR55lpumFi0dpT1yAOkevVHWYILTt25i2QiB6zo/sfHuU/NuprjCZT2eR+Nv0yTCxae9JknjHDeiaYIbSsGjwtanCURtzO2tTflMwks1Ywm6t29W9pW5pVOpU83rmMa/RUlM2R7p1uY7lrqvr6mB1LpiAyuQdW3HhUm9/dXyanUchrMNkR+/+ohXCbtaK6QY4pUxAVZr3Dc1Xz0qU5snyqdOQGk/3eF+nRitNVckyZgnBm3/YH7Gbqdnpmy5iRR4vkcL62SM5mZ67J2lfoN3SzAC/Q5Ln72uKmX6YAHmOATIGX2QvqrS5f8P/1Xef3UdrWImZir75Nena6twlbz5pgsvhuduncCzRV5O5ryHtplCmwcDDulynw+k7rZDzUaSD11X6tZba7RNQtbZiU6EwTTJYxe8qrVmKMGc+pfrLjlylY4gfjPpkCL7PH/DxULSVKv6F+q5OmsonqYHmKTqUf4ohTpTOlARJLprMoB1SCmg1FYH/GTJYxu/qWh1nx4l3SKFMA/cUAmQIvs2f03YP9BdVazV/j9Vu2cvMvI0FynXr8Apwu5Gow/0uPW6uM2UHejCQzZrK2Ru8kvcyUWz6ZAuQXBcgUeJkRcnWNvK8aBbd+i03FPE42M4pOiKO6gXcFxmyNRJPZSUejTIH3GfCELPACkwIv5+N2tmc4zJAKIlQ3XGYH+7lzwWw9dK9xhW5gPTN4Sd8Alnm2nglmF/BeqG64zDT6WPqb0keXzCQzyewNZObPNvC5tqafmW/fj3tifW3GTMhLmr6dkk/Moi7l3653fF7JrONyn9k2zOrkJc0j7SyI2Tm2M1decpp+DEGCUv9cusKLBXRUuXxAHQEQAs2YRDVLRXDjS+rKwyDDv4GZ0AfJ0B9pnk02zcuwYGdxeqt9mEFeMocqFrPH4PKSncPThDPL884WOGpTPmVe49iKG9wwhWyHyPBvYMamQoON+/2axSbL9Y5kHv4qvpvl9mEGeUm7K8UFCSAvyYsFOLOPhDADmFnMa1wsOsENMIM8jMjwv9vw3exKiVYbyjtsMpug1waY/XH8ltVv/jMA8pLsg04IO1N+LwuBj/vrHe/xzhaCGfMax27uOcGNCcfOeIY/8TETrTYUi01m8zIsMFutrrcPM8hLsg/KBQmwno0mU/8mdTW93nHZ6WyRQtpeNvH3D784wY1DsZ6JDH8/M9FqQ7GgVUkNh9kDWm4fZkGj90Q9bEP2tPZp/rtIMitQQzKTvpNkJplFlVldQrsumUk7az4zFeKSAxDXey7KAlAnEHjuKJnVSZA+tQ5nLZ1dHc6ifUEhPxl47iiZ1UmQrlXU21ZmYA8v8Qryt9eIZBbKrHDPOpi1SM9neBHMAs8dJbM6CVKsZzM/Df2JZU0w0+h1ySzMzgJvmZTMTshMpRuSmdyfSWaSmWQmmUlmUWNGzzb6mjBH86fC4B+UNnc+OeSQQw455JBDDjnkkOMcjv8AYJEDdL1UmkEAAAAASUVORK5CYII="/></div><div class="graphic_lgnd">Refer to UpToDate topic on the evaluation of bleeding symptoms in children for additional details.</div><div class="graphic_footnotes">PT: prothrombin time; INR: international normalized ratio; aPTT: activated partial thromboplastin time; VWD: von Willebrand disease; HMWK: high molecular weight kininogen; DIC: disseminated intravascular coagulation.</div><div id="graphicVersion">Graphic 60745 Version 12.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

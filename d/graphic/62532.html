@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>The two-step algorithm</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">The two-step algorithm</h1>
+<div class="graphic"><div class="figure"><div class="ttl">The two-step algorithm</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_reference">Reproduced with permission from Drs. Ashfaq Marghoob and Natalia Jaimes.</div><div id="graphicVersion">Graphic 62532 Version 7.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

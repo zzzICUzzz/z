@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Component separation technique and repaired defect</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Component separation technique and repaired defect</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Component separation technique and repaired defect</div><div class="cntnt"><img src="data:jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wEEEAANAA0ADQANAA4ADQAOABAAEAAOABQAFgATABYAFAAeABsAGQAZABsAHgAtACAAIgAgACIAIAAtAEQAKgAyACoAKgAyACoARAA8AEkAOwA3ADsASQA8AGwAVQBLAEsAVQBsAH0AaQBjAGkAfQCXAIcAhwCXAL4AtQC+APkA+QFOEQANAA0ADQANAA4ADQAOABAAEAAOABQAFgATABYAFAAeABsAGQAZABsAHgAtACAAIgAgACIAIAAtAEQAKgAyACoAKgAyACoARAA8AEkAOwA3ADsASQA8AGwAVQBLAEsAVQBsAH0AaQBjAGkAfQCXAIcAhwCXAL4AtQC+APkA+QFO/8IAEQgAuAIPAwEiAAIRAQMRAf/EABsAAQADAQEBAQAAAAAAAAAAAAABAwQCBQYH/9oACAEBAAAAAP04AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACJBCQAAAAAAAIr5d2Ofzv7b0EUVRPVtkyAAAAAInnHRXzxw5jqXMTPyt/pegs7IrI7s670bJkAAAFOPNw0XSETCYmZ8vB9D1whEonqHXNOdZftuAAHOHLVzZpsIr5jjBl4kmL9Wn5D0vo8GTNEcndun1K+re5lXmr6u2bCQc+bl403xRiyuI0p9LyPNzxFdNfmvofa5o+j+f8An/B9ubrrerNnr25qou83Np2bdTPmt3bw8rDtvjzfHxcNMdetsutcV8UcU1TfbrsslxXmpmbZttdnFNPl4mVd6HtbYyUej6JnqjyfAqWzNnqezs7SRMBJCUTAkQE0YvH8vlXHO36LW619HHh/N90bc+72d+wAAAAAAc4fM8fjvNqwfUe7YCr57yudPq+pqkAAAAAACPO8zylPte7pAZvld3o+oAAAAAAACryfP1+5YAc+dp0yAAAAAAABGbR0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAMCAQQF/9oACAECEAAAAAAAAAAAAAAAAAAAAAABx0ZO9AAGZQlLmXN37DHXO0ta2+gzDzSUpXecO67zqbe54xHO/R6aJ/K16LO1505zR3DQ4mn54ev6Cc89tsAAByU9LaJKgAAAzioAAAAAAAAAAAAAAAAP/8QAGQEBAAMBAQAAAAAAAAAAAAAAAAECAwQF/9oACAEDEAAAAAAAAAAAAAAAAAAAAAABKBZEAABbS1rTJFVgVrWlIBbW99MWU+nvGPPyV69uucfOx0dNcqZ5r9O3TamHCJtNIibqRMTfv1nDmpytfVnl4swAAFurr15vMHTXAAAAF9uYAAAAAAAAAAAAAAAAH//EAC8QAAICAQIFAgQGAwEAAAAAAAEDAgQABRESFSExMhMUIiMzQQYQIDBQUUBDgDT/2gAIAQEAAQgA/wCq+KPFw/zRlEdy5We4RnuEYGLPbcflMExlw6rb1/SLlLVLem6rT1arGxV/IyiB1NutHub9MZzGlnv6WC9UPaL0S7epE9gR/CkgDcsv01+R1VP+s6hal4GxqcsI1Cfl7Wwe/sWffl2/flajnKUZypGcsRh0tGcsEesBVuR8OHUh0xFXnN2/79f4dUpRfT0md29Qr2j7S1PyGlrJ+PllcZy+vnLkYdOr4dNr5y2uc5YjOWKwUTHwC7sfAN1OGe+uR8uaqH1F36bPEdeo/wAmb0w8p6rUiSAdTfP6PFqTfL2In1bCqiHYQ2OEZvg4RnFHN84jm4zfOM5x9MEx9+IYO+dcuaLp11nquR+HdPZAFilxTCC177Zv03zjGcfXr6o+3qYJxzi/r1Ib9QwHtvHN450zrnAPvOqqff2PB1T6mpp7DU3Q+rDVKcvKFhM/H/AJA7t1KmroZam2f0S3VW57J0/qw06tHIJXHt0GcWcWepk3RhGUpTdGI3kmcXkhbXqXvxT1FX2Opw3PDzWe/Tmrc5s7Bq7M5vPJ66lW3qr1mvMbiGpJlkHQZIDL0vxK7UZVaatQ1SkmJ1CcpLUWTZfVDvPVVjxZrPAN580cfDmVrOZWzg1G1nMbIwanY+8dTB7x1GGKZBkRt7lPFw4bCxKEci6OepvnEM4s2BySVy8p6fXlnsXL+iG6qrI6pKH11ahUb47j9kkDu7VK6zwrNrUXeBosb1euolfjsI4ZxjLqy7XX5s1mpHtLWmTlwoXqTBIlrNXPCQIX22JiCyJdpGvHb5ikUV9oWq8QIh9KT5cSmU7UPLgnHOKObxwqVLJVlYakMu6dJ4C1I/DLhtI1tOmoCEa9RiRs5/uEX5X6lizd1Kq2mpkOJPBjtNYJSMbmjNaTsfw3qMJicI6e8RBkK3DgWMiPsApueiw9405y7Q05nTjrpioQBb8zPQUDxYYQwwAGw4rY34XtviUpRjqttciJQ1xm+0161WPku7Xb0gJgjoYxPdlNDe4pvR1QL15P1UahWsdI/ps3yuZWn0bNnrZTXUsfCAB2lIR7v1RCQRjtXczfgLLTvhIVGIPFxr8FhF1kPjlGpHo+E1S+GtWiyMT6q1OPjGm8HeJq2j39k/J0rJGxCLa+glF58yuH3kqsfI1qhz2NQ4KKR2hV28TR48jVtcPCI6ayPXOXn78vGew/o0GfadS2YSgZ0mS8/Z8Gelt3iqAmZHhX9guP2jBw8DC9PpkaT8Gn/wB8v/r2LR2lWuAdCHrG09lT3AuSiJj1eJM/CSXQhnyew9HftF1lI6J1lsCAxF6u7xBB7GIx1NLfKMr9Q/BW1FDzwn85KG5IlDrh2AyzqS07xi+41xPEES3+P1Fw8IItPG8JV6lf6sbTZ/BU5bZaeKzV0pQ2MIUh/sgtaxtD9nYZt+nb97bNh+maVNHxsoTG/pWtPTL6p0+4g8df3fF8Fv2am/8AlmbKJbM+U3CqcNzlbUWpI3rXFWBvGXXBEyz2i5dZQgIRAH5mIOah6+xEY1WOYYxYV1SYQWt1mYjAqqUusy25dmYrVpiVbSsIrNmAIppqX1/iSBIbFlBZPEuzXOxFl2lS2M6q7rIfIszpKbAsqJssrTMTKuizEsrxLFT6ULLW/C2Mdv1sVCY2OownAcC10REerZnbZMelVRpgiPUtpWxgEK6aiU9R/GEA46hGRM0uXBh9O26hZqkMRB6bXy7Taj60xKFWuLUY+smvBUdh+w+I4TLHVrFt8sUpNUBaUUST6lgAD+QYqDImM2V3VSZQfQVa2YjTqrlgxlBcYDaP7MgJDbGrnIhaa9VaB0/k/awE+OIH/KP/xABCEAACAQIBBwgHBQUJAAAAAAABAgADEQQSIUFRcYGREDFSYZKhsdETIjJQYnLBIDBCouEFQICC0hQjM1ODo7LC8f/aAAgBAQAJPwD+Kthe1/fTCVF4ysnaErJ2hHU74RyEBrGxMoYeqKN6TvQNg6NocGVLpzMDzqdR5WEr0+0JXTjMQkxCcZiKfaEqod4jjjD7lMrruzynVfYswYHzNBRXcTMVb5VmLrdqYmt2pVqnfGbjLwGKYDKtRdhmMqb5ij2ZXep/ZqxpJRJzAD8UxFbC1s5y0c5O+YmqGcHTceqbTF1eMd2PWYkpiUhEESJAYW4yvVXY0xj7wGj032raYVW+VpRqpuvK631HND+9VUG0xy5+EXmEba+aVVpjUgjvUPxGUwN0X7QnPLwcp5LTDD0v+YhKNxWHEVUv/hvWcpFVUUABVFgAIYeUy3KwG+G/KeQSmDulR6fymVEqD4hMI+1TeOUOpgRKqHYf3EyqCdS55hXPW/qx0pjqExFRuq8QGKJb7DZgIyL8zqJVosR0WypWueqyjiZ/3byguflQecpDiv8ASJSpyjT7pRTu8pRG4r/TCFDaz+omUdn/AKY+Tt/XJjWJ5gSQTxtMVSyqKCo5ACAZfMDlFpggKSEJUr0qgO8rGQKLZydewRmvqC2O+94jHafK0yFHWy/UGIp4fQCWG9/OMOL+cI4t5y35/OAkdTPEbeFb/kBMi3XdPC4jsCQSMoZQIGq1piaIbU96fjHQ5RIGS2VzRhynkURBMRUXfGSoOsTDOvWvrCVlvqOb7oy9V9SREpDtGV3fqJiCCMJVUdRMy22DzlB2gY5vZQhj3DNKagkHPlkkeE4nmG0gGYrPqRSeBNp6ZlPTYUxKWG/M8e3yqRKiVCBmAzNwMpMNxEDcIYSBtlRtzNKlUf6jecxOI3VGlSoxJzl6hIG6PV3DI7zKhZtRc1DH9GhYN6xz5uiswj1hUp5FdPYObmZLz9mYmn6ditSpWARUQy6MGDK1sqxWUntcm9Mip3TH1afU+UktXAN/7tgWlbHL1No7pi6+8jymIq8V8ozttHlKL7QsUj5iF8bRhfqDN4AzKHW5CeZjMQt7KqEC5288Q21NTDfWUKd9fo2SU2/kqBu5pXqU2uLZdPVFw1XqAsYrU/hyAbeBgU8byh32iuu6/hKoJ1CG/IgmIdernEorUGtcxj2fotmP2qReoOAlY26C5ligcjRsptQzz1B3yo9jrbJWVBuzeOfulLLPE99/ARUpoND+RvMW1T4Vn7PZ/ib9bxKQOhVLZpTe26mvdniUlOvnMrgbBMV+WVEcamETsuRKVQ7lfxBlDjSP0tMOn51lFe15qZcdWSrfQQMdlNfKUqx4jwtMFvJgVF1ZR+krIt+iueYh5WqSu8xHFY6sjAgi5mDRuEwjD5ZSrDtRa5BAzEvbNsImHc7mPiTMH/tr9QZhbdlYFUdbSqi/KsruZXeYk8JURuphMOQNaeQmSc/sn1T3Zph6hUczXuZiyB0amdZRSomtDm7rQsp1N+lvCHK/N4eUd8naGWJcax5GPuh5Fz645qJ0Wl0fot9gcudo+Y6BDk69Y8t8TeYtlbScwPiWlb0jaVHNKGTfUJXCjjKBf4qnNwjX+EeqIgA9yUwZUzdF88pGm3TXmlTKHwnPwmHB+IDJaVwT0H9UxSG5vW+h+kGS05gc5GjaDa0bKWNn1cqj7RyVm9jM7dIe1+m6C41fhWH0lXojmEDWOgR8tugJTFFO+DKbW3ukQmmermlEMvTEqZQ6OmUvSLqb2hHvrQ84i3sLZLaJ6r6Ul1cGL/N9wIMlerTHyEGjXEyE5rD2jG/kiCnS6VoLt0j7uOQ3cZSs2h45ZOkOcQAPoqCEsuh1iesPxCD7lbmHa2gRcqodMN20LoHvFbiXenq0iWWppGgz2OidEFvu1sNJmdjzsfemY6f4Uv/EADIRAAIBAgQEAwcDBQAAAAAAAAECAAMRBBIhMRNBUVJhgaEQICJAcZHxQmCxIzJiweH/2gAIAQIBAT8A/d9x1mYe7mUbmZ17hAynnL/Il1G5jYimOcbGdojYqqRcaQ4iqf1w1X5vAzH9cL9TM/LPFqMDo0Sr3M0ar8IAZjGdubQvro0zEd0Jbf8A1Mz9fScV1tapFxNXk0GLcbiLi0O+kFWm2zQEH3yyqLkx8Ui7axsWx20E4lV+4wJVb8wYSpuWURcGx14n2gwVEf3Mx84MPQUXWmpMLOugS3lOI8FRoGubE+ghRDtTU+VouHoJqUUfU3nAwub/ALOFlOlNQPpeNmXY+kLP3QNU6wGsfxMqsP6qLDhsK22W/gYcEvJ2hwTjZ7+UahUU/kQcVeTfzFxFQc4mLB3ESsjbH21S4X4d43FZjeLRJGunhzi0VUa6fXUwAdPMzMOR+2kAY7C0ytaxacNeYnDTpMvi0ynuhTx9Jw/82gQDm33mROkyJ2zKJwhyLCCnY3DtMp72mQdW+8yL0nDTpOGBtpCHA3vCxG+k0PJT6GFFbT0MahY2Gh8Yyug0FjMPUqk2tp7WQHUbyxBso17oSBtqepgR3NzAij5UgGNS6TNyYX/mWIHcvqIKSnxUxVCiw9yoCRYRKYGp1PzLIGGsRCp3/c//xAA1EQACAQICBwYDCAMAAAAAAAABAgADERITBCExQUJRUiJhcYGhsSAykRAjQFNgcoKSFKLB/9oACAEDAQE/AP1fY8pY8vhwsdizA/Q30mFumW/AhHOxYKD77CCkg2vfwgWkOC/nLqNiLMZ3CZjzMqc5mVIXO+FhcdhYWsxsiiCo27VMb85jfqgqNzmY/OFydq38ocB2oPaYKR6hMi/yuPaGlUHDCCNvxqjMbAXgoEfM6j1gSkN14D0oBMuuwuQfPVCGxYcNz3a4wVDZtR8I1TpiEM4FR7DnKejaG3Hi84ND0YbE9YdEobqS/UypoyKpIo6/3GClSt2zl/yBjlsRCvcc7WmOpFGi4blmZ+km0opRcm9D/a8Gj0PylhoaNvprHo6CNuEecrCiCMh2PtAzg65mLyiMrm2zxi0Kh1oynwMYVl+ZdXeIQh2p9IaKHY9vGNSdRe2ru+1CobtC8x6rLqEpaLUqa9g5mJSoKeyM1vSF+EMoPKmLmG3EFH7iWMeui7yfO3tGqKWJCTObcFHlM59+H6CZvNFgqgcPrBXtsDfWHSb8F/E3hrE8KzOqc/QTNqdUzn34T5Cf5B6FhrgixpzMXo9TM3kizOqbjbyEzqnOZpO1VMpvTDX2RCjDUy/yA9xAzLtLKOfzLCEZbvTUjrSNooYYqL4hO2jWOox8sjWLHu+2jUCOCReZoqLiqv2eFF2mM2oYvu03INp8Y+khBhUYRyH/AExqrt3D8KrMuwylpTLqvb2iMt7o2Bj/AFMuuP8AKq+jTSdJVlwun3g4hCSfg0ergvz58pUrEkhf7bz+JSoyeEfSCUwDWvfuhJP6m//Z"/></div><div class="graphic_lgnd">This figure shows the abdominal wall defect repaired using the component separation technique.</div><div id="graphicVersion">Graphic 68977 Version 1.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

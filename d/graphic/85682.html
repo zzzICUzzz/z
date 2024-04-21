@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Calculation of frontal plane axis</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Calculation of frontal plane axis</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Calculation of frontal plane axis</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_lgnd">If the QRS complex is positive in leads I and II, it falls between -30 and 90° and is normal, as indicated by the yellow area. If the QRS complex is negative in I and positive in aVF, there is right axis deviation. If the QRS complex is positive in I and negative in II, there is left axis deviation. If the QRS complex is negative in I and aVF, there is extreme axis deviation.</div><div id="graphicVersion">Graphic 85682 Version 1.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

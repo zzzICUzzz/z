@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>One-way sensitivity analysis (example for decision analysis)</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">One-way sensitivity analysis (example for decision analysis)</h1>
+<div class="graphic"><div class="figure"><div class="ttl">One-way sensitivity analysis (example for decision analysis)</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_lgnd">One-way sensitivity analysis of the probability of a complication from thrombolytic therapy. As the likelihood of a complication (x-axis) rises, the expected value of the thrombolysis strategy declines. The point at which the probability of survival is equivalent between the two strategies is called the threshold.</div><div class="graphic_reference">Data from: Krumholz HM, Pasternak RC, Weinstein MC, et al. N Engl J Med 1992; 327:7.</div><div id="graphicVersion">Graphic 70966 Version 6.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Decision tree for thrombolysis in the elderly (example data for decision analysis)</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Decision tree for thrombolysis in the elderly (example data for decision analysis)</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Decision tree for thrombolysis in the elderly (example data for decision analysis)</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_lgnd">Each chance node is replaced by its expected value: the arithmetic average of the value of its branches. As an example, the expected value of the MI branch of No complication is 0.7506 [(0.7506 x 1) + (0.2494 x 0)].</div><div class="graphic_footnotes">MI: myocardial infarction.</div><div class="graphic_reference">Created with data from: Krumholz HM, Pasternak RC, Weinstein MC, et al, N Engl J Med 1992; 327:7.</div><div id="graphicVersion">Graphic 78049 Version 3.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

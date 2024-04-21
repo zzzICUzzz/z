@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Main emergency airway management algorithm</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Main emergency airway management algorithm</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Main emergency airway management algorithm</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_footnotes">RSI: rapid sequence intubation.</div><div class="graphic_reference">From Brown: The Walls Manual of Emergency Airway Management, 6th edition, Philadelphia, Wolters Kluwer, 2022 and The Difficult Airway Course (<a href="https://www.theairwaysite.com/" target="_blank">www.theairwaysite.com</a>). Used with permission.</div><div id="graphicVersion">Graphic 63518 Version 15.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Predicting recovery of the platelet count post chemotherapy</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Predicting recovery of the platelet count post chemotherapy</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Predicting recovery of the platelet count post chemotherapy</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_lgnd">This graph indicates the ability of two different measurements of "reticulated" platelets to predict spontaneous recovery of platelet counts following chemotherapy. The two measurements shown are percent reticulated platelets (x-axis) and the mean fluorescence of reticulated platelets (platelet maturation index, y-axis). Patients with at least a 20,000/microL increase in platelet count over the ensuing 48 hours without platelet transfusion are shown as closed red circles, while those not showing spontaneous recovery within this time period are shown as open blue circles. When both parameters were normal or low (ie, data points falling within the box outlined with dashes) spontaneous recovery within the next 48 hours was not seen, with a negative predictive value of 91 percent. When one or both parameters were increased (ie, data points falling outside of the box), recovery within 48 hours was predicted with a postive predictive value of 82 percent.</div><div class="graphic_reference">Data from: Wang C, Smith BR, Ault KA, Rinder HM. Reticulated platelets predict platelet count recovery following chemotherapy. Transfusion 2002; 42:368.</div><div id="graphicVersion">Graphic 51649 Version 2.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

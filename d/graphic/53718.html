@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>P-wave algorithm to predict anatomic origin of atrial tachycardia</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">P-wave algorithm to predict anatomic origin of atrial tachycardia</h1>
+<div class="graphic"><div class="figure"><div class="ttl">P-wave algorithm to predict anatomic origin of atrial tachycardia</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_lgnd">A P-wave algorithm constructed on the basis of findings from 130 atrial tachycardias correctly localized the focus in 93%. The algorithm begins with assessment of the P-wave morphology in lead V1 on the surface electrocardiogram, then utilizes other leads as needed.</div><div class="graphic_footnotes">Neg: negative P-wave morphology; Pos: positive P-wave morphology; Iso: isoelectric P-wave morphology; CT: crista terminalis; CS: coronary sinus ostium; LS: left superior pulmonary vein; SMA: superior mitral annulus; TA: tricuspid annulus; RAA: right atrial appendage; LPV: left inferior pulmonary vein; LAA: left atrial appendage; RPV: right inferior pulmonary vein.</div><div class="graphic_reference">Reproduced with permission from: Kistler PM, Roberts-Thomson KC, Haqqani HM, et al. P-wave morphology in focal atrial tachycardia: development of an algorithm to predict the anatomic site of origin. J Am Coll Cardiol 2006; 48:1010. Copyright © 2006 Elsevier.</div><div id="graphicVersion">Graphic 53718 Version 6.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

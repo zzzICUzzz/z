@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>SALT mass casualty triage algorithm</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">SALT mass casualty triage algorithm</h1>
+<div class="graphic"><div class="figure"><div class="ttl">SALT mass casualty triage algorithm</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_reference">SALT mass casualty triage: concept endorsed by the American College of Emergency Physicians, American College of Surgeons Committee on Trauma, American Trauma Society, National Association of EMS Physicians, National Disaster Life Support Education Consortium, and State and Territorial Injury Prevention Directors Association. Disaster Med Public Health Prep 2008; 2:245. Copyright © 2008 Society for Disaster Medicine and Public Health, Inc. Reprinted with the permission of Cambridge University Press.</div><div id="graphicVersion">Graphic 90283 Version 3.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

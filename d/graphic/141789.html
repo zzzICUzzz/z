@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Algorithm to determine degrees of diagnostic certainties for neonatal seizures</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Algorithm to determine degrees of diagnostic certainties for neonatal seizures</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Algorithm to determine degrees of diagnostic certainties for neonatal seizures</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_lgnd">Algorithm to determine degrees of diagnostic certainties for neonatal seizures. This flow chart will help to determine the diagnostic certainty of neonatal seizures depending on the available diagnostic method (EEG, aEEG or observation by experienced personnel) and seizure type. Developed by the Brighton collaboration (adapted from<sup>[1]</sup>).</div><div class="graphic_footnotes">EEG: electroencephalogram; cEEG: conventional EEG; aEEG: amplitude-integrated EEG.</div><div class="graphic_reference">Reference:
+<ol>
+<li>Pellegrin S, Munoz FM, Padula M, et al. Neonatal seizures: Case definition &amp; guidelines for data collection, analysis, and presentation of immunization safety data. Vaccine 2019; 37:7596.</li>
+</ol>
+<p class="extra_spacing_top">From: Pressler RM, Cilio MR, Mizrahi EM, et al. The ILAE classification of seizures and the epilepsies: Modification for seizures in the neonate. Position paper by the ILAE Task Force on Neonatal Seizures. Epilepsia 2021; 62:615. <a href="https://onlinelibrary.wiley.com/doi/10.1111/epi.16815" target="_blank">https://onlinelibrary.wiley.com/doi/10.1111/epi.16815</a>. Copyright © 2021 International League Against Epilepsy. Reproduced with permission of John Wiley &amp; Sons Inc. This image has been provided by or is owned by Wiley. Further permission is needed before it can be downloaded to PowerPoint, printed, shared or emailed. Please contact Wiley's permissions department either via email: <a href="/cdn-cgi/l/email-protection#205045524d495353494f4e536057494c45590e434f4d"><span class="__cf_email__" data-cfemail="08786d7a65617b7b6167667b487f61646d71266b6765">[email protected]</span></a> or use the RightsLink service by clicking on the 'Request Permission' link accompanying this article on Wiley Online Library (<a href="https://onlinelibrary.wiley.com/" target="_blank">https://onlinelibrary.wiley.com/</a>).</p></div><div id="graphicVersion">Graphic 141789 Version 1.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

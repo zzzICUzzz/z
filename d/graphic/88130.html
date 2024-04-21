@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Evaluation algorithm for chronic constipation</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Evaluation algorithm for chronic constipation</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Evaluation algorithm for chronic constipation</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_footnotes">MR: magnetic resonance.<br/>* Because anorectal manometry, rectal balloon expulsion test may not be available in all practice settings, it is acceptable in such circumstances to proceed to assessing colonic transit with the understanding that delayed colonic transit does not exclude a defecatory disorder.</div><div class="graphic_reference">Reproduced from: Bharucha AE, Dorn SD, Lembo A, Pressman A. American Gastroenterological Association Medical Position Statement on Constipation. Gastroenterology 2013; 144:211. Illustration used with the permission of Elsevier Inc. All rights reserved.</div><div id="graphicVersion">Graphic 88130 Version 1.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Vereckei algorithm for the diagnosis of ventricular tachycardia (VT) or supraventricular tachycardia (SVT) in a patient with wide QRS complex tachycardia</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Vereckei algorithm for the diagnosis of ventricular tachycardia (VT) or supraventricular tachycardia (SVT) in a patient with wide QRS complex tachycardia</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Vereckei algorithm for the diagnosis of ventricular tachycardia (VT) or supraventricular tachycardia (SVT) in a patient with wide QRS complex tachycardia</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_lgnd">Vereckei algorithm for the diagnosis of wide complex tachycardias. In step 4, V<em><sub>i</sub></em> represents the magnitude of voltage change in the initial 40 milliseconds of the QRS complex, while V<sub><em>t</em></sub> represents the magnitude of voltage change in the terminal 40 milliseconds of the QRS complex. The initial V<sub>i</sub> and terminal V<sub>t</sub> voltages should be measured from the same biphasic or multiphasic QRS complex.<br/></div><div class="graphic_footnotes">A-V: atrio-ventricular; BBB: bundle branch block; FB: fascicular block; SVT: supraventricular tachycardia; VT: ventricular tachycardia.</div><div class="graphic_reference">Reproduced with permission from: Vereckei A, Duray G, Szenasi G, et al. Application of a new algorithm in the differential diagnosis of wide QRS complex tachycardia. Eur Heart J 2007; 28:589. Copyright © 2007 Oxford University Press.</div><div id="graphicVersion">Graphic 79624 Version 6.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

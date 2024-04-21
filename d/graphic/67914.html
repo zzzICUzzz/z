@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Kaplan-Meier survival curves</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Kaplan-Meier survival curves</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Kaplan-Meier survival curves</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_lgnd">The 2 curves illustrate the effect of an intervention (dashed red line) on survival compared with placebo (solid blue line). Each downward step corresponds to a death.</div><div id="graphicVersion">Graphic 67914 Version 4.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Pacemaker algorithm</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Pacemaker algorithm</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Pacemaker algorithm</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_lgnd">Algorithm for the use of the different types of pacemakers depending upon the need for atrioventricular (AV) sequential pacing, the presence of sinoatrial (SA) node chronotropic competence, the AV conduction rate, and the need for rate-responsiveness. Refer to UpToDate content on modes of cardiac pacing: nomenclature and selection.</div><div class="graphic_reference">Courtesy of MD McGoon, MD.</div><div id="graphicVersion">Graphic 64626 Version 3.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

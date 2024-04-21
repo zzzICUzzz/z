@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Brugada algorithm for the diagnosis of ventricular tachycardia or supraventricular tachycardia in a patient with wide QRS complex tachycardia</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Brugada algorithm for the diagnosis of ventricular tachycardia or supraventricular tachycardia in a patient with wide QRS complex tachycardia</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Brugada algorithm for the diagnosis of ventricular tachycardia or supraventricular tachycardia in a patient with wide QRS complex tachycardia</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_lgnd">Brugada algorithm for distinguishing VT from SVT.</div><div class="graphic_footnotes">VT: ventricular tachycardia; SVT: supraventricular tachycardia.</div><div class="graphic_reference">Adapted from: Brugada P, Brugada J, Mont L, et al. A new approach to the differential diagnosis of a regular tachycardia with a wide QRS complex. Circulation 1991; 83:1649.</div><div id="graphicVersion">Graphic 73159 Version 4.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

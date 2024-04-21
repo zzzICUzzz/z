@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Linear interpolation in CT scanning</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Linear interpolation in CT scanning</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Linear interpolation in CT scanning</div><div class="cntnt"><img src="data:jpeg;base64,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"/></div><div class="graphic_lgnd">Schematic representation of linear interpolation. Data at point 3 are inferred mathematically from the nearest scanned points 1 and 2.</div><div id="graphicVersion">Graphic 51274 Version 3.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>

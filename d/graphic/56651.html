@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Calculation of AV oxygen difference and cardiac output using the Fick method</title><link href="/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/d/css/icofont.min.css" rel="stylesheet"/><link href="/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/d/css/animate.css" rel="stylesheet"/><link href="/d/css/owl.carousel.css" rel="stylesheet"/><link href="/d/css/magnific-popup.css" rel="stylesheet"/><link href="/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/d/css/style.css" rel="stylesheet"/><link href="/d/css/rtl_edited.css" rel="stylesheet"/><link href="/d/css/responsive.css" rel="stylesheet"/><link href="https://medilib.ir/uptodate_assets/main.css" rel="stylesheet">
+<style>
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#searchResult {
+
+  list-style-type: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+#searchResult li a {
+  border: .5px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #79bc21;
+  padding: 7px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block
+}
+
+#searchResult li a:hover:not(.header) {
+  background-color: #222;
+}
+
+
+#txtHint   {
+  position: absolute;
+  text-shadow: none;
+  width: 100%;
+  margin-top: -15px;
+  padding-right: 10px;
+
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  opacity: 1;
+  z-index: 200;
+}
+.countBubl {
+  background:#eb0029;
+  color:#fff;
+  padding:5px;
+  margin-top: 50%;
+
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
+ width: 55%;
+ padding-left: 20px;
+}
+.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
+ width: 20%;
+}
+ #Uptodate_image {
+      width: 50%;
+  }#uptodate-area {
+      /*z-index: 99;*/
+  }
+#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+ margin-left: 10px;
+ margin-bottom: 6%;
+}
+@media (max-width: @screen-xs) {
+    .countBubl {
+        font-size: 4px ;
+    }
+    #uptodate_version {
+        font-size: 4px ;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .countBubl {
+        font-size: 14px ;
+    }
+}
+@media  all and(max-width: 820) {
+    #Uptodate_image {
+        width: 80% ;
+    }#uptodate-area {
+        z-index: 99;
+    }
+}@media  all and (min-width: 820) and(max-width: 88820){
+    #Uptodate_image {
+        width: 100% !important;
+    }
+    .countBubl {
+        font-size: 4px ;
+    }
+}
+div.col-md-3:nth-child(3) {
+ margin-top: 6%;
+}
+
+div.col-md-3:nth-child(3) > img:nth-child(1) {
+ width: 100%;
+ margin-left: 11px;
+}
+
+</style>
+<style media="screen" type="text/css">
+  .goback {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    display: none;
+    font-size: 15px;
+    background: #71c0fa;
+    z-index: 1000;
+    text-align: center;
+    color: #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 50px;
+    bottom: 3.8%;
+    right: 2%;
+}
+  .buyPackage {
+  width: 100px;
+  height: 100px;
+  line-height: 40px;
+  position: fixed;
+  display: none;
+  font-size: 10px;
+  background: #fa759e;
+  z-index: 1000;
+  text-align: center;
+  color: #ffffff;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 10px;
+  top: 150px;
+  right: 2%;
+  text-align: center;
+}
+.uptodate-area {
+  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  position: relative;
+}
+.uptodate-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+}
+#references{
+  display: none;
+}
+</style>
+<style>
+section.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff !important;
+  /*z-index: 100;*/
+  /*padding-top: 80px;*/
+
+}
+.m4inb{
+    border: solid !important;
+  }
+
+  .newsletter-area::before {
+       background: unset !important;
+  }
+p {
+    color: #555;
+}
+</style>
+
+<meta content="" name="description"/>
+<link href="/d/img/favicon.png" rel="icon" type="image/png"/>
+</link></head>
+<body>
+<!-- Start Main Menu Area -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+</div>
+</div>
+
+
+
+
+<section class="teacher-area ptb-10">
+<div class="container">
+</div>
+
+<section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Calculation of AV oxygen difference and cardiac output using the Fick method</h1>
+<div class="graphic"><div class="figure"><div class="ttl">Calculation of AV oxygen difference and cardiac output using the Fick method</div><div class="cntnt"><img src="data:png;base64,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"/></div><div class="graphic_lgnd">Oxygen consumption is estimated from a nomogram based on age, sex, height, and weight. In addition, oxygen consumption can be measured directly using exhaled breath analysis.</div><div class="graphic_footnotes">Hgb: serum hemoglobin (g/dL)<br/> SaO2: arterial oxygen saturation (percent) measured from arterial blood<br/> SvO2: mixed venous oxygen saturation (percent) measured from the pulmonary artery in the absence of a shunt or calculated using MvO2 = [3 SVC saturation + IVC saturation] divided by 4 if a left to right shunt is present.<br/> Constant values: 1.34 mL O2 per gram Hgb; 10 dL per L.</div><div id="graphicVersion">Graphic 56651 Version 3.0</div></div></div>
+</div>
+</div>
+
+</section>
+
+</section>
+<!-- End Main Menu Area -->
+<!-- Start Search Popup Area -->
+
+
+<!-- End Footer Area -->
+<!-- Back to top -->
+
+<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
+<!-- End Back to top -->
+<!-- jQuery Min JS -->
+
+<!-- Prpper JS -->
+
+<!-- Bootstrap Min JS -->
+
+<!-- Classy Nav Min Js -->
+
+<!-- Owl Carousel Min Js -->
+
+<!-- Magnific Popup JS -->
+
+<!-- CounterUp JS -->
+
+<!-- Waypoints JS -->
+
+<!-- Form Validator Min JS -->
+
+<!-- Contact Form Min JS -->
+
+<!-- Main JS -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+
+
+</body>
+</html>
