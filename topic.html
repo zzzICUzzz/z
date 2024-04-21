@@ -118,6 +118,9 @@ function jaroWinkler(a, b) {
 function findRelatedFiles(event) {
   event.preventDefault();
   var input = document.getElementById('inputSearch').value;
+  // Chuyển inputSearch thành chữ thường và loại bỏ các ký tự không phải là chữ cái
+  input = input.toLowerCase().replace(/[^a-z]/g, '');
+
 
   fetch('d/trans.json')
       .then(response => response.json())
