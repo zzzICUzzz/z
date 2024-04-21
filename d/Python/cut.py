@@ -10,4 +10,4 @@ def divide_files_into_folders(source_folder, num_files_per_folder):
             shutil.move(os.path.join(source_folder, file), folder_name)
 
 # Sử dụng hàm
-divide_files_into_folders(r'C:\Users\mayde\Desktop\uptodate 2024\New folder (2)\testing\d\drug information', 2000)
+divide_files_into_folders(r'C:\Users\mayde\Desktop\z\d\html', 2000)
