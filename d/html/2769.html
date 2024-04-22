@@ -1,259 +1,684 @@
 <!DOCTYPE html>
-
 <html lang="fa">
-<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
-<head><title>Evaluating diagnostic tests</title><link href="/z/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/z/d/css/icofont.min.css" rel="stylesheet"/><link href="/z/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/z/d/css/animate.css" rel="stylesheet"/><link href="/z/d/css/owl.carousel.css" rel="stylesheet"/><link href="/z/d/css/magnific-popup.css" rel="stylesheet"/><link href="/z/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/z/d/css/style.css" rel="stylesheet"/><link href="/z/d/css/rtl_edited.css" rel="stylesheet"/><link href="/z/d/css/responsive.css" rel="stylesheet"/><link href="https:///uptodate_assets/main.css" rel="stylesheet"/>
-<style>
-
-#myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 16px;
-  color: black;
-  display: block
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee;
-}
-
-#searchResult {
-
-  list-style-type: none;
-  padding: 0;
-  padding-right: 20px;
-}
-
-#searchResult li a {
-  border: .5px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #79bc21;
-  padding: 7px;
-  text-decoration: none;
-  font-size: 14px;
-  color: white;
-  display: block
-}
-
-#searchResult li a:hover:not(.header) {
-  background-color: #222;
-}
-
-
-#txtHint   {
-  position: absolute;
-  text-shadow: none;
-  width: 100%;
-  margin-top: -15px;
-  padding-right: 10px;
-
-  filter: alpha(opacity=95);
-  -moz-opacity: 0.95;
-  opacity: 1;
-  z-index: 200;
-}
-.countBubl {
-  background:#eb0029;
-  color:#fff;
-  padding:5px;
-  margin-top: 50%;
-
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
- width: 55%;
- padding-left: 20px;
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
- width: 20%;
-}
- #Uptodate_image {
-      width: 50%;
-  }#uptodate-area {
-      /*z-index: 99;*/
-  }
-#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
- margin-left: 10px;
- margin-bottom: 6%;
-}
-@media (max-width: @screen-xs) {
-    .countBubl {
-        font-size: 4px ;
-    }
-    #uptodate_version {
-        font-size: 4px ;
-    }
-}
-
-@media (max-width: @screen-sm) {
-    .countBubl {
-        font-size: 14px ;
-    }
-}
-@media  all and(max-width: 820) {
-    #Uptodate_image {
-        width: 80% ;
-    }#uptodate-area {
-        z-index: 99;
-    }
-}@media  all and (min-width: 820) and(max-width: 88820){
-    #Uptodate_image {
-        width: 100% !important;
-    }
-    .countBubl {
-        font-size: 4px ;
-    }
-}
-div.col-md-3:nth-child(3) {
- margin-top: 6%;
-}
-
-div.col-md-3:nth-child(3) > img:nth-child(1) {
- width: 100%;
- margin-left: 11px;
-}
-
-</style>
-<style media="screen" type="text/css">
-  .goback {
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    position: fixed;
-    display: none;
-    font-size: 15px;
-    background: #71c0fa;
-    z-index: 1000;
-    text-align: center;
-    color: #ffffff;
-    -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
-    border-radius: 50px;
-    bottom: 3.8%;
-    right: 2%;
-}
-  .buyPackage {
-  width: 100px;
-  height: 100px;
-  line-height: 40px;
-  position: fixed;
-  display: none;
-  font-size: 10px;
-  background: #fa759e;
-  z-index: 1000;
-  text-align: center;
-  color: #ffffff;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  border-radius: 10px;
-  top: 150px;
-  right: 2%;
-  text-align: center;
-}
-.uptodate-area {
-  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-    background-attachment: fixed;
-  position: relative;
-}
-.uptodate-area::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  padding-top: 100px;
-  width: 100%;
-}
-#references{
-  display: none;
-}
-</style>
-<style>
-section.sticky {
-  position: sticky;
-  top: 0;
-  background-color: #fff !important;
-  /*z-index: 100;*/
-  /*padding-top: 80px;*/
-
-}
-.m4inb{
-    border: solid !important;
-  }
-
-  .newsletter-area::before {
-       background: unset !important;
-  }
-p {
-    color: #555;
-}
-</style>
-<meta content="" name="description"/>
-<link href="/z/d/img/favicon.png" rel="icon" type="image/png">
-</link></head>
-<body>
-<!-- Start Main Menu Area -->
-<br/>
-<br/>
-<br/>
-<br/>
-<div class="container">
-<div class="row">
-</div>
-</div>
-<section class="teacher-area ptb-10">
-<div class="container">
-</div>
-<section class="course-details-area ptb-60">
-<div class="container">
-<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-<h1 style="text-align:center">Evaluating diagnostic tests</h1>
-<div class="utdArticleSection utdStyle" id="topicContent"><div id="topicTitle">Evaluating diagnostic tests</div> <div class="authorSectionElem"><div class="authorsElementsLeft"><dl id="topicContributors"><dt><span> </span>Authors:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Neal G Mahutte, MD</a></dd><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Antoni J Duleba, MD</a></dd><dt><span> </span>Section Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Joann G Elmore, MD, MPH</a></dd><dt><span> </span>Deputy Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Carrie Armsby, MD, MPH</a></dd></dl></div><div class="authorsElementsRight"><div id="literatureReviewDate"><div class="litReviewSingleLine"><bdi><span class="emphasis">Literature review current through:</span> Jan 2024.</bdi></div><div class="litReviewSingleLine"><bdi><span class="emphasis">This topic last updated:</span> Oct 20, 2022.</bdi></div></div></div></div><div id="topicWhatsNewContainer"></div><div id="topicText"><p class="headingAnchor" id="H1"><span class="h1">INTRODUCTION</span><span class="headingEndMark"> — </span>The introduction of new diagnostic tests that claim to improve screening or provide definitive diagnosis is a major dilemma for all clinicians. The decision to embrace or reject these tests is often made individually with incomplete information and without thoughtful reflection.</p><p>In this topic review, we will outline a simple seven-step process that can be used to evaluate the utility of any diagnostic test:</p><p class="bulletIndent1"><span class="glyph">●</span>Can the test be reliably performed?</p><p class="bulletIndent1"><span class="glyph">●</span>Was the test evaluated on an appropriate population?</p><p class="bulletIndent1"><span class="glyph">●</span>Was an appropriate gold standard used?</p><p class="bulletIndent1"><span class="glyph">●</span>Was an appropriate cutoff value chosen to optimize sensitivity and specificity?</p><p class="bulletIndent1"><span class="glyph">●</span>What are the positive and negative likelihood ratios?</p><p class="bulletIndent1"><span class="glyph">●</span>How well does the test perform in specific populations?</p><p class="bulletIndent1"><span class="glyph">●</span>What is the balance between cost of the disease and cost of the test?</p><p></p><p>A catalog of common biostatistical and epidemiologic terms encountered in the medical literature, an evidence-based approach to prevention, and issues regarding hypothesis testing are presented separately. (See  <a class="medical medical_review" href="/z/d/html/2759.html" rel="external">"Glossary of common biostatistical and epidemiological terms"</a> and  <a class="medical medical_review" href="/z/d/html/7570.html" rel="external">"Evidence-based approach to prevention"</a> and  <a class="medical medical_review" href="/z/d/html/2777.html" rel="external">"Hypothesis testing in clinical research: Proof, p-values, and confidence intervals"</a>.)</p><p class="headingAnchor" id="H2"><span class="h1">CAN THE TEST BE PERFORMED RELIABLY?</span></p><p class="headingAnchor" id="H3"><span class="h2">Accuracy and precision</span><span class="headingEndMark"> — </span>It is helpful to determine the extent to which the test is accurate, precise, and user dependent to objectively answer this question. "Accuracy" refers to the ability of the test to actually measure what it claims to measure and is defined as the proportion of all test results (both positive and negative) that are correct  (<a class="graphic graphic_table graphicRef55297" href="/z/d/graphic/55297.html" rel="external">table 1</a>). Precision refers to the ability of the test to reproduce the same result when repeated on the same patient or sample. The two concepts are related but different. For example, a test could be precise but not accurate if on three occasions it produced roughly the same result, but that result differed greatly from the actual value determined by a reference standard. Both accuracy and precision may be presented in the form of a confidence interval (CI) or standard error (SE).</p><p class="headingAnchor" id="H4"><span class="h2">Expertise</span><span class="headingEndMark"> — </span>One of the great challenges in evaluating a diagnostic test is determining to what extent user expertise influences accuracy and precision. Studies in the literature often originate from tertiary care centers with advanced capabilities for diagnostic equipment and personnel. Such environments may bear little resemblance to the facilities found at a local level. As an example, high "user dependence" makes it difficult to apply advances in screening ultrasonography found at specialized centers to the population at large [<a href="#rid1">1</a>]. The test may be accurate and precise in an expert's hands, but it may be imprecise, inaccurate, and unreliable when performed by a less experienced practitioner. These factors should be taken into account when determining if a given test should be implemented in a given situation.</p><p class="headingAnchor" id="H5"><span class="h1">WAS THE TEST EVALUATED ON AN APPROPRIATE POPULATION?</span></p><p class="headingAnchor" id="H6"><span class="h2">Population</span><span class="headingEndMark"> — </span>This step examines the population from which test data was derived, a point that is often overlooked. A test should be conducted on a broad spectrum of patients with and without the disorder in question to maximize generalizability. Those with the disorder should represent all stages and manifestations of the disease. Even more importantly, individuals without the disorder should have some clinical manifestations similar to, and perhaps easily confused with, the disease in question. This is critical in demonstrating the ability of the test to distinguish among clinical entities in the differential diagnosis.</p><p>As an example, the utility of obtaining a serum CA125 concentration for detection of endometriosis depends upon studying a population that includes a range of patients with minimal, mild, moderate, and severe endometriosis. If the study population has a disproportionate number of women with severe disease, this might falsely inflate the capability of the test to identify cases. It is also essential to include a large cohort of patients without endometriosis but with similar signs or symptoms (eg, dysmenorrhea, dyspareunia, pelvic pain, infertility, adnexal mass, fibroids). Neglecting to include these patients might falsely inflate the performance of the test.</p><p class="headingAnchor" id="H7"><span class="h2">Sample size</span><span class="headingEndMark"> — </span>Sample size is part of the question of population appropriateness. An adequate number of patients must be studied to encompass a broad spectrum of manifestations in diseased and nondiseased subjects. However, an overly large sample size may detect a statistically significant test difference that is not clinically meaningful, while a sample size that is too small may yield inconclusive results due to low power.</p><p>One direct way of evaluating sample size is to examine the confidence intervals (CIs) for sensitivity, specificity, and likelihood ratio reported in the study. (See <a class="local">'Balancing sensitivity and specificity'</a> below and <a class="local">'What are the positive and negative likelihood ratios?'</a> below.)</p><p class="headingAnchor" id="H8"><span class="h1">WAS AN APPROPRIATE REFERENCE STANDARD USED?</span></p><p class="headingAnchor" id="H9"><span class="h2">Reference standards</span><span class="headingEndMark"> — </span>Evaluation of a test necessarily involves comparison with a reference standard. Ideally, a reference standard allows unambiguous identification of diseased and nondiseased patients. However, in the real world, reference standards often involve some degree of error or user dependence.</p><p>As an example, histopathology is often used as a reference standard for the diagnosis of endometriosis; however, histopathology is not infallible. Cases can be misdiagnosed because of sampling error or individual differences among pathologists in histologic interpretation. The presence of ectopic endometrial glands, but not stroma (or vice versa), in a woman with clinical signs and symptoms of endometriosis is suggestive of this disorder but does not meet strict criteria for the disease (ie, ectopically located endometrial glands and stroma). By comparison, does an asymptomatic woman have endometriosis if a random biopsy of her normal-appearing peritoneum finds endometrial glands and stroma? These questions address issues of both disease definition and what is normal.</p><p>Real-world considerations compel us to use practical definitions. Reference standards represent "the best we have" for distinguishing normal from abnormal. The reference standard is the test that thus far has been shown to most reliably detect the disease. Therefore, any new test that may purport to have value must be compared with the reference standard if we are to minimize the chance of misdiagnosis.</p><p class="headingAnchor" id="H10"><span class="h2">Defining normal</span><span class="headingEndMark"> — </span>"Normal" is a deceptive term. While it is used commonly to refer to good health or the absence of disease, defining normal can be complex and arbitrary. Many tests define normal based upon assigned cutoff values that assume a fixed prevalence of disease. Intrauterine growth restriction (IUGR), for example, may be defined as an estimated fetal weight less than the 10<sup>th</sup> percentile, less than the 5<sup>th</sup> percentile, or less than two standard deviations from the mean. Such definitions may be convenient but clearly do not reflect the true prevalence of the disease in divergent populations.</p><p>In addition, the cutoff value may not accurately reflect the diseased condition. As an example, the concept of growth restriction implies a pathologic process resulting in failure to achieve the genetically programmed size. A neonate with a birth weight at the 12<sup>th</sup> percentile who has three older brothers whose birth weights were at the 90<sup>th</sup> percentile would be categorized as normal under the standard definitions described above, even though the neonate appears not to have reached its genetic potential. In contrast, an infant whose actual weight and true genetic potential were at the 4<sup>th</sup> percentile might be mislabeled as having IUGR.</p><p class="headingAnchor" id="H11"><span class="h1">WAS AN APPROPRIATE CUTOFF VALUE CHOSEN TO OPTIMIZE SENSITIVITY AND SPECIFICITY?</span></p><p class="headingAnchor" id="H12"><span class="h2">Balancing sensitivity and specificity</span><span class="headingEndMark"> — </span>A cutoff value must be chosen to separate normal from abnormal. Selecting this value virtually always involves balancing sensitivity and specificity, although the actual value may be arbitrary.</p><p class="bulletIndent1"><span class="glyph">●</span>Sensitivity is the probability that an individual with the disease will test positive. It is the number of patients with a positive test who have the disease (true positives) divided by the number of all patients who have the disease. A test with high sensitivity will not miss many patients who have the disease (ie, low false-negative rate).</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Specificity is the probability that an individual without the disease will test negative. It is the number of patients who have a negative test and do not have the disease (true negatives) divided by the number of patients who do not have the disease. A test with high specificity will infrequently identify patients as having a disease when they do not (ie, low false-positive results).</p><p></p><p class="headingAnchor" id="H13"><span class="h2">Two-by-two tables</span><span class="headingEndMark"> — </span>A two-by-two table  (<a class="graphic graphic_table graphicRef73504" href="/z/d/graphic/73504.html" rel="external">table 2</a>) is the simplest way to calculate sensitivity and specificity. However, understanding the interrelationship among sensitivity, specificity, and cutoff values is easiest in graphic form  (<a class="graphic graphic_figure graphicRef73854" href="/z/d/graphic/73854.html" rel="external">figure 1</a>).</p><p>Two-by-two tables can also be used for calculating the false-positive and false-negative rates:</p><p class="bulletIndent1"><span class="glyph">●</span>The false positive rate = false positives/(false positives + true negatives). It is also equal to 1 − specificity.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>The false negative rate = false negatives/(false negatives + true positives). It is also equal to 1 − sensitivity.</p><p></p><p>An ideal test maximizes both sensitivity and specificity, thereby minimizing the false-positive and false-negative rates.</p><p class="headingAnchor" id="H14"><span class="h2">Receiver operating characteristic curves</span><span class="headingEndMark"> — </span>The receiver operating characteristic (ROC) curve plots sensitivity against 1-specificity (ie, the false-positive rate) for all cut-off values measured for the diagnostic test  (<a class="graphic graphic_figure graphicRef54239" href="/z/d/graphic/54239.html" rel="external">figure 2</a>). The ROC curve demonstrates the interchange between sensitivity and specificity for different cut-off values. As one moves from left to right along the ROC curve, the sensitivity increases while the specificity decreases.</p><p>The area under the curve (AUC) of the ROC curve represents the overall accuracy of the test. A test that performs no better than chance would be represented by a straight line with an AUC of 0.5. A near-perfect test would have a rectangular configuration with an AUC approaching 1.0. The closer the AUC is to 1, the more accurate the test. Similarly, if one wants to select a cutoff value for a test that minimizes both false positives and false negatives (and hence maximizes both sensitivity and specificity), one would select the point on the ROC curve closest to the far upper left corner.</p><p>However, finding the right balance between optimal sensitivity and specificity may not involve simultaneously minimizing false positives and false negatives in all situations. For example, when screening for a deadly disease that is curable, it may be desirable to accept more false positives (lower specificity) in return for fewer false negatives (higher sensitivity). ROC curves allow for more thorough evaluation of a test and potential cutoff values, but they are not the ultimate arbiters of how to set sensitivity and specificity.</p><p class="headingAnchor" id="H15"><span class="h1">WHAT ARE THE POSITIVE AND NEGATIVE LIKELIHOOD RATIOS?</span></p><p>Epidemiologists have devised another method by which to judge diagnostic tests: positive and negative likelihood ratios, which, like sensitivity and specificity, are independent of disease prevalence.</p><p class="bulletIndent1"><span class="glyph">●</span>The positive likelihood ratio = sensitivity/(1 − specificity). This ratio divides the probability that a patient with the disease will test positive by the probability that a patient without the disease will test positive. It can also be written as the true positive rate/false positive rate. Thus, the higher the positive likelihood ratio, the better the test (a perfect test has a positive likelihood ratio equal to infinity).</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>The negative likelihood ratio = (1 − sensitivity)/specificity. This ratio divides the probability that a patient with the disease will test negative by the probability that a patient without the disease will test negative. It can also be written as the false negative rate/true negative rate. Therefore, the lower the negative likelihood ratio, the better the test (a perfect test has a negative likelihood ratio of 0).</p><p></p><p>In most instances, one can evaluate likelihood ratios as shown in the table  (<a class="graphic graphic_table graphicRef69816" href="/z/d/graphic/69816.html" rel="external">table 3</a>). For example, suppose you were attempting to interpret the significance of a CA125 value of 80 in a 46-year-old woman with an ovarian cyst. If 70 percent of patients with ovarian cancer have a CA125 at this level, but 35 percent of patients with benign cysts have a CA125 at the same level, then the positive likelihood ratio would only be 2 (ie, 0.70/0.35). This would be considered a poor test for the diagnosis of cancer.</p><p>Although likelihood ratios are independent of disease prevalence, their direct validity is only within the original study population. They are generalizable to other populations to the extent that:</p><p class="bulletIndent1"><span class="glyph">●</span>The test can be reliably performed with minimal interobserver and intraobserver variation</p><p class="bulletIndent1"><span class="glyph">●</span>The study population(s) from which the values were derived was adequate in size and composition of normal and diseased phenotypes</p><p class="bulletIndent1"><span class="glyph">●</span>An appropriate reference standard was used</p><p></p><p>If a diagnostic test was investigated in a narrow subpopulation or the test relied heavily on user skill/interpretation, then the sensitivity, specificity, and likelihood ratios reported in the study may not be generalizable outside of the original research population. In other words, the test performance parameters may have internal validity but not external validity.</p><p class="headingAnchor" id="H16"><span class="h1">HOW WELL DOES THE TEST PERFORM IN SPECIFIC POPULATIONS?</span></p><p class="headingAnchor" id="H17"><span class="h2">Disease prevalence</span><span class="headingEndMark"> — </span>If the sensitivity, specificity, and likelihood ratios are well defined, the penultimate factor determining the utility of a test is disease prevalence (<a class="calc calc_professional" href="/z/d/html/13436.html" rel="external">calculator 1</a> and <a class="calc calc_professional" href="/z/d/html/13434.html" rel="external">calculator 2</a>). The usefulness of a positive test decreases as disease prevalence decreases. This concept is the basis of predictive values or post-test probabilities.</p><p class="bulletIndent1"><span class="glyph">●</span>Positive predictive value (PPV) refers to the probability that a positive test correctly identifies an individual who actually has the disease. It is computed from two-by-two tables: true positives/(true positives + false positives)  (<a class="graphic graphic_table graphicRef77832" href="/z/d/graphic/77832.html" rel="external">table 4</a>).</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Negative predictive value (NPV) refers to the probability that a negative test correctly identifies an individual who does not have the disease. It is computed from two-by-two tables: true negatives/(false negatives + true negatives)  (<a class="graphic graphic_table graphicRef77832" href="/z/d/graphic/77832.html" rel="external">table 4</a>).</p><p></p><p>For example, assuming a constant sensitivity and specificity, the PPV and NPV for a disease with prevalence of 10, 1, or 0.1 percent are shown in a table  (<a class="graphic graphic_table graphicRef51763" href="/z/d/graphic/51763.html" rel="external">table 5</a>). This example illustrates how a positive result from the same test with near-perfect sensitivity (99 percent) and high specificity (90 percent) may have completely different significance depending upon the baseline prevalence of disease in the population. When applied to a population in which the disease is common (prevalence = 10 percent), the PPV is 53 percent. By comparison, when applied to a different population in which the disease is uncommon (prevalence = 0.1 percent), the PPV is only 1 percent; thus, 99 percent of all individuals who test positive are actually free of the disease. All that the test has accomplished in this population is to slightly upgrade the probability of disease from extremely unlikely (0.1 percent) to very unlikely (1 percent) and, in the process, subjected numerous individuals without the disease to further testing. A second example, using a different combination of sensitivity, specificity, and prevalence, is illustrated in the figure  (<a class="graphic graphic_figure graphicRef68072" href="/z/d/graphic/68072.html" rel="external">figure 3</a>).</p><p>A clinical example of the importance of prevalence on test utility is in fetal fibronectin testing for the prediction of preterm delivery. A systematic review reported the overall sensitivity and specificity of this test (in symptomatic and asymptomatic patients) for delivery before 34 weeks was 52 and 85 percent, respectively [<a href="#rid2">2</a>]. If the prevalence of preterm birth in an asymptomatic low-risk population is 10 percent, then the PPV of a positive fetal fibronectin result would be 28 percent, whereas in a high-risk symptomatic population with a prevalence of preterm birth of 50 percent, the PPV would be 78 percent.</p><p class="headingAnchor" id="H18"><span class="h1">WHAT IS THE BALANCE BETWEEN COST OF THE DISEASE AND COST OF THE TEST?</span></p><p>The final judgment involved in considering the value of a test is the balance between cost of the disease and cost of the test. These costs involve charges to an individual, to an insurer, to an institution, or to society. We live in a world with finite resources but burgeoning demand for better health care, more accurate tests, and rapid diagnosis. Cost is often the determinant in deciding when, where, and how a diagnostic test is utilized.</p><p>A society and its health care payers and providers might be willing to accept low positive predictive values (PPVs) in return for saved lives for a rare disease that is universally fatal but easily curable. By comparison, an accurate but extremely expensive test might be less desirable than one of lesser quality if the consequences of misdiagnosis are not serious.</p><p>Cost analysis involves direct monetary costs as well as all of the indirect costs of disease, testing, and misdiagnosis. Unfortunately, these costs are often rough estimates, which hampers the accuracy of this type of analysis. In addition, cost studies typically suffer from poor external validity; values used in the analysis may not be readily generalizable to other areas of the country, other health systems, or other countries. Finally, because markets are never static, costs often change, with the potential to alter or entirely invalidate the thrust of the analysis.</p><p class="headingAnchor" id="H826056464"><span class="h1">SUMMARY AND RECOMMENDATIONS</span><span class="headingEndMark"> — </span>It is not an easy task to fully evaluate the utility of a diagnostic test; many variables must be considered. This topic review attempts to provide a framework from which any test may be objectively and systematically analyzed. The seven steps outlined need not be followed in exact order. For example, one may wish to consider cost and predictive values before delving deeper into the validity of applying the test to a specific population. Nevertheless, careful consideration of all seven questions is important in making a final decision regarding the utility of a diagnostic test.</p><p class="bulletIndent1"><span class="glyph">●</span>In order to determine the reliability of a test, it is helpful to assess the extent to which the test is accurate, precise, and user dependent. (See <a class="local">'Can the test be performed reliably?'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>A test should be evaluated on a broad spectrum of patients with and without the disorder in question to maximize generalizability. (See <a class="local">'Was the test evaluated on an appropriate population?'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>A reference standard allows unambiguous identification of diseased and nondiseased patients. However, in the real world, reference standards often involve some degree of error or user dependence. (See <a class="local">'Was an appropriate reference standard used?'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>A cutoff value must be chosen to separate normal from abnormal. Selecting this value virtually always involves balancing sensitivity and specificity, although the actual value may be arbitrary  (<a class="graphic graphic_figure graphicRef73854" href="/z/d/graphic/73854.html" rel="external">figure 1</a>). (See <a class="local">'Was an appropriate cutoff value chosen to optimize sensitivity and specificity?'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Positive and negative likelihood ratios, like sensitivity and specificity, are independent of disease prevalence. In most instances, one can evaluate likelihood ratios across a range of possible values, unlike sensitivity and specificity, which determine the crude presence and absence of a condition  (<a class="graphic graphic_table graphicRef69816" href="/z/d/graphic/69816.html" rel="external">table 3</a>). (See <a class="local">'What are the positive and negative likelihood ratios?'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>If the sensitivity, specificity, and likelihood ratios are well defined, the penultimate factor determining the utility of a test is disease prevalence (<a class="calc calc_professional" href="/z/d/html/13436.html" rel="external">calculator 1</a> and <a class="calc calc_professional" href="/z/d/html/13434.html" rel="external">calculator 2</a>). The usefulness of a positive test decreases as disease prevalence decreases. This concept is the basis of predictive values or post-test probabilities. (See <a class="local">'How well does the test perform in specific populations?'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>The final judgment involved in considering the value of a test is the balance between cost of the disease and cost of the test. These costs involve charges to an individual, to an insurer, to an institution, or to society. Cost is often the determinant in deciding when, where, and how a diagnostic test is utilized. (See <a class="local">'What is the balance between cost of the disease and cost of the test?'</a> above.)</p></div><div class="headingAnchor" id="references"><ol id="reference"><li><a class="nounderline abstract_t">Ewigman BG, Crane JP, Frigoletto FD, et al. Effect of prenatal ultrasound screening on perinatal outcome. RADIUS Study Group. N Engl J Med 1993; 329:821.</a></li><li><a class="nounderline abstract_t">Leitich H, Kaider A. Fetal fibronectin--how useful is it in the prediction of preterm birth? BJOG 2003; 110 Suppl 20:66.</a></li></ol></div><div id="topicVersionRevision">Topic 2769 Version 22.0</div></div>
-<div class="row">
-<div class="col-12">
-<h4 style="text-align: center;padding: 20px;color: cadetblue;">References</h4>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/8355740" id="rid0" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>1 : Effect of prenatal ultrasound screening on perinatal outcome. RADIUS Study Group.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/12763115" id="rid1" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>2 : Fetal fibronectin--how useful is it in the prediction of preterm birth?</p>
-</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-</section>
-<!-- End Main Menu Area -->
-<!-- Start Search Popup Area -->
-<!-- End Footer Area -->
-<!-- Back to top -->
-<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
-<!-- End Back to top -->
-<!-- jQuery Min JS -->
-<!-- Prpper JS -->
-<!-- Bootstrap Min JS -->
-<!-- Classy Nav Min Js -->
-<!-- Owl Carousel Min Js -->
-<!-- Magnific Popup JS -->
-<!-- CounterUp JS -->
-<!-- Waypoints JS -->
-<!-- Form Validator Min JS -->
-<!-- Contact Form Min JS -->
-<!-- Main JS -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-</body>
+ <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+ <head>
+  <title>
+   Evaluating diagnostic tests
+  </title>
+  <link href="d/css/1.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!-- Start Main Menu Area -->
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="container">
+   <div class="row">
+   </div>
+  </div>
+  <section class="teacher-area ptb-10">
+   <div class="container">
+   </div>
+   <section class="course-details-area ptb-60">
+    <div class="container">
+     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+      <h1 style="text-align:center">
+       Evaluating diagnostic tests
+      </h1>
+      <div class="utdArticleSection utdStyle" id="topicContent">
+       <div id="topicTitle">
+        Evaluating diagnostic tests
+       </div>
+       <div class="authorSectionElem">
+        <div class="authorsElementsLeft">
+         <dl id="topicContributors">
+          <dt>
+           <span>
+           </span>
+           Authors:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Neal G Mahutte, MD
+           </a>
+          </dd>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Antoni J Duleba, MD
+           </a>
+          </dd>
+          <dt>
+           <span>
+           </span>
+           Section Editor:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Joann G Elmore, MD, MPH
+           </a>
+          </dd>
+          <dt>
+           <span>
+           </span>
+           Deputy Editor:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Carrie Armsby, MD, MPH
+           </a>
+          </dd>
+         </dl>
+        </div>
+        <div class="authorsElementsRight">
+         <div id="literatureReviewDate">
+          <div class="litReviewSingleLine">
+           <bdi>
+            <span class="emphasis">
+             Literature review current through:
+            </span>
+            Jan 2024.
+           </bdi>
+          </div>
+          <div class="litReviewSingleLine">
+           <bdi>
+            <span class="emphasis">
+             This topic last updated:
+            </span>
+            Oct 20, 2022.
+           </bdi>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div id="topicWhatsNewContainer">
+       </div>
+       <div id="topicText">
+        <p class="headingAnchor" id="H1">
+         <span class="h1">
+          INTRODUCTION
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The introduction of new diagnostic tests that claim to improve screening or provide definitive diagnosis is a major dilemma for all clinicians. The decision to embrace or reject these tests is often made individually with incomplete information and without thoughtful reflection.
+        </p>
+        <p>
+         In this topic review, we will outline a simple seven-step process that can be used to evaluate the utility of any diagnostic test:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Can the test be reliably performed?
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Was the test evaluated on an appropriate population?
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Was an appropriate gold standard used?
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Was an appropriate cutoff value chosen to optimize sensitivity and specificity?
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         What are the positive and negative likelihood ratios?
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         How well does the test perform in specific populations?
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         What is the balance between cost of the disease and cost of the test?
+        </p>
+        <p>
+        </p>
+        <p>
+         A catalog of common biostatistical and epidemiologic terms encountered in the medical literature, an evidence-based approach to prevention, and issues regarding hypothesis testing are presented separately. (See
+         <a class="medical medical_review" href="/z/d/html/2759.html" rel="external">
+          "Glossary of common biostatistical and epidemiological terms"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/7570.html" rel="external">
+          "Evidence-based approach to prevention"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/2777.html" rel="external">
+          "Hypothesis testing in clinical research: Proof, p-values, and confidence intervals"
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H2">
+         <span class="h1">
+          CAN THE TEST BE PERFORMED RELIABLY?
+         </span>
+        </p>
+        <p class="headingAnchor" id="H3">
+         <span class="h2">
+          Accuracy and precision
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         It is helpful to determine the extent to which the test is accurate, precise, and user dependent to objectively answer this question. "Accuracy" refers to the ability of the test to actually measure what it claims to measure and is defined as the proportion of all test results (both positive and negative) that are correct  (
+         <a class="graphic graphic_table graphicRef55297" href="/z/d/graphic/55297.html" rel="external">
+          table 1
+         </a>
+         ). Precision refers to the ability of the test to reproduce the same result when repeated on the same patient or sample. The two concepts are related but different. For example, a test could be precise but not accurate if on three occasions it produced roughly the same result, but that result differed greatly from the actual value determined by a reference standard. Both accuracy and precision may be presented in the form of a confidence interval (CI) or standard error (SE).
+        </p>
+        <p class="headingAnchor" id="H4">
+         <span class="h2">
+          Expertise
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         One of the great challenges in evaluating a diagnostic test is determining to what extent user expertise influences accuracy and precision. Studies in the literature often originate from tertiary care centers with advanced capabilities for diagnostic equipment and personnel. Such environments may bear little resemblance to the facilities found at a local level. As an example, high "user dependence" makes it difficult to apply advances in screening ultrasonography found at specialized centers to the population at large [
+         <a href="#rid1">
+          1
+         </a>
+         ]. The test may be accurate and precise in an expert's hands, but it may be imprecise, inaccurate, and unreliable when performed by a less experienced practitioner. These factors should be taken into account when determining if a given test should be implemented in a given situation.
+        </p>
+        <p class="headingAnchor" id="H5">
+         <span class="h1">
+          WAS THE TEST EVALUATED ON AN APPROPRIATE POPULATION?
+         </span>
+        </p>
+        <p class="headingAnchor" id="H6">
+         <span class="h2">
+          Population
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         This step examines the population from which test data was derived, a point that is often overlooked. A test should be conducted on a broad spectrum of patients with and without the disorder in question to maximize generalizability. Those with the disorder should represent all stages and manifestations of the disease. Even more importantly, individuals without the disorder should have some clinical manifestations similar to, and perhaps easily confused with, the disease in question. This is critical in demonstrating the ability of the test to distinguish among clinical entities in the differential diagnosis.
+        </p>
+        <p>
+         As an example, the utility of obtaining a serum CA125 concentration for detection of endometriosis depends upon studying a population that includes a range of patients with minimal, mild, moderate, and severe endometriosis. If the study population has a disproportionate number of women with severe disease, this might falsely inflate the capability of the test to identify cases. It is also essential to include a large cohort of patients without endometriosis but with similar signs or symptoms (eg, dysmenorrhea, dyspareunia, pelvic pain, infertility, adnexal mass, fibroids). Neglecting to include these patients might falsely inflate the performance of the test.
+        </p>
+        <p class="headingAnchor" id="H7">
+         <span class="h2">
+          Sample size
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Sample size is part of the question of population appropriateness. An adequate number of patients must be studied to encompass a broad spectrum of manifestations in diseased and nondiseased subjects. However, an overly large sample size may detect a statistically significant test difference that is not clinically meaningful, while a sample size that is too small may yield inconclusive results due to low power.
+        </p>
+        <p>
+         One direct way of evaluating sample size is to examine the confidence intervals (CIs) for sensitivity, specificity, and likelihood ratio reported in the study. (See
+         <a class="local">
+          'Balancing sensitivity and specificity'
+         </a>
+         below and
+         <a class="local">
+          'What are the positive and negative likelihood ratios?'
+         </a>
+         below.)
+        </p>
+        <p class="headingAnchor" id="H8">
+         <span class="h1">
+          WAS AN APPROPRIATE REFERENCE STANDARD USED?
+         </span>
+        </p>
+        <p class="headingAnchor" id="H9">
+         <span class="h2">
+          Reference standards
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Evaluation of a test necessarily involves comparison with a reference standard. Ideally, a reference standard allows unambiguous identification of diseased and nondiseased patients. However, in the real world, reference standards often involve some degree of error or user dependence.
+        </p>
+        <p>
+         As an example, histopathology is often used as a reference standard for the diagnosis of endometriosis; however, histopathology is not infallible. Cases can be misdiagnosed because of sampling error or individual differences among pathologists in histologic interpretation. The presence of ectopic endometrial glands, but not stroma (or vice versa), in a woman with clinical signs and symptoms of endometriosis is suggestive of this disorder but does not meet strict criteria for the disease (ie, ectopically located endometrial glands and stroma). By comparison, does an asymptomatic woman have endometriosis if a random biopsy of her normal-appearing peritoneum finds endometrial glands and stroma? These questions address issues of both disease definition and what is normal.
+        </p>
+        <p>
+         Real-world considerations compel us to use practical definitions. Reference standards represent "the best we have" for distinguishing normal from abnormal. The reference standard is the test that thus far has been shown to most reliably detect the disease. Therefore, any new test that may purport to have value must be compared with the reference standard if we are to minimize the chance of misdiagnosis.
+        </p>
+        <p class="headingAnchor" id="H10">
+         <span class="h2">
+          Defining normal
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         "Normal" is a deceptive term. While it is used commonly to refer to good health or the absence of disease, defining normal can be complex and arbitrary. Many tests define normal based upon assigned cutoff values that assume a fixed prevalence of disease. Intrauterine growth restriction (IUGR), for example, may be defined as an estimated fetal weight less than the 10
+         <sup>
+          th
+         </sup>
+         percentile, less than the 5
+         <sup>
+          th
+         </sup>
+         percentile, or less than two standard deviations from the mean. Such definitions may be convenient but clearly do not reflect the true prevalence of the disease in divergent populations.
+        </p>
+        <p>
+         In addition, the cutoff value may not accurately reflect the diseased condition. As an example, the concept of growth restriction implies a pathologic process resulting in failure to achieve the genetically programmed size. A neonate with a birth weight at the 12
+         <sup>
+          th
+         </sup>
+         percentile who has three older brothers whose birth weights were at the 90
+         <sup>
+          th
+         </sup>
+         percentile would be categorized as normal under the standard definitions described above, even though the neonate appears not to have reached its genetic potential. In contrast, an infant whose actual weight and true genetic potential were at the 4
+         <sup>
+          th
+         </sup>
+         percentile might be mislabeled as having IUGR.
+        </p>
+        <p class="headingAnchor" id="H11">
+         <span class="h1">
+          WAS AN APPROPRIATE CUTOFF VALUE CHOSEN TO OPTIMIZE SENSITIVITY AND SPECIFICITY?
+         </span>
+        </p>
+        <p class="headingAnchor" id="H12">
+         <span class="h2">
+          Balancing sensitivity and specificity
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         A cutoff value must be chosen to separate normal from abnormal. Selecting this value virtually always involves balancing sensitivity and specificity, although the actual value may be arbitrary.
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Sensitivity is the probability that an individual with the disease will test positive. It is the number of patients with a positive test who have the disease (true positives) divided by the number of all patients who have the disease. A test with high sensitivity will not miss many patients who have the disease (ie, low false-negative rate).
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Specificity is the probability that an individual without the disease will test negative. It is the number of patients who have a negative test and do not have the disease (true negatives) divided by the number of patients who do not have the disease. A test with high specificity will infrequently identify patients as having a disease when they do not (ie, low false-positive results).
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H13">
+         <span class="h2">
+          Two-by-two tables
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         A two-by-two table  (
+         <a class="graphic graphic_table graphicRef73504" href="/z/d/graphic/73504.html" rel="external">
+          table 2
+         </a>
+         ) is the simplest way to calculate sensitivity and specificity. However, understanding the interrelationship among sensitivity, specificity, and cutoff values is easiest in graphic form  (
+         <a class="graphic graphic_figure graphicRef73854" href="/z/d/graphic/73854.html" rel="external">
+          figure 1
+         </a>
+         ).
+        </p>
+        <p>
+         Two-by-two tables can also be used for calculating the false-positive and false-negative rates:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         The false positive rate = false positives/(false positives + true negatives). It is also equal to 1 − specificity.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         The false negative rate = false negatives/(false negatives + true positives). It is also equal to 1 − sensitivity.
+        </p>
+        <p>
+        </p>
+        <p>
+         An ideal test maximizes both sensitivity and specificity, thereby minimizing the false-positive and false-negative rates.
+        </p>
+        <p class="headingAnchor" id="H14">
+         <span class="h2">
+          Receiver operating characteristic curves
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The receiver operating characteristic (ROC) curve plots sensitivity against 1-specificity (ie, the false-positive rate) for all cut-off values measured for the diagnostic test  (
+         <a class="graphic graphic_figure graphicRef54239" href="/z/d/graphic/54239.html" rel="external">
+          figure 2
+         </a>
+         ). The ROC curve demonstrates the interchange between sensitivity and specificity for different cut-off values. As one moves from left to right along the ROC curve, the sensitivity increases while the specificity decreases.
+        </p>
+        <p>
+         The area under the curve (AUC) of the ROC curve represents the overall accuracy of the test. A test that performs no better than chance would be represented by a straight line with an AUC of 0.5. A near-perfect test would have a rectangular configuration with an AUC approaching 1.0. The closer the AUC is to 1, the more accurate the test. Similarly, if one wants to select a cutoff value for a test that minimizes both false positives and false negatives (and hence maximizes both sensitivity and specificity), one would select the point on the ROC curve closest to the far upper left corner.
+        </p>
+        <p>
+         However, finding the right balance between optimal sensitivity and specificity may not involve simultaneously minimizing false positives and false negatives in all situations. For example, when screening for a deadly disease that is curable, it may be desirable to accept more false positives (lower specificity) in return for fewer false negatives (higher sensitivity). ROC curves allow for more thorough evaluation of a test and potential cutoff values, but they are not the ultimate arbiters of how to set sensitivity and specificity.
+        </p>
+        <p class="headingAnchor" id="H15">
+         <span class="h1">
+          WHAT ARE THE POSITIVE AND NEGATIVE LIKELIHOOD RATIOS?
+         </span>
+        </p>
+        <p>
+         Epidemiologists have devised another method by which to judge diagnostic tests: positive and negative likelihood ratios, which, like sensitivity and specificity, are independent of disease prevalence.
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         The positive likelihood ratio = sensitivity/(1 − specificity). This ratio divides the probability that a patient with the disease will test positive by the probability that a patient without the disease will test positive. It can also be written as the true positive rate/false positive rate. Thus, the higher the positive likelihood ratio, the better the test (a perfect test has a positive likelihood ratio equal to infinity).
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         The negative likelihood ratio = (1 − sensitivity)/specificity. This ratio divides the probability that a patient with the disease will test negative by the probability that a patient without the disease will test negative. It can also be written as the false negative rate/true negative rate. Therefore, the lower the negative likelihood ratio, the better the test (a perfect test has a negative likelihood ratio of 0).
+        </p>
+        <p>
+        </p>
+        <p>
+         In most instances, one can evaluate likelihood ratios as shown in the table  (
+         <a class="graphic graphic_table graphicRef69816" href="/z/d/graphic/69816.html" rel="external">
+          table 3
+         </a>
+         ). For example, suppose you were attempting to interpret the significance of a CA125 value of 80 in a 46-year-old woman with an ovarian cyst. If 70 percent of patients with ovarian cancer have a CA125 at this level, but 35 percent of patients with benign cysts have a CA125 at the same level, then the positive likelihood ratio would only be 2 (ie, 0.70/0.35). This would be considered a poor test for the diagnosis of cancer.
+        </p>
+        <p>
+         Although likelihood ratios are independent of disease prevalence, their direct validity is only within the original study population. They are generalizable to other populations to the extent that:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         The test can be reliably performed with minimal interobserver and intraobserver variation
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         The study population(s) from which the values were derived was adequate in size and composition of normal and diseased phenotypes
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         An appropriate reference standard was used
+        </p>
+        <p>
+        </p>
+        <p>
+         If a diagnostic test was investigated in a narrow subpopulation or the test relied heavily on user skill/interpretation, then the sensitivity, specificity, and likelihood ratios reported in the study may not be generalizable outside of the original research population. In other words, the test performance parameters may have internal validity but not external validity.
+        </p>
+        <p class="headingAnchor" id="H16">
+         <span class="h1">
+          HOW WELL DOES THE TEST PERFORM IN SPECIFIC POPULATIONS?
+         </span>
+        </p>
+        <p class="headingAnchor" id="H17">
+         <span class="h2">
+          Disease prevalence
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         If the sensitivity, specificity, and likelihood ratios are well defined, the penultimate factor determining the utility of a test is disease prevalence (
+         <a class="calc calc_professional" href="/z/d/html/13436.html" rel="external">
+          calculator 1
+         </a>
+         and
+         <a class="calc calc_professional" href="/z/d/html/13434.html" rel="external">
+          calculator 2
+         </a>
+         ). The usefulness of a positive test decreases as disease prevalence decreases. This concept is the basis of predictive values or post-test probabilities.
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Positive predictive value (PPV) refers to the probability that a positive test correctly identifies an individual who actually has the disease. It is computed from two-by-two tables: true positives/(true positives + false positives)  (
+         <a class="graphic graphic_table graphicRef77832" href="/z/d/graphic/77832.html" rel="external">
+          table 4
+         </a>
+         ).
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Negative predictive value (NPV) refers to the probability that a negative test correctly identifies an individual who does not have the disease. It is computed from two-by-two tables: true negatives/(false negatives + true negatives)  (
+         <a class="graphic graphic_table graphicRef77832" href="/z/d/graphic/77832.html" rel="external">
+          table 4
+         </a>
+         ).
+        </p>
+        <p>
+        </p>
+        <p>
+         For example, assuming a constant sensitivity and specificity, the PPV and NPV for a disease with prevalence of 10, 1, or 0.1 percent are shown in a table  (
+         <a class="graphic graphic_table graphicRef51763" href="/z/d/graphic/51763.html" rel="external">
+          table 5
+         </a>
+         ). This example illustrates how a positive result from the same test with near-perfect sensitivity (99 percent) and high specificity (90 percent) may have completely different significance depending upon the baseline prevalence of disease in the population. When applied to a population in which the disease is common (prevalence = 10 percent), the PPV is 53 percent. By comparison, when applied to a different population in which the disease is uncommon (prevalence = 0.1 percent), the PPV is only 1 percent; thus, 99 percent of all individuals who test positive are actually free of the disease. All that the test has accomplished in this population is to slightly upgrade the probability of disease from extremely unlikely (0.1 percent) to very unlikely (1 percent) and, in the process, subjected numerous individuals without the disease to further testing. A second example, using a different combination of sensitivity, specificity, and prevalence, is illustrated in the figure  (
+         <a class="graphic graphic_figure graphicRef68072" href="/z/d/graphic/68072.html" rel="external">
+          figure 3
+         </a>
+         ).
+        </p>
+        <p>
+         A clinical example of the importance of prevalence on test utility is in fetal fibronectin testing for the prediction of preterm delivery. A systematic review reported the overall sensitivity and specificity of this test (in symptomatic and asymptomatic patients) for delivery before 34 weeks was 52 and 85 percent, respectively [
+         <a href="#rid2">
+          2
+         </a>
+         ]. If the prevalence of preterm birth in an asymptomatic low-risk population is 10 percent, then the PPV of a positive fetal fibronectin result would be 28 percent, whereas in a high-risk symptomatic population with a prevalence of preterm birth of 50 percent, the PPV would be 78 percent.
+        </p>
+        <p class="headingAnchor" id="H18">
+         <span class="h1">
+          WHAT IS THE BALANCE BETWEEN COST OF THE DISEASE AND COST OF THE TEST?
+         </span>
+        </p>
+        <p>
+         The final judgment involved in considering the value of a test is the balance between cost of the disease and cost of the test. These costs involve charges to an individual, to an insurer, to an institution, or to society. We live in a world with finite resources but burgeoning demand for better health care, more accurate tests, and rapid diagnosis. Cost is often the determinant in deciding when, where, and how a diagnostic test is utilized.
+        </p>
+        <p>
+         A society and its health care payers and providers might be willing to accept low positive predictive values (PPVs) in return for saved lives for a rare disease that is universally fatal but easily curable. By comparison, an accurate but extremely expensive test might be less desirable than one of lesser quality if the consequences of misdiagnosis are not serious.
+        </p>
+        <p>
+         Cost analysis involves direct monetary costs as well as all of the indirect costs of disease, testing, and misdiagnosis. Unfortunately, these costs are often rough estimates, which hampers the accuracy of this type of analysis. In addition, cost studies typically suffer from poor external validity; values used in the analysis may not be readily generalizable to other areas of the country, other health systems, or other countries. Finally, because markets are never static, costs often change, with the potential to alter or entirely invalidate the thrust of the analysis.
+        </p>
+        <p class="headingAnchor" id="H826056464">
+         <span class="h1">
+          SUMMARY AND RECOMMENDATIONS
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         It is not an easy task to fully evaluate the utility of a diagnostic test; many variables must be considered. This topic review attempts to provide a framework from which any test may be objectively and systematically analyzed. The seven steps outlined need not be followed in exact order. For example, one may wish to consider cost and predictive values before delving deeper into the validity of applying the test to a specific population. Nevertheless, careful consideration of all seven questions is important in making a final decision regarding the utility of a diagnostic test.
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         In order to determine the reliability of a test, it is helpful to assess the extent to which the test is accurate, precise, and user dependent. (See
+         <a class="local">
+          'Can the test be performed reliably?'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         A test should be evaluated on a broad spectrum of patients with and without the disorder in question to maximize generalizability. (See
+         <a class="local">
+          'Was the test evaluated on an appropriate population?'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         A reference standard allows unambiguous identification of diseased and nondiseased patients. However, in the real world, reference standards often involve some degree of error or user dependence. (See
+         <a class="local">
+          'Was an appropriate reference standard used?'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         A cutoff value must be chosen to separate normal from abnormal. Selecting this value virtually always involves balancing sensitivity and specificity, although the actual value may be arbitrary  (
+         <a class="graphic graphic_figure graphicRef73854" href="/z/d/graphic/73854.html" rel="external">
+          figure 1
+         </a>
+         ). (See
+         <a class="local">
+          'Was an appropriate cutoff value chosen to optimize sensitivity and specificity?'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Positive and negative likelihood ratios, like sensitivity and specificity, are independent of disease prevalence. In most instances, one can evaluate likelihood ratios across a range of possible values, unlike sensitivity and specificity, which determine the crude presence and absence of a condition  (
+         <a class="graphic graphic_table graphicRef69816" href="/z/d/graphic/69816.html" rel="external">
+          table 3
+         </a>
+         ). (See
+         <a class="local">
+          'What are the positive and negative likelihood ratios?'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         If the sensitivity, specificity, and likelihood ratios are well defined, the penultimate factor determining the utility of a test is disease prevalence (
+         <a class="calc calc_professional" href="/z/d/html/13436.html" rel="external">
+          calculator 1
+         </a>
+         and
+         <a class="calc calc_professional" href="/z/d/html/13434.html" rel="external">
+          calculator 2
+         </a>
+         ). The usefulness of a positive test decreases as disease prevalence decreases. This concept is the basis of predictive values or post-test probabilities. (See
+         <a class="local">
+          'How well does the test perform in specific populations?'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         The final judgment involved in considering the value of a test is the balance between cost of the disease and cost of the test. These costs involve charges to an individual, to an insurer, to an institution, or to society. Cost is often the determinant in deciding when, where, and how a diagnostic test is utilized. (See
+         <a class="local">
+          'What is the balance between cost of the disease and cost of the test?'
+         </a>
+         above.)
+        </p>
+       </div>
+       <div class="headingAnchor" id="references">
+        <ol id="reference">
+         <li>
+          <a class="nounderline abstract_t">
+           Ewigman BG, Crane JP, Frigoletto FD, et al. Effect of prenatal ultrasound screening on perinatal outcome. RADIUS Study Group. N Engl J Med 1993; 329:821.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Leitich H, Kaider A. Fetal fibronectin--how useful is it in the prediction of preterm birth? BJOG 2003; 110 Suppl 20:66.
+          </a>
+         </li>
+        </ol>
+       </div>
+       <div id="topicVersionRevision">
+        Topic 2769 Version 22.0
+       </div>
+      </div>
+      <div class="row">
+       <div class="col-12">
+        <h4 style="text-align: center;padding: 20px;color: cadetblue;">
+         References
+        </h4>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/8355740" id="rid0" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          1 : Effect of prenatal ultrasound screening on perinatal outcome. RADIUS Study Group.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/12763115" id="rid1" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          2 : Fetal fibronectin--how useful is it in the prediction of preterm birth?
+         </p>
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </section>
+  <!-- End Main Menu Area -->
+  <!-- Start Search Popup Area -->
+  <!-- End Footer Area -->
+  <!-- Back to top -->
+  <a class="scrolltop" href="#top">
+   <i class="icofont-hand-drawn-up">
+   </i>
+  </a>
+  <!-- End Back to top -->
+  <!-- jQuery Min JS -->
+  <!-- Prpper JS -->
+  <!-- Bootstrap Min JS -->
+  <!-- Classy Nav Min Js -->
+  <!-- Owl Carousel Min Js -->
+  <!-- Magnific Popup JS -->
+  <!-- CounterUp JS -->
+  <!-- Waypoints JS -->
+  <!-- Form Validator Min JS -->
+  <!-- Contact Form Min JS -->
+  <!-- Main JS -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+ </body>
 </html>

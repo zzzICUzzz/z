@@ -1,244 +1,647 @@
 <!DOCTYPE html>
-
 <html lang="fa">
-<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
-<head><title>ECG tutorial: Atrioventricular block</title><link href="/z/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/z/d/css/icofont.min.css" rel="stylesheet"/><link href="/z/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/z/d/css/animate.css" rel="stylesheet"/><link href="/z/d/css/owl.carousel.css" rel="stylesheet"/><link href="/z/d/css/magnific-popup.css" rel="stylesheet"/><link href="/z/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/z/d/css/style.css" rel="stylesheet"/><link href="/z/d/css/rtl_edited.css" rel="stylesheet"/><link href="/z/d/css/responsive.css" rel="stylesheet"/><link href="https:///uptodate_assets/main.css" rel="stylesheet"/>
-<style>
-
-#myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 16px;
-  color: black;
-  display: block
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee;
-}
-
-#searchResult {
-
-  list-style-type: none;
-  padding: 0;
-  padding-right: 20px;
-}
-
-#searchResult li a {
-  border: .5px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #79bc21;
-  padding: 7px;
-  text-decoration: none;
-  font-size: 14px;
-  color: white;
-  display: block
-}
-
-#searchResult li a:hover:not(.header) {
-  background-color: #222;
-}
-
-
-#txtHint   {
-  position: absolute;
-  text-shadow: none;
-  width: 100%;
-  margin-top: -15px;
-  padding-right: 10px;
-
-  filter: alpha(opacity=95);
-  -moz-opacity: 0.95;
-  opacity: 1;
-  z-index: 200;
-}
-.countBubl {
-  background:#eb0029;
-  color:#fff;
-  padding:5px;
-  margin-top: 50%;
-
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
- width: 55%;
- padding-left: 20px;
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
- width: 20%;
-}
- #Uptodate_image {
-      width: 50%;
-  }#uptodate-area {
-      /*z-index: 99;*/
-  }
-#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
- margin-left: 10px;
- margin-bottom: 6%;
-}
-@media (max-width: @screen-xs) {
-    .countBubl {
-        font-size: 4px ;
-    }
-    #uptodate_version {
-        font-size: 4px ;
-    }
-}
-
-@media (max-width: @screen-sm) {
-    .countBubl {
-        font-size: 14px ;
-    }
-}
-@media  all and(max-width: 820) {
-    #Uptodate_image {
-        width: 80% ;
-    }#uptodate-area {
-        z-index: 99;
-    }
-}@media  all and (min-width: 820) and(max-width: 88820){
-    #Uptodate_image {
-        width: 100% !important;
-    }
-    .countBubl {
-        font-size: 4px ;
-    }
-}
-div.col-md-3:nth-child(3) {
- margin-top: 6%;
-}
-
-div.col-md-3:nth-child(3) > img:nth-child(1) {
- width: 100%;
- margin-left: 11px;
-}
-
-</style>
-<style media="screen" type="text/css">
-  .goback {
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    position: fixed;
-    display: none;
-    font-size: 15px;
-    background: #71c0fa;
-    z-index: 1000;
-    text-align: center;
-    color: #ffffff;
-    -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
-    border-radius: 50px;
-    bottom: 3.8%;
-    right: 2%;
-}
-  .buyPackage {
-  width: 100px;
-  height: 100px;
-  line-height: 40px;
-  position: fixed;
-  display: none;
-  font-size: 10px;
-  background: #fa759e;
-  z-index: 1000;
-  text-align: center;
-  color: #ffffff;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  border-radius: 10px;
-  top: 150px;
-  right: 2%;
-  text-align: center;
-}
-.uptodate-area {
-  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-    background-attachment: fixed;
-  position: relative;
-}
-.uptodate-area::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  padding-top: 100px;
-  width: 100%;
-}
-#references{
-  display: none;
-}
-</style>
-<style>
-section.sticky {
-  position: sticky;
-  top: 0;
-  background-color: #fff !important;
-  /*z-index: 100;*/
-  /*padding-top: 80px;*/
-
-}
-.m4inb{
-    border: solid !important;
-  }
-
-  .newsletter-area::before {
-       background: unset !important;
-  }
-p {
-    color: #555;
-}
-</style>
-<meta content="" name="description"/>
-<link href="/z/d/img/favicon.png" rel="icon" type="image/png">
-</link></head>
-<body>
-<!-- Start Main Menu Area -->
-<br/>
-<br/>
-<br/>
-<br/>
-<div class="container">
-<div class="row">
-</div>
-</div>
-<section class="teacher-area ptb-10">
-<div class="container">
-</div>
-<section class="course-details-area ptb-60">
-<div class="container">
-<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-<h1 style="text-align:center">ECG tutorial: Atrioventricular block</h1>
-<div class="utdArticleSection utdStyle" id="topicContent"><div id="topicTitle">ECG tutorial: Atrioventricular block</div> <div class="authorSectionElem"><div class="authorsElementsLeft"><dl id="topicContributors"><dt><span> </span>Author:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Jordan M Prutkin, MD, MHA, MHS</a></dd><dt><span> </span>Section Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Ary L Goldberger, MD</a></dd><dt><span> </span>Deputy Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Susan B Yeon, MD, JD</a></dd></dl></div><div class="authorsElementsRight"><div id="literatureReviewDate"><div class="litReviewSingleLine"><bdi><span class="emphasis">Literature review current through:</span> Jan 2024.</bdi></div><div class="litReviewSingleLine"><bdi><span class="emphasis">This topic last updated:</span> Jan 13, 2022.</bdi></div></div></div></div><div id="topicWhatsNewContainer"></div><div id="topicText"><p class="headingAnchor" id="H5185873"><span class="h1">INTRODUCTION</span><span class="headingEndMark"> — </span>Atrioventricular (AV) block may manifest as conduction delay in the AV node, intermittent failure of conduction from the atria to the ventricles, or complete AV block. </p><p class="headingAnchor" id="H1"><span class="h1">FIRST-DEGREE ATRIOVENTRICULAR BLOCK</span><span class="headingEndMark"> — </span>The PR interval (a measure of conduction between the atria and ventricles) includes the P wave (intra-atrial conduction) and the PR segment (conduction within the AV node and His-Purkinje system). First-degree AV block, defined as a prolonged PR interval (&gt;0.20 seconds), is not a true block but is delayed or slowed AV conduction. The conduction delay is most frequently in the AV node but may also be in the His-Purkinje system (<a class="graphic graphic_waveform graphicRef79990" href="/z/d/graphic/79990.html" rel="external">waveform 1</a>). A partial list of causes of first-degree AV block include the following:</p><p class="bulletIndent1"><span class="glyph">●</span>Underlying structural abnormalities of the node.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>An increase in vagal tone.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Drugs that impair or slow nodal conduction including <a class="drug drug_general" data-topicid="9360" href="/z/d/drug information/9360.html" rel="external">digoxin</a>, beta blockers, and non-dihydropyridine calcium channel blocking agents.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Myocardial infarction.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Infiltrative and dilated cardiomyopathies.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Certain muscular dystrophies.</p><p></p><p>As there is no actual block of conduction between the atrium to the ventricle, it may be more appropriate to use the term "prolonged AV conduction" rather than block. </p><p>As the PR interval includes the P wave (intraatrial conduction) and the PR segment, a prolonged PR interval may also be due to a delay or slowing in intraatrial conduction. (See  <a class="medical medical_review" href="/z/d/html/907.html" rel="external">"Etiology of atrioventricular block"</a> and  <a class="medical medical_review" href="/z/d/html/913.html" rel="external">"First-degree atrioventricular block"</a>.)</p><p>The PR interval generally varies with the heart rate; in the presence of sinus bradycardia (usually the result of enhanced vagal tone), the PR interval lengthens as conduction through the AV node slows. In contrast, the PR interval becomes shorter during sinus tachycardia, which is the result of enhanced sympathetic tone that enhances conduction through the AV node. At very fast heart rates or in those with AV node disease, however, the PR interval may lengthen due to decremental conduction. </p><p class="headingAnchor" id="H2"><span class="h1">SECOND-DEGREE ATRIOVENTRICULAR BLOCK</span><span class="headingEndMark"> — </span>Second-degree AV block is defined as an occasional nonconducted P wave, resulting in a long RR interval. Second-degree AV block may either be Mobitz type I (Wenckebach) or Mobitz type II.</p><p class="headingAnchor" id="H3"><span class="h2">Mobitz type I</span><span class="headingEndMark"> — </span>Mobitz type I or Wenckebach second-degree AV block is a result of intermittent block of the impulse within the AV node, with subsequent failure to conduct an atrial impulse from the atria to the ventricles. (See  <a class="medical medical_review" href="/z/d/html/907.html" rel="external">"Etiology of atrioventricular block"</a> and  <a class="medical medical_review" href="/z/d/html/909.html" rel="external">"Second-degree atrioventricular block: Mobitz type I (Wenckebach block)"</a>.) </p><p>Mobitz type I is due to progressive slowing of each subsequent impulse in the AV node, due to decremental conduction, until the node finally fails to conduct the impulse. The result is no conduction to the ventricle and no QRS impulse on the electrocardiogram (ECG) for that beat.</p><p>The ECG correlates of these electrical events include the following (<a class="graphic graphic_waveform graphicRef71453" href="/z/d/graphic/71453.html" rel="external">waveform 2</a>):</p><p class="bulletIndent1"><span class="glyph">●</span>There is a progressive lengthening of the PR interval until a normally occurring P wave is not followed by a QRS complex. There is only one nonconducted P wave. Any pattern of block (eg, 2:1, 3:2, 4:3, etc, or a variable pattern) may occur, depending upon the AV nodal electrophysiologic properties and the degree of vagal tone.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>The completely blocked P wave is on time and all PP intervals are equal.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>The impulse that arrives at the node following the completely blocked beat is conducted normally again because the node has had time to become totally repolarized. Thus, the PR interval after the nonconducted beat is less than the PR interval immediately preceding the nonconducted beat. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>The baseline PR interval (ie, the PR interval after each pause) is frequently prolonged, since both first-degree AV block and Mobitz type 1 second-degree AV block usually reflect disease in the AV node. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>The incremental lengthening of each successive PR interval becomes progressively lessened (eg, 0.20, then 0.26, then 0.30 seconds, etc). The greatest increase in PR interval lengthening is from the first to second conducted beats, and all subsequent conducted beats have a PR interval that increases less quickly. This results in a progressive shortening of successive RR intervals and is one of the causes of grouped beating on the ECG.</p><p></p><p>Not every feature will be seen with Mobitz type I second-degree AV block. </p><p class="headingAnchor" id="H4"><span class="h2">Mobitz type II</span><span class="headingEndMark"> — </span>Mobitz type II second-degree AV block is usually indicative of underlying disease of the His-Purkinje system characterized by episodic and unpredictable failure of the His-Purkinje pathway to conduct the impulse from the atria to the ventricles. The block occurs below the AV node and within the bundle of His or both bundle branches. (See  <a class="medical medical_review" href="/z/d/html/907.html" rel="external">"Etiology of atrioventricular block"</a> and  <a class="medical medical_review" href="/z/d/html/910.html" rel="external">"Second-degree atrioventricular block: Mobitz type II"</a>.) </p><p>In contrast to Mobitz type I, there is no change in the PR interval prior to or after the nonconducted P wave (<a class="graphic graphic_waveform graphicRef58649" href="/z/d/graphic/58649.html" rel="external">waveform 3</a>). This is because the His-Purkinje system is all or none, ie, it either conducts (always at the same rate) or does not conduct an impulse. Mobitz type II has a higher risk of progression to complete heart block than Mobitz type I and is usually an indication for a pacemaker, even if asymptomatic. If complete heart block were to develop, the escape rhythm is almost always ventricular and wide complex. (See  <a class="medical medical_review" href="/z/d/html/941.html" rel="external">"Permanent cardiac pacing: Overview of devices and indications"</a>.) </p><p class="headingAnchor" id="H9873007"><span class="h2">2:1 AV block</span><span class="headingEndMark"> — </span>A specific form of second-degree AV block is termed “2:1 AV block.” In this situation, every other P wave is nonconducted, and it is not possible to determine if the block is Mobitz type I or Mobitz II.</p><p>The etiology can only be established when there are two or more sequential PR intervals. This may occur spontaneously or when there are changes in the sinus rate, such as with activity or exercise. If there is progressive lengthening of the PR intervals on the consecutive conducted beats, the etiology of the 2:1 AV block is presumed to be Mobitz type I. If the PR intervals are constant, the etiology is Mobitz type II. </p><p class="headingAnchor" id="H5185959"><span class="h2">High grade AV block</span><span class="headingEndMark"> — </span>There may be more than one successive nonconducted P wave, resulting in several P waves in a row without QRS complexes, termed "advanced" or "high grade AV block." The AV conduction ratio may or may not have a regular pattern (ie, 3:1, 4:1, etc). This is an advanced form of Mobitz type II second-degree AV block.</p><p class="headingAnchor" id="H5186043"><span class="h2">Variable AV block</span><span class="headingEndMark"> — </span>Variable AV block is usually used to describe a type of ventricular response to atrial flutter or atrial tachycardia (<a class="graphic graphic_waveform graphicRef74851" href="/z/d/graphic/74851.html" rel="external">waveform 4</a>). The AV conduction ratio varies between 2:1, 3:1, and higher, ie, there is more than one nonconducted P wave, but there is no reproducible pattern to the AV conduction. The PR interval of the conducted P or flutter waves is constant. This usually is a normal response and does not represent conduction system disease.</p><p class="headingAnchor" id="H5"><span class="h1">THIRD-DEGREE ATRIOVENTRICULAR BLOCK</span><span class="headingEndMark"> — </span>Third-degree or complete AV block occurs when there is complete failure of the AV node or His-Purkinje system to conduct impulses from the atria to the ventricles. This presents with AV dissociation (variable PR intervals) and an escape rhythm that is either junctional or ventricular. The atrial rate is faster than the rate of the escape rhythm. (See  <a class="medical medical_review" href="/z/d/html/911.html" rel="external">"Third-degree (complete) atrioventricular block"</a>.) This is the result of intrinsic AV nodal disease or disease of the His-Purkinje system. (See  <a class="medical medical_review" href="/z/d/html/907.html" rel="external">"Etiology of atrioventricular block"</a>.) </p><p>Causes include:</p><p class="bulletIndent1"><span class="glyph">●</span>Coronary artery disease.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Drugs that depress or block nodal conduction such as <a class="drug drug_general" data-topicid="9360" href="/z/d/drug information/9360.html" rel="external">digoxin</a>, beta blockers, or non-dihydropyridine calcium channel blockers.</p><p class="bulletIndent1"><span class="glyph">●</span>Enhanced vagal tone, such as during sleep.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Congenital complete AV block. (See  <a class="medical medical_review" href="/z/d/html/912.html" rel="external">"Congenital third-degree (complete) atrioventricular block"</a>.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Infranodal block occurring within the bundle of His or in both bundle branches. This is usually the result of underlying structural heart disease, such as myocardial infarction, hypertrophy, inflammation, or infiltration. On occasion, it is due to Lev or Lenegre disease (fibrosis or fibrocalcification of the conduction system).</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Infectious heart disease, such as Lyme disease.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Postcardiac surgery or transcatheter aortic valve replacement.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Alcohol septal ablation. (See  <a class="medical medical_review" href="/z/d/html/4920.html" rel="external">"Hypertrophic cardiomyopathy: Management of patients with outflow tract obstruction", section on 'Septal reduction therapy'</a>.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Cardiomyopathy. (See  <a class="medical medical_review" href="/z/d/html/4943.html" rel="external">"Definition and classification of the cardiomyopathies"</a>.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Rheumatologic and autoimmune diseases.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Infiltrative diseases including amyloidosis and sarcoidosis. (See  <a class="medical medical_review" href="/z/d/html/122846.html" rel="external">"Cardiac amyloidosis: Epidemiology, clinical manifestations, and diagnosis"</a> and  <a class="medical medical_review" href="/z/d/html/4922.html" rel="external">"Clinical manifestations and diagnosis of cardiac sarcoidosis"</a>.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Certain types of muscular dystrophy.</p><p></p><p>The P waves are completely dissociated from the QRS complexes on the electrocardiogram, ie, there is AV dissociation (<a class="graphic graphic_waveform graphicRef65545" href="/z/d/graphic/65545.html" rel="external">waveform 5</a>). Thus, the PR intervals are irregularly variable. The atrial and ventricular rates are both stable; the former is faster than the latter. If there is AV dissociation with an atrial rate that is slower than the ventricular rate, this is not complete heart block but is an accelerated rhythm (either junctional or ventricular).</p><p>If the complete heart block is the result of AV nodal disease, the dominant pacemaker activating the ventricles is usually located in the lower portion of the AV junction below the block, resulting in a junctional escape rhythm that is frequently at a rate between 40 to 60 beats/minute. However, the location of the escape rhythm is established by the morphology of the QRS complexes and not the rate. With a junctional escape rhythm, the QRS complexes are narrow and resemble those of sinus rhythm. However, if there is coexistent disease in the right or left bundle, the QRS complexes of the escape junctional rhythm will be widened, resembling a ventricular complex with a typical right or left bundle branch block configuration, which would also be the QRS morphology seen during sinus rhythm. </p><p>The dominant escape location is within the ventricular myocardium if the block is below the AV node and His-Purkinje system. This results in a ventricular escape rhythm with a wide QRS complex that does not resemble either a typical right or left bundle branch block. Although it usually is associated with a rate that is less than 40 beats/minute, it may be more rapid if there is sympathetic activation. Hence, the diagnosis of a ventricular escape rhythm is based upon the morphology of the QRS complexes and the actual rate is dependent upon sympathetic-parasympathetic balance (<a class="graphic graphic_waveform graphicRef54024 graphicRef51446" href="/z/d/graphic/54024.html" rel="external">waveform 6A-B</a>). </p><p class="headingAnchor" id="H5186175"><span class="h1">PAROXYSMAL ATRIOVENTRICULAR BLOCK</span><span class="headingEndMark"> — </span>Paroxysmal AV block is an unexpected episode of AV block occurring after a premature atrial complex (PAC; also referred to as a premature atrial beat, premature supraventricular complex, or premature supraventricular beat) or premature ventricular contraction (PVC) leading to a prolonged pause and ventricular asystole. It is thought to be due to a diseased His-Purkinje system, where there is an increased rate of spontaneous Phase 4 depolarization. Normally, no ill effect is seen with abnormal Phase 4 depolarization, but when there is a pause following a premature beat, this allows for more time for the cell membrane to become less negative and development of sodium channel inactivation. Subsequent beats are unable to conduct through the His-Purkinje system. Only a properly timed escape or premature beat can reset the membrane potential to normal and allow for resumption of AV conduction. Most frequently, patients have evidence of right or left bundle branch block or intraventricular conduction delay on the baseline electrocardiogram.</p><p class="headingAnchor" id="H7"><span class="h1">VENTRICULOPHASIC SINUS ARRHYTHMIA</span><span class="headingEndMark"> — </span>A ventriculophasic sinus arrhythmia may be seen whenever there is second- or third-degree AV block with episodic or permanent failure of antegrade conduction through the AV node. This is manifest as intermittent differences in the PP intervals based upon their relationship to the QRS complex (<a class="graphic graphic_waveform graphicRef75898" href="/z/d/graphic/75898.html" rel="external">waveform 7</a>). The two P waves surrounding a QRS complex have a relatively shortened interval (ie, occur at a faster rate) when compared to two P waves without an intervening QRS complex. The reason for this change (shortening) in PP interval is not certain. It has been proposed that it is due to baroreceptor activation in the carotid sinus resulting from ventricular contraction on the conducted beats, leading to a shortening of the subsequent PP interval. Another explanation is that ventricular contraction causes both an increase in pulsatile blood flow through the sinus nodal artery and an increased stretch on the sinus node due to ventricular contraction which enhance nodal automaticity. </p><p class="headingAnchor" id="H189979693"><span class="h1">INFORMATION FOR PATIENTS</span><span class="headingEndMark"> — </span>UpToDate offers two types of patient education materials, “The Basics” and “Beyond the Basics.” The Basics patient education pieces are written in plain language, at the 5<sup>th</sup> to 6<sup>th</sup> grade reading level, and they answer the four or five key questions a patient might have about a given condition. These articles are best for patients who want a general overview and who prefer short, easy-to-read materials. Beyond the Basics patient education pieces are longer, more sophisticated, and more detailed. These articles are written at the 10<sup>th</sup> to 12<sup>th</sup> grade reading level and are best for patients who want in-depth information and are comfortable with some medical jargon.</p><p>Here are the patient education articles that are relevant to this topic. We encourage you to print or e-mail these topics to your patients. (You can also locate patient education articles on a variety of subjects by searching on “patient info” and the keyword(s) of interest.) </p><p class="bulletIndent1"><span class="glyph">●</span>Basics topic (see  <a class="medical medical_basics" href="/z/d/html/17118.html" rel="external">"Patient education: Heart block in adults (The Basics)"</a>)</p><p></p><p class="headingAnchor" id="H389426909"><span class="h1">SUMMARY</span></p><p class="bulletIndent1"><span class="glyph">●</span>First-degree atrioventricular (AV) nodal block, defined as a prolonged PR interval (&gt;0.20 seconds), occurs when there is a prolongation or delay in impulse conduction through the AV node (most common) or His-Purkinje system (<a class="graphic graphic_waveform graphicRef79990" href="/z/d/graphic/79990.html" rel="external">waveform 1</a>). It is also termed prolonged AV conduction.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Second-degree AV block, defined as an occasional dropped QRS complex after a P wave, may either be Mobitz type I or type II:</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>Mobitz type I (Wenkebach) second-degree AV block is usually a result of progressive slowing of AV conduction through the AV node with subsequent failure to conduct one atrial impulse from the atria to the ventricles (<a class="graphic graphic_waveform graphicRef71453" href="/z/d/graphic/71453.html" rel="external">waveform 2</a>). This is manifest as progressive PR prolongation before the dropped beat. There is only one nonconducted P wave.</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>Mobitz type II second-degree AV block is usually indicative of underlying disease of the His-Purkinje conduction system and is characterized by episodic and unpredictable failure of the node to conduct the impulse (or more than one impulse) from the atria to the ventricles (<a class="graphic graphic_waveform graphicRef58649" href="/z/d/graphic/58649.html" rel="external">waveform 3</a>). The PR interval does not change prior to or after the dropped beats. There may be more than one nonconducted P wave.</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>2:1 AV block is identified by every other P wave being nonconducted. This may be either Mobitz I or II. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Third-degree or complete AV block occurs when there is complete failure of the AV node to conduct any impulses from the atria to the ventricles, resulting in an escape rhythm (<a class="graphic graphic_waveform graphicRef65545" href="/z/d/graphic/65545.html" rel="external">waveform 5</a>). There is AV dissociation (ie, variable PR intervals) and the atrial rate is faster than the ventricular rate. The escape rhythm may be either junctional or ventricular and this is based on the QRS complex morphology and not the rate of the escape rhythm.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Paroxysmal AV block is the development of complete heart block and ventricular asystole after a premature atrial or ventricular contraction. A properly timed escape or premature beat is able to reset the rhythm and lead to resumption of AV conduction.</p></div><div id="topicVersionRevision">Topic 2124 Version 15.0</div></div>
-</div>
-</div>
-</section>
-</section>
-<!-- End Main Menu Area -->
-<!-- Start Search Popup Area -->
-<!-- End Footer Area -->
-<!-- Back to top -->
-<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
-<!-- End Back to top -->
-<!-- jQuery Min JS -->
-<!-- Prpper JS -->
-<!-- Bootstrap Min JS -->
-<!-- Classy Nav Min Js -->
-<!-- Owl Carousel Min Js -->
-<!-- Magnific Popup JS -->
-<!-- CounterUp JS -->
-<!-- Waypoints JS -->
-<!-- Form Validator Min JS -->
-<!-- Contact Form Min JS -->
-<!-- Main JS -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-</body>
+ <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+ <head>
+  <title>
+   ECG tutorial: Atrioventricular block
+  </title>
+  <link href="d/css/1.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!-- Start Main Menu Area -->
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="container">
+   <div class="row">
+   </div>
+  </div>
+  <section class="teacher-area ptb-10">
+   <div class="container">
+   </div>
+   <section class="course-details-area ptb-60">
+    <div class="container">
+     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+      <h1 style="text-align:center">
+       ECG tutorial: Atrioventricular block
+      </h1>
+      <div class="utdArticleSection utdStyle" id="topicContent">
+       <div id="topicTitle">
+        ECG tutorial: Atrioventricular block
+       </div>
+       <div class="authorSectionElem">
+        <div class="authorsElementsLeft">
+         <dl id="topicContributors">
+          <dt>
+           <span>
+           </span>
+           Author:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Jordan M Prutkin, MD, MHA, MHS
+           </a>
+          </dd>
+          <dt>
+           <span>
+           </span>
+           Section Editor:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Ary L Goldberger, MD
+           </a>
+          </dd>
+          <dt>
+           <span>
+           </span>
+           Deputy Editor:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Susan B Yeon, MD, JD
+           </a>
+          </dd>
+         </dl>
+        </div>
+        <div class="authorsElementsRight">
+         <div id="literatureReviewDate">
+          <div class="litReviewSingleLine">
+           <bdi>
+            <span class="emphasis">
+             Literature review current through:
+            </span>
+            Jan 2024.
+           </bdi>
+          </div>
+          <div class="litReviewSingleLine">
+           <bdi>
+            <span class="emphasis">
+             This topic last updated:
+            </span>
+            Jan 13, 2022.
+           </bdi>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div id="topicWhatsNewContainer">
+       </div>
+       <div id="topicText">
+        <p class="headingAnchor" id="H5185873">
+         <span class="h1">
+          INTRODUCTION
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Atrioventricular (AV) block may manifest as conduction delay in the AV node, intermittent failure of conduction from the atria to the ventricles, or complete AV block.
+        </p>
+        <p class="headingAnchor" id="H1">
+         <span class="h1">
+          FIRST-DEGREE ATRIOVENTRICULAR BLOCK
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The PR interval (a measure of conduction between the atria and ventricles) includes the P wave (intra-atrial conduction) and the PR segment (conduction within the AV node and His-Purkinje system). First-degree AV block, defined as a prolonged PR interval (&gt;0.20 seconds), is not a true block but is delayed or slowed AV conduction. The conduction delay is most frequently in the AV node but may also be in the His-Purkinje system (
+         <a class="graphic graphic_waveform graphicRef79990" href="/z/d/graphic/79990.html" rel="external">
+          waveform 1
+         </a>
+         ). A partial list of causes of first-degree AV block include the following:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Underlying structural abnormalities of the node.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         An increase in vagal tone.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Drugs that impair or slow nodal conduction including
+         <a class="drug drug_general" data-topicid="9360" href="/z/d/drug information/9360.html" rel="external">
+          digoxin
+         </a>
+         , beta blockers, and non-dihydropyridine calcium channel blocking agents.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Myocardial infarction.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Infiltrative and dilated cardiomyopathies.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Certain muscular dystrophies.
+        </p>
+        <p>
+        </p>
+        <p>
+         As there is no actual block of conduction between the atrium to the ventricle, it may be more appropriate to use the term "prolonged AV conduction" rather than block.
+        </p>
+        <p>
+         As the PR interval includes the P wave (intraatrial conduction) and the PR segment, a prolonged PR interval may also be due to a delay or slowing in intraatrial conduction. (See
+         <a class="medical medical_review" href="/z/d/html/907.html" rel="external">
+          "Etiology of atrioventricular block"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/913.html" rel="external">
+          "First-degree atrioventricular block"
+         </a>
+         .)
+        </p>
+        <p>
+         The PR interval generally varies with the heart rate; in the presence of sinus bradycardia (usually the result of enhanced vagal tone), the PR interval lengthens as conduction through the AV node slows. In contrast, the PR interval becomes shorter during sinus tachycardia, which is the result of enhanced sympathetic tone that enhances conduction through the AV node. At very fast heart rates or in those with AV node disease, however, the PR interval may lengthen due to decremental conduction.
+        </p>
+        <p class="headingAnchor" id="H2">
+         <span class="h1">
+          SECOND-DEGREE ATRIOVENTRICULAR BLOCK
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Second-degree AV block is defined as an occasional nonconducted P wave, resulting in a long RR interval. Second-degree AV block may either be Mobitz type I (Wenckebach) or Mobitz type II.
+        </p>
+        <p class="headingAnchor" id="H3">
+         <span class="h2">
+          Mobitz type I
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Mobitz type I or Wenckebach second-degree AV block is a result of intermittent block of the impulse within the AV node, with subsequent failure to conduct an atrial impulse from the atria to the ventricles. (See
+         <a class="medical medical_review" href="/z/d/html/907.html" rel="external">
+          "Etiology of atrioventricular block"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/909.html" rel="external">
+          "Second-degree atrioventricular block: Mobitz type I (Wenckebach block)"
+         </a>
+         .)
+        </p>
+        <p>
+         Mobitz type I is due to progressive slowing of each subsequent impulse in the AV node, due to decremental conduction, until the node finally fails to conduct the impulse. The result is no conduction to the ventricle and no QRS impulse on the electrocardiogram (ECG) for that beat.
+        </p>
+        <p>
+         The ECG correlates of these electrical events include the following (
+         <a class="graphic graphic_waveform graphicRef71453" href="/z/d/graphic/71453.html" rel="external">
+          waveform 2
+         </a>
+         ):
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         There is a progressive lengthening of the PR interval until a normally occurring P wave is not followed by a QRS complex. There is only one nonconducted P wave. Any pattern of block (eg, 2:1, 3:2, 4:3, etc, or a variable pattern) may occur, depending upon the AV nodal electrophysiologic properties and the degree of vagal tone.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         The completely blocked P wave is on time and all PP intervals are equal.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         The impulse that arrives at the node following the completely blocked beat is conducted normally again because the node has had time to become totally repolarized. Thus, the PR interval after the nonconducted beat is less than the PR interval immediately preceding the nonconducted beat.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         The baseline PR interval (ie, the PR interval after each pause) is frequently prolonged, since both first-degree AV block and Mobitz type 1 second-degree AV block usually reflect disease in the AV node.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         The incremental lengthening of each successive PR interval becomes progressively lessened (eg, 0.20, then 0.26, then 0.30 seconds, etc). The greatest increase in PR interval lengthening is from the first to second conducted beats, and all subsequent conducted beats have a PR interval that increases less quickly. This results in a progressive shortening of successive RR intervals and is one of the causes of grouped beating on the ECG.
+        </p>
+        <p>
+        </p>
+        <p>
+         Not every feature will be seen with Mobitz type I second-degree AV block.
+        </p>
+        <p class="headingAnchor" id="H4">
+         <span class="h2">
+          Mobitz type II
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Mobitz type II second-degree AV block is usually indicative of underlying disease of the His-Purkinje system characterized by episodic and unpredictable failure of the His-Purkinje pathway to conduct the impulse from the atria to the ventricles. The block occurs below the AV node and within the bundle of His or both bundle branches. (See
+         <a class="medical medical_review" href="/z/d/html/907.html" rel="external">
+          "Etiology of atrioventricular block"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/910.html" rel="external">
+          "Second-degree atrioventricular block: Mobitz type II"
+         </a>
+         .)
+        </p>
+        <p>
+         In contrast to Mobitz type I, there is no change in the PR interval prior to or after the nonconducted P wave (
+         <a class="graphic graphic_waveform graphicRef58649" href="/z/d/graphic/58649.html" rel="external">
+          waveform 3
+         </a>
+         ). This is because the His-Purkinje system is all or none, ie, it either conducts (always at the same rate) or does not conduct an impulse. Mobitz type II has a higher risk of progression to complete heart block than Mobitz type I and is usually an indication for a pacemaker, even if asymptomatic. If complete heart block were to develop, the escape rhythm is almost always ventricular and wide complex. (See
+         <a class="medical medical_review" href="/z/d/html/941.html" rel="external">
+          "Permanent cardiac pacing: Overview of devices and indications"
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H9873007">
+         <span class="h2">
+          2:1 AV block
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         A specific form of second-degree AV block is termed “2:1 AV block.” In this situation, every other P wave is nonconducted, and it is not possible to determine if the block is Mobitz type I or Mobitz II.
+        </p>
+        <p>
+         The etiology can only be established when there are two or more sequential PR intervals. This may occur spontaneously or when there are changes in the sinus rate, such as with activity or exercise. If there is progressive lengthening of the PR intervals on the consecutive conducted beats, the etiology of the 2:1 AV block is presumed to be Mobitz type I. If the PR intervals are constant, the etiology is Mobitz type II.
+        </p>
+        <p class="headingAnchor" id="H5185959">
+         <span class="h2">
+          High grade AV block
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         There may be more than one successive nonconducted P wave, resulting in several P waves in a row without QRS complexes, termed "advanced" or "high grade AV block." The AV conduction ratio may or may not have a regular pattern (ie, 3:1, 4:1, etc). This is an advanced form of Mobitz type II second-degree AV block.
+        </p>
+        <p class="headingAnchor" id="H5186043">
+         <span class="h2">
+          Variable AV block
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Variable AV block is usually used to describe a type of ventricular response to atrial flutter or atrial tachycardia (
+         <a class="graphic graphic_waveform graphicRef74851" href="/z/d/graphic/74851.html" rel="external">
+          waveform 4
+         </a>
+         ). The AV conduction ratio varies between 2:1, 3:1, and higher, ie, there is more than one nonconducted P wave, but there is no reproducible pattern to the AV conduction. The PR interval of the conducted P or flutter waves is constant. This usually is a normal response and does not represent conduction system disease.
+        </p>
+        <p class="headingAnchor" id="H5">
+         <span class="h1">
+          THIRD-DEGREE ATRIOVENTRICULAR BLOCK
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Third-degree or complete AV block occurs when there is complete failure of the AV node or His-Purkinje system to conduct impulses from the atria to the ventricles. This presents with AV dissociation (variable PR intervals) and an escape rhythm that is either junctional or ventricular. The atrial rate is faster than the rate of the escape rhythm. (See
+         <a class="medical medical_review" href="/z/d/html/911.html" rel="external">
+          "Third-degree (complete) atrioventricular block"
+         </a>
+         .) This is the result of intrinsic AV nodal disease or disease of the His-Purkinje system. (See
+         <a class="medical medical_review" href="/z/d/html/907.html" rel="external">
+          "Etiology of atrioventricular block"
+         </a>
+         .)
+        </p>
+        <p>
+         Causes include:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Coronary artery disease.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Drugs that depress or block nodal conduction such as
+         <a class="drug drug_general" data-topicid="9360" href="/z/d/drug information/9360.html" rel="external">
+          digoxin
+         </a>
+         , beta blockers, or non-dihydropyridine calcium channel blockers.
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Enhanced vagal tone, such as during sleep.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Congenital complete AV block. (See
+         <a class="medical medical_review" href="/z/d/html/912.html" rel="external">
+          "Congenital third-degree (complete) atrioventricular block"
+         </a>
+         .)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Infranodal block occurring within the bundle of His or in both bundle branches. This is usually the result of underlying structural heart disease, such as myocardial infarction, hypertrophy, inflammation, or infiltration. On occasion, it is due to Lev or Lenegre disease (fibrosis or fibrocalcification of the conduction system).
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Infectious heart disease, such as Lyme disease.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Postcardiac surgery or transcatheter aortic valve replacement.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Alcohol septal ablation. (See
+         <a class="medical medical_review" href="/z/d/html/4920.html" rel="external">
+          "Hypertrophic cardiomyopathy: Management of patients with outflow tract obstruction", section on 'Septal reduction therapy'
+         </a>
+         .)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Cardiomyopathy. (See
+         <a class="medical medical_review" href="/z/d/html/4943.html" rel="external">
+          "Definition and classification of the cardiomyopathies"
+         </a>
+         .)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Rheumatologic and autoimmune diseases.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Infiltrative diseases including amyloidosis and sarcoidosis. (See
+         <a class="medical medical_review" href="/z/d/html/122846.html" rel="external">
+          "Cardiac amyloidosis: Epidemiology, clinical manifestations, and diagnosis"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/4922.html" rel="external">
+          "Clinical manifestations and diagnosis of cardiac sarcoidosis"
+         </a>
+         .)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Certain types of muscular dystrophy.
+        </p>
+        <p>
+        </p>
+        <p>
+         The P waves are completely dissociated from the QRS complexes on the electrocardiogram, ie, there is AV dissociation (
+         <a class="graphic graphic_waveform graphicRef65545" href="/z/d/graphic/65545.html" rel="external">
+          waveform 5
+         </a>
+         ). Thus, the PR intervals are irregularly variable. The atrial and ventricular rates are both stable; the former is faster than the latter. If there is AV dissociation with an atrial rate that is slower than the ventricular rate, this is not complete heart block but is an accelerated rhythm (either junctional or ventricular).
+        </p>
+        <p>
+         If the complete heart block is the result of AV nodal disease, the dominant pacemaker activating the ventricles is usually located in the lower portion of the AV junction below the block, resulting in a junctional escape rhythm that is frequently at a rate between 40 to 60 beats/minute. However, the location of the escape rhythm is established by the morphology of the QRS complexes and not the rate. With a junctional escape rhythm, the QRS complexes are narrow and resemble those of sinus rhythm. However, if there is coexistent disease in the right or left bundle, the QRS complexes of the escape junctional rhythm will be widened, resembling a ventricular complex with a typical right or left bundle branch block configuration, which would also be the QRS morphology seen during sinus rhythm.
+        </p>
+        <p>
+         The dominant escape location is within the ventricular myocardium if the block is below the AV node and His-Purkinje system. This results in a ventricular escape rhythm with a wide QRS complex that does not resemble either a typical right or left bundle branch block. Although it usually is associated with a rate that is less than 40 beats/minute, it may be more rapid if there is sympathetic activation. Hence, the diagnosis of a ventricular escape rhythm is based upon the morphology of the QRS complexes and the actual rate is dependent upon sympathetic-parasympathetic balance (
+         <a class="graphic graphic_waveform graphicRef54024 graphicRef51446" href="/z/d/graphic/54024.html" rel="external">
+          waveform 6A-B
+         </a>
+         ).
+        </p>
+        <p class="headingAnchor" id="H5186175">
+         <span class="h1">
+          PAROXYSMAL ATRIOVENTRICULAR BLOCK
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Paroxysmal AV block is an unexpected episode of AV block occurring after a premature atrial complex (PAC; also referred to as a premature atrial beat, premature supraventricular complex, or premature supraventricular beat) or premature ventricular contraction (PVC) leading to a prolonged pause and ventricular asystole. It is thought to be due to a diseased His-Purkinje system, where there is an increased rate of spontaneous Phase 4 depolarization. Normally, no ill effect is seen with abnormal Phase 4 depolarization, but when there is a pause following a premature beat, this allows for more time for the cell membrane to become less negative and development of sodium channel inactivation. Subsequent beats are unable to conduct through the His-Purkinje system. Only a properly timed escape or premature beat can reset the membrane potential to normal and allow for resumption of AV conduction. Most frequently, patients have evidence of right or left bundle branch block or intraventricular conduction delay on the baseline electrocardiogram.
+        </p>
+        <p class="headingAnchor" id="H7">
+         <span class="h1">
+          VENTRICULOPHASIC SINUS ARRHYTHMIA
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         A ventriculophasic sinus arrhythmia may be seen whenever there is second- or third-degree AV block with episodic or permanent failure of antegrade conduction through the AV node. This is manifest as intermittent differences in the PP intervals based upon their relationship to the QRS complex (
+         <a class="graphic graphic_waveform graphicRef75898" href="/z/d/graphic/75898.html" rel="external">
+          waveform 7
+         </a>
+         ). The two P waves surrounding a QRS complex have a relatively shortened interval (ie, occur at a faster rate) when compared to two P waves without an intervening QRS complex. The reason for this change (shortening) in PP interval is not certain. It has been proposed that it is due to baroreceptor activation in the carotid sinus resulting from ventricular contraction on the conducted beats, leading to a shortening of the subsequent PP interval. Another explanation is that ventricular contraction causes both an increase in pulsatile blood flow through the sinus nodal artery and an increased stretch on the sinus node due to ventricular contraction which enhance nodal automaticity.
+        </p>
+        <p class="headingAnchor" id="H189979693">
+         <span class="h1">
+          INFORMATION FOR PATIENTS
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         UpToDate offers two types of patient education materials, “The Basics” and “Beyond the Basics.” The Basics patient education pieces are written in plain language, at the 5
+         <sup>
+          th
+         </sup>
+         to 6
+         <sup>
+          th
+         </sup>
+         grade reading level, and they answer the four or five key questions a patient might have about a given condition. These articles are best for patients who want a general overview and who prefer short, easy-to-read materials. Beyond the Basics patient education pieces are longer, more sophisticated, and more detailed. These articles are written at the 10
+         <sup>
+          th
+         </sup>
+         to 12
+         <sup>
+          th
+         </sup>
+         grade reading level and are best for patients who want in-depth information and are comfortable with some medical jargon.
+        </p>
+        <p>
+         Here are the patient education articles that are relevant to this topic. We encourage you to print or e-mail these topics to your patients. (You can also locate patient education articles on a variety of subjects by searching on “patient info” and the keyword(s) of interest.)
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Basics topic (see
+         <a class="medical medical_basics" href="/z/d/html/17118.html" rel="external">
+          "Patient education: Heart block in adults (The Basics)"
+         </a>
+         )
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H389426909">
+         <span class="h1">
+          SUMMARY
+         </span>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         First-degree atrioventricular (AV) nodal block, defined as a prolonged PR interval (&gt;0.20 seconds), occurs when there is a prolongation or delay in impulse conduction through the AV node (most common) or His-Purkinje system (
+         <a class="graphic graphic_waveform graphicRef79990" href="/z/d/graphic/79990.html" rel="external">
+          waveform 1
+         </a>
+         ). It is also termed prolonged AV conduction.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Second-degree AV block, defined as an occasional dropped QRS complex after a P wave, may either be Mobitz type I or type II:
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Mobitz type I (Wenkebach) second-degree AV block is usually a result of progressive slowing of AV conduction through the AV node with subsequent failure to conduct one atrial impulse from the atria to the ventricles (
+         <a class="graphic graphic_waveform graphicRef71453" href="/z/d/graphic/71453.html" rel="external">
+          waveform 2
+         </a>
+         ). This is manifest as progressive PR prolongation before the dropped beat. There is only one nonconducted P wave.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Mobitz type II second-degree AV block is usually indicative of underlying disease of the His-Purkinje conduction system and is characterized by episodic and unpredictable failure of the node to conduct the impulse (or more than one impulse) from the atria to the ventricles (
+         <a class="graphic graphic_waveform graphicRef58649" href="/z/d/graphic/58649.html" rel="external">
+          waveform 3
+         </a>
+         ). The PR interval does not change prior to or after the dropped beats. There may be more than one nonconducted P wave.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         2:1 AV block is identified by every other P wave being nonconducted. This may be either Mobitz I or II.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Third-degree or complete AV block occurs when there is complete failure of the AV node to conduct any impulses from the atria to the ventricles, resulting in an escape rhythm (
+         <a class="graphic graphic_waveform graphicRef65545" href="/z/d/graphic/65545.html" rel="external">
+          waveform 5
+         </a>
+         ). There is AV dissociation (ie, variable PR intervals) and the atrial rate is faster than the ventricular rate. The escape rhythm may be either junctional or ventricular and this is based on the QRS complex morphology and not the rate of the escape rhythm.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Paroxysmal AV block is the development of complete heart block and ventricular asystole after a premature atrial or ventricular contraction. A properly timed escape or premature beat is able to reset the rhythm and lead to resumption of AV conduction.
+        </p>
+       </div>
+       <div id="topicVersionRevision">
+        Topic 2124 Version 15.0
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </section>
+  <!-- End Main Menu Area -->
+  <!-- Start Search Popup Area -->
+  <!-- End Footer Area -->
+  <!-- Back to top -->
+  <a class="scrolltop" href="#top">
+   <i class="icofont-hand-drawn-up">
+   </i>
+  </a>
+  <!-- End Back to top -->
+  <!-- jQuery Min JS -->
+  <!-- Prpper JS -->
+  <!-- Bootstrap Min JS -->
+  <!-- Classy Nav Min Js -->
+  <!-- Owl Carousel Min Js -->
+  <!-- Magnific Popup JS -->
+  <!-- CounterUp JS -->
+  <!-- Waypoints JS -->
+  <!-- Form Validator Min JS -->
+  <!-- Contact Form Min JS -->
+  <!-- Main JS -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+ </body>
 </html>

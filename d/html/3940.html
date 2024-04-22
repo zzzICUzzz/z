@@ -1,409 +1,1211 @@
 <!DOCTYPE html>
-
 <html lang="fa">
-<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
-<head><title>ZAP-70 deficiency</title><link href="/z/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/z/d/css/icofont.min.css" rel="stylesheet"/><link href="/z/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/z/d/css/animate.css" rel="stylesheet"/><link href="/z/d/css/owl.carousel.css" rel="stylesheet"/><link href="/z/d/css/magnific-popup.css" rel="stylesheet"/><link href="/z/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/z/d/css/style.css" rel="stylesheet"/><link href="/z/d/css/rtl_edited.css" rel="stylesheet"/><link href="/z/d/css/responsive.css" rel="stylesheet"/><link href="https:///uptodate_assets/main.css" rel="stylesheet"/>
-<style>
-
-#myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 16px;
-  color: black;
-  display: block
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee;
-}
-
-#searchResult {
-
-  list-style-type: none;
-  padding: 0;
-  padding-right: 20px;
-}
-
-#searchResult li a {
-  border: .5px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #79bc21;
-  padding: 7px;
-  text-decoration: none;
-  font-size: 14px;
-  color: white;
-  display: block
-}
-
-#searchResult li a:hover:not(.header) {
-  background-color: #222;
-}
-
-
-#txtHint   {
-  position: absolute;
-  text-shadow: none;
-  width: 100%;
-  margin-top: -15px;
-  padding-right: 10px;
-
-  filter: alpha(opacity=95);
-  -moz-opacity: 0.95;
-  opacity: 1;
-  z-index: 200;
-}
-.countBubl {
-  background:#eb0029;
-  color:#fff;
-  padding:5px;
-  margin-top: 50%;
-
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
- width: 55%;
- padding-left: 20px;
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
- width: 20%;
-}
- #Uptodate_image {
-      width: 50%;
-  }#uptodate-area {
-      /*z-index: 99;*/
-  }
-#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
- margin-left: 10px;
- margin-bottom: 6%;
-}
-@media (max-width: @screen-xs) {
-    .countBubl {
-        font-size: 4px ;
-    }
-    #uptodate_version {
-        font-size: 4px ;
-    }
-}
-
-@media (max-width: @screen-sm) {
-    .countBubl {
-        font-size: 14px ;
-    }
-}
-@media  all and(max-width: 820) {
-    #Uptodate_image {
-        width: 80% ;
-    }#uptodate-area {
-        z-index: 99;
-    }
-}@media  all and (min-width: 820) and(max-width: 88820){
-    #Uptodate_image {
-        width: 100% !important;
-    }
-    .countBubl {
-        font-size: 4px ;
-    }
-}
-div.col-md-3:nth-child(3) {
- margin-top: 6%;
-}
-
-div.col-md-3:nth-child(3) > img:nth-child(1) {
- width: 100%;
- margin-left: 11px;
-}
-
-</style>
-<style media="screen" type="text/css">
-  .goback {
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    position: fixed;
-    display: none;
-    font-size: 15px;
-    background: #71c0fa;
-    z-index: 1000;
-    text-align: center;
-    color: #ffffff;
-    -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
-    border-radius: 50px;
-    bottom: 3.8%;
-    right: 2%;
-}
-  .buyPackage {
-  width: 100px;
-  height: 100px;
-  line-height: 40px;
-  position: fixed;
-  display: none;
-  font-size: 10px;
-  background: #fa759e;
-  z-index: 1000;
-  text-align: center;
-  color: #ffffff;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  border-radius: 10px;
-  top: 150px;
-  right: 2%;
-  text-align: center;
-}
-.uptodate-area {
-  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-    background-attachment: fixed;
-  position: relative;
-}
-.uptodate-area::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  padding-top: 100px;
-  width: 100%;
-}
-#references{
-  display: none;
-}
-</style>
-<style>
-section.sticky {
-  position: sticky;
-  top: 0;
-  background-color: #fff !important;
-  /*z-index: 100;*/
-  /*padding-top: 80px;*/
-
-}
-.m4inb{
-    border: solid !important;
-  }
-
-  .newsletter-area::before {
-       background: unset !important;
-  }
-p {
-    color: #555;
-}
-</style>
-<meta content="" name="description"/>
-<link href="/z/d/img/favicon.png" rel="icon" type="image/png">
-</link></head>
-<body>
-<!-- Start Main Menu Area -->
-<br/>
-<br/>
-<br/>
-<br/>
-<div class="container">
-<div class="row">
-</div>
-</div>
-<section class="teacher-area ptb-10">
-<div class="container">
-</div>
-<section class="course-details-area ptb-60">
-<div class="container">
-<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-<h1 style="text-align:center">ZAP-70 deficiency</h1>
-<div class="utdArticleSection utdStyle" id="topicContent"><div id="topicTitle">ZAP-70 deficiency</div> <div class="authorSectionElem"><div class="authorsElementsLeft"><dl id="topicContributors"><dt><span> </span>Author:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Chaim M Roifman, CM, MD, FRCPC, FCACB</a></dd><dt><span> </span>Section Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Jennifer M Puck, MD</a></dd><dt><span> </span>Deputy Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Elizabeth TePas, MD, MS</a></dd></dl></div><div class="authorsElementsRight"><div id="literatureReviewDate"><div class="litReviewSingleLine"><bdi><span class="emphasis">Literature review current through:</span> Jan 2024.</bdi></div><div class="litReviewSingleLine"><bdi><span class="emphasis">This topic last updated:</span> Nov 30, 2023.</bdi></div></div></div></div><div id="topicWhatsNewContainer"></div><div id="topicText"><p class="headingAnchor" id="H24434167"><span class="h1">INTRODUCTION</span><span class="headingEndMark"> — </span>The zeta chain-associated protein kinase of 70 kD (ZAP-70) is involved in T cell receptor (TCR) signaling and is critical for T cell differentiation and function. Deficiency of ZAP-70 causes a combined immunodeficiency (CID). Affected children present within the first two years of life with a history of recurrent infections, similar to infants with severe combined immunodeficiency (SCID). However, diagnosis can be delayed because most patients with ZAP-70 deficiency have detectable lymphoid tissues and a normal lymphocyte count. The treatment of choice is hematopoietic cell transplantation (HCT).</p><p>A review of ZAP-70 deficiency (MIM +176947) is discussed here. Reviews related to other CIDs are presented separately. SCID disorders are also discussed separately. (See  <a class="medical medical_review" href="/z/d/html/3956.html" rel="external">"CD3/T cell receptor complex disorders causing immunodeficiency"</a> and  <a class="medical medical_review" href="/z/d/html/3935.html" rel="external">"Combined immunodeficiencies: An overview"</a> and  <a class="medical medical_review" href="/z/d/html/3955.html" rel="external">"Severe combined immunodeficiency (SCID): An overview"</a> and  <a class="medical medical_review" href="/z/d/html/3912.html" rel="external">"Severe combined immunodeficiency (SCID): Specific defects"</a>.)</p><p>TCR genetics, structure, biology, and signaling are covered in detail separately as well. (See  <a class="medical medical_review" href="/z/d/html/3950.html" rel="external">"T-B-NK+ SCID: Pathogenesis, clinical manifestations, and diagnosis", section on 'T cell receptor generation'</a> and  <a class="medical medical_review" href="/z/d/html/3980.html" rel="external">"The adaptive cellular immune response: T cells and cytokines", section on 'T cell activation and functions'</a> and  <a class="medical medical_review" href="/z/d/html/3956.html" rel="external">"CD3/T cell receptor complex disorders causing immunodeficiency", section on 'Overview of T cell receptor biology'</a> and  <a class="medical medical_review" href="/z/d/html/15794.html" rel="external">"T cell receptor signaling"</a>.)</p><p class="headingAnchor" id="H9472821"><span class="h1">BRIEF OVERVIEW OF T CELL RECEPTOR SIGNALING</span><span class="headingEndMark"> — </span>T cell receptor (TCR) signaling in naïve T cells is initiated by binding of TCR to a peptide-major histocompatibility (MHC) complex expressed on the surface of antigen-presenting cells  (<a class="graphic graphic_figure graphicRef77023" href="/z/d/graphic/77023.html" rel="external">figure 1</a> and <a class="graphic graphic_figure graphicRef66727" href="/z/d/graphic/66727.html" rel="external">figure 2</a>). This association leads to activation of multiple pathways, eventually culminating in a T cell response. The Src-family protein tyrosine kinase Lck is first activated with resultant phosphorylation of motifs known as immune receptor tyrosine-based activation motifs (ITAMs). Phosphorylated ITAMs on CD3 zeta serve as binding sites for ZAP-70. ZAP-70 is also activated by autophosphorylation. The role of this kinase in TCR signaling was unveiled by studying humans with ZAP-70 deficiency. Activated ZAP-70 phosphorylates a variety of downstream molecules, resulting in calcium mobilization, actin cytoskeleton rearrangement, and activation of Ras guanosine triphosphate hydrolase (GTPase). These events lead to activation of several transcription factors with resultant T cell proliferation and differentiation. (See  <a class="medical medical_review" href="/z/d/html/15794.html" rel="external">"T cell receptor signaling"</a>.)</p><p class="headingAnchor" id="H24434174"><span class="h1">EPIDEMIOLOGY</span><span class="headingEndMark"> — </span>ZAP-70 deficiency is a rare combined immunodeficiency (CID) with an autosomal recessive pattern of inheritance. The disease was first described in 1989 in a patient of Mennonite descent with CD8 lymphocytopenia [<a href="#rid1">1</a>]. Pathogenic variants in ZAP-70 were initially identified in Mennonite kindreds and subsequently in other ethnicities including Hispanic, Japanese, Turkish, White, Portuguese, Indian, Iranian, and Chinese patients [<a href="#rid2">2-11</a>].</p><p class="headingAnchor" id="H24434181"><span class="h1">PATHOGENESIS</span><span class="headingEndMark"> — </span>ZAP-70 plays a crucial role in T cell development and function, although the exact mechanisms are not fully understood [<a href="#rid12">12,13</a>]. The thymus is not dysplastic in patients with ZAP-70 deficiency, unlike typical cases of combined immunodeficiency (CID) or severe combined immunodeficiency (SCID). Thymus architecture and cellularity are preserved, as are the number and size of Hassall's corpuscles. Normal expression of CD3/CD4/CD8 double-positive thymocytes in the cortex and single positive CD3/CD4, but not CD8 T cells, are present in the medullary area as seen on immunohistochemistry.</p><p>The phenotype of affected patients suggests that ZAP-70 is critical for CD8 T cell selection and peripheral CD4 and CD8 T cell function but is dispensable for CD4 selection in the thymus. One possible explanation for the presence of normal numbers of peripheral CD4+ T cells is that Syk, which is expressed at higher levels in the thymus than in the blood in humans, may rescue CD4 selection in the absence of ZAP-70 [<a href="#rid14">14,15</a>]. The differential ability of Syk to replace ZAP-70 in CD4 versus CD8 selection events may be related to the preferential association of Lck with the CD4 coreceptor. This preferential association would facilitate CD4 selection if Syk was unable to fully substitute for loss of ZAP-70 function during thymocyte differentiation. Normal downregulation of Syk activity in mature T cells would abrogate T cell receptor (TCR) signaling altogether and lead to combined CD4 and CD8 immunodeficiency in patients with ZAP-70 deficiency, but studies so far have been controversial [<a href="#rid14">14-18</a>].</p><p>Other studies suggest that ZAP-70 may affect thymopoiesis at an earlier stage than previously considered. Assessment of gene rearrangement events that represent sequential stages of thymocyte maturation suggest a reduction, but not a complete block, of T cell development during transition from double-negative to double-positive cells [<a href="#rid19">19</a>]. This may explain the low levels of T cell receptor excision circles (TRECs) found in peripheral CD4+ cells, consistent with a relatively low number of naïve cells. However, this model cannot explain the preferential selection of single-positive CD4+ T cells. The expansion and survival of CD4+ T cells in the circulation may be explained by their reduced ability to undergo apoptosis [<a href="#rid19">19</a>].</p><p>ZAP-70 is also critical for T cell function. Peripheral T cells from ZAP-70-deficient patients demonstrate defective TCR-mediated signaling, but they are capable of secreting interleukin (IL) 2 and proliferating if stimulated with phorbol myristate acetate (PMA) and ionomycin that bypass the need for early TCR-mediated events [<a href="#rid2">2,4,5</a>]. These T cells are polyclonal, with full representation of the TCR repertoire, although CD4 cells do not differentiate into T helper 2 (Th2) cells and lack inhibitory controls, such as IL-10 and tumor necrosis factor (TNF) beta [<a href="#rid19">19</a>]. This phenotype has the hallmarks of an autoimmune signature. Indeed, several patients have presented with overt autoimmune disorders.</p><p class="headingAnchor" id="H24434188"><span class="h1">GENETICS</span><span class="headingEndMark"> — </span>ZAP-70 deficiency is due to autosomal recessive pathogenic variants in the <em>ZAP70</em> gene, located on chromosome 2q12 [<a href="#rid5">5</a>]. Several separate variants in the <em>ZAP70</em> gene have been identified [<a href="#rid2">2,4-6,16-18,20,21</a>]. Most variants occur within the kinase domain of the ZAP-70 protein and significantly affect both protein stability and catalytic activity  (<a class="graphic graphic_figure graphicRef68529" href="/z/d/graphic/68529.html" rel="external">figure 3</a>). There is one report of a variant leading to expression of ZAP-70 that is rapidly degraded [<a href="#rid22">22</a>] and another report of a defect that results in an expressed but nonfunctional protein [<a href="#rid16">16</a>]. One hypomorphic variant in a noncoding intron resulting in decreased protein expression and a milder phenotype has been described [<a href="#rid23">23</a>]. In addition, a family with two siblings who were compound heterozygous for both a hypomorphic variant in the first Src-homology 2 (SH2) domain and an activating variant in the kinase domain had a unique constellation of autoimmune phenotypes including bullous pemphigoid associated with autoantibodies [<a href="#rid21">21</a>].</p><p class="headingAnchor" id="H24434195"><span class="h1">CLINICAL MANIFESTATIONS</span><span class="headingEndMark"> — </span>Some children with ZAP-70 deficiency present within the first two years of life with a history of recurrent infections, similar to infants with severe combined immunodeficiency (SCID). However, unlike those patients, ZAP-70 deficiency patients may present later in childhood and invariably have palpable lymph nodes, visible tonsils, and a thymus shadow on imaging  (<a class="graphic graphic_diagnosticimage graphicRef67690" href="/z/d/graphic/67690.html" rel="external">image 1</a>) [<a href="#rid3">3</a>]. (See  <a class="medical medical_review" href="/z/d/html/3955.html" rel="external">"Severe combined immunodeficiency (SCID): An overview"</a> and  <a class="medical medical_review" href="/z/d/html/3935.html" rel="external">"Combined immunodeficiencies: An overview"</a>.)</p><p>Other findings are also somewhat different in patients with ZAP-70 deficiency than in infants with SCID. <em>Pneumocystis jirovecii</em> (formerly <em>carinii</em>), pneumonia, and cytomegalovirus (CMV) pneumonitis are less common. These infections may appear later than six months of age, and, at least initially, they respond well to antibiotic or antiviral treatment. Similarly, chronic diarrhea and failure to thrive are less frequent and appear in less than half of the patients reported.</p><p>Autoimmunity or manifestations of immune dysregulation such as ulcerative colitis and blood cytopenias are reported [<a href="#rid24">24</a>]. Unique presentations such as pustular skin lesions from birth, subcutaneous nodules [<a href="#rid6">6</a>], lymphoma [<a href="#rid20">20</a>], and multisystem autoantibody disease [<a href="#rid21">21</a>] are also seen. In one family with a unique pathogenic variant profile, two children had bullous pemphigoid, nephrotic syndrome, autoimmune hemophilia, and inflammatory bowel disease [<a href="#rid21">21</a>]. In addition, cases with aberrant inflammatory features like Omenn syndrome and hemophagocytic lymphohistiocytosis (HLH) have been described [<a href="#rid7">7</a>]. (See  <a class="medical medical_review" href="/z/d/html/8384.html" rel="external">"Treatment and prognosis of hemophagocytic lymphohistiocytosis"</a> and  <a class="medical medical_review" href="/z/d/html/16362.html" rel="external">"Autoimmunity in patients with inborn errors of immunity/primary immunodeficiency"</a> and  <a class="medical medical_review" href="/z/d/html/3950.html" rel="external">"T-B-NK+ SCID: Pathogenesis, clinical manifestations, and diagnosis", section on 'Omenn syndrome phenotype'</a>.)</p><p class="headingAnchor" id="H24434202"><span class="h1">LABORATORY FINDINGS</span><span class="headingEndMark"> — </span>Patients with ZAP-70 deficiency have normal to elevated numbers of circulating lymphocytes (range: 4000 to 20,000 x cells/microliter) [<a href="#rid2">2,4-6,16-18,20</a>], in contrast to the lymphopenia seen in patients with severe combined immunodeficiency (SCID) or other forms of combined immunodeficiency (CID).</p><p>Phenotypic analysis of ZAP-70-deficient peripheral blood lymphocytes reveals normal to increased percentages of CD3 (38 to 80 percent) and CD4 (37 to 75 percent) T cells due to the lack of CD8 T cells (0 to 5 percent) [<a href="#rid2">2,4,5</a>]. Expression of T cell surface proteins other than CD8 is normal. ZAP-70-deficient peripheral T cells are polyclonal and not maternal in origin by molecular analysis [<a href="#rid2">2,19</a>]. Natural killer (NK) cell numbers (1 to 10 percent) and activity (20 to 30 percent) are relatively normal [<a href="#rid25">25</a>]. All patients have normal B cell numbers (13 to 41 percent) [<a href="#rid2">2,4,5</a>]. Thymic histology is remarkable for normal architecture, including normal corticomedullary demarcation and the presence of Hassall's corpuscles. Immunohistochemistry shows preserved expression of CD4 on T cells in both the cortex and medullary areas but selective expression of CD8 on T cells in the cortex only and not the medulla [<a href="#rid2">2,3</a>].</p><p class="headingAnchor" id="H24434209"><span class="h2">T cell function</span><span class="headingEndMark"> — </span>Absent T cell proliferative responses to mitogens in vitro, including phytohemagglutinin (PHA) and anti-CD3 (CD3 monoclonal antibody), are seen, as is anergy to candidal skin testing [<a href="#rid3">3-5</a>]. Failure to reject an allogeneic skin graft was also demonstrated in one patient [<a href="#rid3">3</a>].</p><p class="headingAnchor" id="H24434216"><span class="h2">B cell function</span><span class="headingEndMark"> — </span>Serum immunoglobulin G (IgG) may be normal or reduced, while immunoglobulin M (IgM) and immunoglobulin A (IgA) levels are normal [<a href="#rid2">2-5</a>]. Specific antibody production is variable, with some patients having tetanus antibodies or specific immunoglobulin E (IgE) antibodies against allergens [<a href="#rid18">18</a>].</p><p class="headingAnchor" id="H24434223"><span class="h2">Signaling defects</span><span class="headingEndMark"> — </span>Critical defects within the proximal T cell receptor (TCR) signaling pathway are seen in ZAP-70-deficient T cells. Affected T cells exhibit diminished or absent changes in intracellular calcium ([Ca<sup>2+</sup>]i) mobilization [<a href="#rid2">2,4,5</a>] and poor induction of most cytoplasmic tyrosine phosphoproteins after TCR stimulation [<a href="#rid2">2,4,5</a>]. ZAP-70-deficient lymphocytes proliferate normally to phorbol myristic acetate (PMA) plus ionomycin, a combination of agents that bypasses proximal TCR signaling events by mimicking actions of the second messengers diacylglycerol and [Ca<sup>2+</sup>]i [<a href="#rid2">2,4,5</a>]. In addition, interleukin (IL) 2 production is normal when lymphocytes are stimulated with PMA plus ionomycin but absent when T cells are stimulated through the TCR [<a href="#rid2">2,17,25</a>].</p><p class="headingAnchor" id="H24434230"><span class="h1">DIAGNOSIS</span><span class="headingEndMark"> — </span>The presentation of ZAP-70 can pose a diagnostic challenge. ZAP-70 deficiency should be considered in infants and young children with recurrent bacterial or opportunistic infections in spite of having palpable lymph nodes, notable thymus shadow, and normal lymphocyte count. It should also be suspected in patients with early-onset autoimmunity and lymphoma. The initial evaluation should include enumeration of peripheral blood T cell subsets and B cells, serum immunoglobulin, and T cell responses to mitogens in vitro.</p><p>The diagnosis is suggested by the presence of relatively normal numbers of peripheral blood lymphocytes (&gt;3.5 x 10<sup>9</sup>/L) and normal or only modestly decreased total T cells (&gt;1.2 x 10<sup>9</sup>/L) but absent CD8 T cells (&lt;5 percent) in the circulation. Analysis of T cell receptor excision circles (TRECs) may also be valuable since these levels appear to gradually decline during the first year of life in patients with ZAP-70 deficiency [<a href="#rid19">19,26</a>]. Absent T cell proliferation to T cell receptor (TCR) mediated stimuli, such as phytohemagglutinin (PHA), CD3 monoclonal antibody, or to alloantigen in mixed lymphocyte culture, confirms the diagnosis of a cellular immunodeficiency.</p><p>The patient most likely has ZAP-70 deficiency if further evaluation demonstrates that in vitro T cell proliferation to PMA plus ionomycin (which bypass the need for early signaling) is comparable with that of normal T cells. Protein expression by immunoblot may help in diagnosis if ZAP-70 is absent or reduced. Complementary deoxyribonucleic acid (cDNA) or genomic DNA sequencing to identify pathogenic variants in the <em>ZAP70</em> gene confirms the diagnosis.</p><p>Newborn screening based upon quantification of the number of TRECs cannot be relied upon to detect ZAP-70 deficiency, because TREC levels are normal in newborns with this immunodeficiency [<a href="#rid19">19,27</a>], although they decline over time [<a href="#rid26">26</a>]. The defect in TCR signaling in ZAP-70 deficiency occurs after the developmental stage of T cell rearrangement, which is the process that generates TRECs. (See  <a class="medical medical_review" href="/z/d/html/16363.html" rel="external">"Newborn screening for inborn errors of immunity", section on 'Diseases identified by TREC testing'</a>.)</p><p class="headingAnchor" id="H24434244"><span class="h1">DIFFERENTIAL DIAGNOSIS</span><span class="headingEndMark"> — </span>The differential diagnosis includes other profound immunodeficiencies that present with normal numbers of circulating lymphocytes and CD8 lymphocytopenia (see  <a class="medical medical_review" href="/z/d/html/3935.html" rel="external">"Combined immunodeficiencies: An overview"</a> and  <a class="medical medical_review" href="/z/d/html/3956.html" rel="external">"CD3/T cell receptor complex disorders causing immunodeficiency", section on 'Overview of T cell receptor biology'</a> and  <a class="medical medical_review" href="/z/d/html/3912.html" rel="external">"Severe combined immunodeficiency (SCID): Specific defects"</a> and  <a class="medical medical_review" href="/z/d/html/3955.html" rel="external">"Severe combined immunodeficiency (SCID): An overview"</a>):</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Omenn syndrome</strong> – This condition is associated with pathogenic variants in any of several genes associated with severe combined immunodeficiency (SCID), most commonly recombination-activating gene 1 (<em>RAG1</em>) or recombination-activating gene 2 (<em>RAG2</em>). Unlike ZAP-70 deficiency, these patients present with erythroderma, patchy alopecia, and lymphadenopathy, as well as an increased eosinophil count and increased IgE levels. Assessment of T cell repertoire frequently shows oligoclonality. In some cases of Omenn syndrome, only the CD4 T cell compartment is expanded, therefore mimicking the CD8 T cell lymphopenia of ZAP-70 deficiency.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Human leukocyte antigen (HLA) class I deficiency</strong> – Like ZAP-70 deficiency, these patients present with CD8 lymphopenia but normal CD4 T cells, B cells, and serum immunoglobulins. Unlike ZAP-70 deficiency, these patients lack the expression of HLA class I molecules on the surface of lymphocytes. They generally present at a later age (second or third decade of life) with chronic sinusitis, chronic lung disease, and vasculitis.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>CD8 alpha deficiency</strong> – These patients present with CD8 lymphocytopenia and normal CD4 T cells in the second or third decade with sinopulmonary infections. The ZAP-70 gene is normal, but pathogenic variants in the CD8 alpha gene are found in these patients.</p><p></p><p class="headingAnchor" id="H24434251"><span class="h1">TREATMENT</span><span class="headingEndMark"> — </span>The general management of patients with a primary combined immunodeficiency (CID), including infection avoidance; vaccination with killed, but not live, vaccines; antibiotic prophylaxis; cytomegalovirus (CMV) negative, leuko-reduced, irradiated blood products; and <a class="drug drug_general" data-topicid="16471" href="/z/d/drug information/16471.html" rel="external">immune globulin</a> replacement, is discussed separately. (See  <a class="medical medical_review" href="/z/d/html/3948.html" rel="external">"Inborn errors of immunity (primary immunodeficiencies): Overview of management"</a>.)</p><p>Patients with ZAP-70 deficiency require hematopoietic cell transplantation (HCT) to cure their CID [<a href="#rid2">2,4,5,7,16</a>]. Conditioning with <a class="drug drug_general" data-topicid="9173" href="/z/d/drug information/9173.html" rel="external">busulfan</a> and <a class="drug drug_general" data-topicid="9308" href="/z/d/drug information/9308.html" rel="external">cyclophosphamide</a> with or without antithymocyte globulin is commonly done prior to HCT. Bone marrow from a human leukocyte antigen (HLA) matched sibling is the optimal choice, with excellent survival, as well as long-term immune reconstitution [<a href="#rid28">28</a>]. However, most patients lack this option. In such situations, other histocompatible donors can be used, although careful assessment of long-term survival and immune reconstitution is scarce [<a href="#rid8">8</a>]. (See  <a class="medical medical_review" href="/z/d/html/3941.html" rel="external">"Hematopoietic cell transplantation for non-SCID inborn errors of immunity"</a> and  <a class="medical medical_review" href="/z/d/html/3557.html" rel="external">"Preparative regimens for hematopoietic cell transplantation"</a> and  <a class="medical medical_review" href="/z/d/html/3911.html" rel="external">"Immune globulin therapy in inborn errors of immunity"</a>.)</p><p>Gene therapy has not been attempted yet for ZAP-70 deficiency, although preliminary in vitro studies in human cells [<a href="#rid29">29,30</a>] and studies in murine models [<a href="#rid31">31,32</a>] have been performed.</p><p class="headingAnchor" id="H24434258"><span class="h1">PROGNOSIS</span><span class="headingEndMark"> — </span>Most patients with ZAP-70 deficiency die within the first two years of life from infection if they do not undergo hematopoietic cell transplantation (HCT).</p><p class="headingAnchor" id="H1929304507"><span class="h1">SOCIETY GUIDELINE LINKS</span><span class="headingEndMark"> — </span>Links to society and government-sponsored guidelines from selected countries and regions around the world are provided separately. (See  <a class="medical medical_society_guidelines" href="/z/d/html/112831.html" rel="external">"Society guideline links: Inborn errors of immunity (previously called primary immunodeficiencies)"</a>.)</p><p class="headingAnchor" id="H24434265"><span class="h1">SUMMARY</span></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Pathogenesis</strong> – Zeta chain-associated 70 kDa protein kinase (ZAP-70) is a signaling molecule associated with the T cell receptor (TCR) complex  (<a class="graphic graphic_figure graphicRef66727" href="/z/d/graphic/66727.html" rel="external">figure 2</a>) that is primarily expressed in T cells and in natural killer (NK) cells. It is required for normal human T cell development and function. Deficiency of ZAP-70 results in a combined immunodeficiency (CID)  (<a class="graphic graphic_figure graphicRef77023" href="/z/d/graphic/77023.html" rel="external">figure 1</a>) that is characterized by the selective absence of circulating CD8+ T cells and by abundant CD4+ T cells in the peripheral blood that are unresponsive to TCR-mediated stimuli in vitro. (See <a class="local">'Pathogenesis'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Genetics</strong> – ZAP-70 deficiency is due to pathogenic variants in the <em>ZAP70</em> gene, located on chromosome 2q12. Most variants occur within the kinase domain of the ZAP-70 protein and significantly affect both protein stability and catalytic activity  (<a class="graphic graphic_figure graphicRef68529" href="/z/d/graphic/68529.html" rel="external">figure 3</a>), although a novel activating variant leads to severe autoantibody-mediated disease. (See <a class="local">'Genetics'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Clinical manifestations</strong> – Affected children present within the first two years of life with a history of recurrent infections and sometimes also chronic diarrhea and/or failure to thrive, similar to, but at a somewhat later age than, severe combined immunodeficiency (SCID). Alternative presentations include pustular skin manifestations, autoimmune features with bullous pemphigoid in one family, Omenn syndrome, hemophagocytic lymphohistiocytosis (HLH), or lymphoma. (See <a class="local">'Clinical manifestations'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Laboratory findings</strong> – Patients with ZAP-70 deficiency have normal-to-elevated numbers of circulating lymphocytes. The total T cell number is normal or only modestly decreased, but CD8 T cells are absent (&lt;5 percent) in the circulation. T cell receptor excision circle (TREC) levels in ZAP-70-deficient cells may be normal or low, indicating that they may be missed by TREC newborn screening. (See <a class="local">'Laboratory findings'</a> above and <a class="local">'Diagnosis'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Diagnosis and differential diagnosis</strong> – The diagnosis is suggested by the presence of relatively normal numbers of peripheral blood lymphocytes (&gt;3.5 x 10<sup>9</sup>/L) and normal or only modestly decreased total T cells (&gt;1.2 x 10<sup>9</sup>/L) but absent CD8 T cells (&lt;5 percent) in the circulation. cDNA or genomic DNA sequencing to identify pathogenic variants in the <em>ZAP70</em> gene confirms the diagnosis. The presence of lymphopenia suggests an alternative diagnosis. (See <a class="local">'Diagnosis'</a> above and <a class="local">'Differential diagnosis'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Treatment</strong> – Hematopoietic cell transplantation (HCT) is the only curative therapy available for ZAP-70 deficiency. (See <a class="local">'Treatment'</a> above and <a class="local">'Prognosis'</a> above.)</p><p></p><p class="headingAnchor" id="H1181701316"><span class="h1">ACKNOWLEDGMENT</span><span class="headingEndMark"> — </span>The UpToDate editorial staff acknowledges E Richard Stiehm, MD, who contributed as a Section Editor to earlier versions of this topic review.</p></div><div class="headingAnchor" id="references"><ol id="reference"><li><a class="nounderline abstract_t">Rao N, Lupher ML Jr, Ota S, et al. The linker phosphorylation site Tyr292 mediates the negative regulatory effect of Cbl on ZAP-70 in T cells. J Immunol 2000; 164:4616.</a></li><li><a class="nounderline abstract_t">Arpaia E, Shahar M, Dadi H, et al. Defective T cell receptor signaling and CD8+ thymic selection in humans lacking zap-70 kinase. Cell 1994; 76:947.</a></li><li><a class="nounderline abstract_t">Roifman CM, Hummel D, Martinez-Valdez H, et al. Depletion of CD8+ cells in human thymic medulla results in selective immune deficiency. J Exp Med 1989; 170:2177.</a></li><li><a class="nounderline abstract_t">Elder ME, Lin D, Clever J, et al. Human severe combined immunodeficiency due to a defect in ZAP-70, a T cell tyrosine kinase. Science 1994; 264:1596.</a></li><li><a class="nounderline abstract_t">Chan AC, Kadlecek TA, Elder ME, et al. ZAP-70 deficiency in an autosomal recessive form of severe combined immunodeficiency. Science 1994; 264:1599.</a></li><li><a class="nounderline abstract_t">Katamura K, Tai G, Tachibana T, et al. Existence of activated and memory CD4+ T cells in peripheral blood and their skin infiltration in CD8 deficiency. Clin Exp Immunol 1999; 115:124.</a></li><li><a class="nounderline abstract_t">Turul T, Tezcan I, Artac H, et al. Clinical heterogeneity can hamper the diagnosis of patients with ZAP70 deficiency. Eur J Pediatr 2009; 168:87.</a></li><li><a class="nounderline abstract_t">Fagioli F, Biasin E, Berger M, et al. Successful unrelated cord blood transplantation in two children with severe combined immunodeficiency syndrome. Bone Marrow Transplant 2003; 31:133.</a></li><li><a class="nounderline abstract_t">Aluri J, Desai M, Gupta M, et al. Clinical, Immunological, and Molecular Findings in 57 Patients With Severe Combined Immunodeficiency (SCID) From India. Front Immunol 2019; 10:23.</a></li><li><a class="nounderline abstract_t">Shirkani A, Shahrooei M, Azizi G, et al. Novel Mutation of ZAP-70-related Combined Immunodeficiency: First Case from the National Iranian Registry and Review of the Literature. Immunol Invest 2017; 46:70.</a></li><li><a class="nounderline abstract_t">Liu Q, Wang YP, Liu Q, et al. Novel compound heterozygous mutations in ZAP70 in a Chinese patient with leaky severe combined immunodeficiency disorder. Immunogenetics 2017; 69:199.</a></li><li><a class="nounderline abstract_t">Wang H, Kadlecek TA, Au-Yeung BB, et al. ZAP-70: an essential kinase in T-cell signaling. Cold Spring Harb Perspect Biol 2010; 2:a002279.</a></li><li><a class="nounderline abstract_t">Fischer A, Picard C, Chemin K, et al. ZAP70: a master regulator of adaptive immunity. Semin Immunopathol 2010; 32:107.</a></li><li><a class="nounderline abstract_t">Chan AC, van Oers NS, Tran A, et al. Differential expression of ZAP-70 and Syk protein tyrosine kinases, and the role of this family of protein tyrosine kinases in TCR signaling. J Immunol 1994; 152:4758.</a></li><li><a class="nounderline abstract_t">Mallick-Wood CA, Pao W, Cheng AM, et al. Disruption of epithelial gamma delta T cell repertoires by mutation of the Syk tyrosine kinase. Proc Natl Acad Sci U S A 1996; 93:9704.</a></li><li><a class="nounderline abstract_t">Elder ME, Skoda-Smith S, Kadlecek TA, et al. Distinct T cell developmental consequences in humans and mice expressing identical mutations in the DLAARN motif of ZAP-70. J Immunol 2001; 166:656.</a></li><li><a class="nounderline abstract_t">Noraz N, Schwarz K, Steinberg M, et al. Alternative antigen receptor (TCR) signaling in T cells derived from ZAP-70-deficient patients expressing high levels of Syk. J Biol Chem 2000; 275:15832.</a></li><li><a class="nounderline abstract_t">Toyabe S, Watanabe A, Harada W, et al. Specific immunoglobulin E responses in ZAP-70-deficient patients are mediated by Syk-dependent T-cell receptor signalling. Immunology 2001; 103:164.</a></li><li><a class="nounderline abstract_t">Roifman CM, Dadi H, Somech R, et al. Characterization of ζ-associated protein, 70 kd (ZAP70)-deficient human lymphocytes. J Allergy Clin Immunol 2010; 126:1226.</a></li><li><a class="nounderline abstract_t">Newell A, Dadi H, Goldberg R, et al. Diffuse large B-cell lymphoma as presenting feature of Zap-70 deficiency. J Allergy Clin Immunol 2011; 127:517.</a></li><li><a class="nounderline abstract_t">Chan AY, Punwani D, Kadlecek TA, et al. A novel human autoimmune syndrome caused by combined hypomorphic and activating mutations in ZAP-70. J Exp Med 2016; 213:155.</a></li><li><a class="nounderline abstract_t">Matsuda S, Suzuki-Fujimoto T, Minowa A, et al. Temperature-sensitive ZAP70 mutants degrading through a proteasome-independent pathway. Restoration of a kinase domain mutant by Cdc37. J Biol Chem 1999; 274:34515.</a></li><li><a class="nounderline abstract_t">Picard C, Dogniaux S, Chemin K, et al. Hypomorphic mutation of ZAP70 in human results in a late onset immunodeficiency and no autoimmunity. Eur J Immunol 2009; 39:1966.</a></li><li><a class="nounderline abstract_t">Parry DE, Blumenthal J, Tomer RH, et AL. A 3-year-old boy with ZAP-70 deficiency, Thrombocytopenia and Ulcerative Colitis. J Allergy Clin Immunol 1996; 97:390.</a></li><li><a class="nounderline abstract_t">Elder ME, Hope TJ, Parslow TG, et al. Severe combined immunodeficiency with absence of peripheral blood CD8+ T cells due to ZAP-70 deficiency. Cell Immunol 1995; 165:110.</a></li><li><a class="nounderline abstract_t">Suresh S, Dadi H, Reid B, et al. Time-dependent decline of T-cell receptor excision circle levels in ZAP-70 deficiency. J Allergy Clin Immunol Pract 2020; 8:806.</a></li><li class="breakAll">Puck JM, University of California, San Francisco, 2016, personal communication.</li><li><a class="nounderline abstract_t">Griffith LM, Cowan MJ, Kohn DB, et al. Allogeneic hematopoietic cell transplantation for primary immune deficiency diseases: current status and critical needs. J Allergy Clin Immunol 2008; 122:1087.</a></li><li><a class="nounderline abstract_t">Steinberg M, Swainson L, Schwarz K, et al. Retrovirus-mediated transduction of primary ZAP-70-deficient human T cells results in the selective growth advantage of gene-corrected cells: implications for gene therapy. Gene Ther 2000; 7:1392.</a></li><li><a class="nounderline abstract_t">Kofler DM, Büning H, Mayr C, et al. Engagement of the B-cell antigen receptor (BCR) allows efficient transduction of ZAP-70-positive primary B-CLL cells by recombinant adeno-associated virus (rAAV) vectors. Gene Ther 2004; 11:1416.</a></li><li><a class="nounderline abstract_t">Irla M, Saade M, Kissenpfennig A, et al. ZAP-70 restoration in mice by in vivo thymic electroporation. PLoS One 2008; 3:e2059.</a></li><li><a class="nounderline abstract_t">Adjali O, Marodon G, Steinberg M, et al. In vivo correction of ZAP-70 immunodeficiency by intrathymic gene transfer. J Clin Invest 2005; 115:2287.</a></li></ol></div><div id="topicVersionRevision">Topic 3940 Version 18.0</div></div>
-<div class="row">
-<div class="col-12">
-<h4 style="text-align: center;padding: 20px;color: cadetblue;">References</h4>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/10779765" id="rid0" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>1 : The linker phosphorylation site Tyr292 mediates the negative regulatory effect of Cbl on ZAP-70 in T cells.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/8124727" id="rid1" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>2 : Defective T cell receptor signaling and CD8+ thymic selection in humans lacking zap-70 kinase.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/2511270" id="rid2" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>3 : Depletion of CD8+ cells in human thymic medulla results in selective immune deficiency.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/8202712" id="rid3" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>4 : Human severe combined immunodeficiency due to a defect in ZAP-70, a T cell tyrosine kinase.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/8202713" id="rid4" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>5 : ZAP-70 deficiency in an autosomal recessive form of severe combined immunodeficiency.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/9933431" id="rid5" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>6 : Existence of activated and memory CD4+ T cells in peripheral blood and their skin infiltration in CD8 deficiency.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/18509675" id="rid6" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>7 : Clinical heterogeneity can hamper the diagnosis of patients with ZAP70 deficiency.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/12621496" id="rid7" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>8 : Successful unrelated cord blood transplantation in two children with severe combined immunodeficiency syndrome.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/30778343" id="rid8" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>9 : Clinical, Immunological, and Molecular Findings in 57 Patients With Severe Combined Immunodeficiency (SCID) From India.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/27759478" id="rid9" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>10 : Novel Mutation of ZAP-70-related Combined Immunodeficiency: First Case from the National Iranian Registry and Review of the Literature.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/28124082" id="rid10" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>11 : Novel compound heterozygous mutations in ZAP70 in a Chinese patient with leaky severe combined immunodeficiency disorder.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/20452964" id="rid11" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>12 : ZAP-70: an essential kinase in T-cell signaling.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/20135127" id="rid12" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>13 : ZAP70: a master regulator of adaptive immunity.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/8176201" id="rid13" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>14 : Differential expression of ZAP-70 and Syk protein tyrosine kinases, and the role of this family of protein tyrosine kinases in TCR signaling.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/8790395" id="rid14" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>15 : Disruption of epithelial gamma delta T cell repertoires by mutation of the Syk tyrosine kinase.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/11123350" id="rid15" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>16 : Distinct T cell developmental consequences in humans and mice expressing identical mutations in the DLAARN motif of ZAP-70.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/10748099" id="rid16" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>17 : Alternative antigen receptor (TCR) signaling in T cells derived from ZAP-70-deficient patients expressing high levels of Syk.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/11412303" id="rid17" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>18 : Specific immunoglobulin E responses in ZAP-70-deficient patients are mediated by Syk-dependent T-cell receptor signalling.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/20864151" id="rid18" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>19 : Characterization ofζ-associated protein, 70 kd (ZAP70)-deficient human lymphocytes.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/21094993" id="rid19" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>20 : Diffuse large B-cell lymphoma as presenting feature of Zap-70 deficiency.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/26783323" id="rid20" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>21 : A novel human autoimmune syndrome caused by combined hypomorphic and activating mutations in ZAP-70.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/10574909" id="rid21" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>22 : Temperature-sensitive ZAP70 mutants degrading through a proteasome-independent pathway. Restoration of a kinase domain mutant by Cdc37.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/19548248" id="rid22" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>23 : Hypomorphic mutation of ZAP70 in human results in a late onset immunodeficiency and no autoimmunity.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/" id="rid23" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>24 : A 3-year-old boy with ZAP-70 deficiency, Thrombocytopenia and Ulcerative Colitis</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/7671314" id="rid24" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>25 : Severe combined immunodeficiency with absence of peripheral blood CD8+ T cells due to ZAP-70 deficiency.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/31449923" id="rid25" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>26 : Time-dependent decline of T-cell receptor excision circle levels in ZAP-70 deficiency.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/31449923" id="rid26" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>27 : Time-dependent decline of T-cell receptor excision circle levels in ZAP-70 deficiency.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/18992926" id="rid27" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>28 : Allogeneic hematopoietic cell transplantation for primary immune deficiency diseases: current status and critical needs.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/10981666" id="rid28" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>29 : Retrovirus-mediated transduction of primary ZAP-70-deficient human T cells results in the selective growth advantage of gene-corrected cells: implications for gene therapy.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/15269708" id="rid29" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>30 : Engagement of the B-cell antigen receptor (BCR) allows efficient transduction of ZAP-70-positive primary B-CLL cells by recombinant adeno-associated virus (rAAV) vectors.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/18446234" id="rid30" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>31 : ZAP-70 restoration in mice by in vivo thymic electroporation.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/16075064" id="rid31" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>32 : In vivo correction of ZAP-70 immunodeficiency by intrathymic gene transfer.</p>
-</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-</section>
-<!-- End Main Menu Area -->
-<!-- Start Search Popup Area -->
-<!-- End Footer Area -->
-<!-- Back to top -->
-<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
-<!-- End Back to top -->
-<!-- jQuery Min JS -->
-<!-- Prpper JS -->
-<!-- Bootstrap Min JS -->
-<!-- Classy Nav Min Js -->
-<!-- Owl Carousel Min Js -->
-<!-- Magnific Popup JS -->
-<!-- CounterUp JS -->
-<!-- Waypoints JS -->
-<!-- Form Validator Min JS -->
-<!-- Contact Form Min JS -->
-<!-- Main JS -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-</body>
+ <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+ <head>
+  <title>
+   ZAP-70 deficiency
+  </title>
+  <link href="d/css/1.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!-- Start Main Menu Area -->
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="container">
+   <div class="row">
+   </div>
+  </div>
+  <section class="teacher-area ptb-10">
+   <div class="container">
+   </div>
+   <section class="course-details-area ptb-60">
+    <div class="container">
+     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+      <h1 style="text-align:center">
+       ZAP-70 deficiency
+      </h1>
+      <div class="utdArticleSection utdStyle" id="topicContent">
+       <div id="topicTitle">
+        ZAP-70 deficiency
+       </div>
+       <div class="authorSectionElem">
+        <div class="authorsElementsLeft">
+         <dl id="topicContributors">
+          <dt>
+           <span>
+           </span>
+           Author:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Chaim M Roifman, CM, MD, FRCPC, FCACB
+           </a>
+          </dd>
+          <dt>
+           <span>
+           </span>
+           Section Editor:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Jennifer M Puck, MD
+           </a>
+          </dd>
+          <dt>
+           <span>
+           </span>
+           Deputy Editor:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Elizabeth TePas, MD, MS
+           </a>
+          </dd>
+         </dl>
+        </div>
+        <div class="authorsElementsRight">
+         <div id="literatureReviewDate">
+          <div class="litReviewSingleLine">
+           <bdi>
+            <span class="emphasis">
+             Literature review current through:
+            </span>
+            Jan 2024.
+           </bdi>
+          </div>
+          <div class="litReviewSingleLine">
+           <bdi>
+            <span class="emphasis">
+             This topic last updated:
+            </span>
+            Nov 30, 2023.
+           </bdi>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div id="topicWhatsNewContainer">
+       </div>
+       <div id="topicText">
+        <p class="headingAnchor" id="H24434167">
+         <span class="h1">
+          INTRODUCTION
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The zeta chain-associated protein kinase of 70 kD (ZAP-70) is involved in T cell receptor (TCR) signaling and is critical for T cell differentiation and function. Deficiency of ZAP-70 causes a combined immunodeficiency (CID). Affected children present within the first two years of life with a history of recurrent infections, similar to infants with severe combined immunodeficiency (SCID). However, diagnosis can be delayed because most patients with ZAP-70 deficiency have detectable lymphoid tissues and a normal lymphocyte count. The treatment of choice is hematopoietic cell transplantation (HCT).
+        </p>
+        <p>
+         A review of ZAP-70 deficiency (MIM +176947) is discussed here. Reviews related to other CIDs are presented separately. SCID disorders are also discussed separately. (See
+         <a class="medical medical_review" href="/z/d/html/3956.html" rel="external">
+          "CD3/T cell receptor complex disorders causing immunodeficiency"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/3935.html" rel="external">
+          "Combined immunodeficiencies: An overview"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/3955.html" rel="external">
+          "Severe combined immunodeficiency (SCID): An overview"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/3912.html" rel="external">
+          "Severe combined immunodeficiency (SCID): Specific defects"
+         </a>
+         .)
+        </p>
+        <p>
+         TCR genetics, structure, biology, and signaling are covered in detail separately as well. (See
+         <a class="medical medical_review" href="/z/d/html/3950.html" rel="external">
+          "T-B-NK+ SCID: Pathogenesis, clinical manifestations, and diagnosis", section on 'T cell receptor generation'
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/3980.html" rel="external">
+          "The adaptive cellular immune response: T cells and cytokines", section on 'T cell activation and functions'
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/3956.html" rel="external">
+          "CD3/T cell receptor complex disorders causing immunodeficiency", section on 'Overview of T cell receptor biology'
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/15794.html" rel="external">
+          "T cell receptor signaling"
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H9472821">
+         <span class="h1">
+          BRIEF OVERVIEW OF T CELL RECEPTOR SIGNALING
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         T cell receptor (TCR) signaling in naïve T cells is initiated by binding of TCR to a peptide-major histocompatibility (MHC) complex expressed on the surface of antigen-presenting cells  (
+         <a class="graphic graphic_figure graphicRef77023" href="/z/d/graphic/77023.html" rel="external">
+          figure 1
+         </a>
+         and
+         <a class="graphic graphic_figure graphicRef66727" href="/z/d/graphic/66727.html" rel="external">
+          figure 2
+         </a>
+         ). This association leads to activation of multiple pathways, eventually culminating in a T cell response. The Src-family protein tyrosine kinase Lck is first activated with resultant phosphorylation of motifs known as immune receptor tyrosine-based activation motifs (ITAMs). Phosphorylated ITAMs on CD3 zeta serve as binding sites for ZAP-70. ZAP-70 is also activated by autophosphorylation. The role of this kinase in TCR signaling was unveiled by studying humans with ZAP-70 deficiency. Activated ZAP-70 phosphorylates a variety of downstream molecules, resulting in calcium mobilization, actin cytoskeleton rearrangement, and activation of Ras guanosine triphosphate hydrolase (GTPase). These events lead to activation of several transcription factors with resultant T cell proliferation and differentiation. (See
+         <a class="medical medical_review" href="/z/d/html/15794.html" rel="external">
+          "T cell receptor signaling"
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H24434174">
+         <span class="h1">
+          EPIDEMIOLOGY
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         ZAP-70 deficiency is a rare combined immunodeficiency (CID) with an autosomal recessive pattern of inheritance. The disease was first described in 1989 in a patient of Mennonite descent with CD8 lymphocytopenia [
+         <a href="#rid1">
+          1
+         </a>
+         ]. Pathogenic variants in ZAP-70 were initially identified in Mennonite kindreds and subsequently in other ethnicities including Hispanic, Japanese, Turkish, White, Portuguese, Indian, Iranian, and Chinese patients [
+         <a href="#rid2">
+          2-11
+         </a>
+         ].
+        </p>
+        <p class="headingAnchor" id="H24434181">
+         <span class="h1">
+          PATHOGENESIS
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         ZAP-70 plays a crucial role in T cell development and function, although the exact mechanisms are not fully understood [
+         <a href="#rid12">
+          12,13
+         </a>
+         ]. The thymus is not dysplastic in patients with ZAP-70 deficiency, unlike typical cases of combined immunodeficiency (CID) or severe combined immunodeficiency (SCID). Thymus architecture and cellularity are preserved, as are the number and size of Hassall's corpuscles. Normal expression of CD3/CD4/CD8 double-positive thymocytes in the cortex and single positive CD3/CD4, but not CD8 T cells, are present in the medullary area as seen on immunohistochemistry.
+        </p>
+        <p>
+         The phenotype of affected patients suggests that ZAP-70 is critical for CD8 T cell selection and peripheral CD4 and CD8 T cell function but is dispensable for CD4 selection in the thymus. One possible explanation for the presence of normal numbers of peripheral CD4+ T cells is that Syk, which is expressed at higher levels in the thymus than in the blood in humans, may rescue CD4 selection in the absence of ZAP-70 [
+         <a href="#rid14">
+          14,15
+         </a>
+         ]. The differential ability of Syk to replace ZAP-70 in CD4 versus CD8 selection events may be related to the preferential association of Lck with the CD4 coreceptor. This preferential association would facilitate CD4 selection if Syk was unable to fully substitute for loss of ZAP-70 function during thymocyte differentiation. Normal downregulation of Syk activity in mature T cells would abrogate T cell receptor (TCR) signaling altogether and lead to combined CD4 and CD8 immunodeficiency in patients with ZAP-70 deficiency, but studies so far have been controversial [
+         <a href="#rid14">
+          14-18
+         </a>
+         ].
+        </p>
+        <p>
+         Other studies suggest that ZAP-70 may affect thymopoiesis at an earlier stage than previously considered. Assessment of gene rearrangement events that represent sequential stages of thymocyte maturation suggest a reduction, but not a complete block, of T cell development during transition from double-negative to double-positive cells [
+         <a href="#rid19">
+          19
+         </a>
+         ]. This may explain the low levels of T cell receptor excision circles (TRECs) found in peripheral CD4+ cells, consistent with a relatively low number of naïve cells. However, this model cannot explain the preferential selection of single-positive CD4+ T cells. The expansion and survival of CD4+ T cells in the circulation may be explained by their reduced ability to undergo apoptosis [
+         <a href="#rid19">
+          19
+         </a>
+         ].
+        </p>
+        <p>
+         ZAP-70 is also critical for T cell function. Peripheral T cells from ZAP-70-deficient patients demonstrate defective TCR-mediated signaling, but they are capable of secreting interleukin (IL) 2 and proliferating if stimulated with phorbol myristate acetate (PMA) and ionomycin that bypass the need for early TCR-mediated events [
+         <a href="#rid2">
+          2,4,5
+         </a>
+         ]. These T cells are polyclonal, with full representation of the TCR repertoire, although CD4 cells do not differentiate into T helper 2 (Th2) cells and lack inhibitory controls, such as IL-10 and tumor necrosis factor (TNF) beta [
+         <a href="#rid19">
+          19
+         </a>
+         ]. This phenotype has the hallmarks of an autoimmune signature. Indeed, several patients have presented with overt autoimmune disorders.
+        </p>
+        <p class="headingAnchor" id="H24434188">
+         <span class="h1">
+          GENETICS
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         ZAP-70 deficiency is due to autosomal recessive pathogenic variants in the
+         <em>
+          ZAP70
+         </em>
+         gene, located on chromosome 2q12 [
+         <a href="#rid5">
+          5
+         </a>
+         ]. Several separate variants in the
+         <em>
+          ZAP70
+         </em>
+         gene have been identified [
+         <a href="#rid2">
+          2,4-6,16-18,20,21
+         </a>
+         ]. Most variants occur within the kinase domain of the ZAP-70 protein and significantly affect both protein stability and catalytic activity  (
+         <a class="graphic graphic_figure graphicRef68529" href="/z/d/graphic/68529.html" rel="external">
+          figure 3
+         </a>
+         ). There is one report of a variant leading to expression of ZAP-70 that is rapidly degraded [
+         <a href="#rid22">
+          22
+         </a>
+         ] and another report of a defect that results in an expressed but nonfunctional protein [
+         <a href="#rid16">
+          16
+         </a>
+         ]. One hypomorphic variant in a noncoding intron resulting in decreased protein expression and a milder phenotype has been described [
+         <a href="#rid23">
+          23
+         </a>
+         ]. In addition, a family with two siblings who were compound heterozygous for both a hypomorphic variant in the first Src-homology 2 (SH2) domain and an activating variant in the kinase domain had a unique constellation of autoimmune phenotypes including bullous pemphigoid associated with autoantibodies [
+         <a href="#rid21">
+          21
+         </a>
+         ].
+        </p>
+        <p class="headingAnchor" id="H24434195">
+         <span class="h1">
+          CLINICAL MANIFESTATIONS
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Some children with ZAP-70 deficiency present within the first two years of life with a history of recurrent infections, similar to infants with severe combined immunodeficiency (SCID). However, unlike those patients, ZAP-70 deficiency patients may present later in childhood and invariably have palpable lymph nodes, visible tonsils, and a thymus shadow on imaging  (
+         <a class="graphic graphic_diagnosticimage graphicRef67690" href="/z/d/graphic/67690.html" rel="external">
+          image 1
+         </a>
+         ) [
+         <a href="#rid3">
+          3
+         </a>
+         ]. (See
+         <a class="medical medical_review" href="/z/d/html/3955.html" rel="external">
+          "Severe combined immunodeficiency (SCID): An overview"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/3935.html" rel="external">
+          "Combined immunodeficiencies: An overview"
+         </a>
+         .)
+        </p>
+        <p>
+         Other findings are also somewhat different in patients with ZAP-70 deficiency than in infants with SCID.
+         <em>
+          Pneumocystis jirovecii
+         </em>
+         (formerly
+         <em>
+          carinii
+         </em>
+         ), pneumonia, and cytomegalovirus (CMV) pneumonitis are less common. These infections may appear later than six months of age, and, at least initially, they respond well to antibiotic or antiviral treatment. Similarly, chronic diarrhea and failure to thrive are less frequent and appear in less than half of the patients reported.
+        </p>
+        <p>
+         Autoimmunity or manifestations of immune dysregulation such as ulcerative colitis and blood cytopenias are reported [
+         <a href="#rid24">
+          24
+         </a>
+         ]. Unique presentations such as pustular skin lesions from birth, subcutaneous nodules [
+         <a href="#rid6">
+          6
+         </a>
+         ], lymphoma [
+         <a href="#rid20">
+          20
+         </a>
+         ], and multisystem autoantibody disease [
+         <a href="#rid21">
+          21
+         </a>
+         ] are also seen. In one family with a unique pathogenic variant profile, two children had bullous pemphigoid, nephrotic syndrome, autoimmune hemophilia, and inflammatory bowel disease [
+         <a href="#rid21">
+          21
+         </a>
+         ]. In addition, cases with aberrant inflammatory features like Omenn syndrome and hemophagocytic lymphohistiocytosis (HLH) have been described [
+         <a href="#rid7">
+          7
+         </a>
+         ]. (See
+         <a class="medical medical_review" href="/z/d/html/8384.html" rel="external">
+          "Treatment and prognosis of hemophagocytic lymphohistiocytosis"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/16362.html" rel="external">
+          "Autoimmunity in patients with inborn errors of immunity/primary immunodeficiency"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/3950.html" rel="external">
+          "T-B-NK+ SCID: Pathogenesis, clinical manifestations, and diagnosis", section on 'Omenn syndrome phenotype'
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H24434202">
+         <span class="h1">
+          LABORATORY FINDINGS
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Patients with ZAP-70 deficiency have normal to elevated numbers of circulating lymphocytes (range: 4000 to 20,000 x cells/microliter) [
+         <a href="#rid2">
+          2,4-6,16-18,20
+         </a>
+         ], in contrast to the lymphopenia seen in patients with severe combined immunodeficiency (SCID) or other forms of combined immunodeficiency (CID).
+        </p>
+        <p>
+         Phenotypic analysis of ZAP-70-deficient peripheral blood lymphocytes reveals normal to increased percentages of CD3 (38 to 80 percent) and CD4 (37 to 75 percent) T cells due to the lack of CD8 T cells (0 to 5 percent) [
+         <a href="#rid2">
+          2,4,5
+         </a>
+         ]. Expression of T cell surface proteins other than CD8 is normal. ZAP-70-deficient peripheral T cells are polyclonal and not maternal in origin by molecular analysis [
+         <a href="#rid2">
+          2,19
+         </a>
+         ]. Natural killer (NK) cell numbers (1 to 10 percent) and activity (20 to 30 percent) are relatively normal [
+         <a href="#rid25">
+          25
+         </a>
+         ]. All patients have normal B cell numbers (13 to 41 percent) [
+         <a href="#rid2">
+          2,4,5
+         </a>
+         ]. Thymic histology is remarkable for normal architecture, including normal corticomedullary demarcation and the presence of Hassall's corpuscles. Immunohistochemistry shows preserved expression of CD4 on T cells in both the cortex and medullary areas but selective expression of CD8 on T cells in the cortex only and not the medulla [
+         <a href="#rid2">
+          2,3
+         </a>
+         ].
+        </p>
+        <p class="headingAnchor" id="H24434209">
+         <span class="h2">
+          T cell function
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Absent T cell proliferative responses to mitogens in vitro, including phytohemagglutinin (PHA) and anti-CD3 (CD3 monoclonal antibody), are seen, as is anergy to candidal skin testing [
+         <a href="#rid3">
+          3-5
+         </a>
+         ]. Failure to reject an allogeneic skin graft was also demonstrated in one patient [
+         <a href="#rid3">
+          3
+         </a>
+         ].
+        </p>
+        <p class="headingAnchor" id="H24434216">
+         <span class="h2">
+          B cell function
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Serum immunoglobulin G (IgG) may be normal or reduced, while immunoglobulin M (IgM) and immunoglobulin A (IgA) levels are normal [
+         <a href="#rid2">
+          2-5
+         </a>
+         ]. Specific antibody production is variable, with some patients having tetanus antibodies or specific immunoglobulin E (IgE) antibodies against allergens [
+         <a href="#rid18">
+          18
+         </a>
+         ].
+        </p>
+        <p class="headingAnchor" id="H24434223">
+         <span class="h2">
+          Signaling defects
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Critical defects within the proximal T cell receptor (TCR) signaling pathway are seen in ZAP-70-deficient T cells. Affected T cells exhibit diminished or absent changes in intracellular calcium ([Ca
+         <sup>
+          2+
+         </sup>
+         ]i) mobilization [
+         <a href="#rid2">
+          2,4,5
+         </a>
+         ] and poor induction of most cytoplasmic tyrosine phosphoproteins after TCR stimulation [
+         <a href="#rid2">
+          2,4,5
+         </a>
+         ]. ZAP-70-deficient lymphocytes proliferate normally to phorbol myristic acetate (PMA) plus ionomycin, a combination of agents that bypasses proximal TCR signaling events by mimicking actions of the second messengers diacylglycerol and [Ca
+         <sup>
+          2+
+         </sup>
+         ]i [
+         <a href="#rid2">
+          2,4,5
+         </a>
+         ]. In addition, interleukin (IL) 2 production is normal when lymphocytes are stimulated with PMA plus ionomycin but absent when T cells are stimulated through the TCR [
+         <a href="#rid2">
+          2,17,25
+         </a>
+         ].
+        </p>
+        <p class="headingAnchor" id="H24434230">
+         <span class="h1">
+          DIAGNOSIS
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The presentation of ZAP-70 can pose a diagnostic challenge. ZAP-70 deficiency should be considered in infants and young children with recurrent bacterial or opportunistic infections in spite of having palpable lymph nodes, notable thymus shadow, and normal lymphocyte count. It should also be suspected in patients with early-onset autoimmunity and lymphoma. The initial evaluation should include enumeration of peripheral blood T cell subsets and B cells, serum immunoglobulin, and T cell responses to mitogens in vitro.
+        </p>
+        <p>
+         The diagnosis is suggested by the presence of relatively normal numbers of peripheral blood lymphocytes (&gt;3.5 x 10
+         <sup>
+          9
+         </sup>
+         /L) and normal or only modestly decreased total T cells (&gt;1.2 x 10
+         <sup>
+          9
+         </sup>
+         /L) but absent CD8 T cells (&lt;5 percent) in the circulation. Analysis of T cell receptor excision circles (TRECs) may also be valuable since these levels appear to gradually decline during the first year of life in patients with ZAP-70 deficiency [
+         <a href="#rid19">
+          19,26
+         </a>
+         ]. Absent T cell proliferation to T cell receptor (TCR) mediated stimuli, such as phytohemagglutinin (PHA), CD3 monoclonal antibody, or to alloantigen in mixed lymphocyte culture, confirms the diagnosis of a cellular immunodeficiency.
+        </p>
+        <p>
+         The patient most likely has ZAP-70 deficiency if further evaluation demonstrates that in vitro T cell proliferation to PMA plus ionomycin (which bypass the need for early signaling) is comparable with that of normal T cells. Protein expression by immunoblot may help in diagnosis if ZAP-70 is absent or reduced. Complementary deoxyribonucleic acid (cDNA) or genomic DNA sequencing to identify pathogenic variants in the
+         <em>
+          ZAP70
+         </em>
+         gene confirms the diagnosis.
+        </p>
+        <p>
+         Newborn screening based upon quantification of the number of TRECs cannot be relied upon to detect ZAP-70 deficiency, because TREC levels are normal in newborns with this immunodeficiency [
+         <a href="#rid19">
+          19,27
+         </a>
+         ], although they decline over time [
+         <a href="#rid26">
+          26
+         </a>
+         ]. The defect in TCR signaling in ZAP-70 deficiency occurs after the developmental stage of T cell rearrangement, which is the process that generates TRECs. (See
+         <a class="medical medical_review" href="/z/d/html/16363.html" rel="external">
+          "Newborn screening for inborn errors of immunity", section on 'Diseases identified by TREC testing'
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H24434244">
+         <span class="h1">
+          DIFFERENTIAL DIAGNOSIS
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The differential diagnosis includes other profound immunodeficiencies that present with normal numbers of circulating lymphocytes and CD8 lymphocytopenia (see
+         <a class="medical medical_review" href="/z/d/html/3935.html" rel="external">
+          "Combined immunodeficiencies: An overview"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/3956.html" rel="external">
+          "CD3/T cell receptor complex disorders causing immunodeficiency", section on 'Overview of T cell receptor biology'
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/3912.html" rel="external">
+          "Severe combined immunodeficiency (SCID): Specific defects"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/3955.html" rel="external">
+          "Severe combined immunodeficiency (SCID): An overview"
+         </a>
+         ):
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Omenn syndrome
+         </strong>
+         – This condition is associated with pathogenic variants in any of several genes associated with severe combined immunodeficiency (SCID), most commonly recombination-activating gene 1 (
+         <em>
+          RAG1
+         </em>
+         ) or recombination-activating gene 2 (
+         <em>
+          RAG2
+         </em>
+         ). Unlike ZAP-70 deficiency, these patients present with erythroderma, patchy alopecia, and lymphadenopathy, as well as an increased eosinophil count and increased IgE levels. Assessment of T cell repertoire frequently shows oligoclonality. In some cases of Omenn syndrome, only the CD4 T cell compartment is expanded, therefore mimicking the CD8 T cell lymphopenia of ZAP-70 deficiency.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Human leukocyte antigen (HLA) class I deficiency
+         </strong>
+         – Like ZAP-70 deficiency, these patients present with CD8 lymphopenia but normal CD4 T cells, B cells, and serum immunoglobulins. Unlike ZAP-70 deficiency, these patients lack the expression of HLA class I molecules on the surface of lymphocytes. They generally present at a later age (second or third decade of life) with chronic sinusitis, chronic lung disease, and vasculitis.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          CD8 alpha deficiency
+         </strong>
+         – These patients present with CD8 lymphocytopenia and normal CD4 T cells in the second or third decade with sinopulmonary infections. The ZAP-70 gene is normal, but pathogenic variants in the CD8 alpha gene are found in these patients.
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H24434251">
+         <span class="h1">
+          TREATMENT
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The general management of patients with a primary combined immunodeficiency (CID), including infection avoidance; vaccination with killed, but not live, vaccines; antibiotic prophylaxis; cytomegalovirus (CMV) negative, leuko-reduced, irradiated blood products; and
+         <a class="drug drug_general" data-topicid="16471" href="/z/d/drug information/16471.html" rel="external">
+          immune globulin
+         </a>
+         replacement, is discussed separately. (See
+         <a class="medical medical_review" href="/z/d/html/3948.html" rel="external">
+          "Inborn errors of immunity (primary immunodeficiencies): Overview of management"
+         </a>
+         .)
+        </p>
+        <p>
+         Patients with ZAP-70 deficiency require hematopoietic cell transplantation (HCT) to cure their CID [
+         <a href="#rid2">
+          2,4,5,7,16
+         </a>
+         ]. Conditioning with
+         <a class="drug drug_general" data-topicid="9173" href="/z/d/drug information/9173.html" rel="external">
+          busulfan
+         </a>
+         and
+         <a class="drug drug_general" data-topicid="9308" href="/z/d/drug information/9308.html" rel="external">
+          cyclophosphamide
+         </a>
+         with or without antithymocyte globulin is commonly done prior to HCT. Bone marrow from a human leukocyte antigen (HLA) matched sibling is the optimal choice, with excellent survival, as well as long-term immune reconstitution [
+         <a href="#rid28">
+          28
+         </a>
+         ]. However, most patients lack this option. In such situations, other histocompatible donors can be used, although careful assessment of long-term survival and immune reconstitution is scarce [
+         <a href="#rid8">
+          8
+         </a>
+         ]. (See
+         <a class="medical medical_review" href="/z/d/html/3941.html" rel="external">
+          "Hematopoietic cell transplantation for non-SCID inborn errors of immunity"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/3557.html" rel="external">
+          "Preparative regimens for hematopoietic cell transplantation"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/3911.html" rel="external">
+          "Immune globulin therapy in inborn errors of immunity"
+         </a>
+         .)
+        </p>
+        <p>
+         Gene therapy has not been attempted yet for ZAP-70 deficiency, although preliminary in vitro studies in human cells [
+         <a href="#rid29">
+          29,30
+         </a>
+         ] and studies in murine models [
+         <a href="#rid31">
+          31,32
+         </a>
+         ] have been performed.
+        </p>
+        <p class="headingAnchor" id="H24434258">
+         <span class="h1">
+          PROGNOSIS
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Most patients with ZAP-70 deficiency die within the first two years of life from infection if they do not undergo hematopoietic cell transplantation (HCT).
+        </p>
+        <p class="headingAnchor" id="H1929304507">
+         <span class="h1">
+          SOCIETY GUIDELINE LINKS
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Links to society and government-sponsored guidelines from selected countries and regions around the world are provided separately. (See
+         <a class="medical medical_society_guidelines" href="/z/d/html/112831.html" rel="external">
+          "Society guideline links: Inborn errors of immunity (previously called primary immunodeficiencies)"
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H24434265">
+         <span class="h1">
+          SUMMARY
+         </span>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Pathogenesis
+         </strong>
+         – Zeta chain-associated 70 kDa protein kinase (ZAP-70) is a signaling molecule associated with the T cell receptor (TCR) complex  (
+         <a class="graphic graphic_figure graphicRef66727" href="/z/d/graphic/66727.html" rel="external">
+          figure 2
+         </a>
+         ) that is primarily expressed in T cells and in natural killer (NK) cells. It is required for normal human T cell development and function. Deficiency of ZAP-70 results in a combined immunodeficiency (CID)  (
+         <a class="graphic graphic_figure graphicRef77023" href="/z/d/graphic/77023.html" rel="external">
+          figure 1
+         </a>
+         ) that is characterized by the selective absence of circulating CD8+ T cells and by abundant CD4+ T cells in the peripheral blood that are unresponsive to TCR-mediated stimuli in vitro. (See
+         <a class="local">
+          'Pathogenesis'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Genetics
+         </strong>
+         – ZAP-70 deficiency is due to pathogenic variants in the
+         <em>
+          ZAP70
+         </em>
+         gene, located on chromosome 2q12. Most variants occur within the kinase domain of the ZAP-70 protein and significantly affect both protein stability and catalytic activity  (
+         <a class="graphic graphic_figure graphicRef68529" href="/z/d/graphic/68529.html" rel="external">
+          figure 3
+         </a>
+         ), although a novel activating variant leads to severe autoantibody-mediated disease. (See
+         <a class="local">
+          'Genetics'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Clinical manifestations
+         </strong>
+         – Affected children present within the first two years of life with a history of recurrent infections and sometimes also chronic diarrhea and/or failure to thrive, similar to, but at a somewhat later age than, severe combined immunodeficiency (SCID). Alternative presentations include pustular skin manifestations, autoimmune features with bullous pemphigoid in one family, Omenn syndrome, hemophagocytic lymphohistiocytosis (HLH), or lymphoma. (See
+         <a class="local">
+          'Clinical manifestations'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Laboratory findings
+         </strong>
+         – Patients with ZAP-70 deficiency have normal-to-elevated numbers of circulating lymphocytes. The total T cell number is normal or only modestly decreased, but CD8 T cells are absent (&lt;5 percent) in the circulation. T cell receptor excision circle (TREC) levels in ZAP-70-deficient cells may be normal or low, indicating that they may be missed by TREC newborn screening. (See
+         <a class="local">
+          'Laboratory findings'
+         </a>
+         above and
+         <a class="local">
+          'Diagnosis'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Diagnosis and differential diagnosis
+         </strong>
+         – The diagnosis is suggested by the presence of relatively normal numbers of peripheral blood lymphocytes (&gt;3.5 x 10
+         <sup>
+          9
+         </sup>
+         /L) and normal or only modestly decreased total T cells (&gt;1.2 x 10
+         <sup>
+          9
+         </sup>
+         /L) but absent CD8 T cells (&lt;5 percent) in the circulation. cDNA or genomic DNA sequencing to identify pathogenic variants in the
+         <em>
+          ZAP70
+         </em>
+         gene confirms the diagnosis. The presence of lymphopenia suggests an alternative diagnosis. (See
+         <a class="local">
+          'Diagnosis'
+         </a>
+         above and
+         <a class="local">
+          'Differential diagnosis'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Treatment
+         </strong>
+         – Hematopoietic cell transplantation (HCT) is the only curative therapy available for ZAP-70 deficiency. (See
+         <a class="local">
+          'Treatment'
+         </a>
+         above and
+         <a class="local">
+          'Prognosis'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H1181701316">
+         <span class="h1">
+          ACKNOWLEDGMENT
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The UpToDate editorial staff acknowledges E Richard Stiehm, MD, who contributed as a Section Editor to earlier versions of this topic review.
+        </p>
+       </div>
+       <div class="headingAnchor" id="references">
+        <ol id="reference">
+         <li>
+          <a class="nounderline abstract_t">
+           Rao N, Lupher ML Jr, Ota S, et al. The linker phosphorylation site Tyr292 mediates the negative regulatory effect of Cbl on ZAP-70 in T cells. J Immunol 2000; 164:4616.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Arpaia E, Shahar M, Dadi H, et al. Defective T cell receptor signaling and CD8+ thymic selection in humans lacking zap-70 kinase. Cell 1994; 76:947.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Roifman CM, Hummel D, Martinez-Valdez H, et al. Depletion of CD8+ cells in human thymic medulla results in selective immune deficiency. J Exp Med 1989; 170:2177.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Elder ME, Lin D, Clever J, et al. Human severe combined immunodeficiency due to a defect in ZAP-70, a T cell tyrosine kinase. Science 1994; 264:1596.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Chan AC, Kadlecek TA, Elder ME, et al. ZAP-70 deficiency in an autosomal recessive form of severe combined immunodeficiency. Science 1994; 264:1599.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Katamura K, Tai G, Tachibana T, et al. Existence of activated and memory CD4+ T cells in peripheral blood and their skin infiltration in CD8 deficiency. Clin Exp Immunol 1999; 115:124.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Turul T, Tezcan I, Artac H, et al. Clinical heterogeneity can hamper the diagnosis of patients with ZAP70 deficiency. Eur J Pediatr 2009; 168:87.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Fagioli F, Biasin E, Berger M, et al. Successful unrelated cord blood transplantation in two children with severe combined immunodeficiency syndrome. Bone Marrow Transplant 2003; 31:133.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Aluri J, Desai M, Gupta M, et al. Clinical, Immunological, and Molecular Findings in 57 Patients With Severe Combined Immunodeficiency (SCID) From India. Front Immunol 2019; 10:23.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Shirkani A, Shahrooei M, Azizi G, et al. Novel Mutation of ZAP-70-related Combined Immunodeficiency: First Case from the National Iranian Registry and Review of the Literature. Immunol Invest 2017; 46:70.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Liu Q, Wang YP, Liu Q, et al. Novel compound heterozygous mutations in ZAP70 in a Chinese patient with leaky severe combined immunodeficiency disorder. Immunogenetics 2017; 69:199.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Wang H, Kadlecek TA, Au-Yeung BB, et al. ZAP-70: an essential kinase in T-cell signaling. Cold Spring Harb Perspect Biol 2010; 2:a002279.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Fischer A, Picard C, Chemin K, et al. ZAP70: a master regulator of adaptive immunity. Semin Immunopathol 2010; 32:107.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Chan AC, van Oers NS, Tran A, et al. Differential expression of ZAP-70 and Syk protein tyrosine kinases, and the role of this family of protein tyrosine kinases in TCR signaling. J Immunol 1994; 152:4758.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Mallick-Wood CA, Pao W, Cheng AM, et al. Disruption of epithelial gamma delta T cell repertoires by mutation of the Syk tyrosine kinase. Proc Natl Acad Sci U S A 1996; 93:9704.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Elder ME, Skoda-Smith S, Kadlecek TA, et al. Distinct T cell developmental consequences in humans and mice expressing identical mutations in the DLAARN motif of ZAP-70. J Immunol 2001; 166:656.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Noraz N, Schwarz K, Steinberg M, et al. Alternative antigen receptor (TCR) signaling in T cells derived from ZAP-70-deficient patients expressing high levels of Syk. J Biol Chem 2000; 275:15832.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Toyabe S, Watanabe A, Harada W, et al. Specific immunoglobulin E responses in ZAP-70-deficient patients are mediated by Syk-dependent T-cell receptor signalling. Immunology 2001; 103:164.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Roifman CM, Dadi H, Somech R, et al. Characterization of ζ-associated protein, 70 kd (ZAP70)-deficient human lymphocytes. J Allergy Clin Immunol 2010; 126:1226.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Newell A, Dadi H, Goldberg R, et al. Diffuse large B-cell lymphoma as presenting feature of Zap-70 deficiency. J Allergy Clin Immunol 2011; 127:517.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Chan AY, Punwani D, Kadlecek TA, et al. A novel human autoimmune syndrome caused by combined hypomorphic and activating mutations in ZAP-70. J Exp Med 2016; 213:155.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Matsuda S, Suzuki-Fujimoto T, Minowa A, et al. Temperature-sensitive ZAP70 mutants degrading through a proteasome-independent pathway. Restoration of a kinase domain mutant by Cdc37. J Biol Chem 1999; 274:34515.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Picard C, Dogniaux S, Chemin K, et al. Hypomorphic mutation of ZAP70 in human results in a late onset immunodeficiency and no autoimmunity. Eur J Immunol 2009; 39:1966.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Parry DE, Blumenthal J, Tomer RH, et AL. A 3-year-old boy with ZAP-70 deficiency, Thrombocytopenia and Ulcerative Colitis. J Allergy Clin Immunol 1996; 97:390.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Elder ME, Hope TJ, Parslow TG, et al. Severe combined immunodeficiency with absence of peripheral blood CD8+ T cells due to ZAP-70 deficiency. Cell Immunol 1995; 165:110.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Suresh S, Dadi H, Reid B, et al. Time-dependent decline of T-cell receptor excision circle levels in ZAP-70 deficiency. J Allergy Clin Immunol Pract 2020; 8:806.
+          </a>
+         </li>
+         <li class="breakAll">
+          Puck JM, University of California, San Francisco, 2016, personal communication.
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Griffith LM, Cowan MJ, Kohn DB, et al. Allogeneic hematopoietic cell transplantation for primary immune deficiency diseases: current status and critical needs. J Allergy Clin Immunol 2008; 122:1087.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Steinberg M, Swainson L, Schwarz K, et al. Retrovirus-mediated transduction of primary ZAP-70-deficient human T cells results in the selective growth advantage of gene-corrected cells: implications for gene therapy. Gene Ther 2000; 7:1392.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Kofler DM, Büning H, Mayr C, et al. Engagement of the B-cell antigen receptor (BCR) allows efficient transduction of ZAP-70-positive primary B-CLL cells by recombinant adeno-associated virus (rAAV) vectors. Gene Ther 2004; 11:1416.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Irla M, Saade M, Kissenpfennig A, et al. ZAP-70 restoration in mice by in vivo thymic electroporation. PLoS One 2008; 3:e2059.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Adjali O, Marodon G, Steinberg M, et al. In vivo correction of ZAP-70 immunodeficiency by intrathymic gene transfer. J Clin Invest 2005; 115:2287.
+          </a>
+         </li>
+        </ol>
+       </div>
+       <div id="topicVersionRevision">
+        Topic 3940 Version 18.0
+       </div>
+      </div>
+      <div class="row">
+       <div class="col-12">
+        <h4 style="text-align: center;padding: 20px;color: cadetblue;">
+         References
+        </h4>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/10779765" id="rid0" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          1 : The linker phosphorylation site Tyr292 mediates the negative regulatory effect of Cbl on ZAP-70 in T cells.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/8124727" id="rid1" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          2 : Defective T cell receptor signaling and CD8+ thymic selection in humans lacking zap-70 kinase.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/2511270" id="rid2" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          3 : Depletion of CD8+ cells in human thymic medulla results in selective immune deficiency.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/8202712" id="rid3" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          4 : Human severe combined immunodeficiency due to a defect in ZAP-70, a T cell tyrosine kinase.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/8202713" id="rid4" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          5 : ZAP-70 deficiency in an autosomal recessive form of severe combined immunodeficiency.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/9933431" id="rid5" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          6 : Existence of activated and memory CD4+ T cells in peripheral blood and their skin infiltration in CD8 deficiency.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/18509675" id="rid6" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          7 : Clinical heterogeneity can hamper the diagnosis of patients with ZAP70 deficiency.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/12621496" id="rid7" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          8 : Successful unrelated cord blood transplantation in two children with severe combined immunodeficiency syndrome.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/30778343" id="rid8" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          9 : Clinical, Immunological, and Molecular Findings in 57 Patients With Severe Combined Immunodeficiency (SCID) From India.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/27759478" id="rid9" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          10 : Novel Mutation of ZAP-70-related Combined Immunodeficiency: First Case from the National Iranian Registry and Review of the Literature.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/28124082" id="rid10" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          11 : Novel compound heterozygous mutations in ZAP70 in a Chinese patient with leaky severe combined immunodeficiency disorder.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/20452964" id="rid11" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          12 : ZAP-70: an essential kinase in T-cell signaling.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/20135127" id="rid12" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          13 : ZAP70: a master regulator of adaptive immunity.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/8176201" id="rid13" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          14 : Differential expression of ZAP-70 and Syk protein tyrosine kinases, and the role of this family of protein tyrosine kinases in TCR signaling.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/8790395" id="rid14" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          15 : Disruption of epithelial gamma delta T cell repertoires by mutation of the Syk tyrosine kinase.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/11123350" id="rid15" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          16 : Distinct T cell developmental consequences in humans and mice expressing identical mutations in the DLAARN motif of ZAP-70.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/10748099" id="rid16" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          17 : Alternative antigen receptor (TCR) signaling in T cells derived from ZAP-70-deficient patients expressing high levels of Syk.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/11412303" id="rid17" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          18 : Specific immunoglobulin E responses in ZAP-70-deficient patients are mediated by Syk-dependent T-cell receptor signalling.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/20864151" id="rid18" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          19 : Characterization ofζ-associated protein, 70 kd (ZAP70)-deficient human lymphocytes.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/21094993" id="rid19" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          20 : Diffuse large B-cell lymphoma as presenting feature of Zap-70 deficiency.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/26783323" id="rid20" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          21 : A novel human autoimmune syndrome caused by combined hypomorphic and activating mutations in ZAP-70.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/10574909" id="rid21" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          22 : Temperature-sensitive ZAP70 mutants degrading through a proteasome-independent pathway. Restoration of a kinase domain mutant by Cdc37.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/19548248" id="rid22" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          23 : Hypomorphic mutation of ZAP70 in human results in a late onset immunodeficiency and no autoimmunity.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/" id="rid23" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          24 : A 3-year-old boy with ZAP-70 deficiency, Thrombocytopenia and Ulcerative Colitis
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/7671314" id="rid24" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          25 : Severe combined immunodeficiency with absence of peripheral blood CD8+ T cells due to ZAP-70 deficiency.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/31449923" id="rid25" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          26 : Time-dependent decline of T-cell receptor excision circle levels in ZAP-70 deficiency.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/31449923" id="rid26" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          27 : Time-dependent decline of T-cell receptor excision circle levels in ZAP-70 deficiency.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/18992926" id="rid27" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          28 : Allogeneic hematopoietic cell transplantation for primary immune deficiency diseases: current status and critical needs.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/10981666" id="rid28" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          29 : Retrovirus-mediated transduction of primary ZAP-70-deficient human T cells results in the selective growth advantage of gene-corrected cells: implications for gene therapy.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/15269708" id="rid29" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          30 : Engagement of the B-cell antigen receptor (BCR) allows efficient transduction of ZAP-70-positive primary B-CLL cells by recombinant adeno-associated virus (rAAV) vectors.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/18446234" id="rid30" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          31 : ZAP-70 restoration in mice by in vivo thymic electroporation.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/16075064" id="rid31" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          32 : In vivo correction of ZAP-70 immunodeficiency by intrathymic gene transfer.
+         </p>
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </section>
+  <!-- End Main Menu Area -->
+  <!-- Start Search Popup Area -->
+  <!-- End Footer Area -->
+  <!-- Back to top -->
+  <a class="scrolltop" href="#top">
+   <i class="icofont-hand-drawn-up">
+   </i>
+  </a>
+  <!-- End Back to top -->
+  <!-- jQuery Min JS -->
+  <!-- Prpper JS -->
+  <!-- Bootstrap Min JS -->
+  <!-- Classy Nav Min Js -->
+  <!-- Owl Carousel Min Js -->
+  <!-- Magnific Popup JS -->
+  <!-- CounterUp JS -->
+  <!-- Waypoints JS -->
+  <!-- Form Validator Min JS -->
+  <!-- Contact Form Min JS -->
+  <!-- Main JS -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+ </body>
 </html>

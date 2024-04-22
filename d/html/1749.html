@@ -1,489 +1,1744 @@
 <!DOCTYPE html>
-
 <html lang="fa">
-<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
-<head><title>Evaluation of the diabetic foot</title><link href="/z/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/z/d/css/icofont.min.css" rel="stylesheet"/><link href="/z/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/z/d/css/animate.css" rel="stylesheet"/><link href="/z/d/css/owl.carousel.css" rel="stylesheet"/><link href="/z/d/css/magnific-popup.css" rel="stylesheet"/><link href="/z/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/z/d/css/style.css" rel="stylesheet"/><link href="/z/d/css/rtl_edited.css" rel="stylesheet"/><link href="/z/d/css/responsive.css" rel="stylesheet"/><link href="https:///uptodate_assets/main.css" rel="stylesheet"/>
-<style>
-
-#myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 16px;
-  color: black;
-  display: block
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee;
-}
-
-#searchResult {
-
-  list-style-type: none;
-  padding: 0;
-  padding-right: 20px;
-}
-
-#searchResult li a {
-  border: .5px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #79bc21;
-  padding: 7px;
-  text-decoration: none;
-  font-size: 14px;
-  color: white;
-  display: block
-}
-
-#searchResult li a:hover:not(.header) {
-  background-color: #222;
-}
-
-
-#txtHint   {
-  position: absolute;
-  text-shadow: none;
-  width: 100%;
-  margin-top: -15px;
-  padding-right: 10px;
-
-  filter: alpha(opacity=95);
-  -moz-opacity: 0.95;
-  opacity: 1;
-  z-index: 200;
-}
-.countBubl {
-  background:#eb0029;
-  color:#fff;
-  padding:5px;
-  margin-top: 50%;
-
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
- width: 55%;
- padding-left: 20px;
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
- width: 20%;
-}
- #Uptodate_image {
-      width: 50%;
-  }#uptodate-area {
-      /*z-index: 99;*/
-  }
-#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
- margin-left: 10px;
- margin-bottom: 6%;
-}
-@media (max-width: @screen-xs) {
-    .countBubl {
-        font-size: 4px ;
-    }
-    #uptodate_version {
-        font-size: 4px ;
-    }
-}
-
-@media (max-width: @screen-sm) {
-    .countBubl {
-        font-size: 14px ;
-    }
-}
-@media  all and(max-width: 820) {
-    #Uptodate_image {
-        width: 80% ;
-    }#uptodate-area {
-        z-index: 99;
-    }
-}@media  all and (min-width: 820) and(max-width: 88820){
-    #Uptodate_image {
-        width: 100% !important;
-    }
-    .countBubl {
-        font-size: 4px ;
-    }
-}
-div.col-md-3:nth-child(3) {
- margin-top: 6%;
-}
-
-div.col-md-3:nth-child(3) > img:nth-child(1) {
- width: 100%;
- margin-left: 11px;
-}
-
-</style>
-<style media="screen" type="text/css">
-  .goback {
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    position: fixed;
-    display: none;
-    font-size: 15px;
-    background: #71c0fa;
-    z-index: 1000;
-    text-align: center;
-    color: #ffffff;
-    -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
-    border-radius: 50px;
-    bottom: 3.8%;
-    right: 2%;
-}
-  .buyPackage {
-  width: 100px;
-  height: 100px;
-  line-height: 40px;
-  position: fixed;
-  display: none;
-  font-size: 10px;
-  background: #fa759e;
-  z-index: 1000;
-  text-align: center;
-  color: #ffffff;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  border-radius: 10px;
-  top: 150px;
-  right: 2%;
-  text-align: center;
-}
-.uptodate-area {
-  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-    background-attachment: fixed;
-  position: relative;
-}
-.uptodate-area::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  padding-top: 100px;
-  width: 100%;
-}
-#references{
-  display: none;
-}
-</style>
-<style>
-section.sticky {
-  position: sticky;
-  top: 0;
-  background-color: #fff !important;
-  /*z-index: 100;*/
-  /*padding-top: 80px;*/
-
-}
-.m4inb{
-    border: solid !important;
-  }
-
-  .newsletter-area::before {
-       background: unset !important;
-  }
-p {
-    color: #555;
-}
-</style>
-<meta content="" name="description"/>
-<link href="/z/d/img/favicon.png" rel="icon" type="image/png">
-</link></head>
-<body>
-<!-- Start Main Menu Area -->
-<br/>
-<br/>
-<br/>
-<br/>
-<div class="container">
-<div class="row">
-</div>
-</div>
-<section class="teacher-area ptb-10">
-<div class="container">
-</div>
-<section class="course-details-area ptb-60">
-<div class="container">
-<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-<h1 style="text-align:center">Evaluation of the diabetic foot</h1>
-<div class="utdArticleSection utdStyle" id="topicContent"><div id="topicTitle">Evaluation of the diabetic foot</div> <div class="authorSectionElem"><div class="authorsElementsLeft"><dl id="topicContributors"><dt><span> </span>Author:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Deborah J Wexler, MD, MSc</a></dd><dt><span> </span>Section Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">David M Nathan, MD</a></dd><dt><span> </span>Deputy Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Katya Rubinow, MD</a></dd></dl></div><div class="authorsElementsRight"><div id="literatureReviewDate"><div class="litReviewSingleLine"><bdi><span class="emphasis">Literature review current through:</span> Jan 2024.</bdi></div><div class="litReviewSingleLine"><bdi><span class="emphasis">This topic last updated:</span> Jan 04, 2024.</bdi></div></div></div></div><div id="topicWhatsNewContainer"></div><div id="topicText"><p class="headingAnchor" id="H1"><span class="h1">INTRODUCTION</span><span class="headingEndMark"> — </span>Foot problems are an important cause of morbidity in patients with diabetes mellitus. The lifetime risk of a foot ulcer for patients with type 1 or 2 diabetes may be as high as 34 percent [<a href="#rid1">1</a>], and the worldwide incidence of diabetic foot ulcer is approximately 18.6 million people per year [<a href="#rid2">2</a>]. Management of diabetic foot ulcers accounts for a large number of inpatient stays, has a high rate of hospital readmission, and is associated with a 2.5-fold risk of death compared with patients with diabetes without foot ulcers [<a href="#rid1">1,3</a>].</p><p>A potentially preventable initiating event, such as minor trauma that causes cutaneous injury, can often be identified. Foot amputations, many of which are preventable with early recognition and therapy, may be required in up to 20 percent of diabetic foot ulcers [<a href="#rid1">1,4</a>]. These observations illustrate the importance of frequent evaluation of the feet in patients with diabetes to identify those at risk for foot ulceration [<a href="#rid5">5</a>]. Systematic screening examinations for neuropathic and vascular involvement of the lower extremities and careful inspection of feet may substantially reduce morbidity from foot problems.</p><p>Evaluation of the diabetic foot is provided here. A discussion of diabetes-related foot infections (cellulitis and osteomyelitis) and the management of diabetic foot ulcers are found elsewhere. (See  <a class="medical medical_review" href="/z/d/html/7651.html" rel="external">"Clinical manifestations, diagnosis, and management of diabetic infections of the lower extremities"</a> and  <a class="medical medical_review" href="/z/d/html/8175.html" rel="external">"Management of diabetic foot ulcers"</a>.)</p><p class="headingAnchor" id="H373354699"><span class="h1">RISK ASSESSMENT</span></p><p class="headingAnchor" id="H1788622932"><span class="h2">Complications and associated risks</span><span class="headingEndMark"> — </span>Diabetic foot ulcers are frequently complicated by infection and lead to high rates of hospitalization and lower extremity amputation. Further, foot ulceration is associated with markedly increased mortality. These risks can be mitigated with preventive measures, including those that target skin at high risk for ulceration, and early intervention once foot ulcers are identified [<a href="#rid6">6</a>]. (See <a class="local">'Preventive foot care'</a> below and  <a class="medical medical_review" href="/z/d/html/8175.html" rel="external">"Management of diabetic foot ulcers"</a>.)</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Infection </strong>– Approximately one-half of all diabetic foot ulcers develop infection, which can lead to sepsis, gangrene, amputation, and death [<a href="#rid6">6,7</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Hospitalization and amputation</strong> – Approximately 20 percent of diabetic foot ulcers lead to hospitalization and, among patients requiring hospitalization, up to 20 percent undergo lower extremity amputation [<a href="#rid6">6</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Recurrent foot ulceration</strong> – The rate of recurrent foot ulcer is high, as more than one-half of healed ulcers recur within five years [<a href="#rid6">6</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Mortality</strong> – Diabetic foot ulcers are a strong predictor of mortality and are associated with a five-year mortality of approximately 30 to 50 percent [<a href="#rid6">6,8,9</a>]. Cardiovascular disease and infection are leading causes of death following foot ulceration [<a href="#rid8">8</a>].</p><p></p><p class="headingAnchor" id="H2"><span class="h2">Risk factors</span><span class="headingEndMark"> — </span>Several risk factors are predictive of ulcers and amputation. Early recognition and management of risk factors is important for reducing morbidity of foot ulceration. Most are readily identifiable from the history or physical examination. The most important risk factors are [<a href="#rid1">1,4,5,10</a>]:</p><p class="bulletIndent1"><span class="glyph">●</span>Previous foot ulceration</p><p class="bulletIndent1"><span class="glyph">●</span>Neuropathy (loss of protective sensation)</p><p class="bulletIndent1"><span class="glyph">●</span>Foot deformity</p><p class="bulletIndent1"><span class="glyph">●</span>Vascular disease</p><p></p><p>The significance of these risk factors was confirmed by the results of a community-based study of 1294 patients with type 2 diabetes [<a href="#rid11">11</a>]. The incidence of lower extremity amputation was 3.8 per 1000 patient-years. Predictors of amputation included foot ulceration (hazard ratio [HR] 5.6, 95% CI 1.2-25), neuropathy (HR 2.6, 95% CI 1.3-5.4), and ankle-brachial index (ABI) ≤0.9 (HR 2.2, 95% CI 1.1-4.4).</p><p>Neuropathy, which is present in over 80 percent of diabetes patients with foot ulcers, promotes ulcer formation by decreasing pain sensation and perception of pressure, by causing anatomic deformities (such as hammer toes from greater flexor muscle tone compared with extensor tone, loss of arch, and/or rocker bottom feet associated with Charcot foot), and by impairing the microcirculation and the integrity of the skin. Once ulcers form, healing may be delayed or difficult to achieve, particularly if infection penetrates to deep tissues and bone and/or there is diminished local blood flow.</p><p>Additional risk factors for foot ulcer and lower extremity amputation include the following:</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Medications</strong> – Compared with some oral and injectable diabetes agents, sodium-glucose cotransporter 2 (SGLT2) inhibitors may be associated with an increased risk of amputation based on an increased risk observed with <a class="drug drug_general" data-topicid="88901" href="/z/d/drug information/88901.html" rel="external">canagliflozin</a> in one large, randomized clinical trial [<a href="#rid12">12</a>]. Patients with history of amputation or peripheral vascular disease were at highest absolute risk for this complication. Increased risk of lower limb amputation with incident use of SGLT2 inhibitors compared with glucagon-like peptide 1 (GLP-1) receptor agonists was observed in two high-quality pharmacoepidemiologic studies, one in older adults and one in patients with chronic kidney disease [<a href="#rid13">13,14</a>]. SGLT2 inhibitors should be used with caution in patients who are at increased risk of diabetic foot ulcers. (See  <a class="medical medical_review" href="/z/d/html/109245.html" rel="external">"Sodium-glucose cotransporter 2 inhibitors for the treatment of hyperglycemia in type 2 diabetes mellitus", section on 'Amputations'</a>.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Age, race, and ethnicity</strong> – Amputation incidence has increased in younger and racially and ethnically minoritized populations [<a href="#rid15">15</a>], with nearly twofold increased risk of amputation after diagnosis of diabetic foot ulcer in Black compared with non-Hispanic White Medicare beneficiaries [<a href="#rid16">16</a>]. People who identify as Native American or Hispanic (of any race) similarly have higher risk of lower extremity amputation [<a href="#rid6">6</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Residence in rural and lower-income areas </strong>– Individuals who reside in rural or lower-income areas have higher risk of diabetic foot ulcer and amputation, as well as higher rates of associated mortality [<a href="#rid17">17</a>].</p><p></p><p class="headingAnchor" id="H3"><span class="h2">Risk classification</span><span class="headingEndMark"> — </span>Several risk classification systems have been developed to predict foot ulcer in patients with diabetes [<a href="#rid18">18,19</a>]. Risk categorization can be used to design preventive and monitoring strategies  (<a class="graphic graphic_table graphicRef70817" href="/z/d/graphic/70817.html" rel="external">table 1</a>). One system, developed by the International Working Group on the Diabetic Foot, stratifies patients as follows [<a href="#rid19">19</a>]:</p><p class="bulletIndent1"><span class="glyph">●</span>Group 0 – No evidence of neuropathy</p><p class="bulletIndent1"><span class="glyph">●</span>Group 1 – Neuropathy present but no evidence of foot deformity or peripheral vascular disease</p><p class="bulletIndent1"><span class="glyph">●</span>Group 2 – Neuropathy with evidence of deformity or peripheral vascular disease</p><p class="bulletIndent1"><span class="glyph">●</span>Group 3 – History of foot ulceration or lower extremity amputation</p><p></p><p>In a prospective case-control study of 225 patients with diabetes, stratification using this classification system was predictive of incident ulceration and amputation [<a href="#rid20">20</a>]. During 30 months (mean) of follow-up, ulcers occurred in 5, 14, 13, and 65 percent of patients in groups 0, 1, 2, and 3, respectively. Only patients in groups 2 and 3 had amputations (2 and 26 percent, respectively).</p><p class="headingAnchor" id="H3083007619"><span class="h1">OUR APPROACH</span><span class="headingEndMark"> — </span>All patients with diabetes should be examined to identify risk for foot ulceration. The feet should be visually inspected at each routine visit to identify problems with nail care, poorly fitting footwear resulting in barotrauma, fungal infections, and callus formation that may result in more severe foot problems. A comprehensive foot examination should be performed annually on patients with diabetes to identify risk factors predictive of ulcers and amputation  (<a class="graphic graphic_table graphicRef59069" href="/z/d/graphic/59069.html" rel="external">table 2</a>) [<a href="#rid21">21,22</a>]. Patients with an existing foot ulcer or with risk factors for foot ulceration (eg, previous foot ulceration, neuropathy, foot deformity, peripheral vascular disease) should be referred to a foot care specialist  (<a class="graphic graphic_table graphicRef70817" href="/z/d/graphic/70817.html" rel="external">table 1</a>).</p><p>Our approach to evaluation of the diabetic foot is largely in agreement with the guidelines from the American Diabetes Association (ADA) [<a href="#rid22">22</a>].</p><p class="headingAnchor" id="H4"><span class="h2">History</span><span class="headingEndMark"> — </span>Pertinent history to obtain includes duration of diabetes, overall glycemic management, presence of micro- or macrovascular disease, history of prior foot injury resulting in deformities or prior ulcers, lower limb vascular bypasses or amputation, presence of claudication, and history of cigarette smoking. Two cohort studies have demonstrated an increased risk of foot ulcers in those with a longer history of diabetes [<a href="#rid23">23,24</a>]. This may be related to the finding that the risk of peripheral artery disease and peripheral neuropathy appears to increase with the duration of diabetes [<a href="#rid25">25-27</a>].</p><p>The patient should be questioned about foot and leg discomfort. An older scoring system to assess symptoms quantitatively remains a useful guide to collect a history of diabetic neuropathy [<a href="#rid28">28</a>]:</p><p class="bulletIndent1"><span class="glyph">●</span>What is the sensation felt? – Burning, numbness, or tingling (2 points); fatigue, cramping, or aching (1 point). Maximum is 2 points.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>What is the location of symptoms? – Feet (2 points); calves (1 point); elsewhere (no points). Maximum is 2 points.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Have the symptoms ever awoken you at night? – Yes (1 point).</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>What is the timing of symptoms? – Worse at night (2 points); present day and night (1 point); present only during the day (no points). Maximum is 2 points.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>How are symptoms relieved? – Walking around (2 points); standing (1 point); sitting or lying or no relief (no points). Maximum is 2 points.</p><p></p><p>The total neuropathy symptom score can then be determined:</p><p class="bulletIndent1"><span class="glyph">●</span>0 to 2 – Normal</p><p class="bulletIndent1"><span class="glyph">●</span>3 to 4 – Mild</p><p class="bulletIndent1"><span class="glyph">●</span>5 to 6 – Moderate</p><p class="bulletIndent1"><span class="glyph">●</span>7 to 9 – Severe</p><p></p><p class="headingAnchor" id="H5"><span class="h2">Comprehensive foot examination</span><span class="headingEndMark"> — </span>The annual comprehensive foot examination can be accomplished in the primary care setting and should include inspection, assessment of pedal pulses, and testing for loss of protective sensation  (<a class="graphic graphic_table graphicRef59069" href="/z/d/graphic/59069.html" rel="external">table 2</a>). Several reports indicate that adequate examinations relevant to foot ulceration are often not performed in patients with diabetes [<a href="#rid29">29-31</a>].</p><p>A meta-analysis of 16 cohort studies found that the following diagnostic screening tests reliably identified those at risk for foot ulceration [<a href="#rid10">10</a>]:</p><p class="bulletIndent1"><span class="glyph">●</span>Decreased cutaneous sensation with monofilament</p><p class="bulletIndent1"><span class="glyph">●</span>At least one absent pedal pulse</p><p></p><p class="headingAnchor" id="H2452578662"><span class="h3">Inspection</span><span class="headingEndMark"> — </span>The skin should be assessed for integrity, especially between the toes and under the metatarsal heads. Findings that may herald a developing foot ulcer include the following:</p><p class="bulletIndent1"><span class="glyph">●</span>Lesions between adjacent toes due to pressure from tight shoes cramming them together</p><p class="bulletIndent1"><span class="glyph">●</span>Macerated areas between the toes (due to tinea pedis or "athlete's foot"); these lesions are often painless and may go unnoticed until bacterial infection supervenes</p><p class="bulletIndent1"><span class="glyph">●</span>Bunions (callused areas)</p><p></p><p>The presence of erythema, warmth, or fissures may indicate areas of tissue damage. Patients with evidence of an existing ulcer require additional evaluation. (See <a class="local">'Evaluation of existing ulcer'</a> below.)</p><p>Bony deformities, joint mobility, and gait and balance should also be assessed. Assessment may reveal several abnormalities that result from diabetic neuropathy, such as claw toes and Charcot arthropathy (also called diabetic neuropathic arthropathy). Chronic motor neuropathy often affects the small intrinsic muscles of the feet so that the action of the larger muscles in the anterior tibial compartment is unopposed. This leads to subluxation of the proximal interphalangeal-metatarsal joints, resulting in a claw toe appearance. One consequence of this abnormality is increased pressure on the metatarsal heads, which are a common site of ulcer development  (<a class="graphic graphic_picture graphicRef51991" href="/z/d/graphic/51991.html" rel="external">picture 1</a>).</p><p>A later complication is Charcot arthropathy, which is characterized by collapse of the arch of the midfoot and abnormal bony prominences  (<a class="graphic graphic_picture graphicRef67753" href="/z/d/graphic/67753.html" rel="external">picture 2</a>). These changes are often triggered by injury, inflammation, and hyperperfusion, accompanied by the triad of small muscle wasting, decreased sensation, and abnormal distribution of weight when standing, leading to repetitive microtrauma due to the absence of protective pain sensation [<a href="#rid32">32</a>]. (See  <a class="medical medical_review" href="/z/d/html/5608.html" rel="external">"Diabetic neuroarthropathy"</a>.)</p><p>The autonomic neuropathy associated with Charcot arthropathy can lead to several additional problems. Sweating is diminished or absent; as a result, the skin of the feet remains dry and has a tendency to become scaly and cracked, thereby allowing infection to penetrate below the skin. Lack of autonomic tone in the capillary circulation causes shunting of blood from arteries directly into veins, bypassing the tissues that need nutrition. This results in a foot that feels warm and has distended veins and bounding pulses. Despite these apparent signs of adequate perfusion, the foot is vulnerable to local "microvascular" gangrene, will heal very poorly and slowly, and will be less able to resist infection. (See  <a class="medical medical_review" href="/z/d/html/5272.html" rel="external">"Screening for diabetic polyneuropathy"</a>.)</p><p class="headingAnchor" id="H3433303598"><span class="h3">Assessment of pedal pulses</span><span class="headingEndMark"> — </span>Assess for peripheral artery disease by asking about a history of claudication and assessing pedal pulses, temperature, and for the presence of dependent rubor, a late finding. If pedal pulses are absent, assess popliteal and femoral pulses. Physical examination findings such as diminished pulses, decrease in skin temperature, thin skin, lack of skin hair, and bluish skin color are not specific enough to guide further management in an individual patient. Patients with suspicion for peripheral artery disease should have ankle-brachial index (ABI) testing (noninvasive arterial testing) to guide further management, although this may be insensitive in diabetes due to vascular calcification or failure to detect disease in the microcirculation [<a href="#rid33">33</a>]. The presence of peripheral artery disease is highly associated with atherosclerotic cardiovascular disease. (See <a class="local">'Evaluation of peripheral artery disease'</a> below and  <a class="medical medical_review" href="/z/d/html/8208.html" rel="external">"Clinical features and diagnosis of lower extremity peripheral artery disease", section on 'Physical examination'</a>.)</p><p class="headingAnchor" id="H2542921746"><span class="h3">Assessment for loss of protective sensation</span><span class="headingEndMark"> — </span>Test for loss of protective sensation using a Semmes-Weinstein 5.07 (10 g) monofilament, plus any one of the following: vibration using a 128-Hz tuning fork or a biothesiometer, pinprick sensation, and ankle reflexes. The pinprick examination in best performed with a new, clean safety pin, which should be discarded in a sharps container after use.</p><p class="bulletIndent1"><span class="glyph">●</span><strong>10 g monofilament</strong> – The monofilament is used to detect loss of sensation at each of 12 sites in the foot  (<a class="graphic graphic_figure graphicRef52481" href="/z/d/graphic/52481.html" rel="external">figure 1</a>). Failure to detect cutaneous pressure at any site indicates a high risk for future ulceration.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Ipswich touch test</strong> – The Ipswich touch test, a quicker and simpler method to assess sensation, was designed to promote more widespread diabetic foot examinations. The examiner lightly and briefly (1 to 2 seconds) touches the tips of the first, third, and fifth toes of both feet with the index finger. Reduced sensation is defined as ≥2 of 6 insensate areas (counting both feet). Compared with 10 g monofilament, the touch test has a sensitivity of 77 to 78.3 percent and a specificity of 90 to 93.9 percent with positive predictive value of detecting "at-risk" feet of 81.2 to 89 percent and negative predictive value of 77 to 92.8 percent [<a href="#rid34">34,35</a>]. While not quite as sensitive as a detailed 10 g monofilament exam, the Ipswich touch test is much easier and is superior to no evaluation at all, which might otherwise be the case in many patient encounters.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Vibration testing</strong> – Vibration testing is typically conducted with a 128 Hz tuning fork applied to the bony prominence at the dorsum of the first toe, just proximal to the nail bed. The quickest method of testing is to ask the patient to report the perception of both the start of vibration sensation and the cessation of vibration on dampening. The test should be conducted twice on each great toe. The sensitivity and specificity of vibration testing for peripheral neuropathy have been estimated to be 53 and 99 percent, respectively [<a href="#rid36">36</a>].</p><p></p><p class="bulletIndent1">Vibration sense can also be estimated quantitatively with a biothesiometer. This device is essentially an electronic tuning fork that allows the vibration to be adjusted up or down depending upon the voltage applied. The vibration-perception threshold (VPT) is defined as the lowest voltage at which vibration can be sensed on the pulp of the big toe. The value in normal subjects increases with age from approximately 6 volts at age 30 years to 20 volts at age 75 years [<a href="#rid37">37</a>].</p><p></p><p class="headingAnchor" id="H1177537491"><span class="h2">Additional evaluation</span><span class="headingEndMark"> — </span>Patients who have concerning findings on the comprehensive foot examination require additional evaluation and referral to a foot care specialist.</p><p class="headingAnchor" id="H3898223549"><span class="h3">Evaluation of existing ulcer</span><span class="headingEndMark"> — </span>The evaluation of an existing diabetic foot ulcer includes careful examination and classification of the wound. Foot ulcers are usually classified into two groups: acute ulcers secondary to dermal abrasion from poorly fitting shoes, and chronic ulcers occurring over areas prone to pressure. Chronic ulceration is probably multifactorial, due to a combination of diabetic neuropathy (with decreased pain sensation and deformity), autonomic dysfunction, and vascular insufficiency. (See  <a class="medical medical_review" href="/z/d/html/8175.html" rel="external">"Management of diabetic foot ulcers", section on 'Ulcer classification'</a>.)</p><p>The ulcer is examined for drainage, odor, the presence (or absence) of granulation tissue, and any exposed underlying structures, such as tendons, joint capsule, or bone. The wound can be probed gently by an experienced clinician or a surgeon with a sterile, blunt probe to reveal the presence of a sinus tract or communication with deeper structures, which may change the wound classification. (See  <a class="medical medical_review" href="/z/d/html/8175.html" rel="external">"Management of diabetic foot ulcers", section on 'Management overview'</a>.)</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Signs of infection </strong>– The presence of a diabetic foot infection is likely if there is erythema, warmth, tenderness, or swelling (especially with two or more of these findings) around the ulcer site. Infection is even more strongly indicated by pus coming out of an ulcer site and/or a nearby sinus tract.</p><p></p><p class="bulletIndent1">Osteomyelitis is likely to be present if bone can be seen at the floor of a deep ulcer, or if it can be easily detected by probing the ulcer with a sterile, blunt, stainless steel probe [<a href="#rid38">38</a>]. Other signs that suggest osteomyelitis are an ulcer size larger than 2 x 2 cm and an otherwise unexplained elevation in the erythrocyte sedimentation rate (ESR). An ESR &gt;60 mm/hour or a C-reactive protein (CRP) level &gt;7.9 mg/dL were found to be optimum cutoffs to diagnose osteomyelitis using receiver operative characteristic analyses [<a href="#rid39">39</a>].</p><p></p><p class="bulletIndent1">A discussion of diabetes-related foot infections (infected ulcer, cellulitis, and osteomyelitis) is found elsewhere. (See  <a class="medical medical_review" href="/z/d/html/7651.html" rel="external">"Clinical manifestations, diagnosis, and management of diabetic infections of the lower extremities"</a>.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Imaging</strong> – Plain radiographs can detect structural foot deformities, soft tissue gas, and foreign bodies and may be able to detect osteomyelitis. However, radiologic changes occur late in the course of osteomyelitis, and negative radiographs do not exclude it. More sensitive imaging techniques that have been used include radionuclide bone imaging, magnetic resonance imaging, and imaging with indium-labeled leukocytes. (See  <a class="medical medical_review" href="/z/d/html/7651.html" rel="external">"Clinical manifestations, diagnosis, and management of diabetic infections of the lower extremities", section on 'Diagnosis of underlying osteomyelitis'</a> and  <a class="medical medical_review" href="/z/d/html/7653.html" rel="external">"Approach to imaging modalities in the setting of suspected nonvertebral osteomyelitis"</a>.)</p><p></p><p class="headingAnchor" id="H3066358044"><span class="h3">Evaluation of peripheral artery disease</span><span class="headingEndMark"> — </span>Patients with clinical evidence of peripheral artery disease should have ABI testing, which can detect macrovascular, but not microvascular, peripheral artery disease.</p><p>ABI is calculated by measuring the systolic blood pressure (by Doppler probe) in the brachial, posterior tibial, and dorsalis pedis arteries [<a href="#rid40">40</a>]. For each leg, the higher of the measurements at the ankle and foot in that limb is divided by the higher of the two (ie, left and right) brachial measurements. The normal ABI is 0.9 to 1.3 and is generally &gt;1.0 because the pressure is higher in the ankle than in the arm. An ABI &lt;0.9 has 95 percent sensitivity for detecting angiogram-positive peripheral artery disease [<a href="#rid41">41</a>]. Patients with extensive vascular calcification and noncompressible arteries may have falsely positive elevations in the ABI. (See  <a class="medical medical_review" href="/z/d/html/8201.html" rel="external">"Noninvasive diagnosis of upper and lower extremity arterial disease", section on 'Ankle-brachial index'</a> and  <a class="medical medical_review" href="/z/d/html/8208.html" rel="external">"Clinical features and diagnosis of lower extremity peripheral artery disease", section on 'Physical examination'</a>.)</p><p>A low ABI in the absence of a foot ulcer does not correlate with the risk of future foot ulceration [<a href="#rid42">42</a>]; however, a low ABI in the presence of a foot ulcer suggests that the prognosis will be improved with reconstructive vascular surgery. In one series of patients with neuropathic foot ulcers and severe arterial insufficiency, for example, 35 of 42 extremities (83 percent) with patent bypass grafts achieved and maintained primary healing of their ulcer [<a href="#rid43">43</a>]. A low ABI also indicates more generalized arteriosclerosis and is associated with an increased risk of cardiovascular death [<a href="#rid44">44</a>].</p><p class="headingAnchor" id="H636149056"><span class="h3">Evaluation of neuropathy</span><span class="headingEndMark"> — </span>If vibration sensation is diminished, we assess for other causes of neuropathy (including vitamin B12 deficiency) since diabetic neuropathy is a diagnosis of exclusion. (See  <a class="medical medical_review" href="/z/d/html/5272.html" rel="external">"Screening for diabetic polyneuropathy", section on 'Differential diagnosis'</a> and  <a class="medical medical_review" href="/z/d/html/5284.html" rel="external">"Overview of polyneuropathy", section on 'Etiology and pathogenesis'</a>.)</p><p>For rapidly progressive, atypical, or severe neuropathic syndromes, or if there is motor nerve involvement, referral to a neurologist is indicated.</p><p class="headingAnchor" id="H18"><span class="h2">Preventive foot care</span></p><p class="headingAnchor" id="H4258227696"><span class="h3">All patients</span><span class="headingEndMark"> — </span>In conjunction with the comprehensive foot exam, advice for prophylactic foot care should be given to all patients. These recommendations are particularly important in patients with existing neuropathy. (See  <a class="medical medical_patient" href="/z/d/html/1739.html" rel="external">"Patient education: Foot care for people with diabetes (Beyond the Basics)"</a>.)</p><p class="bulletIndent1"><span class="glyph">●</span>Avoid smoking</p><p class="bulletIndent1"><span class="glyph">●</span>Avoid going barefoot, even at home, and especially on hot decks and hot sand</p><p class="bulletIndent1"><span class="glyph">●</span>Test water temperature before stepping into a bath</p><p class="bulletIndent1"><span class="glyph">●</span>Trim toenails to shape of the toe, and remove sharp edges with a nail file; do not cut cuticles</p><p class="bulletIndent1"><span class="glyph">●</span>Wash in lukewarm water, dry thoroughly (including between the toes), and check feet daily</p><p class="bulletIndent1"><span class="glyph">●</span>Shoes should be snug, but not tight, and customized if feet are misshapen or there is a history of ulcers</p><p class="bulletIndent1"><span class="glyph">●</span>Socks should fit and be changed daily</p><p></p><p class="headingAnchor" id="H3254072349"><span class="h3">Very high-risk patients</span><span class="headingEndMark"> — </span>In addition to the foot care measures described above, a variety of strategies utilize pressure sensors, temperature measurements, and telemetry for monitoring very high-risk patients and may help with early detection and prevention [<a href="#rid45">45,46</a>]. Customized, pressure-relieving footwear also can help reduce the risk of recurrent foot ulcer [<a href="#rid6">6</a>].</p><p>Temperature monitoring involves daily or twice-daily measurements of skin surface temperature with a thermometer equipped with a touch sensor. If a temperature difference (&gt;2°C elevation) is detected between a right and left foot site  (<a class="graphic graphic_figure graphicRef52481" href="/z/d/graphic/52481.html" rel="external">figure 1</a>), patients are instructed to reduce activity and offload the affected area until the temperature normalizes. Whether the benefit of monitoring temperature is specifically related to the monitoring or the heightened attention to foot care in those performing the monitoring is not clear.</p><p>In a systematic review of foot ulcer preventive interventions, few data evaluated prevention of a first foot ulcer [<a href="#rid47">47</a>]. For the prevention of recurrent foot ulcers, customized footwear to reduce plantar pressure and daily foot skin temperature measurements with subsequent preventive action showed some benefit. In one report, as an example, the use of customized shoes reduced the development of a recurrent foot ulcer from 58 to 28 percent over one year of follow-up [<a href="#rid48">48</a>].</p><p class="headingAnchor" id="H1828704156"><span class="h1">SOCIETY GUIDELINE LINKS</span><span class="headingEndMark"> — </span>Links to society and government-sponsored guidelines from selected countries and regions around the world are provided separately. (See  <a class="medical medical_society_guidelines" href="/z/d/html/104442.html" rel="external">"Society guideline links: Diabetes mellitus in adults"</a>.)</p><p class="headingAnchor" id="H20"><span class="h1">INFORMATION FOR PATIENTS</span><span class="headingEndMark"> — </span>UpToDate offers two types of patient education materials, "The Basics" and "Beyond the Basics." The Basics patient education pieces are written in plain language, at the 5<sup>th</sup> to 6<sup>th</sup> grade reading level, and they answer the four or five key questions a patient might have about a given condition. These articles are best for patients who want a general overview and who prefer short, easy-to-read materials. Beyond the Basics patient education pieces are longer, more sophisticated, and more detailed. These articles are written at the 10<sup>th</sup> to 12<sup>th</sup> grade reading level and are best for patients who want in-depth information and are comfortable with some medical jargon.</p><p>Here are the patient education articles that are relevant to this topic. We encourage you to print or e-mail these topics to your patients. (You can also locate patient education articles on a variety of subjects by searching on "patient info" and the keyword(s) of interest.)</p><p class="bulletIndent1"><span class="glyph">●</span>Beyond the Basics topics (see  <a class="medical medical_patient" href="/z/d/html/1739.html" rel="external">"Patient education: Foot care for people with diabetes (Beyond the Basics)"</a>)</p><p></p><p class="headingAnchor" id="H21"><span class="h1">SUMMARY AND RECOMMENDATIONS</span></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Risk factors for foot ulcers</strong> – Foot ulcers are an important cause of morbidity in patients with diabetes. Both vascular and neurologic disease increase the risk of foot ulcers. (See <a class="local">'Introduction'</a> above and <a class="local">'Risk assessment'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Evaluation</strong> – A comprehensive foot examination should be performed annually on patients with diabetes to identify risk factors predictive of ulcers and amputation  (<a class="graphic graphic_table graphicRef59069" href="/z/d/graphic/59069.html" rel="external">table 2</a>). (See <a class="local">'History'</a> above and <a class="local">'Comprehensive foot examination'</a> above.) </p><p></p><p class="bulletIndent1">In addition, the feet should be visually inspected at each routine visit to identify problems with nail care, poorly fitting footwear resulting in barotrauma, fungal infections, and callus formation that may result in more severe foot problems. At a minimum, the Ipswich touch test (in which the examiner lightly touches the first, third, and fifth toepads bilaterally) may be used to screen for impaired sensation. (See <a class="local">'Assessment for loss of protective sensation'</a> above.)</p><p></p><p class="bulletIndent1">We perform ankle-brachial pressure index (ABI) testing in any patient with symptoms or physical examination findings of peripheral artery disease. (See <a class="local">'Evaluation of peripheral artery disease'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Preventive foot care</strong> – Counseling regarding preventive foot care should be given to any patient whose feet are at risk for ulceration. Preventive measures include avoiding smoking, walking barefoot, and wearing tight, poorly fitting shoes. (See <a class="local">'Preventive foot care'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Referral to foot care specialist</strong> – We refer patients to a foot care specialist if they have an existing foot ulcer, or if they are at particularly high risk for foot ulceration due to the following risk factors  (<a class="graphic graphic_table graphicRef70817" href="/z/d/graphic/70817.html" rel="external">table 1</a>) (see <a class="local">'Risk classification'</a> above and <a class="local">'Our approach'</a> above):</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>A previous history of foot ulceration or amputation</p><p class="bulletIndent2"><span class="glyph">•</span>Loss of protective sensation and/or neuropathic foot deformities</p><p class="bulletIndent2"><span class="glyph">•</span>Peripheral vascular disease</p><p></p><p class="headingAnchor" id="H3212213308"><span class="h1">ACKNOWLEDGMENT</span><span class="headingEndMark"> — </span>The UpToDate editorial staff acknowledges David McCulloch, MD, who contributed to earlier versions of this topic review.</p></div><div class="headingAnchor" id="references"><ol id="reference"><li><a class="nounderline abstract_t">Armstrong DG, Boulton AJM, Bus SA. Diabetic Foot Ulcers and Their Recurrence. N Engl J Med 2017; 376:2367.</a></li><li><a class="nounderline abstract_t">Zhang Y, Lazzarini PA, McPhail SM, et al. Global Disability Burdens of Diabetes-Related Lower-Extremity Complications in 1990 and 2016. Diabetes Care 2020; 43:964.</a></li><li><a class="nounderline abstract_t">Walsh JW, Hoffstad OJ, Sullivan MO, Margolis DJ. Association of diabetic foot ulcer and death in a population-based cohort from the United Kingdom. Diabet Med 2016; 33:1493.</a></li><li><a class="nounderline abstract_t">Pecoraro RE, Reiber GE, Burgess EM. Pathways to diabetic limb amputation. Basis for prevention. Diabetes Care 1990; 13:513.</a></li><li><a class="nounderline abstract_t">Singh N, Armstrong DG, Lipsky BA. Preventing foot ulcers in patients with diabetes. JAMA 2005; 293:217.</a></li><li><a class="nounderline abstract_t">Armstrong DG, Tan TW, Boulton AJM, Bus SA. Diabetic Foot Ulcers: A Review. JAMA 2023; 330:62.</a></li><li><a class="nounderline abstract_t">Skrepnek GH, Mills JL Sr, Armstrong DG. A Diabetic Emergency One Million Feet Long: Disparities and Burdens of Illness among Diabetic Foot Ulcer Cases within Emergency Departments in the United States, 2006-2010. PLoS One 2015; 10:e0134914.</a></li><li><a class="nounderline abstract_t">Chen L, Sun S, Gao Y, Ran X. Global mortality of diabetic foot ulcer: A systematic review and meta-analysis of observational studies. Diabetes Obes Metab 2023; 25:36.</a></li><li><a class="nounderline abstract_t">Armstrong DG, Swerdlow MA, Armstrong AA, et al. Five year mortality and direct costs of care for people with diabetic foot complications are comparable to cancer. J Foot Ankle Res 2020; 13:16.</a></li><li><a class="nounderline abstract_t">Crawford F, Cezard G, Chappell FM, et al. A systematic review and individual patient data meta-analysis of prognostic factors for foot ulceration in people with diabetes: the international research collaboration for the prediction of diabetic foot ulcerations (PODUS). Health Technol Assess 2015; 19:1.</a></li><li><a class="nounderline abstract_t">Davis WA, Norman PE, Bruce DG, Davis TM. Predictors, consequences and costs of diabetes-related lower extremity amputation complicating type 2 diabetes: the Fremantle Diabetes Study. Diabetologia 2006; 49:2634.</a></li><li><a class="nounderline abstract_t">Neal B, Perkovic V, Mahaffey KW, et al. Canagliflozin and Cardiovascular and Renal Events in Type 2 Diabetes. N Engl J Med 2017; 377:644.</a></li><li><a class="nounderline abstract_t">Patorno E, Pawar A, Bessette LG, et al. Comparative Effectiveness and Safety of Sodium-Glucose Cotransporter 2 Inhibitors Versus Glucagon-Like Peptide 1 Receptor Agonists in Older Adults. Diabetes Care 2021; 44:826.</a></li><li><a class="nounderline abstract_t">Fu EL, D'Andrea E, Wexler DJ, et al. Safety of Sodium-Glucose Cotransporter-2 Inhibitors in Patients with CKD and Type 2 Diabetes: Population-Based US Cohort Study. Clin J Am Soc Nephrol 2023; 18:592.</a></li><li><a class="nounderline abstract_t">McDermott K, Fang M, Boulton AJM, et al. Etiology, Epidemiology, and Disparities in the Burden of Diabetic Foot Ulcers. Diabetes Care 2023; 46:209.</a></li><li><a class="nounderline abstract_t">Miller TA, Campbell JH, Bloom N, Wurdeman SR. Racial Disparities in Health Care With Timing to Amputation Following Diabetic Foot Ulcer. Diabetes Care 2022; 45:2336.</a></li><li><a class="nounderline abstract_t">Hurst JE, Barn R, Gibson L, et al. Geospatial mapping and data linkage uncovers variability in outcomes of foot disease according to multiple deprivation: a population cohort study of people with diabetes. Diabetologia 2020; 63:659.</a></li><li><a class="nounderline abstract_t">Frykberg RG, Zgonis T, Armstrong DG, et al. Diabetic foot disorders. A clinical practice guideline (2006 revision). J Foot Ankle Surg 2006; 45:S1.</a></li><li><a class="nounderline abstract_t">Bus SA, van Netten JJ, Lavery LA, et al. IWGDF guidance on the prevention of foot ulcers in at-risk patients with diabetes. Diabetes Metab Res Rev 2016; 32 Suppl 1:16.</a></li><li><a class="nounderline abstract_t">Peters EJ, Lavery LA, International Working Group on the Diabetic FOot. Effectiveness of the diabetic foot risk classification system of the International Working Group on the Diabetic Foot. Diabetes Care 2001; 24:1442.</a></li><li><a class="nounderline abstract_t">Pop-Busui R, Boulton AJ, Feldman EL, et al. Diabetic Neuropathy: A Position Statement by the American Diabetes Association. Diabetes Care 2017; 40:136.</a></li><li><a class="nounderline abstract_t">American Diabetes Association Professional Practice Committee. 12. Retinopathy, Neuropathy, and Foot Care: Standards of Care in Diabetes-2024. Diabetes Care 2024; 47:S231.</a></li><li><a class="nounderline abstract_t">Pham H, Armstrong DG, Harvey C, et al. Screening techniques to identify people at high risk for diabetic foot ulceration: a prospective multicenter trial. Diabetes Care 2000; 23:606.</a></li><li><a class="nounderline abstract_t">Boyko EJ, Ahroni JH, Stensel V, et al. A prospective study of risk factors for diabetic foot ulcer. The Seattle Diabetic Foot Study. Diabetes Care 1999; 22:1036.</a></li><li><a class="nounderline abstract_t">Al-Delaimy WK, Merchant AT, Rimm EB, et al. Effect of type 2 diabetes and its duration on the risk of peripheral arterial disease among men. Am J Med 2004; 116:236.</a></li><li><a class="nounderline abstract_t">Valensi P, Giroux C, Seeboth-Ghalayini B, Attali JR. Diabetic peripheral neuropathy: effects of age, duration of diabetes, glycemic control, and vascular factors. J Diabetes Complications 1997; 11:27.</a></li><li><a class="nounderline abstract_t">Zander E, Heinke P, Reindel J, et al. Peripheral arterial disease in diabetes mellitus type 1 and type 2: are there different risk factors? Vasa 2002; 31:249.</a></li><li><a class="nounderline abstract_t">Young MJ, Boulton AJ, MacLeod AF, et al. A multicentre study of the prevalence of diabetic peripheral neuropathy in the United Kingdom hospital clinic population. Diabetologia 1993; 36:150.</a></li><li><a class="nounderline abstract_t">Kenny SJ, Smith PJ, Goldschmid MG, et al. Survey of physician practice behaviors related to diabetes mellitus in the U.S. Physician adherence to consensus recommendations. Diabetes Care 1993; 16:1507.</a></li><li><a class="nounderline abstract_t">Peters AL, Legorreta AP, Ossorio RC, Davidson MB. Quality of outpatient care provided to diabetic patients. A health maintenance organization experience. Diabetes Care 1996; 19:601.</a></li><li><a class="nounderline abstract_t">Meraya AM, Makeen HA. Self-reported receipt of preventive practices and its associated factors among adults with diabetes in the United States. Prev Med Rep 2019; 14:100857.</a></li><li><a class="nounderline abstract_t">Kaynak G, Birsel O, Güven MF, Oğüt T. An overview of the Charcot foot pathophysiology. Diabet Foot Ankle 2013; 4.</a></li><li><a class="nounderline abstract_t">Aerden D, Massaad D, von Kemp K, et al. The ankle--brachial index and the diabetic foot: a troublesome marriage. Ann Vasc Surg 2011; 25:770.</a></li><li><a class="nounderline abstract_t">Rayman G, Vas PR, Baker N, et al. The Ipswich Touch Test: a simple and novel method to identify inpatients with diabetes at risk of foot ulceration. Diabetes Care 2011; 34:1517.</a></li><li><a class="nounderline abstract_t">Sharma S, Kerry C, Atkins H, Rayman G. The Ipswich Touch Test: a simple and novel method to screen patients with diabetes at home for increased risk of foot ulceration. Diabet Med 2014; 31:1100.</a></li><li><a class="nounderline abstract_t">Perkins BA, Olaleye D, Zinman B, Bril V. Simple screening tests for peripheral neuropathy in the diabetes clinic. Diabetes Care 2001; 24:250.</a></li><li class="breakAll">Boulton AJ. The diabetic foot. In: Diabetes: Clinical management, Tattersall R, Gale EAM (Eds), Churchill Livingstone, Edinburgh 1990.</li><li><a class="nounderline abstract_t">Grayson ML, Gibbons GW, Balogh K, et al. Probing to bone in infected pedal ulcers. A clinical sign of underlying osteomyelitis in diabetic patients. JAMA 1995; 273:721.</a></li><li><a class="nounderline abstract_t">Lavery LA, Ahn J, Ryan EC, et al. What are the Optimal Cutoff Values for ESR and CRP to Diagnose Osteomyelitis in Patients with Diabetes-related Foot Infections? Clin Orthop Relat Res 2019; 477:1594.</a></li><li><a class="nounderline abstract_t">Boulton AJ, Armstrong DG, Albert SF, et al. Comprehensive foot examination and risk assessment: a report of the task force of the foot care interest group of the American Diabetes Association, with endorsement by the American Association of Clinical Endocrinologists. Diabetes Care 2008; 31:1679.</a></li><li><a class="nounderline abstract_t">Fowkes FG. The measurement of atherosclerotic peripheral arterial disease in epidemiological surveys. Int J Epidemiol 1988; 17:248.</a></li><li><a class="nounderline abstract_t">McNeely MJ, Boyko EJ, Ahroni JH, et al. The independent contributions of diabetic neuropathy and vasculopathy in foot ulceration. How great are the risks? Diabetes Care 1995; 18:216.</a></li><li><a class="nounderline abstract_t">Rosenblum BI, Pomposelli FB Jr, Giurini JM, et al. Maximizing foot salvage by a combined approach to foot ischemia and neuropathic ulceration in patients with diabetes. A 5-year experience. Diabetes Care 1994; 17:983.</a></li><li class="breakAll">Ganda OP. Pathogenesis of accelerated atherosclerosis in diabetes. In: Management of diabetic foot problems, Kozak GP, Hoar CS (Eds), Saunders, Philadelphia 1984. p.17.</li><li><a class="nounderline abstract_t">Lavery LA, Higgins KR, Lanctot DR, et al. Home monitoring of foot skin temperatures to prevent ulceration. Diabetes Care 2004; 27:2642.</a></li><li><a class="nounderline abstract_t">Armstrong DG, Holtz-Neiderer K, Wendel C, et al. Skin temperature monitoring reduces the risk for diabetic foot ulceration in high-risk patients. Am J Med 2007; 120:1042.</a></li><li><a class="nounderline abstract_t">van Netten JJ, Price PE, Lavery LA, et al. Prevention of foot ulcers in the at-risk patient with diabetes: a systematic review. Diabetes Metab Res Rev 2016; 32 Suppl 1:84.</a></li><li><a class="nounderline abstract_t">Uccioli L, Faglia E, Monticone G, et al. Manufactured shoes in the prevention of diabetic foot ulcers. Diabetes Care 1995; 18:1376.</a></li></ol></div><div id="topicVersionRevision">Topic 1749 Version 26.0</div></div>
-<div class="row">
-<div class="col-12">
-<h4 style="text-align: center;padding: 20px;color: cadetblue;">References</h4>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/28614678" id="rid0" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>1 : Diabetic Foot Ulcers and Their Recurrence.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/32139380" id="rid1" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>2 : Global Disability Burdens of Diabetes-Related Lower-Extremity Complications in 1990 and 2016.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/26666583" id="rid2" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>3 : Association of diabetic foot ulcer and death in a population-based cohort from the United Kingdom.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/2351029" id="rid3" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>4 : Pathways to diabetic limb amputation. Basis for prevention.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/15644549" id="rid4" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>5 : Preventing foot ulcers in patients with diabetes.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/37395769" id="rid5" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>6 : Diabetic Foot Ulcers: A Review.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/26248037" id="rid6" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>7 : A Diabetic Emergency One Million Feet Long: Disparities and Burdens of Illness among Diabetic Foot Ulcer Cases within Emergency Departments in the United States, 2006-2010.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/36054820" id="rid7" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>8 : Global mortality of diabetic foot ulcer: A systematic review and meta-analysis of observational studies.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/32209136" id="rid8" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>9 : Five year mortality and direct costs of care for people with diabetic foot complications are comparable to cancer.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/26211920" id="rid9" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>10 : A systematic review and individual patient data meta-analysis of prognostic factors for foot ulceration in people with diabetes: the international research collaboration for the prediction of diabetic foot ulcerations (PODUS).</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/17001469" id="rid10" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>11 : Predictors, consequences and costs of diabetes-related lower extremity amputation complicating type 2 diabetes: the Fremantle Diabetes Study.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/28605608" id="rid11" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>12 : Canagliflozin and Cardiovascular and Renal Events in Type 2 Diabetes.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/33495295" id="rid12" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>13 : Comparative Effectiveness and Safety of Sodium-Glucose Cotransporter 2 Inhibitors Versus Glucagon-Like Peptide 1 Receptor Agonists in Older Adults.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/36827225" id="rid13" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>14 : Safety of Sodium-Glucose Cotransporter-2 Inhibitors in Patients with CKD and Type 2 Diabetes: Population-Based US Cohort Study.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/36548709" id="rid14" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>15 : Etiology, Epidemiology, and Disparities in the Burden of Diabetic Foot Ulcers.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/36069831" id="rid15" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>16 : Racial Disparities in Health Care With Timing to Amputation Following Diabetic Foot Ulcer.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/31848633" id="rid16" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>17 : Geospatial mapping and data linkage uncovers variability in outcomes of foot disease according to multiple deprivation: a population cohort study of people with diabetes.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/17280936" id="rid17" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>18 : Diabetic foot disorders. A clinical practice guideline (2006 revision).</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/26334001" id="rid18" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>19 : IWGDF guidance on the prevention of foot ulcers in at-risk patients with diabetes.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/11473084" id="rid19" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>20 : Effectiveness of the diabetic foot risk classification system of the International Working Group on the Diabetic Foot.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/27999003" id="rid20" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>21 : Diabetic Neuropathy: A Position Statement by the American Diabetes Association.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/38078577" id="rid21" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>22 : 12. Retinopathy, Neuropathy, and Foot Care: Standards of Care in Diabetes-2024.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/10834417" id="rid22" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>23 : Screening techniques to identify people at high risk for diabetic foot ulceration: a prospective multicenter trial.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/10388963" id="rid23" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>24 : A prospective study of risk factors for diabetic foot ulcer. The Seattle Diabetic Foot Study.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/14969651" id="rid24" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>25 : Effect of type 2 diabetes and its duration on the risk of peripheral arterial disease among men.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/9025010" id="rid25" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>26 : Diabetic peripheral neuropathy: effects of age, duration of diabetes, glycemic control, and vascular factors.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/12510549" id="rid26" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>27 : Peripheral arterial disease in diabetes mellitus type 1 and type 2: are there different risk factors?</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/8458529" id="rid27" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>28 : A multicentre study of the prevalence of diabetic peripheral neuropathy in the United Kingdom hospital clinic population.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/8299440" id="rid28" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>29 : Survey of physician practice behaviors related to diabetes mellitus in the U.S. Physician adherence to consensus recommendations.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/8725859" id="rid29" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>30 : Quality of outpatient care provided to diabetic patients. A health maintenance organization experience.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/31008027" id="rid30" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>31 : Self-reported receipt of preventive practices and its associated factors among adults with diabetes in the United States.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/23919113" id="rid31" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>32 : An overview of the Charcot foot pathophysiology.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/21514102" id="rid32" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>33 : The ankle--brachial index and the diabetic foot: a troublesome marriage.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/21593300" id="rid33" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>34 : The Ipswich Touch Test: a simple and novel method to identify inpatients with diabetes at risk of foot ulceration.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/24673517" id="rid34" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>35 : The Ipswich Touch Test: a simple and novel method to screen patients with diabetes at home for increased risk of foot ulceration.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/11213874" id="rid35" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>36 : Simple screening tests for peripheral neuropathy in the diabetes clinic.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/11213874" id="rid36" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>37 : Simple screening tests for peripheral neuropathy in the diabetes clinic.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/7853630" id="rid37" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>38 : Probing to bone in infected pedal ulcers. A clinical sign of underlying osteomyelitis in diabetic patients.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/31268423" id="rid38" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>39 : What are the Optimal Cutoff Values for ESR and CRP to Diagnose Osteomyelitis in Patients with Diabetes-related Foot Infections?</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/18663232" id="rid39" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>40 : Comprehensive foot examination and risk assessment: a report of the task force of the foot care interest group of the American Diabetes Association, with endorsement by the American Association of Clinical Endocrinologists.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/3042648" id="rid40" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>41 : The measurement of atherosclerotic peripheral arterial disease in epidemiological surveys.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/7729300" id="rid41" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>42 : The independent contributions of diabetic neuropathy and vasculopathy in foot ulceration. How great are the risks?</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/7988319" id="rid42" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>43 : Maximizing foot salvage by a combined approach to foot ischemia and neuropathic ulceration in patients with diabetes. A 5-year experience.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/7988319" id="rid43" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>44 : Maximizing foot salvage by a combined approach to foot ischemia and neuropathic ulceration in patients with diabetes. A 5-year experience.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/15504999" id="rid44" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>45 : Home monitoring of foot skin temperatures to prevent ulceration.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/18060924" id="rid45" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>46 : Skin temperature monitoring reduces the risk for diabetic foot ulceration in high-risk patients.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/26340966" id="rid46" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>47 : Prevention of foot ulcers in the at-risk patient with diabetes: a systematic review.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/8721941" id="rid47" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>48 : Manufactured shoes in the prevention of diabetic foot ulcers.</p>
-</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-</section>
-<!-- End Main Menu Area -->
-<!-- Start Search Popup Area -->
-<!-- End Footer Area -->
-<!-- Back to top -->
-<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
-<!-- End Back to top -->
-<!-- jQuery Min JS -->
-<!-- Prpper JS -->
-<!-- Bootstrap Min JS -->
-<!-- Classy Nav Min Js -->
-<!-- Owl Carousel Min Js -->
-<!-- Magnific Popup JS -->
-<!-- CounterUp JS -->
-<!-- Waypoints JS -->
-<!-- Form Validator Min JS -->
-<!-- Contact Form Min JS -->
-<!-- Main JS -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-</body>
+ <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+ <head>
+  <title>
+   Evaluation of the diabetic foot
+  </title>
+  <link href="d/css/1.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!-- Start Main Menu Area -->
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="container">
+   <div class="row">
+   </div>
+  </div>
+  <section class="teacher-area ptb-10">
+   <div class="container">
+   </div>
+   <section class="course-details-area ptb-60">
+    <div class="container">
+     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+      <h1 style="text-align:center">
+       Evaluation of the diabetic foot
+      </h1>
+      <div class="utdArticleSection utdStyle" id="topicContent">
+       <div id="topicTitle">
+        Evaluation of the diabetic foot
+       </div>
+       <div class="authorSectionElem">
+        <div class="authorsElementsLeft">
+         <dl id="topicContributors">
+          <dt>
+           <span>
+           </span>
+           Author:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Deborah J Wexler, MD, MSc
+           </a>
+          </dd>
+          <dt>
+           <span>
+           </span>
+           Section Editor:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            David M Nathan, MD
+           </a>
+          </dd>
+          <dt>
+           <span>
+           </span>
+           Deputy Editor:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Katya Rubinow, MD
+           </a>
+          </dd>
+         </dl>
+        </div>
+        <div class="authorsElementsRight">
+         <div id="literatureReviewDate">
+          <div class="litReviewSingleLine">
+           <bdi>
+            <span class="emphasis">
+             Literature review current through:
+            </span>
+            Jan 2024.
+           </bdi>
+          </div>
+          <div class="litReviewSingleLine">
+           <bdi>
+            <span class="emphasis">
+             This topic last updated:
+            </span>
+            Jan 04, 2024.
+           </bdi>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div id="topicWhatsNewContainer">
+       </div>
+       <div id="topicText">
+        <p class="headingAnchor" id="H1">
+         <span class="h1">
+          INTRODUCTION
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Foot problems are an important cause of morbidity in patients with diabetes mellitus. The lifetime risk of a foot ulcer for patients with type 1 or 2 diabetes may be as high as 34 percent [
+         <a href="#rid1">
+          1
+         </a>
+         ], and the worldwide incidence of diabetic foot ulcer is approximately 18.6 million people per year [
+         <a href="#rid2">
+          2
+         </a>
+         ]. Management of diabetic foot ulcers accounts for a large number of inpatient stays, has a high rate of hospital readmission, and is associated with a 2.5-fold risk of death compared with patients with diabetes without foot ulcers [
+         <a href="#rid1">
+          1,3
+         </a>
+         ].
+        </p>
+        <p>
+         A potentially preventable initiating event, such as minor trauma that causes cutaneous injury, can often be identified. Foot amputations, many of which are preventable with early recognition and therapy, may be required in up to 20 percent of diabetic foot ulcers [
+         <a href="#rid1">
+          1,4
+         </a>
+         ]. These observations illustrate the importance of frequent evaluation of the feet in patients with diabetes to identify those at risk for foot ulceration [
+         <a href="#rid5">
+          5
+         </a>
+         ]. Systematic screening examinations for neuropathic and vascular involvement of the lower extremities and careful inspection of feet may substantially reduce morbidity from foot problems.
+        </p>
+        <p>
+         Evaluation of the diabetic foot is provided here. A discussion of diabetes-related foot infections (cellulitis and osteomyelitis) and the management of diabetic foot ulcers are found elsewhere. (See
+         <a class="medical medical_review" href="/z/d/html/7651.html" rel="external">
+          "Clinical manifestations, diagnosis, and management of diabetic infections of the lower extremities"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/8175.html" rel="external">
+          "Management of diabetic foot ulcers"
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H373354699">
+         <span class="h1">
+          RISK ASSESSMENT
+         </span>
+        </p>
+        <p class="headingAnchor" id="H1788622932">
+         <span class="h2">
+          Complications and associated risks
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Diabetic foot ulcers are frequently complicated by infection and lead to high rates of hospitalization and lower extremity amputation. Further, foot ulceration is associated with markedly increased mortality. These risks can be mitigated with preventive measures, including those that target skin at high risk for ulceration, and early intervention once foot ulcers are identified [
+         <a href="#rid6">
+          6
+         </a>
+         ]. (See
+         <a class="local">
+          'Preventive foot care'
+         </a>
+         below and
+         <a class="medical medical_review" href="/z/d/html/8175.html" rel="external">
+          "Management of diabetic foot ulcers"
+         </a>
+         .)
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Infection
+         </strong>
+         – Approximately one-half of all diabetic foot ulcers develop infection, which can lead to sepsis, gangrene, amputation, and death [
+         <a href="#rid6">
+          6,7
+         </a>
+         ].
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Hospitalization and amputation
+         </strong>
+         – Approximately 20 percent of diabetic foot ulcers lead to hospitalization and, among patients requiring hospitalization, up to 20 percent undergo lower extremity amputation [
+         <a href="#rid6">
+          6
+         </a>
+         ].
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Recurrent foot ulceration
+         </strong>
+         – The rate of recurrent foot ulcer is high, as more than one-half of healed ulcers recur within five years [
+         <a href="#rid6">
+          6
+         </a>
+         ].
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Mortality
+         </strong>
+         – Diabetic foot ulcers are a strong predictor of mortality and are associated with a five-year mortality of approximately 30 to 50 percent [
+         <a href="#rid6">
+          6,8,9
+         </a>
+         ]. Cardiovascular disease and infection are leading causes of death following foot ulceration [
+         <a href="#rid8">
+          8
+         </a>
+         ].
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H2">
+         <span class="h2">
+          Risk factors
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Several risk factors are predictive of ulcers and amputation. Early recognition and management of risk factors is important for reducing morbidity of foot ulceration. Most are readily identifiable from the history or physical examination. The most important risk factors are [
+         <a href="#rid1">
+          1,4,5,10
+         </a>
+         ]:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Previous foot ulceration
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Neuropathy (loss of protective sensation)
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Foot deformity
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Vascular disease
+        </p>
+        <p>
+        </p>
+        <p>
+         The significance of these risk factors was confirmed by the results of a community-based study of 1294 patients with type 2 diabetes [
+         <a href="#rid11">
+          11
+         </a>
+         ]. The incidence of lower extremity amputation was 3.8 per 1000 patient-years. Predictors of amputation included foot ulceration (hazard ratio [HR] 5.6, 95% CI 1.2-25), neuropathy (HR 2.6, 95% CI 1.3-5.4), and ankle-brachial index (ABI) ≤0.9 (HR 2.2, 95% CI 1.1-4.4).
+        </p>
+        <p>
+         Neuropathy, which is present in over 80 percent of diabetes patients with foot ulcers, promotes ulcer formation by decreasing pain sensation and perception of pressure, by causing anatomic deformities (such as hammer toes from greater flexor muscle tone compared with extensor tone, loss of arch, and/or rocker bottom feet associated with Charcot foot), and by impairing the microcirculation and the integrity of the skin. Once ulcers form, healing may be delayed or difficult to achieve, particularly if infection penetrates to deep tissues and bone and/or there is diminished local blood flow.
+        </p>
+        <p>
+         Additional risk factors for foot ulcer and lower extremity amputation include the following:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Medications
+         </strong>
+         – Compared with some oral and injectable diabetes agents, sodium-glucose cotransporter 2 (SGLT2) inhibitors may be associated with an increased risk of amputation based on an increased risk observed with
+         <a class="drug drug_general" data-topicid="88901" href="/z/d/drug information/88901.html" rel="external">
+          canagliflozin
+         </a>
+         in one large, randomized clinical trial [
+         <a href="#rid12">
+          12
+         </a>
+         ]. Patients with history of amputation or peripheral vascular disease were at highest absolute risk for this complication. Increased risk of lower limb amputation with incident use of SGLT2 inhibitors compared with glucagon-like peptide 1 (GLP-1) receptor agonists was observed in two high-quality pharmacoepidemiologic studies, one in older adults and one in patients with chronic kidney disease [
+         <a href="#rid13">
+          13,14
+         </a>
+         ]. SGLT2 inhibitors should be used with caution in patients who are at increased risk of diabetic foot ulcers. (See
+         <a class="medical medical_review" href="/z/d/html/109245.html" rel="external">
+          "Sodium-glucose cotransporter 2 inhibitors for the treatment of hyperglycemia in type 2 diabetes mellitus", section on 'Amputations'
+         </a>
+         .)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Age, race, and ethnicity
+         </strong>
+         – Amputation incidence has increased in younger and racially and ethnically minoritized populations [
+         <a href="#rid15">
+          15
+         </a>
+         ], with nearly twofold increased risk of amputation after diagnosis of diabetic foot ulcer in Black compared with non-Hispanic White Medicare beneficiaries [
+         <a href="#rid16">
+          16
+         </a>
+         ]. People who identify as Native American or Hispanic (of any race) similarly have higher risk of lower extremity amputation [
+         <a href="#rid6">
+          6
+         </a>
+         ].
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Residence in rural and lower-income areas
+         </strong>
+         – Individuals who reside in rural or lower-income areas have higher risk of diabetic foot ulcer and amputation, as well as higher rates of associated mortality [
+         <a href="#rid17">
+          17
+         </a>
+         ].
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H3">
+         <span class="h2">
+          Risk classification
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Several risk classification systems have been developed to predict foot ulcer in patients with diabetes [
+         <a href="#rid18">
+          18,19
+         </a>
+         ]. Risk categorization can be used to design preventive and monitoring strategies  (
+         <a class="graphic graphic_table graphicRef70817" href="/z/d/graphic/70817.html" rel="external">
+          table 1
+         </a>
+         ). One system, developed by the International Working Group on the Diabetic Foot, stratifies patients as follows [
+         <a href="#rid19">
+          19
+         </a>
+         ]:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Group 0 – No evidence of neuropathy
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Group 1 – Neuropathy present but no evidence of foot deformity or peripheral vascular disease
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Group 2 – Neuropathy with evidence of deformity or peripheral vascular disease
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Group 3 – History of foot ulceration or lower extremity amputation
+        </p>
+        <p>
+        </p>
+        <p>
+         In a prospective case-control study of 225 patients with diabetes, stratification using this classification system was predictive of incident ulceration and amputation [
+         <a href="#rid20">
+          20
+         </a>
+         ]. During 30 months (mean) of follow-up, ulcers occurred in 5, 14, 13, and 65 percent of patients in groups 0, 1, 2, and 3, respectively. Only patients in groups 2 and 3 had amputations (2 and 26 percent, respectively).
+        </p>
+        <p class="headingAnchor" id="H3083007619">
+         <span class="h1">
+          OUR APPROACH
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         All patients with diabetes should be examined to identify risk for foot ulceration. The feet should be visually inspected at each routine visit to identify problems with nail care, poorly fitting footwear resulting in barotrauma, fungal infections, and callus formation that may result in more severe foot problems. A comprehensive foot examination should be performed annually on patients with diabetes to identify risk factors predictive of ulcers and amputation  (
+         <a class="graphic graphic_table graphicRef59069" href="/z/d/graphic/59069.html" rel="external">
+          table 2
+         </a>
+         ) [
+         <a href="#rid21">
+          21,22
+         </a>
+         ]. Patients with an existing foot ulcer or with risk factors for foot ulceration (eg, previous foot ulceration, neuropathy, foot deformity, peripheral vascular disease) should be referred to a foot care specialist  (
+         <a class="graphic graphic_table graphicRef70817" href="/z/d/graphic/70817.html" rel="external">
+          table 1
+         </a>
+         ).
+        </p>
+        <p>
+         Our approach to evaluation of the diabetic foot is largely in agreement with the guidelines from the American Diabetes Association (ADA) [
+         <a href="#rid22">
+          22
+         </a>
+         ].
+        </p>
+        <p class="headingAnchor" id="H4">
+         <span class="h2">
+          History
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Pertinent history to obtain includes duration of diabetes, overall glycemic management, presence of micro- or macrovascular disease, history of prior foot injury resulting in deformities or prior ulcers, lower limb vascular bypasses or amputation, presence of claudication, and history of cigarette smoking. Two cohort studies have demonstrated an increased risk of foot ulcers in those with a longer history of diabetes [
+         <a href="#rid23">
+          23,24
+         </a>
+         ]. This may be related to the finding that the risk of peripheral artery disease and peripheral neuropathy appears to increase with the duration of diabetes [
+         <a href="#rid25">
+          25-27
+         </a>
+         ].
+        </p>
+        <p>
+         The patient should be questioned about foot and leg discomfort. An older scoring system to assess symptoms quantitatively remains a useful guide to collect a history of diabetic neuropathy [
+         <a href="#rid28">
+          28
+         </a>
+         ]:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         What is the sensation felt? – Burning, numbness, or tingling (2 points); fatigue, cramping, or aching (1 point). Maximum is 2 points.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         What is the location of symptoms? – Feet (2 points); calves (1 point); elsewhere (no points). Maximum is 2 points.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Have the symptoms ever awoken you at night? – Yes (1 point).
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         What is the timing of symptoms? – Worse at night (2 points); present day and night (1 point); present only during the day (no points). Maximum is 2 points.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         How are symptoms relieved? – Walking around (2 points); standing (1 point); sitting or lying or no relief (no points). Maximum is 2 points.
+        </p>
+        <p>
+        </p>
+        <p>
+         The total neuropathy symptom score can then be determined:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         0 to 2 – Normal
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         3 to 4 – Mild
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         5 to 6 – Moderate
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         7 to 9 – Severe
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H5">
+         <span class="h2">
+          Comprehensive foot examination
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The annual comprehensive foot examination can be accomplished in the primary care setting and should include inspection, assessment of pedal pulses, and testing for loss of protective sensation  (
+         <a class="graphic graphic_table graphicRef59069" href="/z/d/graphic/59069.html" rel="external">
+          table 2
+         </a>
+         ). Several reports indicate that adequate examinations relevant to foot ulceration are often not performed in patients with diabetes [
+         <a href="#rid29">
+          29-31
+         </a>
+         ].
+        </p>
+        <p>
+         A meta-analysis of 16 cohort studies found that the following diagnostic screening tests reliably identified those at risk for foot ulceration [
+         <a href="#rid10">
+          10
+         </a>
+         ]:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Decreased cutaneous sensation with monofilament
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         At least one absent pedal pulse
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H2452578662">
+         <span class="h3">
+          Inspection
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The skin should be assessed for integrity, especially between the toes and under the metatarsal heads. Findings that may herald a developing foot ulcer include the following:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Lesions between adjacent toes due to pressure from tight shoes cramming them together
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Macerated areas between the toes (due to tinea pedis or "athlete's foot"); these lesions are often painless and may go unnoticed until bacterial infection supervenes
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Bunions (callused areas)
+        </p>
+        <p>
+        </p>
+        <p>
+         The presence of erythema, warmth, or fissures may indicate areas of tissue damage. Patients with evidence of an existing ulcer require additional evaluation. (See
+         <a class="local">
+          'Evaluation of existing ulcer'
+         </a>
+         below.)
+        </p>
+        <p>
+         Bony deformities, joint mobility, and gait and balance should also be assessed. Assessment may reveal several abnormalities that result from diabetic neuropathy, such as claw toes and Charcot arthropathy (also called diabetic neuropathic arthropathy). Chronic motor neuropathy often affects the small intrinsic muscles of the feet so that the action of the larger muscles in the anterior tibial compartment is unopposed. This leads to subluxation of the proximal interphalangeal-metatarsal joints, resulting in a claw toe appearance. One consequence of this abnormality is increased pressure on the metatarsal heads, which are a common site of ulcer development  (
+         <a class="graphic graphic_picture graphicRef51991" href="/z/d/graphic/51991.html" rel="external">
+          picture 1
+         </a>
+         ).
+        </p>
+        <p>
+         A later complication is Charcot arthropathy, which is characterized by collapse of the arch of the midfoot and abnormal bony prominences  (
+         <a class="graphic graphic_picture graphicRef67753" href="/z/d/graphic/67753.html" rel="external">
+          picture 2
+         </a>
+         ). These changes are often triggered by injury, inflammation, and hyperperfusion, accompanied by the triad of small muscle wasting, decreased sensation, and abnormal distribution of weight when standing, leading to repetitive microtrauma due to the absence of protective pain sensation [
+         <a href="#rid32">
+          32
+         </a>
+         ]. (See
+         <a class="medical medical_review" href="/z/d/html/5608.html" rel="external">
+          "Diabetic neuroarthropathy"
+         </a>
+         .)
+        </p>
+        <p>
+         The autonomic neuropathy associated with Charcot arthropathy can lead to several additional problems. Sweating is diminished or absent; as a result, the skin of the feet remains dry and has a tendency to become scaly and cracked, thereby allowing infection to penetrate below the skin. Lack of autonomic tone in the capillary circulation causes shunting of blood from arteries directly into veins, bypassing the tissues that need nutrition. This results in a foot that feels warm and has distended veins and bounding pulses. Despite these apparent signs of adequate perfusion, the foot is vulnerable to local "microvascular" gangrene, will heal very poorly and slowly, and will be less able to resist infection. (See
+         <a class="medical medical_review" href="/z/d/html/5272.html" rel="external">
+          "Screening for diabetic polyneuropathy"
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H3433303598">
+         <span class="h3">
+          Assessment of pedal pulses
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Assess for peripheral artery disease by asking about a history of claudication and assessing pedal pulses, temperature, and for the presence of dependent rubor, a late finding. If pedal pulses are absent, assess popliteal and femoral pulses. Physical examination findings such as diminished pulses, decrease in skin temperature, thin skin, lack of skin hair, and bluish skin color are not specific enough to guide further management in an individual patient. Patients with suspicion for peripheral artery disease should have ankle-brachial index (ABI) testing (noninvasive arterial testing) to guide further management, although this may be insensitive in diabetes due to vascular calcification or failure to detect disease in the microcirculation [
+         <a href="#rid33">
+          33
+         </a>
+         ]. The presence of peripheral artery disease is highly associated with atherosclerotic cardiovascular disease. (See
+         <a class="local">
+          'Evaluation of peripheral artery disease'
+         </a>
+         below and
+         <a class="medical medical_review" href="/z/d/html/8208.html" rel="external">
+          "Clinical features and diagnosis of lower extremity peripheral artery disease", section on 'Physical examination'
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H2542921746">
+         <span class="h3">
+          Assessment for loss of protective sensation
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Test for loss of protective sensation using a Semmes-Weinstein 5.07 (10 g) monofilament, plus any one of the following: vibration using a 128-Hz tuning fork or a biothesiometer, pinprick sensation, and ankle reflexes. The pinprick examination in best performed with a new, clean safety pin, which should be discarded in a sharps container after use.
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          10 g monofilament
+         </strong>
+         – The monofilament is used to detect loss of sensation at each of 12 sites in the foot  (
+         <a class="graphic graphic_figure graphicRef52481" href="/z/d/graphic/52481.html" rel="external">
+          figure 1
+         </a>
+         ). Failure to detect cutaneous pressure at any site indicates a high risk for future ulceration.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Ipswich touch test
+         </strong>
+         – The Ipswich touch test, a quicker and simpler method to assess sensation, was designed to promote more widespread diabetic foot examinations. The examiner lightly and briefly (1 to 2 seconds) touches the tips of the first, third, and fifth toes of both feet with the index finger. Reduced sensation is defined as ≥2 of 6 insensate areas (counting both feet). Compared with 10 g monofilament, the touch test has a sensitivity of 77 to 78.3 percent and a specificity of 90 to 93.9 percent with positive predictive value of detecting "at-risk" feet of 81.2 to 89 percent and negative predictive value of 77 to 92.8 percent [
+         <a href="#rid34">
+          34,35
+         </a>
+         ]. While not quite as sensitive as a detailed 10 g monofilament exam, the Ipswich touch test is much easier and is superior to no evaluation at all, which might otherwise be the case in many patient encounters.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Vibration testing
+         </strong>
+         – Vibration testing is typically conducted with a 128 Hz tuning fork applied to the bony prominence at the dorsum of the first toe, just proximal to the nail bed. The quickest method of testing is to ask the patient to report the perception of both the start of vibration sensation and the cessation of vibration on dampening. The test should be conducted twice on each great toe. The sensitivity and specificity of vibration testing for peripheral neuropathy have been estimated to be 53 and 99 percent, respectively [
+         <a href="#rid36">
+          36
+         </a>
+         ].
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         Vibration sense can also be estimated quantitatively with a biothesiometer. This device is essentially an electronic tuning fork that allows the vibration to be adjusted up or down depending upon the voltage applied. The vibration-perception threshold (VPT) is defined as the lowest voltage at which vibration can be sensed on the pulp of the big toe. The value in normal subjects increases with age from approximately 6 volts at age 30 years to 20 volts at age 75 years [
+         <a href="#rid37">
+          37
+         </a>
+         ].
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H1177537491">
+         <span class="h2">
+          Additional evaluation
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Patients who have concerning findings on the comprehensive foot examination require additional evaluation and referral to a foot care specialist.
+        </p>
+        <p class="headingAnchor" id="H3898223549">
+         <span class="h3">
+          Evaluation of existing ulcer
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The evaluation of an existing diabetic foot ulcer includes careful examination and classification of the wound. Foot ulcers are usually classified into two groups: acute ulcers secondary to dermal abrasion from poorly fitting shoes, and chronic ulcers occurring over areas prone to pressure. Chronic ulceration is probably multifactorial, due to a combination of diabetic neuropathy (with decreased pain sensation and deformity), autonomic dysfunction, and vascular insufficiency. (See
+         <a class="medical medical_review" href="/z/d/html/8175.html" rel="external">
+          "Management of diabetic foot ulcers", section on 'Ulcer classification'
+         </a>
+         .)
+        </p>
+        <p>
+         The ulcer is examined for drainage, odor, the presence (or absence) of granulation tissue, and any exposed underlying structures, such as tendons, joint capsule, or bone. The wound can be probed gently by an experienced clinician or a surgeon with a sterile, blunt probe to reveal the presence of a sinus tract or communication with deeper structures, which may change the wound classification. (See
+         <a class="medical medical_review" href="/z/d/html/8175.html" rel="external">
+          "Management of diabetic foot ulcers", section on 'Management overview'
+         </a>
+         .)
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Signs of infection
+         </strong>
+         – The presence of a diabetic foot infection is likely if there is erythema, warmth, tenderness, or swelling (especially with two or more of these findings) around the ulcer site. Infection is even more strongly indicated by pus coming out of an ulcer site and/or a nearby sinus tract.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         Osteomyelitis is likely to be present if bone can be seen at the floor of a deep ulcer, or if it can be easily detected by probing the ulcer with a sterile, blunt, stainless steel probe [
+         <a href="#rid38">
+          38
+         </a>
+         ]. Other signs that suggest osteomyelitis are an ulcer size larger than 2 x 2 cm and an otherwise unexplained elevation in the erythrocyte sedimentation rate (ESR). An ESR &gt;60 mm/hour or a C-reactive protein (CRP) level &gt;7.9 mg/dL were found to be optimum cutoffs to diagnose osteomyelitis using receiver operative characteristic analyses [
+         <a href="#rid39">
+          39
+         </a>
+         ].
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         A discussion of diabetes-related foot infections (infected ulcer, cellulitis, and osteomyelitis) is found elsewhere. (See
+         <a class="medical medical_review" href="/z/d/html/7651.html" rel="external">
+          "Clinical manifestations, diagnosis, and management of diabetic infections of the lower extremities"
+         </a>
+         .)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Imaging
+         </strong>
+         – Plain radiographs can detect structural foot deformities, soft tissue gas, and foreign bodies and may be able to detect osteomyelitis. However, radiologic changes occur late in the course of osteomyelitis, and negative radiographs do not exclude it. More sensitive imaging techniques that have been used include radionuclide bone imaging, magnetic resonance imaging, and imaging with indium-labeled leukocytes. (See
+         <a class="medical medical_review" href="/z/d/html/7651.html" rel="external">
+          "Clinical manifestations, diagnosis, and management of diabetic infections of the lower extremities", section on 'Diagnosis of underlying osteomyelitis'
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/7653.html" rel="external">
+          "Approach to imaging modalities in the setting of suspected nonvertebral osteomyelitis"
+         </a>
+         .)
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H3066358044">
+         <span class="h3">
+          Evaluation of peripheral artery disease
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Patients with clinical evidence of peripheral artery disease should have ABI testing, which can detect macrovascular, but not microvascular, peripheral artery disease.
+        </p>
+        <p>
+         ABI is calculated by measuring the systolic blood pressure (by Doppler probe) in the brachial, posterior tibial, and dorsalis pedis arteries [
+         <a href="#rid40">
+          40
+         </a>
+         ]. For each leg, the higher of the measurements at the ankle and foot in that limb is divided by the higher of the two (ie, left and right) brachial measurements. The normal ABI is 0.9 to 1.3 and is generally &gt;1.0 because the pressure is higher in the ankle than in the arm. An ABI &lt;0.9 has 95 percent sensitivity for detecting angiogram-positive peripheral artery disease [
+         <a href="#rid41">
+          41
+         </a>
+         ]. Patients with extensive vascular calcification and noncompressible arteries may have falsely positive elevations in the ABI. (See
+         <a class="medical medical_review" href="/z/d/html/8201.html" rel="external">
+          "Noninvasive diagnosis of upper and lower extremity arterial disease", section on 'Ankle-brachial index'
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/8208.html" rel="external">
+          "Clinical features and diagnosis of lower extremity peripheral artery disease", section on 'Physical examination'
+         </a>
+         .)
+        </p>
+        <p>
+         A low ABI in the absence of a foot ulcer does not correlate with the risk of future foot ulceration [
+         <a href="#rid42">
+          42
+         </a>
+         ]; however, a low ABI in the presence of a foot ulcer suggests that the prognosis will be improved with reconstructive vascular surgery. In one series of patients with neuropathic foot ulcers and severe arterial insufficiency, for example, 35 of 42 extremities (83 percent) with patent bypass grafts achieved and maintained primary healing of their ulcer [
+         <a href="#rid43">
+          43
+         </a>
+         ]. A low ABI also indicates more generalized arteriosclerosis and is associated with an increased risk of cardiovascular death [
+         <a href="#rid44">
+          44
+         </a>
+         ].
+        </p>
+        <p class="headingAnchor" id="H636149056">
+         <span class="h3">
+          Evaluation of neuropathy
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         If vibration sensation is diminished, we assess for other causes of neuropathy (including vitamin B12 deficiency) since diabetic neuropathy is a diagnosis of exclusion. (See
+         <a class="medical medical_review" href="/z/d/html/5272.html" rel="external">
+          "Screening for diabetic polyneuropathy", section on 'Differential diagnosis'
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/5284.html" rel="external">
+          "Overview of polyneuropathy", section on 'Etiology and pathogenesis'
+         </a>
+         .)
+        </p>
+        <p>
+         For rapidly progressive, atypical, or severe neuropathic syndromes, or if there is motor nerve involvement, referral to a neurologist is indicated.
+        </p>
+        <p class="headingAnchor" id="H18">
+         <span class="h2">
+          Preventive foot care
+         </span>
+        </p>
+        <p class="headingAnchor" id="H4258227696">
+         <span class="h3">
+          All patients
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         In conjunction with the comprehensive foot exam, advice for prophylactic foot care should be given to all patients. These recommendations are particularly important in patients with existing neuropathy. (See
+         <a class="medical medical_patient" href="/z/d/html/1739.html" rel="external">
+          "Patient education: Foot care for people with diabetes (Beyond the Basics)"
+         </a>
+         .)
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Avoid smoking
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Avoid going barefoot, even at home, and especially on hot decks and hot sand
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Test water temperature before stepping into a bath
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Trim toenails to shape of the toe, and remove sharp edges with a nail file; do not cut cuticles
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Wash in lukewarm water, dry thoroughly (including between the toes), and check feet daily
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Shoes should be snug, but not tight, and customized if feet are misshapen or there is a history of ulcers
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Socks should fit and be changed daily
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H3254072349">
+         <span class="h3">
+          Very high-risk patients
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         In addition to the foot care measures described above, a variety of strategies utilize pressure sensors, temperature measurements, and telemetry for monitoring very high-risk patients and may help with early detection and prevention [
+         <a href="#rid45">
+          45,46
+         </a>
+         ]. Customized, pressure-relieving footwear also can help reduce the risk of recurrent foot ulcer [
+         <a href="#rid6">
+          6
+         </a>
+         ].
+        </p>
+        <p>
+         Temperature monitoring involves daily or twice-daily measurements of skin surface temperature with a thermometer equipped with a touch sensor. If a temperature difference (&gt;2°C elevation) is detected between a right and left foot site  (
+         <a class="graphic graphic_figure graphicRef52481" href="/z/d/graphic/52481.html" rel="external">
+          figure 1
+         </a>
+         ), patients are instructed to reduce activity and offload the affected area until the temperature normalizes. Whether the benefit of monitoring temperature is specifically related to the monitoring or the heightened attention to foot care in those performing the monitoring is not clear.
+        </p>
+        <p>
+         In a systematic review of foot ulcer preventive interventions, few data evaluated prevention of a first foot ulcer [
+         <a href="#rid47">
+          47
+         </a>
+         ]. For the prevention of recurrent foot ulcers, customized footwear to reduce plantar pressure and daily foot skin temperature measurements with subsequent preventive action showed some benefit. In one report, as an example, the use of customized shoes reduced the development of a recurrent foot ulcer from 58 to 28 percent over one year of follow-up [
+         <a href="#rid48">
+          48
+         </a>
+         ].
+        </p>
+        <p class="headingAnchor" id="H1828704156">
+         <span class="h1">
+          SOCIETY GUIDELINE LINKS
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Links to society and government-sponsored guidelines from selected countries and regions around the world are provided separately. (See
+         <a class="medical medical_society_guidelines" href="/z/d/html/104442.html" rel="external">
+          "Society guideline links: Diabetes mellitus in adults"
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H20">
+         <span class="h1">
+          INFORMATION FOR PATIENTS
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         UpToDate offers two types of patient education materials, "The Basics" and "Beyond the Basics." The Basics patient education pieces are written in plain language, at the 5
+         <sup>
+          th
+         </sup>
+         to 6
+         <sup>
+          th
+         </sup>
+         grade reading level, and they answer the four or five key questions a patient might have about a given condition. These articles are best for patients who want a general overview and who prefer short, easy-to-read materials. Beyond the Basics patient education pieces are longer, more sophisticated, and more detailed. These articles are written at the 10
+         <sup>
+          th
+         </sup>
+         to 12
+         <sup>
+          th
+         </sup>
+         grade reading level and are best for patients who want in-depth information and are comfortable with some medical jargon.
+        </p>
+        <p>
+         Here are the patient education articles that are relevant to this topic. We encourage you to print or e-mail these topics to your patients. (You can also locate patient education articles on a variety of subjects by searching on "patient info" and the keyword(s) of interest.)
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Beyond the Basics topics (see
+         <a class="medical medical_patient" href="/z/d/html/1739.html" rel="external">
+          "Patient education: Foot care for people with diabetes (Beyond the Basics)"
+         </a>
+         )
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H21">
+         <span class="h1">
+          SUMMARY AND RECOMMENDATIONS
+         </span>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Risk factors for foot ulcers
+         </strong>
+         – Foot ulcers are an important cause of morbidity in patients with diabetes. Both vascular and neurologic disease increase the risk of foot ulcers. (See
+         <a class="local">
+          'Introduction'
+         </a>
+         above and
+         <a class="local">
+          'Risk assessment'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Evaluation
+         </strong>
+         – A comprehensive foot examination should be performed annually on patients with diabetes to identify risk factors predictive of ulcers and amputation  (
+         <a class="graphic graphic_table graphicRef59069" href="/z/d/graphic/59069.html" rel="external">
+          table 2
+         </a>
+         ). (See
+         <a class="local">
+          'History'
+         </a>
+         above and
+         <a class="local">
+          'Comprehensive foot examination'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         In addition, the feet should be visually inspected at each routine visit to identify problems with nail care, poorly fitting footwear resulting in barotrauma, fungal infections, and callus formation that may result in more severe foot problems. At a minimum, the Ipswich touch test (in which the examiner lightly touches the first, third, and fifth toepads bilaterally) may be used to screen for impaired sensation. (See
+         <a class="local">
+          'Assessment for loss of protective sensation'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         We perform ankle-brachial pressure index (ABI) testing in any patient with symptoms or physical examination findings of peripheral artery disease. (See
+         <a class="local">
+          'Evaluation of peripheral artery disease'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Preventive foot care
+         </strong>
+         – Counseling regarding preventive foot care should be given to any patient whose feet are at risk for ulceration. Preventive measures include avoiding smoking, walking barefoot, and wearing tight, poorly fitting shoes. (See
+         <a class="local">
+          'Preventive foot care'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Referral to foot care specialist
+         </strong>
+         – We refer patients to a foot care specialist if they have an existing foot ulcer, or if they are at particularly high risk for foot ulceration due to the following risk factors  (
+         <a class="graphic graphic_table graphicRef70817" href="/z/d/graphic/70817.html" rel="external">
+          table 1
+         </a>
+         ) (see
+         <a class="local">
+          'Risk classification'
+         </a>
+         above and
+         <a class="local">
+          'Our approach'
+         </a>
+         above):
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         A previous history of foot ulceration or amputation
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Loss of protective sensation and/or neuropathic foot deformities
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Peripheral vascular disease
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H3212213308">
+         <span class="h1">
+          ACKNOWLEDGMENT
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The UpToDate editorial staff acknowledges David McCulloch, MD, who contributed to earlier versions of this topic review.
+        </p>
+       </div>
+       <div class="headingAnchor" id="references">
+        <ol id="reference">
+         <li>
+          <a class="nounderline abstract_t">
+           Armstrong DG, Boulton AJM, Bus SA. Diabetic Foot Ulcers and Their Recurrence. N Engl J Med 2017; 376:2367.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Zhang Y, Lazzarini PA, McPhail SM, et al. Global Disability Burdens of Diabetes-Related Lower-Extremity Complications in 1990 and 2016. Diabetes Care 2020; 43:964.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Walsh JW, Hoffstad OJ, Sullivan MO, Margolis DJ. Association of diabetic foot ulcer and death in a population-based cohort from the United Kingdom. Diabet Med 2016; 33:1493.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Pecoraro RE, Reiber GE, Burgess EM. Pathways to diabetic limb amputation. Basis for prevention. Diabetes Care 1990; 13:513.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Singh N, Armstrong DG, Lipsky BA. Preventing foot ulcers in patients with diabetes. JAMA 2005; 293:217.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Armstrong DG, Tan TW, Boulton AJM, Bus SA. Diabetic Foot Ulcers: A Review. JAMA 2023; 330:62.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Skrepnek GH, Mills JL Sr, Armstrong DG. A Diabetic Emergency One Million Feet Long: Disparities and Burdens of Illness among Diabetic Foot Ulcer Cases within Emergency Departments in the United States, 2006-2010. PLoS One 2015; 10:e0134914.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Chen L, Sun S, Gao Y, Ran X. Global mortality of diabetic foot ulcer: A systematic review and meta-analysis of observational studies. Diabetes Obes Metab 2023; 25:36.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Armstrong DG, Swerdlow MA, Armstrong AA, et al. Five year mortality and direct costs of care for people with diabetic foot complications are comparable to cancer. J Foot Ankle Res 2020; 13:16.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Crawford F, Cezard G, Chappell FM, et al. A systematic review and individual patient data meta-analysis of prognostic factors for foot ulceration in people with diabetes: the international research collaboration for the prediction of diabetic foot ulcerations (PODUS). Health Technol Assess 2015; 19:1.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Davis WA, Norman PE, Bruce DG, Davis TM. Predictors, consequences and costs of diabetes-related lower extremity amputation complicating type 2 diabetes: the Fremantle Diabetes Study. Diabetologia 2006; 49:2634.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Neal B, Perkovic V, Mahaffey KW, et al. Canagliflozin and Cardiovascular and Renal Events in Type 2 Diabetes. N Engl J Med 2017; 377:644.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Patorno E, Pawar A, Bessette LG, et al. Comparative Effectiveness and Safety of Sodium-Glucose Cotransporter 2 Inhibitors Versus Glucagon-Like Peptide 1 Receptor Agonists in Older Adults. Diabetes Care 2021; 44:826.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Fu EL, D'Andrea E, Wexler DJ, et al. Safety of Sodium-Glucose Cotransporter-2 Inhibitors in Patients with CKD and Type 2 Diabetes: Population-Based US Cohort Study. Clin J Am Soc Nephrol 2023; 18:592.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           McDermott K, Fang M, Boulton AJM, et al. Etiology, Epidemiology, and Disparities in the Burden of Diabetic Foot Ulcers. Diabetes Care 2023; 46:209.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Miller TA, Campbell JH, Bloom N, Wurdeman SR. Racial Disparities in Health Care With Timing to Amputation Following Diabetic Foot Ulcer. Diabetes Care 2022; 45:2336.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Hurst JE, Barn R, Gibson L, et al. Geospatial mapping and data linkage uncovers variability in outcomes of foot disease according to multiple deprivation: a population cohort study of people with diabetes. Diabetologia 2020; 63:659.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Frykberg RG, Zgonis T, Armstrong DG, et al. Diabetic foot disorders. A clinical practice guideline (2006 revision). J Foot Ankle Surg 2006; 45:S1.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Bus SA, van Netten JJ, Lavery LA, et al. IWGDF guidance on the prevention of foot ulcers in at-risk patients with diabetes. Diabetes Metab Res Rev 2016; 32 Suppl 1:16.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Peters EJ, Lavery LA, International Working Group on the Diabetic FOot. Effectiveness of the diabetic foot risk classification system of the International Working Group on the Diabetic Foot. Diabetes Care 2001; 24:1442.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Pop-Busui R, Boulton AJ, Feldman EL, et al. Diabetic Neuropathy: A Position Statement by the American Diabetes Association. Diabetes Care 2017; 40:136.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           American Diabetes Association Professional Practice Committee. 12. Retinopathy, Neuropathy, and Foot Care: Standards of Care in Diabetes-2024. Diabetes Care 2024; 47:S231.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Pham H, Armstrong DG, Harvey C, et al. Screening techniques to identify people at high risk for diabetic foot ulceration: a prospective multicenter trial. Diabetes Care 2000; 23:606.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Boyko EJ, Ahroni JH, Stensel V, et al. A prospective study of risk factors for diabetic foot ulcer. The Seattle Diabetic Foot Study. Diabetes Care 1999; 22:1036.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Al-Delaimy WK, Merchant AT, Rimm EB, et al. Effect of type 2 diabetes and its duration on the risk of peripheral arterial disease among men. Am J Med 2004; 116:236.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Valensi P, Giroux C, Seeboth-Ghalayini B, Attali JR. Diabetic peripheral neuropathy: effects of age, duration of diabetes, glycemic control, and vascular factors. J Diabetes Complications 1997; 11:27.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Zander E, Heinke P, Reindel J, et al. Peripheral arterial disease in diabetes mellitus type 1 and type 2: are there different risk factors? Vasa 2002; 31:249.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Young MJ, Boulton AJ, MacLeod AF, et al. A multicentre study of the prevalence of diabetic peripheral neuropathy in the United Kingdom hospital clinic population. Diabetologia 1993; 36:150.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Kenny SJ, Smith PJ, Goldschmid MG, et al. Survey of physician practice behaviors related to diabetes mellitus in the U.S. Physician adherence to consensus recommendations. Diabetes Care 1993; 16:1507.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Peters AL, Legorreta AP, Ossorio RC, Davidson MB. Quality of outpatient care provided to diabetic patients. A health maintenance organization experience. Diabetes Care 1996; 19:601.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Meraya AM, Makeen HA. Self-reported receipt of preventive practices and its associated factors among adults with diabetes in the United States. Prev Med Rep 2019; 14:100857.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Kaynak G, Birsel O, Güven MF, Oğüt T. An overview of the Charcot foot pathophysiology. Diabet Foot Ankle 2013; 4.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Aerden D, Massaad D, von Kemp K, et al. The ankle--brachial index and the diabetic foot: a troublesome marriage. Ann Vasc Surg 2011; 25:770.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Rayman G, Vas PR, Baker N, et al. The Ipswich Touch Test: a simple and novel method to identify inpatients with diabetes at risk of foot ulceration. Diabetes Care 2011; 34:1517.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Sharma S, Kerry C, Atkins H, Rayman G. The Ipswich Touch Test: a simple and novel method to screen patients with diabetes at home for increased risk of foot ulceration. Diabet Med 2014; 31:1100.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Perkins BA, Olaleye D, Zinman B, Bril V. Simple screening tests for peripheral neuropathy in the diabetes clinic. Diabetes Care 2001; 24:250.
+          </a>
+         </li>
+         <li class="breakAll">
+          Boulton AJ. The diabetic foot. In: Diabetes: Clinical management, Tattersall R, Gale EAM (Eds), Churchill Livingstone, Edinburgh 1990.
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Grayson ML, Gibbons GW, Balogh K, et al. Probing to bone in infected pedal ulcers. A clinical sign of underlying osteomyelitis in diabetic patients. JAMA 1995; 273:721.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Lavery LA, Ahn J, Ryan EC, et al. What are the Optimal Cutoff Values for ESR and CRP to Diagnose Osteomyelitis in Patients with Diabetes-related Foot Infections? Clin Orthop Relat Res 2019; 477:1594.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Boulton AJ, Armstrong DG, Albert SF, et al. Comprehensive foot examination and risk assessment: a report of the task force of the foot care interest group of the American Diabetes Association, with endorsement by the American Association of Clinical Endocrinologists. Diabetes Care 2008; 31:1679.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Fowkes FG. The measurement of atherosclerotic peripheral arterial disease in epidemiological surveys. Int J Epidemiol 1988; 17:248.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           McNeely MJ, Boyko EJ, Ahroni JH, et al. The independent contributions of diabetic neuropathy and vasculopathy in foot ulceration. How great are the risks? Diabetes Care 1995; 18:216.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Rosenblum BI, Pomposelli FB Jr, Giurini JM, et al. Maximizing foot salvage by a combined approach to foot ischemia and neuropathic ulceration in patients with diabetes. A 5-year experience. Diabetes Care 1994; 17:983.
+          </a>
+         </li>
+         <li class="breakAll">
+          Ganda OP. Pathogenesis of accelerated atherosclerosis in diabetes. In: Management of diabetic foot problems, Kozak GP, Hoar CS (Eds), Saunders, Philadelphia 1984. p.17.
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Lavery LA, Higgins KR, Lanctot DR, et al. Home monitoring of foot skin temperatures to prevent ulceration. Diabetes Care 2004; 27:2642.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Armstrong DG, Holtz-Neiderer K, Wendel C, et al. Skin temperature monitoring reduces the risk for diabetic foot ulceration in high-risk patients. Am J Med 2007; 120:1042.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           van Netten JJ, Price PE, Lavery LA, et al. Prevention of foot ulcers in the at-risk patient with diabetes: a systematic review. Diabetes Metab Res Rev 2016; 32 Suppl 1:84.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Uccioli L, Faglia E, Monticone G, et al. Manufactured shoes in the prevention of diabetic foot ulcers. Diabetes Care 1995; 18:1376.
+          </a>
+         </li>
+        </ol>
+       </div>
+       <div id="topicVersionRevision">
+        Topic 1749 Version 26.0
+       </div>
+      </div>
+      <div class="row">
+       <div class="col-12">
+        <h4 style="text-align: center;padding: 20px;color: cadetblue;">
+         References
+        </h4>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/28614678" id="rid0" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          1 : Diabetic Foot Ulcers and Their Recurrence.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/32139380" id="rid1" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          2 : Global Disability Burdens of Diabetes-Related Lower-Extremity Complications in 1990 and 2016.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/26666583" id="rid2" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          3 : Association of diabetic foot ulcer and death in a population-based cohort from the United Kingdom.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/2351029" id="rid3" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          4 : Pathways to diabetic limb amputation. Basis for prevention.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/15644549" id="rid4" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          5 : Preventing foot ulcers in patients with diabetes.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/37395769" id="rid5" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          6 : Diabetic Foot Ulcers: A Review.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/26248037" id="rid6" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          7 : A Diabetic Emergency One Million Feet Long: Disparities and Burdens of Illness among Diabetic Foot Ulcer Cases within Emergency Departments in the United States, 2006-2010.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/36054820" id="rid7" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          8 : Global mortality of diabetic foot ulcer: A systematic review and meta-analysis of observational studies.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/32209136" id="rid8" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          9 : Five year mortality and direct costs of care for people with diabetic foot complications are comparable to cancer.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/26211920" id="rid9" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          10 : A systematic review and individual patient data meta-analysis of prognostic factors for foot ulceration in people with diabetes: the international research collaboration for the prediction of diabetic foot ulcerations (PODUS).
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/17001469" id="rid10" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          11 : Predictors, consequences and costs of diabetes-related lower extremity amputation complicating type 2 diabetes: the Fremantle Diabetes Study.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/28605608" id="rid11" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          12 : Canagliflozin and Cardiovascular and Renal Events in Type 2 Diabetes.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/33495295" id="rid12" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          13 : Comparative Effectiveness and Safety of Sodium-Glucose Cotransporter 2 Inhibitors Versus Glucagon-Like Peptide 1 Receptor Agonists in Older Adults.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/36827225" id="rid13" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          14 : Safety of Sodium-Glucose Cotransporter-2 Inhibitors in Patients with CKD and Type 2 Diabetes: Population-Based US Cohort Study.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/36548709" id="rid14" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          15 : Etiology, Epidemiology, and Disparities in the Burden of Diabetic Foot Ulcers.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/36069831" id="rid15" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          16 : Racial Disparities in Health Care With Timing to Amputation Following Diabetic Foot Ulcer.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/31848633" id="rid16" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          17 : Geospatial mapping and data linkage uncovers variability in outcomes of foot disease according to multiple deprivation: a population cohort study of people with diabetes.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/17280936" id="rid17" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          18 : Diabetic foot disorders. A clinical practice guideline (2006 revision).
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/26334001" id="rid18" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          19 : IWGDF guidance on the prevention of foot ulcers in at-risk patients with diabetes.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/11473084" id="rid19" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          20 : Effectiveness of the diabetic foot risk classification system of the International Working Group on the Diabetic Foot.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/27999003" id="rid20" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          21 : Diabetic Neuropathy: A Position Statement by the American Diabetes Association.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/38078577" id="rid21" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          22 : 12. Retinopathy, Neuropathy, and Foot Care: Standards of Care in Diabetes-2024.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/10834417" id="rid22" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          23 : Screening techniques to identify people at high risk for diabetic foot ulceration: a prospective multicenter trial.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/10388963" id="rid23" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          24 : A prospective study of risk factors for diabetic foot ulcer. The Seattle Diabetic Foot Study.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/14969651" id="rid24" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          25 : Effect of type 2 diabetes and its duration on the risk of peripheral arterial disease among men.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/9025010" id="rid25" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          26 : Diabetic peripheral neuropathy: effects of age, duration of diabetes, glycemic control, and vascular factors.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/12510549" id="rid26" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          27 : Peripheral arterial disease in diabetes mellitus type 1 and type 2: are there different risk factors?
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/8458529" id="rid27" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          28 : A multicentre study of the prevalence of diabetic peripheral neuropathy in the United Kingdom hospital clinic population.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/8299440" id="rid28" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          29 : Survey of physician practice behaviors related to diabetes mellitus in the U.S. Physician adherence to consensus recommendations.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/8725859" id="rid29" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          30 : Quality of outpatient care provided to diabetic patients. A health maintenance organization experience.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/31008027" id="rid30" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          31 : Self-reported receipt of preventive practices and its associated factors among adults with diabetes in the United States.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/23919113" id="rid31" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          32 : An overview of the Charcot foot pathophysiology.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/21514102" id="rid32" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          33 : The ankle--brachial index and the diabetic foot: a troublesome marriage.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/21593300" id="rid33" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          34 : The Ipswich Touch Test: a simple and novel method to identify inpatients with diabetes at risk of foot ulceration.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/24673517" id="rid34" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          35 : The Ipswich Touch Test: a simple and novel method to screen patients with diabetes at home for increased risk of foot ulceration.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/11213874" id="rid35" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          36 : Simple screening tests for peripheral neuropathy in the diabetes clinic.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/11213874" id="rid36" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          37 : Simple screening tests for peripheral neuropathy in the diabetes clinic.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/7853630" id="rid37" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          38 : Probing to bone in infected pedal ulcers. A clinical sign of underlying osteomyelitis in diabetic patients.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/31268423" id="rid38" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          39 : What are the Optimal Cutoff Values for ESR and CRP to Diagnose Osteomyelitis in Patients with Diabetes-related Foot Infections?
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/18663232" id="rid39" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          40 : Comprehensive foot examination and risk assessment: a report of the task force of the foot care interest group of the American Diabetes Association, with endorsement by the American Association of Clinical Endocrinologists.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/3042648" id="rid40" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          41 : The measurement of atherosclerotic peripheral arterial disease in epidemiological surveys.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/7729300" id="rid41" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          42 : The independent contributions of diabetic neuropathy and vasculopathy in foot ulceration. How great are the risks?
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/7988319" id="rid42" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          43 : Maximizing foot salvage by a combined approach to foot ischemia and neuropathic ulceration in patients with diabetes. A 5-year experience.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/7988319" id="rid43" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          44 : Maximizing foot salvage by a combined approach to foot ischemia and neuropathic ulceration in patients with diabetes. A 5-year experience.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/15504999" id="rid44" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          45 : Home monitoring of foot skin temperatures to prevent ulceration.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/18060924" id="rid45" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          46 : Skin temperature monitoring reduces the risk for diabetic foot ulceration in high-risk patients.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/26340966" id="rid46" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          47 : Prevention of foot ulcers in the at-risk patient with diabetes: a systematic review.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/8721941" id="rid47" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          48 : Manufactured shoes in the prevention of diabetic foot ulcers.
+         </p>
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </section>
+  <!-- End Main Menu Area -->
+  <!-- Start Search Popup Area -->
+  <!-- End Footer Area -->
+  <!-- Back to top -->
+  <a class="scrolltop" href="#top">
+   <i class="icofont-hand-drawn-up">
+   </i>
+  </a>
+  <!-- End Back to top -->
+  <!-- jQuery Min JS -->
+  <!-- Prpper JS -->
+  <!-- Bootstrap Min JS -->
+  <!-- Classy Nav Min Js -->
+  <!-- Owl Carousel Min Js -->
+  <!-- Magnific Popup JS -->
+  <!-- CounterUp JS -->
+  <!-- Waypoints JS -->
+  <!-- Form Validator Min JS -->
+  <!-- Contact Form Min JS -->
+  <!-- Main JS -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+ </body>
 </html>

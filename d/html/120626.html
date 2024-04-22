@@ -1,377 +1,496 @@
 <!DOCTYPE html>
-
 <html lang="fa">
-<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
-<head><title>Calculator: Khorana score for estimating venous thromboembolism risk in adults with cancer</title><link href="/z/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/z/d/css/icofont.min.css" rel="stylesheet"/><link href="/z/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/z/d/css/animate.css" rel="stylesheet"/><link href="/z/d/css/owl.carousel.css" rel="stylesheet"/><link href="/z/d/css/magnific-popup.css" rel="stylesheet"/><link href="/z/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/z/d/css/style.css" rel="stylesheet"/><link href="/z/d/css/rtl_edited.css" rel="stylesheet"/><link href="/z/d/css/responsive.css" rel="stylesheet"/><link href="https:///uptodate_assets/main.css" rel="stylesheet"/>
-<style>
-
-#myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 16px;
-  color: black;
-  display: block
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee;
-}
-
-#searchResult {
-
-  list-style-type: none;
-  padding: 0;
-  padding-right: 20px;
-}
-
-#searchResult li a {
-  border: .5px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #79bc21;
-  padding: 7px;
-  text-decoration: none;
-  font-size: 14px;
-  color: white;
-  display: block
-}
-
-#searchResult li a:hover:not(.header) {
-  background-color: #222;
-}
-
-
-#txtHint   {
-  position: absolute;
-  text-shadow: none;
-  width: 100%;
-  margin-top: -15px;
-  padding-right: 10px;
-
-  filter: alpha(opacity=95);
-  -moz-opacity: 0.95;
-  opacity: 1;
-  z-index: 200;
-}
-.countBubl {
-  background:#eb0029;
-  color:#fff;
-  padding:5px;
-  margin-top: 50%;
-
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
- width: 55%;
- padding-left: 20px;
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
- width: 20%;
-}
- #Uptodate_image {
-      width: 50%;
-  }#uptodate-area {
-      /*z-index: 99;*/
-  }
-#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
- margin-left: 10px;
- margin-bottom: 6%;
-}
-@media (max-width: @screen-xs) {
-    .countBubl {
-        font-size: 4px ;
-    }
-    #uptodate_version {
-        font-size: 4px ;
-    }
-}
-
-@media (max-width: @screen-sm) {
-    .countBubl {
-        font-size: 14px ;
-    }
-}
-@media  all and(max-width: 820) {
-    #Uptodate_image {
-        width: 80% ;
-    }#uptodate-area {
-        z-index: 99;
-    }
-}@media  all and (min-width: 820) and(max-width: 88820){
-    #Uptodate_image {
-        width: 100% !important;
-    }
-    .countBubl {
-        font-size: 4px ;
-    }
-}
-div.col-md-3:nth-child(3) {
- margin-top: 6%;
-}
-
-div.col-md-3:nth-child(3) > img:nth-child(1) {
- width: 100%;
- margin-left: 11px;
-}
-
-</style>
-<style media="screen" type="text/css">
-  .goback {
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    position: fixed;
-    display: none;
-    font-size: 15px;
-    background: #71c0fa;
-    z-index: 1000;
-    text-align: center;
-    color: #ffffff;
-    -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
-    border-radius: 50px;
-    bottom: 3.8%;
-    right: 2%;
-}
-  .buyPackage {
-  width: 100px;
-  height: 100px;
-  line-height: 40px;
-  position: fixed;
-  display: none;
-  font-size: 10px;
-  background: #fa759e;
-  z-index: 1000;
-  text-align: center;
-  color: #ffffff;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  border-radius: 10px;
-  top: 150px;
-  right: 2%;
-  text-align: center;
-}
-.uptodate-area {
-  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-    background-attachment: fixed;
-  position: relative;
-}
-.uptodate-area::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  padding-top: 100px;
-  width: 100%;
-}
-#references{
-  display: none;
-}
-</style>
-<style>
-section.sticky {
-  position: sticky;
-  top: 0;
-  background-color: #fff !important;
-  /*z-index: 100;*/
-  /*padding-top: 80px;*/
-
-}
-.m4inb{
-    border: solid !important;
-  }
-
-  .newsletter-area::before {
-       background: unset !important;
-  }
-p {
-    color: #555;
-}
-</style>
-<meta content="" name="description"/>
-<link href="/z/d/img/favicon.png" rel="icon" type="image/png">
-</link></head>
-<body>
-<!-- Start Main Menu Area -->
-<br/>
-<br/>
-<br/>
-<br/>
-<div class="container">
-<div class="row">
-</div>
-</div>
-<section class="teacher-area ptb-10">
-<div class="container">
-</div>
-<section class="course-details-area ptb-60">
-<div class="container">
-<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-<h1 style="text-align:center">Calculator: Khorana score for estimating venous thromboembolism risk in adults with cancer</h1>
-<div class="utdArticleSection" id="topicContentCalculator"><div id="topicText">
-<div id="mc3k">
-<form action="" id="KhoranaScore_form" name="KhoranaScore_form" onreset="rrclr(); document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
-<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
-<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
-<td align="left" bgcolor="#eeeeee">
-<span class="medCalcFontTitleBox">
-
- 
-Calculator: Khorana score for estimating venous thromboembolism risk in adults with cancer
-</span></td></tr></tbody></table><br/> <br/>
-<div id="calc_main">
-<div id="calc_input">
-<center>
-<table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
-<tbody><tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">Site of primary tumor </span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right"><input aria-label="This button selects an option for: Site of primary tumor. The option is Very high risk (stomach, pancreas) (2 points)" id="togel1" name="cc1" onclick="KhoranaScore_fx();" type="radio"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel1');">Very high risk (stomach, pancreas) (2 points)</span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right"><input aria-label="This button selects an option for: Site of primary tumor. The option is  High risk (lung, lymphoma, gynecologic, bladder, testicular) (1 point)" id="togel2" name="cc1" onclick="KhoranaScore_fx();" type="radio"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel2');"> High risk (lung, lymphoma, gynecologic, bladder, testicular) (1 point)</span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right"><input aria-label="This button selects an option for: Site of primary tumor. The option is All other sites (0 points)" id="togel3" name="cc1" onclick="KhoranaScore_fx();" type="radio"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel3');">All other sites (0 points)</span></td></tr>
-<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">Laboratory results and BMI</span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right" valign="top"><input aria-label="Check this box to indicate Prechemotherapy platelet count ≥350,000/microL [≥350 X 10&lt;sup&gt;9&lt;/sup&gt;/L] (1 point)" id="togel4" name="cc2" onclick="KhoranaScore_fx();" type="checkbox"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="togCB('togel4');">Prechemotherapy platelet count ≥350,000/microL [≥350 X 10<sup>9</sup>/L] (1 point)</span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right" valign="top"><input aria-label="Check this box to indicate Hemoglobin level &lt;10 g/dL [&lt;100 g/L] or use of ESAs (1 point)" id="togel5" name="cc3" onclick="KhoranaScore_fx();" type="checkbox"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="togCB('togel5');">Hemoglobin level &lt;10 g/dL [&lt;100 g/L] or use of ESAs (1 point)</span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right" valign="top"><input aria-label="Check this box to indicate Prechemotherapy WBC &gt;11,000/microL [≥11 X 10&lt;sup&gt;9&lt;/sup&gt;/L] (1 point)" id="togel6" name="cc4" onclick="KhoranaScore_fx();" type="checkbox"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="togCB('togel6');">Prechemotherapy WBC &gt;11,000/microL [≥11 X 10<sup>9</sup>/L] (1 point)</span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right" valign="top"><input aria-label="Check this box to indicate BMI ≥35 kg/m&lt;sup&gt;2&lt;/sup&gt; (1 point)" id="togel7" name="cc5" onclick="KhoranaScore_fx();" type="checkbox"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="togCB('togel7');">BMI ≥35 kg/m<sup>2</sup> (1 point)</span></td></tr>
-</tbody></table>
-<span class="medCalcFontOne" id="inputchk"><br/> <br/><b>Important:</b> Inputs must be complete to perform calculation. <br/></span>
-</center>
-</div>
-<br/> <br/>
-<div id="calc_result">
-<span class="medCalcFontCCTabBold">
-Total criteria point count:
-</span>
-<input aria-label="This box holds the total criteria point count" aria-readonly="true" name="cctotal" size="6" type="text"/><br/> <br/>
-<center><input name="reset" type="reset" value="Reset form"/> </center>
-<br/> <br/>
-<div aria-label="This table highlights the result Incidence of VTE based on Khorana score. No result is highlighted" id="rr1_tag" tabindex="0">
-<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
-<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
-<td align="left" bgcolor="#eeeeee">
-<span class="medCalcFontTitleBox">
-
-
-Incidence of VTE based on Khorana score
-</span></td></tr></tbody></table><br/> <br/>
-</div>
-<center>
-<table border="1" cellpadding="4" cellspacing="0" summary="RRTable">
-<tbody><tr bgcolor="#ffffff">
-<td align="center"><span class="medCalcFontOneBold"> Khorana score points</span></td>
-<td align="center"><span class="medCalcFontOneBold">Risk</span></td>
-<td align="center"><span class="medCalcFontOneBold">Derivation cohort<sup>[1]</sup> VTE risk after 2.5 months</span></td>
-<td align="center"><span class="medCalcFontOneBold"> Validation cohort<sup>[1]</sup> VTE risk after 2.5 months</span></td>
-<td align="center"><span class="medCalcFontOneBold"> Independent cohort<sup>[2]</sup> VTE risk after 6 months</span></td>
-<td align="center"><span class="medCalcFontOneBold"> Patients in phase I trials<sup>[3]</sup> VTE risk after 2 months</span></td>
-</tr>
-<tr id="rr1_1"><td align="center" nowrap="nowrap"><span class="medCalcFontOneBold"> 0</span></td>
-<td align="center"><span class="medCalcFontOne"> Low</span></td>
-<td align="center"><span class="medCalcFontOne">0.8%</span></td>
-<td align="center"><span class="medCalcFontOne">0.3%</span></td>
-<td align="center"><span class="medCalcFontOne">1.5%</span></td>
-<td align="center"><span class="medCalcFontOne">1.5%</span></td>
-</tr>
-<tr id="rr1_2"><td align="center" nowrap="nowrap"><span class="medCalcFontOneBold"> 1 to 2</span></td>
-<td align="center"><span class="medCalcFontOne"> Intermediate</span></td>
-<td align="center"><span class="medCalcFontOne">1.8%</span></td>
-<td align="center"><span class="medCalcFontOne">2%</span></td>
-<td align="center"><span class="medCalcFontOne">3.8% (1 point); 9.6% (2 points)</span></td>
-<td align="center"><span class="medCalcFontOne">4.8%</span></td>
-</tr>
-<tr id="rr1_3"><td align="center" nowrap="nowrap"><span class="medCalcFontOneBold"> 3 to 6</span></td>
-<td align="center"><span class="medCalcFontOne"> High</span></td>
-<td align="center"><span class="medCalcFontOne">7.1%</span></td>
-<td align="center"><span class="medCalcFontOne">6.7%</span></td>
-<td align="center"><span class="medCalcFontOne">17.7%</span></td>
-<td align="center"><span class="medCalcFontOne">12.9%</span></td>
-</tr>
-</tbody></table>
-</center>
-<br/> <br/>
-</div>
-</div>
-<div id="calc_notes">
-<span class="medCalcFontOneBold">Notes</span>
-<ul class="medCalcFontOne">
-<li>The Khorana score was developed from a cohort of 2701 patients with cancer receiving a first course  of chemotherapy to predict the cumulative incidence of VTE at 2.5 months.<sup>[1]</sup> The score was  validated in a cohort of 1365 patients, most of whom (91%) had an ECOG performance status of 0 or 1.<sup>[1]</sup></li>
-<li>The score was tested independently in 819 patients with newly diagnosed cancer or cancer progression  who had not received chemotherapy within the preceding 3 months to predict the cumulative incidence of  VTE at 6 months,<sup>[2]</sup> and in 1415 patients enrolled in phase I clinical trials followed for a  median of 2 months.<sup>[3]</sup></li>
-<li>BMI: body mass index; ESAs: erythropoiesis-stimulating agents; WBC: white blood count; BMI: body mass index; VTE: venous thromboembolism; ECOG: Eastern Cooperative Oncology Group.</li>
-</ul>
-</div>
-<br/> <br/>
-<div id="calc_refs">
-<span class="medCalcFontRef"><b>References</b></span>
-<ol>
-<li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/18216292" style="color: green; text-decoration: none;" target="_blank">Khorana AA, Kuderer NM, Culakova E, et al. Development and validation of a predictive model  for chemotherapy-associated thrombosis. Blood 2008; 111:4902.</a></span></li>
-<li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/20829374" style="color: green; text-decoration: none;" target="_blank">Ay C, Dunkler D, Marosi C, et al. Prediction of venous thromboembolism in cancer patients.  Blood 2010; 116:5377.</a></span></li>
-<li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/22052988" style="color: green; text-decoration: none;" target="_blank">Mandala M, Clerici M, Corradino I, et al. Incidence, risk factors and clinical implications of venous  thromboembolism in cancer patients treated within the context of phase I studies:  the 'SENDO experience'. Ann Oncol 2012; 23:1416.</a></span></li>
-</ol>
-</div>
-</form>
-</div>
-<span class="calculatorVendorId" id="T1678215874">
-</span></div><div id="printDisclaimer">
-<b>Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.</b>
-<p>
-	Information on this page may not appear correctly if printed. </p>
-</div>
-<div id="disclaimerCalculator">
-<div class="medCalcFontTwo">
-<p class="header">Legal Notices and Disclaimer</p>
-<p>
-			All information contained in and produced by the EBMcalc system is provided
+ <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+ <head>
+  <title>
+   Calculator: Khorana score for estimating venous thromboembolism risk in adults with cancer
+  </title>
+  <link href="d/css/1.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!-- Start Main Menu Area -->
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="container">
+   <div class="row">
+   </div>
+  </div>
+  <section class="teacher-area ptb-10">
+   <div class="container">
+   </div>
+   <section class="course-details-area ptb-60">
+    <div class="container">
+     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+      <h1 style="text-align:center">
+       Calculator: Khorana score for estimating venous thromboembolism risk in adults with cancer
+      </h1>
+      <div class="utdArticleSection" id="topicContentCalculator">
+       <div id="topicText">
+        <div id="mc3k">
+         <form action="" id="KhoranaScore_form" name="KhoranaScore_form" onreset="rrclr(); document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
+          <table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+           <tbody>
+            <tr>
+             <td bgcolor="#eeeeee" width="1%">
+              <br/>
+             </td>
+             <td align="left" bgcolor="#eeeeee">
+              <span class="medCalcFontTitleBox">
+               Calculator: Khorana score for estimating venous thromboembolism risk in adults with cancer
+              </span>
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <br/>
+          <br/>
+          <div id="calc_main">
+           <div id="calc_input">
+            <center>
+             <table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
+              <tbody>
+               <tr>
+                <td align="left" colspan="3">
+                 <span class="medCalcFontCCTabBold">
+                  Site of primary tumor
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right">
+                 <input aria-label="This button selects an option for: Site of primary tumor. The option is Very high risk (stomach, pancreas) (2 points)" id="togel1" name="cc1" onclick="KhoranaScore_fx();" type="radio"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="setRB('togel1');">
+                  Very high risk (stomach, pancreas) (2 points)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right">
+                 <input aria-label="This button selects an option for: Site of primary tumor. The option is  High risk (lung, lymphoma, gynecologic, bladder, testicular) (1 point)" id="togel2" name="cc1" onclick="KhoranaScore_fx();" type="radio"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="setRB('togel2');">
+                  High risk (lung, lymphoma, gynecologic, bladder, testicular) (1 point)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right">
+                 <input aria-label="This button selects an option for: Site of primary tumor. The option is All other sites (0 points)" id="togel3" name="cc1" onclick="KhoranaScore_fx();" type="radio"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="setRB('togel3');">
+                  All other sites (0 points)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td align="left" colspan="3">
+                 <span class="medCalcFontCCTabBold">
+                  Laboratory results and BMI
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right" valign="top">
+                 <input aria-label="Check this box to indicate Prechemotherapy platelet count ≥350,000/microL [≥350 X 10&lt;sup&gt;9&lt;/sup&gt;/L] (1 point)" id="togel4" name="cc2" onclick="KhoranaScore_fx();" type="checkbox"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="togCB('togel4');">
+                  Prechemotherapy platelet count ≥350,000/microL [≥350 X 10
+                  <sup>
+                   9
+                  </sup>
+                  /L] (1 point)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right" valign="top">
+                 <input aria-label="Check this box to indicate Hemoglobin level &lt;10 g/dL [&lt;100 g/L] or use of ESAs (1 point)" id="togel5" name="cc3" onclick="KhoranaScore_fx();" type="checkbox"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="togCB('togel5');">
+                  Hemoglobin level &lt;10 g/dL [&lt;100 g/L] or use of ESAs (1 point)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right" valign="top">
+                 <input aria-label="Check this box to indicate Prechemotherapy WBC &gt;11,000/microL [≥11 X 10&lt;sup&gt;9&lt;/sup&gt;/L] (1 point)" id="togel6" name="cc4" onclick="KhoranaScore_fx();" type="checkbox"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="togCB('togel6');">
+                  Prechemotherapy WBC &gt;11,000/microL [≥11 X 10
+                  <sup>
+                   9
+                  </sup>
+                  /L] (1 point)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right" valign="top">
+                 <input aria-label="Check this box to indicate BMI ≥35 kg/m&lt;sup&gt;2&lt;/sup&gt; (1 point)" id="togel7" name="cc5" onclick="KhoranaScore_fx();" type="checkbox"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="togCB('togel7');">
+                  BMI ≥35 kg/m
+                  <sup>
+                   2
+                  </sup>
+                  (1 point)
+                 </span>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+             <span class="medCalcFontOne" id="inputchk">
+              <br/>
+              <br/>
+              <b>
+               Important:
+              </b>
+              Inputs must be complete to perform calculation.
+              <br/>
+             </span>
+            </center>
+           </div>
+           <br/>
+           <br/>
+           <div id="calc_result">
+            <span class="medCalcFontCCTabBold">
+             Total criteria point count:
+            </span>
+            <input aria-label="This box holds the total criteria point count" aria-readonly="true" name="cctotal" size="6" type="text"/>
+            <br/>
+            <br/>
+            <center>
+             <input name="reset" type="reset" value="Reset form"/>
+            </center>
+            <br/>
+            <br/>
+            <div aria-label="This table highlights the result Incidence of VTE based on Khorana score. No result is highlighted" id="rr1_tag" tabindex="0">
+             <table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+              <tbody>
+               <tr>
+                <td bgcolor="#eeeeee" width="1%">
+                 <br/>
+                </td>
+                <td align="left" bgcolor="#eeeeee">
+                 <span class="medCalcFontTitleBox">
+                  Incidence of VTE based on Khorana score
+                 </span>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+             <br/>
+             <br/>
+            </div>
+            <center>
+             <table border="1" cellpadding="4" cellspacing="0" summary="RRTable">
+              <tbody>
+               <tr bgcolor="#ffffff">
+                <td align="center">
+                 <span class="medCalcFontOneBold">
+                  Khorana score points
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOneBold">
+                  Risk
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOneBold">
+                  Derivation cohort
+                  <sup>
+                   [1]
+                  </sup>
+                  VTE risk after 2.5 months
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOneBold">
+                  Validation cohort
+                  <sup>
+                   [1]
+                  </sup>
+                  VTE risk after 2.5 months
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOneBold">
+                  Independent cohort
+                  <sup>
+                   [2]
+                  </sup>
+                  VTE risk after 6 months
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOneBold">
+                  Patients in phase I trials
+                  <sup>
+                   [3]
+                  </sup>
+                  VTE risk after 2 months
+                 </span>
+                </td>
+               </tr>
+               <tr id="rr1_1">
+                <td align="center" nowrap="nowrap">
+                 <span class="medCalcFontOneBold">
+                  0
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  Low
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  0.8%
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  0.3%
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  1.5%
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  1.5%
+                 </span>
+                </td>
+               </tr>
+               <tr id="rr1_2">
+                <td align="center" nowrap="nowrap">
+                 <span class="medCalcFontOneBold">
+                  1 to 2
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  Intermediate
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  1.8%
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  2%
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  3.8% (1 point); 9.6% (2 points)
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  4.8%
+                 </span>
+                </td>
+               </tr>
+               <tr id="rr1_3">
+                <td align="center" nowrap="nowrap">
+                 <span class="medCalcFontOneBold">
+                  3 to 6
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  High
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  7.1%
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  6.7%
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  17.7%
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  12.9%
+                 </span>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </center>
+            <br/>
+            <br/>
+           </div>
+          </div>
+          <div id="calc_notes">
+           <span class="medCalcFontOneBold">
+            Notes
+           </span>
+           <ul class="medCalcFontOne">
+            <li>
+             The Khorana score was developed from a cohort of 2701 patients with cancer receiving a first course  of chemotherapy to predict the cumulative incidence of VTE at 2.5 months.
+             <sup>
+              [1]
+             </sup>
+             The score was  validated in a cohort of 1365 patients, most of whom (91%) had an ECOG performance status of 0 or 1.
+             <sup>
+              [1]
+             </sup>
+            </li>
+            <li>
+             The score was tested independently in 819 patients with newly diagnosed cancer or cancer progression  who had not received chemotherapy within the preceding 3 months to predict the cumulative incidence of  VTE at 6 months,
+             <sup>
+              [2]
+             </sup>
+             and in 1415 patients enrolled in phase I clinical trials followed for a  median of 2 months.
+             <sup>
+              [3]
+             </sup>
+            </li>
+            <li>
+             BMI: body mass index; ESAs: erythropoiesis-stimulating agents; WBC: white blood count; BMI: body mass index; VTE: venous thromboembolism; ECOG: Eastern Cooperative Oncology Group.
+            </li>
+           </ul>
+          </div>
+          <br/>
+          <br/>
+          <div id="calc_refs">
+           <span class="medCalcFontRef">
+            <b>
+             References
+            </b>
+           </span>
+           <ol>
+            <li>
+             <span class="medCalcFontRef">
+              <a href="https://www.ncbi.nlm.nih.gov/pubmed/18216292" style="color: green; text-decoration: none;" target="_blank">
+               Khorana AA, Kuderer NM, Culakova E, et al. Development and validation of a predictive model  for chemotherapy-associated thrombosis. Blood 2008; 111:4902.
+              </a>
+             </span>
+            </li>
+            <li>
+             <span class="medCalcFontRef">
+              <a href="https://www.ncbi.nlm.nih.gov/pubmed/20829374" style="color: green; text-decoration: none;" target="_blank">
+               Ay C, Dunkler D, Marosi C, et al. Prediction of venous thromboembolism in cancer patients.  Blood 2010; 116:5377.
+              </a>
+             </span>
+            </li>
+            <li>
+             <span class="medCalcFontRef">
+              <a href="https://www.ncbi.nlm.nih.gov/pubmed/22052988" style="color: green; text-decoration: none;" target="_blank">
+               Mandala M, Clerici M, Corradino I, et al. Incidence, risk factors and clinical implications of venous  thromboembolism in cancer patients treated within the context of phase I studies:  the 'SENDO experience'. Ann Oncol 2012; 23:1416.
+              </a>
+             </span>
+            </li>
+           </ol>
+          </div>
+         </form>
+        </div>
+        <span class="calculatorVendorId" id="T1678215874">
+        </span>
+       </div>
+       <div id="printDisclaimer">
+        <b>
+         Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.
+        </b>
+        <p>
+         Information on this page may not appear correctly if printed.
+        </p>
+       </div>
+       <div id="disclaimerCalculator">
+        <div class="medCalcFontTwo">
+         <p class="header">
+          Legal Notices and Disclaimer
+         </p>
+         <p>
+          All information contained in and produced by the EBMcalc system is provided
 			for educational purposes only. This information should not be used for the diagnosis or treatment
-			of any health problem or disease. 
-			<b>THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.</b>
-<a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">Click here for full notice and disclaimer.</a>
-</p>
-<p class="copy">EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC</p>
-</div>
-</div><div id="topicVersionRevision">Topic 120626 Version 6.0</div></div>
-</div>
-</div>
-</section>
-</section>
-<!-- End Main Menu Area -->
-<!-- Start Search Popup Area -->
-<!-- End Footer Area -->
-<!-- Back to top -->
-<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
-<!-- End Back to top -->
-<!-- jQuery Min JS -->
-<!-- Prpper JS -->
-<!-- Bootstrap Min JS -->
-<!-- Classy Nav Min Js -->
-<!-- Owl Carousel Min Js -->
-<!-- Magnific Popup JS -->
-<!-- CounterUp JS -->
-<!-- Waypoints JS -->
-<!-- Form Validator Min JS -->
-<!-- Contact Form Min JS -->
-<!-- Main JS -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-</body>
+			of any health problem or disease.
+          <b>
+           THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.
+          </b>
+          <a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">
+           Click here for full notice and disclaimer.
+          </a>
+         </p>
+         <p class="copy">
+          EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC
+         </p>
+        </div>
+       </div>
+       <div id="topicVersionRevision">
+        Topic 120626 Version 6.0
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </section>
+  <!-- End Main Menu Area -->
+  <!-- Start Search Popup Area -->
+  <!-- End Footer Area -->
+  <!-- Back to top -->
+  <a class="scrolltop" href="#top">
+   <i class="icofont-hand-drawn-up">
+   </i>
+  </a>
+  <!-- End Back to top -->
+  <!-- jQuery Min JS -->
+  <!-- Prpper JS -->
+  <!-- Bootstrap Min JS -->
+  <!-- Classy Nav Min Js -->
+  <!-- Owl Carousel Min Js -->
+  <!-- Magnific Popup JS -->
+  <!-- CounterUp JS -->
+  <!-- Waypoints JS -->
+  <!-- Form Validator Min JS -->
+  <!-- Contact Form Min JS -->
+  <!-- Main JS -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+ </body>
 </html>

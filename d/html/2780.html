@@ -1,414 +1,1217 @@
 <!DOCTYPE html>
-
 <html lang="fa">
-<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
-<head><title>A short primer on cost-effectiveness analysis</title><link href="/z/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/z/d/css/icofont.min.css" rel="stylesheet"/><link href="/z/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/z/d/css/animate.css" rel="stylesheet"/><link href="/z/d/css/owl.carousel.css" rel="stylesheet"/><link href="/z/d/css/magnific-popup.css" rel="stylesheet"/><link href="/z/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/z/d/css/style.css" rel="stylesheet"/><link href="/z/d/css/rtl_edited.css" rel="stylesheet"/><link href="/z/d/css/responsive.css" rel="stylesheet"/><link href="https:///uptodate_assets/main.css" rel="stylesheet"/>
-<style>
-
-#myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 16px;
-  color: black;
-  display: block
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee;
-}
-
-#searchResult {
-
-  list-style-type: none;
-  padding: 0;
-  padding-right: 20px;
-}
-
-#searchResult li a {
-  border: .5px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #79bc21;
-  padding: 7px;
-  text-decoration: none;
-  font-size: 14px;
-  color: white;
-  display: block
-}
-
-#searchResult li a:hover:not(.header) {
-  background-color: #222;
-}
-
-
-#txtHint   {
-  position: absolute;
-  text-shadow: none;
-  width: 100%;
-  margin-top: -15px;
-  padding-right: 10px;
-
-  filter: alpha(opacity=95);
-  -moz-opacity: 0.95;
-  opacity: 1;
-  z-index: 200;
-}
-.countBubl {
-  background:#eb0029;
-  color:#fff;
-  padding:5px;
-  margin-top: 50%;
-
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
- width: 55%;
- padding-left: 20px;
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
- width: 20%;
-}
- #Uptodate_image {
-      width: 50%;
-  }#uptodate-area {
-      /*z-index: 99;*/
-  }
-#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
- margin-left: 10px;
- margin-bottom: 6%;
-}
-@media (max-width: @screen-xs) {
-    .countBubl {
-        font-size: 4px ;
-    }
-    #uptodate_version {
-        font-size: 4px ;
-    }
-}
-
-@media (max-width: @screen-sm) {
-    .countBubl {
-        font-size: 14px ;
-    }
-}
-@media  all and(max-width: 820) {
-    #Uptodate_image {
-        width: 80% ;
-    }#uptodate-area {
-        z-index: 99;
-    }
-}@media  all and (min-width: 820) and(max-width: 88820){
-    #Uptodate_image {
-        width: 100% !important;
-    }
-    .countBubl {
-        font-size: 4px ;
-    }
-}
-div.col-md-3:nth-child(3) {
- margin-top: 6%;
-}
-
-div.col-md-3:nth-child(3) > img:nth-child(1) {
- width: 100%;
- margin-left: 11px;
-}
-
-</style>
-<style media="screen" type="text/css">
-  .goback {
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    position: fixed;
-    display: none;
-    font-size: 15px;
-    background: #71c0fa;
-    z-index: 1000;
-    text-align: center;
-    color: #ffffff;
-    -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
-    border-radius: 50px;
-    bottom: 3.8%;
-    right: 2%;
-}
-  .buyPackage {
-  width: 100px;
-  height: 100px;
-  line-height: 40px;
-  position: fixed;
-  display: none;
-  font-size: 10px;
-  background: #fa759e;
-  z-index: 1000;
-  text-align: center;
-  color: #ffffff;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  border-radius: 10px;
-  top: 150px;
-  right: 2%;
-  text-align: center;
-}
-.uptodate-area {
-  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-    background-attachment: fixed;
-  position: relative;
-}
-.uptodate-area::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  padding-top: 100px;
-  width: 100%;
-}
-#references{
-  display: none;
-}
-</style>
-<style>
-section.sticky {
-  position: sticky;
-  top: 0;
-  background-color: #fff !important;
-  /*z-index: 100;*/
-  /*padding-top: 80px;*/
-
-}
-.m4inb{
-    border: solid !important;
-  }
-
-  .newsletter-area::before {
-       background: unset !important;
-  }
-p {
-    color: #555;
-}
-</style>
-<meta content="" name="description"/>
-<link href="/z/d/img/favicon.png" rel="icon" type="image/png">
-</link></head>
-<body>
-<!-- Start Main Menu Area -->
-<br/>
-<br/>
-<br/>
-<br/>
-<div class="container">
-<div class="row">
-</div>
-</div>
-<section class="teacher-area ptb-10">
-<div class="container">
-</div>
-<section class="course-details-area ptb-60">
-<div class="container">
-<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-<h1 style="text-align:center">A short primer on cost-effectiveness analysis</h1>
-<div class="utdArticleSection utdStyle" id="topicContent"><div id="topicTitle">A short primer on cost-effectiveness analysis</div> <div class="authorSectionElem"><div class="authorsElementsLeft"><dl id="topicContributors"><dt><span> </span>Authors:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Peter A L Bonis, MD</a></dd><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">John B Wong, MD</a></dd><dt><span> </span>Section Editors:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Joann G Elmore, MD, MPH</a></dd><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">David M Rind, MD</a></dd><dt><span> </span>Deputy Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Carrie Armsby, MD, MPH</a></dd></dl></div><div class="authorsElementsRight"><div id="literatureReviewDate"><div class="litReviewSingleLine"><bdi><span class="emphasis">Literature review current through:</span> Jan 2024.</bdi></div><div class="litReviewSingleLine"><bdi><span class="emphasis">This topic last updated:</span> Sep 10, 2021.</bdi></div></div></div></div><div id="topicWhatsNewContainer"></div><div id="topicText"><p class="headingAnchor" id="H1"><span class="h1">INTRODUCTION</span><span class="headingEndMark"> — </span>Health care advances such as new drugs, devices, or screening and diagnostic tests must demonstrate safety and efficacy to be approved for clinical use. However, because of rising health care costs and limited budgets, questions may remain about their value [<a href="#rid1">1</a>]. Cost-effectiveness analysis is one approach to determining value and refers to a method for assessing the costs and health benefits of an intervention [<a href="#rid1">1</a>]. Assuming that health budgets cannot meet all of the possible demand, cost-effectiveness evaluation can assist decision-makers in allocating resources to maximize the net public health benefit when choosing among options in the care of patients [<a href="#rid2">2-8</a>].</p><p>Although cost-effectiveness analysis has become a fundamental research method in health and medicine, it also has great potential to be misunderstood because of methodologic complexity in definitions, measurement, and interpretation [<a href="#rid9">9</a>]. The term "cost-effective" itself is frequently misused as an adjective (eg, an intervention is "cost-effective") without providing a point of reference.</p><p>This topic review will provide a basic overview of the principles of cost-effectiveness analysis while highlighting some of the controversies. Detailed discussions on this topic have been presented in a series of consensus statements issued by the Panel on Cost-Effectiveness in Health and Medicine through the United States Public Health Service [<a href="#rid10">10-12</a>].</p><p class="headingAnchor" id="H2"><span class="h1">DEFINITIONS</span><span class="headingEndMark"> — </span>Four types of economic analysis have been applied to health care.</p><p class="bulletIndent1"><span class="glyph">●</span>Cost-effectiveness analysis or <strong>cost-utility analysis</strong> (a type of cost-effectiveness analysis) are most commonly used for performing economic analyses in health care. In these analyses, monetary and health outcomes are measured separately and the relative value of an intervention is measured as the additional cost to achieve an incremental health benefit such as dollars to prevent a case of cancer. In cost-utility analysis, the effectiveness metric becomes life expectancy adjusted for the morbidity or quality of life associated with the alternative strategies.</p><p></p><p class="bulletIndent1">Four outcomes are possible when comparing two alternatives (such as screening versus no screening) using cost-effectiveness analysis: Screening is either more expensive or less costly than no screening, and, in either case, it may improve or worsen health outcomes. If no screening costs more and leads to worse outcomes, screening is cost saving and is preferred to no screening because it improves health outcomes at a lower cost. The situation is more complex if screening costs more but also leads to health benefits, in which case, the cost-effectiveness of screening can be determined [<a href="#rid8">8</a>]. Cost-effectiveness does not necessarily imply that an intervention is cost saving. Similarly, an intervention cannot be considered to be cost-effective merely because it is more effective.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Cost-identification or cost-minimization analysis simply examines costs of care, implicitly assuming equal health benefits for all of the alternative options and thus ignoring noneconomic outcomes.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Cost-benefit analysis incorporates both costs and health outcomes, placing a monetary value on health outcomes so that the alternatives can be evaluated on a single outcome measure. However, because assigning a monetary value to a health outcome (or life) raises many ethical objections, cost-benefit analysis has generally not been accepted in health care.</p><p></p><p class="headingAnchor" id="H3"><span class="h1">PERSPECTIVE</span><span class="headingEndMark"> — </span>The point of view of the analysis determines which costs and health effects are considered. As an example, patients, providers, health payers, and society may view antibiotic costs differently: Patients may consider only out-of-pocket or copayment costs, health payers may consider the antibiotic cost and whether it is generic or non-generic, and society may also consider the costs of emerging drug resistance from antibiotic overuse. Providers may consider the health benefit for an individual patient but weigh it against the public health implications of antibiotic overuse.</p><p>Cost-effectiveness analyses ideally apply a societal perspective to include costs, benefits, and harms that may extend beyond the payer or provider directly involved in the decision [<a href="#rid6">6</a>]. The societal perspective represents the overall public interest by including social opportunity costs where the use of limited resources (such as personnel, hospital beds, donor organs, or budgets) results in the loss of opportunity to use those funds (or resources) for other purposes. The societal perspective allows cost-effectiveness results to be compared directly with other interventions from a public health vantage point [<a href="#rid13">13</a>].</p><p class="headingAnchor" id="H4"><span class="h1">COSTS</span><span class="headingEndMark"> — </span>Costs refer to the total net expenditures related to an intervention, including the costs of treatment, adverse treatment effects, and future possible savings from the prevention of disease or morbidity [<a href="#rid1">1</a>]. Costs are distinct from charges (which include a profit margin). They can be categorized as [<a href="#rid6">6,10</a>]:</p><p class="bulletIndent1"><span class="glyph">●</span>Direct medical care (eg, clinician time, test, or drug)</p><p class="bulletIndent1"><span class="glyph">●</span>Direct nonmedical care (eg, food, transportation, lodging, clothing, home aides, or care by family members due to illness)</p><p class="bulletIndent1"><span class="glyph">●</span>Time or indirect morbidity and mortality (eg, lost productivity from missed work or loss of life) and intangible (eg, pain and suffering)</p><p></p><p>Fixed costs are those unrelated to short-term changes in volume (eg, cost of an endoscope), while variable costs are those directly related to changes in volume (eg, cost of stool guaiac cards) [<a href="#rid6">6</a>].</p><p>Estimation of costs can be done from a top-down or a bottom-up approach and can be retrospective or prospective. In a top-down analysis, an appropriate clinical cohort is identified and their aggregated economic or resource costs are obtained from patient-specific medical billing data, usually as charges (eg, hospital or clinician bills), which are then adjusted with cost-to-charge ratios. In a bottom-up approach, estimates are obtained in a two-step process. First, the frequency of utilization of individual resources is obtained (eg, drugs, tests, procedures, and hospital days). Subsequently, the frequencies are multiplied by each unit's cost and then summed to yield a total cost. A complete assessment of costs may also involve "microcosting," in which additional costs such as the contribution of nursing care, supplies, or ancillary services to specific costs (such as a hospital day) are detailed. Not surprisingly, the method used to determine costs can result in substantially different estimates [<a href="#rid14">14</a>].</p><p>Practice patterns and costs may vary considerably across different providers or regions. This difficulty can, in part, be addressed by estimating average costs and ranges and by performing sensitivity analysis. (See <a class="local">'Sensitivity analysis'</a> below.)</p><p class="headingAnchor" id="H5"><span class="h1">EFFECTIVENESS</span><span class="headingEndMark"> — </span>Effectiveness is typically measured in units that are relevant to the condition under study and are meaningful for the decision-maker. Examples include cancers prevented, lives saved, or life years gained. A standard outcome scale allows policymakers to compare the relative net health benefits of alternative funding decisions. Thus, cost-utility analysis frequently uses quality-adjusted life years (QALYs) gained to reflect not only prolongation of life but also the quality of life associated with those years (eg, surviving without prostate cancer but with erectile dysfunction from its treatment).</p><p>To determine quality of life, utility assessment involves the quantification of preferences for health outcomes. Although methods to determine health effects and to incorporate quality of life have not been standardized, the following approaches have most commonly been used to address these issues:</p><p class="bulletIndent1"><span class="glyph">●</span>The "time trade-off" and "standard gamble" methods [<a href="#rid15">15</a>]:</p><p></p><p class="bulletIndent1">With the time trade-off method, individuals choose between living a shortened amount of time with perfect health and living longer with impaired health. The length of time is varied until the individual has difficulty deciding between the alternatives. If someone were indifferent to "living six months of life in perfect health versus living for one year with hepatocellular carcinoma," then living a year with hepatocellular carcinoma equals living six quality-adjusted life months.</p><p></p><p class="bulletIndent1">With the standard gamble method, individuals choose between a guaranteed intermediate health outcome and a chance of having either the worst outcome (most often death) or the best outcome. The likelihood of dying is varied until individuals have difficulty choosing.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Scales that tabulate premeasured preferences for health states or outcomes are defined in various dimensions (such as the Health Utilities Index, Quality of Well-Being Scale, or EuroQol) [<a href="#rid16">16,17</a>].</p><p></p><p>Besides variation in the methods to assess "utilities" or "preferences," the study population used to determine quality of life affects the estimate. Different estimates may be reached depending upon whether the study population included clinicians, patients with the disease, or individuals from the general population who have not experienced the disease. As a general rule, individuals experienced with a disability assign a higher (better) quality of life value than those without the disability [<a href="#rid18">18,19</a>].</p><p class="headingAnchor" id="H6"><span class="h1">THE REFERENCE CASE</span><span class="headingEndMark"> — </span>A cost-effectiveness analysis should ideally present a reference case in which the analysis is performed using a standard set of methods and assumptions for the measurement and reporting of costs and health effects [<a href="#rid13">13</a>]. The reference case methodologies include the following considerations:</p><p class="bulletIndent1"><span class="glyph">●</span>Components belonging in the numerator or denominator of a cost-effectiveness ratio</p><p class="bulletIndent1"><span class="glyph">●</span>Measuring terms in the numerator of a cost-effectiveness ratio (costs)</p><p class="bulletIndent1"><span class="glyph">●</span>Valuing the health consequences in the denominator of a cost-effectiveness ratio</p><p class="bulletIndent1"><span class="glyph">●</span>Estimating effectiveness of interventions</p><p class="bulletIndent1"><span class="glyph">●</span>Time preferences and discounting</p><p class="bulletIndent1"><span class="glyph">●</span>Handling uncertainty in cost-effectiveness analysis</p><p class="bulletIndent1"><span class="glyph">●</span>Reporting guidelines [<a href="#rid20">20</a>] with 38 specific items in a checklist for reporting the reference case cost-effectiveness analysis [<a href="#rid21">21</a>]</p><p></p><p>The reference case improves the comparability of cost-effectiveness analyses, thereby permitting the health policymakers to choose the most efficient use of public health resources in their funding decisions (<a class="graphic graphic_table graphicRef69531" href="/z/d/graphic/69531.html" rel="external">table 1</a>) [<a href="#rid5">5</a>].</p><p>A consensus statement has been issued with regard to the details of how the reference case should be defined [<a href="#rid20">20,21</a>]. Unfortunately, many cost-effectiveness analyses continue to be published that do not contain a reference case. In 2013, the Consolidated Health Economic Evaluation Reporting Standards (CHEERS) statement developed a 24-item checklist to update, consolidate, and optimize the reporting of health economic evaluations [<a href="#rid22">22</a>].</p><p class="headingAnchor" id="H7"><span class="h1">TIME HORIZON AND DISCOUNT RATE</span><span class="headingEndMark"> — </span>The time horizon of an analysis reflects the length of time over which health benefits and costs should be considered and included in the analysis. Because of annual budgets and competing market forces, health payers usually consider short-term, one-year time horizons, but the societal perspective recommended in the reference case typically applies a long-term or lifetime time horizon. In such cases, time preferences for expenditures become important and are captured as the "discount" rate.</p><p>Money available or spent now is more valuable than money available or spent in the future because of opportunity costs. As an example, one would prefer to receive money now as opposed to receiving the same amount a year from now because money available now can be put to immediate use. The discount rate quantifies this time preference and places all economic costs in terms of present value. The reference case recommends applying a 3 percent annual discount rate [<a href="#rid13">13</a>], so spending $100 now equals spending $97 one year from now and $74 ten years from now. Because costs are discounted, the benefits of health interventions must also be discounted.</p><p>Note that the discount rate is not an adjustment for inflation, which is a separate consideration. Even in the absence of inflation, most individuals would prefer to have an equivalent health benefit or money now as opposed to in the future. The discount rate captures this time preference. When data regarding costs are derived from different years, older costs are usually inflated to their equivalent values in more recent years so that there can be a consistent economic basis. If future medical inflation costs rise uniformly, then future purchasing power for health care remains the same and there is no need to adjust for medical inflation.</p><p class="headingAnchor" id="H8"><span class="h1">SENSITIVITY ANALYSIS</span><span class="headingEndMark"> — </span>As underscored in the previous discussions, considerable uncertainty may remain regarding the parameters used to measure costs and health effects, even in the most carefully conducted cost-effectiveness studies. To help identify the most influential or important parameters and to assess the degree to which uncertainty in the parameter could affect the overall results, cost-effectiveness analyses usually perform multiple evaluations in which one or more of the parameters are varied across reasonable ranges. The ranges reflect intrinsic variability or regional variation. As an example, the cost of colonoscopy may be cheaper in some institutions or health care delivery settings compared with others; thus, to determine the cost-effectiveness of screening colonoscopy, the cost of a colonoscopy is varied over a range to determine the maximal cost at which it remains cost-effective. This process (termed "sensitivity analysis") allows for a reasonable appraisal about the parameters that are most important in the analysis and the stability of the reference case results.</p><p>Cost-effectiveness analyses that include a decision analysis routinely perform sensitivity analysis. Decision analysis involves the mathematical modeling of health outcomes, utilities (preference-based estimates of the quality of life with various health conditions), and costs based on published estimates of key parameters (see  <a class="medical medical_review" href="/z/d/html/2758.html" rel="external">"Decision analysis"</a>). The degree to which sensitivity analysis is performed (and thereby the rigor with which assumptions are tested) varies across decision analyses. Furthermore, economic data from clinical trials, as opposed to decision analyses, may omit sensitivity analysis or subgroup analyses.</p><p>Sensitivity analyses have typically assessed the effect of varying selected parameters related to cost-effectiveness one at a time. A more contemporary approach called Monte Carlo simulation permits all parameters to be varied simultaneously. These sophisticated analyses yield a cost-effectiveness acceptability curve, which accounts for uncertainty in all model estimates. The end result is that the curve displays the likelihood that a new intervention will have a cost-effectiveness ratio that falls below a particular societal "willingness to pay." (See <a class="local">'Interpretation'</a> below.)</p><p>Monte Carlo models can also be used to determine whether additional information about parameters used in the model (such as could be obtained by conducting additional research) would be useful. This can be highly valuable to policymakers who decide whether the new therapy will be approved and paid for or whether public funds should allocated towards further study to clarify cost-effectiveness. As an example, the initial clinical trials for <a class="drug drug_general" data-topicid="9383" href="/z/d/drug information/9383.html" rel="external">donepezil</a> for Alzheimer disease had follow-up shorter than 24 months, while longer treatment would be expected to be required. Monte Carlo models suggested that research to determine its efficacy beyond 24 months had a potential economic value of $270 million [<a href="#rid23">23</a>].</p><p class="headingAnchor" id="H9"><span class="h1">COST-EFFECTIVENESS RATIO</span><span class="headingEndMark"> — </span>The average cost-effectiveness ratio divides each intervention's costs by its effectiveness. This can result in misleading conclusions about an intervention's cost-effectiveness [<a href="#rid7">7</a>]. A preferable way to express cost-effectiveness is "incremental" cost-effectiveness, which refers to the additional cost and the additional benefit of one intervention compared with another.</p><p>Consider, for example, whether four or three stool guaiac tests should be performed annually for colon cancer screening [<a href="#rid24">24</a>]. Performing three annual guaiacs represents the standard of care against which performing four guaiacs is being compared. When applied to 10,000 people, three annual guaiacs results in a net cost of $130,999 and detects 71.9003 cases of colon cancer and four annual guaiacs costs $148,116 and detects 71.9385 cases. The average cost-effectiveness of performing three or four tests annually is $1,810 or $2,059 per cancer detected; either appears to be reasonable.</p><p>In contrast, the incremental cost-effectiveness ratio asks how much additional benefit and at what additional cost does performing four instead of three guaiacs provide. Dividing the net costs of four guaiacs minus the net costs of three guaiacs (incremental cost of four versus three guaiacs = $17,917) by the effectiveness of four guaiacs minus the effectiveness of three guaiacs (incremental benefit of four versus three guaiacs = 0.0382 additional cancers detected) yields an incremental cost-effectiveness ratio of $469,534 per additional cancer detected (an incremental cost 20 times higher than the average cost-effectiveness). The units are typically in dollars (or other units of currency) per effectiveness gained.</p><p>Cost-utility analyses report results using a standard expression of cost-effectiveness, ie, the cost to increase life expectancy by one quality-adjusted life year (QALY; adjusted to one year of perfect health and discounted to its present value). The rationale for choosing this expression can be understood by the difficulty that can arise when trying to compare studies in which cost-effectiveness is expressed using different effectiveness metrics. As an example, the relative cost-effectiveness of a colon cancer detected versus a myocardial infarction prevented would leave a policy analyst in a quandary as to which was more valuable.</p><p>As an example, the Multicenter Automatic Defibrillator Implantation Trial (MADIT) illustrates the calculation of the incremental cost-effectiveness ratio [<a href="#rid25">25</a>]. This randomized controlled trial demonstrated that placement of implantable cardiac defibrillators (ICDs) in asymptomatic patients at high risk for sudden cardiac death (SCD) prevents SCD compared with pharmacologic therapy. Over a four-year period, mean survival in the ICD group was 3.46 years at a cost of $97,560 compared with 2.66 years at a cost of $75,980 for conventionally treated patients. Dividing the incremental cost of $21,580 by the incremental benefit of 0.8 years yields an incremental cost-effectiveness ratio of $27,000 per life year saved.</p><p>The incremental cost-effectiveness ratio helps decision-makers determine whether or how a new intervention should be used. Lower ratios imply better cost-effectiveness. Using low osmolar contrast media for high-risk patients has an incremental cost-effectiveness of $22,600 per QALY gained, but if given to a low-risk patient, its cost-effectiveness rises to $220,000 per QALY gained. With a limited budget of $1 million, spending it on low osmolar contrast for low-risk patients would add only 4.5 years, while spending it on high-risk patients would add 44 years [<a href="#rid7">7</a>].</p><p>Even in the presence of uncertainty, the cost-effectiveness ratio can still be helpful in choosing among options. As an example, routine endoscopic screening has been recommended in Barrett's esophagus, a premalignant condition of the esophagus. The frequency with which endoscopic screening should be performed depends critically on the cancer risk in patients with the condition [<a href="#rid26">26</a>]. Although the actual risk is not known precisely, sensitivity analysis varying this key factor can help in choosing among different surveillance intervals (<a class="graphic graphic_figure graphicRef76263" href="/z/d/graphic/76263.html" rel="external">figure 1</a>). (See  <a class="medical medical_review" href="/z/d/html/2236.html" rel="external">"Barrett's esophagus: Surveillance and management"</a>.)</p><p>Similarly, the cost-effectiveness ratio can be helpful to determine the range of acceptable costs for a new intervention or diagnostic test compared with an existing standard. In one study, for example, a stool DNA test for screening for colorectal cancer would be cost-effective compared with standard screening approaches if the test cost fell to $40 to $60 [<a href="#rid27">27</a>]. However, the cost of stool DNA testing in 2010 was $350. The test would be more costly and less effective than other alternatives.</p><p>As an example, initial colon cancer screening has been found to be cost-effective using commonly accepted metrics (see <a class="local">'Interpretation'</a> below). However, clinicians and patients may wonder whether colonoscopy for colon cancer screening remains cost-effective among adults with an initial negative colonoscopy and, therefore, possibly a lower lifetime risk for developing colon cancer. A cost-effectiveness analysis found that any screening method substantially reduced colorectal cancer risk by 8 to 21 lifetime cases out of every 1000 persons, depending on the screening test and patient adherence, when compared with no further screening. However, rescreening with annual highly-sensitive guaiac fecal occult blood testing, annual fecal immunochemical testing, or computed tomographic colonography every five years resulted in fewer complications and had lower lifetime costs than continuing colonoscopy every 10 years [<a href="#rid28">28</a>].</p><p>While the incremental cost-effectiveness ratio is helpful, the context and absolute costs of different interventions also need to be incorporated into decision-making because the consistent selection of strategies based only upon cost may lead to a minimalist approach to providing services. Consider, for example, a disease that is invariably fatal within one week if left untreated [<a href="#rid9">9</a>]. Two treatment options are available. The first option costs $100 and produces a life expectancy of one year. The second option costs 10 times as much ($1000) but yields a life expectancy of five years. A practice based on cost-minimization would select the first option, yet the incremental cost-effectiveness of the second option is only $225 per year of life gained ($1000 − $100)/(5 − 1). Although the first option has the lowest cost, it would be unacceptable when considering the severity of the illness, degree of benefit, and relatively low absolute cost of the second option.</p><p class="headingAnchor" id="H10"><span class="h2">Interpretation</span><span class="headingEndMark"> — </span>Having determined the incremental cost-effectiveness ratio, how should those ratios be interpreted? The examples presented above bring into focus two general methods for evaluating cost-effectiveness ratios.</p><p class="bulletIndent1"><span class="glyph">●</span>The first method is based upon the notion of "willingness to pay." A decision-maker (such as an insurance company) may decide that it is only willing to pay a certain amount per unit of gain (such as QALYs) across all of the services that it covers. Thus, the selection among options with different cost-effectiveness ratios would be based upon staying within this limit. In the example above, with a willingness to pay for all interventions that falls below $50,000 per QALY gained, the health care payer should fund low osmolar contrast for high-risk patients but not for low-risk patients.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>The second method involves comparing the cost-effectiveness ratio of an intervention with other well-accepted medical practices by examining a league table. A league table is a compilation of cost-effectiveness ratios for various treatments and diseases complying with the reference case (<a class="graphic graphic_table graphicRef69531" href="/z/d/graphic/69531.html" rel="external">table 1</a>). As a general rule, interventions that yield a cost-effectiveness ratio of less than $50,000 to $100,000 per QALY gained have been considered to be acceptable in the United States and several other countries. This cutoff is also consistent with World Health Organization recommendations, which suggest that interventions with cost-effectiveness ratios less than three times the gross domestic product (GDP) per capita are "cost-effective" and those less than the GDP per capita (approximately $65,000 for the United States in 2019) are "very cost-effective." The historical standard used for setting this threshold has been hemodialysis for chronic renal failure, which has an incremental cost-effectiveness ratio of $60,000 to $128,000 per QALY gained.</p><p></p><p>However, because of moral imperatives related to social justice (including that patients with rare or life-threatening diseases should still have access to effective therapies despite their expense), some medical interventions with high incremental cost-effectiveness ratios are still widely performed (eg, cardiac transplantation at a cost of $160,000 per life-year gained). On the other hand, these high incremental cost-effectiveness ratio interventions can drive health care costs up, potentially depriving others of access to basic health care.</p><p>Despite the efforts to standardize analyses using the reference case, direct comparison of different cost-effectiveness studies may not be straightforward, because studies were performed at different times, often using different methodologies and assumptions and variable expressions of effectiveness. Furthermore, only rarely are there health conditions for which all the relevant treatment options have been compared rigorously.</p><p class="headingAnchor" id="H11"><span class="h1">EVALUATING A COST-EFFECTIVENESS STUDY</span><span class="headingEndMark"> — </span>The discussion presented above emphasizes that cost-effectiveness analysis is complex and that studies making claims regarding cost-effectiveness should receive the same level of scrutiny as other types of studies. The following questions can provide guidance when evaluating a cost-effectiveness analysis, although many additional features reflecting the conduct of the study and its quality can be considered in specific settings [<a href="#rid2">2,3,21,22,29-33</a>].</p><p class="bulletIndent1"><span class="glyph">●</span>Did the study compare well-defined strategies that are consistent with medical practice?</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Were the included patients representative of the types of patients that the analysis is intended to apply to?</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Were costs defined reasonably?</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Were all the relevant costs considered?</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Did the estimates of cost reflect those in the community in which the results are intended to apply?</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Were ranges of costs considered for key services?</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Was effectiveness expressed in relevant units such as quality-adjusted life years (QALYs) gained? Was it reasonable to ignore quality of life if it was not considered?</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Was the time frame examined long enough for the expected benefits to have been observed?</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Were all the relevant outcomes considered?</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Was sensitivity analysis performed?</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Was the perspective defined clearly?</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Was a reference case presented?</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Were the findings discussed in context of other options available to treat the particular condition?</p><p></p><p class="headingAnchor" id="H12"><span class="h1">SUMMARY</span></p><p class="bulletIndent1"><span class="glyph">●</span>As economic pressures have increased, it is no longer sufficient for clinicians to know simply about the safety, efficacy, and effectiveness of medical practices. Cost-effectiveness analysis provides a commonly accepted method to evaluate the value or efficiency of new technologies and drugs. (See <a class="local">'Introduction'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Cost-effectiveness analysis or cost-utility analysis (a type of cost-effectiveness analysis) are most commonly used for performing economic analyses in health care. In these analyses, monetary and health outcomes are measured separately and the relative value of an intervention is measured as the additional cost to achieve an incremental health benefit such as dollars to prevent a case of cancer. In cost-utility analysis, the effectiveness metric becomes life expectancy adjusted for the morbidity or quality of life associated with the alternative strategies. (See <a class="local">'Definitions'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Costs refer to the total net expenditures related to an intervention, including the costs of treatment, adverse treatment effects, and future possible savings from the prevention of disease or morbidity. They can be categorized as (see <a class="local">'Costs'</a> above):</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>Direct medical care (eg, clinician time, test, or drug)</p><p class="bulletIndent2"><span class="glyph">•</span>Direct nonmedical care (eg, food, transportation, lodging, clothing, home aides, or care by family members due to illness)</p><p class="bulletIndent2"><span class="glyph">•</span>Indirect morbidity and mortality (eg, lost productivity) and intangible (eg, pain and suffering)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Effectiveness is typically measured in units that are relevant to the condition under study and are meaningful for the decision-maker. A standard outcome scale allows policymakers to compare the relative net health benefits of alternative funding decisions. Cost-utility analysis frequently uses quality-adjusted life years (QALYs) gained to reflect not only prolongation of life but also the quality of life associated with those years. (See <a class="local">'Effectiveness'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>To help identify the most influential or important parameters and to assess the degree to which uncertainty in the parameter could affect the overall results, cost-effectiveness analyses usually perform multiple evaluations in which one or more of the parameters are varied across reasonable ranges. (See <a class="local">'Sensitivity analysis'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Interventions that yield a cost-effectiveness ratio of less than $50,000 to $100,000 per QALY gained have been considered to be acceptable in the United States and several other countries. The historical standard used for setting this threshold has been hemodialysis for chronic renal failure, which has an incremental cost-effectiveness ratio of $60,000 to $128,000 per QALY gained. (See <a class="local">'Interpretation'</a> above.)</p></div><div class="headingAnchor" id="references"><ol id="reference"><li><a class="nounderline abstract_t">Weinstein MC, Stason WB. Foundations of cost-effectiveness analysis for health and medical practices. N Engl J Med 1977; 296:716.</a></li><li><a class="nounderline abstract_t">Drummond MF, Richardson WS, O'Brien BJ, et al. Users' guides to the medical literature. XIII. How to use an article on economic analysis of clinical practice. A. Are the results of the study valid? Evidence-Based Medicine Working Group. JAMA 1997; 277:1552.</a></li><li><a class="nounderline abstract_t">O'Brien BJ, Heyland D, Richardson WS, et al. Users' guides to the medical literature. XIII. How to use an article on economic analysis of clinical practice. B. What are the results and will they help me in caring for my patients? Evidence-Based Medicine Working Group. JAMA 1997; 277:1802.</a></li><li><a class="nounderline abstract_t">American College of Physicians. Information on cost-effectiveness: an essential product of a national comparative effectiveness program. Ann Intern Med 2008; 148:956.</a></li><li><a class="nounderline abstract_t">Sanders GD, Maciejewski ML, Basu A. Overview of Cost-effectiveness Analysis. JAMA 2019; 321:1400.</a></li><li><a class="nounderline abstract_t">Eisenberg JM. Clinical economics. A guide to the economic analysis of clinical practices. JAMA 1989; 262:2879.</a></li><li><a class="nounderline abstract_t">Detsky AS, Naglie IG. A clinician's guide to cost-effectiveness analysis. Ann Intern Med 1990; 113:147.</a></li><li><a class="nounderline abstract_t">Provenzale D, Lipscomb J. Cost-effectiveness: definitions and use in the gastroenterology literature. Am J Gastroenterol 1996; 91:1488.</a></li><li><a class="nounderline abstract_t">Doubilet P, Weinstein MC, McNeil BJ. Use and misuse of the term "cost effective" in medicine. N Engl J Med 1986; 314:253.</a></li><li><a class="nounderline abstract_t">Sanders GD, Neumann PJ, Basu A, et al. Recommendations for Conduct, Methodological Practices, and Reporting of Cost-effectiveness Analyses: Second Panel on Cost-Effectiveness in Health and Medicine. JAMA 2016; 316:1093.</a></li><li><a class="nounderline abstract_t">Neumann PJ, Sanders GD. Cost-Effectiveness Analysis 2.0. N Engl J Med 2017; 376:203.</a></li><li class="breakAll">Neumann PJ, Sanders GD, Russell LB, et al. Cost-Effectiveness in Health and Medicine, 2nd ed, Oxford University Press, New York 2017.</li><li><a class="nounderline abstract_t">Russell LB, Gold MR, Siegel JE, et al. The role of cost-effectiveness analysis in health and medicine. Panel on Cost-Effectiveness in Health and Medicine. JAMA 1996; 276:1172.</a></li><li><a class="nounderline abstract_t">Hlatky MA, Lipscomb J, Nelson C, et al. Resource use and cost of initial coronary revascularization. Coronary angioplasty versus coronary bypass surgery. Circulation 1990; 82:IV208.</a></li><li><a class="nounderline abstract_t">Froberg DG, Kane RL. Methodology for measuring health-state preferences--III: Population and context effects. J Clin Epidemiol 1989; 42:585.</a></li><li><a class="nounderline abstract_t">Kaplan RM, Anderson JP. A general health policy model: update and applications. Health Serv Res 1988; 23:203.</a></li><li><a class="nounderline abstract_t">Torrance GW, Boyle MH, Horwood SP. Application of multi-attribute utility theory to measure social preferences for health states. Oper Res 1982; 30:1043.</a></li><li><a class="nounderline abstract_t">Sackett DL, Torrance GW. The utility of different health states as perceived by the general public. J Chronic Dis 1978; 31:697.</a></li><li><a class="nounderline abstract_t">Slevin ML, Stubbs L, Plant HJ, et al. Attitudes to chemotherapy: comparing views of patients with cancer with those of doctors, nurses, and general public. BMJ 1990; 300:1458.</a></li><li><a class="nounderline abstract_t">Weinstein MC, Siegel JE, Gold MR, et al. Recommendations of the Panel on Cost-effectiveness in Health and Medicine. JAMA 1996; 276:1253.</a></li><li><a class="nounderline abstract_t">Siegel JE, Weinstein MC, Russell LB, Gold MR. Recommendations for reporting cost-effectiveness analyses. Panel on Cost-Effectiveness in Health and Medicine. JAMA 1996; 276:1339.</a></li><li><a class="nounderline abstract_t">Husereau D, Drummond M, Petrou S, et al. Consolidated Health Economic Evaluation Reporting Standards (CHEERS) statement. BMJ 2013; 346:f1049.</a></li><li><a class="nounderline abstract_t">Claxton K, Sculpher M, Drummond M. A rational framework for decision making by the National Institute For Clinical Excellence (NICE). Lancet 2002; 360:711.</a></li><li><a class="nounderline abstract_t">Neuhauser D, Lewicki AM. What do we gain from the sixth stool guaiac? N Engl J Med 1975; 293:226.</a></li><li><a class="nounderline abstract_t">Pandya A, Sy S, Cho S, et al. Cost-effectiveness of 10-Year Risk Thresholds for Initiation of Statin Therapy for Primary Prevention of Cardiovascular Disease. JAMA 2015; 314:142.</a></li><li><a class="nounderline abstract_t">Provenzale D, Schmitt C, Wong JB. Barrett's esophagus: a new look at surveillance based on emerging estimates of cancer risk. Am J Gastroenterol 1999; 94:2043.</a></li><li><a class="nounderline abstract_t">Lansdorp-Vogelaar I, Kuntz KM, Knudsen AB, et al. Stool DNA testing to screen for colorectal cancer in the Medicare population: a cost-effectiveness analysis. Ann Intern Med 2010; 153:368.</a></li><li><a class="nounderline abstract_t">Knudsen AB, Hur C, Gazelle GS, et al. Rescreening of persons with a negative colonoscopy result: results from a microsimulation model. Ann Intern Med 2012; 157:611.</a></li><li><a class="nounderline abstract_t">Meltzer MI. Introduction to health economics for physicians. Lancet 2001; 358:993.</a></li><li><a class="nounderline abstract_t">Mark DB, Hlatky MA. Medical economics and the assessment of value in cardiovascular medicine: Part I. Circulation 2002; 106:516.</a></li><li><a class="nounderline abstract_t">Philips Z, Ginnelly L, Sculpher M, et al. Review of guidelines for good practice in decision-analytic modelling in health technology assessment. Health Technol Assess 2004; 8:iii.</a></li><li><a class="nounderline abstract_t">Weinstein MC, O'Brien B, Hornberger J, et al. Principles of good practice for decision analytic modeling in health-care evaluation: report of the ISPOR Task Force on Good Research Practices--Modeling Studies. Value Health 2003; 6:9.</a></li><li><a class="nounderline abstract_t">Dahabreh IJ, Trikalinos TA, Balk EM, Wong JB. Recommendations for the Conduct and Reporting of Modeling and Simulation Studies in Health Technology Assessment. Ann Intern Med 2016; 165:575.</a></li></ol></div><div id="topicVersionRevision">Topic 2780 Version 25.0</div></div>
-<div class="row">
-<div class="col-12">
-<h4 style="text-align: center;padding: 20px;color: cadetblue;">References</h4>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/402576" id="rid0" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>1 : Foundations of cost-effectiveness analysis for health and medical practices.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/9153371" id="rid1" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>2 : Users' guides to the medical literature. XIII. How to use an article on economic analysis of clinical practice. A. Are the results of the study valid? Evidence-Based Medicine Working Group.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/9178794" id="rid2" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>3 : Users' guides to the medical literature. XIII. How to use an article on economic analysis of clinical practice. B. What are the results and will they help me in caring for my patients? Evidence-Based Medicine Working Group.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/18483128" id="rid3" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>4 : Information on cost-effectiveness: an essential product of a national comparative effectiveness program.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/30855638" id="rid4" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>5 : Overview of Cost-effectiveness Analysis.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/2509745" id="rid5" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>6 : Clinical economics. A guide to the economic analysis of clinical practices.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/2113784" id="rid6" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>7 : A clinician's guide to cost-effectiveness analysis.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/8759647" id="rid7" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>8 : Cost-effectiveness: definitions and use in the gastroenterology literature.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/3079883" id="rid8" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>9 : Use and misuse of the term "cost effective" in medicine.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/27623463" id="rid9" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>10 : Recommendations for Conduct, Methodological Practices, and Reporting of Cost-effectiveness Analyses: Second Panel on Cost-Effectiveness in Health and Medicine.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/28099837" id="rid10" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>11 : Cost-Effectiveness Analysis 2.0.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/28099837" id="rid11" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>12 : Cost-Effectiveness Analysis 2.0.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/8827972" id="rid12" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>13 : The role of cost-effectiveness analysis in health and medicine. Panel on Cost-Effectiveness in Health and Medicine.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/2225406" id="rid13" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>14 : Resource use and cost of initial coronary revascularization. Coronary angioplasty versus coronary bypass surgery.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/2661731" id="rid14" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>15 : Methodology for measuring health-state preferences--III: Population and context effects.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/3384669" id="rid15" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>16 : A general health policy model: update and applications.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/10259643" id="rid16" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>17 : Application of multi-attribute utility theory to measure social preferences for health states.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/730825" id="rid17" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>18 : The utility of different health states as perceived by the general public.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/2379006" id="rid18" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>19 : Attitudes to chemotherapy: comparing views of patients with cancer with those of doctors, nurses, and general public.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/8849754" id="rid19" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>20 : Recommendations of the Panel on Cost-effectiveness in Health and Medicine.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/8861994" id="rid20" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>21 : Recommendations for reporting cost-effectiveness analyses. Panel on Cost-Effectiveness in Health and Medicine.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/23529982" id="rid21" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>22 : Consolidated Health Economic Evaluation Reporting Standards (CHEERS) statement.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/12241891" id="rid22" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>23 : A rational framework for decision making by the National Institute For Clinical Excellence (NICE).</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/1143302" id="rid23" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>24 : What do we gain from the sixth stool guaiac?</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/26172894" id="rid24" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>25 : Cost-effectiveness of 10-Year Risk Thresholds for Initiation of Statin Therapy for Primary Prevention of Cardiovascular Disease.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/10445526" id="rid25" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>26 : Barrett's esophagus: a new look at surveillance based on emerging estimates of cancer risk.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/20855801" id="rid26" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>27 : Stool DNA testing to screen for colorectal cancer in the Medicare population: a cost-effectiveness analysis.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/23128861" id="rid27" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>28 : Rescreening of persons with a negative colonoscopy result: results from a microsimulation model.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/11583768" id="rid28" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>29 : Introduction to health economics for physicians.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/12135955" id="rid29" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>30 : Medical economics and the assessment of value in cardiovascular medicine: Part I.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/15361314" id="rid30" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>31 : Review of guidelines for good practice in decision-analytic modelling in health technology assessment.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/12535234" id="rid31" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>32 : Principles of good practice for decision analytic modeling in health-care evaluation: report of the ISPOR Task Force on Good Research Practices--Modeling Studies.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/27750326" id="rid32" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>33 : Recommendations for the Conduct and Reporting of Modeling and Simulation Studies in Health Technology Assessment.</p>
-</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-</section>
-<!-- End Main Menu Area -->
-<!-- Start Search Popup Area -->
-<!-- End Footer Area -->
-<!-- Back to top -->
-<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
-<!-- End Back to top -->
-<!-- jQuery Min JS -->
-<!-- Prpper JS -->
-<!-- Bootstrap Min JS -->
-<!-- Classy Nav Min Js -->
-<!-- Owl Carousel Min Js -->
-<!-- Magnific Popup JS -->
-<!-- CounterUp JS -->
-<!-- Waypoints JS -->
-<!-- Form Validator Min JS -->
-<!-- Contact Form Min JS -->
-<!-- Main JS -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-</body>
+ <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+ <head>
+  <title>
+   A short primer on cost-effectiveness analysis
+  </title>
+  <link href="d/css/1.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!-- Start Main Menu Area -->
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="container">
+   <div class="row">
+   </div>
+  </div>
+  <section class="teacher-area ptb-10">
+   <div class="container">
+   </div>
+   <section class="course-details-area ptb-60">
+    <div class="container">
+     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+      <h1 style="text-align:center">
+       A short primer on cost-effectiveness analysis
+      </h1>
+      <div class="utdArticleSection utdStyle" id="topicContent">
+       <div id="topicTitle">
+        A short primer on cost-effectiveness analysis
+       </div>
+       <div class="authorSectionElem">
+        <div class="authorsElementsLeft">
+         <dl id="topicContributors">
+          <dt>
+           <span>
+           </span>
+           Authors:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Peter A L Bonis, MD
+           </a>
+          </dd>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            John B Wong, MD
+           </a>
+          </dd>
+          <dt>
+           <span>
+           </span>
+           Section Editors:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Joann G Elmore, MD, MPH
+           </a>
+          </dd>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            David M Rind, MD
+           </a>
+          </dd>
+          <dt>
+           <span>
+           </span>
+           Deputy Editor:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Carrie Armsby, MD, MPH
+           </a>
+          </dd>
+         </dl>
+        </div>
+        <div class="authorsElementsRight">
+         <div id="literatureReviewDate">
+          <div class="litReviewSingleLine">
+           <bdi>
+            <span class="emphasis">
+             Literature review current through:
+            </span>
+            Jan 2024.
+           </bdi>
+          </div>
+          <div class="litReviewSingleLine">
+           <bdi>
+            <span class="emphasis">
+             This topic last updated:
+            </span>
+            Sep 10, 2021.
+           </bdi>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div id="topicWhatsNewContainer">
+       </div>
+       <div id="topicText">
+        <p class="headingAnchor" id="H1">
+         <span class="h1">
+          INTRODUCTION
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Health care advances such as new drugs, devices, or screening and diagnostic tests must demonstrate safety and efficacy to be approved for clinical use. However, because of rising health care costs and limited budgets, questions may remain about their value [
+         <a href="#rid1">
+          1
+         </a>
+         ]. Cost-effectiveness analysis is one approach to determining value and refers to a method for assessing the costs and health benefits of an intervention [
+         <a href="#rid1">
+          1
+         </a>
+         ]. Assuming that health budgets cannot meet all of the possible demand, cost-effectiveness evaluation can assist decision-makers in allocating resources to maximize the net public health benefit when choosing among options in the care of patients [
+         <a href="#rid2">
+          2-8
+         </a>
+         ].
+        </p>
+        <p>
+         Although cost-effectiveness analysis has become a fundamental research method in health and medicine, it also has great potential to be misunderstood because of methodologic complexity in definitions, measurement, and interpretation [
+         <a href="#rid9">
+          9
+         </a>
+         ]. The term "cost-effective" itself is frequently misused as an adjective (eg, an intervention is "cost-effective") without providing a point of reference.
+        </p>
+        <p>
+         This topic review will provide a basic overview of the principles of cost-effectiveness analysis while highlighting some of the controversies. Detailed discussions on this topic have been presented in a series of consensus statements issued by the Panel on Cost-Effectiveness in Health and Medicine through the United States Public Health Service [
+         <a href="#rid10">
+          10-12
+         </a>
+         ].
+        </p>
+        <p class="headingAnchor" id="H2">
+         <span class="h1">
+          DEFINITIONS
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Four types of economic analysis have been applied to health care.
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Cost-effectiveness analysis or
+         <strong>
+          cost-utility analysis
+         </strong>
+         (a type of cost-effectiveness analysis) are most commonly used for performing economic analyses in health care. In these analyses, monetary and health outcomes are measured separately and the relative value of an intervention is measured as the additional cost to achieve an incremental health benefit such as dollars to prevent a case of cancer. In cost-utility analysis, the effectiveness metric becomes life expectancy adjusted for the morbidity or quality of life associated with the alternative strategies.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         Four outcomes are possible when comparing two alternatives (such as screening versus no screening) using cost-effectiveness analysis: Screening is either more expensive or less costly than no screening, and, in either case, it may improve or worsen health outcomes. If no screening costs more and leads to worse outcomes, screening is cost saving and is preferred to no screening because it improves health outcomes at a lower cost. The situation is more complex if screening costs more but also leads to health benefits, in which case, the cost-effectiveness of screening can be determined [
+         <a href="#rid8">
+          8
+         </a>
+         ]. Cost-effectiveness does not necessarily imply that an intervention is cost saving. Similarly, an intervention cannot be considered to be cost-effective merely because it is more effective.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Cost-identification or cost-minimization analysis simply examines costs of care, implicitly assuming equal health benefits for all of the alternative options and thus ignoring noneconomic outcomes.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Cost-benefit analysis incorporates both costs and health outcomes, placing a monetary value on health outcomes so that the alternatives can be evaluated on a single outcome measure. However, because assigning a monetary value to a health outcome (or life) raises many ethical objections, cost-benefit analysis has generally not been accepted in health care.
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H3">
+         <span class="h1">
+          PERSPECTIVE
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The point of view of the analysis determines which costs and health effects are considered. As an example, patients, providers, health payers, and society may view antibiotic costs differently: Patients may consider only out-of-pocket or copayment costs, health payers may consider the antibiotic cost and whether it is generic or non-generic, and society may also consider the costs of emerging drug resistance from antibiotic overuse. Providers may consider the health benefit for an individual patient but weigh it against the public health implications of antibiotic overuse.
+        </p>
+        <p>
+         Cost-effectiveness analyses ideally apply a societal perspective to include costs, benefits, and harms that may extend beyond the payer or provider directly involved in the decision [
+         <a href="#rid6">
+          6
+         </a>
+         ]. The societal perspective represents the overall public interest by including social opportunity costs where the use of limited resources (such as personnel, hospital beds, donor organs, or budgets) results in the loss of opportunity to use those funds (or resources) for other purposes. The societal perspective allows cost-effectiveness results to be compared directly with other interventions from a public health vantage point [
+         <a href="#rid13">
+          13
+         </a>
+         ].
+        </p>
+        <p class="headingAnchor" id="H4">
+         <span class="h1">
+          COSTS
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Costs refer to the total net expenditures related to an intervention, including the costs of treatment, adverse treatment effects, and future possible savings from the prevention of disease or morbidity [
+         <a href="#rid1">
+          1
+         </a>
+         ]. Costs are distinct from charges (which include a profit margin). They can be categorized as [
+         <a href="#rid6">
+          6,10
+         </a>
+         ]:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Direct medical care (eg, clinician time, test, or drug)
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Direct nonmedical care (eg, food, transportation, lodging, clothing, home aides, or care by family members due to illness)
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Time or indirect morbidity and mortality (eg, lost productivity from missed work or loss of life) and intangible (eg, pain and suffering)
+        </p>
+        <p>
+        </p>
+        <p>
+         Fixed costs are those unrelated to short-term changes in volume (eg, cost of an endoscope), while variable costs are those directly related to changes in volume (eg, cost of stool guaiac cards) [
+         <a href="#rid6">
+          6
+         </a>
+         ].
+        </p>
+        <p>
+         Estimation of costs can be done from a top-down or a bottom-up approach and can be retrospective or prospective. In a top-down analysis, an appropriate clinical cohort is identified and their aggregated economic or resource costs are obtained from patient-specific medical billing data, usually as charges (eg, hospital or clinician bills), which are then adjusted with cost-to-charge ratios. In a bottom-up approach, estimates are obtained in a two-step process. First, the frequency of utilization of individual resources is obtained (eg, drugs, tests, procedures, and hospital days). Subsequently, the frequencies are multiplied by each unit's cost and then summed to yield a total cost. A complete assessment of costs may also involve "microcosting," in which additional costs such as the contribution of nursing care, supplies, or ancillary services to specific costs (such as a hospital day) are detailed. Not surprisingly, the method used to determine costs can result in substantially different estimates [
+         <a href="#rid14">
+          14
+         </a>
+         ].
+        </p>
+        <p>
+         Practice patterns and costs may vary considerably across different providers or regions. This difficulty can, in part, be addressed by estimating average costs and ranges and by performing sensitivity analysis. (See
+         <a class="local">
+          'Sensitivity analysis'
+         </a>
+         below.)
+        </p>
+        <p class="headingAnchor" id="H5">
+         <span class="h1">
+          EFFECTIVENESS
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Effectiveness is typically measured in units that are relevant to the condition under study and are meaningful for the decision-maker. Examples include cancers prevented, lives saved, or life years gained. A standard outcome scale allows policymakers to compare the relative net health benefits of alternative funding decisions. Thus, cost-utility analysis frequently uses quality-adjusted life years (QALYs) gained to reflect not only prolongation of life but also the quality of life associated with those years (eg, surviving without prostate cancer but with erectile dysfunction from its treatment).
+        </p>
+        <p>
+         To determine quality of life, utility assessment involves the quantification of preferences for health outcomes. Although methods to determine health effects and to incorporate quality of life have not been standardized, the following approaches have most commonly been used to address these issues:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         The "time trade-off" and "standard gamble" methods [
+         <a href="#rid15">
+          15
+         </a>
+         ]:
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         With the time trade-off method, individuals choose between living a shortened amount of time with perfect health and living longer with impaired health. The length of time is varied until the individual has difficulty deciding between the alternatives. If someone were indifferent to "living six months of life in perfect health versus living for one year with hepatocellular carcinoma," then living a year with hepatocellular carcinoma equals living six quality-adjusted life months.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         With the standard gamble method, individuals choose between a guaranteed intermediate health outcome and a chance of having either the worst outcome (most often death) or the best outcome. The likelihood of dying is varied until individuals have difficulty choosing.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Scales that tabulate premeasured preferences for health states or outcomes are defined in various dimensions (such as the Health Utilities Index, Quality of Well-Being Scale, or EuroQol) [
+         <a href="#rid16">
+          16,17
+         </a>
+         ].
+        </p>
+        <p>
+        </p>
+        <p>
+         Besides variation in the methods to assess "utilities" or "preferences," the study population used to determine quality of life affects the estimate. Different estimates may be reached depending upon whether the study population included clinicians, patients with the disease, or individuals from the general population who have not experienced the disease. As a general rule, individuals experienced with a disability assign a higher (better) quality of life value than those without the disability [
+         <a href="#rid18">
+          18,19
+         </a>
+         ].
+        </p>
+        <p class="headingAnchor" id="H6">
+         <span class="h1">
+          THE REFERENCE CASE
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         A cost-effectiveness analysis should ideally present a reference case in which the analysis is performed using a standard set of methods and assumptions for the measurement and reporting of costs and health effects [
+         <a href="#rid13">
+          13
+         </a>
+         ]. The reference case methodologies include the following considerations:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Components belonging in the numerator or denominator of a cost-effectiveness ratio
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Measuring terms in the numerator of a cost-effectiveness ratio (costs)
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Valuing the health consequences in the denominator of a cost-effectiveness ratio
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Estimating effectiveness of interventions
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Time preferences and discounting
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Handling uncertainty in cost-effectiveness analysis
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Reporting guidelines [
+         <a href="#rid20">
+          20
+         </a>
+         ] with 38 specific items in a checklist for reporting the reference case cost-effectiveness analysis [
+         <a href="#rid21">
+          21
+         </a>
+         ]
+        </p>
+        <p>
+        </p>
+        <p>
+         The reference case improves the comparability of cost-effectiveness analyses, thereby permitting the health policymakers to choose the most efficient use of public health resources in their funding decisions (
+         <a class="graphic graphic_table graphicRef69531" href="/z/d/graphic/69531.html" rel="external">
+          table 1
+         </a>
+         ) [
+         <a href="#rid5">
+          5
+         </a>
+         ].
+        </p>
+        <p>
+         A consensus statement has been issued with regard to the details of how the reference case should be defined [
+         <a href="#rid20">
+          20,21
+         </a>
+         ]. Unfortunately, many cost-effectiveness analyses continue to be published that do not contain a reference case. In 2013, the Consolidated Health Economic Evaluation Reporting Standards (CHEERS) statement developed a 24-item checklist to update, consolidate, and optimize the reporting of health economic evaluations [
+         <a href="#rid22">
+          22
+         </a>
+         ].
+        </p>
+        <p class="headingAnchor" id="H7">
+         <span class="h1">
+          TIME HORIZON AND DISCOUNT RATE
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The time horizon of an analysis reflects the length of time over which health benefits and costs should be considered and included in the analysis. Because of annual budgets and competing market forces, health payers usually consider short-term, one-year time horizons, but the societal perspective recommended in the reference case typically applies a long-term or lifetime time horizon. In such cases, time preferences for expenditures become important and are captured as the "discount" rate.
+        </p>
+        <p>
+         Money available or spent now is more valuable than money available or spent in the future because of opportunity costs. As an example, one would prefer to receive money now as opposed to receiving the same amount a year from now because money available now can be put to immediate use. The discount rate quantifies this time preference and places all economic costs in terms of present value. The reference case recommends applying a 3 percent annual discount rate [
+         <a href="#rid13">
+          13
+         </a>
+         ], so spending $100 now equals spending $97 one year from now and $74 ten years from now. Because costs are discounted, the benefits of health interventions must also be discounted.
+        </p>
+        <p>
+         Note that the discount rate is not an adjustment for inflation, which is a separate consideration. Even in the absence of inflation, most individuals would prefer to have an equivalent health benefit or money now as opposed to in the future. The discount rate captures this time preference. When data regarding costs are derived from different years, older costs are usually inflated to their equivalent values in more recent years so that there can be a consistent economic basis. If future medical inflation costs rise uniformly, then future purchasing power for health care remains the same and there is no need to adjust for medical inflation.
+        </p>
+        <p class="headingAnchor" id="H8">
+         <span class="h1">
+          SENSITIVITY ANALYSIS
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         As underscored in the previous discussions, considerable uncertainty may remain regarding the parameters used to measure costs and health effects, even in the most carefully conducted cost-effectiveness studies. To help identify the most influential or important parameters and to assess the degree to which uncertainty in the parameter could affect the overall results, cost-effectiveness analyses usually perform multiple evaluations in which one or more of the parameters are varied across reasonable ranges. The ranges reflect intrinsic variability or regional variation. As an example, the cost of colonoscopy may be cheaper in some institutions or health care delivery settings compared with others; thus, to determine the cost-effectiveness of screening colonoscopy, the cost of a colonoscopy is varied over a range to determine the maximal cost at which it remains cost-effective. This process (termed "sensitivity analysis") allows for a reasonable appraisal about the parameters that are most important in the analysis and the stability of the reference case results.
+        </p>
+        <p>
+         Cost-effectiveness analyses that include a decision analysis routinely perform sensitivity analysis. Decision analysis involves the mathematical modeling of health outcomes, utilities (preference-based estimates of the quality of life with various health conditions), and costs based on published estimates of key parameters (see
+         <a class="medical medical_review" href="/z/d/html/2758.html" rel="external">
+          "Decision analysis"
+         </a>
+         ). The degree to which sensitivity analysis is performed (and thereby the rigor with which assumptions are tested) varies across decision analyses. Furthermore, economic data from clinical trials, as opposed to decision analyses, may omit sensitivity analysis or subgroup analyses.
+        </p>
+        <p>
+         Sensitivity analyses have typically assessed the effect of varying selected parameters related to cost-effectiveness one at a time. A more contemporary approach called Monte Carlo simulation permits all parameters to be varied simultaneously. These sophisticated analyses yield a cost-effectiveness acceptability curve, which accounts for uncertainty in all model estimates. The end result is that the curve displays the likelihood that a new intervention will have a cost-effectiveness ratio that falls below a particular societal "willingness to pay." (See
+         <a class="local">
+          'Interpretation'
+         </a>
+         below.)
+        </p>
+        <p>
+         Monte Carlo models can also be used to determine whether additional information about parameters used in the model (such as could be obtained by conducting additional research) would be useful. This can be highly valuable to policymakers who decide whether the new therapy will be approved and paid for or whether public funds should allocated towards further study to clarify cost-effectiveness. As an example, the initial clinical trials for
+         <a class="drug drug_general" data-topicid="9383" href="/z/d/drug information/9383.html" rel="external">
+          donepezil
+         </a>
+         for Alzheimer disease had follow-up shorter than 24 months, while longer treatment would be expected to be required. Monte Carlo models suggested that research to determine its efficacy beyond 24 months had a potential economic value of $270 million [
+         <a href="#rid23">
+          23
+         </a>
+         ].
+        </p>
+        <p class="headingAnchor" id="H9">
+         <span class="h1">
+          COST-EFFECTIVENESS RATIO
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The average cost-effectiveness ratio divides each intervention's costs by its effectiveness. This can result in misleading conclusions about an intervention's cost-effectiveness [
+         <a href="#rid7">
+          7
+         </a>
+         ]. A preferable way to express cost-effectiveness is "incremental" cost-effectiveness, which refers to the additional cost and the additional benefit of one intervention compared with another.
+        </p>
+        <p>
+         Consider, for example, whether four or three stool guaiac tests should be performed annually for colon cancer screening [
+         <a href="#rid24">
+          24
+         </a>
+         ]. Performing three annual guaiacs represents the standard of care against which performing four guaiacs is being compared. When applied to 10,000 people, three annual guaiacs results in a net cost of $130,999 and detects 71.9003 cases of colon cancer and four annual guaiacs costs $148,116 and detects 71.9385 cases. The average cost-effectiveness of performing three or four tests annually is $1,810 or $2,059 per cancer detected; either appears to be reasonable.
+        </p>
+        <p>
+         In contrast, the incremental cost-effectiveness ratio asks how much additional benefit and at what additional cost does performing four instead of three guaiacs provide. Dividing the net costs of four guaiacs minus the net costs of three guaiacs (incremental cost of four versus three guaiacs = $17,917) by the effectiveness of four guaiacs minus the effectiveness of three guaiacs (incremental benefit of four versus three guaiacs = 0.0382 additional cancers detected) yields an incremental cost-effectiveness ratio of $469,534 per additional cancer detected (an incremental cost 20 times higher than the average cost-effectiveness). The units are typically in dollars (or other units of currency) per effectiveness gained.
+        </p>
+        <p>
+         Cost-utility analyses report results using a standard expression of cost-effectiveness, ie, the cost to increase life expectancy by one quality-adjusted life year (QALY; adjusted to one year of perfect health and discounted to its present value). The rationale for choosing this expression can be understood by the difficulty that can arise when trying to compare studies in which cost-effectiveness is expressed using different effectiveness metrics. As an example, the relative cost-effectiveness of a colon cancer detected versus a myocardial infarction prevented would leave a policy analyst in a quandary as to which was more valuable.
+        </p>
+        <p>
+         As an example, the Multicenter Automatic Defibrillator Implantation Trial (MADIT) illustrates the calculation of the incremental cost-effectiveness ratio [
+         <a href="#rid25">
+          25
+         </a>
+         ]. This randomized controlled trial demonstrated that placement of implantable cardiac defibrillators (ICDs) in asymptomatic patients at high risk for sudden cardiac death (SCD) prevents SCD compared with pharmacologic therapy. Over a four-year period, mean survival in the ICD group was 3.46 years at a cost of $97,560 compared with 2.66 years at a cost of $75,980 for conventionally treated patients. Dividing the incremental cost of $21,580 by the incremental benefit of 0.8 years yields an incremental cost-effectiveness ratio of $27,000 per life year saved.
+        </p>
+        <p>
+         The incremental cost-effectiveness ratio helps decision-makers determine whether or how a new intervention should be used. Lower ratios imply better cost-effectiveness. Using low osmolar contrast media for high-risk patients has an incremental cost-effectiveness of $22,600 per QALY gained, but if given to a low-risk patient, its cost-effectiveness rises to $220,000 per QALY gained. With a limited budget of $1 million, spending it on low osmolar contrast for low-risk patients would add only 4.5 years, while spending it on high-risk patients would add 44 years [
+         <a href="#rid7">
+          7
+         </a>
+         ].
+        </p>
+        <p>
+         Even in the presence of uncertainty, the cost-effectiveness ratio can still be helpful in choosing among options. As an example, routine endoscopic screening has been recommended in Barrett's esophagus, a premalignant condition of the esophagus. The frequency with which endoscopic screening should be performed depends critically on the cancer risk in patients with the condition [
+         <a href="#rid26">
+          26
+         </a>
+         ]. Although the actual risk is not known precisely, sensitivity analysis varying this key factor can help in choosing among different surveillance intervals (
+         <a class="graphic graphic_figure graphicRef76263" href="/z/d/graphic/76263.html" rel="external">
+          figure 1
+         </a>
+         ). (See
+         <a class="medical medical_review" href="/z/d/html/2236.html" rel="external">
+          "Barrett's esophagus: Surveillance and management"
+         </a>
+         .)
+        </p>
+        <p>
+         Similarly, the cost-effectiveness ratio can be helpful to determine the range of acceptable costs for a new intervention or diagnostic test compared with an existing standard. In one study, for example, a stool DNA test for screening for colorectal cancer would be cost-effective compared with standard screening approaches if the test cost fell to $40 to $60 [
+         <a href="#rid27">
+          27
+         </a>
+         ]. However, the cost of stool DNA testing in 2010 was $350. The test would be more costly and less effective than other alternatives.
+        </p>
+        <p>
+         As an example, initial colon cancer screening has been found to be cost-effective using commonly accepted metrics (see
+         <a class="local">
+          'Interpretation'
+         </a>
+         below). However, clinicians and patients may wonder whether colonoscopy for colon cancer screening remains cost-effective among adults with an initial negative colonoscopy and, therefore, possibly a lower lifetime risk for developing colon cancer. A cost-effectiveness analysis found that any screening method substantially reduced colorectal cancer risk by 8 to 21 lifetime cases out of every 1000 persons, depending on the screening test and patient adherence, when compared with no further screening. However, rescreening with annual highly-sensitive guaiac fecal occult blood testing, annual fecal immunochemical testing, or computed tomographic colonography every five years resulted in fewer complications and had lower lifetime costs than continuing colonoscopy every 10 years [
+         <a href="#rid28">
+          28
+         </a>
+         ].
+        </p>
+        <p>
+         While the incremental cost-effectiveness ratio is helpful, the context and absolute costs of different interventions also need to be incorporated into decision-making because the consistent selection of strategies based only upon cost may lead to a minimalist approach to providing services. Consider, for example, a disease that is invariably fatal within one week if left untreated [
+         <a href="#rid9">
+          9
+         </a>
+         ]. Two treatment options are available. The first option costs $100 and produces a life expectancy of one year. The second option costs 10 times as much ($1000) but yields a life expectancy of five years. A practice based on cost-minimization would select the first option, yet the incremental cost-effectiveness of the second option is only $225 per year of life gained ($1000 − $100)/(5 − 1). Although the first option has the lowest cost, it would be unacceptable when considering the severity of the illness, degree of benefit, and relatively low absolute cost of the second option.
+        </p>
+        <p class="headingAnchor" id="H10">
+         <span class="h2">
+          Interpretation
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Having determined the incremental cost-effectiveness ratio, how should those ratios be interpreted? The examples presented above bring into focus two general methods for evaluating cost-effectiveness ratios.
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         The first method is based upon the notion of "willingness to pay." A decision-maker (such as an insurance company) may decide that it is only willing to pay a certain amount per unit of gain (such as QALYs) across all of the services that it covers. Thus, the selection among options with different cost-effectiveness ratios would be based upon staying within this limit. In the example above, with a willingness to pay for all interventions that falls below $50,000 per QALY gained, the health care payer should fund low osmolar contrast for high-risk patients but not for low-risk patients.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         The second method involves comparing the cost-effectiveness ratio of an intervention with other well-accepted medical practices by examining a league table. A league table is a compilation of cost-effectiveness ratios for various treatments and diseases complying with the reference case (
+         <a class="graphic graphic_table graphicRef69531" href="/z/d/graphic/69531.html" rel="external">
+          table 1
+         </a>
+         ). As a general rule, interventions that yield a cost-effectiveness ratio of less than $50,000 to $100,000 per QALY gained have been considered to be acceptable in the United States and several other countries. This cutoff is also consistent with World Health Organization recommendations, which suggest that interventions with cost-effectiveness ratios less than three times the gross domestic product (GDP) per capita are "cost-effective" and those less than the GDP per capita (approximately $65,000 for the United States in 2019) are "very cost-effective." The historical standard used for setting this threshold has been hemodialysis for chronic renal failure, which has an incremental cost-effectiveness ratio of $60,000 to $128,000 per QALY gained.
+        </p>
+        <p>
+        </p>
+        <p>
+         However, because of moral imperatives related to social justice (including that patients with rare or life-threatening diseases should still have access to effective therapies despite their expense), some medical interventions with high incremental cost-effectiveness ratios are still widely performed (eg, cardiac transplantation at a cost of $160,000 per life-year gained). On the other hand, these high incremental cost-effectiveness ratio interventions can drive health care costs up, potentially depriving others of access to basic health care.
+        </p>
+        <p>
+         Despite the efforts to standardize analyses using the reference case, direct comparison of different cost-effectiveness studies may not be straightforward, because studies were performed at different times, often using different methodologies and assumptions and variable expressions of effectiveness. Furthermore, only rarely are there health conditions for which all the relevant treatment options have been compared rigorously.
+        </p>
+        <p class="headingAnchor" id="H11">
+         <span class="h1">
+          EVALUATING A COST-EFFECTIVENESS STUDY
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The discussion presented above emphasizes that cost-effectiveness analysis is complex and that studies making claims regarding cost-effectiveness should receive the same level of scrutiny as other types of studies. The following questions can provide guidance when evaluating a cost-effectiveness analysis, although many additional features reflecting the conduct of the study and its quality can be considered in specific settings [
+         <a href="#rid2">
+          2,3,21,22,29-33
+         </a>
+         ].
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Did the study compare well-defined strategies that are consistent with medical practice?
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Were the included patients representative of the types of patients that the analysis is intended to apply to?
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Were costs defined reasonably?
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Were all the relevant costs considered?
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Did the estimates of cost reflect those in the community in which the results are intended to apply?
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Were ranges of costs considered for key services?
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Was effectiveness expressed in relevant units such as quality-adjusted life years (QALYs) gained? Was it reasonable to ignore quality of life if it was not considered?
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Was the time frame examined long enough for the expected benefits to have been observed?
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Were all the relevant outcomes considered?
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Was sensitivity analysis performed?
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Was the perspective defined clearly?
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Was a reference case presented?
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Were the findings discussed in context of other options available to treat the particular condition?
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H12">
+         <span class="h1">
+          SUMMARY
+         </span>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         As economic pressures have increased, it is no longer sufficient for clinicians to know simply about the safety, efficacy, and effectiveness of medical practices. Cost-effectiveness analysis provides a commonly accepted method to evaluate the value or efficiency of new technologies and drugs. (See
+         <a class="local">
+          'Introduction'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Cost-effectiveness analysis or cost-utility analysis (a type of cost-effectiveness analysis) are most commonly used for performing economic analyses in health care. In these analyses, monetary and health outcomes are measured separately and the relative value of an intervention is measured as the additional cost to achieve an incremental health benefit such as dollars to prevent a case of cancer. In cost-utility analysis, the effectiveness metric becomes life expectancy adjusted for the morbidity or quality of life associated with the alternative strategies. (See
+         <a class="local">
+          'Definitions'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Costs refer to the total net expenditures related to an intervention, including the costs of treatment, adverse treatment effects, and future possible savings from the prevention of disease or morbidity. They can be categorized as (see
+         <a class="local">
+          'Costs'
+         </a>
+         above):
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Direct medical care (eg, clinician time, test, or drug)
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Direct nonmedical care (eg, food, transportation, lodging, clothing, home aides, or care by family members due to illness)
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Indirect morbidity and mortality (eg, lost productivity) and intangible (eg, pain and suffering)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Effectiveness is typically measured in units that are relevant to the condition under study and are meaningful for the decision-maker. A standard outcome scale allows policymakers to compare the relative net health benefits of alternative funding decisions. Cost-utility analysis frequently uses quality-adjusted life years (QALYs) gained to reflect not only prolongation of life but also the quality of life associated with those years. (See
+         <a class="local">
+          'Effectiveness'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         To help identify the most influential or important parameters and to assess the degree to which uncertainty in the parameter could affect the overall results, cost-effectiveness analyses usually perform multiple evaluations in which one or more of the parameters are varied across reasonable ranges. (See
+         <a class="local">
+          'Sensitivity analysis'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Interventions that yield a cost-effectiveness ratio of less than $50,000 to $100,000 per QALY gained have been considered to be acceptable in the United States and several other countries. The historical standard used for setting this threshold has been hemodialysis for chronic renal failure, which has an incremental cost-effectiveness ratio of $60,000 to $128,000 per QALY gained. (See
+         <a class="local">
+          'Interpretation'
+         </a>
+         above.)
+        </p>
+       </div>
+       <div class="headingAnchor" id="references">
+        <ol id="reference">
+         <li>
+          <a class="nounderline abstract_t">
+           Weinstein MC, Stason WB. Foundations of cost-effectiveness analysis for health and medical practices. N Engl J Med 1977; 296:716.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Drummond MF, Richardson WS, O'Brien BJ, et al. Users' guides to the medical literature. XIII. How to use an article on economic analysis of clinical practice. A. Are the results of the study valid? Evidence-Based Medicine Working Group. JAMA 1997; 277:1552.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           O'Brien BJ, Heyland D, Richardson WS, et al. Users' guides to the medical literature. XIII. How to use an article on economic analysis of clinical practice. B. What are the results and will they help me in caring for my patients? Evidence-Based Medicine Working Group. JAMA 1997; 277:1802.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           American College of Physicians. Information on cost-effectiveness: an essential product of a national comparative effectiveness program. Ann Intern Med 2008; 148:956.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Sanders GD, Maciejewski ML, Basu A. Overview of Cost-effectiveness Analysis. JAMA 2019; 321:1400.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Eisenberg JM. Clinical economics. A guide to the economic analysis of clinical practices. JAMA 1989; 262:2879.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Detsky AS, Naglie IG. A clinician's guide to cost-effectiveness analysis. Ann Intern Med 1990; 113:147.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Provenzale D, Lipscomb J. Cost-effectiveness: definitions and use in the gastroenterology literature. Am J Gastroenterol 1996; 91:1488.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Doubilet P, Weinstein MC, McNeil BJ. Use and misuse of the term "cost effective" in medicine. N Engl J Med 1986; 314:253.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Sanders GD, Neumann PJ, Basu A, et al. Recommendations for Conduct, Methodological Practices, and Reporting of Cost-effectiveness Analyses: Second Panel on Cost-Effectiveness in Health and Medicine. JAMA 2016; 316:1093.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Neumann PJ, Sanders GD. Cost-Effectiveness Analysis 2.0. N Engl J Med 2017; 376:203.
+          </a>
+         </li>
+         <li class="breakAll">
+          Neumann PJ, Sanders GD, Russell LB, et al. Cost-Effectiveness in Health and Medicine, 2nd ed, Oxford University Press, New York 2017.
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Russell LB, Gold MR, Siegel JE, et al. The role of cost-effectiveness analysis in health and medicine. Panel on Cost-Effectiveness in Health and Medicine. JAMA 1996; 276:1172.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Hlatky MA, Lipscomb J, Nelson C, et al. Resource use and cost of initial coronary revascularization. Coronary angioplasty versus coronary bypass surgery. Circulation 1990; 82:IV208.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Froberg DG, Kane RL. Methodology for measuring health-state preferences--III: Population and context effects. J Clin Epidemiol 1989; 42:585.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Kaplan RM, Anderson JP. A general health policy model: update and applications. Health Serv Res 1988; 23:203.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Torrance GW, Boyle MH, Horwood SP. Application of multi-attribute utility theory to measure social preferences for health states. Oper Res 1982; 30:1043.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Sackett DL, Torrance GW. The utility of different health states as perceived by the general public. J Chronic Dis 1978; 31:697.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Slevin ML, Stubbs L, Plant HJ, et al. Attitudes to chemotherapy: comparing views of patients with cancer with those of doctors, nurses, and general public. BMJ 1990; 300:1458.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Weinstein MC, Siegel JE, Gold MR, et al. Recommendations of the Panel on Cost-effectiveness in Health and Medicine. JAMA 1996; 276:1253.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Siegel JE, Weinstein MC, Russell LB, Gold MR. Recommendations for reporting cost-effectiveness analyses. Panel on Cost-Effectiveness in Health and Medicine. JAMA 1996; 276:1339.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Husereau D, Drummond M, Petrou S, et al. Consolidated Health Economic Evaluation Reporting Standards (CHEERS) statement. BMJ 2013; 346:f1049.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Claxton K, Sculpher M, Drummond M. A rational framework for decision making by the National Institute For Clinical Excellence (NICE). Lancet 2002; 360:711.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Neuhauser D, Lewicki AM. What do we gain from the sixth stool guaiac? N Engl J Med 1975; 293:226.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Pandya A, Sy S, Cho S, et al. Cost-effectiveness of 10-Year Risk Thresholds for Initiation of Statin Therapy for Primary Prevention of Cardiovascular Disease. JAMA 2015; 314:142.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Provenzale D, Schmitt C, Wong JB. Barrett's esophagus: a new look at surveillance based on emerging estimates of cancer risk. Am J Gastroenterol 1999; 94:2043.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Lansdorp-Vogelaar I, Kuntz KM, Knudsen AB, et al. Stool DNA testing to screen for colorectal cancer in the Medicare population: a cost-effectiveness analysis. Ann Intern Med 2010; 153:368.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Knudsen AB, Hur C, Gazelle GS, et al. Rescreening of persons with a negative colonoscopy result: results from a microsimulation model. Ann Intern Med 2012; 157:611.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Meltzer MI. Introduction to health economics for physicians. Lancet 2001; 358:993.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Mark DB, Hlatky MA. Medical economics and the assessment of value in cardiovascular medicine: Part I. Circulation 2002; 106:516.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Philips Z, Ginnelly L, Sculpher M, et al. Review of guidelines for good practice in decision-analytic modelling in health technology assessment. Health Technol Assess 2004; 8:iii.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Weinstein MC, O'Brien B, Hornberger J, et al. Principles of good practice for decision analytic modeling in health-care evaluation: report of the ISPOR Task Force on Good Research Practices--Modeling Studies. Value Health 2003; 6:9.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Dahabreh IJ, Trikalinos TA, Balk EM, Wong JB. Recommendations for the Conduct and Reporting of Modeling and Simulation Studies in Health Technology Assessment. Ann Intern Med 2016; 165:575.
+          </a>
+         </li>
+        </ol>
+       </div>
+       <div id="topicVersionRevision">
+        Topic 2780 Version 25.0
+       </div>
+      </div>
+      <div class="row">
+       <div class="col-12">
+        <h4 style="text-align: center;padding: 20px;color: cadetblue;">
+         References
+        </h4>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/402576" id="rid0" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          1 : Foundations of cost-effectiveness analysis for health and medical practices.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/9153371" id="rid1" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          2 : Users' guides to the medical literature. XIII. How to use an article on economic analysis of clinical practice. A. Are the results of the study valid? Evidence-Based Medicine Working Group.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/9178794" id="rid2" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          3 : Users' guides to the medical literature. XIII. How to use an article on economic analysis of clinical practice. B. What are the results and will they help me in caring for my patients? Evidence-Based Medicine Working Group.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/18483128" id="rid3" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          4 : Information on cost-effectiveness: an essential product of a national comparative effectiveness program.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/30855638" id="rid4" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          5 : Overview of Cost-effectiveness Analysis.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/2509745" id="rid5" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          6 : Clinical economics. A guide to the economic analysis of clinical practices.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/2113784" id="rid6" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          7 : A clinician's guide to cost-effectiveness analysis.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/8759647" id="rid7" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          8 : Cost-effectiveness: definitions and use in the gastroenterology literature.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/3079883" id="rid8" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          9 : Use and misuse of the term "cost effective" in medicine.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/27623463" id="rid9" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          10 : Recommendations for Conduct, Methodological Practices, and Reporting of Cost-effectiveness Analyses: Second Panel on Cost-Effectiveness in Health and Medicine.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/28099837" id="rid10" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          11 : Cost-Effectiveness Analysis 2.0.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/28099837" id="rid11" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          12 : Cost-Effectiveness Analysis 2.0.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/8827972" id="rid12" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          13 : The role of cost-effectiveness analysis in health and medicine. Panel on Cost-Effectiveness in Health and Medicine.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/2225406" id="rid13" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          14 : Resource use and cost of initial coronary revascularization. Coronary angioplasty versus coronary bypass surgery.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/2661731" id="rid14" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          15 : Methodology for measuring health-state preferences--III: Population and context effects.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/3384669" id="rid15" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          16 : A general health policy model: update and applications.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/10259643" id="rid16" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          17 : Application of multi-attribute utility theory to measure social preferences for health states.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/730825" id="rid17" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          18 : The utility of different health states as perceived by the general public.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/2379006" id="rid18" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          19 : Attitudes to chemotherapy: comparing views of patients with cancer with those of doctors, nurses, and general public.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/8849754" id="rid19" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          20 : Recommendations of the Panel on Cost-effectiveness in Health and Medicine.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/8861994" id="rid20" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          21 : Recommendations for reporting cost-effectiveness analyses. Panel on Cost-Effectiveness in Health and Medicine.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/23529982" id="rid21" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          22 : Consolidated Health Economic Evaluation Reporting Standards (CHEERS) statement.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/12241891" id="rid22" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          23 : A rational framework for decision making by the National Institute For Clinical Excellence (NICE).
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/1143302" id="rid23" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          24 : What do we gain from the sixth stool guaiac?
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/26172894" id="rid24" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          25 : Cost-effectiveness of 10-Year Risk Thresholds for Initiation of Statin Therapy for Primary Prevention of Cardiovascular Disease.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/10445526" id="rid25" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          26 : Barrett's esophagus: a new look at surveillance based on emerging estimates of cancer risk.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/20855801" id="rid26" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          27 : Stool DNA testing to screen for colorectal cancer in the Medicare population: a cost-effectiveness analysis.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/23128861" id="rid27" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          28 : Rescreening of persons with a negative colonoscopy result: results from a microsimulation model.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/11583768" id="rid28" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          29 : Introduction to health economics for physicians.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/12135955" id="rid29" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          30 : Medical economics and the assessment of value in cardiovascular medicine: Part I.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/15361314" id="rid30" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          31 : Review of guidelines for good practice in decision-analytic modelling in health technology assessment.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/12535234" id="rid31" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          32 : Principles of good practice for decision analytic modeling in health-care evaluation: report of the ISPOR Task Force on Good Research Practices--Modeling Studies.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/27750326" id="rid32" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          33 : Recommendations for the Conduct and Reporting of Modeling and Simulation Studies in Health Technology Assessment.
+         </p>
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </section>
+  <!-- End Main Menu Area -->
+  <!-- Start Search Popup Area -->
+  <!-- End Footer Area -->
+  <!-- Back to top -->
+  <a class="scrolltop" href="#top">
+   <i class="icofont-hand-drawn-up">
+   </i>
+  </a>
+  <!-- End Back to top -->
+  <!-- jQuery Min JS -->
+  <!-- Prpper JS -->
+  <!-- Bootstrap Min JS -->
+  <!-- Classy Nav Min Js -->
+  <!-- Owl Carousel Min Js -->
+  <!-- Magnific Popup JS -->
+  <!-- CounterUp JS -->
+  <!-- Waypoints JS -->
+  <!-- Form Validator Min JS -->
+  <!-- Contact Form Min JS -->
+  <!-- Main JS -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+ </body>
 </html>

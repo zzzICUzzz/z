@@ -1,244 +1,760 @@
 <!DOCTYPE html>
-
 <html lang="fa">
-<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
-<head><title>ECG tutorial: Intraventricular block</title><link href="/z/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/z/d/css/icofont.min.css" rel="stylesheet"/><link href="/z/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/z/d/css/animate.css" rel="stylesheet"/><link href="/z/d/css/owl.carousel.css" rel="stylesheet"/><link href="/z/d/css/magnific-popup.css" rel="stylesheet"/><link href="/z/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/z/d/css/style.css" rel="stylesheet"/><link href="/z/d/css/rtl_edited.css" rel="stylesheet"/><link href="/z/d/css/responsive.css" rel="stylesheet"/><link href="https:///uptodate_assets/main.css" rel="stylesheet"/>
-<style>
-
-#myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 16px;
-  color: black;
-  display: block
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee;
-}
-
-#searchResult {
-
-  list-style-type: none;
-  padding: 0;
-  padding-right: 20px;
-}
-
-#searchResult li a {
-  border: .5px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #79bc21;
-  padding: 7px;
-  text-decoration: none;
-  font-size: 14px;
-  color: white;
-  display: block
-}
-
-#searchResult li a:hover:not(.header) {
-  background-color: #222;
-}
-
-
-#txtHint   {
-  position: absolute;
-  text-shadow: none;
-  width: 100%;
-  margin-top: -15px;
-  padding-right: 10px;
-
-  filter: alpha(opacity=95);
-  -moz-opacity: 0.95;
-  opacity: 1;
-  z-index: 200;
-}
-.countBubl {
-  background:#eb0029;
-  color:#fff;
-  padding:5px;
-  margin-top: 50%;
-
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
- width: 55%;
- padding-left: 20px;
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
- width: 20%;
-}
- #Uptodate_image {
-      width: 50%;
-  }#uptodate-area {
-      /*z-index: 99;*/
-  }
-#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
- margin-left: 10px;
- margin-bottom: 6%;
-}
-@media (max-width: @screen-xs) {
-    .countBubl {
-        font-size: 4px ;
-    }
-    #uptodate_version {
-        font-size: 4px ;
-    }
-}
-
-@media (max-width: @screen-sm) {
-    .countBubl {
-        font-size: 14px ;
-    }
-}
-@media  all and(max-width: 820) {
-    #Uptodate_image {
-        width: 80% ;
-    }#uptodate-area {
-        z-index: 99;
-    }
-}@media  all and (min-width: 820) and(max-width: 88820){
-    #Uptodate_image {
-        width: 100% !important;
-    }
-    .countBubl {
-        font-size: 4px ;
-    }
-}
-div.col-md-3:nth-child(3) {
- margin-top: 6%;
-}
-
-div.col-md-3:nth-child(3) > img:nth-child(1) {
- width: 100%;
- margin-left: 11px;
-}
-
-</style>
-<style media="screen" type="text/css">
-  .goback {
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    position: fixed;
-    display: none;
-    font-size: 15px;
-    background: #71c0fa;
-    z-index: 1000;
-    text-align: center;
-    color: #ffffff;
-    -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
-    border-radius: 50px;
-    bottom: 3.8%;
-    right: 2%;
-}
-  .buyPackage {
-  width: 100px;
-  height: 100px;
-  line-height: 40px;
-  position: fixed;
-  display: none;
-  font-size: 10px;
-  background: #fa759e;
-  z-index: 1000;
-  text-align: center;
-  color: #ffffff;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  border-radius: 10px;
-  top: 150px;
-  right: 2%;
-  text-align: center;
-}
-.uptodate-area {
-  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-    background-attachment: fixed;
-  position: relative;
-}
-.uptodate-area::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  padding-top: 100px;
-  width: 100%;
-}
-#references{
-  display: none;
-}
-</style>
-<style>
-section.sticky {
-  position: sticky;
-  top: 0;
-  background-color: #fff !important;
-  /*z-index: 100;*/
-  /*padding-top: 80px;*/
-
-}
-.m4inb{
-    border: solid !important;
-  }
-
-  .newsletter-area::before {
-       background: unset !important;
-  }
-p {
-    color: #555;
-}
-</style>
-<meta content="" name="description"/>
-<link href="/z/d/img/favicon.png" rel="icon" type="image/png">
-</link></head>
-<body>
-<!-- Start Main Menu Area -->
-<br/>
-<br/>
-<br/>
-<br/>
-<div class="container">
-<div class="row">
-</div>
-</div>
-<section class="teacher-area ptb-10">
-<div class="container">
-</div>
-<section class="course-details-area ptb-60">
-<div class="container">
-<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-<h1 style="text-align:center">ECG tutorial: Intraventricular block</h1>
-<div class="utdArticleSection utdStyle" id="topicContent"><div id="topicTitle">ECG tutorial: Intraventricular block</div> <div class="authorSectionElem"><div class="authorsElementsLeft"><dl id="topicContributors"><dt><span> </span>Author:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Jordan M Prutkin, MD, MHA, MHS</a></dd><dt><span> </span>Section Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Ary L Goldberger, MD</a></dd><dt><span> </span>Deputy Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Susan B Yeon, MD, JD</a></dd></dl></div><div class="authorsElementsRight"><div id="literatureReviewDate"><div class="litReviewSingleLine"><bdi><span class="emphasis">Literature review current through:</span> Jan 2024.</bdi></div><div class="litReviewSingleLine"><bdi><span class="emphasis">This topic last updated:</span> Aug 14, 2023.</bdi></div></div></div></div><div id="topicWhatsNewContainer"></div><div id="topicText"><p class="headingAnchor" id="H438225084"><span class="h1">INTRODUCTION</span><span class="headingEndMark"> — </span>Bundle branch and fascicular blocks are frequently seen in those with and without cardiac disease. These patterns are defined by variations in QRS duration and voltage compared to normal. By convention, deflections on the electrocardiogram (ECG) that are greater than 0.5 mV (ie, greater than 5 mm with standard calibration) are referred to in capital letters. Smaller deflections are noted in lowercase. Thus, a qRs pattern means that the q and s waves are small and the R wave is large.</p><p>The level of block can occur in the bundles and fascicles themselves or may occur within the His bundle in fibers destined for the bundles and fascicles.</p><p class="headingAnchor" id="H1"><span class="h1">LEFT ANTERIOR FASCICULAR BLOCK</span><span class="headingEndMark"> — </span>A left anterior fascicular block, or hemiblock, is characterized by left axis deviation of &gt;-45° or &gt;-60°, or, depending on the author, up to -90° (see  <a class="medical medical_review" href="/z/d/html/2106.html" rel="external">"Left anterior fascicular block"</a>). This may be the result of conduction system disease in the anterior fascicle of the left bundle, or may occur when there is disease or fibrosis surrounding the left anterior fascicle (eg, with a myocardial infarction).</p><p>The QRS measures &lt;0.12 s in duration. The QRS complexes in lead I are upright (<a class="graphic graphic_waveform graphicRef115972" href="/z/d/graphic/115972.html" rel="external">waveform 1</a>) and in the inferior leads II, III, and aVF, they are negative (small r wave, deep S wave). There is a small q wave and tall R wave in lead aVL, and the time to the peak of the R wave in aVL is ≥0.045 s. There is often a tall R wave in aVR and poor R wave progression in leads V1 to V3.</p><p>An inferior wall myocardial infarction also has left axis deviation as the result of a large Q wave in the inferior leads. This is due to fibrotic tissue rather than conduction system disease. If there is a QR complex due to inferior wall infarction, a left anterior fascicular block cannot be diagnosed.</p><p class="headingAnchor" id="H2"><span class="h1">LEFT POSTERIOR FASCICULAR BLOCK</span><span class="headingEndMark"> — </span>A left posterior fascicular block, or hemiblock, occurs when there is conduction system disease involving the posterior fascicle of the left bundle branch. It is defined as a pathologic right axis, &gt;+90° (some authors use an even more rightward axis of 120°) up to 180°. (See  <a class="medical medical_review" href="/z/d/html/2107.html" rel="external">"Left posterior fascicular block"</a>.) The QRS complex is &lt;0.12 s. There are small r and deep S waves in leads I and aVL, and small Q and tall R waves in leads III and aVF (<a class="graphic graphic_waveform graphicRef116957" href="/z/d/graphic/116957.html" rel="external">waveform 2</a>).</p><p>However, there are other causes of a right axis that need to be considered and excluded before a left posterior fascicular block can be diagnosed, ie, a left posterior fascicular block is a diagnosis of exclusion. Other causes for a right axis include:</p><p class="bulletIndent1"><span class="glyph">●</span>Lateral wall myocardial infarction with a QR in leads I and aVL.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Right ventricular hypertrophy with a tall R wave in lead V1.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>R-L arm lead switch, with a negative P wave, QRS complex, and T wave in leads I and aVL.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Dextrocardia, which resembles R-L arm lead switch and also has reverse R wave progression across the precordium.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Wolff-Parkinson-White syndrome with a pseudo-lateral wall infarction pattern, short PR interval, slurred QRS upstroke, and widened QRS duration.</p><p></p><p class="headingAnchor" id="H3"><span class="h1">RIGHT BUNDLE BRANCH BLOCK</span><span class="headingEndMark"> — </span>A right bundle branch block (RBBB) may be incomplete or complete.</p><p class="headingAnchor" id="H4"><span class="h2">Incomplete RBBB</span><span class="headingEndMark"> — </span>An incomplete RBBB is present when there is a slowing of or delayed conduction through the right bundle branch. It may also be seen with delayed activation of the right ventricle within the right ventricular myocardium. Although this is often termed an incomplete RBBB, it is actually an intraventricular conduction delay of the right ventricle, as the bundles exhibit all or no conduction rather than incomplete conduction. (See  <a class="medical medical_review" href="/z/d/html/2116.html" rel="external">"ECG tutorial: Physiology of the conduction system"</a>.) Activation of the septum and left ventricular myocardium is unaffected. Thus, the initial part of the QRS complex is normal (eg, septal Q waves followed by an R wave). However, the delay in right ventricular myocardial activation causes it to occur after left ventricular activation rather than simultaneously, thereby altering the terminal portion of the QRS complex.</p><p>The delayed right ventricular forces are directed from left to right, leading to a tall secondary R wave (R') in the rightward directed leads, and a deep terminal S wave in the leftward leads (<a class="graphic graphic_waveform graphicRef51809" href="/z/d/graphic/51809.html" rel="external">waveform 3</a>). Thus, there is an rsR' in leads aVR and V1 to V2, and a qRs morphology in leads I, aVL, and V5 to 6. However, the QRS complex width is only slightly prolonged, between 0.10 and 0.12 s, since there is only a minor delay in right ventricular activation that still occurs via the right bundle branch. This is considered an intraventricular conduction delay.</p><p>Incomplete RBBB may be erroneously seen if the V1 ECG lead is placed higher than the fourth intercostal space or more right than the parasternal area.</p><p class="headingAnchor" id="H5"><span class="h2">Complete RBBB</span><span class="headingEndMark"> — </span>A complete RBBB is the result of a total block of impulse conduction along the right bundle branch, leading to delayed and abnormal activation of the right ventricular myocardium occurring from the left ventricular myocardium. The left bundle branch is not affected, and activation of the septum and left ventricular myocardium is normal, occurring first from left to right (septal depolarization) and then from right to left (ventricular depolarization). This is then followed by right ventricular activation. (See  <a class="medical medical_review" href="/z/d/html/915.html" rel="external">"Right bundle branch block"</a> and  <a class="medical medical_review" href="/z/d/html/2116.html" rel="external">"ECG tutorial: Physiology of the conduction system"</a>.)</p><p>The overall appearance of the QRS is an RsR’ complex in leads V1-2, commonly called a "rabbit-ear" pattern, and a deep, broad S wave in leads I, aVL, and V5 to V6. The width of the QRS complex is &gt;0.12 s. The RBBB also results in an abnormality of ventricular repolarization of the right ventricular myocardium. Thus, there are often secondary ST segment and T wave changes present in the right precordial leads V1 to V3, including ST depression and T wave inversions.</p><p>The ECG in RBBB can be best understood in terms of an early anterior vector, a mid-temporal and usually posterior vector, and a delayed terminal rightward vector. The following are common observations (<a class="graphic graphic_waveform graphicRef64393" href="/z/d/graphic/64393.html" rel="external">waveform 4</a>):</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Early anterior and rightward vector</strong> – Initial septal activation depends on fibers of the left bundle, as depolarization proceeds from left to right. The ECG appearance is essentially normal in that the anterior and rightward vector result in a q wave in leads I, aVL, and V6 and an r wave in leads V1, V2, and aVR (<a class="graphic graphic_waveform graphicRef65619" href="/z/d/graphic/65619.html" rel="external">waveform 5</a>).</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Mid-temporal leftward and usually posterior vector</strong> – The initial rightward vector of septal activation is followed by a leftward and posterior vector induced by subsequent left ventricular activation. The wavefront completes depolarization of the left ventricle between 40 and 60 ms, resulting in R waves in I, aVL, and V6 as well as an s (or S) in V1 and V2. This appearance is usually similar to that in normal subjects.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Delayed terminal rightward vector</strong> – The asynchronous depolarization caused by RBBB is primarily manifested in the later portion of the QRS complex, at 80 ms and beyond. Since the abnormal and delayed right ventricular activation occurs from left to right and goes through the ventricular myocardium and not the His-Purkinje system, the forces generated by right septal and right ventricular free wall activation predominate, resulting in a terminal rightward and anterior positivity. This also results in S waves in the leftward directed leads (I, aVL, and V6), and a second positive deflection is usually large (R'), in the anterior-posterior leads (V1 and V2).</p><p></p><p>As left ventricular activation is normal, abnormalities of the left ventricle can still be recognized, such as acute and chronic myocardial ischemia or infarction, left ventricular hypertrophy, and pericarditis. The right ventricular activation sequence is abnormal, however, and abnormalities of the right ventricular myocardium cannot be recognized (ie, right ventricular hypertrophy). In the presence of an RBBB, the axis can be normal or abnormal.</p><p>Some patients have an atypical pattern with loss of the S wave in V1 due to anterior displacement of the usually posterior mid-temporal forces, resulting in an rsR', qR, or M-shaped QRS pattern in V1. There are three mechanisms that can account for this pattern: normal variant; a gain of mid-temporal anterior forces due to right ventricular enlargement or concurrent left anterior fascicular block; and a loss of posterior forces due to a posterior wall myocardial infarction.</p><p class="headingAnchor" id="H6"><span class="h1">LEFT BUNDLE BRANCH BLOCK</span><span class="headingEndMark"> — </span>Left bundle branch block (LBBB) may be either incomplete or complete.</p><p class="headingAnchor" id="H7"><span class="h2">Incomplete LBBB</span><span class="headingEndMark"> — </span>An incomplete LBBB occurs when there is a slowing or delay of conduction through the left bundle, or diffusely through the Purkinje system and the ventricular myocardium. This causes a widening of the QRS complex to 0.10 to 0.12 s and loss of the septal q wave in leads I and V5 to V6. They will usually have a pattern resembling left ventricular hypertrophy and a time to the peak of the R wave in leads V4 to V6 is &gt;.06 s. (See  <a class="medical medical_review" href="/z/d/html/2116.html" rel="external">"ECG tutorial: Physiology of the conduction system"</a>.)</p><p class="headingAnchor" id="H8"><span class="h2">Complete LBBB</span><span class="headingEndMark"> — </span>Complete LBBB develops as a result of conduction delay or block within the left bundle branch, leading to delayed and abnormal activation of the left ventricular myocardium occurring from the right bundle branch and right ventricular myocardium. Left ventricular activation originates from the right bundle branch in a right to left direction, in contrast to the normal situation in which the first part of the left ventricular myocardium to be activated is the septum via a small septal branch of the left bundle, with subsequent impulse spread in a left to right direction. (See  <a class="medical medical_review" href="/z/d/html/914.html" rel="external">"Left bundle branch block"</a> and  <a class="medical medical_review" href="/z/d/html/2116.html" rel="external">"ECG tutorial: Physiology of the conduction system"</a>.)</p><p>In common or typical complete LBBB, the conduction sequence is to the left and asynchronous activation of the two ventricles with delayed and slowed left ventricular activation increases the QRS duration.</p><p>The following changes are seen on the ECG (<a class="graphic graphic_waveform graphicRef52836" href="/z/d/graphic/52836.html" rel="external">waveform 6</a>):</p><p class="bulletIndent1"><span class="glyph">●</span>The QRS interval is prolonged &gt;0.12 s since left ventricular activation is abnormal, delayed, and slowed due to conduction of the impulse through the ventricular myocardium rather than the His-Purkinje system.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>There are no septal Q waves in leads I and V5 to V6. Instead, there is a tall monophasic broadened and abnormal R wave in these leads. Occasionally, a small q wave may be seen in aVL.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>The time to the peak of the R wave is &gt;0.06 s in leads V5 to V6.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>There is a QS complex that is abnormal and widened in leads V1 to V2, though a small R wave may be seen (rS complex).</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>There are no left-to-right forces and hence there cannot be terminal S waves in leads I or V6.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>The QRS axis may be normal, but is frequently leftward. Occasionally, it may be superior or rightward.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>ST and T-wave abnormalities may be present, including T-wave inversions and ST-segment depression, in the opposite direction from the QRS complex. These changes of myocardial repolarization are secondary to the abnormal ventricular activation. Positive concordance, where the QRS and T waves are both upright, may be seen as normal. Negative concordance, with both a negative QRS and T wave, is abnormal and would be concerning for ischemia/infarction. (See  <a class="medical medical_review" href="/z/d/html/2125.html" rel="external">"ECG tutorial: Myocardial ischemia and infarction", section on 'ST changes in the setting of conduction abnormalities'</a>.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>It is not possible to diagnose other left ventricular abnormalities in the presence of an LBBB due to the abnormal conduction through the left ventricle.</p><p></p><p>The ECG pattern in LBBB can be best understood in terms of three vectors:</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Early and usually leftward vector</strong> – The normal sequence of activation at 10 ms (0.10 s) is anterior and to the right (ie, representing septal activation), resulting in small q waves in I, aVL, and V6 with an rS in V2. In comparison, the initial 10 ms vector in LBBB has two characteristics. First, the direction of activation is reversed, traveling from right to left (as there is absence of septal activation that results from a septal or median branch of the left bundle). Second, activation also travels from apex to base and to the right ventricular apex and free ventricular wall. However, the septum is a larger structure than the right ventricular free wall. Thus, septal activation predominates. The resultant vector is to the left and usually anterior, resulting in loss of the normal q wave and initiation of a wide, slurred R wave in I, aVL, and V6. In addition, an rS or QS pattern is seen in V1. "Pseudonormalization" of septal depolarization in LBBB (ie, the reappearance of a q wave in I and V6) may reflect septal infarction.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Mid-temporal leftward and posterior vector</strong> – Depolarization continues in the ordinary myocardial cells of the septum from apex to base. From 20 ms through 60 ms, spatial vectors are oriented to the left and posteriorly since the left ventricle is a leftward and posterior structure. The spatial vector that appears at 80 ms represents the mass of left ventricular myocardial depolarization, resulting in a signal of large amplitude. The amplitude of this signal is further increased by two factors: the terminal vectors are not countered by right ventricular forces since the right ventricle has already been depolarized; and the thick posterobasal portion of the left ventricle is activated before the thinner anterolateral wall.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Terminal leftward vector</strong> – The terminal 10 ms vector and beyond result from depolarization of the anterolateral wall of the left ventricle, which, as mentioned, is thinner than the posterobasal region, producing a small vector that is also directed to the left and posteriorly. Infarction of the anterolateral wall will decrease or actually reverse the direction of the terminal vector.</p><p></p><p class="headingAnchor" id="H9"><span class="h1">INTRAVENTRICULAR CONDUCTION DISTURBANCE</span><span class="headingEndMark"> — </span>An intraventricular conduction delay is the result of diffuse slowing of impulse conduction involving the entire His-Purkinje system, resulting in a generalized and uniform delay in activation of the ventricular myocardium. It is diagnosed in the presence of a QRS duration &gt;0.10 s, and a QRS morphology that does not resemble either a typical LBBB or RBBB (<a class="graphic graphic_waveform graphicRef67274" href="/z/d/graphic/67274.html" rel="external">waveform 7</a>). This can include the appearance of an RBBB in the limb leads and LBBB in the precordial leads, or the reverse.</p><p class="headingAnchor" id="H10"><span class="h1">BILATERAL AND ALTERNATING BUNDLE BRANCH BLOCKS</span><span class="headingEndMark"> — </span>Bilateral and alternating bundle branch blocks are caused by diffuse disease involving both bundles.</p><p>Bilateral bundle branch block may be diagnosed when there are QRS complexes that occasionally have LBBB morphology and occasionally have RBBB morphology (<a class="graphic graphic_waveform graphicRef74362" href="/z/d/graphic/74362.html" rel="external">waveform 8</a>). Often, every other complex is a right or left bundle, which is alternating bundle branch block. This is a worrisome sign for development of complete heart block.</p><p class="headingAnchor" id="H11"><span class="h1">INTERMITTENT BUNDLE BRANCH BLOCK</span><span class="headingEndMark"> — </span>Intermittent bundle branch block, either right or left, is diagnosed on the ECG when there are occasional QRS complexes with an RBBB or LBBB morphology (but not both RBBB or LBBB), interspersed with QRS complexes that have a normal morphology (<a class="graphic graphic_waveform graphicRef72247" href="/z/d/graphic/72247.html" rel="external">waveform 9</a>). Most often, the intermittent bundle branch block is rate-related (as described below). Thus, the RR intervals of the QRS complexes manifesting the bundle branch block are shorter when compared to the intervals of the normal QRS complexes. In other cases, there is no rate-related change in the QRS intervals, but the occurrence of the bundle branch block is a random or sporadic event.</p><p class="headingAnchor" id="H12"><span class="h1">RATE-RELATED BUNDLE BRANCH BLOCK</span><span class="headingEndMark"> — </span>Rate-related bundle branch block conduction is present when the QRS complex during a tachycardia is wider (usually &gt;0.12 s) when compared to the QRS duration during a slower sinus rhythm (<a class="graphic graphic_waveform graphicRef69284" href="/z/d/graphic/69284.html" rel="external">waveform 10</a>). The aberrated QRS complexes may have the appearance of an RBBB, LBBB, or intraventricular conduction delay. The important diagnostic feature is that the expression is usually influenced by the heart rate.</p><p>Rate-related aberration is the result of slowed and delayed conduction within the bundle of His or the right or left bundle branches. This may be due to intrinsic disease of the conducting system or the depressant effects on conduction from antiarrhythmic drugs or hyperkalemia. If the rate of impulse stimulation is faster than the ability of that part of the conduction system to have repolarized from the prior impulse, the impulse may fail to conduct through part of the His Purkinje system (eg, only the right or left bundle). There is a critical heart rate above which the impulse is conducted by only one of the bundles, or is conducted with diffuse slowing throughout the His Purkinje system, resulting in a nonspecific intraventricular delay. Thus, there is rate-related widening of the QRS complex occurring when the heart rate increases.</p><p>The block is most often in the right bundle, which generally has a longer refractory period than the left bundle at similar heart rates. Thus, an RBBB configuration is the most common morphology for the aberrated QRS complex. However, in patients with underlying heart disease, particularly coronary heart disease and fibrosis of the left septum, an LBBB morphology is not uncommon.</p><p>Aberrancy may also be seen when a single atrial or junctional premature beat arrives at an RR interval (or rate) that is faster than the conduction system can conduct. The single premature beat is conducted aberrantly, usually when there is a critical coupling interval between the preceding sinus QRS complex and the premature beat. Premature beats that occur later in diastole may be conducted normally.</p><p class="headingAnchor" id="H13"><span class="h2">Ashman phenomenon</span><span class="headingEndMark"> — </span>Aberrancy is due in some cases to the physiologic changes of the conduction system refractory periods that are associated with RR intervals. A relationship exists in normal circumstances between the refractory period of the His Purkinje system and the heart rate. There is a decrease in the refractory period as the heart rate increases (even if abruptly). The refractory period lengthens as the heart rate slows. If there is a long RR interval (ie, due to a slow heart rate) followed by short interval (ie, a premature atrial complex), the signal from the short interval may encounter the refractory period of one of the bundles and demonstrate a right or left bundle branch block pattern.</p><p>This is known as an Ashman phenomenon. The Ashman phenomenon is most commonly observed during atrial fibrillation when there are frequent episodes of long-short RR cycle lengths. However, it may occur whenever there is an abrupt change in rate (slow or long RR interval to fast or shorter RR interval). Hence, it may be seen with the abrupt onset of any supraventricular tachyarrhythmia. The aberrancy may be present for one beat and have a morphology that resembles a premature ventricular complex/contraction (PVC; also referred to as premature ventricular beats or premature ventricular depolarizations) or may involve several sequential complexes, which may give the appearance of ventricular tachycardia.</p><p>It is often difficult to distinguish a PVC from an aberrantly conducted or Ashman beat in the presence of atrial fibrillation and in most cases is not clinically relevant, but some tips include:</p><p class="bulletIndent1"><span class="glyph">●</span>A premature ventricular beat is usually followed by a longer RR cycle, indicating the occurrence of a compensatory pause, the result of retrograde conduction into the atrioventricular node and antegrade block of the impulse originating in the atrium. If there is persistence of aberration at the same heart rate after the first beat, this suggests a PVC.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>The absence of a long RR-short RR cycle associated with the wide or aberrated QRS complex suggests that it is a PVC.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Aberrancy is not present if, with inspection of a long ECG rhythm strip, there are RR cycle length combinations that are longer and shorter than those associated with the wide QRS complex.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>A PVC is likely if there is a fixed coupling cycle between the normal and aberrated QRS complex when seen repeatedly.</p><p></p><p class="headingAnchor" id="H15"><span class="h2">Bradycardia-dependent aberrancy</span><span class="headingEndMark"> — </span>In patients with bradycardia-dependent aberrancy, the bundle branch block occurs after a longer pause or RR interval, which is the opposite of Ashman phenomenon. This has also been termed phase 4 block. It is generally unexpected since there should be sufficient time for the bundles to recover and conduction to be normal after a long cycle. Three explanations have been postulated. One explanation is that the bundles are serving as pacemaker tissue and manifest spontaneous automaticity. This pacemaker tissue is no longer suppressed by stimuli from upper pacemakers when the cycle length is very prolonged, leading to generation of an impulse from one of the bundles and manifesting a block pattern in the other bundle. Another explanation is that the heart rate is slowed as a result of enhanced vagal tone, which also leads to impaired or slowed conduction through a bundle. Lastly, similar to paroxysmal atrioventricular block (see  <a class="medical medical_review" href="/z/d/html/2124.html" rel="external">"ECG tutorial: Atrioventricular block", section on 'Paroxysmal atrioventricular block'</a>), there is disease in the bundle that leads to a spontaneous increase in phase 4 depolarization and sodium channel inactivation, preventing conduction down the bundle until it can be reset.</p><p class="headingAnchor" id="H438225376"><span class="h2">Preexcitation syndromes</span><span class="headingEndMark"> — </span>The presence of an accessory pathway that conducts antegrade, such as occurs in the Wolff-Parkinson-White or other preexcitation syndromes, may give the general appearance of an RBBB or LBBB pattern, though subtle differences are seen that demonstrate atypical features of RBBB or LBBB. (See  <a class="medical medical_review" href="/z/d/html/2127.html" rel="external">"ECG tutorial: Preexcitation syndromes"</a>.) In combination with a short PR interval, this is a reflection of a preexcitation, and RBBB and LBBB cannot be accurately diagnosed.</p><p class="headingAnchor" id="H16447690"><span class="h1">SUMMARY</span></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Left anterior hemiblock</strong> – Left anterior hemiblock or fascicular block is characterized by a pathologic left axis in the frontal limb leads, defined as an axis &gt;-45° to &gt;-60°, with a QRS &lt;0.12 s, a qR in lead aVL, and a peak time to R wave in aVL ≥0.045 s (<a class="graphic graphic_waveform graphicRef115972" href="/z/d/graphic/115972.html" rel="external">waveform 1</a>). (See <a class="local">'Left anterior fascicular block'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Left posterior hemiblock</strong> – Left posterior hemiblock is defined as a pathologic right axis &gt;+90° (some authors use an even more rightward axis of 120°) when there is no other etiology. The QRS complex is negative (small R and deep S) in leads I and aVL, and positive (tall R wave) in leads III and aVF and a QRS &lt;0.12 s (<a class="graphic graphic_waveform graphicRef116957" href="/z/d/graphic/116957.html" rel="external">waveform 2</a>). (See <a class="local">'Left posterior fascicular block'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Right bundle branch block (RBBB)</strong> – RBBB is characterized by (<a class="graphic graphic_waveform graphicRef65619" href="/z/d/graphic/65619.html" rel="external">waveform 5</a>) (see <a class="local">'Right bundle branch block'</a> above):</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>An RsR' complex in leads V1 to V2, often called a "rabbit-ear" pattern</p><p class="bulletIndent2"><span class="glyph">•</span>A deep and broad S wave in leads I, aVL, and V5 to V6</p><p class="bulletIndent2"><span class="glyph">•</span>The width of the QRS complex is &gt;0.12 s</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Left bundle branch block (LBBB)</strong> – LBBB is characterized by (<a class="graphic graphic_waveform graphicRef52836" href="/z/d/graphic/52836.html" rel="external">waveform 6</a>) (see <a class="local">'Left bundle branch block'</a> above):</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>Absent q waves in I and V5 to V6</p><p class="bulletIndent2"><span class="glyph">•</span>A QS complex that is abnormal and widened in leads V1 to V2</p><p class="bulletIndent2"><span class="glyph">•</span>Time to peak R wave &gt;0.06 s in leads V5 to V6</p><p class="bulletIndent2"><span class="glyph">•</span>ST and T-wave abnormalities</p><p class="bulletIndent2"><span class="glyph">•</span>The width of the QRS complex is &gt;0.12 s</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Rate-related bundle branch block</strong> – Rate-related bundle branch block conduction is present when the QRS complex during a tachycardia is wider (usually &gt;0.12 s) compared with the QRS duration during a slower sinus rhythm (<a class="graphic graphic_waveform graphicRef69284" href="/z/d/graphic/69284.html" rel="external">waveform 10</a>). (See <a class="local">'Rate-related bundle branch block'</a> above.)</p></div><div id="topicVersionRevision">Topic 2126 Version 21.0</div></div>
-</div>
-</div>
-</section>
-</section>
-<!-- End Main Menu Area -->
-<!-- Start Search Popup Area -->
-<!-- End Footer Area -->
-<!-- Back to top -->
-<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
-<!-- End Back to top -->
-<!-- jQuery Min JS -->
-<!-- Prpper JS -->
-<!-- Bootstrap Min JS -->
-<!-- Classy Nav Min Js -->
-<!-- Owl Carousel Min Js -->
-<!-- Magnific Popup JS -->
-<!-- CounterUp JS -->
-<!-- Waypoints JS -->
-<!-- Form Validator Min JS -->
-<!-- Contact Form Min JS -->
-<!-- Main JS -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-</body>
+ <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+ <head>
+  <title>
+   ECG tutorial: Intraventricular block
+  </title>
+  <link href="d/css/1.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!-- Start Main Menu Area -->
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="container">
+   <div class="row">
+   </div>
+  </div>
+  <section class="teacher-area ptb-10">
+   <div class="container">
+   </div>
+   <section class="course-details-area ptb-60">
+    <div class="container">
+     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+      <h1 style="text-align:center">
+       ECG tutorial: Intraventricular block
+      </h1>
+      <div class="utdArticleSection utdStyle" id="topicContent">
+       <div id="topicTitle">
+        ECG tutorial: Intraventricular block
+       </div>
+       <div class="authorSectionElem">
+        <div class="authorsElementsLeft">
+         <dl id="topicContributors">
+          <dt>
+           <span>
+           </span>
+           Author:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Jordan M Prutkin, MD, MHA, MHS
+           </a>
+          </dd>
+          <dt>
+           <span>
+           </span>
+           Section Editor:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Ary L Goldberger, MD
+           </a>
+          </dd>
+          <dt>
+           <span>
+           </span>
+           Deputy Editor:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Susan B Yeon, MD, JD
+           </a>
+          </dd>
+         </dl>
+        </div>
+        <div class="authorsElementsRight">
+         <div id="literatureReviewDate">
+          <div class="litReviewSingleLine">
+           <bdi>
+            <span class="emphasis">
+             Literature review current through:
+            </span>
+            Jan 2024.
+           </bdi>
+          </div>
+          <div class="litReviewSingleLine">
+           <bdi>
+            <span class="emphasis">
+             This topic last updated:
+            </span>
+            Aug 14, 2023.
+           </bdi>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div id="topicWhatsNewContainer">
+       </div>
+       <div id="topicText">
+        <p class="headingAnchor" id="H438225084">
+         <span class="h1">
+          INTRODUCTION
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Bundle branch and fascicular blocks are frequently seen in those with and without cardiac disease. These patterns are defined by variations in QRS duration and voltage compared to normal. By convention, deflections on the electrocardiogram (ECG) that are greater than 0.5 mV (ie, greater than 5 mm with standard calibration) are referred to in capital letters. Smaller deflections are noted in lowercase. Thus, a qRs pattern means that the q and s waves are small and the R wave is large.
+        </p>
+        <p>
+         The level of block can occur in the bundles and fascicles themselves or may occur within the His bundle in fibers destined for the bundles and fascicles.
+        </p>
+        <p class="headingAnchor" id="H1">
+         <span class="h1">
+          LEFT ANTERIOR FASCICULAR BLOCK
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         A left anterior fascicular block, or hemiblock, is characterized by left axis deviation of &gt;-45° or &gt;-60°, or, depending on the author, up to -90° (see
+         <a class="medical medical_review" href="/z/d/html/2106.html" rel="external">
+          "Left anterior fascicular block"
+         </a>
+         ). This may be the result of conduction system disease in the anterior fascicle of the left bundle, or may occur when there is disease or fibrosis surrounding the left anterior fascicle (eg, with a myocardial infarction).
+        </p>
+        <p>
+         The QRS measures &lt;0.12 s in duration. The QRS complexes in lead I are upright (
+         <a class="graphic graphic_waveform graphicRef115972" href="/z/d/graphic/115972.html" rel="external">
+          waveform 1
+         </a>
+         ) and in the inferior leads II, III, and aVF, they are negative (small r wave, deep S wave). There is a small q wave and tall R wave in lead aVL, and the time to the peak of the R wave in aVL is ≥0.045 s. There is often a tall R wave in aVR and poor R wave progression in leads V1 to V3.
+        </p>
+        <p>
+         An inferior wall myocardial infarction also has left axis deviation as the result of a large Q wave in the inferior leads. This is due to fibrotic tissue rather than conduction system disease. If there is a QR complex due to inferior wall infarction, a left anterior fascicular block cannot be diagnosed.
+        </p>
+        <p class="headingAnchor" id="H2">
+         <span class="h1">
+          LEFT POSTERIOR FASCICULAR BLOCK
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         A left posterior fascicular block, or hemiblock, occurs when there is conduction system disease involving the posterior fascicle of the left bundle branch. It is defined as a pathologic right axis, &gt;+90° (some authors use an even more rightward axis of 120°) up to 180°. (See
+         <a class="medical medical_review" href="/z/d/html/2107.html" rel="external">
+          "Left posterior fascicular block"
+         </a>
+         .) The QRS complex is &lt;0.12 s. There are small r and deep S waves in leads I and aVL, and small Q and tall R waves in leads III and aVF (
+         <a class="graphic graphic_waveform graphicRef116957" href="/z/d/graphic/116957.html" rel="external">
+          waveform 2
+         </a>
+         ).
+        </p>
+        <p>
+         However, there are other causes of a right axis that need to be considered and excluded before a left posterior fascicular block can be diagnosed, ie, a left posterior fascicular block is a diagnosis of exclusion. Other causes for a right axis include:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Lateral wall myocardial infarction with a QR in leads I and aVL.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Right ventricular hypertrophy with a tall R wave in lead V1.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         R-L arm lead switch, with a negative P wave, QRS complex, and T wave in leads I and aVL.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Dextrocardia, which resembles R-L arm lead switch and also has reverse R wave progression across the precordium.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Wolff-Parkinson-White syndrome with a pseudo-lateral wall infarction pattern, short PR interval, slurred QRS upstroke, and widened QRS duration.
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H3">
+         <span class="h1">
+          RIGHT BUNDLE BRANCH BLOCK
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         A right bundle branch block (RBBB) may be incomplete or complete.
+        </p>
+        <p class="headingAnchor" id="H4">
+         <span class="h2">
+          Incomplete RBBB
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         An incomplete RBBB is present when there is a slowing of or delayed conduction through the right bundle branch. It may also be seen with delayed activation of the right ventricle within the right ventricular myocardium. Although this is often termed an incomplete RBBB, it is actually an intraventricular conduction delay of the right ventricle, as the bundles exhibit all or no conduction rather than incomplete conduction. (See
+         <a class="medical medical_review" href="/z/d/html/2116.html" rel="external">
+          "ECG tutorial: Physiology of the conduction system"
+         </a>
+         .) Activation of the septum and left ventricular myocardium is unaffected. Thus, the initial part of the QRS complex is normal (eg, septal Q waves followed by an R wave). However, the delay in right ventricular myocardial activation causes it to occur after left ventricular activation rather than simultaneously, thereby altering the terminal portion of the QRS complex.
+        </p>
+        <p>
+         The delayed right ventricular forces are directed from left to right, leading to a tall secondary R wave (R') in the rightward directed leads, and a deep terminal S wave in the leftward leads (
+         <a class="graphic graphic_waveform graphicRef51809" href="/z/d/graphic/51809.html" rel="external">
+          waveform 3
+         </a>
+         ). Thus, there is an rsR' in leads aVR and V1 to V2, and a qRs morphology in leads I, aVL, and V5 to 6. However, the QRS complex width is only slightly prolonged, between 0.10 and 0.12 s, since there is only a minor delay in right ventricular activation that still occurs via the right bundle branch. This is considered an intraventricular conduction delay.
+        </p>
+        <p>
+         Incomplete RBBB may be erroneously seen if the V1 ECG lead is placed higher than the fourth intercostal space or more right than the parasternal area.
+        </p>
+        <p class="headingAnchor" id="H5">
+         <span class="h2">
+          Complete RBBB
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         A complete RBBB is the result of a total block of impulse conduction along the right bundle branch, leading to delayed and abnormal activation of the right ventricular myocardium occurring from the left ventricular myocardium. The left bundle branch is not affected, and activation of the septum and left ventricular myocardium is normal, occurring first from left to right (septal depolarization) and then from right to left (ventricular depolarization). This is then followed by right ventricular activation. (See
+         <a class="medical medical_review" href="/z/d/html/915.html" rel="external">
+          "Right bundle branch block"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/2116.html" rel="external">
+          "ECG tutorial: Physiology of the conduction system"
+         </a>
+         .)
+        </p>
+        <p>
+         The overall appearance of the QRS is an RsR’ complex in leads V1-2, commonly called a "rabbit-ear" pattern, and a deep, broad S wave in leads I, aVL, and V5 to V6. The width of the QRS complex is &gt;0.12 s. The RBBB also results in an abnormality of ventricular repolarization of the right ventricular myocardium. Thus, there are often secondary ST segment and T wave changes present in the right precordial leads V1 to V3, including ST depression and T wave inversions.
+        </p>
+        <p>
+         The ECG in RBBB can be best understood in terms of an early anterior vector, a mid-temporal and usually posterior vector, and a delayed terminal rightward vector. The following are common observations (
+         <a class="graphic graphic_waveform graphicRef64393" href="/z/d/graphic/64393.html" rel="external">
+          waveform 4
+         </a>
+         ):
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Early anterior and rightward vector
+         </strong>
+         – Initial septal activation depends on fibers of the left bundle, as depolarization proceeds from left to right. The ECG appearance is essentially normal in that the anterior and rightward vector result in a q wave in leads I, aVL, and V6 and an r wave in leads V1, V2, and aVR (
+         <a class="graphic graphic_waveform graphicRef65619" href="/z/d/graphic/65619.html" rel="external">
+          waveform 5
+         </a>
+         ).
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Mid-temporal leftward and usually posterior vector
+         </strong>
+         – The initial rightward vector of septal activation is followed by a leftward and posterior vector induced by subsequent left ventricular activation. The wavefront completes depolarization of the left ventricle between 40 and 60 ms, resulting in R waves in I, aVL, and V6 as well as an s (or S) in V1 and V2. This appearance is usually similar to that in normal subjects.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Delayed terminal rightward vector
+         </strong>
+         – The asynchronous depolarization caused by RBBB is primarily manifested in the later portion of the QRS complex, at 80 ms and beyond. Since the abnormal and delayed right ventricular activation occurs from left to right and goes through the ventricular myocardium and not the His-Purkinje system, the forces generated by right septal and right ventricular free wall activation predominate, resulting in a terminal rightward and anterior positivity. This also results in S waves in the leftward directed leads (I, aVL, and V6), and a second positive deflection is usually large (R'), in the anterior-posterior leads (V1 and V2).
+        </p>
+        <p>
+        </p>
+        <p>
+         As left ventricular activation is normal, abnormalities of the left ventricle can still be recognized, such as acute and chronic myocardial ischemia or infarction, left ventricular hypertrophy, and pericarditis. The right ventricular activation sequence is abnormal, however, and abnormalities of the right ventricular myocardium cannot be recognized (ie, right ventricular hypertrophy). In the presence of an RBBB, the axis can be normal or abnormal.
+        </p>
+        <p>
+         Some patients have an atypical pattern with loss of the S wave in V1 due to anterior displacement of the usually posterior mid-temporal forces, resulting in an rsR', qR, or M-shaped QRS pattern in V1. There are three mechanisms that can account for this pattern: normal variant; a gain of mid-temporal anterior forces due to right ventricular enlargement or concurrent left anterior fascicular block; and a loss of posterior forces due to a posterior wall myocardial infarction.
+        </p>
+        <p class="headingAnchor" id="H6">
+         <span class="h1">
+          LEFT BUNDLE BRANCH BLOCK
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Left bundle branch block (LBBB) may be either incomplete or complete.
+        </p>
+        <p class="headingAnchor" id="H7">
+         <span class="h2">
+          Incomplete LBBB
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         An incomplete LBBB occurs when there is a slowing or delay of conduction through the left bundle, or diffusely through the Purkinje system and the ventricular myocardium. This causes a widening of the QRS complex to 0.10 to 0.12 s and loss of the septal q wave in leads I and V5 to V6. They will usually have a pattern resembling left ventricular hypertrophy and a time to the peak of the R wave in leads V4 to V6 is &gt;.06 s. (See
+         <a class="medical medical_review" href="/z/d/html/2116.html" rel="external">
+          "ECG tutorial: Physiology of the conduction system"
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H8">
+         <span class="h2">
+          Complete LBBB
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Complete LBBB develops as a result of conduction delay or block within the left bundle branch, leading to delayed and abnormal activation of the left ventricular myocardium occurring from the right bundle branch and right ventricular myocardium. Left ventricular activation originates from the right bundle branch in a right to left direction, in contrast to the normal situation in which the first part of the left ventricular myocardium to be activated is the septum via a small septal branch of the left bundle, with subsequent impulse spread in a left to right direction. (See
+         <a class="medical medical_review" href="/z/d/html/914.html" rel="external">
+          "Left bundle branch block"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/2116.html" rel="external">
+          "ECG tutorial: Physiology of the conduction system"
+         </a>
+         .)
+        </p>
+        <p>
+         In common or typical complete LBBB, the conduction sequence is to the left and asynchronous activation of the two ventricles with delayed and slowed left ventricular activation increases the QRS duration.
+        </p>
+        <p>
+         The following changes are seen on the ECG (
+         <a class="graphic graphic_waveform graphicRef52836" href="/z/d/graphic/52836.html" rel="external">
+          waveform 6
+         </a>
+         ):
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         The QRS interval is prolonged &gt;0.12 s since left ventricular activation is abnormal, delayed, and slowed due to conduction of the impulse through the ventricular myocardium rather than the His-Purkinje system.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         There are no septal Q waves in leads I and V5 to V6. Instead, there is a tall monophasic broadened and abnormal R wave in these leads. Occasionally, a small q wave may be seen in aVL.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         The time to the peak of the R wave is &gt;0.06 s in leads V5 to V6.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         There is a QS complex that is abnormal and widened in leads V1 to V2, though a small R wave may be seen (rS complex).
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         There are no left-to-right forces and hence there cannot be terminal S waves in leads I or V6.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         The QRS axis may be normal, but is frequently leftward. Occasionally, it may be superior or rightward.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         ST and T-wave abnormalities may be present, including T-wave inversions and ST-segment depression, in the opposite direction from the QRS complex. These changes of myocardial repolarization are secondary to the abnormal ventricular activation. Positive concordance, where the QRS and T waves are both upright, may be seen as normal. Negative concordance, with both a negative QRS and T wave, is abnormal and would be concerning for ischemia/infarction. (See
+         <a class="medical medical_review" href="/z/d/html/2125.html" rel="external">
+          "ECG tutorial: Myocardial ischemia and infarction", section on 'ST changes in the setting of conduction abnormalities'
+         </a>
+         .)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         It is not possible to diagnose other left ventricular abnormalities in the presence of an LBBB due to the abnormal conduction through the left ventricle.
+        </p>
+        <p>
+        </p>
+        <p>
+         The ECG pattern in LBBB can be best understood in terms of three vectors:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Early and usually leftward vector
+         </strong>
+         – The normal sequence of activation at 10 ms (0.10 s) is anterior and to the right (ie, representing septal activation), resulting in small q waves in I, aVL, and V6 with an rS in V2. In comparison, the initial 10 ms vector in LBBB has two characteristics. First, the direction of activation is reversed, traveling from right to left (as there is absence of septal activation that results from a septal or median branch of the left bundle). Second, activation also travels from apex to base and to the right ventricular apex and free ventricular wall. However, the septum is a larger structure than the right ventricular free wall. Thus, septal activation predominates. The resultant vector is to the left and usually anterior, resulting in loss of the normal q wave and initiation of a wide, slurred R wave in I, aVL, and V6. In addition, an rS or QS pattern is seen in V1. "Pseudonormalization" of septal depolarization in LBBB (ie, the reappearance of a q wave in I and V6) may reflect septal infarction.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Mid-temporal leftward and posterior vector
+         </strong>
+         – Depolarization continues in the ordinary myocardial cells of the septum from apex to base. From 20 ms through 60 ms, spatial vectors are oriented to the left and posteriorly since the left ventricle is a leftward and posterior structure. The spatial vector that appears at 80 ms represents the mass of left ventricular myocardial depolarization, resulting in a signal of large amplitude. The amplitude of this signal is further increased by two factors: the terminal vectors are not countered by right ventricular forces since the right ventricle has already been depolarized; and the thick posterobasal portion of the left ventricle is activated before the thinner anterolateral wall.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Terminal leftward vector
+         </strong>
+         – The terminal 10 ms vector and beyond result from depolarization of the anterolateral wall of the left ventricle, which, as mentioned, is thinner than the posterobasal region, producing a small vector that is also directed to the left and posteriorly. Infarction of the anterolateral wall will decrease or actually reverse the direction of the terminal vector.
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H9">
+         <span class="h1">
+          INTRAVENTRICULAR CONDUCTION DISTURBANCE
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         An intraventricular conduction delay is the result of diffuse slowing of impulse conduction involving the entire His-Purkinje system, resulting in a generalized and uniform delay in activation of the ventricular myocardium. It is diagnosed in the presence of a QRS duration &gt;0.10 s, and a QRS morphology that does not resemble either a typical LBBB or RBBB (
+         <a class="graphic graphic_waveform graphicRef67274" href="/z/d/graphic/67274.html" rel="external">
+          waveform 7
+         </a>
+         ). This can include the appearance of an RBBB in the limb leads and LBBB in the precordial leads, or the reverse.
+        </p>
+        <p class="headingAnchor" id="H10">
+         <span class="h1">
+          BILATERAL AND ALTERNATING BUNDLE BRANCH BLOCKS
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Bilateral and alternating bundle branch blocks are caused by diffuse disease involving both bundles.
+        </p>
+        <p>
+         Bilateral bundle branch block may be diagnosed when there are QRS complexes that occasionally have LBBB morphology and occasionally have RBBB morphology (
+         <a class="graphic graphic_waveform graphicRef74362" href="/z/d/graphic/74362.html" rel="external">
+          waveform 8
+         </a>
+         ). Often, every other complex is a right or left bundle, which is alternating bundle branch block. This is a worrisome sign for development of complete heart block.
+        </p>
+        <p class="headingAnchor" id="H11">
+         <span class="h1">
+          INTERMITTENT BUNDLE BRANCH BLOCK
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Intermittent bundle branch block, either right or left, is diagnosed on the ECG when there are occasional QRS complexes with an RBBB or LBBB morphology (but not both RBBB or LBBB), interspersed with QRS complexes that have a normal morphology (
+         <a class="graphic graphic_waveform graphicRef72247" href="/z/d/graphic/72247.html" rel="external">
+          waveform 9
+         </a>
+         ). Most often, the intermittent bundle branch block is rate-related (as described below). Thus, the RR intervals of the QRS complexes manifesting the bundle branch block are shorter when compared to the intervals of the normal QRS complexes. In other cases, there is no rate-related change in the QRS intervals, but the occurrence of the bundle branch block is a random or sporadic event.
+        </p>
+        <p class="headingAnchor" id="H12">
+         <span class="h1">
+          RATE-RELATED BUNDLE BRANCH BLOCK
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Rate-related bundle branch block conduction is present when the QRS complex during a tachycardia is wider (usually &gt;0.12 s) when compared to the QRS duration during a slower sinus rhythm (
+         <a class="graphic graphic_waveform graphicRef69284" href="/z/d/graphic/69284.html" rel="external">
+          waveform 10
+         </a>
+         ). The aberrated QRS complexes may have the appearance of an RBBB, LBBB, or intraventricular conduction delay. The important diagnostic feature is that the expression is usually influenced by the heart rate.
+        </p>
+        <p>
+         Rate-related aberration is the result of slowed and delayed conduction within the bundle of His or the right or left bundle branches. This may be due to intrinsic disease of the conducting system or the depressant effects on conduction from antiarrhythmic drugs or hyperkalemia. If the rate of impulse stimulation is faster than the ability of that part of the conduction system to have repolarized from the prior impulse, the impulse may fail to conduct through part of the His Purkinje system (eg, only the right or left bundle). There is a critical heart rate above which the impulse is conducted by only one of the bundles, or is conducted with diffuse slowing throughout the His Purkinje system, resulting in a nonspecific intraventricular delay. Thus, there is rate-related widening of the QRS complex occurring when the heart rate increases.
+        </p>
+        <p>
+         The block is most often in the right bundle, which generally has a longer refractory period than the left bundle at similar heart rates. Thus, an RBBB configuration is the most common morphology for the aberrated QRS complex. However, in patients with underlying heart disease, particularly coronary heart disease and fibrosis of the left septum, an LBBB morphology is not uncommon.
+        </p>
+        <p>
+         Aberrancy may also be seen when a single atrial or junctional premature beat arrives at an RR interval (or rate) that is faster than the conduction system can conduct. The single premature beat is conducted aberrantly, usually when there is a critical coupling interval between the preceding sinus QRS complex and the premature beat. Premature beats that occur later in diastole may be conducted normally.
+        </p>
+        <p class="headingAnchor" id="H13">
+         <span class="h2">
+          Ashman phenomenon
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Aberrancy is due in some cases to the physiologic changes of the conduction system refractory periods that are associated with RR intervals. A relationship exists in normal circumstances between the refractory period of the His Purkinje system and the heart rate. There is a decrease in the refractory period as the heart rate increases (even if abruptly). The refractory period lengthens as the heart rate slows. If there is a long RR interval (ie, due to a slow heart rate) followed by short interval (ie, a premature atrial complex), the signal from the short interval may encounter the refractory period of one of the bundles and demonstrate a right or left bundle branch block pattern.
+        </p>
+        <p>
+         This is known as an Ashman phenomenon. The Ashman phenomenon is most commonly observed during atrial fibrillation when there are frequent episodes of long-short RR cycle lengths. However, it may occur whenever there is an abrupt change in rate (slow or long RR interval to fast or shorter RR interval). Hence, it may be seen with the abrupt onset of any supraventricular tachyarrhythmia. The aberrancy may be present for one beat and have a morphology that resembles a premature ventricular complex/contraction (PVC; also referred to as premature ventricular beats or premature ventricular depolarizations) or may involve several sequential complexes, which may give the appearance of ventricular tachycardia.
+        </p>
+        <p>
+         It is often difficult to distinguish a PVC from an aberrantly conducted or Ashman beat in the presence of atrial fibrillation and in most cases is not clinically relevant, but some tips include:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         A premature ventricular beat is usually followed by a longer RR cycle, indicating the occurrence of a compensatory pause, the result of retrograde conduction into the atrioventricular node and antegrade block of the impulse originating in the atrium. If there is persistence of aberration at the same heart rate after the first beat, this suggests a PVC.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         The absence of a long RR-short RR cycle associated with the wide or aberrated QRS complex suggests that it is a PVC.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Aberrancy is not present if, with inspection of a long ECG rhythm strip, there are RR cycle length combinations that are longer and shorter than those associated with the wide QRS complex.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         A PVC is likely if there is a fixed coupling cycle between the normal and aberrated QRS complex when seen repeatedly.
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H15">
+         <span class="h2">
+          Bradycardia-dependent aberrancy
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         In patients with bradycardia-dependent aberrancy, the bundle branch block occurs after a longer pause or RR interval, which is the opposite of Ashman phenomenon. This has also been termed phase 4 block. It is generally unexpected since there should be sufficient time for the bundles to recover and conduction to be normal after a long cycle. Three explanations have been postulated. One explanation is that the bundles are serving as pacemaker tissue and manifest spontaneous automaticity. This pacemaker tissue is no longer suppressed by stimuli from upper pacemakers when the cycle length is very prolonged, leading to generation of an impulse from one of the bundles and manifesting a block pattern in the other bundle. Another explanation is that the heart rate is slowed as a result of enhanced vagal tone, which also leads to impaired or slowed conduction through a bundle. Lastly, similar to paroxysmal atrioventricular block (see
+         <a class="medical medical_review" href="/z/d/html/2124.html" rel="external">
+          "ECG tutorial: Atrioventricular block", section on 'Paroxysmal atrioventricular block'
+         </a>
+         ), there is disease in the bundle that leads to a spontaneous increase in phase 4 depolarization and sodium channel inactivation, preventing conduction down the bundle until it can be reset.
+        </p>
+        <p class="headingAnchor" id="H438225376">
+         <span class="h2">
+          Preexcitation syndromes
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The presence of an accessory pathway that conducts antegrade, such as occurs in the Wolff-Parkinson-White or other preexcitation syndromes, may give the general appearance of an RBBB or LBBB pattern, though subtle differences are seen that demonstrate atypical features of RBBB or LBBB. (See
+         <a class="medical medical_review" href="/z/d/html/2127.html" rel="external">
+          "ECG tutorial: Preexcitation syndromes"
+         </a>
+         .) In combination with a short PR interval, this is a reflection of a preexcitation, and RBBB and LBBB cannot be accurately diagnosed.
+        </p>
+        <p class="headingAnchor" id="H16447690">
+         <span class="h1">
+          SUMMARY
+         </span>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Left anterior hemiblock
+         </strong>
+         – Left anterior hemiblock or fascicular block is characterized by a pathologic left axis in the frontal limb leads, defined as an axis &gt;-45° to &gt;-60°, with a QRS &lt;0.12 s, a qR in lead aVL, and a peak time to R wave in aVL ≥0.045 s (
+         <a class="graphic graphic_waveform graphicRef115972" href="/z/d/graphic/115972.html" rel="external">
+          waveform 1
+         </a>
+         ). (See
+         <a class="local">
+          'Left anterior fascicular block'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Left posterior hemiblock
+         </strong>
+         – Left posterior hemiblock is defined as a pathologic right axis &gt;+90° (some authors use an even more rightward axis of 120°) when there is no other etiology. The QRS complex is negative (small R and deep S) in leads I and aVL, and positive (tall R wave) in leads III and aVF and a QRS &lt;0.12 s (
+         <a class="graphic graphic_waveform graphicRef116957" href="/z/d/graphic/116957.html" rel="external">
+          waveform 2
+         </a>
+         ). (See
+         <a class="local">
+          'Left posterior fascicular block'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Right bundle branch block (RBBB)
+         </strong>
+         – RBBB is characterized by (
+         <a class="graphic graphic_waveform graphicRef65619" href="/z/d/graphic/65619.html" rel="external">
+          waveform 5
+         </a>
+         ) (see
+         <a class="local">
+          'Right bundle branch block'
+         </a>
+         above):
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         An RsR' complex in leads V1 to V2, often called a "rabbit-ear" pattern
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         A deep and broad S wave in leads I, aVL, and V5 to V6
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         The width of the QRS complex is &gt;0.12 s
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Left bundle branch block (LBBB)
+         </strong>
+         – LBBB is characterized by (
+         <a class="graphic graphic_waveform graphicRef52836" href="/z/d/graphic/52836.html" rel="external">
+          waveform 6
+         </a>
+         ) (see
+         <a class="local">
+          'Left bundle branch block'
+         </a>
+         above):
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Absent q waves in I and V5 to V6
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         A QS complex that is abnormal and widened in leads V1 to V2
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Time to peak R wave &gt;0.06 s in leads V5 to V6
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         ST and T-wave abnormalities
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         The width of the QRS complex is &gt;0.12 s
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Rate-related bundle branch block
+         </strong>
+         – Rate-related bundle branch block conduction is present when the QRS complex during a tachycardia is wider (usually &gt;0.12 s) compared with the QRS duration during a slower sinus rhythm (
+         <a class="graphic graphic_waveform graphicRef69284" href="/z/d/graphic/69284.html" rel="external">
+          waveform 10
+         </a>
+         ). (See
+         <a class="local">
+          'Rate-related bundle branch block'
+         </a>
+         above.)
+        </p>
+       </div>
+       <div id="topicVersionRevision">
+        Topic 2126 Version 21.0
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </section>
+  <!-- End Main Menu Area -->
+  <!-- Start Search Popup Area -->
+  <!-- End Footer Area -->
+  <!-- Back to top -->
+  <a class="scrolltop" href="#top">
+   <i class="icofont-hand-drawn-up">
+   </i>
+  </a>
+  <!-- End Back to top -->
+  <!-- jQuery Min JS -->
+  <!-- Prpper JS -->
+  <!-- Bootstrap Min JS -->
+  <!-- Classy Nav Min Js -->
+  <!-- Owl Carousel Min Js -->
+  <!-- Magnific Popup JS -->
+  <!-- CounterUp JS -->
+  <!-- Waypoints JS -->
+  <!-- Form Validator Min JS -->
+  <!-- Contact Form Min JS -->
+  <!-- Main JS -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+ </body>
 </html>

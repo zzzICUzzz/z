@@ -12,4 +12,4 @@ def merge_files_from_folders(source_folder):
         os.rmdir(subfolder)
 
 # Sử dụng hàm
-merge_files_from_folders(r'C:\Users\mayde\Desktop\z\d\html')
+merge_files_from_folders(r'C:\Users\mayde\Desktop\z\z\d\html')

@@ -1,439 +1,2327 @@
 <!DOCTYPE html>
-
 <html lang="fa">
-<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
-<head><title>Digit dislocation reduction</title><link href="/z/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/z/d/css/icofont.min.css" rel="stylesheet"/><link href="/z/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/z/d/css/animate.css" rel="stylesheet"/><link href="/z/d/css/owl.carousel.css" rel="stylesheet"/><link href="/z/d/css/magnific-popup.css" rel="stylesheet"/><link href="/z/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/z/d/css/style.css" rel="stylesheet"/><link href="/z/d/css/rtl_edited.css" rel="stylesheet"/><link href="/z/d/css/responsive.css" rel="stylesheet"/><link href="https:///uptodate_assets/main.css" rel="stylesheet"/>
-<style>
-
-#myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 16px;
-  color: black;
-  display: block
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee;
-}
-
-#searchResult {
-
-  list-style-type: none;
-  padding: 0;
-  padding-right: 20px;
-}
-
-#searchResult li a {
-  border: .5px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #79bc21;
-  padding: 7px;
-  text-decoration: none;
-  font-size: 14px;
-  color: white;
-  display: block
-}
-
-#searchResult li a:hover:not(.header) {
-  background-color: #222;
-}
-
-
-#txtHint   {
-  position: absolute;
-  text-shadow: none;
-  width: 100%;
-  margin-top: -15px;
-  padding-right: 10px;
-
-  filter: alpha(opacity=95);
-  -moz-opacity: 0.95;
-  opacity: 1;
-  z-index: 200;
-}
-.countBubl {
-  background:#eb0029;
-  color:#fff;
-  padding:5px;
-  margin-top: 50%;
-
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
- width: 55%;
- padding-left: 20px;
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
- width: 20%;
-}
- #Uptodate_image {
-      width: 50%;
-  }#uptodate-area {
-      /*z-index: 99;*/
-  }
-#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
- margin-left: 10px;
- margin-bottom: 6%;
-}
-@media (max-width: @screen-xs) {
-    .countBubl {
-        font-size: 4px ;
-    }
-    #uptodate_version {
-        font-size: 4px ;
-    }
-}
-
-@media (max-width: @screen-sm) {
-    .countBubl {
-        font-size: 14px ;
-    }
-}
-@media  all and(max-width: 820) {
-    #Uptodate_image {
-        width: 80% ;
-    }#uptodate-area {
-        z-index: 99;
-    }
-}@media  all and (min-width: 820) and(max-width: 88820){
-    #Uptodate_image {
-        width: 100% !important;
-    }
-    .countBubl {
-        font-size: 4px ;
-    }
-}
-div.col-md-3:nth-child(3) {
- margin-top: 6%;
-}
-
-div.col-md-3:nth-child(3) > img:nth-child(1) {
- width: 100%;
- margin-left: 11px;
-}
-
-</style>
-<style media="screen" type="text/css">
-  .goback {
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    position: fixed;
-    display: none;
-    font-size: 15px;
-    background: #71c0fa;
-    z-index: 1000;
-    text-align: center;
-    color: #ffffff;
-    -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
-    border-radius: 50px;
-    bottom: 3.8%;
-    right: 2%;
-}
-  .buyPackage {
-  width: 100px;
-  height: 100px;
-  line-height: 40px;
-  position: fixed;
-  display: none;
-  font-size: 10px;
-  background: #fa759e;
-  z-index: 1000;
-  text-align: center;
-  color: #ffffff;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  border-radius: 10px;
-  top: 150px;
-  right: 2%;
-  text-align: center;
-}
-.uptodate-area {
-  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-    background-attachment: fixed;
-  position: relative;
-}
-.uptodate-area::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  padding-top: 100px;
-  width: 100%;
-}
-#references{
-  display: none;
-}
-</style>
-<style>
-section.sticky {
-  position: sticky;
-  top: 0;
-  background-color: #fff !important;
-  /*z-index: 100;*/
-  /*padding-top: 80px;*/
-
-}
-.m4inb{
-    border: solid !important;
-  }
-
-  .newsletter-area::before {
-       background: unset !important;
-  }
-p {
-    color: #555;
-}
-</style>
-<meta content="" name="description"/>
-<link href="/z/d/img/favicon.png" rel="icon" type="image/png">
-</link></head>
-<body>
-<!-- Start Main Menu Area -->
-<br/>
-<br/>
-<br/>
-<br/>
-<div class="container">
-<div class="row">
-</div>
-</div>
-<section class="teacher-area ptb-10">
-<div class="container">
-</div>
-<section class="course-details-area ptb-60">
-<div class="container">
-<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-<h1 style="text-align:center">Digit dislocation reduction</h1>
-<div class="utdArticleSection utdStyle" id="topicContent"><div id="topicTitle">Digit dislocation reduction</div> <div class="authorSectionElem"><div class="authorsElementsLeft"><dl id="topicContributors"><dt><span> </span>Author:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Samir V Joshi, MD, DCH, FAAP</a></dd><dt><span> </span>Section Editors:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Anne M Stack, MD</a></dd><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Allan B Wolfson, MD</a></dd><dt><span> </span>Deputy Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Michael Ganetsky, MD</a></dd></dl></div><div class="authorsElementsRight"><div id="literatureReviewDate"><div class="litReviewSingleLine"><bdi><span class="emphasis">Literature review current through:</span> Jan 2024.</bdi></div><div class="litReviewSingleLine"><bdi><span class="emphasis">This topic last updated:</span> Jan 18, 2024.</bdi></div></div></div></div><div id="topicWhatsNewContainer"></div><div id="topicText"><p class="headingAnchor" id="H1"><span class="h1">INTRODUCTION</span><span class="headingEndMark"> — </span>The reduction of digit dislocations is reviewed here. The treatment of toe and finger fractures is discussed separately. (See  <a class="medical medical_review" href="/z/d/html/6548.html" rel="external">"Metatarsal and toe fractures in children"</a> and  <a class="medical medical_review" href="/z/d/html/222.html" rel="external">"Toe fractures in adults"</a> and  <a class="medical medical_review" href="/z/d/html/233.html" rel="external">"Proximal phalanx fractures"</a> and  <a class="medical medical_review" href="/z/d/html/209.html" rel="external">"Middle phalanx fractures"</a> and  <a class="medical medical_review" href="/z/d/html/234.html" rel="external">"Distal phalanx fractures"</a>.)</p><p class="headingAnchor" id="H15767869"><span class="h1">BACKGROUND</span><span class="headingEndMark"> — </span>Dislocation of a digit is common among skeletally mature adolescents and active young adults. Dorsal displacement of the proximal interphalangeal joint of the finger is the most frequent dislocation [<a href="#rid1">1</a>]. On the other hand, double dislocations of the finger interphalangeal and/or metacarpophalangeal joints are a rare entity [<a href="#rid2">2</a>].</p><p class="headingAnchor" id="H2"><span class="h1">ANATOMY</span><span class="headingEndMark"> — </span>Finger function involves a complex interaction among multiple joints, flexor and extensor tendons, and supporting fascia and ligaments. Each of the digits, except the thumb, has three phalanges with three hinged joints: distal interphalangeal (DIP), proximal interphalangeal (PIP), and metacarpophalangeal (MCP)  (<a class="graphic graphic_figure graphicRef51990" href="/z/d/graphic/51990.html" rel="external">figure 1</a>). Joint stability is provided by the structure of the phalanges, joint capsule, radial and ulnar collateral ligaments, and dorsal and palmar ligaments. (See  <a class="medical medical_review" href="/z/d/html/201.html" rel="external">"Finger and thumb anatomy"</a>.)</p><p>Flexion and extension are the primary movements of the fingers. Abduction and adduction can be performed at the MCP joints. The thumb is capable of opposition, abduction, adduction, and retropulsion, in addition to flexion and extension.</p><p>At the metacarpophalangeal (MCP) joints, lateral motion is limited by the collateral ligaments, which are actually lateral oblique in position rather than true lateral. Triangular in shape, these ligaments arise from the lateral head of each metacarpal bone and attach to the base of the proximal phalanx distally. Because of these anatomical features, the MCP joint is more stable in flexion than in extension due to stabilization by the collateral ligaments  (<a class="graphic graphic_figure graphicRef80299" href="/z/d/graphic/80299.html" rel="external">figure 2</a>) [<a href="#rid3">3</a>]. The volar plate is part of the joint capsule that attaches only to the proximal phalanx, allowing hyperextension. The volar plate is the site of insertion for the intermetacarpal ligaments. The intermetacarpal ligaments restrict the separation of the metacarpal heads.</p><p>At the PIP and DIP joints, extension is limited by the volar plate, which attaches to the phalanges at each side of the joint and by the extensor hood (ligamentous) complex  (<a class="graphic graphic_figure graphicRef77114" href="/z/d/graphic/77114.html" rel="external">figure 3</a>). Radial and ulnar motion is restricted by collateral ligaments, which remain tight throughout the finger's range of motion.</p><p>By convention, toes and their respective metatarsals are numbered from one (great toe) through five (little toe). The second through fifth toes typically have three phalanges, while the great toe has two. Lesser toes, especially the fifth, may occasionally have only two phalanges  (<a class="graphic graphic_figure graphicRef71857" href="/z/d/graphic/71857.html" rel="external">figure 4</a>).</p><p>The ligamentous complexes of the metatarsal, PIP, and DIP joints are similar to the fingers; each joint is stabilized by collateral, extensor, and plantar ligaments [<a href="#rid4">4</a>]. In contrast to the MCP joint, the ligamentous anatomy of the metatarsal joint allows less abduction or adduction and opposition cannot occur [<a href="#rid4">4</a>]. Dislocations of the hallucal interphalangeal joint of the great toe are rare and frequently complicated by sesamoid and plantar ligament entrapment [<a href="#rid5">5,6</a>].</p><p class="headingAnchor" id="H2305038323"><span class="h2">Fracture predisposition in children</span><span class="headingEndMark"> — </span>In skeletally immature children, the digital growth plates are weaker than the supporting ligaments  (<a class="graphic graphic_figure graphicRef79444" href="/z/d/graphic/79444.html" rel="external">figure 5</a>). Thus, Salter-Harris digit fractures are more common than dislocations  (<a class="graphic graphic_diagnosticimage graphicRef61198" href="/z/d/graphic/61198.html" rel="external">image 1</a> and <a class="graphic graphic_figure graphicRef54582" href="/z/d/graphic/54582.html" rel="external">figure 6</a>). When digit dislocations do occur, they are commonly accompanied by avulsion fractures because the collateral ligaments of the metatarsal, MCP, PIP, and DIP joints insert into the epiphyseal regions of the growth plate  (<a class="graphic graphic_diagnosticimage graphicRef63865" href="/z/d/graphic/63865.html" rel="external">image 2</a>).</p><p class="headingAnchor" id="H3"><span class="h1">CLASSIFICATION</span><span class="headingEndMark"> — </span>Dislocations of the digits are classified by the direction of dislocation as follows:</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Dorsal</strong> – Distal digit displacement is toward the back of the hand or the top of the foot.</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Volar</strong> – Distal digit displacement is toward the palm of the hand or the sole of the foot.</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Lateral</strong> – Distal digit displacement is in the ulnar or radial direction relative to the proximal digit in the hand or in the tibial or fibular direction in the foot.</p><p></p><p>Metacarpophalangeal (MCP) dislocations, other than thumb dislocations, are further classified as simple (volar plate is not interposed in the joint) and complex (volar plate is entrapped in the joint).</p><p>Thumb MCP dislocations are classified as follows  (<a class="graphic graphic_figure graphicRef62404" href="/z/d/graphic/62404.html" rel="external">figure 7</a> and <a class="graphic graphic_diagnosticimage graphicRef126158" href="/z/d/graphic/126158.html" rel="external">image 3</a>):</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Incomplete</strong> – Volar plate ruptured, collateral ligament intact</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Simple</strong> – Volar plate and collateral ligament ruptured</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Complex</strong> – Dislocated phalanx is entrapped in the intrinsic hand muscles and volar plate is entrapped in the joint</p><p></p><p>Metatarsophalangeal (MTP) dislocations are typically multiple and associated with Lisfranc fractures of the foot. (See  <a class="medical medical_review" href="/z/d/html/6555.html" rel="external">"Foot fractures (other than metatarsal or phalangeal) in children", section on 'Tarsometatarsal (Lisfranc) fractures'</a>.)</p><p class="headingAnchor" id="H4"><span class="h1">PRESENTATION AND MECHANISM</span><span class="headingEndMark"> — </span>The patient with a dislocated digit has pain, swelling, loss of continuity, and impaired range of motion of the affected joint.</p><p class="headingAnchor" id="H5"><span class="h2">Interphalangeal dislocation</span></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Dorsal dislocation</strong> – Patients with dorsal joint dislocation have displacement of the distal portion of the joint toward the back of the hand or the top of the foot  (<a class="graphic graphic_diagnosticimage graphicRef104381" href="/z/d/graphic/104381.html" rel="external">image 4</a> and <a class="graphic graphic_diagnosticimage graphicRef126157" href="/z/d/graphic/126157.html" rel="external">image 5</a>). Dorsal proximal interphalangeal (PIP) and distal interphalangeal (DIP) joint dislocations arise from a force that produces axial loading and hyperextension of the digit. Dorsal PIP dislocation is the most common articular injury of the hand in the skeletally mature patient. Dorsal DIP joint dislocations are frequently associated with a flexor digitorum profundus avulsion fracture called a jersey finger  (<a class="graphic graphic_figure graphicRef53137" href="/z/d/graphic/53137.html" rel="external">figure 8</a>). (See  <a class="medical medical_review" href="/z/d/html/242.html" rel="external">"Flexor tendon injury of the distal interphalangeal joint (jersey finger)"</a>.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Volar dislocation</strong> – Volar dislocations of the PIP and DIP joints occur due to a combination of dorsal, varus (medial), and valgus (lateral) forces that rupture the collateral ligaments and the volar plate while displacing the base of the dislocated phalanx towards the palm or sole [<a href="#rid7">7</a>]. In addition, rupture of the central slip of the extensor hood complex usually occurs, and an avulsion fracture is often present [<a href="#rid8">8</a>]. Lack of timely treatment of volar PIP finger dislocations may result in a boutonniere deformity  (<a class="graphic graphic_figure graphicRef74107" href="/z/d/graphic/74107.html" rel="external">figure 9</a>). Volar dislocations are rare and may be irreducible due to entrapment of the proximal phalangeal condyle between the central tendon and lateral band. Volar dislocations of the interphalangeal joint of the thumb may also present with rupture of the flexor pollicis longus tendon.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Lateral joint dislocation</strong> – Isolated lateral dislocations of the PIP and DIP joints are rare and represent collateral ligament disruption caused by medial or lateral forces  (<a class="graphic graphic_diagnosticimage graphicRef104385" href="/z/d/graphic/104385.html" rel="external">image 6</a>).</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Interphalangeal dislocation of the hallux (great toe)</strong> – Dislocations of the hallucal interphalangeal joint of the great toe are rare and frequently complicated by sesamoid and plantar ligament entrapment [<a href="#rid5">5,6</a>].</p><p></p><p class="headingAnchor" id="H6"><span class="h2">Metacarpophalangeal dislocation</span><span class="headingEndMark"> — </span>Dorsal metacarpophalangeal (MCP) dislocation follows hyperextension of the affected joint with rupture of the volar plate. MCP dislocations, other than thumb dislocations, are classified as simple (no entrapment of the volar plate in the joint) or complex (interposition of the volar plate within the joint). Complex dislocations occur when the volar plate is ruptured, and the plate becomes lodged between the base of the proximal phalanx and the head of the metacarpal bone. Complex dislocation presents with skin dimpling, with less angulated deformities, or rotational deformity of the involved phalanges [<a href="#rid9">9-13</a>].</p><p>Thumb MCP dislocations are caused by the same mechanisms as other digit MCP dislocations but are far more common than at the digits because of mobility of the thumb. In addition, because of the greater physiologic range of motion, these types of dislocation are more complex. They are designated as follows:</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Incomplete</strong> – Volar plate ligament disruption with some preservation of collateral ligament function  (<a class="graphic graphic_diagnosticimage graphicRef104383" href="/z/d/graphic/104383.html" rel="external">image 7</a>).</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Simple</strong> – Volar plate and collateral ligament disruption with 90 degree displacement of the thumb phalanx relative to the thumb MCP  (<a class="graphic graphic_figure graphicRef62404" href="/z/d/graphic/62404.html" rel="external">figure 7</a> and <a class="graphic graphic_diagnosticimage graphicRef126158" href="/z/d/graphic/126158.html" rel="external">image 3</a>).</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Complex</strong> – The distal phalanx is positioned parallel to the metacarpal bone  (<a class="graphic graphic_figure graphicRef62404" href="/z/d/graphic/62404.html" rel="external">figure 7</a>). With these injuries, the metacarpal head may be trapped in the intrinsic muscles and the volar plate is interposed in the joint. On physical examination, puckering of skin near the affected joint that may be accompanied by volar ecchymosis suggests the possibility of volar entrapment. This finding is confirmed when plain radiographs show the sesamoid bones within the joint space [<a href="#rid9">9</a>].</p><p></p><p>Volar metacarpophalangeal joint dislocations are rare injuries that are typically entrapped and require operative repair [<a href="#rid14">14,15</a>].</p><p class="headingAnchor" id="H7"><span class="h2">Metatarsophalangeal dislocation</span><span class="headingEndMark"> — </span>Dislocation at a single metatarsophalangeal joint frequently involves the fifth digit, which can be easily reduced. Multiple metatarsophalangeal (MTP) dislocations can be associated with Lisfranc fractures of the foot. These complex injuries require orthopedic or podiatric subspecialty care. (See  <a class="medical medical_review" href="/z/d/html/13795.html" rel="external">"Tarsometatarsal (Lisfranc) joint complex injuries"</a> and  <a class="medical medical_review" href="/z/d/html/6555.html" rel="external">"Foot fractures (other than metatarsal or phalangeal) in children", section on 'Tarsometatarsal (Lisfranc) fractures'</a>.) </p><p>Dislocation of the first MTP occurs rarely and should also prompt subspecialty consultation with an orthopedist or podiatrist [<a href="#rid6">6,16</a>].</p><p class="headingAnchor" id="H8"><span class="h1">DIFFERENTIAL DIAGNOSIS</span><span class="headingEndMark"> — </span>Clinical evaluation and plain radiographs should differentiate the following injuries from digit dislocations.</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Open dislocations</strong> – The clinician should suspect open dislocations in patients with a wound near the dislocated joint  (<a class="graphic graphic_picture graphicRef73162" href="/z/d/graphic/73162.html" rel="external">picture 1</a>). These injuries require antibiotic treatment, tetanus prophylaxis, urgent orthopedic or hand surgery consultation, meticulous operative debridement, and repair of the collateral ligaments and volar plate [<a href="#rid17">17</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Fracture-dislocations</strong> – Fracture-dislocations commonly occur in skeletally mature patients when the extended finger is struck in such a manner that longitudinal compression occurs along with hyperextension. A typical mechanism involves a ball striking the extended finger [<a href="#rid18">18</a>]. This mechanism typically causes a fracture through the volar lip of the proximal interphalangeal (PIP) joint with dorsal displacement [<a href="#rid19">19</a>].</p><p></p><p class="bulletIndent1">In children, the growth plates are typically weaker than the surrounding ligaments. Thus, dislocations are commonly accompanied by Salter-Harris fractures because the collateral ligaments of the MCP, PIP, and DIP joints insert into the epiphyseal regions of the growth plate  (<a class="graphic graphic_diagnosticimage graphicRef63865" href="/z/d/graphic/63865.html" rel="external">image 2</a> and <a class="graphic graphic_figure graphicRef79444" href="/z/d/graphic/79444.html" rel="external">figure 5</a>). (See <a class="local">'Fracture predisposition in children'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Complex thumb dislocation</strong> – Volar and complex dorsal MCP joint dislocations should be evaluated and treated by a hand surgeon or orthopedist with appropriate expertise [<a href="#rid1">1</a>]. (See <a class="local">'Metacarpophalangeal dislocation'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Gamekeeper's thumb </strong>– Gamekeeper's thumb describes ulnar collateral ligament injury with lateral thumb metacarpophalangeal (MCP) instability. It is commonly seen in skiers when the ski pole forcefully abducts the thumb at the MCP joint during a fall. Physical findings include tenderness on the ulnar aspect of the thumb and a weak pinch. Valgus stress testing determines the integrity of the ulnar collateral ligament  (<a class="graphic graphic_picture graphicRef53552" href="/z/d/graphic/53552.html" rel="external">picture 2</a>). The diagnostic approach and treatment of gamekeeper's thumb is discussed in greater detail separately. (See  <a class="medical medical_review" href="/z/d/html/250.html" rel="external">"Ulnar collateral ligament injury (gamekeeper's or skier's thumb)", section on 'Clinical features'</a> and  <a class="medical medical_review" href="/z/d/html/250.html" rel="external">"Ulnar collateral ligament injury (gamekeeper's or skier's thumb)"</a>.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Jammed finger</strong> – "Jammed finger" refers to prolonged swelling of the proximal interphalangeal joint after an axial loading force (eg, basketball striking the end of an extended finger) [<a href="#rid20">20</a>]. Diagnostic criteria include lack of radiographic changes, complete functional stability of the joint, and no evidence of extensor tendon avulsion. Symptoms may arise from cartilage bruising and chondromalacia or chronic synovitis. The usual treatment for jammed finger involves therapeutic heat, passive and active range of motion exercises, and control of swelling. Aggressive, early range of motion in a supervised therapy program is useful to prevent stiffening [<a href="#rid21">21</a>]. Occasionally, corticosteroid injection into the joint is used to reduce synovitis.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Mallet finger</strong> – Mallet finger occurs most commonly during collision sports, such as American football and rugby, or ball-handling sports, such as basketball and baseball. The injury is usually caused by a direct blow to the tip of the finger, as when a ball strikes the fingertip or the fingertip strikes a rigid surface  (<a class="graphic graphic_figure graphicRef66023" href="/z/d/graphic/66023.html" rel="external">figure 10</a> and <a class="graphic graphic_picture graphicRef77830" href="/z/d/graphic/77830.html" rel="external">picture 3</a>). The axial load from the blow causes sudden, forceful flexion of the distal phalanx. This flexion damages the extensor tendon where it attaches to the proximal portion of the distal phalanx. Less frequently, a mallet finger may occur as part of finger injuries involving lacerations or crushing mechanisms. Physical examination findings and treatment of mallet finger are discussed in more detail separately. (See  <a class="medical medical_review" href="/z/d/html/198.html" rel="external">"Extensor tendon injury of the distal interphalangeal joint (mallet finger)", section on 'Symptoms and examination findings'</a> and  <a class="medical medical_review" href="/z/d/html/198.html" rel="external">"Extensor tendon injury of the distal interphalangeal joint (mallet finger)", section on 'Treatment'</a>.)</p><p></p><p class="headingAnchor" id="H9"><span class="h1">INDICATIONS</span><span class="headingEndMark"> — </span>The clinician may proceed with reduction of a digit dislocation once the presence of a simple dislocation is confirmed and an open joint, associated fracture, or entrapped volar plate are excluded.</p><p class="headingAnchor" id="H10"><span class="h1">CONTRAINDICATIONS AND PRECAUTIONS</span><span class="headingEndMark"> — </span>The clinician should <strong>not</strong> attempt dislocation reduction prior to radiographic evaluation, especially in skeletally immature children.</p><p>Contraindications to closed reduction of digit dislocations include:</p><p class="bulletIndent1"><span class="glyph">●</span>Open dislocation</p><p class="bulletIndent1"><span class="glyph">●</span>Complex dislocation</p><p class="bulletIndent1"><span class="glyph">●</span>Chronic dislocation (dislocation of more than three weeks duration)</p><p class="bulletIndent1"><span class="glyph">●</span>Joint instability</p><p></p><p class="headingAnchor" id="H389313638"><span class="h1">INDICATION FOR SPECIALTY CONSULTATION OR REFERRAL</span><span class="headingEndMark"> — </span>The clinician should defer care to the appropriate specialist (orthopedist, hand surgeon or podiatrist), if available, in patients with the following conditions:</p><p class="bulletIndent1"><span class="glyph">●</span>Associated digit fracture</p><p class="bulletIndent1"><span class="glyph">●</span>Open joint dislocation  (<a class="graphic graphic_picture graphicRef73162" href="/z/d/graphic/73162.html" rel="external">picture 1</a>)</p><p class="bulletIndent1"><span class="glyph">●</span>Digital neurovascular compromise (unless emergency orthopedic or hand surgery consultation is not available)</p><p class="bulletIndent1"><span class="glyph">●</span>Interphalangeal joint dislocation of the great toe (hallux)</p><p class="bulletIndent1"><span class="glyph">●</span>Multiple metatarsophalangeal dislocations</p><p></p><p>Prompt subspecialty consultation is also appropriate in the following situations:</p><p class="bulletIndent1"><span class="glyph">●</span>Volar proximal interphalangeal joint dislocation, because entrapment of the lateral band around the head of the proximal phalanx often prevents a successful closed reduction  (<a class="graphic graphic_figure graphicRef77114" href="/z/d/graphic/77114.html" rel="external">figure 3</a>)</p><p class="bulletIndent1"><span class="glyph">●</span>Volar, lateral, or complex dorsal metacarpophalangeal joint dislocation, because open reduction is typically required</p><p class="bulletIndent1"><span class="glyph">●</span>Any joint dislocation with tendon rupture</p><p class="bulletIndent1"><span class="glyph">●</span>Digit dislocation that is irreducible</p><p class="bulletIndent1"><span class="glyph">●</span>Unstable joint after attempted dislocation reduction</p><p class="bulletIndent1"><span class="glyph">●</span>Multiple failed reduction attempts (which can convert a simple dislocation into a complex dislocation)</p><p class="bulletIndent1"><span class="glyph">●</span>Patients who remain in a significant amount of discomfort after reduction for whom an occult fracture (at any age) or growth plate injury (pediatric age) is suspected</p><p></p><p class="headingAnchor" id="H11"><span class="h1">PREPARATION</span></p><p class="headingAnchor" id="H12"><span class="h2">Evaluation</span><span class="headingEndMark"> — </span>Proper management of digit dislocation requires careful evaluation, including plain radiographs, prior to attempting closed reduction. This assessment should identify conditions not amenable to closed reduction or those that require prompt referral to a hand surgeon, orthopedic surgeon, or podiatrist. </p><p class="bulletIndent1"><span class="glyph">●</span><strong>History/physical examination</strong> – The clinician should obtain history and fully evaluate the site of injury prior to reduction. Key historical elements include:</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>Age and skeletal maturity</p><p class="bulletIndent2"><span class="glyph">•</span>Mechanism and time of injury</p><p class="bulletIndent2"><span class="glyph">•</span>Digit position during injury (flexed versus extended)</p><p class="bulletIndent2"><span class="glyph">•</span>Dominant hand</p><p class="bulletIndent2"><span class="glyph">•</span>Occupation</p><p class="bulletIndent2"><span class="glyph">•</span>Prior hand conditions, injuries, or interventions</p><p class="bulletIndent2"><span class="glyph">•</span>Important physical examination features include:</p><p></p><p class="bulletIndent3"><span class="glyph">-</span>Site of injury (eg, maximal pain and swelling)</p><p class="bulletIndent3"><span class="glyph">-</span>Neurovascular examination, especially distal to the injury</p><p class="bulletIndent3"><span class="glyph">-</span>Presence of open wounds adjacent to the injury</p><p class="bulletIndent3"><span class="glyph">-</span>Range of motion</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Radiographic studies</strong> – AP, oblique, and, most importantly, true lateral plain radiographs are necessary before the procedure to exclude associated fractures and to assist in identifying complex dislocations or other digit conditions that warrant referral to an orthopedist, hand surgeon, or podiatrist [<a href="#rid22">22</a>]. (See <a class="local">'Differential diagnosis'</a> above and <a class="local">'Contraindications and precautions'</a> above.)</p><p></p><p class="headingAnchor" id="H873654479"><span class="h2">Patient counseling/informed consent</span><span class="headingEndMark"> — </span>The patient with digit dislocation is typically anxious and in pain. The patient and family/caregiver(s) should receive an explanation of the problem and the procedural approach.</p><p>The benefits of the joint reduction procedure usually outweigh the risks. Appropriate expectations regarding the outcome of any injury should be discussed with the patient and family/caregiver(s). Prior to initiation of reduction attempts, the potential adverse effects of the procedure should be disclosed, including [<a href="#rid1">1,23-29</a>]:</p><p class="bulletIndent1"><span class="glyph">●</span>Inadequate or delayed reduction may cause an unstable, deformed, or stiff joint</p><p class="bulletIndent1"><span class="glyph">●</span>Reduction attempts may lead to fracture</p><p class="bulletIndent1"><span class="glyph">●</span>The joint may become dislocated again if immobilization is not maintained</p><p class="bulletIndent1"><span class="glyph">●</span>Swelling of the affected joint with stiffness may be present for several months despite appropriate treatment</p><p class="bulletIndent1"><span class="glyph">●</span>Permanent joint enlargement may occur</p><p></p><p class="headingAnchor" id="H13"><span class="h2">Analgesia and sedation</span><span class="headingEndMark"> — </span>Appropriate analgesia, anesthesia, and, especially in children, distraction by a child life specialist or other personnel, may help to decrease the anxiety and pain of the procedure and promote successful reduction. A digital block often provides adequate analgesia in older adolescents and adults. In younger children, procedural sedation is frequently warranted. (See  <a class="medical medical_review" href="/z/d/html/262.html" rel="external">"Digital nerve block"</a> and  <a class="medical medical_review" href="/z/d/html/6330.html" rel="external">"Procedural sedation in children: Approach"</a>.)</p><p>In most instances, the clinician should provide analgesia before attempting reduction of the digit. Rarely, an older adolescent or adult with a very recent dislocation (less than one hour old) and minimal swelling may tolerate reduction without analgesia.</p><p class="headingAnchor" id="H14"><span class="h2">Equipment</span></p><p class="bulletIndent1"><span class="glyph">●</span>Latex-free gloves</p><p class="bulletIndent1"><span class="glyph">●</span>1 percent buffered <a class="drug drug_general" data-topicid="9558" href="/z/d/drug information/9558.html" rel="external">lidocaine</a> without <a class="drug drug_general" data-topicid="9409" href="/z/d/drug information/9409.html" rel="external">epinephrine</a> (one part of 1 mEq/mL [8.4 percent] <a class="drug drug_general" data-topicid="9928" href="/z/d/drug information/9928.html" rel="external">sodium bicarbonate</a> to 9 or 10 parts of 1 percent lidocaine)</p><p class="bulletIndent1"><span class="glyph">●</span>Syringes (3 mL or 5 mL) and needles (25 or 27 gauge)</p><p class="bulletIndent1"><span class="glyph">●</span><a class="drug drug_general" data-topicid="9801" href="/z/d/drug information/9801.html" rel="external">Povidone iodine</a> solution (eg, Betadine) and alcohol</p><p class="bulletIndent1"><span class="glyph">●</span>Scissors</p><p class="bulletIndent1"><span class="glyph">●</span>White surgical tape</p><p class="bulletIndent1"><span class="glyph">●</span>Splinting materials depend on the affected joint:</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>Finger interphalangeal dislocations: padded, malleable, aluminum digital splint</p><p class="bulletIndent2"><span class="glyph">•</span>Metacarpal (thumb) dislocations: water, bucket, prefabricated splinting material (eg, plaster of Paris or fiberglass) <strong>OR</strong> Webril, plaster of Paris, and stockinette to fashion a thumb spica splint  (<a class="graphic graphic_figure graphicRef79534" href="/z/d/graphic/79534.html" rel="external">figure 11</a>). (See  <a class="medical medical_review" href="/z/d/html/6334.html" rel="external">"Basic techniques for splinting of musculoskeletal injuries", section on 'Thumb spica splint'</a>.)</p><p></p><p class="headingAnchor" id="H15"><span class="h1">PROCEDURE</span></p><p class="headingAnchor" id="H16"><span class="h2">Interphalangeal dislocation</span><span class="headingEndMark"> — </span>The procedure for proximal interphalangeal (PIP) or distal interphalangeal (DIP) dislocation reduction is summarized in the table  (<a class="graphic graphic_table graphicRef72981" href="/z/d/graphic/72981.html" rel="external">table 1</a>) and consists of the following steps [<a href="#rid30">30,31</a>]:</p><p class="bulletIndent1"><span class="glyph">●</span>Assure no fracture or open joint is present on AP, true lateral, and oblique plain radiographs.</p><p class="bulletIndent1"><span class="glyph">●</span>Remove all rings from the affected hand or foot.</p><p class="bulletIndent1"><span class="glyph">●</span>Assemble all necessary materials. (See <a class="local">'Equipment'</a> above.)</p><p class="bulletIndent1"><span class="glyph">●</span>Provide appropriate analgesia as determined by the patient's age and degree of pain. (See <a class="local">'Analgesia and sedation'</a> above.)</p><p></p><p class="headingAnchor" id="H17"><span class="h3">Interphalangeal reduction</span></p><p class="bulletIndent1"><span class="glyph">●</span>Have an assistant brace the hand or foot.</p><p class="bulletIndent1"><span class="glyph">●</span>Reduce the dislocation using one of the following methods:</p><p></p><p class="bulletIndent2"><span class="glyph">•</span><strong>Dorsal dislocation</strong> – Provide longitudinal traction; <strong>gently</strong> hyperextend the joint while pushing the base of the dislocated phalanx into place [<a href="#rid32">32</a>].</p><p class="bulletIndent2"><span class="glyph">•</span><strong>Volar dislocation</strong> – Provide longitudinal traction; <strong>gently</strong> hyperflex while pushing the base of the dislocated phalanx into place.</p><p class="bulletIndent2"><span class="glyph">•</span><strong>Lateral dislocation</strong> – Provide longitudinal traction; <strong>gently</strong> hyperextend the joint while correcting the ulnar or radial deformity [<a href="#rid32">32</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>After reduction, test joint stability throughout the full range of motion of the digit to ensure that the joint will recover well with splinting alone [<a href="#rid33">33</a>].</p><p class="bulletIndent1"><span class="glyph">●</span>Obtain a post-reduction plain radiograph, including a true lateral view of the digit.</p><p></p><p class="headingAnchor" id="H18"><span class="h3">Interphalangeal immobilization</span></p><p class="bulletIndent1"><span class="glyph">●</span>Immobilize the digit based on the location and type of dislocation:</p><p></p><p class="bulletIndent2"><span class="glyph">•</span><strong>DIP dorsal or lateral finger dislocation</strong> – Splint the DIP in full extension while allowing full range of motion of the PIP joint.</p><p class="bulletIndent2"><span class="glyph">•</span><strong>PIP dorsal or lateral finger dislocation</strong> – Apply a dorsal splint with the PIP in 20 to 30 degrees of flexion.</p><p class="bulletIndent2"><span class="glyph">•</span><strong>Volar finger dislocation</strong> – Splint the PIP and DIP in full extension.</p><p class="bulletIndent2"><span class="glyph">•</span><strong>DIP or PIP toe dislocation</strong> – Buddy tape the affected digit to its neighbor  (<a class="graphic graphic_picture graphicRef108681" href="/z/d/graphic/108681.html" rel="external">picture 4</a>).</p><p></p><p class="headingAnchor" id="H19"><span class="h2">Simple metacarpophalangeal or metatarsophalangeal dislocation</span><span class="headingEndMark"> — </span>The procedure for simple metacarpophalangeal (MCP) dislocation reduction is summarized in the table  (<a class="graphic graphic_table graphicRef72981" href="/z/d/graphic/72981.html" rel="external">table 1</a>) and consists of the following steps [<a href="#rid30">30,31</a>]:</p><p class="bulletIndent1"><span class="glyph">●</span>Assure no fracture or open joint is present on AP, true lateral, and oblique plain radiographs.</p><p class="bulletIndent1"><span class="glyph">●</span>Remove all rings from the affected hand or foot.</p><p class="bulletIndent1"><span class="glyph">●</span>Assemble all necessary materials. (See <a class="local">'Equipment'</a> above.)</p><p class="bulletIndent1"><span class="glyph">●</span>Provide appropriate analgesia as determined by the patient's age and degree of pain. (See <a class="local">'Analgesia and sedation'</a> above.)</p><p></p><p class="headingAnchor" id="H20"><span class="h3">Reduction</span></p><p class="bulletIndent1"><span class="glyph">●</span>Have an assistant brace the hand and flex the wrist.</p><p class="bulletIndent1"><span class="glyph">●</span>Avoid excessive hyperextension or distraction that can convert a simple dislocation into a complex dislocation [<a href="#rid34">34</a>].</p><p class="bulletIndent1"><span class="glyph">●</span>Gently distract the affected thumb or digit and apply volar pressure to the base of the dislocated proximal phalanx.</p><p class="bulletIndent1"><span class="glyph">●</span>Test joint stability throughout the full range of thumb motions to ensure that the joint will recover well with splinting alone [<a href="#rid33">33</a>].</p><p></p><p class="headingAnchor" id="H21"><span class="h3">Immobilization</span></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Finger dislocation</strong> – Splint the digit in 90 degrees of flexion at the MCP joint.</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Thumb dislocation</strong> – Apply a thumb spica splint with the MCP joint in 20 degrees of flexion  (<a class="graphic graphic_figure graphicRef79534" href="/z/d/graphic/79534.html" rel="external">figure 11</a>).</p><p></p><p class="headingAnchor" id="H22"><span class="h1">FOLLOW-UP CARE</span><span class="headingEndMark"> — </span>All patients with digit dislocations should be seen within seven days to assess degree of pain, compliance with splinting, and joint stability. Unless the clinician has appropriate experience and comfort in the management of simple digit dislocations, referral to an orthopedist, hand surgeon, or podiatrist (toe dislocations) is warranted.</p><p>Range of motion exercises should commence as soon as the splint can be removed. Duration of splinting depends on the type of dislocation [<a href="#rid30">30</a>]:</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Dorsal finger proximal interphalangeal (PIP)</strong> – Three to five days as needed for comfort, then buddy tape</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Dorsal finger distal interphalangeal (DIP)</strong> – Two to three weeks</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Volar PIP</strong> – Four weeks</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Simple finger metacarpophalangeal (MCP)</strong> – Three to five days</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Simple thumb MCP</strong> – Three to four weeks</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Toe dislocations</strong> – Buddy tape for two weeks</p><p></p><p class="headingAnchor" id="H23"><span class="h2">Return to play</span></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Dorsal dislocations of the PIP or DIP joint</strong> – Patients with these injuries can immediately return to play with proper splinting (finger dislocations) or buddy taping (toe dislocations) if a stable reduction is achieved, if their position does not place unusual demands on the digit (eg, quarterbacks, pitchers with an injury to the dominant hand or toe of foot used to push off), and if pain is tolerable.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>MCP joint dislocations</strong> – Patients may return to play after clearance by a hand or orthopedic surgeon. Typical timing is six to eight weeks [<a href="#rid23">23</a>].</p><p></p><p class="headingAnchor" id="H24"><span class="h1">COMPLICATIONS</span><span class="headingEndMark"> — </span>Most simple digit dislocations will have full return of function as long as successful reductions are properly splinted and early range of motion occurs [<a href="#rid34">34</a>]. However, early referral of irreducible dislocations, avoidance of an excessive duration of splinting, and careful testing of joint stability after reduction are essential to avoid poor outcomes.</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Irreducible dislocations</strong> – Dislocations that are irreducible by closed reduction are uncommon but may occur when soft tissue or bony fragments (eg, the volar plate) become interposed in the joint space [<a href="#rid35">35,36</a>]. This is likely to be the situation if one or two attempts at reduction prove unsuccessful. These patients usually require open reduction to extract and repair the interposed ligament, tendon, or volar plate [<a href="#rid5">5,6,16,34-38</a>]. The clinician should <strong>avoid</strong> multiple forceful attempts at reduction in these patients. Such excessive force may cause a fracture or convert a dislocation that is amenable to closed reduction to one that requires open reduction.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Stiffness</strong> – Stiffness and joint thickening is a common complication, especially with PIP dislocations [<a href="#rid37">37</a>]. As soon as the appropriate duration of splinting has passed, early initiation of range of motion exercises helps to decrease stiffness. (See <a class="local">'Follow-up care'</a> above.)</p><p></p><p class="bulletIndent1">However, in some patients, stiffness and soreness may last as long as 12 to 18 months, and result in permanent residual enlargement of the joint despite appropriate treatment [<a href="#rid38">38</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Recurrent dislocation</strong> – Recurrent dislocation may arise from improper splint position, inadequate duration of splinting, or inappropriate return to play. This complication is most common with metacarpophalangeal dislocations.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Boutonniere deformity</strong> – Boutonniere deformity (hyperextension at the distal interphalangeal joint with fixed flexion at the proximal interphalangeal joint) is a potential complication in patients with volar PIP finger dislocations  (<a class="graphic graphic_figure graphicRef74107" href="/z/d/graphic/74107.html" rel="external">figure 9</a>). Such patients are at risk for boutonniere deformity if their dislocation is not splinted in extension or if immobilization is not maintained for at least six weeks.</p><p></p><p class="headingAnchor" id="H156385109"><span class="h1">INFORMATION FOR PATIENTS</span><span class="headingEndMark"> — </span>UpToDate offers two types of patient education materials, "The Basics" and "Beyond the Basics." The Basics patient education pieces are written in plain language, at the 5<sup>th</sup> to 6<sup>th</sup> grade reading level, and they answer the four or five key questions a patient might have about a given condition. These articles are best for patients who want a general overview and who prefer short, easy-to-read materials. Beyond the Basics patient education pieces are longer, more sophisticated, and more detailed. These articles are written at the 10<sup>th</sup> to 12<sup>th</sup> grade reading level and are best for patients who want in-depth information and are comfortable with some medical jargon.</p><p>Here are the patient education articles that are relevant to this topic. We encourage you to print or e-mail these topics to your patients. (You can also locate patient education articles on a variety of subjects by searching on "patient info" and the keyword(s) of interest.) </p><p class="bulletIndent1"><span class="glyph">●</span>Basics topic (see  <a class="medical medical_basics" href="/z/d/html/17185.html" rel="external">"Patient education: Finger dislocation (The Basics)"</a>)</p><p></p><p class="headingAnchor" id="H25"><span class="h1">SUMMARY AND RECOMMENDATIONS</span></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Anatomy of the injury</strong> – Dislocation of a digit occurs commonly among skeletally mature adolescents and active young adults. Dorsal displacement of the proximal interphalangeal joint of the finger is the most frequent dislocation. In children, digit dislocation is often associated with a growth plate fracture. (See <a class="local">'Anatomy'</a> above and <a class="local">'Fracture predisposition in children'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Clinical presentation and evaluation</strong> – The patient with a dislocated digit has pain, swelling, loss of continuity, and impaired range of motion of the affected joint. Proper management of digit dislocation requires careful examination for an open fracture or neurovascular compromise. Plain radiographs to exclude a fracture, should be performed prior to attempting closed reduction. (See <a class="local">'Presentation and mechanism'</a> above and <a class="local">'Indications'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Indication for specialty consultation (complex or complicated dislocations)</strong> – The clinician should defer care to the appropriate specialist (orthopedist, hand surgeon or podiatrist), whenever available, in patients with the following conditions (see <a class="local">'Indication for specialty consultation or referral'</a> above):</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>Associated digit fracture</p><p class="bulletIndent2"><span class="glyph">•</span>Open joint dislocation  (<a class="graphic graphic_picture graphicRef73162" href="/z/d/graphic/73162.html" rel="external">picture 1</a>)</p><p class="bulletIndent2"><span class="glyph">•</span>Digital neurovascular compromise (unless orthopedic or hand surgery consultation is not emergently available)</p><p class="bulletIndent2"><span class="glyph">•</span>Interphalangeal joint dislocation of the great toe (hallux)</p><p class="bulletIndent2"><span class="glyph">•</span>Multiple metatarsophalangeal dislocations</p><p class="bulletIndent2"><span class="glyph">•</span>Volar proximal interphalangeal joint dislocation, because entrapment of the lateral band around the head of the proximal phalanx often prevents a successful closed reduction  (<a class="graphic graphic_figure graphicRef77114" href="/z/d/graphic/77114.html" rel="external">figure 3</a>)</p><p class="bulletIndent2"><span class="glyph">•</span>Volar, lateral, or complex dorsal metacarpophalangeal joint dislocation, because open reduction is typically required</p><p class="bulletIndent2"><span class="glyph">•</span>Any joint dislocation with tendon rupture</p><p class="bulletIndent2"><span class="glyph">•</span>Digit dislocation that is irreducible</p><p class="bulletIndent2"><span class="glyph">•</span>Unstable joint after attempted dislocation reduction</p><p class="bulletIndent2"><span class="glyph">•</span>Patients who remain in a significant amount of discomfort after reduction for whom an occult fracture (at any age) or growth plate injury (pediatric age) is suspected</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Simple dislocations</strong> – Simple dislocations may be reduced by clinicians other than surgical specialists. Patient counseling and informed consent should include the risks of the procedure, including the potential for closed reduction causing a fracture or need for surgical intervention, as described above. (See <a class="local">'Patient counseling/informed consent'</a> above.)</p><p></p><p class="bulletIndent1">Appropriate analgesia, anesthesia, and (especially in children) distraction by a child life specialist or other personnel may help to decrease the anxiety and pain of the procedure and promote successful reduction. A digital block often provides adequate analgesia in older adolescents and adults. (See <a class="local">'Analgesia and sedation'</a> above.) </p><p></p><p class="bulletIndent1">The type and location of digit dislocation determine the reduction technique and splinting method  (<a class="graphic graphic_table graphicRef72981" href="/z/d/graphic/72981.html" rel="external">table 1</a>). (See <a class="local">'Equipment'</a> above and <a class="local">'Procedure'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Postprocedure evaluation and immobilization</strong> – After reduction, careful clinical and radiographic assessment is necessary to assure complete reduction; immobilization is performed according to the specific location. (See <a class="local">'Interphalangeal immobilization'</a> above and <a class="local">'Immobilization'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Follow-up care</strong> – All patients with digit dislocations should be seen within seven days to assess degree of pain, compliance with splinting, and joint stability. Unless the clinician has appropriate experience and comfort in the management of simple digit dislocations, referral to an orthopedist, hand surgeon, or podiatrist (toe dislocations) for this follow-up is warranted. (See <a class="local">'Follow-up care'</a> above.)</p></div><div class="headingAnchor" id="references"><ol id="reference"><li><a class="nounderline abstract_t">Leggit JC, Meko CJ. Acute finger injuries: part II. Fractures, dislocations, and thumb injuries. Am Fam Physician 2006; 73:827.</a></li><li><a class="nounderline abstract_t">Panchal AP, Bamberger HB. Dorsal dislocation of the distal interphalangeal joint and volar dislocation of the metacarpophalangeal joint in the same finger: a case report. Hand (N Y) 2010; 5:200.</a></li><li><a class="nounderline abstract_t">Brand PW, Cranor KC, Ellis JC. Tendon and pulleys at the metacarpophalangeal joint of a finger. J Bone Joint Surg Am 1975; 57:779.</a></li><li class="breakAll">Moore KL, Dalley AF. Clinically Oriented Anatomy, 5th, Lippincott Williams &amp; Wilkins, Philadelphia 2005. p.705.</li><li><a class="nounderline abstract_t">Sorene ED, Regev G. Complex dislocation with double sesamoid entrapment of the interphalangeal joint of the hallux. J Foot Ankle Surg 2006; 45:413.</a></li><li><a class="nounderline abstract_t">Mittlmeier T, Haar P. Sesamoid and toe fractures. Injury 2004; 35 Suppl 2:SB87.</a></li><li><a class="nounderline abstract_t">Peimer CA, Sullivan DJ, Wild DR. Palmar dislocation of the proximal interphalangeal joint. J Hand Surg Am 1984; 9A:39.</a></li><li><a class="nounderline abstract_t">Spinner M, Choi BY. Anterior dislocation of the proximal interphalangeal joint. A cause of rupture of the central slip of the extensor mechanism. J Bone Joint Surg Am 1970; 52:1329.</a></li><li><a class="nounderline abstract_t">Meurer WJ, Kronick SL, Lowell MJ, et al. Complex metacarpophalangeal dislocation. Int J Emerg Med 2008; 1:227.</a></li><li><a class="nounderline abstract_t">Prucz RB, Friedrich JB. Finger joint injuries. Clin Sports Med 2015; 34:99.</a></li><li><a class="nounderline abstract_t">Dinh P, Franklin A, Hutchinson B, et al. Metacarpophalangeal joint dislocation. J Am Acad Orthop Surg 2009; 17:318.</a></li><li><a class="nounderline abstract_t">Baldwin LW, Miller DL, Lockhart LD, Evans EB. Metacarpophalangeal-joint dislocations of the fingers. J Bone Joint Surg Am 1967; 49:1587.</a></li><li><a class="nounderline abstract_t">Patel MR, Bassini L. Irreducible palmar metacarpophalangeal joint dislocation due to junctura tendinum interposition: a case report and review of the literature. J Hand Surg Am 2000; 25:166.</a></li><li><a class="nounderline abstract_t">Sumarriva G, Cook B, Godoy G, Waldron S. Pediatric Complex Metacarpophalangeal Joint Dislocation of the Index Finger. Ochsner J 2018; 18:398.</a></li><li><a class="nounderline abstract_t">Desai B, Nammour M, Warren M, et al. Isolated Volar Dislocation of the Fifth Carpometacarpal Joint. Ochsner J 2020; 20:215.</a></li><li><a class="nounderline abstract_t">Jahss MH. Traumatic dislocations of the first metatarsophalangeal joint. Foot Ankle 1980; 1:15.</a></li><li><a class="nounderline abstract_t">Stern PJ, Lee AF. Open dorsal dislocations of the proximal interphalangeal joint. J Hand Surg Am 1985; 10:364.</a></li><li><a class="nounderline abstract_t">Glickel SZ, Barron OA. Proximal interphalangeal joint fracture dislocations. Hand Clin 2000; 16:333.</a></li><li><a class="nounderline abstract_t">McCue FC, Honner R, Johnson MC, Gieck JH. Athletic injuries of the proximal interphalangeal joint requiring surgical treatment. J Bone Joint Surg Am 1970; 52:937.</a></li><li><a class="nounderline abstract_t">Benson LS, Bailie DS. Proximal interphalangeal joint injuries of the hand. Part II: Treatment and complications. Am J Orthop (Belle Mead NJ) 1996; 25:527.</a></li><li><a class="nounderline abstract_t">Su, JK, Difiori, J. Jammed Finger. Med Sci Sports Exerc 2006; 38:S147.</a></li><li><a class="nounderline abstract_t">Hossfeld GE, Uehara DT. Acute joint injuries of the hand. Emerg Med Clin North Am 1993; 11:781.</a></li><li><a class="nounderline abstract_t">Calfee RP, Sommerkamp TG. Fracture-dislocation about the finger joints. J Hand Surg Am 2009; 34:1140.</a></li><li><a class="nounderline abstract_t">Khouri JS, Bloom JM, Hammert WC. Current trends in the management of proximal interphalangeal joint injuries of the hand. Plast Reconstr Surg 2013; 132:1192.</a></li><li><a class="nounderline abstract_t">Sankaran A, Bharathi RR, Sabapathy SR. Complex dorsal dislocation of the distal interphalangeal joint: Perspectives on management. Indian J Plast Surg 2016; 49:403.</a></li><li><a class="nounderline abstract_t">Kannan RY, Wilmshurst AD. Unstable proximal interphalangeal joint dislocations: another cause. Emerg Med J 2006; 23:819.</a></li><li><a class="nounderline abstract_t">Morisawa Y, Ikegami H, Izumida R. Irreducible palmar dislocation of the distal interphalangeal joint. J Hand Surg Br 2006; 31:296.</a></li><li><a class="nounderline abstract_t">Deshmukh NV, Sonanis SV, Stothard J. Irreducible volar dislocations of the proximal interphalangeal joint. Emerg Med J 2005; 22:221.</a></li><li><a class="nounderline abstract_t">Saremi H, Karbalaeikhani A. Recurrent Dislocation of the Proximal Interphalangeal Joint of the Finger: A Rare Issue in Hand Surgery. Arch Bone Jt Surg 2017; 5:121.</a></li><li class="breakAll">Kozin SH, Waters PM. Fractures and dislocations of the hand and carpus in children. In: Fractures in Children, 7th, Beaty JH, Kasser JR (Eds), Lippincott Williams &amp;  Wilkins, Philadelphia 2010. p.225.</li><li class="breakAll">Johnson FC, Okada PJ. Reduction of common joint dislocations and subluxations. In: Textbook of Pediatric Emergency Procedures, 2nd, King C, Henretig FM (Eds), Lippincott Williams &amp; Wilkins, Philadelphia 2008. p.963.</li><li><a class="nounderline abstract_t">Tan RES, Cheah AEJ. Injuries Around the Proximal Interphalangeal Joint. Clin Plast Surg 2019; 46:437.</a></li><li class="breakAll">Uehara DT. Injuries of the hand and wrist. In: Pediatric Emergency Medicine: A Comprehensive Study Guide, 2nd, Strange GR, Ahrens WR, Lelyveld S, Shafemeyer RW (Eds), McGraw-Hill, New York 2002. p.147.</li><li class="breakAll">Muelleman RL, Wadman MC. Injuries to the hand and digits. In: Emergency Medicine: A Comprehensive Study Guide, 6th, Tintinalli JE, Kelen GD, Stapczynski JS (Eds), McGraw-Hill, New York 2004. p.1666.</li><li><a class="nounderline abstract_t">Ostrowski DM, Neimkin RJ. Irreducible palmar dislocation of the proximal interphalangeal joint. A case report. Orthopedics 1985; 8:84.</a></li><li><a class="nounderline abstract_t">Itadera E. Irreducible palmar dislocation of the proximal interphalangeal joint caused by a fracture fragment: a case report. J Orthop Sci 2003; 8:872.</a></li><li class="breakAll">Simon RR, Sherman SC, Koenigsknecht SJ. Hand. In: Emergency Orthopedics: The Extremities, 5th, McGraw-Hill, New York 2007. p.123.</li><li><a class="nounderline abstract_t">Vicar AJ. Proximal interphalangeal joint dislocations without fractures. Hand Clin 1988; 4:5.</a></li></ol></div><div id="topicVersionRevision">Topic 6314 Version 29.0</div></div>
-<div class="row">
-<div class="col-12">
-<h4 style="text-align: center;padding: 20px;color: cadetblue;">References</h4>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/16529090" id="rid0" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>1 : Acute finger injuries: part II. Fractures, dislocations, and thumb injuries.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/19727965" id="rid1" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>2 : Dorsal dislocation of the distal interphalangeal joint and volar dislocation of the metacarpophalangeal joint in the same finger: a case report.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/1158914" id="rid2" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>3 : Tendon and pulleys at the metacarpophalangeal joint of a finger.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/1158914" id="rid3" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>4 : Tendon and pulleys at the metacarpophalangeal joint of a finger.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/17145466" id="rid4" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>5 : Complex dislocation with double sesamoid entrapment of the interphalangeal joint of the hallux.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/15315883" id="rid5" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>6 : Sesamoid and toe fractures.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/6693741" id="rid6" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>7 : Palmar dislocation of the proximal interphalangeal joint.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/5469189" id="rid7" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>8 : Anterior dislocation of the proximal interphalangeal joint. A cause of rupture of the central slip of the extensor mechanism.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/19384525" id="rid8" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>9 : Complex metacarpophalangeal dislocation.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/25455398" id="rid9" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>10 : Finger joint injuries.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/19411643" id="rid10" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>11 : Metacarpophalangeal joint dislocation.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/4863833" id="rid11" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>12 : Metacarpophalangeal-joint dislocations of the fingers.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/10642488" id="rid12" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>13 : Irreducible palmar metacarpophalangeal joint dislocation due to junctura tendinum interposition: a case report and review of the literature.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/30559627" id="rid13" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>14 : Pediatric Complex Metacarpophalangeal Joint Dislocation of the Index Finger.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/32612479" id="rid14" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>15 : Isolated Volar Dislocation of the Fifth Carpometacarpal Joint.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/7274888" id="rid15" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>16 : Traumatic dislocations of the first metatarsophalangeal joint.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/3998417" id="rid16" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>17 : Open dorsal dislocations of the proximal interphalangeal joint.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/10955207" id="rid17" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>18 : Proximal interphalangeal joint fracture dislocations.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/5479483" id="rid18" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>19 : Athletic injuries of the proximal interphalangeal joint requiring surgical treatment.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/8871750" id="rid19" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>20 : Proximal interphalangeal joint injuries of the hand. Part II: Treatment and complications.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/" id="rid20" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>21 : Jammed Finger</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/8359143" id="rid21" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>22 : Acute joint injuries of the hand.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/19643295" id="rid22" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>23 : Fracture-dislocation about the finger joints.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/24165600" id="rid23" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>24 : Current trends in the management of proximal interphalangeal joint injuries of the hand.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/28216823" id="rid24" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>25 : Complex dorsal dislocation of the distal interphalangeal joint: Perspectives on management.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/16988322" id="rid25" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>26 : Unstable proximal interphalangeal joint dislocations: another cause.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/16483702" id="rid26" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>27 : Irreducible palmar dislocation of the distal interphalangeal joint.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/15735279" id="rid27" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>28 : Irreducible volar dislocations of the proximal interphalangeal joint.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/28580380" id="rid28" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>29 : Recurrent Dislocation of the Proximal Interphalangeal Joint of the Finger: A Rare Issue in Hand Surgery.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/28580380" id="rid29" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>30 : Recurrent Dislocation of the Proximal Interphalangeal Joint of the Finger: A Rare Issue in Hand Surgery.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/28580380" id="rid30" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>31 : Recurrent Dislocation of the Proximal Interphalangeal Joint of the Finger: A Rare Issue in Hand Surgery.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/31103088" id="rid31" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>32 : Injuries Around the Proximal Interphalangeal Joint.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/31103088" id="rid32" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>33 : Injuries Around the Proximal Interphalangeal Joint.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/31103088" id="rid33" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>34 : Injuries Around the Proximal Interphalangeal Joint.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/4094956" id="rid34" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>35 : Irreducible palmar dislocation of the proximal interphalangeal joint. A case report.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/14648280" id="rid35" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>36 : Irreducible palmar dislocation of the proximal interphalangeal joint caused by a fracture fragment: a case report.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/14648280" id="rid36" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>37 : Irreducible palmar dislocation of the proximal interphalangeal joint caused by a fracture fragment: a case report.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/3277980" id="rid37" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>38 : Proximal interphalangeal joint dislocations without fractures.</p>
-</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-</section>
-<!-- End Main Menu Area -->
-<!-- Start Search Popup Area -->
-<!-- End Footer Area -->
-<!-- Back to top -->
-<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
-<!-- End Back to top -->
-<!-- jQuery Min JS -->
-<!-- Prpper JS -->
-<!-- Bootstrap Min JS -->
-<!-- Classy Nav Min Js -->
-<!-- Owl Carousel Min Js -->
-<!-- Magnific Popup JS -->
-<!-- CounterUp JS -->
-<!-- Waypoints JS -->
-<!-- Form Validator Min JS -->
-<!-- Contact Form Min JS -->
-<!-- Main JS -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-</body>
+ <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+ <head>
+  <title>
+   Digit dislocation reduction
+  </title>
+  <link href="d/css/1.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!-- Start Main Menu Area -->
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="container">
+   <div class="row">
+   </div>
+  </div>
+  <section class="teacher-area ptb-10">
+   <div class="container">
+   </div>
+   <section class="course-details-area ptb-60">
+    <div class="container">
+     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+      <h1 style="text-align:center">
+       Digit dislocation reduction
+      </h1>
+      <div class="utdArticleSection utdStyle" id="topicContent">
+       <div id="topicTitle">
+        Digit dislocation reduction
+       </div>
+       <div class="authorSectionElem">
+        <div class="authorsElementsLeft">
+         <dl id="topicContributors">
+          <dt>
+           <span>
+           </span>
+           Author:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Samir V Joshi, MD, DCH, FAAP
+           </a>
+          </dd>
+          <dt>
+           <span>
+           </span>
+           Section Editors:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Anne M Stack, MD
+           </a>
+          </dd>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Allan B Wolfson, MD
+           </a>
+          </dd>
+          <dt>
+           <span>
+           </span>
+           Deputy Editor:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Michael Ganetsky, MD
+           </a>
+          </dd>
+         </dl>
+        </div>
+        <div class="authorsElementsRight">
+         <div id="literatureReviewDate">
+          <div class="litReviewSingleLine">
+           <bdi>
+            <span class="emphasis">
+             Literature review current through:
+            </span>
+            Jan 2024.
+           </bdi>
+          </div>
+          <div class="litReviewSingleLine">
+           <bdi>
+            <span class="emphasis">
+             This topic last updated:
+            </span>
+            Jan 18, 2024.
+           </bdi>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div id="topicWhatsNewContainer">
+       </div>
+       <div id="topicText">
+        <p class="headingAnchor" id="H1">
+         <span class="h1">
+          INTRODUCTION
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The reduction of digit dislocations is reviewed here. The treatment of toe and finger fractures is discussed separately. (See
+         <a class="medical medical_review" href="/z/d/html/6548.html" rel="external">
+          "Metatarsal and toe fractures in children"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/222.html" rel="external">
+          "Toe fractures in adults"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/233.html" rel="external">
+          "Proximal phalanx fractures"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/209.html" rel="external">
+          "Middle phalanx fractures"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/234.html" rel="external">
+          "Distal phalanx fractures"
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H15767869">
+         <span class="h1">
+          BACKGROUND
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Dislocation of a digit is common among skeletally mature adolescents and active young adults. Dorsal displacement of the proximal interphalangeal joint of the finger is the most frequent dislocation [
+         <a href="#rid1">
+          1
+         </a>
+         ]. On the other hand, double dislocations of the finger interphalangeal and/or metacarpophalangeal joints are a rare entity [
+         <a href="#rid2">
+          2
+         </a>
+         ].
+        </p>
+        <p class="headingAnchor" id="H2">
+         <span class="h1">
+          ANATOMY
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Finger function involves a complex interaction among multiple joints, flexor and extensor tendons, and supporting fascia and ligaments. Each of the digits, except the thumb, has three phalanges with three hinged joints: distal interphalangeal (DIP), proximal interphalangeal (PIP), and metacarpophalangeal (MCP)  (
+         <a class="graphic graphic_figure graphicRef51990" href="/z/d/graphic/51990.html" rel="external">
+          figure 1
+         </a>
+         ). Joint stability is provided by the structure of the phalanges, joint capsule, radial and ulnar collateral ligaments, and dorsal and palmar ligaments. (See
+         <a class="medical medical_review" href="/z/d/html/201.html" rel="external">
+          "Finger and thumb anatomy"
+         </a>
+         .)
+        </p>
+        <p>
+         Flexion and extension are the primary movements of the fingers. Abduction and adduction can be performed at the MCP joints. The thumb is capable of opposition, abduction, adduction, and retropulsion, in addition to flexion and extension.
+        </p>
+        <p>
+         At the metacarpophalangeal (MCP) joints, lateral motion is limited by the collateral ligaments, which are actually lateral oblique in position rather than true lateral. Triangular in shape, these ligaments arise from the lateral head of each metacarpal bone and attach to the base of the proximal phalanx distally. Because of these anatomical features, the MCP joint is more stable in flexion than in extension due to stabilization by the collateral ligaments  (
+         <a class="graphic graphic_figure graphicRef80299" href="/z/d/graphic/80299.html" rel="external">
+          figure 2
+         </a>
+         ) [
+         <a href="#rid3">
+          3
+         </a>
+         ]. The volar plate is part of the joint capsule that attaches only to the proximal phalanx, allowing hyperextension. The volar plate is the site of insertion for the intermetacarpal ligaments. The intermetacarpal ligaments restrict the separation of the metacarpal heads.
+        </p>
+        <p>
+         At the PIP and DIP joints, extension is limited by the volar plate, which attaches to the phalanges at each side of the joint and by the extensor hood (ligamentous) complex  (
+         <a class="graphic graphic_figure graphicRef77114" href="/z/d/graphic/77114.html" rel="external">
+          figure 3
+         </a>
+         ). Radial and ulnar motion is restricted by collateral ligaments, which remain tight throughout the finger's range of motion.
+        </p>
+        <p>
+         By convention, toes and their respective metatarsals are numbered from one (great toe) through five (little toe). The second through fifth toes typically have three phalanges, while the great toe has two. Lesser toes, especially the fifth, may occasionally have only two phalanges  (
+         <a class="graphic graphic_figure graphicRef71857" href="/z/d/graphic/71857.html" rel="external">
+          figure 4
+         </a>
+         ).
+        </p>
+        <p>
+         The ligamentous complexes of the metatarsal, PIP, and DIP joints are similar to the fingers; each joint is stabilized by collateral, extensor, and plantar ligaments [
+         <a href="#rid4">
+          4
+         </a>
+         ]. In contrast to the MCP joint, the ligamentous anatomy of the metatarsal joint allows less abduction or adduction and opposition cannot occur [
+         <a href="#rid4">
+          4
+         </a>
+         ]. Dislocations of the hallucal interphalangeal joint of the great toe are rare and frequently complicated by sesamoid and plantar ligament entrapment [
+         <a href="#rid5">
+          5,6
+         </a>
+         ].
+        </p>
+        <p class="headingAnchor" id="H2305038323">
+         <span class="h2">
+          Fracture predisposition in children
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         In skeletally immature children, the digital growth plates are weaker than the supporting ligaments  (
+         <a class="graphic graphic_figure graphicRef79444" href="/z/d/graphic/79444.html" rel="external">
+          figure 5
+         </a>
+         ). Thus, Salter-Harris digit fractures are more common than dislocations  (
+         <a class="graphic graphic_diagnosticimage graphicRef61198" href="/z/d/graphic/61198.html" rel="external">
+          image 1
+         </a>
+         and
+         <a class="graphic graphic_figure graphicRef54582" href="/z/d/graphic/54582.html" rel="external">
+          figure 6
+         </a>
+         ). When digit dislocations do occur, they are commonly accompanied by avulsion fractures because the collateral ligaments of the metatarsal, MCP, PIP, and DIP joints insert into the epiphyseal regions of the growth plate  (
+         <a class="graphic graphic_diagnosticimage graphicRef63865" href="/z/d/graphic/63865.html" rel="external">
+          image 2
+         </a>
+         ).
+        </p>
+        <p class="headingAnchor" id="H3">
+         <span class="h1">
+          CLASSIFICATION
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Dislocations of the digits are classified by the direction of dislocation as follows:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Dorsal
+         </strong>
+         – Distal digit displacement is toward the back of the hand or the top of the foot.
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Volar
+         </strong>
+         – Distal digit displacement is toward the palm of the hand or the sole of the foot.
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Lateral
+         </strong>
+         – Distal digit displacement is in the ulnar or radial direction relative to the proximal digit in the hand or in the tibial or fibular direction in the foot.
+        </p>
+        <p>
+        </p>
+        <p>
+         Metacarpophalangeal (MCP) dislocations, other than thumb dislocations, are further classified as simple (volar plate is not interposed in the joint) and complex (volar plate is entrapped in the joint).
+        </p>
+        <p>
+         Thumb MCP dislocations are classified as follows  (
+         <a class="graphic graphic_figure graphicRef62404" href="/z/d/graphic/62404.html" rel="external">
+          figure 7
+         </a>
+         and
+         <a class="graphic graphic_diagnosticimage graphicRef126158" href="/z/d/graphic/126158.html" rel="external">
+          image 3
+         </a>
+         ):
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Incomplete
+         </strong>
+         – Volar plate ruptured, collateral ligament intact
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Simple
+         </strong>
+         – Volar plate and collateral ligament ruptured
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Complex
+         </strong>
+         – Dislocated phalanx is entrapped in the intrinsic hand muscles and volar plate is entrapped in the joint
+        </p>
+        <p>
+        </p>
+        <p>
+         Metatarsophalangeal (MTP) dislocations are typically multiple and associated with Lisfranc fractures of the foot. (See
+         <a class="medical medical_review" href="/z/d/html/6555.html" rel="external">
+          "Foot fractures (other than metatarsal or phalangeal) in children", section on 'Tarsometatarsal (Lisfranc) fractures'
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H4">
+         <span class="h1">
+          PRESENTATION AND MECHANISM
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The patient with a dislocated digit has pain, swelling, loss of continuity, and impaired range of motion of the affected joint.
+        </p>
+        <p class="headingAnchor" id="H5">
+         <span class="h2">
+          Interphalangeal dislocation
+         </span>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Dorsal dislocation
+         </strong>
+         – Patients with dorsal joint dislocation have displacement of the distal portion of the joint toward the back of the hand or the top of the foot  (
+         <a class="graphic graphic_diagnosticimage graphicRef104381" href="/z/d/graphic/104381.html" rel="external">
+          image 4
+         </a>
+         and
+         <a class="graphic graphic_diagnosticimage graphicRef126157" href="/z/d/graphic/126157.html" rel="external">
+          image 5
+         </a>
+         ). Dorsal proximal interphalangeal (PIP) and distal interphalangeal (DIP) joint dislocations arise from a force that produces axial loading and hyperextension of the digit. Dorsal PIP dislocation is the most common articular injury of the hand in the skeletally mature patient. Dorsal DIP joint dislocations are frequently associated with a flexor digitorum profundus avulsion fracture called a jersey finger  (
+         <a class="graphic graphic_figure graphicRef53137" href="/z/d/graphic/53137.html" rel="external">
+          figure 8
+         </a>
+         ). (See
+         <a class="medical medical_review" href="/z/d/html/242.html" rel="external">
+          "Flexor tendon injury of the distal interphalangeal joint (jersey finger)"
+         </a>
+         .)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Volar dislocation
+         </strong>
+         – Volar dislocations of the PIP and DIP joints occur due to a combination of dorsal, varus (medial), and valgus (lateral) forces that rupture the collateral ligaments and the volar plate while displacing the base of the dislocated phalanx towards the palm or sole [
+         <a href="#rid7">
+          7
+         </a>
+         ]. In addition, rupture of the central slip of the extensor hood complex usually occurs, and an avulsion fracture is often present [
+         <a href="#rid8">
+          8
+         </a>
+         ]. Lack of timely treatment of volar PIP finger dislocations may result in a boutonniere deformity  (
+         <a class="graphic graphic_figure graphicRef74107" href="/z/d/graphic/74107.html" rel="external">
+          figure 9
+         </a>
+         ). Volar dislocations are rare and may be irreducible due to entrapment of the proximal phalangeal condyle between the central tendon and lateral band. Volar dislocations of the interphalangeal joint of the thumb may also present with rupture of the flexor pollicis longus tendon.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Lateral joint dislocation
+         </strong>
+         – Isolated lateral dislocations of the PIP and DIP joints are rare and represent collateral ligament disruption caused by medial or lateral forces  (
+         <a class="graphic graphic_diagnosticimage graphicRef104385" href="/z/d/graphic/104385.html" rel="external">
+          image 6
+         </a>
+         ).
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Interphalangeal dislocation of the hallux (great toe)
+         </strong>
+         – Dislocations of the hallucal interphalangeal joint of the great toe are rare and frequently complicated by sesamoid and plantar ligament entrapment [
+         <a href="#rid5">
+          5,6
+         </a>
+         ].
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H6">
+         <span class="h2">
+          Metacarpophalangeal dislocation
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Dorsal metacarpophalangeal (MCP) dislocation follows hyperextension of the affected joint with rupture of the volar plate. MCP dislocations, other than thumb dislocations, are classified as simple (no entrapment of the volar plate in the joint) or complex (interposition of the volar plate within the joint). Complex dislocations occur when the volar plate is ruptured, and the plate becomes lodged between the base of the proximal phalanx and the head of the metacarpal bone. Complex dislocation presents with skin dimpling, with less angulated deformities, or rotational deformity of the involved phalanges [
+         <a href="#rid9">
+          9-13
+         </a>
+         ].
+        </p>
+        <p>
+         Thumb MCP dislocations are caused by the same mechanisms as other digit MCP dislocations but are far more common than at the digits because of mobility of the thumb. In addition, because of the greater physiologic range of motion, these types of dislocation are more complex. They are designated as follows:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Incomplete
+         </strong>
+         – Volar plate ligament disruption with some preservation of collateral ligament function  (
+         <a class="graphic graphic_diagnosticimage graphicRef104383" href="/z/d/graphic/104383.html" rel="external">
+          image 7
+         </a>
+         ).
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Simple
+         </strong>
+         – Volar plate and collateral ligament disruption with 90 degree displacement of the thumb phalanx relative to the thumb MCP  (
+         <a class="graphic graphic_figure graphicRef62404" href="/z/d/graphic/62404.html" rel="external">
+          figure 7
+         </a>
+         and
+         <a class="graphic graphic_diagnosticimage graphicRef126158" href="/z/d/graphic/126158.html" rel="external">
+          image 3
+         </a>
+         ).
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Complex
+         </strong>
+         – The distal phalanx is positioned parallel to the metacarpal bone  (
+         <a class="graphic graphic_figure graphicRef62404" href="/z/d/graphic/62404.html" rel="external">
+          figure 7
+         </a>
+         ). With these injuries, the metacarpal head may be trapped in the intrinsic muscles and the volar plate is interposed in the joint. On physical examination, puckering of skin near the affected joint that may be accompanied by volar ecchymosis suggests the possibility of volar entrapment. This finding is confirmed when plain radiographs show the sesamoid bones within the joint space [
+         <a href="#rid9">
+          9
+         </a>
+         ].
+        </p>
+        <p>
+        </p>
+        <p>
+         Volar metacarpophalangeal joint dislocations are rare injuries that are typically entrapped and require operative repair [
+         <a href="#rid14">
+          14,15
+         </a>
+         ].
+        </p>
+        <p class="headingAnchor" id="H7">
+         <span class="h2">
+          Metatarsophalangeal dislocation
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Dislocation at a single metatarsophalangeal joint frequently involves the fifth digit, which can be easily reduced. Multiple metatarsophalangeal (MTP) dislocations can be associated with Lisfranc fractures of the foot. These complex injuries require orthopedic or podiatric subspecialty care. (See
+         <a class="medical medical_review" href="/z/d/html/13795.html" rel="external">
+          "Tarsometatarsal (Lisfranc) joint complex injuries"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/6555.html" rel="external">
+          "Foot fractures (other than metatarsal or phalangeal) in children", section on 'Tarsometatarsal (Lisfranc) fractures'
+         </a>
+         .)
+        </p>
+        <p>
+         Dislocation of the first MTP occurs rarely and should also prompt subspecialty consultation with an orthopedist or podiatrist [
+         <a href="#rid6">
+          6,16
+         </a>
+         ].
+        </p>
+        <p class="headingAnchor" id="H8">
+         <span class="h1">
+          DIFFERENTIAL DIAGNOSIS
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Clinical evaluation and plain radiographs should differentiate the following injuries from digit dislocations.
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Open dislocations
+         </strong>
+         – The clinician should suspect open dislocations in patients with a wound near the dislocated joint  (
+         <a class="graphic graphic_picture graphicRef73162" href="/z/d/graphic/73162.html" rel="external">
+          picture 1
+         </a>
+         ). These injuries require antibiotic treatment, tetanus prophylaxis, urgent orthopedic or hand surgery consultation, meticulous operative debridement, and repair of the collateral ligaments and volar plate [
+         <a href="#rid17">
+          17
+         </a>
+         ].
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Fracture-dislocations
+         </strong>
+         – Fracture-dislocations commonly occur in skeletally mature patients when the extended finger is struck in such a manner that longitudinal compression occurs along with hyperextension. A typical mechanism involves a ball striking the extended finger [
+         <a href="#rid18">
+          18
+         </a>
+         ]. This mechanism typically causes a fracture through the volar lip of the proximal interphalangeal (PIP) joint with dorsal displacement [
+         <a href="#rid19">
+          19
+         </a>
+         ].
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         In children, the growth plates are typically weaker than the surrounding ligaments. Thus, dislocations are commonly accompanied by Salter-Harris fractures because the collateral ligaments of the MCP, PIP, and DIP joints insert into the epiphyseal regions of the growth plate  (
+         <a class="graphic graphic_diagnosticimage graphicRef63865" href="/z/d/graphic/63865.html" rel="external">
+          image 2
+         </a>
+         and
+         <a class="graphic graphic_figure graphicRef79444" href="/z/d/graphic/79444.html" rel="external">
+          figure 5
+         </a>
+         ). (See
+         <a class="local">
+          'Fracture predisposition in children'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Complex thumb dislocation
+         </strong>
+         – Volar and complex dorsal MCP joint dislocations should be evaluated and treated by a hand surgeon or orthopedist with appropriate expertise [
+         <a href="#rid1">
+          1
+         </a>
+         ]. (See
+         <a class="local">
+          'Metacarpophalangeal dislocation'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Gamekeeper's thumb
+         </strong>
+         – Gamekeeper's thumb describes ulnar collateral ligament injury with lateral thumb metacarpophalangeal (MCP) instability. It is commonly seen in skiers when the ski pole forcefully abducts the thumb at the MCP joint during a fall. Physical findings include tenderness on the ulnar aspect of the thumb and a weak pinch. Valgus stress testing determines the integrity of the ulnar collateral ligament  (
+         <a class="graphic graphic_picture graphicRef53552" href="/z/d/graphic/53552.html" rel="external">
+          picture 2
+         </a>
+         ). The diagnostic approach and treatment of gamekeeper's thumb is discussed in greater detail separately. (See
+         <a class="medical medical_review" href="/z/d/html/250.html" rel="external">
+          "Ulnar collateral ligament injury (gamekeeper's or skier's thumb)", section on 'Clinical features'
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/250.html" rel="external">
+          "Ulnar collateral ligament injury (gamekeeper's or skier's thumb)"
+         </a>
+         .)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Jammed finger
+         </strong>
+         – "Jammed finger" refers to prolonged swelling of the proximal interphalangeal joint after an axial loading force (eg, basketball striking the end of an extended finger) [
+         <a href="#rid20">
+          20
+         </a>
+         ]. Diagnostic criteria include lack of radiographic changes, complete functional stability of the joint, and no evidence of extensor tendon avulsion. Symptoms may arise from cartilage bruising and chondromalacia or chronic synovitis. The usual treatment for jammed finger involves therapeutic heat, passive and active range of motion exercises, and control of swelling. Aggressive, early range of motion in a supervised therapy program is useful to prevent stiffening [
+         <a href="#rid21">
+          21
+         </a>
+         ]. Occasionally, corticosteroid injection into the joint is used to reduce synovitis.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Mallet finger
+         </strong>
+         – Mallet finger occurs most commonly during collision sports, such as American football and rugby, or ball-handling sports, such as basketball and baseball. The injury is usually caused by a direct blow to the tip of the finger, as when a ball strikes the fingertip or the fingertip strikes a rigid surface  (
+         <a class="graphic graphic_figure graphicRef66023" href="/z/d/graphic/66023.html" rel="external">
+          figure 10
+         </a>
+         and
+         <a class="graphic graphic_picture graphicRef77830" href="/z/d/graphic/77830.html" rel="external">
+          picture 3
+         </a>
+         ). The axial load from the blow causes sudden, forceful flexion of the distal phalanx. This flexion damages the extensor tendon where it attaches to the proximal portion of the distal phalanx. Less frequently, a mallet finger may occur as part of finger injuries involving lacerations or crushing mechanisms. Physical examination findings and treatment of mallet finger are discussed in more detail separately. (See
+         <a class="medical medical_review" href="/z/d/html/198.html" rel="external">
+          "Extensor tendon injury of the distal interphalangeal joint (mallet finger)", section on 'Symptoms and examination findings'
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/198.html" rel="external">
+          "Extensor tendon injury of the distal interphalangeal joint (mallet finger)", section on 'Treatment'
+         </a>
+         .)
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H9">
+         <span class="h1">
+          INDICATIONS
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The clinician may proceed with reduction of a digit dislocation once the presence of a simple dislocation is confirmed and an open joint, associated fracture, or entrapped volar plate are excluded.
+        </p>
+        <p class="headingAnchor" id="H10">
+         <span class="h1">
+          CONTRAINDICATIONS AND PRECAUTIONS
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The clinician should
+         <strong>
+          not
+         </strong>
+         attempt dislocation reduction prior to radiographic evaluation, especially in skeletally immature children.
+        </p>
+        <p>
+         Contraindications to closed reduction of digit dislocations include:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Open dislocation
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Complex dislocation
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Chronic dislocation (dislocation of more than three weeks duration)
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Joint instability
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H389313638">
+         <span class="h1">
+          INDICATION FOR SPECIALTY CONSULTATION OR REFERRAL
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The clinician should defer care to the appropriate specialist (orthopedist, hand surgeon or podiatrist), if available, in patients with the following conditions:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Associated digit fracture
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Open joint dislocation  (
+         <a class="graphic graphic_picture graphicRef73162" href="/z/d/graphic/73162.html" rel="external">
+          picture 1
+         </a>
+         )
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Digital neurovascular compromise (unless emergency orthopedic or hand surgery consultation is not available)
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Interphalangeal joint dislocation of the great toe (hallux)
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Multiple metatarsophalangeal dislocations
+        </p>
+        <p>
+        </p>
+        <p>
+         Prompt subspecialty consultation is also appropriate in the following situations:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Volar proximal interphalangeal joint dislocation, because entrapment of the lateral band around the head of the proximal phalanx often prevents a successful closed reduction  (
+         <a class="graphic graphic_figure graphicRef77114" href="/z/d/graphic/77114.html" rel="external">
+          figure 3
+         </a>
+         )
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Volar, lateral, or complex dorsal metacarpophalangeal joint dislocation, because open reduction is typically required
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Any joint dislocation with tendon rupture
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Digit dislocation that is irreducible
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Unstable joint after attempted dislocation reduction
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Multiple failed reduction attempts (which can convert a simple dislocation into a complex dislocation)
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Patients who remain in a significant amount of discomfort after reduction for whom an occult fracture (at any age) or growth plate injury (pediatric age) is suspected
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H11">
+         <span class="h1">
+          PREPARATION
+         </span>
+        </p>
+        <p class="headingAnchor" id="H12">
+         <span class="h2">
+          Evaluation
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Proper management of digit dislocation requires careful evaluation, including plain radiographs, prior to attempting closed reduction. This assessment should identify conditions not amenable to closed reduction or those that require prompt referral to a hand surgeon, orthopedic surgeon, or podiatrist.
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          History/physical examination
+         </strong>
+         – The clinician should obtain history and fully evaluate the site of injury prior to reduction. Key historical elements include:
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Age and skeletal maturity
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Mechanism and time of injury
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Digit position during injury (flexed versus extended)
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Dominant hand
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Occupation
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Prior hand conditions, injuries, or interventions
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Important physical examination features include:
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent3">
+         <span class="glyph">
+          -
+         </span>
+         Site of injury (eg, maximal pain and swelling)
+        </p>
+        <p class="bulletIndent3">
+         <span class="glyph">
+          -
+         </span>
+         Neurovascular examination, especially distal to the injury
+        </p>
+        <p class="bulletIndent3">
+         <span class="glyph">
+          -
+         </span>
+         Presence of open wounds adjacent to the injury
+        </p>
+        <p class="bulletIndent3">
+         <span class="glyph">
+          -
+         </span>
+         Range of motion
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Radiographic studies
+         </strong>
+         – AP, oblique, and, most importantly, true lateral plain radiographs are necessary before the procedure to exclude associated fractures and to assist in identifying complex dislocations or other digit conditions that warrant referral to an orthopedist, hand surgeon, or podiatrist [
+         <a href="#rid22">
+          22
+         </a>
+         ]. (See
+         <a class="local">
+          'Differential diagnosis'
+         </a>
+         above and
+         <a class="local">
+          'Contraindications and precautions'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H873654479">
+         <span class="h2">
+          Patient counseling/informed consent
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The patient with digit dislocation is typically anxious and in pain. The patient and family/caregiver(s) should receive an explanation of the problem and the procedural approach.
+        </p>
+        <p>
+         The benefits of the joint reduction procedure usually outweigh the risks. Appropriate expectations regarding the outcome of any injury should be discussed with the patient and family/caregiver(s). Prior to initiation of reduction attempts, the potential adverse effects of the procedure should be disclosed, including [
+         <a href="#rid1">
+          1,23-29
+         </a>
+         ]:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Inadequate or delayed reduction may cause an unstable, deformed, or stiff joint
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Reduction attempts may lead to fracture
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         The joint may become dislocated again if immobilization is not maintained
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Swelling of the affected joint with stiffness may be present for several months despite appropriate treatment
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Permanent joint enlargement may occur
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H13">
+         <span class="h2">
+          Analgesia and sedation
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Appropriate analgesia, anesthesia, and, especially in children, distraction by a child life specialist or other personnel, may help to decrease the anxiety and pain of the procedure and promote successful reduction. A digital block often provides adequate analgesia in older adolescents and adults. In younger children, procedural sedation is frequently warranted. (See
+         <a class="medical medical_review" href="/z/d/html/262.html" rel="external">
+          "Digital nerve block"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/6330.html" rel="external">
+          "Procedural sedation in children: Approach"
+         </a>
+         .)
+        </p>
+        <p>
+         In most instances, the clinician should provide analgesia before attempting reduction of the digit. Rarely, an older adolescent or adult with a very recent dislocation (less than one hour old) and minimal swelling may tolerate reduction without analgesia.
+        </p>
+        <p class="headingAnchor" id="H14">
+         <span class="h2">
+          Equipment
+         </span>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Latex-free gloves
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         1 percent buffered
+         <a class="drug drug_general" data-topicid="9558" href="/z/d/drug information/9558.html" rel="external">
+          lidocaine
+         </a>
+         without
+         <a class="drug drug_general" data-topicid="9409" href="/z/d/drug information/9409.html" rel="external">
+          epinephrine
+         </a>
+         (one part of 1 mEq/mL [8.4 percent]
+         <a class="drug drug_general" data-topicid="9928" href="/z/d/drug information/9928.html" rel="external">
+          sodium bicarbonate
+         </a>
+         to 9 or 10 parts of 1 percent lidocaine)
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Syringes (3 mL or 5 mL) and needles (25 or 27 gauge)
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <a class="drug drug_general" data-topicid="9801" href="/z/d/drug information/9801.html" rel="external">
+          Povidone iodine
+         </a>
+         solution (eg, Betadine) and alcohol
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Scissors
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         White surgical tape
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Splinting materials depend on the affected joint:
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Finger interphalangeal dislocations: padded, malleable, aluminum digital splint
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Metacarpal (thumb) dislocations: water, bucket, prefabricated splinting material (eg, plaster of Paris or fiberglass)
+         <strong>
+          OR
+         </strong>
+         Webril, plaster of Paris, and stockinette to fashion a thumb spica splint  (
+         <a class="graphic graphic_figure graphicRef79534" href="/z/d/graphic/79534.html" rel="external">
+          figure 11
+         </a>
+         ). (See
+         <a class="medical medical_review" href="/z/d/html/6334.html" rel="external">
+          "Basic techniques for splinting of musculoskeletal injuries", section on 'Thumb spica splint'
+         </a>
+         .)
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H15">
+         <span class="h1">
+          PROCEDURE
+         </span>
+        </p>
+        <p class="headingAnchor" id="H16">
+         <span class="h2">
+          Interphalangeal dislocation
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The procedure for proximal interphalangeal (PIP) or distal interphalangeal (DIP) dislocation reduction is summarized in the table  (
+         <a class="graphic graphic_table graphicRef72981" href="/z/d/graphic/72981.html" rel="external">
+          table 1
+         </a>
+         ) and consists of the following steps [
+         <a href="#rid30">
+          30,31
+         </a>
+         ]:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Assure no fracture or open joint is present on AP, true lateral, and oblique plain radiographs.
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Remove all rings from the affected hand or foot.
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Assemble all necessary materials. (See
+         <a class="local">
+          'Equipment'
+         </a>
+         above.)
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Provide appropriate analgesia as determined by the patient's age and degree of pain. (See
+         <a class="local">
+          'Analgesia and sedation'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H17">
+         <span class="h3">
+          Interphalangeal reduction
+         </span>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Have an assistant brace the hand or foot.
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Reduce the dislocation using one of the following methods:
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         <strong>
+          Dorsal dislocation
+         </strong>
+         – Provide longitudinal traction;
+         <strong>
+          gently
+         </strong>
+         hyperextend the joint while pushing the base of the dislocated phalanx into place [
+         <a href="#rid32">
+          32
+         </a>
+         ].
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         <strong>
+          Volar dislocation
+         </strong>
+         – Provide longitudinal traction;
+         <strong>
+          gently
+         </strong>
+         hyperflex while pushing the base of the dislocated phalanx into place.
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         <strong>
+          Lateral dislocation
+         </strong>
+         – Provide longitudinal traction;
+         <strong>
+          gently
+         </strong>
+         hyperextend the joint while correcting the ulnar or radial deformity [
+         <a href="#rid32">
+          32
+         </a>
+         ].
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         After reduction, test joint stability throughout the full range of motion of the digit to ensure that the joint will recover well with splinting alone [
+         <a href="#rid33">
+          33
+         </a>
+         ].
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Obtain a post-reduction plain radiograph, including a true lateral view of the digit.
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H18">
+         <span class="h3">
+          Interphalangeal immobilization
+         </span>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Immobilize the digit based on the location and type of dislocation:
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         <strong>
+          DIP dorsal or lateral finger dislocation
+         </strong>
+         – Splint the DIP in full extension while allowing full range of motion of the PIP joint.
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         <strong>
+          PIP dorsal or lateral finger dislocation
+         </strong>
+         – Apply a dorsal splint with the PIP in 20 to 30 degrees of flexion.
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         <strong>
+          Volar finger dislocation
+         </strong>
+         – Splint the PIP and DIP in full extension.
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         <strong>
+          DIP or PIP toe dislocation
+         </strong>
+         – Buddy tape the affected digit to its neighbor  (
+         <a class="graphic graphic_picture graphicRef108681" href="/z/d/graphic/108681.html" rel="external">
+          picture 4
+         </a>
+         ).
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H19">
+         <span class="h2">
+          Simple metacarpophalangeal or metatarsophalangeal dislocation
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The procedure for simple metacarpophalangeal (MCP) dislocation reduction is summarized in the table  (
+         <a class="graphic graphic_table graphicRef72981" href="/z/d/graphic/72981.html" rel="external">
+          table 1
+         </a>
+         ) and consists of the following steps [
+         <a href="#rid30">
+          30,31
+         </a>
+         ]:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Assure no fracture or open joint is present on AP, true lateral, and oblique plain radiographs.
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Remove all rings from the affected hand or foot.
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Assemble all necessary materials. (See
+         <a class="local">
+          'Equipment'
+         </a>
+         above.)
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Provide appropriate analgesia as determined by the patient's age and degree of pain. (See
+         <a class="local">
+          'Analgesia and sedation'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H20">
+         <span class="h3">
+          Reduction
+         </span>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Have an assistant brace the hand and flex the wrist.
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Avoid excessive hyperextension or distraction that can convert a simple dislocation into a complex dislocation [
+         <a href="#rid34">
+          34
+         </a>
+         ].
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Gently distract the affected thumb or digit and apply volar pressure to the base of the dislocated proximal phalanx.
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Test joint stability throughout the full range of thumb motions to ensure that the joint will recover well with splinting alone [
+         <a href="#rid33">
+          33
+         </a>
+         ].
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H21">
+         <span class="h3">
+          Immobilization
+         </span>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Finger dislocation
+         </strong>
+         – Splint the digit in 90 degrees of flexion at the MCP joint.
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Thumb dislocation
+         </strong>
+         – Apply a thumb spica splint with the MCP joint in 20 degrees of flexion  (
+         <a class="graphic graphic_figure graphicRef79534" href="/z/d/graphic/79534.html" rel="external">
+          figure 11
+         </a>
+         ).
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H22">
+         <span class="h1">
+          FOLLOW-UP CARE
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         All patients with digit dislocations should be seen within seven days to assess degree of pain, compliance with splinting, and joint stability. Unless the clinician has appropriate experience and comfort in the management of simple digit dislocations, referral to an orthopedist, hand surgeon, or podiatrist (toe dislocations) is warranted.
+        </p>
+        <p>
+         Range of motion exercises should commence as soon as the splint can be removed. Duration of splinting depends on the type of dislocation [
+         <a href="#rid30">
+          30
+         </a>
+         ]:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Dorsal finger proximal interphalangeal (PIP)
+         </strong>
+         – Three to five days as needed for comfort, then buddy tape
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Dorsal finger distal interphalangeal (DIP)
+         </strong>
+         – Two to three weeks
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Volar PIP
+         </strong>
+         – Four weeks
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Simple finger metacarpophalangeal (MCP)
+         </strong>
+         – Three to five days
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Simple thumb MCP
+         </strong>
+         – Three to four weeks
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Toe dislocations
+         </strong>
+         – Buddy tape for two weeks
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H23">
+         <span class="h2">
+          Return to play
+         </span>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Dorsal dislocations of the PIP or DIP joint
+         </strong>
+         – Patients with these injuries can immediately return to play with proper splinting (finger dislocations) or buddy taping (toe dislocations) if a stable reduction is achieved, if their position does not place unusual demands on the digit (eg, quarterbacks, pitchers with an injury to the dominant hand or toe of foot used to push off), and if pain is tolerable.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          MCP joint dislocations
+         </strong>
+         – Patients may return to play after clearance by a hand or orthopedic surgeon. Typical timing is six to eight weeks [
+         <a href="#rid23">
+          23
+         </a>
+         ].
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H24">
+         <span class="h1">
+          COMPLICATIONS
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Most simple digit dislocations will have full return of function as long as successful reductions are properly splinted and early range of motion occurs [
+         <a href="#rid34">
+          34
+         </a>
+         ]. However, early referral of irreducible dislocations, avoidance of an excessive duration of splinting, and careful testing of joint stability after reduction are essential to avoid poor outcomes.
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Irreducible dislocations
+         </strong>
+         – Dislocations that are irreducible by closed reduction are uncommon but may occur when soft tissue or bony fragments (eg, the volar plate) become interposed in the joint space [
+         <a href="#rid35">
+          35,36
+         </a>
+         ]. This is likely to be the situation if one or two attempts at reduction prove unsuccessful. These patients usually require open reduction to extract and repair the interposed ligament, tendon, or volar plate [
+         <a href="#rid5">
+          5,6,16,34-38
+         </a>
+         ]. The clinician should
+         <strong>
+          avoid
+         </strong>
+         multiple forceful attempts at reduction in these patients. Such excessive force may cause a fracture or convert a dislocation that is amenable to closed reduction to one that requires open reduction.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Stiffness
+         </strong>
+         – Stiffness and joint thickening is a common complication, especially with PIP dislocations [
+         <a href="#rid37">
+          37
+         </a>
+         ]. As soon as the appropriate duration of splinting has passed, early initiation of range of motion exercises helps to decrease stiffness. (See
+         <a class="local">
+          'Follow-up care'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         However, in some patients, stiffness and soreness may last as long as 12 to 18 months, and result in permanent residual enlargement of the joint despite appropriate treatment [
+         <a href="#rid38">
+          38
+         </a>
+         ].
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Recurrent dislocation
+         </strong>
+         – Recurrent dislocation may arise from improper splint position, inadequate duration of splinting, or inappropriate return to play. This complication is most common with metacarpophalangeal dislocations.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Boutonniere deformity
+         </strong>
+         – Boutonniere deformity (hyperextension at the distal interphalangeal joint with fixed flexion at the proximal interphalangeal joint) is a potential complication in patients with volar PIP finger dislocations  (
+         <a class="graphic graphic_figure graphicRef74107" href="/z/d/graphic/74107.html" rel="external">
+          figure 9
+         </a>
+         ). Such patients are at risk for boutonniere deformity if their dislocation is not splinted in extension or if immobilization is not maintained for at least six weeks.
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H156385109">
+         <span class="h1">
+          INFORMATION FOR PATIENTS
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         UpToDate offers two types of patient education materials, "The Basics" and "Beyond the Basics." The Basics patient education pieces are written in plain language, at the 5
+         <sup>
+          th
+         </sup>
+         to 6
+         <sup>
+          th
+         </sup>
+         grade reading level, and they answer the four or five key questions a patient might have about a given condition. These articles are best for patients who want a general overview and who prefer short, easy-to-read materials. Beyond the Basics patient education pieces are longer, more sophisticated, and more detailed. These articles are written at the 10
+         <sup>
+          th
+         </sup>
+         to 12
+         <sup>
+          th
+         </sup>
+         grade reading level and are best for patients who want in-depth information and are comfortable with some medical jargon.
+        </p>
+        <p>
+         Here are the patient education articles that are relevant to this topic. We encourage you to print or e-mail these topics to your patients. (You can also locate patient education articles on a variety of subjects by searching on "patient info" and the keyword(s) of interest.)
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Basics topic (see
+         <a class="medical medical_basics" href="/z/d/html/17185.html" rel="external">
+          "Patient education: Finger dislocation (The Basics)"
+         </a>
+         )
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H25">
+         <span class="h1">
+          SUMMARY AND RECOMMENDATIONS
+         </span>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Anatomy of the injury
+         </strong>
+         – Dislocation of a digit occurs commonly among skeletally mature adolescents and active young adults. Dorsal displacement of the proximal interphalangeal joint of the finger is the most frequent dislocation. In children, digit dislocation is often associated with a growth plate fracture. (See
+         <a class="local">
+          'Anatomy'
+         </a>
+         above and
+         <a class="local">
+          'Fracture predisposition in children'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Clinical presentation and evaluation
+         </strong>
+         – The patient with a dislocated digit has pain, swelling, loss of continuity, and impaired range of motion of the affected joint. Proper management of digit dislocation requires careful examination for an open fracture or neurovascular compromise. Plain radiographs to exclude a fracture, should be performed prior to attempting closed reduction. (See
+         <a class="local">
+          'Presentation and mechanism'
+         </a>
+         above and
+         <a class="local">
+          'Indications'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Indication for specialty consultation (complex or complicated dislocations)
+         </strong>
+         – The clinician should defer care to the appropriate specialist (orthopedist, hand surgeon or podiatrist), whenever available, in patients with the following conditions (see
+         <a class="local">
+          'Indication for specialty consultation or referral'
+         </a>
+         above):
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Associated digit fracture
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Open joint dislocation  (
+         <a class="graphic graphic_picture graphicRef73162" href="/z/d/graphic/73162.html" rel="external">
+          picture 1
+         </a>
+         )
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Digital neurovascular compromise (unless orthopedic or hand surgery consultation is not emergently available)
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Interphalangeal joint dislocation of the great toe (hallux)
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Multiple metatarsophalangeal dislocations
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Volar proximal interphalangeal joint dislocation, because entrapment of the lateral band around the head of the proximal phalanx often prevents a successful closed reduction  (
+         <a class="graphic graphic_figure graphicRef77114" href="/z/d/graphic/77114.html" rel="external">
+          figure 3
+         </a>
+         )
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Volar, lateral, or complex dorsal metacarpophalangeal joint dislocation, because open reduction is typically required
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Any joint dislocation with tendon rupture
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Digit dislocation that is irreducible
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Unstable joint after attempted dislocation reduction
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Patients who remain in a significant amount of discomfort after reduction for whom an occult fracture (at any age) or growth plate injury (pediatric age) is suspected
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Simple dislocations
+         </strong>
+         – Simple dislocations may be reduced by clinicians other than surgical specialists. Patient counseling and informed consent should include the risks of the procedure, including the potential for closed reduction causing a fracture or need for surgical intervention, as described above. (See
+         <a class="local">
+          'Patient counseling/informed consent'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         Appropriate analgesia, anesthesia, and (especially in children) distraction by a child life specialist or other personnel may help to decrease the anxiety and pain of the procedure and promote successful reduction. A digital block often provides adequate analgesia in older adolescents and adults. (See
+         <a class="local">
+          'Analgesia and sedation'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         The type and location of digit dislocation determine the reduction technique and splinting method  (
+         <a class="graphic graphic_table graphicRef72981" href="/z/d/graphic/72981.html" rel="external">
+          table 1
+         </a>
+         ). (See
+         <a class="local">
+          'Equipment'
+         </a>
+         above and
+         <a class="local">
+          'Procedure'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Postprocedure evaluation and immobilization
+         </strong>
+         – After reduction, careful clinical and radiographic assessment is necessary to assure complete reduction; immobilization is performed according to the specific location. (See
+         <a class="local">
+          'Interphalangeal immobilization'
+         </a>
+         above and
+         <a class="local">
+          'Immobilization'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Follow-up care
+         </strong>
+         – All patients with digit dislocations should be seen within seven days to assess degree of pain, compliance with splinting, and joint stability. Unless the clinician has appropriate experience and comfort in the management of simple digit dislocations, referral to an orthopedist, hand surgeon, or podiatrist (toe dislocations) for this follow-up is warranted. (See
+         <a class="local">
+          'Follow-up care'
+         </a>
+         above.)
+        </p>
+       </div>
+       <div class="headingAnchor" id="references">
+        <ol id="reference">
+         <li>
+          <a class="nounderline abstract_t">
+           Leggit JC, Meko CJ. Acute finger injuries: part II. Fractures, dislocations, and thumb injuries. Am Fam Physician 2006; 73:827.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Panchal AP, Bamberger HB. Dorsal dislocation of the distal interphalangeal joint and volar dislocation of the metacarpophalangeal joint in the same finger: a case report. Hand (N Y) 2010; 5:200.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Brand PW, Cranor KC, Ellis JC. Tendon and pulleys at the metacarpophalangeal joint of a finger. J Bone Joint Surg Am 1975; 57:779.
+          </a>
+         </li>
+         <li class="breakAll">
+          Moore KL, Dalley AF. Clinically Oriented Anatomy, 5th, Lippincott Williams &amp; Wilkins, Philadelphia 2005. p.705.
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Sorene ED, Regev G. Complex dislocation with double sesamoid entrapment of the interphalangeal joint of the hallux. J Foot Ankle Surg 2006; 45:413.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Mittlmeier T, Haar P. Sesamoid and toe fractures. Injury 2004; 35 Suppl 2:SB87.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Peimer CA, Sullivan DJ, Wild DR. Palmar dislocation of the proximal interphalangeal joint. J Hand Surg Am 1984; 9A:39.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Spinner M, Choi BY. Anterior dislocation of the proximal interphalangeal joint. A cause of rupture of the central slip of the extensor mechanism. J Bone Joint Surg Am 1970; 52:1329.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Meurer WJ, Kronick SL, Lowell MJ, et al. Complex metacarpophalangeal dislocation. Int J Emerg Med 2008; 1:227.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Prucz RB, Friedrich JB. Finger joint injuries. Clin Sports Med 2015; 34:99.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Dinh P, Franklin A, Hutchinson B, et al. Metacarpophalangeal joint dislocation. J Am Acad Orthop Surg 2009; 17:318.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Baldwin LW, Miller DL, Lockhart LD, Evans EB. Metacarpophalangeal-joint dislocations of the fingers. J Bone Joint Surg Am 1967; 49:1587.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Patel MR, Bassini L. Irreducible palmar metacarpophalangeal joint dislocation due to junctura tendinum interposition: a case report and review of the literature. J Hand Surg Am 2000; 25:166.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Sumarriva G, Cook B, Godoy G, Waldron S. Pediatric Complex Metacarpophalangeal Joint Dislocation of the Index Finger. Ochsner J 2018; 18:398.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Desai B, Nammour M, Warren M, et al. Isolated Volar Dislocation of the Fifth Carpometacarpal Joint. Ochsner J 2020; 20:215.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Jahss MH. Traumatic dislocations of the first metatarsophalangeal joint. Foot Ankle 1980; 1:15.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Stern PJ, Lee AF. Open dorsal dislocations of the proximal interphalangeal joint. J Hand Surg Am 1985; 10:364.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Glickel SZ, Barron OA. Proximal interphalangeal joint fracture dislocations. Hand Clin 2000; 16:333.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           McCue FC, Honner R, Johnson MC, Gieck JH. Athletic injuries of the proximal interphalangeal joint requiring surgical treatment. J Bone Joint Surg Am 1970; 52:937.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Benson LS, Bailie DS. Proximal interphalangeal joint injuries of the hand. Part II: Treatment and complications. Am J Orthop (Belle Mead NJ) 1996; 25:527.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Su, JK, Difiori, J. Jammed Finger. Med Sci Sports Exerc 2006; 38:S147.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Hossfeld GE, Uehara DT. Acute joint injuries of the hand. Emerg Med Clin North Am 1993; 11:781.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Calfee RP, Sommerkamp TG. Fracture-dislocation about the finger joints. J Hand Surg Am 2009; 34:1140.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Khouri JS, Bloom JM, Hammert WC. Current trends in the management of proximal interphalangeal joint injuries of the hand. Plast Reconstr Surg 2013; 132:1192.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Sankaran A, Bharathi RR, Sabapathy SR. Complex dorsal dislocation of the distal interphalangeal joint: Perspectives on management. Indian J Plast Surg 2016; 49:403.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Kannan RY, Wilmshurst AD. Unstable proximal interphalangeal joint dislocations: another cause. Emerg Med J 2006; 23:819.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Morisawa Y, Ikegami H, Izumida R. Irreducible palmar dislocation of the distal interphalangeal joint. J Hand Surg Br 2006; 31:296.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Deshmukh NV, Sonanis SV, Stothard J. Irreducible volar dislocations of the proximal interphalangeal joint. Emerg Med J 2005; 22:221.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Saremi H, Karbalaeikhani A. Recurrent Dislocation of the Proximal Interphalangeal Joint of the Finger: A Rare Issue in Hand Surgery. Arch Bone Jt Surg 2017; 5:121.
+          </a>
+         </li>
+         <li class="breakAll">
+          Kozin SH, Waters PM. Fractures and dislocations of the hand and carpus in children. In: Fractures in Children, 7th, Beaty JH, Kasser JR (Eds), Lippincott Williams &amp;  Wilkins, Philadelphia 2010. p.225.
+         </li>
+         <li class="breakAll">
+          Johnson FC, Okada PJ. Reduction of common joint dislocations and subluxations. In: Textbook of Pediatric Emergency Procedures, 2nd, King C, Henretig FM (Eds), Lippincott Williams &amp; Wilkins, Philadelphia 2008. p.963.
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Tan RES, Cheah AEJ. Injuries Around the Proximal Interphalangeal Joint. Clin Plast Surg 2019; 46:437.
+          </a>
+         </li>
+         <li class="breakAll">
+          Uehara DT. Injuries of the hand and wrist. In: Pediatric Emergency Medicine: A Comprehensive Study Guide, 2nd, Strange GR, Ahrens WR, Lelyveld S, Shafemeyer RW (Eds), McGraw-Hill, New York 2002. p.147.
+         </li>
+         <li class="breakAll">
+          Muelleman RL, Wadman MC. Injuries to the hand and digits. In: Emergency Medicine: A Comprehensive Study Guide, 6th, Tintinalli JE, Kelen GD, Stapczynski JS (Eds), McGraw-Hill, New York 2004. p.1666.
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Ostrowski DM, Neimkin RJ. Irreducible palmar dislocation of the proximal interphalangeal joint. A case report. Orthopedics 1985; 8:84.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Itadera E. Irreducible palmar dislocation of the proximal interphalangeal joint caused by a fracture fragment: a case report. J Orthop Sci 2003; 8:872.
+          </a>
+         </li>
+         <li class="breakAll">
+          Simon RR, Sherman SC, Koenigsknecht SJ. Hand. In: Emergency Orthopedics: The Extremities, 5th, McGraw-Hill, New York 2007. p.123.
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Vicar AJ. Proximal interphalangeal joint dislocations without fractures. Hand Clin 1988; 4:5.
+          </a>
+         </li>
+        </ol>
+       </div>
+       <div id="topicVersionRevision">
+        Topic 6314 Version 29.0
+       </div>
+      </div>
+      <div class="row">
+       <div class="col-12">
+        <h4 style="text-align: center;padding: 20px;color: cadetblue;">
+         References
+        </h4>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/16529090" id="rid0" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          1 : Acute finger injuries: part II. Fractures, dislocations, and thumb injuries.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/19727965" id="rid1" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          2 : Dorsal dislocation of the distal interphalangeal joint and volar dislocation of the metacarpophalangeal joint in the same finger: a case report.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/1158914" id="rid2" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          3 : Tendon and pulleys at the metacarpophalangeal joint of a finger.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/1158914" id="rid3" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          4 : Tendon and pulleys at the metacarpophalangeal joint of a finger.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/17145466" id="rid4" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          5 : Complex dislocation with double sesamoid entrapment of the interphalangeal joint of the hallux.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/15315883" id="rid5" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          6 : Sesamoid and toe fractures.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/6693741" id="rid6" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          7 : Palmar dislocation of the proximal interphalangeal joint.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/5469189" id="rid7" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          8 : Anterior dislocation of the proximal interphalangeal joint. A cause of rupture of the central slip of the extensor mechanism.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/19384525" id="rid8" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          9 : Complex metacarpophalangeal dislocation.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/25455398" id="rid9" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          10 : Finger joint injuries.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/19411643" id="rid10" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          11 : Metacarpophalangeal joint dislocation.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/4863833" id="rid11" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          12 : Metacarpophalangeal-joint dislocations of the fingers.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/10642488" id="rid12" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          13 : Irreducible palmar metacarpophalangeal joint dislocation due to junctura tendinum interposition: a case report and review of the literature.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/30559627" id="rid13" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          14 : Pediatric Complex Metacarpophalangeal Joint Dislocation of the Index Finger.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/32612479" id="rid14" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          15 : Isolated Volar Dislocation of the Fifth Carpometacarpal Joint.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/7274888" id="rid15" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          16 : Traumatic dislocations of the first metatarsophalangeal joint.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/3998417" id="rid16" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          17 : Open dorsal dislocations of the proximal interphalangeal joint.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/10955207" id="rid17" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          18 : Proximal interphalangeal joint fracture dislocations.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/5479483" id="rid18" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          19 : Athletic injuries of the proximal interphalangeal joint requiring surgical treatment.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/8871750" id="rid19" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          20 : Proximal interphalangeal joint injuries of the hand. Part II: Treatment and complications.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/" id="rid20" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          21 : Jammed Finger
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/8359143" id="rid21" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          22 : Acute joint injuries of the hand.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/19643295" id="rid22" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          23 : Fracture-dislocation about the finger joints.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/24165600" id="rid23" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          24 : Current trends in the management of proximal interphalangeal joint injuries of the hand.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/28216823" id="rid24" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          25 : Complex dorsal dislocation of the distal interphalangeal joint: Perspectives on management.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/16988322" id="rid25" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          26 : Unstable proximal interphalangeal joint dislocations: another cause.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/16483702" id="rid26" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          27 : Irreducible palmar dislocation of the distal interphalangeal joint.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/15735279" id="rid27" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          28 : Irreducible volar dislocations of the proximal interphalangeal joint.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/28580380" id="rid28" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          29 : Recurrent Dislocation of the Proximal Interphalangeal Joint of the Finger: A Rare Issue in Hand Surgery.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/28580380" id="rid29" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          30 : Recurrent Dislocation of the Proximal Interphalangeal Joint of the Finger: A Rare Issue in Hand Surgery.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/28580380" id="rid30" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          31 : Recurrent Dislocation of the Proximal Interphalangeal Joint of the Finger: A Rare Issue in Hand Surgery.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/31103088" id="rid31" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          32 : Injuries Around the Proximal Interphalangeal Joint.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/31103088" id="rid32" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          33 : Injuries Around the Proximal Interphalangeal Joint.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/31103088" id="rid33" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          34 : Injuries Around the Proximal Interphalangeal Joint.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/4094956" id="rid34" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          35 : Irreducible palmar dislocation of the proximal interphalangeal joint. A case report.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/14648280" id="rid35" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          36 : Irreducible palmar dislocation of the proximal interphalangeal joint caused by a fracture fragment: a case report.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/14648280" id="rid36" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          37 : Irreducible palmar dislocation of the proximal interphalangeal joint caused by a fracture fragment: a case report.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/3277980" id="rid37" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          38 : Proximal interphalangeal joint dislocations without fractures.
+         </p>
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </section>
+  <!-- End Main Menu Area -->
+  <!-- Start Search Popup Area -->
+  <!-- End Footer Area -->
+  <!-- Back to top -->
+  <a class="scrolltop" href="#top">
+   <i class="icofont-hand-drawn-up">
+   </i>
+  </a>
+  <!-- End Back to top -->
+  <!-- jQuery Min JS -->
+  <!-- Prpper JS -->
+  <!-- Bootstrap Min JS -->
+  <!-- Classy Nav Min Js -->
+  <!-- Owl Carousel Min Js -->
+  <!-- Magnific Popup JS -->
+  <!-- CounterUp JS -->
+  <!-- Waypoints JS -->
+  <!-- Form Validator Min JS -->
+  <!-- Contact Form Min JS -->
+  <!-- Main JS -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+ </body>
 </html>

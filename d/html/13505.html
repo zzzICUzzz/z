@@ -1,634 +1,1124 @@
 <!DOCTYPE html>
-
 <html lang="fa">
-<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
-<head><title>Calculator: Estimated Date of Delivery (EDD)</title><link href="/z/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/z/d/css/icofont.min.css" rel="stylesheet"/><link href="/z/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/z/d/css/animate.css" rel="stylesheet"/><link href="/z/d/css/owl.carousel.css" rel="stylesheet"/><link href="/z/d/css/magnific-popup.css" rel="stylesheet"/><link href="/z/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/z/d/css/style.css" rel="stylesheet"/><link href="/z/d/css/rtl_edited.css" rel="stylesheet"/><link href="/z/d/css/responsive.css" rel="stylesheet"/><link href="https:///uptodate_assets/main.css" rel="stylesheet"/>
-<style>
-
-#myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 16px;
-  color: black;
-  display: block
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee;
-}
-
-#searchResult {
-
-  list-style-type: none;
-  padding: 0;
-  padding-right: 20px;
-}
-
-#searchResult li a {
-  border: .5px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #79bc21;
-  padding: 7px;
-  text-decoration: none;
-  font-size: 14px;
-  color: white;
-  display: block
-}
-
-#searchResult li a:hover:not(.header) {
-  background-color: #222;
-}
-
-
-#txtHint   {
-  position: absolute;
-  text-shadow: none;
-  width: 100%;
-  margin-top: -15px;
-  padding-right: 10px;
-
-  filter: alpha(opacity=95);
-  -moz-opacity: 0.95;
-  opacity: 1;
-  z-index: 200;
-}
-.countBubl {
-  background:#eb0029;
-  color:#fff;
-  padding:5px;
-  margin-top: 50%;
-
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
- width: 55%;
- padding-left: 20px;
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
- width: 20%;
-}
- #Uptodate_image {
-      width: 50%;
-  }#uptodate-area {
-      /*z-index: 99;*/
-  }
-#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
- margin-left: 10px;
- margin-bottom: 6%;
-}
-@media (max-width: @screen-xs) {
-    .countBubl {
-        font-size: 4px ;
-    }
-    #uptodate_version {
-        font-size: 4px ;
-    }
-}
-
-@media (max-width: @screen-sm) {
-    .countBubl {
-        font-size: 14px ;
-    }
-}
-@media  all and(max-width: 820) {
-    #Uptodate_image {
-        width: 80% ;
-    }#uptodate-area {
-        z-index: 99;
-    }
-}@media  all and (min-width: 820) and(max-width: 88820){
-    #Uptodate_image {
-        width: 100% !important;
-    }
-    .countBubl {
-        font-size: 4px ;
-    }
-}
-div.col-md-3:nth-child(3) {
- margin-top: 6%;
-}
-
-div.col-md-3:nth-child(3) > img:nth-child(1) {
- width: 100%;
- margin-left: 11px;
-}
-
-</style>
-<style media="screen" type="text/css">
-  .goback {
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    position: fixed;
-    display: none;
-    font-size: 15px;
-    background: #71c0fa;
-    z-index: 1000;
-    text-align: center;
-    color: #ffffff;
-    -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
-    border-radius: 50px;
-    bottom: 3.8%;
-    right: 2%;
-}
-  .buyPackage {
-  width: 100px;
-  height: 100px;
-  line-height: 40px;
-  position: fixed;
-  display: none;
-  font-size: 10px;
-  background: #fa759e;
-  z-index: 1000;
-  text-align: center;
-  color: #ffffff;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  border-radius: 10px;
-  top: 150px;
-  right: 2%;
-  text-align: center;
-}
-.uptodate-area {
-  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-    background-attachment: fixed;
-  position: relative;
-}
-.uptodate-area::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  padding-top: 100px;
-  width: 100%;
-}
-#references{
-  display: none;
-}
-</style>
-<style>
-section.sticky {
-  position: sticky;
-  top: 0;
-  background-color: #fff !important;
-  /*z-index: 100;*/
-  /*padding-top: 80px;*/
-
-}
-.m4inb{
-    border: solid !important;
-  }
-
-  .newsletter-area::before {
-       background: unset !important;
-  }
-p {
-    color: #555;
-}
-</style>
-<meta content="" name="description"/>
-<link href="/z/d/img/favicon.png" rel="icon" type="image/png">
-</link></head>
-<body>
-<!-- Start Main Menu Area -->
-<br/>
-<br/>
-<br/>
-<br/>
-<div class="container">
-<div class="row">
-</div>
-</div>
-<section class="teacher-area ptb-10">
-<div class="container">
-</div>
-<section class="course-details-area ptb-60">
-<div class="container">
-<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-<h1 style="text-align:center">Calculator: Estimated Date of Delivery (EDD)</h1>
-<div class="utdArticleSection" id="topicContentCalculator"><div id="topicText">
-<div id="mc3k">
-<form action="" id="EstimatedDateDelivery_form" name="EstimatedDateDelivery_form" onkeydown="formKeyDown(event);" onkeypress="resetInTime(); return validNumberField(event);" onkeyup="EstimatedDateDelivery_fx();" onsubmit="return false;">
-<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
-<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
-<td align="left" bgcolor="#eeeeee">
-<span class="medCalcFontTitleBox">
-
- 
-Calculator: Estimated Date of Delivery (EDD)
-</span></td></tr></tbody></table><br/> <br/>
-<div id="calc_main">
-<center>
-<span class="medCalcFontIO">
-Input
-</span>
-<br/> <br/>
-<table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
-<tbody><tr><td align="right"><span class="medCalcFontOneBold">Current date</span></td>
-<td align="left" colspan="2" nowrap="nowrap">
-  <select class="medCalcFontSelect" name="current_month" onchange="setTimeout(function() {EstimatedDateDelivery_fx();}, 100);">
-<option value="0">Jan</option>
-<option value="1">Feb</option>
-<option value="2">Mar</option>
-<option value="3">Apr</option>
-<option value="4">May</option>
-<option value="5">Jun</option>
-<option value="6">Jul</option>
-<option value="7">Aug</option>
-<option value="8">Sep</option>
-<option value="9">Oct</option>
-<option value="10">Nov</option>
-<option value="11">Dec</option>
-<option selected="selected" value="-1">MM</option>
-</select>
-<select class="medCalcFontSelect" name="current_date" onchange="setTimeout(function() {EstimatedDateDelivery_fx();}, 100);">
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-<option value="6">6</option>
-<option value="7">7</option>
-<option value="8">8</option>
-<option value="9">9</option>
-<option value="10">10</option>
-<option value="11">11</option>
-<option value="12">12</option>
-<option value="13">13</option>
-<option value="14">14</option>
-<option value="15">15</option>
-<option value="16">16</option>
-<option value="17">17</option>
-<option value="18">18</option>
-<option value="19">19</option>
-<option value="20">20</option>
-<option value="21">21</option>
-<option value="22">22</option>
-<option value="23">23</option>
-<option value="24">24</option>
-<option value="25">25</option>
-<option value="26">26</option>
-<option value="27">27</option>
-<option value="28">28</option>
-<option value="29">29</option>
-<option value="30">30</option>
-<option value="31">31</option>
-<option selected="selected" value="-1">DD</option>
-</select>
-<select class="medCalcFontSelect" name="current_year" onchange="setTimeout(function() {EstimatedDateDelivery_fx();}, 100);">
-<option value="2009">2009</option>
-<option value="2010">2010</option>
-<option value="2011">2011</option>
-<option value="2012">2012</option>
-<option value="2013">2013</option>
-<option value="2014">2014</option>
-<option value="2015">2015</option>
-<option value="2016">2016</option>
-<option value="2017">2017</option>
-<option value="2018">2018</option>
-<option value="2019">2019</option>
-<option value="2020">2020</option>
-<option value="2021">2021</option>
-<option value="2022">2022</option>
-<option value="2023">2023</option>
-<option value="2024">2024</option>
-<option value="2025">2025</option>
-<option value="2026">2026</option>
-<option value="2027">2027</option>
-<option value="2028">2028</option>
-<option value="2029">2029</option>
-<option value="2030">2030</option>
-<option selected="selected" value="-1">YYYY</option>
-</select>
-</td></tr>
-<tr><td align="right"><span class="medCalcFontOneBold">Last menstrual period (LMP)</span></td>
-<td align="left" colspan="2" nowrap="nowrap">
-  <select class="medCalcFontSelect" name="lmp_month" onchange="setTimeout(function() {EstimatedDateDelivery_fx();}, 100);">
-<option value="0">Jan</option>
-<option value="1">Feb</option>
-<option value="2">Mar</option>
-<option value="3">Apr</option>
-<option value="4">May</option>
-<option value="5">Jun</option>
-<option value="6">Jul</option>
-<option value="7">Aug</option>
-<option value="8">Sep</option>
-<option value="9">Oct</option>
-<option value="10">Nov</option>
-<option value="11">Dec</option>
-<option selected="selected" value="-1">MM</option>
-</select>
-<select class="medCalcFontSelect" name="lmp_date" onchange="setTimeout(function() {EstimatedDateDelivery_fx();}, 100);">
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-<option value="6">6</option>
-<option value="7">7</option>
-<option value="8">8</option>
-<option value="9">9</option>
-<option value="10">10</option>
-<option value="11">11</option>
-<option value="12">12</option>
-<option value="13">13</option>
-<option value="14">14</option>
-<option value="15">15</option>
-<option value="16">16</option>
-<option value="17">17</option>
-<option value="18">18</option>
-<option value="19">19</option>
-<option value="20">20</option>
-<option value="21">21</option>
-<option value="22">22</option>
-<option value="23">23</option>
-<option value="24">24</option>
-<option value="25">25</option>
-<option value="26">26</option>
-<option value="27">27</option>
-<option value="28">28</option>
-<option value="29">29</option>
-<option value="30">30</option>
-<option value="31">31</option>
-<option selected="selected" value="-1">DD</option>
-</select>
-<select class="medCalcFontSelect" name="lmp_year" onchange="setTimeout(function() {EstimatedDateDelivery_fx();}, 100);">
-<option value="2009">2009</option>
-<option value="2010">2010</option>
-<option value="2011">2011</option>
-<option value="2012">2012</option>
-<option value="2013">2013</option>
-<option value="2014">2014</option>
-<option value="2015">2015</option>
-<option value="2016">2016</option>
-<option value="2017">2017</option>
-<option value="2018">2018</option>
-<option value="2019">2019</option>
-<option value="2020">2020</option>
-<option value="2021">2021</option>
-<option value="2022">2022</option>
-<option value="2023">2023</option>
-<option value="2024">2024</option>
-<option value="2025">2025</option>
-<option value="2026">2026</option>
-<option value="2027">2027</option>
-<option value="2028">2028</option>
-<option value="2029">2029</option>
-<option value="2030">2030</option>
-<option selected="selected" value="-1">YYYY</option>
-</select>
-</td></tr>
-<tr><td align="right"><span class="medCalcFontOneBold">Ultrasound (US) date</span></td>
-<td align="left" colspan="2" nowrap="nowrap">
-  <select class="medCalcFontSelect" name="us_month" onchange="setTimeout(function() {EstimatedDateDelivery_fx();}, 100);">
-<option value="0">Jan</option>
-<option value="1">Feb</option>
-<option value="2">Mar</option>
-<option value="3">Apr</option>
-<option value="4">May</option>
-<option value="5">Jun</option>
-<option value="6">Jul</option>
-<option value="7">Aug</option>
-<option value="8">Sep</option>
-<option value="9">Oct</option>
-<option value="10">Nov</option>
-<option value="11">Dec</option>
-<option selected="selected" value="-1">MM</option>
-</select>
-<select class="medCalcFontSelect" name="us_date" onchange="setTimeout(function() {EstimatedDateDelivery_fx();}, 100);">
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-<option value="6">6</option>
-<option value="7">7</option>
-<option value="8">8</option>
-<option value="9">9</option>
-<option value="10">10</option>
-<option value="11">11</option>
-<option value="12">12</option>
-<option value="13">13</option>
-<option value="14">14</option>
-<option value="15">15</option>
-<option value="16">16</option>
-<option value="17">17</option>
-<option value="18">18</option>
-<option value="19">19</option>
-<option value="20">20</option>
-<option value="21">21</option>
-<option value="22">22</option>
-<option value="23">23</option>
-<option value="24">24</option>
-<option value="25">25</option>
-<option value="26">26</option>
-<option value="27">27</option>
-<option value="28">28</option>
-<option value="29">29</option>
-<option value="30">30</option>
-<option value="31">31</option>
-<option selected="selected" value="-1">DD</option>
-</select>
-<select class="medCalcFontSelect" name="us_year" onchange="setTimeout(function() {EstimatedDateDelivery_fx();}, 100);">
-<option value="2009">2009</option>
-<option value="2010">2010</option>
-<option value="2011">2011</option>
-<option value="2012">2012</option>
-<option value="2013">2013</option>
-<option value="2014">2014</option>
-<option value="2015">2015</option>
-<option value="2016">2016</option>
-<option value="2017">2017</option>
-<option value="2018">2018</option>
-<option value="2019">2019</option>
-<option value="2020">2020</option>
-<option value="2021">2021</option>
-<option value="2022">2022</option>
-<option value="2023">2023</option>
-<option value="2024">2024</option>
-<option value="2025">2025</option>
-<option value="2026">2026</option>
-<option value="2027">2027</option>
-<option value="2028">2028</option>
-<option value="2029">2029</option>
-<option value="2030">2030</option>
-<option selected="selected" value="-1">YYYY</option>
-</select>
-</td></tr>
-<tr><td align="right"><span class="medCalcFontOneBold">Gestational age by US</span></td>
-<td align="left" colspan="2" nowrap="nowrap">
-  <select class="medCalcFontSelect" name="gabus_weeks" onchange="setTimeout(function() {EstimatedDateDelivery_fx();}, 100);">
-<option value="4">4 weeks</option>
-<option value="5">5 weeks</option>
-<option value="6">6 weeks</option>
-<option value="7">7 weeks</option>
-<option value="8">8 weeks</option>
-<option value="9">9 weeks</option>
-<option value="10">10 weeks</option>
-<option value="11">11 weeks</option>
-<option value="12">12 weeks</option>
-<option value="13">13 weeks</option>
-<option value="14">14 weeks</option>
-<option value="15">15 weeks</option>
-<option value="16">16 weeks</option>
-<option value="17">17 weeks</option>
-<option value="18">18 weeks</option>
-<option value="19">19 weeks</option>
-<option value="20">20 weeks</option>
-<option value="21">21 weeks</option>
-<option value="22">22 weeks</option>
-<option value="23">23 weeks</option>
-<option value="24">24 weeks</option>
-<option value="25">25 weeks</option>
-<option value="26">26 weeks</option>
-<option value="27">27 weeks</option>
-<option value="28">28 weeks</option>
-<option value="29">29 weeks</option>
-<option value="30">30 weeks</option>
-<option value="31">31 weeks</option>
-<option value="32">32 weeks</option>
-<option value="33">33 weeks</option>
-<option value="34">34 weeks</option>
-<option value="35">35 weeks</option>
-<option value="36">36 weeks</option>
-<option value="37">37 weeks</option>
-<option value="38">38 weeks</option>
-<option value="39">39 weeks</option>
-<option value="40">40 weeks</option>
-<option value="41">41 weeks</option>
-<option value="42">42 weeks</option>
-<option value="43">43 weeks</option>
-<option value="44">44 weeks</option>
-<option selected="selected" value="-1">Weeks</option>
-</select>
- 
-<select class="medCalcFontSelect" name="gabus_days" onchange="setTimeout(function() {EstimatedDateDelivery_fx();}, 100);">
-<option value="-1">Days</option>
-<option selected="selected" value="0">0 days</option>
-<option value="1">1 day</option>
-<option value="2">2 days</option>
-<option value="3">3 days</option>
-<option value="4">4 days</option>
-<option value="5">5 days</option>
-<option value="6">6 days</option>
-</select>
-</td></tr>
-</tbody></table>
-</center>
-<br/> <br/><center><span class="medCalcFontIO">Results</span>
-<br/> <br/>
-<table cellpadding="4" class="medCalcResultBox" summary="EBMcalc Table">
-<tbody><tr><td colspan="3"> <br/></td></tr>
-<tr>
-<td align="right"><span class="medCalcFontResultParam">Current gestational age by LMP</span></td>
-<td nowrap="nowrap" valign="top">  <input maxlength="16" name="current_gest_lmp" onfocus="blur();" type="text"/></td>
-</tr>
-<tr>
-<td align="right"><span class="medCalcFontResultParam">EDD by LMP</span></td>
-<td nowrap="nowrap" valign="top">  <input maxlength="16" name="edd_lmp_result" onfocus="blur();" type="text"/></td>
-</tr>
-<tr>
-<td align="right"><span class="medCalcFontResultParam">Current gestational age by US</span></td>
-<td nowrap="nowrap" valign="top">  <input maxlength="16" name="current_gest_us" onfocus="blur();" type="text"/></td>
-</tr>
-<tr>
-<td align="right"><span class="medCalcFontResultParam">EDD by US</span></td>
-<td nowrap="nowrap" valign="top">  <input maxlength="16" name="edd_us_result" onfocus="blur();" type="text"/></td>
-</tr>
-<tr><td colspan="3"> <br/></td></tr>
-</tbody></table>
-</center><br/> <br/>
-<div id="calc_buttons">
-<center>
-<span class="medCalcFontOne">
-<input name="reset" type="reset" value="Reset form"/>
-</span>
-</center>
-</div>
-</div><div id="pretextrefs">
- 
-</div>
-<br/> <br/>
-<div id="calc_hints">
-<span class="medCalcFontOne">
-</span>
-</div>
-<div id="calc_tables_above_notes">
-</div>
-<div id="calc_notes">
-<span class="medCalcFontOneBold">Notes</span>
-<ul class="medCalcFontOne">
-<li>This calculator gives you two options for estimating <b>EDD</b>. Enter either the date of the first day of the LMP, or the date of a US examination and the gestational age by US. Input any parameters to compare the two date calculations.</li>
-<li><b>Gestational age by LMP</b> is calculated from the first day of the LMP.</li>
-<li><b>EDD by LMP</b> is calculated by adding 280 days (40 weeks) to the first day of the LMP.</li>
-<li><b>Gestational age by US</b> is measured by US on the <b>Ultrasound (US) date</b>.</li>
-<li><b>EDD by US</b> is the estimated date of delivery based on the <b>Gestational age by US</b> and the <b>Ultrasound (US) date</b>. It is the <b>Ultrasound (US) date</b> + (280 [days] - <b>Gestational age by US [days]</b> on the <b>Ultrasound (US) date</b>).</li>
-</ul>
-</div>
-<div id="calc_tables">
-</div>
-<br/> <br/>
-<div id="calc_refs">
-<span class="medCalcFontRef"><b>References</b></span>
-<ol>
-<li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/9014279" style="color: green; text-decoration: none;" target="_blank">Mul T, Mongelli M, Gardosi J. A comparative analysis of second-trimester ultrasound dating formulae in pregnancies conceived with artificial reproductive techniques. Ultrasound Obstet Gynecol 1996; 8:397.</a></span></li>
-<li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/11065037" style="color: green; text-decoration: none;" target="_blank">Westerway SC, Davison A, Cowell S. Ultrasonic fetal measurements: new Australian standards for the new millennium.  Aust N Z J Obstet Gynaecol 2000; 40:297.</a></span></li>
-<li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/9339525" style="color: green; text-decoration: none;" target="_blank">Altman DG, Chitty LS. New charts for ultrasound dating of pregnancy. Ultrasound Obstet Gynecol 1997; 10:174.</a></span></li>
-</ol>
-</div>
-</form>
-</div>
-<span class="calculatorVendorId" id="T1628797270">
-</span></div><div id="printDisclaimer">
-<b>Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.</b>
-<p>
-	Information on this page may not appear correctly if printed. </p>
-</div>
-<div id="disclaimerCalculator">
-<div class="medCalcFontTwo">
-<p class="header">Legal Notices and Disclaimer</p>
-<p>
-			All information contained in and produced by the EBMcalc system is provided
+ <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+ <head>
+  <title>
+   Calculator: Estimated Date of Delivery (EDD)
+  </title>
+  <link href="d/css/1.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!-- Start Main Menu Area -->
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="container">
+   <div class="row">
+   </div>
+  </div>
+  <section class="teacher-area ptb-10">
+   <div class="container">
+   </div>
+   <section class="course-details-area ptb-60">
+    <div class="container">
+     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+      <h1 style="text-align:center">
+       Calculator: Estimated Date of Delivery (EDD)
+      </h1>
+      <div class="utdArticleSection" id="topicContentCalculator">
+       <div id="topicText">
+        <div id="mc3k">
+         <form action="" id="EstimatedDateDelivery_form" name="EstimatedDateDelivery_form" onkeydown="formKeyDown(event);" onkeypress="resetInTime(); return validNumberField(event);" onkeyup="EstimatedDateDelivery_fx();" onsubmit="return false;">
+          <table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+           <tbody>
+            <tr>
+             <td bgcolor="#eeeeee" width="1%">
+              <br/>
+             </td>
+             <td align="left" bgcolor="#eeeeee">
+              <span class="medCalcFontTitleBox">
+               Calculator: Estimated Date of Delivery (EDD)
+              </span>
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <br/>
+          <br/>
+          <div id="calc_main">
+           <center>
+            <span class="medCalcFontIO">
+             Input
+            </span>
+            <br/>
+            <br/>
+            <table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
+             <tbody>
+              <tr>
+               <td align="right">
+                <span class="medCalcFontOneBold">
+                 Current date
+                </span>
+               </td>
+               <td align="left" colspan="2" nowrap="nowrap">
+                <select class="medCalcFontSelect" name="current_month" onchange="setTimeout(function() {EstimatedDateDelivery_fx();}, 100);">
+                 <option value="0">
+                  Jan
+                 </option>
+                 <option value="1">
+                  Feb
+                 </option>
+                 <option value="2">
+                  Mar
+                 </option>
+                 <option value="3">
+                  Apr
+                 </option>
+                 <option value="4">
+                  May
+                 </option>
+                 <option value="5">
+                  Jun
+                 </option>
+                 <option value="6">
+                  Jul
+                 </option>
+                 <option value="7">
+                  Aug
+                 </option>
+                 <option value="8">
+                  Sep
+                 </option>
+                 <option value="9">
+                  Oct
+                 </option>
+                 <option value="10">
+                  Nov
+                 </option>
+                 <option value="11">
+                  Dec
+                 </option>
+                 <option selected="selected" value="-1">
+                  MM
+                 </option>
+                </select>
+                <select class="medCalcFontSelect" name="current_date" onchange="setTimeout(function() {EstimatedDateDelivery_fx();}, 100);">
+                 <option value="1">
+                  1
+                 </option>
+                 <option value="2">
+                  2
+                 </option>
+                 <option value="3">
+                  3
+                 </option>
+                 <option value="4">
+                  4
+                 </option>
+                 <option value="5">
+                  5
+                 </option>
+                 <option value="6">
+                  6
+                 </option>
+                 <option value="7">
+                  7
+                 </option>
+                 <option value="8">
+                  8
+                 </option>
+                 <option value="9">
+                  9
+                 </option>
+                 <option value="10">
+                  10
+                 </option>
+                 <option value="11">
+                  11
+                 </option>
+                 <option value="12">
+                  12
+                 </option>
+                 <option value="13">
+                  13
+                 </option>
+                 <option value="14">
+                  14
+                 </option>
+                 <option value="15">
+                  15
+                 </option>
+                 <option value="16">
+                  16
+                 </option>
+                 <option value="17">
+                  17
+                 </option>
+                 <option value="18">
+                  18
+                 </option>
+                 <option value="19">
+                  19
+                 </option>
+                 <option value="20">
+                  20
+                 </option>
+                 <option value="21">
+                  21
+                 </option>
+                 <option value="22">
+                  22
+                 </option>
+                 <option value="23">
+                  23
+                 </option>
+                 <option value="24">
+                  24
+                 </option>
+                 <option value="25">
+                  25
+                 </option>
+                 <option value="26">
+                  26
+                 </option>
+                 <option value="27">
+                  27
+                 </option>
+                 <option value="28">
+                  28
+                 </option>
+                 <option value="29">
+                  29
+                 </option>
+                 <option value="30">
+                  30
+                 </option>
+                 <option value="31">
+                  31
+                 </option>
+                 <option selected="selected" value="-1">
+                  DD
+                 </option>
+                </select>
+                <select class="medCalcFontSelect" name="current_year" onchange="setTimeout(function() {EstimatedDateDelivery_fx();}, 100);">
+                 <option value="2009">
+                  2009
+                 </option>
+                 <option value="2010">
+                  2010
+                 </option>
+                 <option value="2011">
+                  2011
+                 </option>
+                 <option value="2012">
+                  2012
+                 </option>
+                 <option value="2013">
+                  2013
+                 </option>
+                 <option value="2014">
+                  2014
+                 </option>
+                 <option value="2015">
+                  2015
+                 </option>
+                 <option value="2016">
+                  2016
+                 </option>
+                 <option value="2017">
+                  2017
+                 </option>
+                 <option value="2018">
+                  2018
+                 </option>
+                 <option value="2019">
+                  2019
+                 </option>
+                 <option value="2020">
+                  2020
+                 </option>
+                 <option value="2021">
+                  2021
+                 </option>
+                 <option value="2022">
+                  2022
+                 </option>
+                 <option value="2023">
+                  2023
+                 </option>
+                 <option value="2024">
+                  2024
+                 </option>
+                 <option value="2025">
+                  2025
+                 </option>
+                 <option value="2026">
+                  2026
+                 </option>
+                 <option value="2027">
+                  2027
+                 </option>
+                 <option value="2028">
+                  2028
+                 </option>
+                 <option value="2029">
+                  2029
+                 </option>
+                 <option value="2030">
+                  2030
+                 </option>
+                 <option selected="selected" value="-1">
+                  YYYY
+                 </option>
+                </select>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <span class="medCalcFontOneBold">
+                 Last menstrual period (LMP)
+                </span>
+               </td>
+               <td align="left" colspan="2" nowrap="nowrap">
+                <select class="medCalcFontSelect" name="lmp_month" onchange="setTimeout(function() {EstimatedDateDelivery_fx();}, 100);">
+                 <option value="0">
+                  Jan
+                 </option>
+                 <option value="1">
+                  Feb
+                 </option>
+                 <option value="2">
+                  Mar
+                 </option>
+                 <option value="3">
+                  Apr
+                 </option>
+                 <option value="4">
+                  May
+                 </option>
+                 <option value="5">
+                  Jun
+                 </option>
+                 <option value="6">
+                  Jul
+                 </option>
+                 <option value="7">
+                  Aug
+                 </option>
+                 <option value="8">
+                  Sep
+                 </option>
+                 <option value="9">
+                  Oct
+                 </option>
+                 <option value="10">
+                  Nov
+                 </option>
+                 <option value="11">
+                  Dec
+                 </option>
+                 <option selected="selected" value="-1">
+                  MM
+                 </option>
+                </select>
+                <select class="medCalcFontSelect" name="lmp_date" onchange="setTimeout(function() {EstimatedDateDelivery_fx();}, 100);">
+                 <option value="1">
+                  1
+                 </option>
+                 <option value="2">
+                  2
+                 </option>
+                 <option value="3">
+                  3
+                 </option>
+                 <option value="4">
+                  4
+                 </option>
+                 <option value="5">
+                  5
+                 </option>
+                 <option value="6">
+                  6
+                 </option>
+                 <option value="7">
+                  7
+                 </option>
+                 <option value="8">
+                  8
+                 </option>
+                 <option value="9">
+                  9
+                 </option>
+                 <option value="10">
+                  10
+                 </option>
+                 <option value="11">
+                  11
+                 </option>
+                 <option value="12">
+                  12
+                 </option>
+                 <option value="13">
+                  13
+                 </option>
+                 <option value="14">
+                  14
+                 </option>
+                 <option value="15">
+                  15
+                 </option>
+                 <option value="16">
+                  16
+                 </option>
+                 <option value="17">
+                  17
+                 </option>
+                 <option value="18">
+                  18
+                 </option>
+                 <option value="19">
+                  19
+                 </option>
+                 <option value="20">
+                  20
+                 </option>
+                 <option value="21">
+                  21
+                 </option>
+                 <option value="22">
+                  22
+                 </option>
+                 <option value="23">
+                  23
+                 </option>
+                 <option value="24">
+                  24
+                 </option>
+                 <option value="25">
+                  25
+                 </option>
+                 <option value="26">
+                  26
+                 </option>
+                 <option value="27">
+                  27
+                 </option>
+                 <option value="28">
+                  28
+                 </option>
+                 <option value="29">
+                  29
+                 </option>
+                 <option value="30">
+                  30
+                 </option>
+                 <option value="31">
+                  31
+                 </option>
+                 <option selected="selected" value="-1">
+                  DD
+                 </option>
+                </select>
+                <select class="medCalcFontSelect" name="lmp_year" onchange="setTimeout(function() {EstimatedDateDelivery_fx();}, 100);">
+                 <option value="2009">
+                  2009
+                 </option>
+                 <option value="2010">
+                  2010
+                 </option>
+                 <option value="2011">
+                  2011
+                 </option>
+                 <option value="2012">
+                  2012
+                 </option>
+                 <option value="2013">
+                  2013
+                 </option>
+                 <option value="2014">
+                  2014
+                 </option>
+                 <option value="2015">
+                  2015
+                 </option>
+                 <option value="2016">
+                  2016
+                 </option>
+                 <option value="2017">
+                  2017
+                 </option>
+                 <option value="2018">
+                  2018
+                 </option>
+                 <option value="2019">
+                  2019
+                 </option>
+                 <option value="2020">
+                  2020
+                 </option>
+                 <option value="2021">
+                  2021
+                 </option>
+                 <option value="2022">
+                  2022
+                 </option>
+                 <option value="2023">
+                  2023
+                 </option>
+                 <option value="2024">
+                  2024
+                 </option>
+                 <option value="2025">
+                  2025
+                 </option>
+                 <option value="2026">
+                  2026
+                 </option>
+                 <option value="2027">
+                  2027
+                 </option>
+                 <option value="2028">
+                  2028
+                 </option>
+                 <option value="2029">
+                  2029
+                 </option>
+                 <option value="2030">
+                  2030
+                 </option>
+                 <option selected="selected" value="-1">
+                  YYYY
+                 </option>
+                </select>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <span class="medCalcFontOneBold">
+                 Ultrasound (US) date
+                </span>
+               </td>
+               <td align="left" colspan="2" nowrap="nowrap">
+                <select class="medCalcFontSelect" name="us_month" onchange="setTimeout(function() {EstimatedDateDelivery_fx();}, 100);">
+                 <option value="0">
+                  Jan
+                 </option>
+                 <option value="1">
+                  Feb
+                 </option>
+                 <option value="2">
+                  Mar
+                 </option>
+                 <option value="3">
+                  Apr
+                 </option>
+                 <option value="4">
+                  May
+                 </option>
+                 <option value="5">
+                  Jun
+                 </option>
+                 <option value="6">
+                  Jul
+                 </option>
+                 <option value="7">
+                  Aug
+                 </option>
+                 <option value="8">
+                  Sep
+                 </option>
+                 <option value="9">
+                  Oct
+                 </option>
+                 <option value="10">
+                  Nov
+                 </option>
+                 <option value="11">
+                  Dec
+                 </option>
+                 <option selected="selected" value="-1">
+                  MM
+                 </option>
+                </select>
+                <select class="medCalcFontSelect" name="us_date" onchange="setTimeout(function() {EstimatedDateDelivery_fx();}, 100);">
+                 <option value="1">
+                  1
+                 </option>
+                 <option value="2">
+                  2
+                 </option>
+                 <option value="3">
+                  3
+                 </option>
+                 <option value="4">
+                  4
+                 </option>
+                 <option value="5">
+                  5
+                 </option>
+                 <option value="6">
+                  6
+                 </option>
+                 <option value="7">
+                  7
+                 </option>
+                 <option value="8">
+                  8
+                 </option>
+                 <option value="9">
+                  9
+                 </option>
+                 <option value="10">
+                  10
+                 </option>
+                 <option value="11">
+                  11
+                 </option>
+                 <option value="12">
+                  12
+                 </option>
+                 <option value="13">
+                  13
+                 </option>
+                 <option value="14">
+                  14
+                 </option>
+                 <option value="15">
+                  15
+                 </option>
+                 <option value="16">
+                  16
+                 </option>
+                 <option value="17">
+                  17
+                 </option>
+                 <option value="18">
+                  18
+                 </option>
+                 <option value="19">
+                  19
+                 </option>
+                 <option value="20">
+                  20
+                 </option>
+                 <option value="21">
+                  21
+                 </option>
+                 <option value="22">
+                  22
+                 </option>
+                 <option value="23">
+                  23
+                 </option>
+                 <option value="24">
+                  24
+                 </option>
+                 <option value="25">
+                  25
+                 </option>
+                 <option value="26">
+                  26
+                 </option>
+                 <option value="27">
+                  27
+                 </option>
+                 <option value="28">
+                  28
+                 </option>
+                 <option value="29">
+                  29
+                 </option>
+                 <option value="30">
+                  30
+                 </option>
+                 <option value="31">
+                  31
+                 </option>
+                 <option selected="selected" value="-1">
+                  DD
+                 </option>
+                </select>
+                <select class="medCalcFontSelect" name="us_year" onchange="setTimeout(function() {EstimatedDateDelivery_fx();}, 100);">
+                 <option value="2009">
+                  2009
+                 </option>
+                 <option value="2010">
+                  2010
+                 </option>
+                 <option value="2011">
+                  2011
+                 </option>
+                 <option value="2012">
+                  2012
+                 </option>
+                 <option value="2013">
+                  2013
+                 </option>
+                 <option value="2014">
+                  2014
+                 </option>
+                 <option value="2015">
+                  2015
+                 </option>
+                 <option value="2016">
+                  2016
+                 </option>
+                 <option value="2017">
+                  2017
+                 </option>
+                 <option value="2018">
+                  2018
+                 </option>
+                 <option value="2019">
+                  2019
+                 </option>
+                 <option value="2020">
+                  2020
+                 </option>
+                 <option value="2021">
+                  2021
+                 </option>
+                 <option value="2022">
+                  2022
+                 </option>
+                 <option value="2023">
+                  2023
+                 </option>
+                 <option value="2024">
+                  2024
+                 </option>
+                 <option value="2025">
+                  2025
+                 </option>
+                 <option value="2026">
+                  2026
+                 </option>
+                 <option value="2027">
+                  2027
+                 </option>
+                 <option value="2028">
+                  2028
+                 </option>
+                 <option value="2029">
+                  2029
+                 </option>
+                 <option value="2030">
+                  2030
+                 </option>
+                 <option selected="selected" value="-1">
+                  YYYY
+                 </option>
+                </select>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <span class="medCalcFontOneBold">
+                 Gestational age by US
+                </span>
+               </td>
+               <td align="left" colspan="2" nowrap="nowrap">
+                <select class="medCalcFontSelect" name="gabus_weeks" onchange="setTimeout(function() {EstimatedDateDelivery_fx();}, 100);">
+                 <option value="4">
+                  4 weeks
+                 </option>
+                 <option value="5">
+                  5 weeks
+                 </option>
+                 <option value="6">
+                  6 weeks
+                 </option>
+                 <option value="7">
+                  7 weeks
+                 </option>
+                 <option value="8">
+                  8 weeks
+                 </option>
+                 <option value="9">
+                  9 weeks
+                 </option>
+                 <option value="10">
+                  10 weeks
+                 </option>
+                 <option value="11">
+                  11 weeks
+                 </option>
+                 <option value="12">
+                  12 weeks
+                 </option>
+                 <option value="13">
+                  13 weeks
+                 </option>
+                 <option value="14">
+                  14 weeks
+                 </option>
+                 <option value="15">
+                  15 weeks
+                 </option>
+                 <option value="16">
+                  16 weeks
+                 </option>
+                 <option value="17">
+                  17 weeks
+                 </option>
+                 <option value="18">
+                  18 weeks
+                 </option>
+                 <option value="19">
+                  19 weeks
+                 </option>
+                 <option value="20">
+                  20 weeks
+                 </option>
+                 <option value="21">
+                  21 weeks
+                 </option>
+                 <option value="22">
+                  22 weeks
+                 </option>
+                 <option value="23">
+                  23 weeks
+                 </option>
+                 <option value="24">
+                  24 weeks
+                 </option>
+                 <option value="25">
+                  25 weeks
+                 </option>
+                 <option value="26">
+                  26 weeks
+                 </option>
+                 <option value="27">
+                  27 weeks
+                 </option>
+                 <option value="28">
+                  28 weeks
+                 </option>
+                 <option value="29">
+                  29 weeks
+                 </option>
+                 <option value="30">
+                  30 weeks
+                 </option>
+                 <option value="31">
+                  31 weeks
+                 </option>
+                 <option value="32">
+                  32 weeks
+                 </option>
+                 <option value="33">
+                  33 weeks
+                 </option>
+                 <option value="34">
+                  34 weeks
+                 </option>
+                 <option value="35">
+                  35 weeks
+                 </option>
+                 <option value="36">
+                  36 weeks
+                 </option>
+                 <option value="37">
+                  37 weeks
+                 </option>
+                 <option value="38">
+                  38 weeks
+                 </option>
+                 <option value="39">
+                  39 weeks
+                 </option>
+                 <option value="40">
+                  40 weeks
+                 </option>
+                 <option value="41">
+                  41 weeks
+                 </option>
+                 <option value="42">
+                  42 weeks
+                 </option>
+                 <option value="43">
+                  43 weeks
+                 </option>
+                 <option value="44">
+                  44 weeks
+                 </option>
+                 <option selected="selected" value="-1">
+                  Weeks
+                 </option>
+                </select>
+                <select class="medCalcFontSelect" name="gabus_days" onchange="setTimeout(function() {EstimatedDateDelivery_fx();}, 100);">
+                 <option value="-1">
+                  Days
+                 </option>
+                 <option selected="selected" value="0">
+                  0 days
+                 </option>
+                 <option value="1">
+                  1 day
+                 </option>
+                 <option value="2">
+                  2 days
+                 </option>
+                 <option value="3">
+                  3 days
+                 </option>
+                 <option value="4">
+                  4 days
+                 </option>
+                 <option value="5">
+                  5 days
+                 </option>
+                 <option value="6">
+                  6 days
+                 </option>
+                </select>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </center>
+           <br/>
+           <br/>
+           <center>
+            <span class="medCalcFontIO">
+             Results
+            </span>
+            <br/>
+            <br/>
+            <table cellpadding="4" class="medCalcResultBox" summary="EBMcalc Table">
+             <tbody>
+              <tr>
+               <td colspan="3">
+                <br/>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <span class="medCalcFontResultParam">
+                 Current gestational age by LMP
+                </span>
+               </td>
+               <td nowrap="nowrap" valign="top">
+                <input maxlength="16" name="current_gest_lmp" onfocus="blur();" type="text"/>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <span class="medCalcFontResultParam">
+                 EDD by LMP
+                </span>
+               </td>
+               <td nowrap="nowrap" valign="top">
+                <input maxlength="16" name="edd_lmp_result" onfocus="blur();" type="text"/>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <span class="medCalcFontResultParam">
+                 Current gestational age by US
+                </span>
+               </td>
+               <td nowrap="nowrap" valign="top">
+                <input maxlength="16" name="current_gest_us" onfocus="blur();" type="text"/>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <span class="medCalcFontResultParam">
+                 EDD by US
+                </span>
+               </td>
+               <td nowrap="nowrap" valign="top">
+                <input maxlength="16" name="edd_us_result" onfocus="blur();" type="text"/>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="3">
+                <br/>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </center>
+           <br/>
+           <br/>
+           <div id="calc_buttons">
+            <center>
+             <span class="medCalcFontOne">
+              <input name="reset" type="reset" value="Reset form"/>
+             </span>
+            </center>
+           </div>
+          </div>
+          <div id="pretextrefs">
+          </div>
+          <br/>
+          <br/>
+          <div id="calc_hints">
+           <span class="medCalcFontOne">
+           </span>
+          </div>
+          <div id="calc_tables_above_notes">
+          </div>
+          <div id="calc_notes">
+           <span class="medCalcFontOneBold">
+            Notes
+           </span>
+           <ul class="medCalcFontOne">
+            <li>
+             This calculator gives you two options for estimating
+             <b>
+              EDD
+             </b>
+             . Enter either the date of the first day of the LMP, or the date of a US examination and the gestational age by US. Input any parameters to compare the two date calculations.
+            </li>
+            <li>
+             <b>
+              Gestational age by LMP
+             </b>
+             is calculated from the first day of the LMP.
+            </li>
+            <li>
+             <b>
+              EDD by LMP
+             </b>
+             is calculated by adding 280 days (40 weeks) to the first day of the LMP.
+            </li>
+            <li>
+             <b>
+              Gestational age by US
+             </b>
+             is measured by US on the
+             <b>
+              Ultrasound (US) date
+             </b>
+             .
+            </li>
+            <li>
+             <b>
+              EDD by US
+             </b>
+             is the estimated date of delivery based on the
+             <b>
+              Gestational age by US
+             </b>
+             and the
+             <b>
+              Ultrasound (US) date
+             </b>
+             . It is the
+             <b>
+              Ultrasound (US) date
+             </b>
+             + (280 [days] -
+             <b>
+              Gestational age by US [days]
+             </b>
+             on the
+             <b>
+              Ultrasound (US) date
+             </b>
+             ).
+            </li>
+           </ul>
+          </div>
+          <div id="calc_tables">
+          </div>
+          <br/>
+          <br/>
+          <div id="calc_refs">
+           <span class="medCalcFontRef">
+            <b>
+             References
+            </b>
+           </span>
+           <ol>
+            <li>
+             <span class="medCalcFontRef">
+              <a href="https://www.ncbi.nlm.nih.gov/pubmed/9014279" style="color: green; text-decoration: none;" target="_blank">
+               Mul T, Mongelli M, Gardosi J. A comparative analysis of second-trimester ultrasound dating formulae in pregnancies conceived with artificial reproductive techniques. Ultrasound Obstet Gynecol 1996; 8:397.
+              </a>
+             </span>
+            </li>
+            <li>
+             <span class="medCalcFontRef">
+              <a href="https://www.ncbi.nlm.nih.gov/pubmed/11065037" style="color: green; text-decoration: none;" target="_blank">
+               Westerway SC, Davison A, Cowell S. Ultrasonic fetal measurements: new Australian standards for the new millennium.  Aust N Z J Obstet Gynaecol 2000; 40:297.
+              </a>
+             </span>
+            </li>
+            <li>
+             <span class="medCalcFontRef">
+              <a href="https://www.ncbi.nlm.nih.gov/pubmed/9339525" style="color: green; text-decoration: none;" target="_blank">
+               Altman DG, Chitty LS. New charts for ultrasound dating of pregnancy. Ultrasound Obstet Gynecol 1997; 10:174.
+              </a>
+             </span>
+            </li>
+           </ol>
+          </div>
+         </form>
+        </div>
+        <span class="calculatorVendorId" id="T1628797270">
+        </span>
+       </div>
+       <div id="printDisclaimer">
+        <b>
+         Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.
+        </b>
+        <p>
+         Information on this page may not appear correctly if printed.
+        </p>
+       </div>
+       <div id="disclaimerCalculator">
+        <div class="medCalcFontTwo">
+         <p class="header">
+          Legal Notices and Disclaimer
+         </p>
+         <p>
+          All information contained in and produced by the EBMcalc system is provided
 			for educational purposes only. This information should not be used for the diagnosis or treatment
-			of any health problem or disease. 
-			<b>THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.</b>
-<a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">Click here for full notice and disclaimer.</a>
-</p>
-<p class="copy">EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC</p>
-</div>
-</div><div id="topicVersionRevision">Topic 13505 Version 15.0</div></div>
-</div>
-</div>
-</section>
-</section>
-<!-- End Main Menu Area -->
-<!-- Start Search Popup Area -->
-<!-- End Footer Area -->
-<!-- Back to top -->
-<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
-<!-- End Back to top -->
-<!-- jQuery Min JS -->
-<!-- Prpper JS -->
-<!-- Bootstrap Min JS -->
-<!-- Classy Nav Min Js -->
-<!-- Owl Carousel Min Js -->
-<!-- Magnific Popup JS -->
-<!-- CounterUp JS -->
-<!-- Waypoints JS -->
-<!-- Form Validator Min JS -->
-<!-- Contact Form Min JS -->
-<!-- Main JS -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-</body>
+			of any health problem or disease.
+          <b>
+           THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.
+          </b>
+          <a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">
+           Click here for full notice and disclaimer.
+          </a>
+         </p>
+         <p class="copy">
+          EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC
+         </p>
+        </div>
+       </div>
+       <div id="topicVersionRevision">
+        Topic 13505 Version 15.0
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </section>
+  <!-- End Main Menu Area -->
+  <!-- Start Search Popup Area -->
+  <!-- End Footer Area -->
+  <!-- Back to top -->
+  <a class="scrolltop" href="#top">
+   <i class="icofont-hand-drawn-up">
+   </i>
+  </a>
+  <!-- End Back to top -->
+  <!-- jQuery Min JS -->
+  <!-- Prpper JS -->
+  <!-- Bootstrap Min JS -->
+  <!-- Classy Nav Min Js -->
+  <!-- Owl Carousel Min Js -->
+  <!-- Magnific Popup JS -->
+  <!-- CounterUp JS -->
+  <!-- Waypoints JS -->
+  <!-- Form Validator Min JS -->
+  <!-- Contact Form Min JS -->
+  <!-- Main JS -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+ </body>
 </html>

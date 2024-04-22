@@ -1,489 +1,851 @@
 <!DOCTYPE html>
-
 <html lang="fa">
-<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
-<head><title>Calculator: Caprini risk assessment model for venous thromboembolism in adult general surgical patients (Caprini risk score)*</title><link href="/z/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/z/d/css/icofont.min.css" rel="stylesheet"/><link href="/z/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/z/d/css/animate.css" rel="stylesheet"/><link href="/z/d/css/owl.carousel.css" rel="stylesheet"/><link href="/z/d/css/magnific-popup.css" rel="stylesheet"/><link href="/z/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/z/d/css/style.css" rel="stylesheet"/><link href="/z/d/css/rtl_edited.css" rel="stylesheet"/><link href="/z/d/css/responsive.css" rel="stylesheet"/><link href="https:///uptodate_assets/main.css" rel="stylesheet"/>
-<style>
-
-#myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 16px;
-  color: black;
-  display: block
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee;
-}
-
-#searchResult {
-
-  list-style-type: none;
-  padding: 0;
-  padding-right: 20px;
-}
-
-#searchResult li a {
-  border: .5px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #79bc21;
-  padding: 7px;
-  text-decoration: none;
-  font-size: 14px;
-  color: white;
-  display: block
-}
-
-#searchResult li a:hover:not(.header) {
-  background-color: #222;
-}
-
-
-#txtHint   {
-  position: absolute;
-  text-shadow: none;
-  width: 100%;
-  margin-top: -15px;
-  padding-right: 10px;
-
-  filter: alpha(opacity=95);
-  -moz-opacity: 0.95;
-  opacity: 1;
-  z-index: 200;
-}
-.countBubl {
-  background:#eb0029;
-  color:#fff;
-  padding:5px;
-  margin-top: 50%;
-
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
- width: 55%;
- padding-left: 20px;
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
- width: 20%;
-}
- #Uptodate_image {
-      width: 50%;
-  }#uptodate-area {
-      /*z-index: 99;*/
-  }
-#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
- margin-left: 10px;
- margin-bottom: 6%;
-}
-@media (max-width: @screen-xs) {
-    .countBubl {
-        font-size: 4px ;
-    }
-    #uptodate_version {
-        font-size: 4px ;
-    }
-}
-
-@media (max-width: @screen-sm) {
-    .countBubl {
-        font-size: 14px ;
-    }
-}
-@media  all and(max-width: 820) {
-    #Uptodate_image {
-        width: 80% ;
-    }#uptodate-area {
-        z-index: 99;
-    }
-}@media  all and (min-width: 820) and(max-width: 88820){
-    #Uptodate_image {
-        width: 100% !important;
-    }
-    .countBubl {
-        font-size: 4px ;
-    }
-}
-div.col-md-3:nth-child(3) {
- margin-top: 6%;
-}
-
-div.col-md-3:nth-child(3) > img:nth-child(1) {
- width: 100%;
- margin-left: 11px;
-}
-
-</style>
-<style media="screen" type="text/css">
-  .goback {
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    position: fixed;
-    display: none;
-    font-size: 15px;
-    background: #71c0fa;
-    z-index: 1000;
-    text-align: center;
-    color: #ffffff;
-    -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
-    border-radius: 50px;
-    bottom: 3.8%;
-    right: 2%;
-}
-  .buyPackage {
-  width: 100px;
-  height: 100px;
-  line-height: 40px;
-  position: fixed;
-  display: none;
-  font-size: 10px;
-  background: #fa759e;
-  z-index: 1000;
-  text-align: center;
-  color: #ffffff;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  border-radius: 10px;
-  top: 150px;
-  right: 2%;
-  text-align: center;
-}
-.uptodate-area {
-  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-    background-attachment: fixed;
-  position: relative;
-}
-.uptodate-area::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  padding-top: 100px;
-  width: 100%;
-}
-#references{
-  display: none;
-}
-</style>
-<style>
-section.sticky {
-  position: sticky;
-  top: 0;
-  background-color: #fff !important;
-  /*z-index: 100;*/
-  /*padding-top: 80px;*/
-
-}
-.m4inb{
-    border: solid !important;
-  }
-
-  .newsletter-area::before {
-       background: unset !important;
-  }
-p {
-    color: #555;
-}
-</style>
-<meta content="" name="description"/>
-<link href="/z/d/img/favicon.png" rel="icon" type="image/png">
-</link></head>
-<body>
-<!-- Start Main Menu Area -->
-<br/>
-<br/>
-<br/>
-<br/>
-<div class="container">
-<div class="row">
-</div>
-</div>
-<section class="teacher-area ptb-10">
-<div class="container">
-</div>
-<section class="course-details-area ptb-60">
-<div class="container">
-<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-<h1 style="text-align:center">Calculator: Caprini risk assessment model for venous thromboembolism in adult general surgical patients (Caprini risk score)*</h1>
-<div class="utdArticleSection" id="topicContentCalculator"><div id="topicText">
-<div id="mc3k">
-<form action="" id="Caprini_form" name="Caprini_form" onkeydown="formKeyDown(event);" onkeypress="resetInTime(); return validNumberField(event);" onkeyup="Caprini_fx();" onreset="alerted5 = false; rrclr();rrclr(); document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
-<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
-<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
-<td align="left" bgcolor="#eeeeee">
-<span class="medCalcFontTitleBox">
-
- 
-Calculator: Caprini risk assessment model for venous thromboembolism in adult general surgical patients (Caprini risk score)<sup>*</sup>
-</span></td></tr></tbody></table><br/> <br/>
-<div id="calc_main">
-<center>
-<span class="medCalcFontIO">
-Input
-</span>
-<br/> <br/>
-<table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
-<tbody><tr><td align="right" valign="top"><span class="medCalcFontOneBold">Age</span></td>
-<td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Age. The variable option is 0 to 40 years. The value for this variable is 0" id="togel1" name="Age_radio" onclick="Caprini_fx();" type="radio" value="0 to 40 years|0"/><span class="medCalcFontOneClick" onclick="setRB('togel1');"> 0 to 40 years (0)</span></td></tr>
-<tr><td align="left"><br/></td><td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Age. The variable option is 41 to 60 years. The value for this variable is 1" id="togel2" name="Age_radio" onclick="Caprini_fx();" type="radio" value="41 to 60 years|1"/><span class="medCalcFontOneClick" onclick="setRB('togel2');"> 41 to 60 years (1)</span></td></tr>
-<tr><td align="left"><br/></td><td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Age. The variable option is 61 to 74 years. The value for this variable is 2" id="togel3" name="Age_radio" onclick="Caprini_fx();" type="radio" value="61 to 74 years|2"/><span class="medCalcFontOneClick" onclick="setRB('togel3');"> 61 to 74 years (2)</span></td></tr>
-<tr><td align="left"><br/></td><td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Age. The variable option is 75 years or older. The value for this variable is 3" id="togel4" name="Age_radio" onclick="Caprini_fx();" type="radio" value="75 years or older|3"/><span class="medCalcFontOneClick" onclick="setRB('togel4');"> 75 years or older (3)</span></td></tr>
-<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">Each of the following criteria that apply <b>now or within the past month</b>, receives 1 point:</span></td></tr>
-<tr>
-<td align="right"><input id="togel5" name="ec1" onclick="Caprini_fx();" type="checkbox"/></td>
-<td align="left" colspan="2"><span class="medCalcFontOneClick" onclick="togCB('togel5');">Minor surgery (less than 45 minutes, including anesthesia time) is planned</span></td></tr>
-<tr>
-<td align="right"><input id="togel6" name="ec2" onclick="Caprini_fx();" type="checkbox"/></td>
-<td align="left" colspan="2"><span class="medCalcFontOneClick" onclick="togCB('togel6');">Past major surgery (more than 45 minutes) within the last month</span></td></tr>
-<tr>
-<td align="right"><input id="togel7" name="ec3" onclick="Caprini_fx();" type="checkbox"/></td>
-<td align="left" colspan="2"><span class="medCalcFontOneClick" onclick="togCB('togel7');">Visible varicose veins</span></td></tr>
-<tr>
-<td align="right"><input id="togel8" name="ec4" onclick="Caprini_fx();" type="checkbox"/></td>
-<td align="left" colspan="2"><span class="medCalcFontOneClick" onclick="togCB('togel8');">History of active or inactive inflammatory bowel disease (IBD; eg, Crohn disease or ulcerative colitis)</span></td></tr>
-<tr>
-<td align="right"><input id="togel9" name="ec5" onclick="Caprini_fx();" type="checkbox"/></td>
-<td align="left" colspan="2"><span class="medCalcFontOneClick" onclick="togCB('togel9');">Swollen legs (current), including pitting edema of any level, loss of definition of the bony prominences, obscured foot veins, or indentation of the leg when a stocking is removed</span></td></tr>
-<tr>
-<td align="right"><input id="togel10" name="ec6" onclick="Caprini_fx();" type="checkbox"/></td>
-<td align="left" colspan="2"><span class="medCalcFontOneClick" onclick="togCB('togel10');">Overweight or obese (body mass index [BMI] above 25 kg/m<sup>2</sup>)</span></td></tr>
-<tr>
-<td align="right"><input id="togel11" name="ec7" onclick="Caprini_fx();" type="checkbox"/></td>
-<td align="left" colspan="2"><span class="medCalcFontOneClick" onclick="togCB('togel11');">Heart attack</span></td></tr>
-<tr>
-<td align="right"><input id="togel12" name="ec8" onclick="Caprini_fx();" type="checkbox"/></td>
-<td align="left" colspan="2"><span class="medCalcFontOneClick" onclick="togCB('togel12');">Heart failure (HF); includes patients who had an episode within the last month or patients who are currently being treated with medication for HF even if there was no acute episode in the last month</span></td></tr>
-<tr>
-<td align="right"><input id="togel13" name="ec9" onclick="Caprini_fx();" type="checkbox"/></td>
-<td align="left" colspan="2"><span class="medCalcFontOneClick" onclick="togCB('togel13');">Serious infection, eg, pneumonia (a patient who requires hospitalization and intravenous antibiotics for treatment)</span></td></tr>
-<tr>
-<td align="right" valign="top"><input name="lung_diseases_param" onblur="Caprini_fx(); minMaxCheck();" onchange="Caprini_fx();" size="1" type="text" value="0"/></td>
-<td align="left"><span class="medCalcFontCCTab">Enter number of lung diseases. Lung diseases eg, emphysema or COPD (also includes any interstitial lung disease and patients with abnormal pulmonary function tests. This would include, but is not limited to, any patient with sarcoidosis, pulmonary fibrosis, pulmonary hypertension, and bronchiectasis. (Patients who present with more than 1 diagnosis meeting the criteria for lung disease receive 1 point for each diagnosis).</span></td></tr>
-<tr>
-<td align="right"><input id="togel14" name="ec10" onclick="Caprini_fx();" type="checkbox"/></td>
-<td align="left" colspan="2"><span class="medCalcFontOneClick" onclick="togCB('togel14');">On bed rest or restricted mobility,<sup>Δ</sup> including a removable leg brace, for less than 72 hours</span></td></tr>
-<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">Each of these other risk factors that apply <b>now or within the past month</b><sup>¶</sup> receives 1 point:</span></td></tr>
-<tr>
-<td align="right"><input id="togel15" name="ec11" onclick="Caprini_fx();" type="checkbox"/></td>
-<td align="left" colspan="2"><span class="medCalcFontOneClick" onclick="togCB('togel15');">BMI above 40 kg/m<sup>2</sup></span></td></tr>
-<tr>
-<td align="right"><input id="togel16" name="ec12" onclick="Caprini_fx();" type="checkbox"/></td>
-<td align="left" colspan="2"><span class="medCalcFontOneClick" onclick="togCB('togel16');">Smoking within the last month (smoking is defined as the inhalation of anything that burns [eg, tobacco, marijuana], or vaping)</span></td></tr>
-<tr>
-<td align="right"><input id="togel17" name="ec13" onclick="Caprini_fx();" type="checkbox"/></td>
-<td align="left" colspan="2"><span class="medCalcFontOneClick" onclick="togCB('togel17');">Diabetes requiring insulin (does not include other oral or parenteral medications used for the treatment of diabetes)</span></td></tr>
-<tr>
-<td align="right"><input id="togel18" name="ec14" onclick="Caprini_fx();" type="checkbox"/></td>
-<td align="left" colspan="2"><span class="medCalcFontOneClick" onclick="togCB('togel18');">Chemotherapy (includes chemotherapy treatments used for any medical condition (eg, methotrexate for rheumatoid arthritis, hydroxyurea for essential thrombocytosis)</span></td></tr>
-<tr>
-<td align="right"><input id="togel19" name="ec15" onclick="Caprini_fx();" type="checkbox"/></td>
-<td align="left" colspan="2"><span class="medCalcFontOneClick" onclick="togCB('togel19');">Blood transfusion(s) (1 point for 1 or more transfusion)</span></td></tr>
-<tr>
-<td align="right"><input id="togel20" name="ec16" onclick="Caprini_fx();" type="checkbox"/></td>
-<td align="left" colspan="2"><span class="medCalcFontOneClick" onclick="togCB('togel20');">Length of surgery over 2 hours (including anesthesia time). NOTE: this point is not counted if hip or knee replacement surgery is indicated below.</span></td></tr>
-<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold"><b>For females only</b>: Each of the following criteria receives 1 point:</span></td></tr>
-<tr>
-<td align="right"><input id="togel21" name="ec17" onclick="Caprini_fx();" type="checkbox"/></td>
-<td align="left" colspan="2"><span class="medCalcFontOneClick" onclick="togCB('togel21');">Current use of birth control or hormone replacement therapy (includes estrogen contraceptives of any type, estrogen-like drugs [eg, tamoxifen, anastrozole, letrozole]; does not include testosterone replacement therapy)</span></td></tr>
-<tr>
-<td align="right"><input id="togel22" name="ec18" onclick="Caprini_fx();" type="checkbox"/></td>
-<td align="left" colspan="2"><span class="medCalcFontOneClick" onclick="togCB('togel22');">Pregnant or had a baby within the last month</span></td></tr>
-<tr>
-<td align="right"><input id="togel23" name="ec19" onclick="Caprini_fx();" type="checkbox"/></td>
-<td align="left" colspan="2"><span class="medCalcFontOneClick" onclick="togCB('togel23');">History of unexplained stillborn infant, recurrent spontaneous abortion (3 or more), premature birth with toxemia or growth restricted infant</span></td></tr>
-<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">Each of the following criteria receives 2 points:</span></td></tr>
-<tr>
-<td align="right" valign="top"><input name="malignancies_param" onblur="Caprini_fx(); minMaxCheck();" onchange="Caprini_fx();" size="1" type="text" value="0"/></td>
-<td align="left"><span class="medCalcFontCCTab">Enter number of current or past malignancies (excluding skin cancer but including melanoma; every incidence of cancer is considered  separately and points are additive) (Patients who present with more than 1 diagnosis meeting the criteria for current or past malignancies receive 2 points for each diagnosis).</span></td></tr>
-<tr>
-<td align="right"><input id="togel24" name="ec20" onclick="Caprini_fx();" type="checkbox"/></td>
-<td align="left" colspan="2"><span class="medCalcFontOneClick" onclick="togCB('togel24');">Planned major surgery (including laparoscopic and arthroscopic) lasting longer than 45 minutes (including anesthesia time).  NOTE: these points are not counted if hip or knee replacement surgery is indicated below.</span></td></tr>
-<tr>
-<td align="right"><input id="togel25" name="ec21" onclick="Caprini_fx();" type="checkbox"/></td>
-<td align="left" colspan="2"><span class="medCalcFontOneClick" onclick="togCB('togel25');">Nonremovable cast or mold that prevents leg movement within last month (includes any limitation of mobility which would interfere with calf muscle pumping action such as a leg brace or cast; also includes patients using crutches who are nonweightbearing on one leg. Does not include use of an assistive device for stability)</span></td></tr>
-<tr>
-<td align="right"><input id="togel26" name="ec22" onclick="Caprini_fx();" type="checkbox"/></td>
-<td align="left" colspan="2"><span class="medCalcFontOneClick" onclick="togCB('togel26');">Tube in blood vessel in neck or chest that delivers blood or medicine directly to the heart within the last month (eg, central venous access, PICC line, port)</span></td></tr>
-<tr>
-<td align="right"><input id="togel27" name="ec23" onclick="Caprini_fx();" type="checkbox"/></td>
-<td align="left" colspan="2"><span class="medCalcFontOneClick" onclick="togCB('togel27');">Confined to bed<sup>Δ</sup> for 72 hours or more (unable to ambulate continuously 30 feet; does not include use of an assistive device for stability)</span></td></tr>
-<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">Each of the following criteria receives 3 points:</span></td></tr>
-<tr>
-<td align="right" valign="top"><input name="blood_clots_param" onblur="Caprini_fx(); minMaxCheck();" onchange="Caprini_fx();" size="1" type="text" value="0"/></td>
-<td align="left"><span class="medCalcFontCCTab">Enter number of episodes of blood clots (includes: deep vein thrombosis (DVT), pulmonary embolism (PE); or superficial vein  thrombosis (SVT); does not include arterial clots unless the result of paradoxical embolism). Each episode is a separate event for scoring.  (Patients who present with more than 1 episode meeting the criteria for current or past history of blood clots receive 3 points for each diagnosis).</span></td></tr>
-<tr>
-<td align="right"><input id="togel28" name="ec24" onclick="Caprini_fx();" type="checkbox"/></td>
-<td align="left" colspan="2"><span class="medCalcFontOneClick" onclick="togCB('togel28');">Family history of blood clots (includes first-, second-, and third-degree relatives.)</span></td></tr>
-<tr>
-<td align="right" valign="top"><input name="thrombophilia_markers_param" onblur="Caprini_fx(); minMaxCheck();" onchange="Caprini_fx();" size="1" type="text" value="0"/></td>
-<td align="left"><span class="medCalcFontCCTab">Enter number of personal or family history of positive blood test indicating an increased risk of blood clotting  (eg, genetic or acquired thrombophilia). (Patients who present with more than 1 diagnosis meeting criteria for positive blood testing receive 3 points for each positive blood test). </span><ul class="medCalcFontOne"><li>Genetic (inherited) factors: Factor V Leiden/activated protein C resistance, antithrombin III deficiency, protein C and protein S deficiency, dysfibrinogenemia, 20210A prothrombin mutation.</li> <li>Acquired factors: lupus anticoagulant, antiphospholipid antibodies, myeloproliferative disorders [including thrombocytosis], disorders of plasminogen and plasmin activation,  heparin-induced thrombocytopenia, hyperviscosity syndromes, and homocysteinemia. HIV infection is an acquired thrombophilia. </li></ul><span></span></td></tr>
-<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">Each of the following criteria that apply <b>now or within the past month</b> receives 5 points:</span></td></tr>
-<tr>
-<td align="right" valign="top"><input name="number_ortho_surgeries_param" onblur="Caprini_fx(); minMaxCheck();" onchange="Caprini_fx();" size="1" type="text" value="0"/></td>
-<td align="left"><span class="medCalcFontCCTab">Enter the number of elective hip or knee joint replacements (total or partial; points assessed for each surgical procedure [eg, bilateral arthroplasty = 10 points]). (Patients who present with more than 1 surgery meeting the criteria for elective hip or knee joint replacement receive 5 points for each surgery).</span></td></tr>
-<tr>
-<td align="right"><input id="togel29" name="ec25" onclick="Caprini_fx();" type="checkbox"/></td>
-<td align="left" colspan="2"><span class="medCalcFontOneClick" onclick="togCB('togel29');">Broken hip, pelvis, or leg (fractures requiring surgical repair receive 5 points for the fracture and additional points for the surgery depending on time [eg, &gt;45 minutes] and type [eg, hip replacement], as well as points for any resulting restricted mobility (eg, cast placed)</span></td></tr>
-<tr>
-<td align="right"><input id="togel30" name="ec26" onclick="Caprini_fx();" type="checkbox"/></td>
-<td align="left" colspan="2"><span class="medCalcFontOneClick" onclick="togCB('togel30');">Serious trauma (eg, multiple broken bones due to a fall or car accident)</span></td></tr>
-<tr>
-<td align="right"><input id="togel31" name="ec27" onclick="Caprini_fx();" type="checkbox"/></td>
-<td align="left" colspan="2"><span class="medCalcFontOneClick" onclick="togCB('togel31');">Spinal cord injury resulting in paralysis</span></td></tr>
-<tr>
-<td align="right"><input id="togel32" name="ec28" onclick="Caprini_fx();" type="checkbox"/></td>
-<td align="left" colspan="2"><span class="medCalcFontOneClick" onclick="togCB('togel32');">Stroke</span></td></tr>
-</tbody></table>
-</center>
-<br/> <br/><center><span class="medCalcFontIO">Results<span class="medCalcFontOne" id="inputchk"><br/> <br/><b>Important:</b> Inputs must be complete to perform calculation. <br/></span></span>
-<br/> <br/>
-<table cellpadding="4" class="medCalcResultBox" summary="EBMcalc Table">
-<tbody><tr><td colspan="3"> <br/></td></tr>
-<tr>
-<td align="right"><span class="medCalcFontResultParam">Caprini score</span></td>
-<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value Caprini score" aria-readonly="true" name="Caprini_score_param" size="6" type="text"/></td>
-<td align="left" valign="top"><span class="medCalcFontResultParam">
-<select aria-label="Use this pulldown selector to set the unit of measure for the result value Caprini score" class="medCalcFontSelect" name="Caprini_score_unit" onchange="Caprini_fx();" style="width:115px;">
-<option value="1|0|#">#</option>
-<option value="1|0|index">index</option>
-<option value="1|0|none">none</option>
-<option value="1|0|number">number</option>
-<option selected="selected" value="1|0|points">points</option>
-<option value="1|0|score">score</option>
-</select>
-</span></td>
-</tr>
-<tr><td colspan="3"> <br/></td></tr>
-</tbody></table>
-</center><br/> <br/>
-<div id="calc_buttons">
-<center>
-<span class="medCalcFontOne">
-<input name="resetbutton" type="reset" value="Reset form"/>
-</span>
-</center>
-</div>
-<br/> <br/>
-<div aria-label="This table highlights the result Estimated baseline risk (EBR) of VTE by risk category. No result is highlighted" id="rr1_tag" tabindex="0">
-<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
-<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
-<td align="left" bgcolor="#eeeeee">
-<span class="medCalcFontTitleBox">
-
-
-Estimated baseline risk (EBR) of VTE by risk category
-</span></td></tr></tbody></table><br/> <br/>
-</div>
-<center>
-<table border="1" cellpadding="4" cellspacing="0" summary="RRTable">
-<tbody><tr bgcolor="#ffffff">
-<td align="center"><span class="medCalcFontOneBold"> Points</span></td>
-<td align="center"><span class="medCalcFontOneBold">Risk category</span></td>
-<td align="center"><span class="medCalcFontOneBold">EBR</span></td>
-</tr>
-<tr id="rr1_1"><td align="center" nowrap="nowrap"><span class="medCalcFontOneBold"> 0</span></td>
-<td align="center"><span class="medCalcFontOne">Very low</span></td>
-<td align="center"><span class="medCalcFontOne">&lt;0.5%</span></td>
-</tr>
-<tr id="rr1_2"><td align="center" nowrap="nowrap"><span class="medCalcFontOneBold"> 1 to 2</span></td>
-<td align="center"><span class="medCalcFontOne">Low</span></td>
-<td align="center"><span class="medCalcFontOne">1.5%</span></td>
-</tr>
-<tr id="rr1_3"><td align="center" nowrap="nowrap"><span class="medCalcFontOneBold"> 3 to 4</span></td>
-<td align="center"><span class="medCalcFontOne">Moderate</span></td>
-<td align="center"><span class="medCalcFontOne">3%</span></td>
-</tr>
-<tr id="rr1_4"><td align="center" nowrap="nowrap"><span class="medCalcFontOneBold"> 5 to 100</span></td>
-<td align="center"><span class="medCalcFontOne">HIgh</span></td>
-<td align="center"><span class="medCalcFontOne">≥6%</span></td>
-</tr>
-</tbody></table>
-</center>
-<br/> <br/>
-</div><div id="pretextrefs">
- 
-</div>
-<br/> <br/>
-<div id="calc_hints">
-<span class="medCalcFontOne">
-</span>
-</div>
-<div id="calc_tables_above_notes">
-</div>
-<br/> <br/>
-<div id="calc_notes">
-<span class="medCalcFontOneBold">Notes</span>
-<ul class="medCalcFontOne">
-<li>* We use the Caprini Risk Assessment model for general, abdominal-pelvic, bariatric, vascular, and plastic and reconstructive surgery. See appropriate UpToDate text for other types of surgery (eg, orthopedic surgery, cancer surgery).</li>
-<li>¶ These other risk factors have not been tested in validation studies but have been shown in the literature to be associated with thrombosis.</li>
-<li>Δ Restricted mobility (bed rest) is defined as any individual who is unable to ambulate continuously more than 30 feet. It would also apply to any patient who is unable to ambulate using both legs (eg, nonweightbearing on 1 extremity even if able to ambulate 30 feet with crutches).</li>
-<li><b>BMI</b>: body mass index; <b>EBR</b>: estimated baseline risk of venous thromboembolism; <b>PICC</b>: peripherally inserted central catheter; <b>VTE</b>: venous thromboembolism.</li>
-</ul>
-</div>
-<div id="calc_tables">
-</div>
-<br/> <br/>
-<div id="calc_refs">
-<span class="medCalcFontRef"><b>References</b></span>
-<ol>
-<li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/30939900" style="color: green; text-decoration: none;" target="_blank">Cronin M, Dengler N, Krauss ES, et al. Completion of the Updated Caprini Risk Assessment Model (2013 Version).  Clin Appl Thromb Hemost 2019; 25:1.</a></span></li>
-<li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/22315263" style="color: green; text-decoration: none;" target="_blank">Gould MK, Garcia DA, Wren SM, et al. Prevention of VTE in nonorthopedic surgical patients: antithrombotic therapy and prevention  of thrombosis, 9th ed: American College of Chest Physicians evidence-based clinical practical guidelines. Chest 2012; 141:e227S.</a></span></li>
-</ol>
-</div>
-</form>
-</div>
-<span class="calculatorVendorId" id="T1678215863">
-</span></div><div id="printDisclaimer">
-<b>Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.</b>
-<p>
-	Information on this page may not appear correctly if printed. </p>
-</div>
-<div id="disclaimerCalculator">
-<div class="medCalcFontTwo">
-<p class="header">Legal Notices and Disclaimer</p>
-<p>
-			All information contained in and produced by the EBMcalc system is provided
+ <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+ <head>
+  <title>
+   Calculator: Caprini risk assessment model for venous thromboembolism in adult general surgical patients (Caprini risk score)*
+  </title>
+  <link href="d/css/1.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!-- Start Main Menu Area -->
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="container">
+   <div class="row">
+   </div>
+  </div>
+  <section class="teacher-area ptb-10">
+   <div class="container">
+   </div>
+   <section class="course-details-area ptb-60">
+    <div class="container">
+     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+      <h1 style="text-align:center">
+       Calculator: Caprini risk assessment model for venous thromboembolism in adult general surgical patients (Caprini risk score)*
+      </h1>
+      <div class="utdArticleSection" id="topicContentCalculator">
+       <div id="topicText">
+        <div id="mc3k">
+         <form action="" id="Caprini_form" name="Caprini_form" onkeydown="formKeyDown(event);" onkeypress="resetInTime(); return validNumberField(event);" onkeyup="Caprini_fx();" onreset="alerted5 = false; rrclr();rrclr(); document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
+          <table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+           <tbody>
+            <tr>
+             <td bgcolor="#eeeeee" width="1%">
+              <br/>
+             </td>
+             <td align="left" bgcolor="#eeeeee">
+              <span class="medCalcFontTitleBox">
+               Calculator: Caprini risk assessment model for venous thromboembolism in adult general surgical patients (Caprini risk score)
+               <sup>
+                *
+               </sup>
+              </span>
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <br/>
+          <br/>
+          <div id="calc_main">
+           <center>
+            <span class="medCalcFontIO">
+             Input
+            </span>
+            <br/>
+            <br/>
+            <table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
+             <tbody>
+              <tr>
+               <td align="right" valign="top">
+                <span class="medCalcFontOneBold">
+                 Age
+                </span>
+               </td>
+               <td align="left" colspan="2">
+                <input aria-label="This button selects an option for the variable: Age. The variable option is 0 to 40 years. The value for this variable is 0" id="togel1" name="Age_radio" onclick="Caprini_fx();" type="radio" value="0 to 40 years|0"/>
+                <span class="medCalcFontOneClick" onclick="setRB('togel1');">
+                 0 to 40 years (0)
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                <br/>
+               </td>
+               <td align="left" colspan="2">
+                <input aria-label="This button selects an option for the variable: Age. The variable option is 41 to 60 years. The value for this variable is 1" id="togel2" name="Age_radio" onclick="Caprini_fx();" type="radio" value="41 to 60 years|1"/>
+                <span class="medCalcFontOneClick" onclick="setRB('togel2');">
+                 41 to 60 years (1)
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                <br/>
+               </td>
+               <td align="left" colspan="2">
+                <input aria-label="This button selects an option for the variable: Age. The variable option is 61 to 74 years. The value for this variable is 2" id="togel3" name="Age_radio" onclick="Caprini_fx();" type="radio" value="61 to 74 years|2"/>
+                <span class="medCalcFontOneClick" onclick="setRB('togel3');">
+                 61 to 74 years (2)
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                <br/>
+               </td>
+               <td align="left" colspan="2">
+                <input aria-label="This button selects an option for the variable: Age. The variable option is 75 years or older. The value for this variable is 3" id="togel4" name="Age_radio" onclick="Caprini_fx();" type="radio" value="75 years or older|3"/>
+                <span class="medCalcFontOneClick" onclick="setRB('togel4');">
+                 75 years or older (3)
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="left" colspan="3">
+                <span class="medCalcFontCCTabBold">
+                 Each of the following criteria that apply
+                 <b>
+                  now or within the past month
+                 </b>
+                 , receives 1 point:
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <input id="togel5" name="ec1" onclick="Caprini_fx();" type="checkbox"/>
+               </td>
+               <td align="left" colspan="2">
+                <span class="medCalcFontOneClick" onclick="togCB('togel5');">
+                 Minor surgery (less than 45 minutes, including anesthesia time) is planned
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <input id="togel6" name="ec2" onclick="Caprini_fx();" type="checkbox"/>
+               </td>
+               <td align="left" colspan="2">
+                <span class="medCalcFontOneClick" onclick="togCB('togel6');">
+                 Past major surgery (more than 45 minutes) within the last month
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <input id="togel7" name="ec3" onclick="Caprini_fx();" type="checkbox"/>
+               </td>
+               <td align="left" colspan="2">
+                <span class="medCalcFontOneClick" onclick="togCB('togel7');">
+                 Visible varicose veins
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <input id="togel8" name="ec4" onclick="Caprini_fx();" type="checkbox"/>
+               </td>
+               <td align="left" colspan="2">
+                <span class="medCalcFontOneClick" onclick="togCB('togel8');">
+                 History of active or inactive inflammatory bowel disease (IBD; eg, Crohn disease or ulcerative colitis)
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <input id="togel9" name="ec5" onclick="Caprini_fx();" type="checkbox"/>
+               </td>
+               <td align="left" colspan="2">
+                <span class="medCalcFontOneClick" onclick="togCB('togel9');">
+                 Swollen legs (current), including pitting edema of any level, loss of definition of the bony prominences, obscured foot veins, or indentation of the leg when a stocking is removed
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <input id="togel10" name="ec6" onclick="Caprini_fx();" type="checkbox"/>
+               </td>
+               <td align="left" colspan="2">
+                <span class="medCalcFontOneClick" onclick="togCB('togel10');">
+                 Overweight or obese (body mass index [BMI] above 25 kg/m
+                 <sup>
+                  2
+                 </sup>
+                 )
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <input id="togel11" name="ec7" onclick="Caprini_fx();" type="checkbox"/>
+               </td>
+               <td align="left" colspan="2">
+                <span class="medCalcFontOneClick" onclick="togCB('togel11');">
+                 Heart attack
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <input id="togel12" name="ec8" onclick="Caprini_fx();" type="checkbox"/>
+               </td>
+               <td align="left" colspan="2">
+                <span class="medCalcFontOneClick" onclick="togCB('togel12');">
+                 Heart failure (HF); includes patients who had an episode within the last month or patients who are currently being treated with medication for HF even if there was no acute episode in the last month
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <input id="togel13" name="ec9" onclick="Caprini_fx();" type="checkbox"/>
+               </td>
+               <td align="left" colspan="2">
+                <span class="medCalcFontOneClick" onclick="togCB('togel13');">
+                 Serious infection, eg, pneumonia (a patient who requires hospitalization and intravenous antibiotics for treatment)
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right" valign="top">
+                <input name="lung_diseases_param" onblur="Caprini_fx(); minMaxCheck();" onchange="Caprini_fx();" size="1" type="text" value="0"/>
+               </td>
+               <td align="left">
+                <span class="medCalcFontCCTab">
+                 Enter number of lung diseases. Lung diseases eg, emphysema or COPD (also includes any interstitial lung disease and patients with abnormal pulmonary function tests. This would include, but is not limited to, any patient with sarcoidosis, pulmonary fibrosis, pulmonary hypertension, and bronchiectasis. (Patients who present with more than 1 diagnosis meeting the criteria for lung disease receive 1 point for each diagnosis).
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <input id="togel14" name="ec10" onclick="Caprini_fx();" type="checkbox"/>
+               </td>
+               <td align="left" colspan="2">
+                <span class="medCalcFontOneClick" onclick="togCB('togel14');">
+                 On bed rest or restricted mobility,
+                 <sup>
+                  Δ
+                 </sup>
+                 including a removable leg brace, for less than 72 hours
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="left" colspan="3">
+                <span class="medCalcFontCCTabBold">
+                 Each of these other risk factors that apply
+                 <b>
+                  now or within the past month
+                 </b>
+                 <sup>
+                  ¶
+                 </sup>
+                 receives 1 point:
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <input id="togel15" name="ec11" onclick="Caprini_fx();" type="checkbox"/>
+               </td>
+               <td align="left" colspan="2">
+                <span class="medCalcFontOneClick" onclick="togCB('togel15');">
+                 BMI above 40 kg/m
+                 <sup>
+                  2
+                 </sup>
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <input id="togel16" name="ec12" onclick="Caprini_fx();" type="checkbox"/>
+               </td>
+               <td align="left" colspan="2">
+                <span class="medCalcFontOneClick" onclick="togCB('togel16');">
+                 Smoking within the last month (smoking is defined as the inhalation of anything that burns [eg, tobacco, marijuana], or vaping)
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <input id="togel17" name="ec13" onclick="Caprini_fx();" type="checkbox"/>
+               </td>
+               <td align="left" colspan="2">
+                <span class="medCalcFontOneClick" onclick="togCB('togel17');">
+                 Diabetes requiring insulin (does not include other oral or parenteral medications used for the treatment of diabetes)
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <input id="togel18" name="ec14" onclick="Caprini_fx();" type="checkbox"/>
+               </td>
+               <td align="left" colspan="2">
+                <span class="medCalcFontOneClick" onclick="togCB('togel18');">
+                 Chemotherapy (includes chemotherapy treatments used for any medical condition (eg, methotrexate for rheumatoid arthritis, hydroxyurea for essential thrombocytosis)
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <input id="togel19" name="ec15" onclick="Caprini_fx();" type="checkbox"/>
+               </td>
+               <td align="left" colspan="2">
+                <span class="medCalcFontOneClick" onclick="togCB('togel19');">
+                 Blood transfusion(s) (1 point for 1 or more transfusion)
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <input id="togel20" name="ec16" onclick="Caprini_fx();" type="checkbox"/>
+               </td>
+               <td align="left" colspan="2">
+                <span class="medCalcFontOneClick" onclick="togCB('togel20');">
+                 Length of surgery over 2 hours (including anesthesia time). NOTE: this point is not counted if hip or knee replacement surgery is indicated below.
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="left" colspan="3">
+                <span class="medCalcFontCCTabBold">
+                 <b>
+                  For females only
+                 </b>
+                 : Each of the following criteria receives 1 point:
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <input id="togel21" name="ec17" onclick="Caprini_fx();" type="checkbox"/>
+               </td>
+               <td align="left" colspan="2">
+                <span class="medCalcFontOneClick" onclick="togCB('togel21');">
+                 Current use of birth control or hormone replacement therapy (includes estrogen contraceptives of any type, estrogen-like drugs [eg, tamoxifen, anastrozole, letrozole]; does not include testosterone replacement therapy)
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <input id="togel22" name="ec18" onclick="Caprini_fx();" type="checkbox"/>
+               </td>
+               <td align="left" colspan="2">
+                <span class="medCalcFontOneClick" onclick="togCB('togel22');">
+                 Pregnant or had a baby within the last month
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <input id="togel23" name="ec19" onclick="Caprini_fx();" type="checkbox"/>
+               </td>
+               <td align="left" colspan="2">
+                <span class="medCalcFontOneClick" onclick="togCB('togel23');">
+                 History of unexplained stillborn infant, recurrent spontaneous abortion (3 or more), premature birth with toxemia or growth restricted infant
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="left" colspan="3">
+                <span class="medCalcFontCCTabBold">
+                 Each of the following criteria receives 2 points:
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right" valign="top">
+                <input name="malignancies_param" onblur="Caprini_fx(); minMaxCheck();" onchange="Caprini_fx();" size="1" type="text" value="0"/>
+               </td>
+               <td align="left">
+                <span class="medCalcFontCCTab">
+                 Enter number of current or past malignancies (excluding skin cancer but including melanoma; every incidence of cancer is considered  separately and points are additive) (Patients who present with more than 1 diagnosis meeting the criteria for current or past malignancies receive 2 points for each diagnosis).
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <input id="togel24" name="ec20" onclick="Caprini_fx();" type="checkbox"/>
+               </td>
+               <td align="left" colspan="2">
+                <span class="medCalcFontOneClick" onclick="togCB('togel24');">
+                 Planned major surgery (including laparoscopic and arthroscopic) lasting longer than 45 minutes (including anesthesia time).  NOTE: these points are not counted if hip or knee replacement surgery is indicated below.
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <input id="togel25" name="ec21" onclick="Caprini_fx();" type="checkbox"/>
+               </td>
+               <td align="left" colspan="2">
+                <span class="medCalcFontOneClick" onclick="togCB('togel25');">
+                 Nonremovable cast or mold that prevents leg movement within last month (includes any limitation of mobility which would interfere with calf muscle pumping action such as a leg brace or cast; also includes patients using crutches who are nonweightbearing on one leg. Does not include use of an assistive device for stability)
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <input id="togel26" name="ec22" onclick="Caprini_fx();" type="checkbox"/>
+               </td>
+               <td align="left" colspan="2">
+                <span class="medCalcFontOneClick" onclick="togCB('togel26');">
+                 Tube in blood vessel in neck or chest that delivers blood or medicine directly to the heart within the last month (eg, central venous access, PICC line, port)
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <input id="togel27" name="ec23" onclick="Caprini_fx();" type="checkbox"/>
+               </td>
+               <td align="left" colspan="2">
+                <span class="medCalcFontOneClick" onclick="togCB('togel27');">
+                 Confined to bed
+                 <sup>
+                  Δ
+                 </sup>
+                 for 72 hours or more (unable to ambulate continuously 30 feet; does not include use of an assistive device for stability)
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="left" colspan="3">
+                <span class="medCalcFontCCTabBold">
+                 Each of the following criteria receives 3 points:
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right" valign="top">
+                <input name="blood_clots_param" onblur="Caprini_fx(); minMaxCheck();" onchange="Caprini_fx();" size="1" type="text" value="0"/>
+               </td>
+               <td align="left">
+                <span class="medCalcFontCCTab">
+                 Enter number of episodes of blood clots (includes: deep vein thrombosis (DVT), pulmonary embolism (PE); or superficial vein  thrombosis (SVT); does not include arterial clots unless the result of paradoxical embolism). Each episode is a separate event for scoring.  (Patients who present with more than 1 episode meeting the criteria for current or past history of blood clots receive 3 points for each diagnosis).
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <input id="togel28" name="ec24" onclick="Caprini_fx();" type="checkbox"/>
+               </td>
+               <td align="left" colspan="2">
+                <span class="medCalcFontOneClick" onclick="togCB('togel28');">
+                 Family history of blood clots (includes first-, second-, and third-degree relatives.)
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right" valign="top">
+                <input name="thrombophilia_markers_param" onblur="Caprini_fx(); minMaxCheck();" onchange="Caprini_fx();" size="1" type="text" value="0"/>
+               </td>
+               <td align="left">
+                <span class="medCalcFontCCTab">
+                 Enter number of personal or family history of positive blood test indicating an increased risk of blood clotting  (eg, genetic or acquired thrombophilia). (Patients who present with more than 1 diagnosis meeting criteria for positive blood testing receive 3 points for each positive blood test).
+                </span>
+                <ul class="medCalcFontOne">
+                 <li>
+                  Genetic (inherited) factors: Factor V Leiden/activated protein C resistance, antithrombin III deficiency, protein C and protein S deficiency, dysfibrinogenemia, 20210A prothrombin mutation.
+                 </li>
+                 <li>
+                  Acquired factors: lupus anticoagulant, antiphospholipid antibodies, myeloproliferative disorders [including thrombocytosis], disorders of plasminogen and plasmin activation,  heparin-induced thrombocytopenia, hyperviscosity syndromes, and homocysteinemia. HIV infection is an acquired thrombophilia.
+                 </li>
+                </ul>
+                <span>
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="left" colspan="3">
+                <span class="medCalcFontCCTabBold">
+                 Each of the following criteria that apply
+                 <b>
+                  now or within the past month
+                 </b>
+                 receives 5 points:
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right" valign="top">
+                <input name="number_ortho_surgeries_param" onblur="Caprini_fx(); minMaxCheck();" onchange="Caprini_fx();" size="1" type="text" value="0"/>
+               </td>
+               <td align="left">
+                <span class="medCalcFontCCTab">
+                 Enter the number of elective hip or knee joint replacements (total or partial; points assessed for each surgical procedure [eg, bilateral arthroplasty = 10 points]). (Patients who present with more than 1 surgery meeting the criteria for elective hip or knee joint replacement receive 5 points for each surgery).
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <input id="togel29" name="ec25" onclick="Caprini_fx();" type="checkbox"/>
+               </td>
+               <td align="left" colspan="2">
+                <span class="medCalcFontOneClick" onclick="togCB('togel29');">
+                 Broken hip, pelvis, or leg (fractures requiring surgical repair receive 5 points for the fracture and additional points for the surgery depending on time [eg, &gt;45 minutes] and type [eg, hip replacement], as well as points for any resulting restricted mobility (eg, cast placed)
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <input id="togel30" name="ec26" onclick="Caprini_fx();" type="checkbox"/>
+               </td>
+               <td align="left" colspan="2">
+                <span class="medCalcFontOneClick" onclick="togCB('togel30');">
+                 Serious trauma (eg, multiple broken bones due to a fall or car accident)
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <input id="togel31" name="ec27" onclick="Caprini_fx();" type="checkbox"/>
+               </td>
+               <td align="left" colspan="2">
+                <span class="medCalcFontOneClick" onclick="togCB('togel31');">
+                 Spinal cord injury resulting in paralysis
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <input id="togel32" name="ec28" onclick="Caprini_fx();" type="checkbox"/>
+               </td>
+               <td align="left" colspan="2">
+                <span class="medCalcFontOneClick" onclick="togCB('togel32');">
+                 Stroke
+                </span>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </center>
+           <br/>
+           <br/>
+           <center>
+            <span class="medCalcFontIO">
+             Results
+             <span class="medCalcFontOne" id="inputchk">
+              <br/>
+              <br/>
+              <b>
+               Important:
+              </b>
+              Inputs must be complete to perform calculation.
+              <br/>
+             </span>
+            </span>
+            <br/>
+            <br/>
+            <table cellpadding="4" class="medCalcResultBox" summary="EBMcalc Table">
+             <tbody>
+              <tr>
+               <td colspan="3">
+                <br/>
+               </td>
+              </tr>
+              <tr>
+               <td align="right">
+                <span class="medCalcFontResultParam">
+                 Caprini score
+                </span>
+               </td>
+               <td nowrap="nowrap" valign="top">
+                <input aria-label="This output box will display the calculated value Caprini score" aria-readonly="true" name="Caprini_score_param" size="6" type="text"/>
+               </td>
+               <td align="left" valign="top">
+                <span class="medCalcFontResultParam">
+                 <select aria-label="Use this pulldown selector to set the unit of measure for the result value Caprini score" class="medCalcFontSelect" name="Caprini_score_unit" onchange="Caprini_fx();" style="width:115px;">
+                  <option value="1|0|#">
+                   #
+                  </option>
+                  <option value="1|0|index">
+                   index
+                  </option>
+                  <option value="1|0|none">
+                   none
+                  </option>
+                  <option value="1|0|number">
+                   number
+                  </option>
+                  <option selected="selected" value="1|0|points">
+                   points
+                  </option>
+                  <option value="1|0|score">
+                   score
+                  </option>
+                 </select>
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td colspan="3">
+                <br/>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </center>
+           <br/>
+           <br/>
+           <div id="calc_buttons">
+            <center>
+             <span class="medCalcFontOne">
+              <input name="resetbutton" type="reset" value="Reset form"/>
+             </span>
+            </center>
+           </div>
+           <br/>
+           <br/>
+           <div aria-label="This table highlights the result Estimated baseline risk (EBR) of VTE by risk category. No result is highlighted" id="rr1_tag" tabindex="0">
+            <table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+             <tbody>
+              <tr>
+               <td bgcolor="#eeeeee" width="1%">
+                <br/>
+               </td>
+               <td align="left" bgcolor="#eeeeee">
+                <span class="medCalcFontTitleBox">
+                 Estimated baseline risk (EBR) of VTE by risk category
+                </span>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <br/>
+            <br/>
+           </div>
+           <center>
+            <table border="1" cellpadding="4" cellspacing="0" summary="RRTable">
+             <tbody>
+              <tr bgcolor="#ffffff">
+               <td align="center">
+                <span class="medCalcFontOneBold">
+                 Points
+                </span>
+               </td>
+               <td align="center">
+                <span class="medCalcFontOneBold">
+                 Risk category
+                </span>
+               </td>
+               <td align="center">
+                <span class="medCalcFontOneBold">
+                 EBR
+                </span>
+               </td>
+              </tr>
+              <tr id="rr1_1">
+               <td align="center" nowrap="nowrap">
+                <span class="medCalcFontOneBold">
+                 0
+                </span>
+               </td>
+               <td align="center">
+                <span class="medCalcFontOne">
+                 Very low
+                </span>
+               </td>
+               <td align="center">
+                <span class="medCalcFontOne">
+                 &lt;0.5%
+                </span>
+               </td>
+              </tr>
+              <tr id="rr1_2">
+               <td align="center" nowrap="nowrap">
+                <span class="medCalcFontOneBold">
+                 1 to 2
+                </span>
+               </td>
+               <td align="center">
+                <span class="medCalcFontOne">
+                 Low
+                </span>
+               </td>
+               <td align="center">
+                <span class="medCalcFontOne">
+                 1.5%
+                </span>
+               </td>
+              </tr>
+              <tr id="rr1_3">
+               <td align="center" nowrap="nowrap">
+                <span class="medCalcFontOneBold">
+                 3 to 4
+                </span>
+               </td>
+               <td align="center">
+                <span class="medCalcFontOne">
+                 Moderate
+                </span>
+               </td>
+               <td align="center">
+                <span class="medCalcFontOne">
+                 3%
+                </span>
+               </td>
+              </tr>
+              <tr id="rr1_4">
+               <td align="center" nowrap="nowrap">
+                <span class="medCalcFontOneBold">
+                 5 to 100
+                </span>
+               </td>
+               <td align="center">
+                <span class="medCalcFontOne">
+                 HIgh
+                </span>
+               </td>
+               <td align="center">
+                <span class="medCalcFontOne">
+                 ≥6%
+                </span>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </center>
+           <br/>
+           <br/>
+          </div>
+          <div id="pretextrefs">
+          </div>
+          <br/>
+          <br/>
+          <div id="calc_hints">
+           <span class="medCalcFontOne">
+           </span>
+          </div>
+          <div id="calc_tables_above_notes">
+          </div>
+          <br/>
+          <br/>
+          <div id="calc_notes">
+           <span class="medCalcFontOneBold">
+            Notes
+           </span>
+           <ul class="medCalcFontOne">
+            <li>
+             * We use the Caprini Risk Assessment model for general, abdominal-pelvic, bariatric, vascular, and plastic and reconstructive surgery. See appropriate UpToDate text for other types of surgery (eg, orthopedic surgery, cancer surgery).
+            </li>
+            <li>
+             ¶ These other risk factors have not been tested in validation studies but have been shown in the literature to be associated with thrombosis.
+            </li>
+            <li>
+             Δ Restricted mobility (bed rest) is defined as any individual who is unable to ambulate continuously more than 30 feet. It would also apply to any patient who is unable to ambulate using both legs (eg, nonweightbearing on 1 extremity even if able to ambulate 30 feet with crutches).
+            </li>
+            <li>
+             <b>
+              BMI
+             </b>
+             : body mass index;
+             <b>
+              EBR
+             </b>
+             : estimated baseline risk of venous thromboembolism;
+             <b>
+              PICC
+             </b>
+             : peripherally inserted central catheter;
+             <b>
+              VTE
+             </b>
+             : venous thromboembolism.
+            </li>
+           </ul>
+          </div>
+          <div id="calc_tables">
+          </div>
+          <br/>
+          <br/>
+          <div id="calc_refs">
+           <span class="medCalcFontRef">
+            <b>
+             References
+            </b>
+           </span>
+           <ol>
+            <li>
+             <span class="medCalcFontRef">
+              <a href="https://www.ncbi.nlm.nih.gov/pubmed/30939900" style="color: green; text-decoration: none;" target="_blank">
+               Cronin M, Dengler N, Krauss ES, et al. Completion of the Updated Caprini Risk Assessment Model (2013 Version).  Clin Appl Thromb Hemost 2019; 25:1.
+              </a>
+             </span>
+            </li>
+            <li>
+             <span class="medCalcFontRef">
+              <a href="https://www.ncbi.nlm.nih.gov/pubmed/22315263" style="color: green; text-decoration: none;" target="_blank">
+               Gould MK, Garcia DA, Wren SM, et al. Prevention of VTE in nonorthopedic surgical patients: antithrombotic therapy and prevention  of thrombosis, 9th ed: American College of Chest Physicians evidence-based clinical practical guidelines. Chest 2012; 141:e227S.
+              </a>
+             </span>
+            </li>
+           </ol>
+          </div>
+         </form>
+        </div>
+        <span class="calculatorVendorId" id="T1678215863">
+        </span>
+       </div>
+       <div id="printDisclaimer">
+        <b>
+         Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.
+        </b>
+        <p>
+         Information on this page may not appear correctly if printed.
+        </p>
+       </div>
+       <div id="disclaimerCalculator">
+        <div class="medCalcFontTwo">
+         <p class="header">
+          Legal Notices and Disclaimer
+         </p>
+         <p>
+          All information contained in and produced by the EBMcalc system is provided
 			for educational purposes only. This information should not be used for the diagnosis or treatment
-			of any health problem or disease. 
-			<b>THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.</b>
-<a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">Click here for full notice and disclaimer.</a>
-</p>
-<p class="copy">EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC</p>
-</div>
-</div><div id="topicVersionRevision">Topic 131707 Version 6.0</div></div>
-</div>
-</div>
-</section>
-</section>
-<!-- End Main Menu Area -->
-<!-- Start Search Popup Area -->
-<!-- End Footer Area -->
-<!-- Back to top -->
-<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
-<!-- End Back to top -->
-<!-- jQuery Min JS -->
-<!-- Prpper JS -->
-<!-- Bootstrap Min JS -->
-<!-- Classy Nav Min Js -->
-<!-- Owl Carousel Min Js -->
-<!-- Magnific Popup JS -->
-<!-- CounterUp JS -->
-<!-- Waypoints JS -->
-<!-- Form Validator Min JS -->
-<!-- Contact Form Min JS -->
-<!-- Main JS -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-</body>
+			of any health problem or disease.
+          <b>
+           THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.
+          </b>
+          <a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">
+           Click here for full notice and disclaimer.
+          </a>
+         </p>
+         <p class="copy">
+          EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC
+         </p>
+        </div>
+       </div>
+       <div id="topicVersionRevision">
+        Topic 131707 Version 6.0
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </section>
+  <!-- End Main Menu Area -->
+  <!-- Start Search Popup Area -->
+  <!-- End Footer Area -->
+  <!-- Back to top -->
+  <a class="scrolltop" href="#top">
+   <i class="icofont-hand-drawn-up">
+   </i>
+  </a>
+  <!-- End Back to top -->
+  <!-- jQuery Min JS -->
+  <!-- Prpper JS -->
+  <!-- Bootstrap Min JS -->
+  <!-- Classy Nav Min Js -->
+  <!-- Owl Carousel Min Js -->
+  <!-- Magnific Popup JS -->
+  <!-- CounterUp JS -->
+  <!-- Waypoints JS -->
+  <!-- Form Validator Min JS -->
+  <!-- Contact Form Min JS -->
+  <!-- Main JS -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+ </body>
 </html>

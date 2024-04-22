@@ -1,415 +1,617 @@
 <!DOCTYPE html>
-
 <html lang="fa">
-<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
-<head><title>Calculator: Mutation and Karyotype-Enhanced International Prognostic Scoring System for Primary Myelofibrosis in adults 70 and younger (MIPSS70+ version 2.0)</title><link href="/z/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/z/d/css/icofont.min.css" rel="stylesheet"/><link href="/z/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/z/d/css/animate.css" rel="stylesheet"/><link href="/z/d/css/owl.carousel.css" rel="stylesheet"/><link href="/z/d/css/magnific-popup.css" rel="stylesheet"/><link href="/z/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/z/d/css/style.css" rel="stylesheet"/><link href="/z/d/css/rtl_edited.css" rel="stylesheet"/><link href="/z/d/css/responsive.css" rel="stylesheet"/><link href="https:///uptodate_assets/main.css" rel="stylesheet"/>
-<style>
-
-#myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 16px;
-  color: black;
-  display: block
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee;
-}
-
-#searchResult {
-
-  list-style-type: none;
-  padding: 0;
-  padding-right: 20px;
-}
-
-#searchResult li a {
-  border: .5px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #79bc21;
-  padding: 7px;
-  text-decoration: none;
-  font-size: 14px;
-  color: white;
-  display: block
-}
-
-#searchResult li a:hover:not(.header) {
-  background-color: #222;
-}
-
-
-#txtHint   {
-  position: absolute;
-  text-shadow: none;
-  width: 100%;
-  margin-top: -15px;
-  padding-right: 10px;
-
-  filter: alpha(opacity=95);
-  -moz-opacity: 0.95;
-  opacity: 1;
-  z-index: 200;
-}
-.countBubl {
-  background:#eb0029;
-  color:#fff;
-  padding:5px;
-  margin-top: 50%;
-
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
- width: 55%;
- padding-left: 20px;
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
- width: 20%;
-}
- #Uptodate_image {
-      width: 50%;
-  }#uptodate-area {
-      /*z-index: 99;*/
-  }
-#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
- margin-left: 10px;
- margin-bottom: 6%;
-}
-@media (max-width: @screen-xs) {
-    .countBubl {
-        font-size: 4px ;
-    }
-    #uptodate_version {
-        font-size: 4px ;
-    }
-}
-
-@media (max-width: @screen-sm) {
-    .countBubl {
-        font-size: 14px ;
-    }
-}
-@media  all and(max-width: 820) {
-    #Uptodate_image {
-        width: 80% ;
-    }#uptodate-area {
-        z-index: 99;
-    }
-}@media  all and (min-width: 820) and(max-width: 88820){
-    #Uptodate_image {
-        width: 100% !important;
-    }
-    .countBubl {
-        font-size: 4px ;
-    }
-}
-div.col-md-3:nth-child(3) {
- margin-top: 6%;
-}
-
-div.col-md-3:nth-child(3) > img:nth-child(1) {
- width: 100%;
- margin-left: 11px;
-}
-
-</style>
-<style media="screen" type="text/css">
-  .goback {
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    position: fixed;
-    display: none;
-    font-size: 15px;
-    background: #71c0fa;
-    z-index: 1000;
-    text-align: center;
-    color: #ffffff;
-    -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
-    border-radius: 50px;
-    bottom: 3.8%;
-    right: 2%;
-}
-  .buyPackage {
-  width: 100px;
-  height: 100px;
-  line-height: 40px;
-  position: fixed;
-  display: none;
-  font-size: 10px;
-  background: #fa759e;
-  z-index: 1000;
-  text-align: center;
-  color: #ffffff;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  border-radius: 10px;
-  top: 150px;
-  right: 2%;
-  text-align: center;
-}
-.uptodate-area {
-  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-    background-attachment: fixed;
-  position: relative;
-}
-.uptodate-area::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  padding-top: 100px;
-  width: 100%;
-}
-#references{
-  display: none;
-}
-</style>
-<style>
-section.sticky {
-  position: sticky;
-  top: 0;
-  background-color: #fff !important;
-  /*z-index: 100;*/
-  /*padding-top: 80px;*/
-
-}
-.m4inb{
-    border: solid !important;
-  }
-
-  .newsletter-area::before {
-       background: unset !important;
-  }
-p {
-    color: #555;
-}
-</style>
-<meta content="" name="description"/>
-<link href="/z/d/img/favicon.png" rel="icon" type="image/png">
-</link></head>
-<body>
-<!-- Start Main Menu Area -->
-<br/>
-<br/>
-<br/>
-<br/>
-<div class="container">
-<div class="row">
-</div>
-</div>
-<section class="teacher-area ptb-10">
-<div class="container">
-</div>
-<section class="course-details-area ptb-60">
-<div class="container">
-<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-<h1 style="text-align:center">Calculator: Mutation and Karyotype-Enhanced International Prognostic Scoring System for Primary Myelofibrosis in adults 70 and younger (MIPSS70+ version 2.0)</h1>
-<div class="utdArticleSection" id="topicContentCalculator"><div id="topicText">
-<div id="mc3k">
-<form action="" id="MIPSS70_form" name="MIPSS70_form" onreset="rrclr(); document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
-<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
-<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
-<td align="left" bgcolor="#eeeeee">
-<span class="medCalcFontTitleBox">
-
- 
-Calculator: Mutation and Karyotype-Enhanced International Prognostic Scoring System for Primary Myelofibrosis in adults 70 and younger (MIPSS70+ version 2.0)
-</span></td></tr></tbody></table><br/> <br/>
-<div id="calc_main">
-<div id="calc_input">
-<center>
-<table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
-<tbody><tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">Karyotype </span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right"><input aria-label="This button selects an option for: Karyotype. The option is VHR karyotype (4 points)" id="togel1" name="cc1" onclick="MIPSS70_fx();" type="radio"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel1');">VHR karyotype (4 points)</span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right"><input aria-label="This button selects an option for: Karyotype. The option is Unfavorable karyotype (3 points)" id="togel2" name="cc1" onclick="MIPSS70_fx();" type="radio"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel2');">Unfavorable karyotype (3 points)</span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right"><input aria-label="This button selects an option for: Karyotype. The option is Other karyotype (0 points)" id="togel3" name="cc1" onclick="MIPSS70_fx();" type="radio"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel3');">Other karyotype (0 points)</span></td></tr>
-<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">HMR mutations </span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right"><input aria-label="This button selects an option for: HMR mutations. The option is ≥2 HMR mutations (3 points)" id="togel4" name="cc2" onclick="MIPSS70_fx();" type="radio"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel4');">≥2 HMR mutations (3 points)</span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right"><input aria-label="This button selects an option for: HMR mutations. The option is 1 HMR mutation (2 points)" id="togel5" name="cc2" onclick="MIPSS70_fx();" type="radio"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel5');">1 HMR mutation (2 points)</span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right"><input aria-label="This button selects an option for: HMR mutations. The option is No HMR mutations (0 points)" id="togel6" name="cc2" onclick="MIPSS70_fx();" type="radio"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel6');">No HMR mutations (0 points)</span></td></tr>
-<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">Absence of type 1/like CALR mutation </span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right"><input aria-label="This button selects an option for: Absence of type 1/like CALR mutation. The option is Yes (2 points)" id="togel7" name="cc3" onclick="MIPSS70_fx();" type="radio"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel7');">Yes (2 points)</span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right"><input aria-label="This button selects an option for: Absence of type 1/like CALR mutation. The option is No (0 points)" id="togel8" name="cc3" onclick="MIPSS70_fx();" type="radio"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel8');">No (0 points)</span></td></tr>
-<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">Presence of constitutional symptoms </span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right"><input aria-label="This button selects an option for: Presence of constitutional symptoms. The option is Yes (2 points)" id="togel9" name="cc4" onclick="MIPSS70_fx();" type="radio"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel9');">Yes (2 points)</span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right"><input aria-label="This button selects an option for: Presence of constitutional symptoms. The option is No (0 points)" id="togel10" name="cc4" onclick="MIPSS70_fx();" type="radio"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel10');">No (0 points)</span></td></tr>
-<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">Anemia severity </span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right"><input aria-label="This button selects an option for: Anemia severity. The option is Severe anemia (2 points)" id="togel11" name="cc5" onclick="MIPSS70_fx();" type="radio"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel11');">Severe anemia (2 points)</span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right"><input aria-label="This button selects an option for: Anemia severity. The option is Moderate anemia (1 point)" id="togel12" name="cc5" onclick="MIPSS70_fx();" type="radio"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel12');">Moderate anemia (1 point)</span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right"><input aria-label="This button selects an option for: Anemia severity. The option is Mild or no anemia (0 points)" id="togel13" name="cc5" onclick="MIPSS70_fx();" type="radio"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel13');">Mild or no anemia (0 points)</span></td></tr>
-<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">≥2% circulating blasts </span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right"><input aria-label="This button selects an option for: ≥2% circulating blasts. The option is Yes (1 point)" id="togel14" name="cc6" onclick="MIPSS70_fx();" type="radio"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel14');">Yes (1 point)</span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right"><input aria-label="This button selects an option for: ≥2% circulating blasts. The option is No (0 points)" id="togel15" name="cc6" onclick="MIPSS70_fx();" type="radio"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel15');">No (0 points)</span></td></tr>
-</tbody></table>
-<span class="medCalcFontOne" id="inputchk"><br/> <br/><b>Important:</b> Inputs must be complete to perform calculation. <br/></span>
-</center>
-</div>
-<br/> <br/>
-<div id="calc_result">
-<span class="medCalcFontCCTabBold">
-Total criteria point count:
-</span>
-<input aria-label="This box holds the total criteria point count" aria-readonly="true" name="cctotal" size="6" type="text"/><br/> <br/>
-<center><input name="reset" type="reset" value="Reset form"/> </center>
-<br/> <br/>
-<div aria-label="This table highlights the result Interpretation. No result is highlighted" id="rr1_tag" tabindex="0">
-<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
-<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
-<td align="left" bgcolor="#eeeeee">
-<span class="medCalcFontTitleBox">
-
-
-Interpretation
-</span></td></tr></tbody></table><br/> <br/>
-</div>
-<center>
-<table border="1" cellpadding="4" cellspacing="0" summary="RRTable">
-<tbody><tr bgcolor="#ffffff">
-<td align="center"><span class="medCalcFontOneBold">MIPSS70+ version 2.0 score (points)</span></td>
-<td align="center"><span class="medCalcFontOneBold">Risk group</span></td>
-<td align="center"><span class="medCalcFontOneBold">10-year overall survival</span></td>
-<td align="center"><span class="medCalcFontOneBold">Median overall survival (years)</span></td>
-</tr>
-<tr id="rr1_1"><td align="center" nowrap="nowrap"><span class="medCalcFontOneBold"> 0</span></td>
-<td align="center"><span class="medCalcFontOne"> Very low risk</span></td>
-<td align="center"><span class="medCalcFontOne">86%</span></td>
-<td align="center"><span class="medCalcFontOne">Not reached</span></td>
-</tr>
-<tr id="rr1_2"><td align="center" nowrap="nowrap"><span class="medCalcFontOneBold"> 1 to 2</span></td>
-<td align="center"><span class="medCalcFontOne">Low risk</span></td>
-<td align="center"><span class="medCalcFontOne">50%</span></td>
-<td align="center"><span class="medCalcFontOne">10.3</span></td>
-</tr>
-<tr id="rr1_3"><td align="center" nowrap="nowrap"><span class="medCalcFontOneBold"> 3 to 4</span></td>
-<td align="center"><span class="medCalcFontOne">Intermediate risk</span></td>
-<td align="center"><span class="medCalcFontOne">30%</span></td>
-<td align="center"><span class="medCalcFontOne">7</span></td>
-</tr>
-<tr id="rr1_4"><td align="center" nowrap="nowrap"><span class="medCalcFontOneBold"> 5 to 8</span></td>
-<td align="center"><span class="medCalcFontOne">High risk</span></td>
-<td align="center"><span class="medCalcFontOne">10%</span></td>
-<td align="center"><span class="medCalcFontOne">3.5</span></td>
-</tr>
-<tr id="rr1_5"><td align="center" nowrap="nowrap"><span class="medCalcFontOneBold"> 9 to 14</span></td>
-<td align="center"><span class="medCalcFontOne">Very high risk</span></td>
-<td align="center"><span class="medCalcFontOne">&lt;3%</span></td>
-<td align="center"><span class="medCalcFontOne">1.8</span></td>
-</tr>
-</tbody></table>
-</center>
-<br/> <br/>
-</div>
-</div>
-<div id="calc_notes">
-<span class="medCalcFontRef"><b>Notes</b></span>
-<ul class="medCalcFontOne">
-<li class="parentNote">Cytogenetics:
-<ul class="childNoteList">
-<li class="childNote"><b>Very high risk (VHR)</b>: Single/multiple abnormalities of -7, i(17q), inv(3)/3q21, 12p-/12p11.2, 11q-/11q23, or other autosomal trisomies not including + 8/ + 9 (eg, +21, +19).</li>
-<li class="childNote"> <b>Favorable</b>: Normal karyotype or sole abnormalities of 13q-, +9, 20q-, chromosome 1 translocation/duplication or sex chromosome abnormality including -Y.</li>
-<li class="childNote"> <b>Unfavorable</b>: All other abnormalities.</li>
-</ul></li>
-<li>High molecular risk (HMR) mutations: <i>ASXL1, SRSF2, EZH2, IDH1, IDH2, U2AF1</i> Q157.</li>
-<li class="parentNote">Anemia:
-<ul class="childNoteList">
-<li class="childNote">Severe: Hemoglobin (Hgb) &lt;8 g/dL [&lt;80 g/L] in women and &lt;9 g/dL [&lt;90 g/L] in men.</li>
-<li class="childNote"> Moderate: Hgb 8 to 9.9 g/dL [80 to 99 g/L] in women and 9 to 10.9 g/dL [90 to 109 g/L] in men.</li>
-</ul></li>
-</ul>
-</div>
-<br/> <br/>
-<div id="calc_refs">
-<span class="medCalcFontRef"><b>References</b></span>
-<ol>
-<li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/29708808" rel="nofollow noopener noreferrer" style="color: green; text-decoration: none;" target="_blank">Tefferi A, Guglielmelli P, Lasho TL, et al. MIPSS70+ Version 2.0: Mutation and Karyotype-Enhanced International  Prognostic Scoring System for Primary Myelofibrosis. J Clin Oncol 2018; 36:1769.</a></span></li>
-<li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/29472717" rel="nofollow noopener noreferrer" style="color: green; text-decoration: none;" target="_blank">Tefferi A, Nicolosi M, Mudireddy M, et al. Revised cytogenetic risk stratification in primary  myelofibrosis: analysis based on 1002 informative patients. Leukemia 2018; 32:1189.</a></span></li>
-</ol>
-</div>
-</form>
-</div>
-<span class="calculatorVendorId" id="T1697470656">
-</span></div><div id="printDisclaimer">
-<b>Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.</b>
-<p>
-	Information on this page may not appear correctly if printed. </p>
-</div>
-<div id="disclaimerCalculator">
-<div class="medCalcFontTwo">
-<p class="header">Legal Notices and Disclaimer</p>
-<p>
-			All information contained in and produced by the EBMcalc system is provided
+ <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+ <head>
+  <title>
+   Calculator: Mutation and Karyotype-Enhanced International Prognostic Scoring System for Primary Myelofibrosis in adults 70 and younger (MIPSS70+ version 2.0)
+  </title>
+  <link href="d/css/1.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!-- Start Main Menu Area -->
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="container">
+   <div class="row">
+   </div>
+  </div>
+  <section class="teacher-area ptb-10">
+   <div class="container">
+   </div>
+   <section class="course-details-area ptb-60">
+    <div class="container">
+     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+      <h1 style="text-align:center">
+       Calculator: Mutation and Karyotype-Enhanced International Prognostic Scoring System for Primary Myelofibrosis in adults 70 and younger (MIPSS70+ version 2.0)
+      </h1>
+      <div class="utdArticleSection" id="topicContentCalculator">
+       <div id="topicText">
+        <div id="mc3k">
+         <form action="" id="MIPSS70_form" name="MIPSS70_form" onreset="rrclr(); document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
+          <table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+           <tbody>
+            <tr>
+             <td bgcolor="#eeeeee" width="1%">
+              <br/>
+             </td>
+             <td align="left" bgcolor="#eeeeee">
+              <span class="medCalcFontTitleBox">
+               Calculator: Mutation and Karyotype-Enhanced International Prognostic Scoring System for Primary Myelofibrosis in adults 70 and younger (MIPSS70+ version 2.0)
+              </span>
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <br/>
+          <br/>
+          <div id="calc_main">
+           <div id="calc_input">
+            <center>
+             <table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
+              <tbody>
+               <tr>
+                <td align="left" colspan="3">
+                 <span class="medCalcFontCCTabBold">
+                  Karyotype
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right">
+                 <input aria-label="This button selects an option for: Karyotype. The option is VHR karyotype (4 points)" id="togel1" name="cc1" onclick="MIPSS70_fx();" type="radio"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="setRB('togel1');">
+                  VHR karyotype (4 points)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right">
+                 <input aria-label="This button selects an option for: Karyotype. The option is Unfavorable karyotype (3 points)" id="togel2" name="cc1" onclick="MIPSS70_fx();" type="radio"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="setRB('togel2');">
+                  Unfavorable karyotype (3 points)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right">
+                 <input aria-label="This button selects an option for: Karyotype. The option is Other karyotype (0 points)" id="togel3" name="cc1" onclick="MIPSS70_fx();" type="radio"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="setRB('togel3');">
+                  Other karyotype (0 points)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td align="left" colspan="3">
+                 <span class="medCalcFontCCTabBold">
+                  HMR mutations
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right">
+                 <input aria-label="This button selects an option for: HMR mutations. The option is ≥2 HMR mutations (3 points)" id="togel4" name="cc2" onclick="MIPSS70_fx();" type="radio"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="setRB('togel4');">
+                  ≥2 HMR mutations (3 points)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right">
+                 <input aria-label="This button selects an option for: HMR mutations. The option is 1 HMR mutation (2 points)" id="togel5" name="cc2" onclick="MIPSS70_fx();" type="radio"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="setRB('togel5');">
+                  1 HMR mutation (2 points)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right">
+                 <input aria-label="This button selects an option for: HMR mutations. The option is No HMR mutations (0 points)" id="togel6" name="cc2" onclick="MIPSS70_fx();" type="radio"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="setRB('togel6');">
+                  No HMR mutations (0 points)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td align="left" colspan="3">
+                 <span class="medCalcFontCCTabBold">
+                  Absence of type 1/like CALR mutation
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right">
+                 <input aria-label="This button selects an option for: Absence of type 1/like CALR mutation. The option is Yes (2 points)" id="togel7" name="cc3" onclick="MIPSS70_fx();" type="radio"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="setRB('togel7');">
+                  Yes (2 points)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right">
+                 <input aria-label="This button selects an option for: Absence of type 1/like CALR mutation. The option is No (0 points)" id="togel8" name="cc3" onclick="MIPSS70_fx();" type="radio"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="setRB('togel8');">
+                  No (0 points)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td align="left" colspan="3">
+                 <span class="medCalcFontCCTabBold">
+                  Presence of constitutional symptoms
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right">
+                 <input aria-label="This button selects an option for: Presence of constitutional symptoms. The option is Yes (2 points)" id="togel9" name="cc4" onclick="MIPSS70_fx();" type="radio"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="setRB('togel9');">
+                  Yes (2 points)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right">
+                 <input aria-label="This button selects an option for: Presence of constitutional symptoms. The option is No (0 points)" id="togel10" name="cc4" onclick="MIPSS70_fx();" type="radio"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="setRB('togel10');">
+                  No (0 points)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td align="left" colspan="3">
+                 <span class="medCalcFontCCTabBold">
+                  Anemia severity
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right">
+                 <input aria-label="This button selects an option for: Anemia severity. The option is Severe anemia (2 points)" id="togel11" name="cc5" onclick="MIPSS70_fx();" type="radio"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="setRB('togel11');">
+                  Severe anemia (2 points)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right">
+                 <input aria-label="This button selects an option for: Anemia severity. The option is Moderate anemia (1 point)" id="togel12" name="cc5" onclick="MIPSS70_fx();" type="radio"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="setRB('togel12');">
+                  Moderate anemia (1 point)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right">
+                 <input aria-label="This button selects an option for: Anemia severity. The option is Mild or no anemia (0 points)" id="togel13" name="cc5" onclick="MIPSS70_fx();" type="radio"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="setRB('togel13');">
+                  Mild or no anemia (0 points)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td align="left" colspan="3">
+                 <span class="medCalcFontCCTabBold">
+                  ≥2% circulating blasts
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right">
+                 <input aria-label="This button selects an option for: ≥2% circulating blasts. The option is Yes (1 point)" id="togel14" name="cc6" onclick="MIPSS70_fx();" type="radio"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="setRB('togel14');">
+                  Yes (1 point)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right">
+                 <input aria-label="This button selects an option for: ≥2% circulating blasts. The option is No (0 points)" id="togel15" name="cc6" onclick="MIPSS70_fx();" type="radio"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="setRB('togel15');">
+                  No (0 points)
+                 </span>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+             <span class="medCalcFontOne" id="inputchk">
+              <br/>
+              <br/>
+              <b>
+               Important:
+              </b>
+              Inputs must be complete to perform calculation.
+              <br/>
+             </span>
+            </center>
+           </div>
+           <br/>
+           <br/>
+           <div id="calc_result">
+            <span class="medCalcFontCCTabBold">
+             Total criteria point count:
+            </span>
+            <input aria-label="This box holds the total criteria point count" aria-readonly="true" name="cctotal" size="6" type="text"/>
+            <br/>
+            <br/>
+            <center>
+             <input name="reset" type="reset" value="Reset form"/>
+            </center>
+            <br/>
+            <br/>
+            <div aria-label="This table highlights the result Interpretation. No result is highlighted" id="rr1_tag" tabindex="0">
+             <table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+              <tbody>
+               <tr>
+                <td bgcolor="#eeeeee" width="1%">
+                 <br/>
+                </td>
+                <td align="left" bgcolor="#eeeeee">
+                 <span class="medCalcFontTitleBox">
+                  Interpretation
+                 </span>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+             <br/>
+             <br/>
+            </div>
+            <center>
+             <table border="1" cellpadding="4" cellspacing="0" summary="RRTable">
+              <tbody>
+               <tr bgcolor="#ffffff">
+                <td align="center">
+                 <span class="medCalcFontOneBold">
+                  MIPSS70+ version 2.0 score (points)
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOneBold">
+                  Risk group
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOneBold">
+                  10-year overall survival
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOneBold">
+                  Median overall survival (years)
+                 </span>
+                </td>
+               </tr>
+               <tr id="rr1_1">
+                <td align="center" nowrap="nowrap">
+                 <span class="medCalcFontOneBold">
+                  0
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  Very low risk
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  86%
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  Not reached
+                 </span>
+                </td>
+               </tr>
+               <tr id="rr1_2">
+                <td align="center" nowrap="nowrap">
+                 <span class="medCalcFontOneBold">
+                  1 to 2
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  Low risk
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  50%
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  10.3
+                 </span>
+                </td>
+               </tr>
+               <tr id="rr1_3">
+                <td align="center" nowrap="nowrap">
+                 <span class="medCalcFontOneBold">
+                  3 to 4
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  Intermediate risk
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  30%
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  7
+                 </span>
+                </td>
+               </tr>
+               <tr id="rr1_4">
+                <td align="center" nowrap="nowrap">
+                 <span class="medCalcFontOneBold">
+                  5 to 8
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  High risk
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  10%
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  3.5
+                 </span>
+                </td>
+               </tr>
+               <tr id="rr1_5">
+                <td align="center" nowrap="nowrap">
+                 <span class="medCalcFontOneBold">
+                  9 to 14
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  Very high risk
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  &lt;3%
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  1.8
+                 </span>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </center>
+            <br/>
+            <br/>
+           </div>
+          </div>
+          <div id="calc_notes">
+           <span class="medCalcFontRef">
+            <b>
+             Notes
+            </b>
+           </span>
+           <ul class="medCalcFontOne">
+            <li class="parentNote">
+             Cytogenetics:
+             <ul class="childNoteList">
+              <li class="childNote">
+               <b>
+                Very high risk (VHR)
+               </b>
+               : Single/multiple abnormalities of -7, i(17q), inv(3)/3q21, 12p-/12p11.2, 11q-/11q23, or other autosomal trisomies not including + 8/ + 9 (eg, +21, +19).
+              </li>
+              <li class="childNote">
+               <b>
+                Favorable
+               </b>
+               : Normal karyotype or sole abnormalities of 13q-, +9, 20q-, chromosome 1 translocation/duplication or sex chromosome abnormality including -Y.
+              </li>
+              <li class="childNote">
+               <b>
+                Unfavorable
+               </b>
+               : All other abnormalities.
+              </li>
+             </ul>
+            </li>
+            <li>
+             High molecular risk (HMR) mutations:
+             <i>
+              ASXL1, SRSF2, EZH2, IDH1, IDH2, U2AF1
+             </i>
+             Q157.
+            </li>
+            <li class="parentNote">
+             Anemia:
+             <ul class="childNoteList">
+              <li class="childNote">
+               Severe: Hemoglobin (Hgb) &lt;8 g/dL [&lt;80 g/L] in women and &lt;9 g/dL [&lt;90 g/L] in men.
+              </li>
+              <li class="childNote">
+               Moderate: Hgb 8 to 9.9 g/dL [80 to 99 g/L] in women and 9 to 10.9 g/dL [90 to 109 g/L] in men.
+              </li>
+             </ul>
+            </li>
+           </ul>
+          </div>
+          <br/>
+          <br/>
+          <div id="calc_refs">
+           <span class="medCalcFontRef">
+            <b>
+             References
+            </b>
+           </span>
+           <ol>
+            <li>
+             <span class="medCalcFontRef">
+              <a href="https://www.ncbi.nlm.nih.gov/pubmed/29708808" rel="nofollow noopener noreferrer" style="color: green; text-decoration: none;" target="_blank">
+               Tefferi A, Guglielmelli P, Lasho TL, et al. MIPSS70+ Version 2.0: Mutation and Karyotype-Enhanced International  Prognostic Scoring System for Primary Myelofibrosis. J Clin Oncol 2018; 36:1769.
+              </a>
+             </span>
+            </li>
+            <li>
+             <span class="medCalcFontRef">
+              <a href="https://www.ncbi.nlm.nih.gov/pubmed/29472717" rel="nofollow noopener noreferrer" style="color: green; text-decoration: none;" target="_blank">
+               Tefferi A, Nicolosi M, Mudireddy M, et al. Revised cytogenetic risk stratification in primary  myelofibrosis: analysis based on 1002 informative patients. Leukemia 2018; 32:1189.
+              </a>
+             </span>
+            </li>
+           </ol>
+          </div>
+         </form>
+        </div>
+        <span class="calculatorVendorId" id="T1697470656">
+        </span>
+       </div>
+       <div id="printDisclaimer">
+        <b>
+         Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.
+        </b>
+        <p>
+         Information on this page may not appear correctly if printed.
+        </p>
+       </div>
+       <div id="disclaimerCalculator">
+        <div class="medCalcFontTwo">
+         <p class="header">
+          Legal Notices and Disclaimer
+         </p>
+         <p>
+          All information contained in and produced by the EBMcalc system is provided
 			for educational purposes only. This information should not be used for the diagnosis or treatment
-			of any health problem or disease. 
-			<b>THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.</b>
-<a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">Click here for full notice and disclaimer.</a>
-</p>
-<p class="copy">EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC</p>
-</div>
-</div><div id="topicVersionRevision">Topic 121059 Version 8.0</div></div>
-</div>
-</div>
-</section>
-</section>
-<!-- End Main Menu Area -->
-<!-- Start Search Popup Area -->
-<!-- End Footer Area -->
-<!-- Back to top -->
-<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
-<!-- End Back to top -->
-<!-- jQuery Min JS -->
-<!-- Prpper JS -->
-<!-- Bootstrap Min JS -->
-<!-- Classy Nav Min Js -->
-<!-- Owl Carousel Min Js -->
-<!-- Magnific Popup JS -->
-<!-- CounterUp JS -->
-<!-- Waypoints JS -->
-<!-- Form Validator Min JS -->
-<!-- Contact Form Min JS -->
-<!-- Main JS -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-</body>
+			of any health problem or disease.
+          <b>
+           THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.
+          </b>
+          <a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">
+           Click here for full notice and disclaimer.
+          </a>
+         </p>
+         <p class="copy">
+          EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC
+         </p>
+        </div>
+       </div>
+       <div id="topicVersionRevision">
+        Topic 121059 Version 8.0
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </section>
+  <!-- End Main Menu Area -->
+  <!-- Start Search Popup Area -->
+  <!-- End Footer Area -->
+  <!-- Back to top -->
+  <a class="scrolltop" href="#top">
+   <i class="icofont-hand-drawn-up">
+   </i>
+  </a>
+  <!-- End Back to top -->
+  <!-- jQuery Min JS -->
+  <!-- Prpper JS -->
+  <!-- Bootstrap Min JS -->
+  <!-- Classy Nav Min Js -->
+  <!-- Owl Carousel Min Js -->
+  <!-- Magnific Popup JS -->
+  <!-- CounterUp JS -->
+  <!-- Waypoints JS -->
+  <!-- Form Validator Min JS -->
+  <!-- Contact Form Min JS -->
+  <!-- Main JS -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+ </body>
 </html>

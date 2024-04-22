@@ -1,409 +1,1508 @@
 <!DOCTYPE html>
-
 <html lang="fa">
-<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
-<head><title>Initial management of the critically ill adult with an unknown overdose</title><link href="/z/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/z/d/css/icofont.min.css" rel="stylesheet"/><link href="/z/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/z/d/css/animate.css" rel="stylesheet"/><link href="/z/d/css/owl.carousel.css" rel="stylesheet"/><link href="/z/d/css/magnific-popup.css" rel="stylesheet"/><link href="/z/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/z/d/css/style.css" rel="stylesheet"/><link href="/z/d/css/rtl_edited.css" rel="stylesheet"/><link href="/z/d/css/responsive.css" rel="stylesheet"/><link href="https:///uptodate_assets/main.css" rel="stylesheet"/>
-<style>
-
-#myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 16px;
-  color: black;
-  display: block
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee;
-}
-
-#searchResult {
-
-  list-style-type: none;
-  padding: 0;
-  padding-right: 20px;
-}
-
-#searchResult li a {
-  border: .5px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #79bc21;
-  padding: 7px;
-  text-decoration: none;
-  font-size: 14px;
-  color: white;
-  display: block
-}
-
-#searchResult li a:hover:not(.header) {
-  background-color: #222;
-}
-
-
-#txtHint   {
-  position: absolute;
-  text-shadow: none;
-  width: 100%;
-  margin-top: -15px;
-  padding-right: 10px;
-
-  filter: alpha(opacity=95);
-  -moz-opacity: 0.95;
-  opacity: 1;
-  z-index: 200;
-}
-.countBubl {
-  background:#eb0029;
-  color:#fff;
-  padding:5px;
-  margin-top: 50%;
-
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
- width: 55%;
- padding-left: 20px;
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
- width: 20%;
-}
- #Uptodate_image {
-      width: 50%;
-  }#uptodate-area {
-      /*z-index: 99;*/
-  }
-#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
- margin-left: 10px;
- margin-bottom: 6%;
-}
-@media (max-width: @screen-xs) {
-    .countBubl {
-        font-size: 4px ;
-    }
-    #uptodate_version {
-        font-size: 4px ;
-    }
-}
-
-@media (max-width: @screen-sm) {
-    .countBubl {
-        font-size: 14px ;
-    }
-}
-@media  all and(max-width: 820) {
-    #Uptodate_image {
-        width: 80% ;
-    }#uptodate-area {
-        z-index: 99;
-    }
-}@media  all and (min-width: 820) and(max-width: 88820){
-    #Uptodate_image {
-        width: 100% !important;
-    }
-    .countBubl {
-        font-size: 4px ;
-    }
-}
-div.col-md-3:nth-child(3) {
- margin-top: 6%;
-}
-
-div.col-md-3:nth-child(3) > img:nth-child(1) {
- width: 100%;
- margin-left: 11px;
-}
-
-</style>
-<style media="screen" type="text/css">
-  .goback {
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    position: fixed;
-    display: none;
-    font-size: 15px;
-    background: #71c0fa;
-    z-index: 1000;
-    text-align: center;
-    color: #ffffff;
-    -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
-    border-radius: 50px;
-    bottom: 3.8%;
-    right: 2%;
-}
-  .buyPackage {
-  width: 100px;
-  height: 100px;
-  line-height: 40px;
-  position: fixed;
-  display: none;
-  font-size: 10px;
-  background: #fa759e;
-  z-index: 1000;
-  text-align: center;
-  color: #ffffff;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  border-radius: 10px;
-  top: 150px;
-  right: 2%;
-  text-align: center;
-}
-.uptodate-area {
-  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-    background-attachment: fixed;
-  position: relative;
-}
-.uptodate-area::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  padding-top: 100px;
-  width: 100%;
-}
-#references{
-  display: none;
-}
-</style>
-<style>
-section.sticky {
-  position: sticky;
-  top: 0;
-  background-color: #fff !important;
-  /*z-index: 100;*/
-  /*padding-top: 80px;*/
-
-}
-.m4inb{
-    border: solid !important;
-  }
-
-  .newsletter-area::before {
-       background: unset !important;
-  }
-p {
-    color: #555;
-}
-</style>
-<meta content="" name="description"/>
-<link href="/z/d/img/favicon.png" rel="icon" type="image/png">
-</link></head>
-<body>
-<!-- Start Main Menu Area -->
-<br/>
-<br/>
-<br/>
-<br/>
-<div class="container">
-<div class="row">
-</div>
-</div>
-<section class="teacher-area ptb-10">
-<div class="container">
-</div>
-<section class="course-details-area ptb-60">
-<div class="container">
-<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-<h1 style="text-align:center">Initial management of the critically ill adult with an unknown overdose</h1>
-<div class="utdArticleSection utdStyle" id="topicContent"><div id="topicTitle">Initial management of the critically ill adult with an unknown overdose</div> <div class="authorSectionElem"><div class="authorsElementsLeft"><dl id="topicContributors"><dt><span> </span>Author:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Marco L A Sivilotti, MD, MSc, FRCPC, FACMT, FAACT</a></dd><dt><span> </span>Section Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Evan Schwarz, MD</a></dd><dt><span> </span>Deputy Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Michael Ganetsky, MD</a></dd></dl></div><div class="authorsElementsRight"><div id="literatureReviewDate"><div class="litReviewSingleLine"><bdi><span class="emphasis">Literature review current through:</span> Jan 2024.</bdi></div><div class="litReviewSingleLine"><bdi><span class="emphasis">This topic last updated:</span> Dec 21, 2023.</bdi></div></div></div></div><div id="topicWhatsNewContainer"></div><div id="topicText"><p class="headingAnchor" id="H7707963"><span class="h1">INTRODUCTION</span><span class="headingEndMark"> — </span>Poisoning is a leading cause of death especially in the young, in whom it is the leading cause of non-traumatic cardiac arrest under the age of 35 years. Overdose, both intentional and unintentional, has also become the leading cause of injury-related death in the United States, exceeding the number of deaths due to firearms, falls, or motorized vehicle collisions [<a href="#rid1">1,2</a>].</p><p>Severely poisoned patients may present <em>in extremis</em>. Such patients require an organized, targeted resuscitation despite incomplete, uncertain, or even erroneous information. A "generic" approach based upon the advanced cardiac life support (ACLS) protocols intended for cardiac patients is suboptimal [<a href="#rid3">3,4</a>]. It can lead to missed opportunities for specific life-saving interventions and may at times be harmful.</p><p>This topic will describe an approach to the resuscitation of the critically ill poisoned adult patient when the identity of the causative agent(s) is initially unknown. The general approach to the poisoned patient and the management of specific poisonings are described separately. (See  <a class="medical medical_review" href="/z/d/html/324.html" rel="external">"General approach to drug poisoning in adults"</a>.)</p><p class="headingAnchor" id="H30959739"><span class="h1">INITIAL DATA ACQUISITION</span><span class="headingEndMark"> — </span>Any readily available information about the patient and the poisoning should be obtained from pre-hospital care providers, other first responders (including witnesses, firemen, police, friends, and family), and from medical records. Medication or chemical product containers, material safety data sheets, pharmacy records, and institutional or patient lists of prescribed medication can be helpful. In addition, the setting and circumstances may help to identify the toxin(s) involved and select interventions. As examples, recreational ingestion of illicit alcohol (eg, containing methanol), inhalation of toxic gases in an enclosed space, or accidental industrial releases/fires suggest the need to prepare for multiple victims. A person who rapidly decompensates after being taken into police custody may have "stuffed" or "packed" large amounts of illicit drugs requiring the immediate removal of the leaking package from a body cavity [<a href="#rid5">5</a>]. (See  <a class="medical medical_review" href="/z/d/html/324.html" rel="external">"General approach to drug poisoning in adults", section on 'History'</a> and  <a class="medical medical_review" href="/z/d/html/13845.html" rel="external">"Acute ingestion of illicit drugs (body stuffing)"</a> and  <a class="medical medical_review" href="/z/d/html/327.html" rel="external">"Internal concealment of drugs of abuse (body packing)"</a>.)</p><p class="headingAnchor" id="H7708001"><span class="h1">FIRST PRIORITIES</span><span class="headingEndMark"> — </span>In addition to securing the airway, breathing, and circulation (ABC's) as with any critically ill or injured patient, the resuscitation leader must consider two additional imperatives that may arise with severely poisoned patients: preserving the operational capacity of the emergency health care system and ensuring the safety of health care workers. These priorities are addressed concurrently as part of the primary assessment.</p><p>Multiple casualty and mass casualty incidents may involve toxic exposures and challenge health care systems of any size. Even a single patient contaminated or potentially contaminated with a highly potent toxin (eg, a radioactive isotope or nerve agent such as sarin) can disable an entire emergency department (ED).</p><p>Highly potent toxins can directly threaten the health of clinicians and rescue personnel when proper protection is not used. However, such agents are extremely rare outside of a large-scale industrial accident, major transportation accident, or terrorist attack. Opioid toxicity is extremely unlikely following incidental dermal contact with <a class="drug drug_general" data-topicid="8441" href="/z/d/drug information/8441.html" rel="external">fentanyl</a> or fentanyl analogs despite concerns by first responders while rendering first aid and resuscitation to a patient with opioid intoxication [<a href="#rid6">6,7</a>]. Routine measures are sufficient for nearly all single-patient encounters involving consumer products and common chemicals. If readily available, nitrile gloves, safety goggles, and a water-resistant gown can be worn for additional security when dealing with extensive solid particle contamination, liquid spills, or emesis following an unknown exposure. However, locating such protective equipment should not delay the delivery of lifesaving care without clear reason to suspect a highly toxic agent [<a href="#rid8">8</a>].</p><p>Ideally, surface decontamination should be performed at or near the scene (ie, prior to transport) or before the patient is brought into the clean area of the ED (if not performed in the pre-hospital setting). Clothing soiled with chemicals or bodily fluids should be placed in appropriate closed containers and disposed of properly. Decontamination procedures and the chemical and biologic agents likely to be involved in an exposure are discussed separately. (See  <a class="medical medical_review" href="/z/d/html/345.html" rel="external">"Topical chemical burns: Initial evaluation and management"</a> and  <a class="medical medical_review" href="/z/d/html/2020.html" rel="external">"Chemical terrorism: Rapid recognition and initial medical management"</a> and  <a class="medical medical_review" href="/z/d/html/2735.html" rel="external">"Identifying and managing casualties of biological terrorism"</a>.)</p><p class="headingAnchor" id="H7708012"><span class="h1">RAPID FIRST LOOK: EXAMINATION, MONITORING, AND TESTING</span><span class="headingEndMark"> — </span>A rapid systematic examination should be performed while resuscitative measures are initiated. The class of toxin involved may be suggested by characteristic combinations of symptoms and signs (so-called "toxidromes"). The "toxidrome-oriented" physical examination consists of: vital signs; level of alertness; pupil size and position; mucous membrane moisture and secretions; skin temperature and moisture; presence or absence of bowel sounds; and motor tone. Alertness can be categorized simply as alert, responsive to voice, responsive to pain, or unresponsive, which is preferred over the Glasgow Coma Scale (GCS) to characterize the mental status of a poisoned patient. The findings of this rapid initial examination may provide valuable insight into the class of toxin involved. The major toxidromes and their associated findings are summarized in the accompanying table  (<a class="graphic graphic_table graphicRef71268" href="/z/d/graphic/71268.html" rel="external">table 1</a>). Disturbances in temperature  (<a class="graphic graphic_table graphicRef55439" href="/z/d/graphic/55439.html" rel="external">table 2</a>), heart rate and blood pressure  (<a class="graphic graphic_table graphicRef51200" href="/z/d/graphic/51200.html" rel="external">table 3</a>), and respiration  (<a class="graphic graphic_table graphicRef64012" href="/z/d/graphic/64012.html" rel="external">table 4</a>) can also suggest a toxin class.</p><p>In addition to the findings above, the clinician should look for signs of trauma (self-inflicted or accidental), recent intravenous drug use, transdermal patches, and seizures (eg, incontinence, lateral tongue laceration). Cervical spine precautions may be needed if major trauma is suspected.</p><p>The clinical team should immediately obtain intravenous access, apply a cardiac monitor and pulse oximeter, and provide high flow oxygen by non-rebreather face mask, as needed. The following laboratory tests should usually be obtained:</p><p class="bulletIndent1"><span class="glyph">●</span>Point-of-care capillary blood glucose</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Complete blood count</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Basic serum electrolytes, BUN, and creatinine</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Serum lactate</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Venous or arterial blood gas, including carboxyhemoglobin and methemoglobin level in appropriate circumstances (eg, smoke inhalation or cyanosis not improving with supplemental oxygen, respectively) </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Serum <a class="drug drug_general" data-topicid="9242" href="/z/d/drug information/9242.html" rel="external">acetaminophen</a> and salicylate concentrations following self-harm attempt</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Electrocardiogram</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Other specific drug concentrations as indicated (eg, ethanol, <a class="drug drug_general" data-topicid="10281" href="/z/d/drug information/10281.html" rel="external">theophylline</a>, <a class="drug drug_general" data-topicid="9360" href="/z/d/drug information/9360.html" rel="external">digoxin</a>, anti-epileptics)</p><p></p><p>An initial urine sample can be retained for comprehensive drug testing in a critically-ill patient with an unclear etiology, a prolonged clinical course, or an unusual clinical course (eg, multiple substances creating mixed toxicity). Unlike the commonly available urine "drug of abuse screen," which is an immunoassay that rarely alters the initial management of most patients, comprehensive drug testing requires specialized expertise and equipment, which are generally not available in most hospital laboratories and thus have long turnaround times. The first available urine sample is generally preferred, ideally obtained from the initial catheterization without intraurethral <a class="drug drug_general" data-topicid="9558" href="/z/d/drug information/9558.html" rel="external">lidocaine</a>, which may mask the presence of other substances. (See  <a class="medical medical_review" href="/z/d/html/13846.html" rel="external">"Testing for drugs of abuse (DOAs)"</a>.)</p><p>More detailed information about these initial tests is provided separately. (See  <a class="medical medical_review" href="/z/d/html/324.html" rel="external">"General approach to drug poisoning in adults"</a>.)</p><p class="headingAnchor" id="H30959732"><span class="h1">SYSTEMATIC EVALUATION: THE "ABCDE" APPROACH</span><span class="headingEndMark"> — </span>We have adapted the basic "ABC" (airway, breathing, circulation) approach used in cardiac and trauma resuscitation for the initial management of the critically ill adult with an unknown overdose. The steps are organized according to the issues that pose the most immediate life threats; problems are managed immediately in the order encountered. Important modifications for the poisoned patient are described in each section below.</p><p class="headingAnchor" id="H7708035"><span class="h2">"A": Airway stabilization</span><span class="headingEndMark"> — </span>Patients who cannot protect their airway should be tracheally intubated immediately. The evaluation of the patency or protection of the airway is discussed separately. (See  <a class="medical medical_review" href="/z/d/html/268.html" rel="external">"The decision to intubate", section on 'Is patency or protection of the airway at risk?'</a>.)</p><p>Exceptions include suspected opioid overdose and severe hypoglycemia. If opioid toxicity is suspected  (<a class="graphic graphic_table graphicRef71268" href="/z/d/graphic/71268.html" rel="external">table 1</a>), administer <a class="drug drug_general" data-topicid="9678" href="/z/d/drug information/9678.html" rel="external">naloxone</a> while assuring adequate oxygenation and ventilation [<a href="#rid9">9</a>]. Use small doses initially (eg, 0.04 or 0.05 mg intravenously or 0.1 mg intramuscularly) when opioid dependence is possible and ventilation can be maintained, doubling the dose until reversal of respiratory depression is achieved. Severe hypoglycemia should also be ruled out (with a point-of-care capillary blood glucose) as a cause of depressed mental status prior to intubation. (See  <a class="medical medical_review" href="/z/d/html/300.html" rel="external">"Acute opioid intoxication in adults", section on 'Basic measures and antidotal therapy'</a>.)</p><p>Do <strong>not</strong> routinely administer <a class="drug drug_general" data-topicid="8456" href="/z/d/drug information/8456.html" rel="external">flumazenil</a> for possible benzodiazepine overdose, as the risk benefit ratio of this agent is poor, and withdrawal seizures can develop [<a href="#rid9">9</a>]. The use of flumazenil (and scenarios where it may be appropriate) is discussed separately. (See  <a class="medical medical_review" href="/z/d/html/314.html" rel="external">"Benzodiazepine poisoning", section on 'Role of antidote (flumazenil)'</a>.)</p><p>Placing a nasopharyngeal airway (ie, nasal trumpet) may be sufficient to overcome upper airway obstruction from central nervous system depression (CNS) and preclude the need for tracheal intubation in a patient who has ingested a short-acting sedative (eg, ethanol, gamma-hydroxybutyrate) and whose clinical course is likely to improve. (See  <a class="medical medical_review" href="/z/d/html/267.html" rel="external">"Basic airway management in adults", section on 'Nasopharyngeal airway'</a>.)</p><p>We do not solely use a Glasgow Coma Scale (GCS)  (<a class="graphic graphic_table graphicRef81854" href="/z/d/graphic/81854.html" rel="external">table 5</a>) ≤8 to identify the need for tracheal intubation in an unresponsive poisoned patient who is protecting their airway, maintaining adequate oxygen saturation, hemodynamically stable, and expected to not deteriorate based on the suspected ingestion (eg, short-acting sedative such as ethanol). The GCS was developed to classify injury severity and prognosticate in patients with traumatic brain injury (TBI); a GCS ≤8 represents severe TBI and is generally used as an indication for tracheal intubation. However, unlike comatose patients with TBI, poisoned patients generally have a much better prognosis despite having a low GCS. The prognosis is particularly favorable in patients intoxicated with short-acting sedatives (eg, ethanol) since they typically present for care at or near the time of maximal CNS depression and improve rapidly if they have a patent airway and spontaneous respiration. For these patients, the risks of tracheal intubation (eg, hemodynamic instability, hypoxia, dental injury, barotrauma, ventilator-associated pneumonia) are unlikely to outweigh the expected benefit (ie, aspiration prevention). Evidence includes a multicenter trial of 225 adult patients with acute poisoning and a GCS ≤8 randomized to have selective tracheal intubation based on respiratory distress (ie, pulse oximetry &lt;90 percent despite nasal canula oxygen), seizure, vomiting, or shock (ie, systolic blood pressure &lt;90 mmHg after 1 liter of crystalloid fluid) versus routine care with permissive intubation at the discretion of the treating physician. Patients in the selective arm were less likely to undergo mechanical ventilation (18.1 versus 59.6 percent, absolute difference -42.5, 95% CI -30.9 to -54.1), less likely to be admitted to the intensive care unit (39.7 versus 66.1 percent, absolute difference -29.2, 95% CI -17.4 to -41), experienced fewer adverse events from intubation (6 versus 14.7 percent, absolute difference -8.6, 95% CI -0.7 to -16.6), less likely to develop pneumonia (5.4 versus 15 percent, absolute difference -9.6, 95% CI -17.5 to -1.7), and had a shorter hospital length of stay (median 21.5 versus 37 hours, relative risk 0.74, 95% CI 0.53-1.03); the latter finding did not achieve statistical significance [<a href="#rid10">10</a>]<strong>. </strong>Importantly, the trial excluded patients who required immediate tracheal intubation (signs of respiratory distress, clinical suspicion of any brain injury, seizure, shock) or had cardiotoxic drug overdoses. Also, patients were young (mean age 33 years), there were no deaths, most patients ingested sedatives (ethanol was 67 percent), and almost all exposures involved substances that would be expected to have a benign course.</p><p>Unless the patient is moribund, rapid sequence intubation with pre-oxygenation and neuromuscular blockade is typically the best approach to securing the airway [<a href="#rid11">11</a>]. <a class="drug drug_general" data-topicid="9872" href="/z/d/drug information/9872.html" rel="external">Rocuronium</a> is preferred over <a class="drug drug_general" data-topicid="9952" href="/z/d/drug information/9952.html" rel="external">succinylcholine</a> in cases of suspected organophosphate poisoning and acute <a class="drug drug_general" data-topicid="9360" href="/z/d/drug information/9360.html" rel="external">digoxin</a> toxicity. In organophosphate poisoning, succinylcholine may have a markedly prolonged duration of action, as the cholinesterases which degrade it are inactivated by the toxin. Digoxin poisoning may produce hyperkalemia, a contraindication to succinylcholine use. (See  <a class="medical medical_review" href="/z/d/html/270.html" rel="external">"Rapid sequence intubation in adults for emergency medicine and critical care"</a> and  <a class="medical medical_review" href="/z/d/html/339.html" rel="external">"Organophosphate and carbamate poisoning", section on 'Initial resuscitation'</a> and  <a class="medical medical_review" href="/z/d/html/319.html" rel="external">"Digitalis (cardiac glycoside) poisoning", section on 'Management'</a>.)</p><p>Patients with a caustic ingestion who manifest stridor and drooling are ideally tracheally intubated early by the most experienced clinician available using an awake approach. An alternate strategy for securing the airway, and the means to establish a surgical airway if necessary, must be immediately available. (See  <a class="medical medical_review" href="/z/d/html/275.html" rel="external">"Approach to the difficult airway in adults for emergency medicine and critical care", section on 'Awake techniques'</a>.)</p><p class="headingAnchor" id="H7708061"><span class="h2">"B": Breathing</span><span class="headingEndMark"> — </span>Administer supplemental oxygen as needed to all critically ill patients with a suspected overdose. End tidal carbon dioxide monitoring (ie, capnography) can provide information regarding adequacy of ventilation in obtunded or unconscious patients, especially since the administration of supplemental oxygen renders pulse oximetry less effective as an early warning device for hypoventilation. (See  <a class="medical medical_review" href="/z/d/html/273.html" rel="external">"Carbon dioxide monitoring (capnography)"</a>.) </p><p>Several toxins interfere with oxygenation and ventilation. Carbon monoxide poisoning can cause severe hypoxia despite falsely normal pulse oximetry readings. In cases of methemoglobinemia, the pulse oximeter may read around 85 percent despite visible cyanosis. Other toxicologic causes of cellular hypoxia despite normal oxygen saturation include cyanide, hydrogen sulfide, and sodium azide. Patients with profound tissue hypoxia from these toxins require endotracheal intubation and mechanical ventilation using 100 percent oxygen. (See  <a class="medical medical_review" href="/z/d/html/322.html" rel="external">"Carbon monoxide poisoning"</a> and  <a class="medical medical_review" href="/z/d/html/7094.html" rel="external">"Methemoglobinemia"</a> and  <a class="medical medical_review" href="/z/d/html/299.html" rel="external">"Cyanide poisoning"</a>.)</p><p>Patients with <a class="drug drug_general" data-topicid="8907" href="/z/d/drug information/8907.html" rel="external">aspirin</a> poisoning are initially tachypneic and hyperpneic due to the stimulatory effects of aspirin upon the respiratory center of the medulla. This hyperventilation is beneficial, and intubation should be avoided if possible because it is difficult to replicate such high minute ventilation with mechanical ventilation. Nevertheless, patients unable to protect their airway must be intubated and hyperventilated. Severe aspirin poisoning can cause precipitous decompensation and death shortly after intubation, and such patients require specific and aggressive resuscitation, including treatment with <a class="drug drug_general" data-topicid="9928" href="/z/d/drug information/9928.html" rel="external">sodium bicarbonate</a>, high minute ventilation, and immediate hemodialysis. (See  <a class="medical medical_review" href="/z/d/html/140354.html" rel="external">"Salicylate (aspirin) poisoning: Management", section on 'ABCs and supportive care'</a>.)</p><p>Patients with profound metabolic acidosis due to other toxins (eg, methanol, ethylene glycol) can also develop extremely high compensatory minute ventilation. These patients may be acidemic despite a PaCO<sub>2</sub> near 10 mmHg. When this high minute ventilation rate slows (eg, due to seizures, fatigue, or iatrogenic sedation or paralysis), the arterial pH falls abruptly, sometimes well below 7. As such, patients with severe metabolic acidosis due to poisoning are at risk of decompensating rapidly from respiratory failure. Such patients should be intubated for any sign of impending respiratory failure, either clinically or on blood gas testing. A seemingly normal PaCO<sub>2</sub> of 30 to 40 mmHg in the face of a severe metabolic acidosis is evidence of respiratory failure. (See  <a class="medical medical_review" href="/z/d/html/126052.html" rel="external">"Methanol and ethylene glycol poisoning: Management", section on 'Overview of management'</a>.)</p><p>When intubating hyperpneic patients with severe metabolic acidosis, we suggest the following approach:</p><p class="bulletIndent1"><span class="glyph">●</span>Administer one to three 50 mL amps of 7.5 to 8.4 percent <a class="drug drug_general" data-topicid="9928" href="/z/d/drug information/9928.html" rel="external">sodium bicarbonate</a> via intravenous bolus before and after intubation.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Avoid sedation until just prior to tracheal intubation.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Optimize the likelihood of first-pass success by using neuromuscular blockade and sound technique; the most experienced intubator available should perform the procedure. (See  <a class="medical medical_review" href="/z/d/html/270.html" rel="external">"Rapid sequence intubation in adults for emergency medicine and critical care"</a> and  <a class="medical medical_review" href="/z/d/html/260.html" rel="external">"Direct laryngoscopy and endotracheal intubation in adults"</a>.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Maximize minute ventilation once intubated, while following peak airway pressures and arterial blood gases. Initial settings could be 12 mL/kg at 20 breaths per minute for an adult, with frequent reassessment of acidemia and signs of barotrauma. As the acidosis resolves, minute ventilation should be reduced. (See  <a class="medical medical_review" href="/z/d/html/277.html" rel="external">"Mechanical ventilation of adults in the emergency department"</a>.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Organize immediate hemodialysis if a dialyzable toxin (eg, <a class="drug drug_general" data-topicid="8907" href="/z/d/drug information/8907.html" rel="external">aspirin</a>, methanol, ethylene glycol) is responsible.</p><p></p><p class="headingAnchor" id="H7708080"><span class="h2">"C": Circulation</span></p><p class="headingAnchor" id="H1941839"><span class="h3">Asystole and ventricular fibrillation</span><span class="headingEndMark"> — </span>Asystole and ventricular fibrillation are managed according to standard ACLS protocols  (<a class="graphic graphic_algorithm graphicRef129983" href="/z/d/graphic/129983.html" rel="external">algorithm 1</a>). (See  <a class="medical medical_review" href="/z/d/html/278.html" rel="external">"Advanced cardiac life support (ACLS) in adults", section on 'Pulseless ventricular tachycardia and ventricular fibrillation'</a> and  <a class="medical medical_review" href="/z/d/html/278.html" rel="external">"Advanced cardiac life support (ACLS) in adults", section on 'Asystole and pulseless electrical activity'</a>.)</p><p class="headingAnchor" id="H1941846"><span class="h3">Hypotension</span><span class="headingEndMark"> — </span>Hypotension is treated with a rapid intravenous (IV) infusion of up to 2 L of isotonic crystalloid, followed by a <a class="drug drug_general" data-topicid="9709" href="/z/d/drug information/9709.html" rel="external">norepinephrine</a> infusion or small boluses of <a class="drug drug_general" data-topicid="9768" href="/z/d/drug information/9768.html" rel="external">phenylephrine</a>, pending more specific information (eg, bedside echocardiography, point-of-care ultrasonography) to guide therapy. (See  <a class="medical medical_review" href="/z/d/html/98976.html" rel="external">"Evaluation of and initial approach to the adult patient with undifferentiated hypotension and shock"</a>.)</p><p>At times, the dose of vasopressor or inotrope needed to achieve a response may be much higher than doses used for non-poisoned patients [<a href="#rid12">12</a>]. Circulatory assist devices (eg, intraaortic balloon pump) and extracorporeal life support (eg, circulatory bypass pump or veno-arterial extracorporeal membrane oxygenation) may be needed in refractory shock [<a href="#rid13">13,14</a>]. Ingestions that have been successfully managed with extracorporeal life support are listed in the table  (<a class="graphic graphic_table graphicRef140779" href="/z/d/graphic/140779.html" rel="external">table 6</a>). (See  <a class="medical medical_review" href="/z/d/html/1625.html" rel="external">"Extracorporeal life support in adults in the intensive care unit: Overview"</a>.)</p><p>Selected antidotes can be administered empirically to hypotensive patients when circumstances suggest a specific etiology. A list of these antidotes with empiric dosing guidelines is provided  (<a class="graphic graphic_table graphicRef66622" href="/z/d/graphic/66622.html" rel="external">table 7</a>).</p><p>Despite numerous case reports of its use for refractory shock, there is scant evidence of benefit for lipid emulsion therapy when used for drug toxicity other than local anesthetics, and its routine use is not recommended [<a href="#rid15">15,16</a>]. <a class="drug drug_general" data-topicid="9636" href="/z/d/drug information/9636.html" rel="external">Methylene blue</a> has also been proposed for empirical use to treat refractory shock in overdose based on a similarly limited evidence base [<a href="#rid17">17</a>]. (See  <a class="medical medical_review" href="/z/d/html/331.html" rel="external">"Calcium channel blocker poisoning", section on 'Lipid emulsion therapy'</a> and  <a class="medical medical_review" href="/z/d/html/90613.html" rel="external">"Local anesthetic systemic toxicity"</a> and  <a class="medical medical_review" href="/z/d/html/7094.html" rel="external">"Methemoglobinemia", section on 'Methylene blue (MB)'</a>.)</p><p class="headingAnchor" id="H1941853"><span class="h3">Bradycardia with hypotension</span><span class="headingEndMark"> — </span>Bradycardia with hypotension suggests an overdose with <a class="drug drug_general" data-topicid="9360" href="/z/d/drug information/9360.html" rel="external">digoxin</a>, calcium channel blockers, or beta blockers. Digoxin toxicity may be characterized by increased automaticity, depressed AV nodal conduction, characteristic repolarization changes, and gastrointestinal symptoms. Beta-blocker toxicity can be accompanied by hypoglycemia and, in the case of <a class="drug drug_general" data-topicid="9829" href="/z/d/drug information/9829.html" rel="external">propranolol</a>, sodium channel blockade with widening of the QRS complex and seizures. Overdose with calcium channel blockers usually causes hyperglycemia and a relatively well-preserved mental status despite hypotension. Specific therapy for each agent is available and discussed separately. (See  <a class="medical medical_review" href="/z/d/html/319.html" rel="external">"Digitalis (cardiac glycoside) poisoning"</a> and  <a class="medical medical_review" href="/z/d/html/328.html" rel="external">"Dosing regimen for digoxin-specific antibody (Fab) fragments in patients with digoxin toxicity"</a> and  <a class="medical medical_review" href="/z/d/html/331.html" rel="external">"Calcium channel blocker poisoning", section on 'Management'</a> and  <a class="medical medical_review" href="/z/d/html/330.html" rel="external">"Beta blocker poisoning", section on 'Management'</a>.)</p><p class="headingAnchor" id="H1941860"><span class="h3">Monomorphic, wide-complex tachycardia</span><span class="headingEndMark"> — </span>Monomorphic, wide-complex tachycardia in the setting of poisoning is commonly supraventricular in origin with aberrancy due to sodium channel blockade. Many poisons can cause sodium channel blockade, including tricyclic antidepressants, antihistamines, Type IA antiarrhythmics, and cocaine. The treatment is <a class="drug drug_general" data-topicid="9928" href="/z/d/drug information/9928.html" rel="external">sodium bicarbonate</a> 50 to 100 mEq given as an intravenous (IV) bolus, and repeated as necessary, until the QRS interval is &lt;100 msec in the limb leads, or until arterial pH approaches 7.55. Other Type I antiarrhythmics (eg, <a class="drug drug_general" data-topicid="9813" href="/z/d/drug information/9813.html" rel="external">procainamide</a>) should be avoided. (See  <a class="medical medical_review" href="/z/d/html/295.html" rel="external">"Tricyclic antidepressant poisoning", section on 'Sodium bicarbonate for cardiac toxicity'</a> and  <a class="medical medical_review" href="/z/d/html/305.html" rel="external">"Anticholinergic poisoning"</a> and  <a class="medical medical_review" href="/z/d/html/303.html" rel="external">"Cocaine: Acute intoxication"</a>.)</p><p class="headingAnchor" id="H1941867"><span class="h3">Polymorphic ventricular tachycardia</span><span class="headingEndMark"> — </span>Polymorphic ventricular tachycardia (torsade de pointes) is occasionally seen following overdose with Types IA, IC, and III antiarrhythmics; <a class="drug drug_general" data-topicid="9752" href="/z/d/drug information/9752.html" rel="external">pentamidine</a>; antipsychotics; arsenicals; antifungals; and antihistamines. This arrhythmia is treated with 2 g <a class="drug drug_general" data-topicid="9585" href="/z/d/drug information/9585.html" rel="external">magnesium sulfate</a> IV given over two to five minutes. Up to two additional doses may be given as needed. Overdrive pacing with <a class="drug drug_general" data-topicid="8578" href="/z/d/drug information/8578.html" rel="external">isoproterenol</a> or overdrive electrical pacing may also be used, as bradycardia potentiates this arrhythmia [<a href="#rid18">18</a>]. (See  <a class="medical medical_review" href="/z/d/html/278.html" rel="external">"Advanced cardiac life support (ACLS) in adults", section on 'Irregular wide complex'</a>.)</p><p class="headingAnchor" id="H1941874"><span class="h3">Narrow complex tachycardia</span><span class="headingEndMark"> — </span>Narrow complex tachycardia and hypertension due to drug overdose or withdrawal are usually due to hyperadrenergic states, as seen with cocaine, amphetamine, and other sympathomimetics. Treatment consists primarily of benzodiazepines, and perhaps <a class="drug drug_general" data-topicid="9767" href="/z/d/drug information/9767.html" rel="external">phentolamine</a> for severe hypertension [<a href="#rid19">19,20</a>]. Refractory hypertension may also be treated with <a class="drug drug_general" data-topicid="9706" href="/z/d/drug information/9706.html" rel="external">nitroglycerin</a> (in the setting of cardiac ischemia), <a class="drug drug_general" data-topicid="8911" href="/z/d/drug information/8911.html" rel="external">clevidipine</a>, <a class="drug drug_general" data-topicid="9697" href="/z/d/drug information/9697.html" rel="external">nicardipine</a>, or <a class="drug drug_general" data-topicid="9707" href="/z/d/drug information/9707.html" rel="external">nitroprusside</a>. Beta-blockers and antipsychotics should be avoided [<a href="#rid21">21,22</a>]. Synchronized cardioversion is rarely effective. (See  <a class="medical medical_review" href="/z/d/html/303.html" rel="external">"Cocaine: Acute intoxication", section on 'Initial management'</a> and  <a class="medical medical_review" href="/z/d/html/311.html" rel="external">"Methamphetamine: Acute intoxication", section on 'Management'</a>.)</p><p class="headingAnchor" id="H7708122"><span class="h2">"D": Disability and neurological stabilization</span><span class="headingEndMark"> — </span>Once the airway, breathing, and circulation are secured, attention is next directed towards neurologic stabilization. The so-called "coma cocktail" of dextrose, oxygen, <a class="drug drug_general" data-topicid="9678" href="/z/d/drug information/9678.html" rel="external">naloxone</a>, and <a class="drug drug_general" data-topicid="9988" href="/z/d/drug information/9988.html" rel="external">thiamine</a> given empirically is an outdated concept and has been replaced by selective use of each component as necessary [<a href="#rid9">9,23</a>]. Hypoglycemia can present as <strong>any</strong> alteration of mental status, including confusion, seizures, focal deficits, and coma. Treat these symptoms with <a class="drug drug_general" data-topicid="8711" href="/z/d/drug information/8711.html" rel="external">intravenous dextrose</a> when the glucometer reports a low or low-normal capillary blood glucose.</p><p><a class="drug drug_general" data-topicid="9678" href="/z/d/drug information/9678.html" rel="external">Naloxone</a> is indicated for the reversal of respiratory depression in the setting of known or suspected opioid toxicity (see  <a class="medical medical_review" href="/z/d/html/300.html" rel="external">"Acute opioid intoxication in adults", section on 'Basic measures and antidotal therapy'</a>). <a class="drug drug_general" data-topicid="8456" href="/z/d/drug information/8456.html" rel="external">Flumazenil</a> should <strong>not</strong> be used, even when benzodiazepine toxicity is suspected, because it can precipitate benzodiazepine withdrawal, causing seizures (see  <a class="medical medical_review" href="/z/d/html/314.html" rel="external">"Benzodiazepine poisoning", section on 'Role of antidote (flumazenil)'</a>). <a class="drug drug_general" data-topicid="9988" href="/z/d/drug information/9988.html" rel="external">Thiamine</a> may be administered safely before glucose, but is unlikely to reverse coma [<a href="#rid24">24</a>]. <a class="drug drug_general" data-topicid="9770" href="/z/d/drug information/9770.html" rel="external">Physostigmine</a> is no longer used as a non-specific analeptic but does play a selected role in the management of anticholinergic (antimuscarinic) poisoning. (See  <a class="medical medical_review" href="/z/d/html/305.html" rel="external">"Anticholinergic poisoning", section on 'Antidotal therapy with physostigmine for severe toxicity'</a>.)</p><p>Seizures due to poisoning or withdrawal are best treated with escalating doses of benzodiazepines (eg, <a class="drug drug_general" data-topicid="9345" href="/z/d/drug information/9345.html" rel="external">diazepam</a> 5 mg IV, repeated and doubled every 5 to 10 minutes as necessary for refractory seizures)  (<a class="graphic graphic_table graphicRef54610" href="/z/d/graphic/54610.html" rel="external">table 8</a>). <a class="drug drug_general" data-topicid="9769" href="/z/d/drug information/9769.html" rel="external">Phenytoin</a> is usually ineffective and can cause toxicity due to the propylene glycol solvent. <a class="drug drug_general" data-topicid="9826" href="/z/d/drug information/9826.html" rel="external">Propofol</a> has superseded the barbiturates and inhalational anesthetics as second-line therapy for benzodiazepine-resistant seizures [<a href="#rid25">25</a>]. When seizures are likely due to sodium channel blockade, intravenous <a class="drug drug_general" data-topicid="9928" href="/z/d/drug information/9928.html" rel="external">sodium bicarbonate</a> should be administered in addition to benzodiazepines. Dosing is described above (see <a class="local">'"C": Circulation'</a> above). High doses of <a class="drug drug_general" data-topicid="9839" href="/z/d/drug information/9839.html" rel="external">pyridoxine</a> (5 g IV) should be given to patients in status epilepticus believed to be caused by <a class="drug drug_general" data-topicid="8577" href="/z/d/drug information/8577.html" rel="external">isoniazid</a> overdose or monomethylhydrazine poisoning (eg, Gyromitra mushrooms). (See  <a class="medical medical_review" href="/z/d/html/316.html" rel="external">"Isoniazid (INH) poisoning"</a>.)</p><p>Causes other than overdose may be responsible for coma or depressed mental status in the poisoned patient. This is discussed separately. (See  <a class="medical medical_review" href="/z/d/html/5104.html" rel="external">"Stupor and coma in adults"</a>.)</p><p class="headingAnchor" id="H7708157"><span class="h2">"E": Exposure and elimination</span><span class="headingEndMark"> — </span>This phase of management aims to remove clothing, transdermal medication patches, and other external contaminants, to measure core temperature and treat hypothermia or hyperthermia as necessary, to identify self-inflicted or accidental trauma, and to search personal items for concealed drugs, weapons of self-harm, or clues regarding medical history and the nature of the overdose.</p><p>Severe hyperthermia (greater than 40°C) usually requires paralysis, sedation, and ice bath cooling (see  <a class="medical medical_review" href="/z/d/html/176.html" rel="external">"Severe nonexertional hyperthermia (classic heat stroke) in adults", section on 'Management'</a>). Severe hypothermia (less than 30°C) is also treated aggressively with rapid rewarming (see  <a class="medical medical_review" href="/z/d/html/178.html" rel="external">"Accidental hypothermia in adults", section on 'Management'</a>). Therapeutic hypothermia should be administered to unconscious patients with return of spontaneous circulation after circulatory arrest. (See  <a class="medical medical_review" href="/z/d/html/13838.html" rel="external">"Initial assessment and management of the adult post-cardiac arrest patient", section on 'Temperature management'</a>.)</p><p>Methods of enhancing the elimination of poisons, such as gastric lavage, activated charcoal, whole bowel irrigation, and hemodialysis, may be helpful for selected patients (see  <a class="medical medical_review" href="/z/d/html/321.html" rel="external">"Gastrointestinal decontamination of the poisoned patient"</a>). Circumstances may suggest the presence of concealed drug packages in the GI tract or vagina. (See  <a class="medical medical_review" href="/z/d/html/327.html" rel="external">"Internal concealment of drugs of abuse (body packing)"</a>.)</p><p class="headingAnchor" id="H7708176"><span class="h1">CESSATION OF RESUSCITATIVE EFFORTS</span><span class="headingEndMark"> — </span>Unlike most cardiac arrest patients, prolonged resuscitation efforts are not necessarily futile for poisoned patients [<a href="#rid26">26-28</a>]. Neurologically intact survival after more than 60 minutes of pulseless arrest and external chest compressions is possible [<a href="#rid29">29-31</a>]. Prolonged resuscitative efforts including extracorporeal circulatory assistance may be warranted for previously healthy patients with witnessed cardiac arrest following drug overdose [<a href="#rid13">13,32</a>]. Even if neurologic recovery is not possible, selected patients poisoned with neurotoxins such as methanol, carbon monoxide, and cyanide can serve as organ donors.</p><p class="headingAnchor" id="H7532088"><span class="h1">ADDITIONAL RESOURCES</span></p><p class="headingAnchor" id="H169071877"><span class="h2">Regional poison control centers</span><span class="headingEndMark"> — </span>Regional poison control centers in the United States are available at all times for consultation on patients with known or suspected poisoning, and who may be critically ill, require admission, or have clinical pictures that are unclear (1-800-222-1222). In addition, some hospitals have medical toxicologists available for bedside consultation. Whenever available, these are invaluable resources to help in the diagnosis and management of ingestions or overdoses. Contact information for poison centers around the world is provided separately. (See  <a class="medical medical_society_guidelines" href="/z/d/html/138307.html" rel="external">"Society guideline links: Regional poison control centers"</a>.)</p><p class="headingAnchor" id="H3885897043"><span class="h2">Society guideline links</span><span class="headingEndMark"> — </span>Links to society and government-sponsored guidelines from selected countries and regions around the world are provided separately. (See  <a class="medical medical_society_guidelines" href="/z/d/html/112689.html" rel="external">"Society guideline links: General measures for acute poisoning treatment"</a> and  <a class="medical medical_society_guidelines" href="/z/d/html/114014.html" rel="external">"Society guideline links: Treatment of acute poisoning caused by specific agents other than drugs of abuse"</a>.)</p><p class="headingAnchor" id="H7708202"><span class="h1">SUMMARY AND RECOMMENDATIONS</span></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Protection of clinicians and emergency department (ED)</strong> – While resuscitating a critically ill adult with an unknown poisoning, the clinician must preserve the operational capacity of the emergency health care system and ensure the safety of health care workers. In addition to multiple casualty scenarios, even a single patient contaminated or potentially contaminated with a highly potent toxin can disable an entire ED. (See <a class="local">'First priorities'</a> above and <a class="local">'Initial data acquisition'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Examination and identification of toxin</strong> – During the resuscitation, characteristic combinations of selected findings (so called "toxidromes")  (<a class="graphic graphic_table graphicRef71268" href="/z/d/graphic/71268.html" rel="external">table 1</a>) should be rapidly sought, including: vital signs; level of alertness; pupil size and position; mucous membrane moisture and secretions; skin temperature and moisture; presence or absence of bowel sounds; and motor tone. Diagnostic tests to be obtained as part of the initial evaluation are described in the text. (See <a class="local">'Rapid first look: Examination, monitoring, and testing'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Management</strong> – A systematic approach is essential to the resuscitation of the critically ill adult with an unknown overdose and can be adapted from the basic "ABC" (airway, breathing, circulation) scheme used for cardiac arrest and trauma patients. An exception is that we do not solely use a Glasgow Coma Scale ≤8 to identify the need for tracheal intubation in an unresponsive poisoned patient who is protecting their airway, maintaining adequate oxygen saturation, hemodynamically stable, and expected to not deteriorate based on the suspected ingestion. The steps are organized according to the issues that pose the most immediate life threats: airway, breathing, circulation, disability (neurologic stabilization), and exposure &amp; elimination. Problems are managed immediately and concurrently as identified. (See <a class="local">'Systematic evaluation: The "ABCDE" approach'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Prolonged resuscitation</strong> – Unlike most cardiac arrest patients, prolonged resuscitation efforts are not necessarily futile for poisoned patients. Neurologically intact survival after more than 60 minutes of pulseless arrest and external chest compressions is possible in some instances. (See <a class="local">'Cessation of resuscitative efforts'</a> above.)</p><p></p><p class="headingAnchor" id="H171460511"><span class="h1">ACKNOWLEDGMENT</span><span class="headingEndMark"> — </span>The UpToDate editorial staff acknowledges Stephen J Traub, MD, former section editor of the toxicology program, for 20 years of dedicated service.</p></div><div class="headingAnchor" id="references"><ol id="reference"><li><a class="nounderline abstract_t">Tanz LJ, Dinwiddie AT, Mattson CL, et al. Drug Overdose Deaths Among Persons Aged 10-19 Years - United States, July 2019-December 2021. MMWR Morb Mortal Wkly Rep 2022; 71:1576.</a></li><li><a class="nounderline abstract_t">Spencer MR, Miniño AM, Warner M. Drug Overdose Deaths in the United States, 2001-2021. NCHS Data Brief 2022; :1.</a></li><li><a class="nounderline abstract_t">Albertson TE, Dawson A, de Latorre F, et al. TOX-ACLS: toxicologic-oriented advanced cardiac life support. Ann Emerg Med 2001; 37:S78.</a></li><li><a class="nounderline abstract_t">Panchal AR, Bartos JA, Cabañas JG, et al. Part 3: Adult Basic and Advanced Life Support: 2020 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation 2020; 142:S366.</a></li><li><a class="nounderline abstract_t">Traub SJ, Hoffman RS, Nelson LS. Body packing--the internal concealment of illicit drugs. N Engl J Med 2003; 349:2519.</a></li><li><a class="nounderline abstract_t">Del Pozo B, Sightes E, Kang S, et al. Can touch this: training to correct police officer beliefs about overdose from incidental contact with fentanyl. Health Justice 2021; 9:34.</a></li><li><a class="nounderline abstract_t">Moss MJ, Warrick BJ, Nelson LS, et al. ACMT and AACT Position Statement: Preventing Occupational Fentanyl and Fentanyl Analog Exposure to Emergency Responders. J Med Toxicol 2017; 13:347.</a></li><li><a class="nounderline abstract_t">De Groot R, Van Zoelen GA, Leenders MEC, et al. Is secondary chemical exposure of hospital personnel of clinical importance? Clin Toxicol (Phila) 2021; 59:269.</a></li><li><a class="nounderline abstract_t">Sivilotti ML. Flumazenil, naloxone and the 'coma cocktail'. Br J Clin Pharmacol 2016; 81:428.</a></li><li><a class="nounderline abstract_t">Freund Y, Viglino D, Cachanado M, et al. Effect of Noninvasive Airway Management of Comatose Patients With Acute Poisoning: A Randomized Clinical Trial. JAMA 2023; 330:2267.</a></li><li><a class="nounderline abstract_t">Adnet F, Borron SW, Finot MA, et al. Intubation difficulty in poisoned patients: association with initial Glasgow Coma Scale score. Acad Emerg Med 1998; 5:123.</a></li><li><a class="nounderline abstract_t">Skoog CA, Engebretsen KM. Are vasopressors useful in toxin-induced cardiogenic shock? Clin Toxicol (Phila) 2017; 55:285.</a></li><li><a class="nounderline abstract_t">de Lange DW, Sikma MA, Meulenbelt J. Extracorporeal membrane oxygenation in the treatment of poisoned patients. Clin Toxicol (Phila) 2013; 51:385.</a></li><li><a class="nounderline abstract_t">Upchurch C, Blumenberg A, Brodie D, et al. Extracorporeal membrane oxygenation use in poisoning: a narrative review with clinical recommendations. Clin Toxicol (Phila) 2021; 59:877.</a></li><li><a class="nounderline abstract_t">Gosselin S, Hoegberg LC, Hoffman RS, et al. Evidence-based recommendations on the use of intravenous lipid emulsion therapy in poisoning(). Clin Toxicol (Phila) 2016; 54:899.</a></li><li><a class="nounderline abstract_t">Levine M, Hoffman RS, Lavergne V, et al. Systematic review of the effect of intravenous lipid emulsion therapy for non-local anesthetics toxicity. Clin Toxicol (Phila) 2016; 54:194.</a></li><li><a class="nounderline abstract_t">Warrick BJ, Tataru AP, Smolinske S. A systematic analysis of methylene blue for drug-induced shock. Clin Toxicol (Phila) 2016; 54:547.</a></li><li><a class="nounderline abstract_t">Chan A, Isbister GK, Kirkpatrick CM, Dufful SB. Drug-induced QT prolongation and torsades de pointes: evaluation of a QT nomogram. QJM 2007; 100:609.</a></li><li><a class="nounderline abstract_t">Burns MJ, Dickson EW, Sivilotti ML, Cuenoud H. Phentolamine reduces myocardial injury and mortality in a rat model of phenylpropanolamine poisoning. J Toxicol Clin Toxicol 2001; 39:129.</a></li><li><a class="nounderline abstract_t">Wood DM, Dargan PI, Hoffman RS. Management of cocaine-induced cardiac arrhythmias due to cardiac ion channel dysfunction. Clin Toxicol (Phila) 2009; 47:14.</a></li><li><a class="nounderline abstract_t">Wu S, Pearl-Davis MS, Manini AF, Hoffman RS. Use of antipsychotics to treat cocaine toxicity? Acad Emerg Med 2008; 15:105; author reply 106.</a></li><li><a class="nounderline abstract_t">Hoffman RS. Cocaine and beta-blockers: should the controversy continue? Ann Emerg Med 2008; 51:127.</a></li><li><a class="nounderline abstract_t">Hoffman RS, Goldfrank LR. The poisoned patient with altered consciousness. Controversies in the use of a 'coma cocktail'. JAMA 1995; 274:562.</a></li><li><a class="nounderline abstract_t">Jackson R, Teece S. Best evidence topic report. Oral or intravenous thiamine in the emergency department. Emerg Med J 2004; 21:501.</a></li><li><a class="nounderline abstract_t">Fletcher ML, Sarangarm P, Nash J, et al. A systematic review of second line therapies in toxic seizures. Clin Toxicol (Phila) 2021; 59:451.</a></li><li><a class="nounderline abstract_t">Morrison LJ, Verbeek PR, Zhan C, et al. Validation of a universal prehospital termination of resuscitation clinical prediction rule for advanced and basic life support providers. Resuscitation 2009; 80:324.</a></li><li><a class="nounderline abstract_t">Kellermann AL, Hackman BB, Somes G. Predicting the outcome of unsuccessful prehospital advanced cardiac life support. JAMA 1993; 270:1433.</a></li><li><a class="nounderline abstract_t">Bonnin MJ, Pepe PE, Kimball KT, Clark PS Jr. Distinct criteria for termination of resuscitation in the out-of-hospital setting. JAMA 1993; 270:1457.</a></li><li><a class="nounderline abstract_t">Ramsay ID. Survival after imipramine poisoning. Lancet 1967; 2:1308.</a></li><li><a class="nounderline abstract_t">Southall DP, Kilpatrick SM. Imipramine poisoning: survival of a child after prolonged cardiac massage. Br Med J 1974; 4:508.</a></li><li><a class="nounderline abstract_t">Orr DA, Bramble MG. Tricyclic antidepressant poisoning and prolonged external cardiac massage during asystole. Br Med J (Clin Res Ed) 1981; 283:1107.</a></li><li><a class="nounderline abstract_t">International Liaison Committee on Resuscitation. 2005 International Consensus on Cardiopulmonary Resuscitation and Emergency Cardiovascular Care Science with Treatment Recommendations. Part 4: Advanced life support. Resuscitation 2005; 67:213.</a></li></ol></div><div id="topicVersionRevision">Topic 13850 Version 31.0</div></div>
-<div class="row">
-<div class="col-12">
-<h4 style="text-align: center;padding: 20px;color: cadetblue;">References</h4>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/36520659" id="rid0" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>1 : Drug Overdose Deaths Among Persons Aged 10-19 Years - United States, July 2019-December 2021.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/36598401" id="rid1" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>2 : Drug Overdose Deaths in the United States, 2001-2021.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/11290973" id="rid2" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>3 : TOX-ACLS: toxicologic-oriented advanced cardiac life support.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/33081529" id="rid3" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>4 : Part 3: Adult Basic and Advanced Life Support: 2020 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/14695412" id="rid4" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>5 : Body packing--the internal concealment of illicit drugs.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/34817717" id="rid5" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>6 : Can touch this: training to correct police officer beliefs about overdose from incidental contact with fentanyl.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/28842825" id="rid6" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>7 : ACMT and AACT Position Statement: Preventing Occupational Fentanyl and Fentanyl Analog Exposure to Emergency Responders.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/33448889" id="rid7" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>8 : Is secondary chemical exposure of hospital personnel of clinical importance?</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/26469689" id="rid8" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>9 : Flumazenil, naloxone and the 'coma cocktail'.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/38019968" id="rid9" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>10 : Effect of Noninvasive Airway Management of Comatose Patients With Acute Poisoning: A Randomized Clinical Trial.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/9492132" id="rid10" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>11 : Intubation difficulty in poisoned patients: association with initial Glasgow Coma Scale score.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/28152638" id="rid11" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>12 : Are vasopressors useful in toxin-induced cardiogenic shock?</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/23697460" id="rid12" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>13 : Extracorporeal membrane oxygenation in the treatment of poisoned patients.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/34396873" id="rid13" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>14 : Extracorporeal membrane oxygenation use in poisoning: a narrative review with clinical recommendations.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/27608281" id="rid14" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>15 : Evidence-based recommendations on the use of intravenous lipid emulsion therapy in poisoning().</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/26852931" id="rid15" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>16 : Systematic review of the effect of intravenous lipid emulsion therapy for non-local anesthetics toxicity.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/27196698" id="rid16" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>17 : A systematic analysis of methylene blue for drug-induced shock.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/17881416" id="rid17" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>18 : Drug-induced QT prolongation and torsades de pointes: evaluation of a QT nomogram.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/11407498" id="rid18" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>19 : Phentolamine reduces myocardial injury and mortality in a rat model of phenylpropanolamine poisoning.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/18815938" id="rid19" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>20 : Management of cocaine-induced cardiac arrhythmias due to cardiac ion channel dysfunction.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/18211326" id="rid20" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>21 : Use of antipsychotics to treat cocaine toxicity?</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/17889405" id="rid21" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>22 : Cocaine and beta-blockers: should the controversy continue?</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/7629986" id="rid22" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>23 : The poisoned patient with altered consciousness. Controversies in the use of a 'coma cocktail'.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/15208245" id="rid23" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>24 : Best evidence topic report. Oral or intravenous thiamine in the emergency department.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/33755521" id="rid24" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>25 : A systematic review of second line therapies in toxic seizures.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/19150167" id="rid25" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>26 : Validation of a universal prehospital termination of resuscitation clinical prediction rule for advanced and basic life support providers.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/8371442" id="rid26" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>27 : Predicting the outcome of unsuccessful prehospital advanced cardiac life support.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/8204131" id="rid27" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>28 : Distinct criteria for termination of resuscitation in the out-of-hospital setting.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/4168633" id="rid28" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>29 : Survival after imipramine poisoning.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/4434118" id="rid29" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>30 : Imipramine poisoning: survival of a child after prolonged cardiac massage.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/6794780" id="rid30" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>31 : Tricyclic antidepressant poisoning and prolonged external cardiac massage during asystole.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/16324990" id="rid31" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>32 : 2005 International Consensus on Cardiopulmonary Resuscitation and Emergency Cardiovascular Care Science with Treatment Recommendations. Part 4: Advanced life support.</p>
-</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-</section>
-<!-- End Main Menu Area -->
-<!-- Start Search Popup Area -->
-<!-- End Footer Area -->
-<!-- Back to top -->
-<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
-<!-- End Back to top -->
-<!-- jQuery Min JS -->
-<!-- Prpper JS -->
-<!-- Bootstrap Min JS -->
-<!-- Classy Nav Min Js -->
-<!-- Owl Carousel Min Js -->
-<!-- Magnific Popup JS -->
-<!-- CounterUp JS -->
-<!-- Waypoints JS -->
-<!-- Form Validator Min JS -->
-<!-- Contact Form Min JS -->
-<!-- Main JS -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-</body>
+ <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+ <head>
+  <title>
+   Initial management of the critically ill adult with an unknown overdose
+  </title>
+  <link href="d/css/1.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!-- Start Main Menu Area -->
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="container">
+   <div class="row">
+   </div>
+  </div>
+  <section class="teacher-area ptb-10">
+   <div class="container">
+   </div>
+   <section class="course-details-area ptb-60">
+    <div class="container">
+     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+      <h1 style="text-align:center">
+       Initial management of the critically ill adult with an unknown overdose
+      </h1>
+      <div class="utdArticleSection utdStyle" id="topicContent">
+       <div id="topicTitle">
+        Initial management of the critically ill adult with an unknown overdose
+       </div>
+       <div class="authorSectionElem">
+        <div class="authorsElementsLeft">
+         <dl id="topicContributors">
+          <dt>
+           <span>
+           </span>
+           Author:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Marco L A Sivilotti, MD, MSc, FRCPC, FACMT, FAACT
+           </a>
+          </dd>
+          <dt>
+           <span>
+           </span>
+           Section Editor:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Evan Schwarz, MD
+           </a>
+          </dd>
+          <dt>
+           <span>
+           </span>
+           Deputy Editor:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Michael Ganetsky, MD
+           </a>
+          </dd>
+         </dl>
+        </div>
+        <div class="authorsElementsRight">
+         <div id="literatureReviewDate">
+          <div class="litReviewSingleLine">
+           <bdi>
+            <span class="emphasis">
+             Literature review current through:
+            </span>
+            Jan 2024.
+           </bdi>
+          </div>
+          <div class="litReviewSingleLine">
+           <bdi>
+            <span class="emphasis">
+             This topic last updated:
+            </span>
+            Dec 21, 2023.
+           </bdi>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div id="topicWhatsNewContainer">
+       </div>
+       <div id="topicText">
+        <p class="headingAnchor" id="H7707963">
+         <span class="h1">
+          INTRODUCTION
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Poisoning is a leading cause of death especially in the young, in whom it is the leading cause of non-traumatic cardiac arrest under the age of 35 years. Overdose, both intentional and unintentional, has also become the leading cause of injury-related death in the United States, exceeding the number of deaths due to firearms, falls, or motorized vehicle collisions [
+         <a href="#rid1">
+          1,2
+         </a>
+         ].
+        </p>
+        <p>
+         Severely poisoned patients may present
+         <em>
+          in extremis
+         </em>
+         . Such patients require an organized, targeted resuscitation despite incomplete, uncertain, or even erroneous information. A "generic" approach based upon the advanced cardiac life support (ACLS) protocols intended for cardiac patients is suboptimal [
+         <a href="#rid3">
+          3,4
+         </a>
+         ]. It can lead to missed opportunities for specific life-saving interventions and may at times be harmful.
+        </p>
+        <p>
+         This topic will describe an approach to the resuscitation of the critically ill poisoned adult patient when the identity of the causative agent(s) is initially unknown. The general approach to the poisoned patient and the management of specific poisonings are described separately. (See
+         <a class="medical medical_review" href="/z/d/html/324.html" rel="external">
+          "General approach to drug poisoning in adults"
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H30959739">
+         <span class="h1">
+          INITIAL DATA ACQUISITION
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Any readily available information about the patient and the poisoning should be obtained from pre-hospital care providers, other first responders (including witnesses, firemen, police, friends, and family), and from medical records. Medication or chemical product containers, material safety data sheets, pharmacy records, and institutional or patient lists of prescribed medication can be helpful. In addition, the setting and circumstances may help to identify the toxin(s) involved and select interventions. As examples, recreational ingestion of illicit alcohol (eg, containing methanol), inhalation of toxic gases in an enclosed space, or accidental industrial releases/fires suggest the need to prepare for multiple victims. A person who rapidly decompensates after being taken into police custody may have "stuffed" or "packed" large amounts of illicit drugs requiring the immediate removal of the leaking package from a body cavity [
+         <a href="#rid5">
+          5
+         </a>
+         ]. (See
+         <a class="medical medical_review" href="/z/d/html/324.html" rel="external">
+          "General approach to drug poisoning in adults", section on 'History'
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/13845.html" rel="external">
+          "Acute ingestion of illicit drugs (body stuffing)"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/327.html" rel="external">
+          "Internal concealment of drugs of abuse (body packing)"
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H7708001">
+         <span class="h1">
+          FIRST PRIORITIES
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         In addition to securing the airway, breathing, and circulation (ABC's) as with any critically ill or injured patient, the resuscitation leader must consider two additional imperatives that may arise with severely poisoned patients: preserving the operational capacity of the emergency health care system and ensuring the safety of health care workers. These priorities are addressed concurrently as part of the primary assessment.
+        </p>
+        <p>
+         Multiple casualty and mass casualty incidents may involve toxic exposures and challenge health care systems of any size. Even a single patient contaminated or potentially contaminated with a highly potent toxin (eg, a radioactive isotope or nerve agent such as sarin) can disable an entire emergency department (ED).
+        </p>
+        <p>
+         Highly potent toxins can directly threaten the health of clinicians and rescue personnel when proper protection is not used. However, such agents are extremely rare outside of a large-scale industrial accident, major transportation accident, or terrorist attack. Opioid toxicity is extremely unlikely following incidental dermal contact with
+         <a class="drug drug_general" data-topicid="8441" href="/z/d/drug information/8441.html" rel="external">
+          fentanyl
+         </a>
+         or fentanyl analogs despite concerns by first responders while rendering first aid and resuscitation to a patient with opioid intoxication [
+         <a href="#rid6">
+          6,7
+         </a>
+         ]. Routine measures are sufficient for nearly all single-patient encounters involving consumer products and common chemicals. If readily available, nitrile gloves, safety goggles, and a water-resistant gown can be worn for additional security when dealing with extensive solid particle contamination, liquid spills, or emesis following an unknown exposure. However, locating such protective equipment should not delay the delivery of lifesaving care without clear reason to suspect a highly toxic agent [
+         <a href="#rid8">
+          8
+         </a>
+         ].
+        </p>
+        <p>
+         Ideally, surface decontamination should be performed at or near the scene (ie, prior to transport) or before the patient is brought into the clean area of the ED (if not performed in the pre-hospital setting). Clothing soiled with chemicals or bodily fluids should be placed in appropriate closed containers and disposed of properly. Decontamination procedures and the chemical and biologic agents likely to be involved in an exposure are discussed separately. (See
+         <a class="medical medical_review" href="/z/d/html/345.html" rel="external">
+          "Topical chemical burns: Initial evaluation and management"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/2020.html" rel="external">
+          "Chemical terrorism: Rapid recognition and initial medical management"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/2735.html" rel="external">
+          "Identifying and managing casualties of biological terrorism"
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H7708012">
+         <span class="h1">
+          RAPID FIRST LOOK: EXAMINATION, MONITORING, AND TESTING
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         A rapid systematic examination should be performed while resuscitative measures are initiated. The class of toxin involved may be suggested by characteristic combinations of symptoms and signs (so-called "toxidromes"). The "toxidrome-oriented" physical examination consists of: vital signs; level of alertness; pupil size and position; mucous membrane moisture and secretions; skin temperature and moisture; presence or absence of bowel sounds; and motor tone. Alertness can be categorized simply as alert, responsive to voice, responsive to pain, or unresponsive, which is preferred over the Glasgow Coma Scale (GCS) to characterize the mental status of a poisoned patient. The findings of this rapid initial examination may provide valuable insight into the class of toxin involved. The major toxidromes and their associated findings are summarized in the accompanying table  (
+         <a class="graphic graphic_table graphicRef71268" href="/z/d/graphic/71268.html" rel="external">
+          table 1
+         </a>
+         ). Disturbances in temperature  (
+         <a class="graphic graphic_table graphicRef55439" href="/z/d/graphic/55439.html" rel="external">
+          table 2
+         </a>
+         ), heart rate and blood pressure  (
+         <a class="graphic graphic_table graphicRef51200" href="/z/d/graphic/51200.html" rel="external">
+          table 3
+         </a>
+         ), and respiration  (
+         <a class="graphic graphic_table graphicRef64012" href="/z/d/graphic/64012.html" rel="external">
+          table 4
+         </a>
+         ) can also suggest a toxin class.
+        </p>
+        <p>
+         In addition to the findings above, the clinician should look for signs of trauma (self-inflicted or accidental), recent intravenous drug use, transdermal patches, and seizures (eg, incontinence, lateral tongue laceration). Cervical spine precautions may be needed if major trauma is suspected.
+        </p>
+        <p>
+         The clinical team should immediately obtain intravenous access, apply a cardiac monitor and pulse oximeter, and provide high flow oxygen by non-rebreather face mask, as needed. The following laboratory tests should usually be obtained:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Point-of-care capillary blood glucose
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Complete blood count
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Basic serum electrolytes, BUN, and creatinine
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Serum lactate
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Venous or arterial blood gas, including carboxyhemoglobin and methemoglobin level in appropriate circumstances (eg, smoke inhalation or cyanosis not improving with supplemental oxygen, respectively)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Serum
+         <a class="drug drug_general" data-topicid="9242" href="/z/d/drug information/9242.html" rel="external">
+          acetaminophen
+         </a>
+         and salicylate concentrations following self-harm attempt
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Electrocardiogram
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Other specific drug concentrations as indicated (eg, ethanol,
+         <a class="drug drug_general" data-topicid="10281" href="/z/d/drug information/10281.html" rel="external">
+          theophylline
+         </a>
+         ,
+         <a class="drug drug_general" data-topicid="9360" href="/z/d/drug information/9360.html" rel="external">
+          digoxin
+         </a>
+         , anti-epileptics)
+        </p>
+        <p>
+        </p>
+        <p>
+         An initial urine sample can be retained for comprehensive drug testing in a critically-ill patient with an unclear etiology, a prolonged clinical course, or an unusual clinical course (eg, multiple substances creating mixed toxicity). Unlike the commonly available urine "drug of abuse screen," which is an immunoassay that rarely alters the initial management of most patients, comprehensive drug testing requires specialized expertise and equipment, which are generally not available in most hospital laboratories and thus have long turnaround times. The first available urine sample is generally preferred, ideally obtained from the initial catheterization without intraurethral
+         <a class="drug drug_general" data-topicid="9558" href="/z/d/drug information/9558.html" rel="external">
+          lidocaine
+         </a>
+         , which may mask the presence of other substances. (See
+         <a class="medical medical_review" href="/z/d/html/13846.html" rel="external">
+          "Testing for drugs of abuse (DOAs)"
+         </a>
+         .)
+        </p>
+        <p>
+         More detailed information about these initial tests is provided separately. (See
+         <a class="medical medical_review" href="/z/d/html/324.html" rel="external">
+          "General approach to drug poisoning in adults"
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H30959732">
+         <span class="h1">
+          SYSTEMATIC EVALUATION: THE "ABCDE" APPROACH
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         We have adapted the basic "ABC" (airway, breathing, circulation) approach used in cardiac and trauma resuscitation for the initial management of the critically ill adult with an unknown overdose. The steps are organized according to the issues that pose the most immediate life threats; problems are managed immediately in the order encountered. Important modifications for the poisoned patient are described in each section below.
+        </p>
+        <p class="headingAnchor" id="H7708035">
+         <span class="h2">
+          "A": Airway stabilization
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Patients who cannot protect their airway should be tracheally intubated immediately. The evaluation of the patency or protection of the airway is discussed separately. (See
+         <a class="medical medical_review" href="/z/d/html/268.html" rel="external">
+          "The decision to intubate", section on 'Is patency or protection of the airway at risk?'
+         </a>
+         .)
+        </p>
+        <p>
+         Exceptions include suspected opioid overdose and severe hypoglycemia. If opioid toxicity is suspected  (
+         <a class="graphic graphic_table graphicRef71268" href="/z/d/graphic/71268.html" rel="external">
+          table 1
+         </a>
+         ), administer
+         <a class="drug drug_general" data-topicid="9678" href="/z/d/drug information/9678.html" rel="external">
+          naloxone
+         </a>
+         while assuring adequate oxygenation and ventilation [
+         <a href="#rid9">
+          9
+         </a>
+         ]. Use small doses initially (eg, 0.04 or 0.05 mg intravenously or 0.1 mg intramuscularly) when opioid dependence is possible and ventilation can be maintained, doubling the dose until reversal of respiratory depression is achieved. Severe hypoglycemia should also be ruled out (with a point-of-care capillary blood glucose) as a cause of depressed mental status prior to intubation. (See
+         <a class="medical medical_review" href="/z/d/html/300.html" rel="external">
+          "Acute opioid intoxication in adults", section on 'Basic measures and antidotal therapy'
+         </a>
+         .)
+        </p>
+        <p>
+         Do
+         <strong>
+          not
+         </strong>
+         routinely administer
+         <a class="drug drug_general" data-topicid="8456" href="/z/d/drug information/8456.html" rel="external">
+          flumazenil
+         </a>
+         for possible benzodiazepine overdose, as the risk benefit ratio of this agent is poor, and withdrawal seizures can develop [
+         <a href="#rid9">
+          9
+         </a>
+         ]. The use of flumazenil (and scenarios where it may be appropriate) is discussed separately. (See
+         <a class="medical medical_review" href="/z/d/html/314.html" rel="external">
+          "Benzodiazepine poisoning", section on 'Role of antidote (flumazenil)'
+         </a>
+         .)
+        </p>
+        <p>
+         Placing a nasopharyngeal airway (ie, nasal trumpet) may be sufficient to overcome upper airway obstruction from central nervous system depression (CNS) and preclude the need for tracheal intubation in a patient who has ingested a short-acting sedative (eg, ethanol, gamma-hydroxybutyrate) and whose clinical course is likely to improve. (See
+         <a class="medical medical_review" href="/z/d/html/267.html" rel="external">
+          "Basic airway management in adults", section on 'Nasopharyngeal airway'
+         </a>
+         .)
+        </p>
+        <p>
+         We do not solely use a Glasgow Coma Scale (GCS)  (
+         <a class="graphic graphic_table graphicRef81854" href="/z/d/graphic/81854.html" rel="external">
+          table 5
+         </a>
+         ) ≤8 to identify the need for tracheal intubation in an unresponsive poisoned patient who is protecting their airway, maintaining adequate oxygen saturation, hemodynamically stable, and expected to not deteriorate based on the suspected ingestion (eg, short-acting sedative such as ethanol). The GCS was developed to classify injury severity and prognosticate in patients with traumatic brain injury (TBI); a GCS ≤8 represents severe TBI and is generally used as an indication for tracheal intubation. However, unlike comatose patients with TBI, poisoned patients generally have a much better prognosis despite having a low GCS. The prognosis is particularly favorable in patients intoxicated with short-acting sedatives (eg, ethanol) since they typically present for care at or near the time of maximal CNS depression and improve rapidly if they have a patent airway and spontaneous respiration. For these patients, the risks of tracheal intubation (eg, hemodynamic instability, hypoxia, dental injury, barotrauma, ventilator-associated pneumonia) are unlikely to outweigh the expected benefit (ie, aspiration prevention). Evidence includes a multicenter trial of 225 adult patients with acute poisoning and a GCS ≤8 randomized to have selective tracheal intubation based on respiratory distress (ie, pulse oximetry &lt;90 percent despite nasal canula oxygen), seizure, vomiting, or shock (ie, systolic blood pressure &lt;90 mmHg after 1 liter of crystalloid fluid) versus routine care with permissive intubation at the discretion of the treating physician. Patients in the selective arm were less likely to undergo mechanical ventilation (18.1 versus 59.6 percent, absolute difference -42.5, 95% CI -30.9 to -54.1), less likely to be admitted to the intensive care unit (39.7 versus 66.1 percent, absolute difference -29.2, 95% CI -17.4 to -41), experienced fewer adverse events from intubation (6 versus 14.7 percent, absolute difference -8.6, 95% CI -0.7 to -16.6), less likely to develop pneumonia (5.4 versus 15 percent, absolute difference -9.6, 95% CI -17.5 to -1.7), and had a shorter hospital length of stay (median 21.5 versus 37 hours, relative risk 0.74, 95% CI 0.53-1.03); the latter finding did not achieve statistical significance [
+         <a href="#rid10">
+          10
+         </a>
+         ]
+         <strong>
+          .
+         </strong>
+         Importantly, the trial excluded patients who required immediate tracheal intubation (signs of respiratory distress, clinical suspicion of any brain injury, seizure, shock) or had cardiotoxic drug overdoses. Also, patients were young (mean age 33 years), there were no deaths, most patients ingested sedatives (ethanol was 67 percent), and almost all exposures involved substances that would be expected to have a benign course.
+        </p>
+        <p>
+         Unless the patient is moribund, rapid sequence intubation with pre-oxygenation and neuromuscular blockade is typically the best approach to securing the airway [
+         <a href="#rid11">
+          11
+         </a>
+         ].
+         <a class="drug drug_general" data-topicid="9872" href="/z/d/drug information/9872.html" rel="external">
+          Rocuronium
+         </a>
+         is preferred over
+         <a class="drug drug_general" data-topicid="9952" href="/z/d/drug information/9952.html" rel="external">
+          succinylcholine
+         </a>
+         in cases of suspected organophosphate poisoning and acute
+         <a class="drug drug_general" data-topicid="9360" href="/z/d/drug information/9360.html" rel="external">
+          digoxin
+         </a>
+         toxicity. In organophosphate poisoning, succinylcholine may have a markedly prolonged duration of action, as the cholinesterases which degrade it are inactivated by the toxin. Digoxin poisoning may produce hyperkalemia, a contraindication to succinylcholine use. (See
+         <a class="medical medical_review" href="/z/d/html/270.html" rel="external">
+          "Rapid sequence intubation in adults for emergency medicine and critical care"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/339.html" rel="external">
+          "Organophosphate and carbamate poisoning", section on 'Initial resuscitation'
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/319.html" rel="external">
+          "Digitalis (cardiac glycoside) poisoning", section on 'Management'
+         </a>
+         .)
+        </p>
+        <p>
+         Patients with a caustic ingestion who manifest stridor and drooling are ideally tracheally intubated early by the most experienced clinician available using an awake approach. An alternate strategy for securing the airway, and the means to establish a surgical airway if necessary, must be immediately available. (See
+         <a class="medical medical_review" href="/z/d/html/275.html" rel="external">
+          "Approach to the difficult airway in adults for emergency medicine and critical care", section on 'Awake techniques'
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H7708061">
+         <span class="h2">
+          "B": Breathing
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Administer supplemental oxygen as needed to all critically ill patients with a suspected overdose. End tidal carbon dioxide monitoring (ie, capnography) can provide information regarding adequacy of ventilation in obtunded or unconscious patients, especially since the administration of supplemental oxygen renders pulse oximetry less effective as an early warning device for hypoventilation. (See
+         <a class="medical medical_review" href="/z/d/html/273.html" rel="external">
+          "Carbon dioxide monitoring (capnography)"
+         </a>
+         .)
+        </p>
+        <p>
+         Several toxins interfere with oxygenation and ventilation. Carbon monoxide poisoning can cause severe hypoxia despite falsely normal pulse oximetry readings. In cases of methemoglobinemia, the pulse oximeter may read around 85 percent despite visible cyanosis. Other toxicologic causes of cellular hypoxia despite normal oxygen saturation include cyanide, hydrogen sulfide, and sodium azide. Patients with profound tissue hypoxia from these toxins require endotracheal intubation and mechanical ventilation using 100 percent oxygen. (See
+         <a class="medical medical_review" href="/z/d/html/322.html" rel="external">
+          "Carbon monoxide poisoning"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/7094.html" rel="external">
+          "Methemoglobinemia"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/299.html" rel="external">
+          "Cyanide poisoning"
+         </a>
+         .)
+        </p>
+        <p>
+         Patients with
+         <a class="drug drug_general" data-topicid="8907" href="/z/d/drug information/8907.html" rel="external">
+          aspirin
+         </a>
+         poisoning are initially tachypneic and hyperpneic due to the stimulatory effects of aspirin upon the respiratory center of the medulla. This hyperventilation is beneficial, and intubation should be avoided if possible because it is difficult to replicate such high minute ventilation with mechanical ventilation. Nevertheless, patients unable to protect their airway must be intubated and hyperventilated. Severe aspirin poisoning can cause precipitous decompensation and death shortly after intubation, and such patients require specific and aggressive resuscitation, including treatment with
+         <a class="drug drug_general" data-topicid="9928" href="/z/d/drug information/9928.html" rel="external">
+          sodium bicarbonate
+         </a>
+         , high minute ventilation, and immediate hemodialysis. (See
+         <a class="medical medical_review" href="/z/d/html/140354.html" rel="external">
+          "Salicylate (aspirin) poisoning: Management", section on 'ABCs and supportive care'
+         </a>
+         .)
+        </p>
+        <p>
+         Patients with profound metabolic acidosis due to other toxins (eg, methanol, ethylene glycol) can also develop extremely high compensatory minute ventilation. These patients may be acidemic despite a PaCO
+         <sub>
+          2
+         </sub>
+         near 10 mmHg. When this high minute ventilation rate slows (eg, due to seizures, fatigue, or iatrogenic sedation or paralysis), the arterial pH falls abruptly, sometimes well below 7. As such, patients with severe metabolic acidosis due to poisoning are at risk of decompensating rapidly from respiratory failure. Such patients should be intubated for any sign of impending respiratory failure, either clinically or on blood gas testing. A seemingly normal PaCO
+         <sub>
+          2
+         </sub>
+         of 30 to 40 mmHg in the face of a severe metabolic acidosis is evidence of respiratory failure. (See
+         <a class="medical medical_review" href="/z/d/html/126052.html" rel="external">
+          "Methanol and ethylene glycol poisoning: Management", section on 'Overview of management'
+         </a>
+         .)
+        </p>
+        <p>
+         When intubating hyperpneic patients with severe metabolic acidosis, we suggest the following approach:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Administer one to three 50 mL amps of 7.5 to 8.4 percent
+         <a class="drug drug_general" data-topicid="9928" href="/z/d/drug information/9928.html" rel="external">
+          sodium bicarbonate
+         </a>
+         via intravenous bolus before and after intubation.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Avoid sedation until just prior to tracheal intubation.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Optimize the likelihood of first-pass success by using neuromuscular blockade and sound technique; the most experienced intubator available should perform the procedure. (See
+         <a class="medical medical_review" href="/z/d/html/270.html" rel="external">
+          "Rapid sequence intubation in adults for emergency medicine and critical care"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/260.html" rel="external">
+          "Direct laryngoscopy and endotracheal intubation in adults"
+         </a>
+         .)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Maximize minute ventilation once intubated, while following peak airway pressures and arterial blood gases. Initial settings could be 12 mL/kg at 20 breaths per minute for an adult, with frequent reassessment of acidemia and signs of barotrauma. As the acidosis resolves, minute ventilation should be reduced. (See
+         <a class="medical medical_review" href="/z/d/html/277.html" rel="external">
+          "Mechanical ventilation of adults in the emergency department"
+         </a>
+         .)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Organize immediate hemodialysis if a dialyzable toxin (eg,
+         <a class="drug drug_general" data-topicid="8907" href="/z/d/drug information/8907.html" rel="external">
+          aspirin
+         </a>
+         , methanol, ethylene glycol) is responsible.
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H7708080">
+         <span class="h2">
+          "C": Circulation
+         </span>
+        </p>
+        <p class="headingAnchor" id="H1941839">
+         <span class="h3">
+          Asystole and ventricular fibrillation
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Asystole and ventricular fibrillation are managed according to standard ACLS protocols  (
+         <a class="graphic graphic_algorithm graphicRef129983" href="/z/d/graphic/129983.html" rel="external">
+          algorithm 1
+         </a>
+         ). (See
+         <a class="medical medical_review" href="/z/d/html/278.html" rel="external">
+          "Advanced cardiac life support (ACLS) in adults", section on 'Pulseless ventricular tachycardia and ventricular fibrillation'
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/278.html" rel="external">
+          "Advanced cardiac life support (ACLS) in adults", section on 'Asystole and pulseless electrical activity'
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H1941846">
+         <span class="h3">
+          Hypotension
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Hypotension is treated with a rapid intravenous (IV) infusion of up to 2 L of isotonic crystalloid, followed by a
+         <a class="drug drug_general" data-topicid="9709" href="/z/d/drug information/9709.html" rel="external">
+          norepinephrine
+         </a>
+         infusion or small boluses of
+         <a class="drug drug_general" data-topicid="9768" href="/z/d/drug information/9768.html" rel="external">
+          phenylephrine
+         </a>
+         , pending more specific information (eg, bedside echocardiography, point-of-care ultrasonography) to guide therapy. (See
+         <a class="medical medical_review" href="/z/d/html/98976.html" rel="external">
+          "Evaluation of and initial approach to the adult patient with undifferentiated hypotension and shock"
+         </a>
+         .)
+        </p>
+        <p>
+         At times, the dose of vasopressor or inotrope needed to achieve a response may be much higher than doses used for non-poisoned patients [
+         <a href="#rid12">
+          12
+         </a>
+         ]. Circulatory assist devices (eg, intraaortic balloon pump) and extracorporeal life support (eg, circulatory bypass pump or veno-arterial extracorporeal membrane oxygenation) may be needed in refractory shock [
+         <a href="#rid13">
+          13,14
+         </a>
+         ]. Ingestions that have been successfully managed with extracorporeal life support are listed in the table  (
+         <a class="graphic graphic_table graphicRef140779" href="/z/d/graphic/140779.html" rel="external">
+          table 6
+         </a>
+         ). (See
+         <a class="medical medical_review" href="/z/d/html/1625.html" rel="external">
+          "Extracorporeal life support in adults in the intensive care unit: Overview"
+         </a>
+         .)
+        </p>
+        <p>
+         Selected antidotes can be administered empirically to hypotensive patients when circumstances suggest a specific etiology. A list of these antidotes with empiric dosing guidelines is provided  (
+         <a class="graphic graphic_table graphicRef66622" href="/z/d/graphic/66622.html" rel="external">
+          table 7
+         </a>
+         ).
+        </p>
+        <p>
+         Despite numerous case reports of its use for refractory shock, there is scant evidence of benefit for lipid emulsion therapy when used for drug toxicity other than local anesthetics, and its routine use is not recommended [
+         <a href="#rid15">
+          15,16
+         </a>
+         ].
+         <a class="drug drug_general" data-topicid="9636" href="/z/d/drug information/9636.html" rel="external">
+          Methylene blue
+         </a>
+         has also been proposed for empirical use to treat refractory shock in overdose based on a similarly limited evidence base [
+         <a href="#rid17">
+          17
+         </a>
+         ]. (See
+         <a class="medical medical_review" href="/z/d/html/331.html" rel="external">
+          "Calcium channel blocker poisoning", section on 'Lipid emulsion therapy'
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/90613.html" rel="external">
+          "Local anesthetic systemic toxicity"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/7094.html" rel="external">
+          "Methemoglobinemia", section on 'Methylene blue (MB)'
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H1941853">
+         <span class="h3">
+          Bradycardia with hypotension
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Bradycardia with hypotension suggests an overdose with
+         <a class="drug drug_general" data-topicid="9360" href="/z/d/drug information/9360.html" rel="external">
+          digoxin
+         </a>
+         , calcium channel blockers, or beta blockers. Digoxin toxicity may be characterized by increased automaticity, depressed AV nodal conduction, characteristic repolarization changes, and gastrointestinal symptoms. Beta-blocker toxicity can be accompanied by hypoglycemia and, in the case of
+         <a class="drug drug_general" data-topicid="9829" href="/z/d/drug information/9829.html" rel="external">
+          propranolol
+         </a>
+         , sodium channel blockade with widening of the QRS complex and seizures. Overdose with calcium channel blockers usually causes hyperglycemia and a relatively well-preserved mental status despite hypotension. Specific therapy for each agent is available and discussed separately. (See
+         <a class="medical medical_review" href="/z/d/html/319.html" rel="external">
+          "Digitalis (cardiac glycoside) poisoning"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/328.html" rel="external">
+          "Dosing regimen for digoxin-specific antibody (Fab) fragments in patients with digoxin toxicity"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/331.html" rel="external">
+          "Calcium channel blocker poisoning", section on 'Management'
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/330.html" rel="external">
+          "Beta blocker poisoning", section on 'Management'
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H1941860">
+         <span class="h3">
+          Monomorphic, wide-complex tachycardia
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Monomorphic, wide-complex tachycardia in the setting of poisoning is commonly supraventricular in origin with aberrancy due to sodium channel blockade. Many poisons can cause sodium channel blockade, including tricyclic antidepressants, antihistamines, Type IA antiarrhythmics, and cocaine. The treatment is
+         <a class="drug drug_general" data-topicid="9928" href="/z/d/drug information/9928.html" rel="external">
+          sodium bicarbonate
+         </a>
+         50 to 100 mEq given as an intravenous (IV) bolus, and repeated as necessary, until the QRS interval is &lt;100 msec in the limb leads, or until arterial pH approaches 7.55. Other Type I antiarrhythmics (eg,
+         <a class="drug drug_general" data-topicid="9813" href="/z/d/drug information/9813.html" rel="external">
+          procainamide
+         </a>
+         ) should be avoided. (See
+         <a class="medical medical_review" href="/z/d/html/295.html" rel="external">
+          "Tricyclic antidepressant poisoning", section on 'Sodium bicarbonate for cardiac toxicity'
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/305.html" rel="external">
+          "Anticholinergic poisoning"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/303.html" rel="external">
+          "Cocaine: Acute intoxication"
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H1941867">
+         <span class="h3">
+          Polymorphic ventricular tachycardia
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Polymorphic ventricular tachycardia (torsade de pointes) is occasionally seen following overdose with Types IA, IC, and III antiarrhythmics;
+         <a class="drug drug_general" data-topicid="9752" href="/z/d/drug information/9752.html" rel="external">
+          pentamidine
+         </a>
+         ; antipsychotics; arsenicals; antifungals; and antihistamines. This arrhythmia is treated with 2 g
+         <a class="drug drug_general" data-topicid="9585" href="/z/d/drug information/9585.html" rel="external">
+          magnesium sulfate
+         </a>
+         IV given over two to five minutes. Up to two additional doses may be given as needed. Overdrive pacing with
+         <a class="drug drug_general" data-topicid="8578" href="/z/d/drug information/8578.html" rel="external">
+          isoproterenol
+         </a>
+         or overdrive electrical pacing may also be used, as bradycardia potentiates this arrhythmia [
+         <a href="#rid18">
+          18
+         </a>
+         ]. (See
+         <a class="medical medical_review" href="/z/d/html/278.html" rel="external">
+          "Advanced cardiac life support (ACLS) in adults", section on 'Irregular wide complex'
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H1941874">
+         <span class="h3">
+          Narrow complex tachycardia
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Narrow complex tachycardia and hypertension due to drug overdose or withdrawal are usually due to hyperadrenergic states, as seen with cocaine, amphetamine, and other sympathomimetics. Treatment consists primarily of benzodiazepines, and perhaps
+         <a class="drug drug_general" data-topicid="9767" href="/z/d/drug information/9767.html" rel="external">
+          phentolamine
+         </a>
+         for severe hypertension [
+         <a href="#rid19">
+          19,20
+         </a>
+         ]. Refractory hypertension may also be treated with
+         <a class="drug drug_general" data-topicid="9706" href="/z/d/drug information/9706.html" rel="external">
+          nitroglycerin
+         </a>
+         (in the setting of cardiac ischemia),
+         <a class="drug drug_general" data-topicid="8911" href="/z/d/drug information/8911.html" rel="external">
+          clevidipine
+         </a>
+         ,
+         <a class="drug drug_general" data-topicid="9697" href="/z/d/drug information/9697.html" rel="external">
+          nicardipine
+         </a>
+         , or
+         <a class="drug drug_general" data-topicid="9707" href="/z/d/drug information/9707.html" rel="external">
+          nitroprusside
+         </a>
+         . Beta-blockers and antipsychotics should be avoided [
+         <a href="#rid21">
+          21,22
+         </a>
+         ]. Synchronized cardioversion is rarely effective. (See
+         <a class="medical medical_review" href="/z/d/html/303.html" rel="external">
+          "Cocaine: Acute intoxication", section on 'Initial management'
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/311.html" rel="external">
+          "Methamphetamine: Acute intoxication", section on 'Management'
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H7708122">
+         <span class="h2">
+          "D": Disability and neurological stabilization
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Once the airway, breathing, and circulation are secured, attention is next directed towards neurologic stabilization. The so-called "coma cocktail" of dextrose, oxygen,
+         <a class="drug drug_general" data-topicid="9678" href="/z/d/drug information/9678.html" rel="external">
+          naloxone
+         </a>
+         , and
+         <a class="drug drug_general" data-topicid="9988" href="/z/d/drug information/9988.html" rel="external">
+          thiamine
+         </a>
+         given empirically is an outdated concept and has been replaced by selective use of each component as necessary [
+         <a href="#rid9">
+          9,23
+         </a>
+         ]. Hypoglycemia can present as
+         <strong>
+          any
+         </strong>
+         alteration of mental status, including confusion, seizures, focal deficits, and coma. Treat these symptoms with
+         <a class="drug drug_general" data-topicid="8711" href="/z/d/drug information/8711.html" rel="external">
+          intravenous dextrose
+         </a>
+         when the glucometer reports a low or low-normal capillary blood glucose.
+        </p>
+        <p>
+         <a class="drug drug_general" data-topicid="9678" href="/z/d/drug information/9678.html" rel="external">
+          Naloxone
+         </a>
+         is indicated for the reversal of respiratory depression in the setting of known or suspected opioid toxicity (see
+         <a class="medical medical_review" href="/z/d/html/300.html" rel="external">
+          "Acute opioid intoxication in adults", section on 'Basic measures and antidotal therapy'
+         </a>
+         ).
+         <a class="drug drug_general" data-topicid="8456" href="/z/d/drug information/8456.html" rel="external">
+          Flumazenil
+         </a>
+         should
+         <strong>
+          not
+         </strong>
+         be used, even when benzodiazepine toxicity is suspected, because it can precipitate benzodiazepine withdrawal, causing seizures (see
+         <a class="medical medical_review" href="/z/d/html/314.html" rel="external">
+          "Benzodiazepine poisoning", section on 'Role of antidote (flumazenil)'
+         </a>
+         ).
+         <a class="drug drug_general" data-topicid="9988" href="/z/d/drug information/9988.html" rel="external">
+          Thiamine
+         </a>
+         may be administered safely before glucose, but is unlikely to reverse coma [
+         <a href="#rid24">
+          24
+         </a>
+         ].
+         <a class="drug drug_general" data-topicid="9770" href="/z/d/drug information/9770.html" rel="external">
+          Physostigmine
+         </a>
+         is no longer used as a non-specific analeptic but does play a selected role in the management of anticholinergic (antimuscarinic) poisoning. (See
+         <a class="medical medical_review" href="/z/d/html/305.html" rel="external">
+          "Anticholinergic poisoning", section on 'Antidotal therapy with physostigmine for severe toxicity'
+         </a>
+         .)
+        </p>
+        <p>
+         Seizures due to poisoning or withdrawal are best treated with escalating doses of benzodiazepines (eg,
+         <a class="drug drug_general" data-topicid="9345" href="/z/d/drug information/9345.html" rel="external">
+          diazepam
+         </a>
+         5 mg IV, repeated and doubled every 5 to 10 minutes as necessary for refractory seizures)  (
+         <a class="graphic graphic_table graphicRef54610" href="/z/d/graphic/54610.html" rel="external">
+          table 8
+         </a>
+         ).
+         <a class="drug drug_general" data-topicid="9769" href="/z/d/drug information/9769.html" rel="external">
+          Phenytoin
+         </a>
+         is usually ineffective and can cause toxicity due to the propylene glycol solvent.
+         <a class="drug drug_general" data-topicid="9826" href="/z/d/drug information/9826.html" rel="external">
+          Propofol
+         </a>
+         has superseded the barbiturates and inhalational anesthetics as second-line therapy for benzodiazepine-resistant seizures [
+         <a href="#rid25">
+          25
+         </a>
+         ]. When seizures are likely due to sodium channel blockade, intravenous
+         <a class="drug drug_general" data-topicid="9928" href="/z/d/drug information/9928.html" rel="external">
+          sodium bicarbonate
+         </a>
+         should be administered in addition to benzodiazepines. Dosing is described above (see
+         <a class="local">
+          '"C": Circulation'
+         </a>
+         above). High doses of
+         <a class="drug drug_general" data-topicid="9839" href="/z/d/drug information/9839.html" rel="external">
+          pyridoxine
+         </a>
+         (5 g IV) should be given to patients in status epilepticus believed to be caused by
+         <a class="drug drug_general" data-topicid="8577" href="/z/d/drug information/8577.html" rel="external">
+          isoniazid
+         </a>
+         overdose or monomethylhydrazine poisoning (eg, Gyromitra mushrooms). (See
+         <a class="medical medical_review" href="/z/d/html/316.html" rel="external">
+          "Isoniazid (INH) poisoning"
+         </a>
+         .)
+        </p>
+        <p>
+         Causes other than overdose may be responsible for coma or depressed mental status in the poisoned patient. This is discussed separately. (See
+         <a class="medical medical_review" href="/z/d/html/5104.html" rel="external">
+          "Stupor and coma in adults"
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H7708157">
+         <span class="h2">
+          "E": Exposure and elimination
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         This phase of management aims to remove clothing, transdermal medication patches, and other external contaminants, to measure core temperature and treat hypothermia or hyperthermia as necessary, to identify self-inflicted or accidental trauma, and to search personal items for concealed drugs, weapons of self-harm, or clues regarding medical history and the nature of the overdose.
+        </p>
+        <p>
+         Severe hyperthermia (greater than 40°C) usually requires paralysis, sedation, and ice bath cooling (see
+         <a class="medical medical_review" href="/z/d/html/176.html" rel="external">
+          "Severe nonexertional hyperthermia (classic heat stroke) in adults", section on 'Management'
+         </a>
+         ). Severe hypothermia (less than 30°C) is also treated aggressively with rapid rewarming (see
+         <a class="medical medical_review" href="/z/d/html/178.html" rel="external">
+          "Accidental hypothermia in adults", section on 'Management'
+         </a>
+         ). Therapeutic hypothermia should be administered to unconscious patients with return of spontaneous circulation after circulatory arrest. (See
+         <a class="medical medical_review" href="/z/d/html/13838.html" rel="external">
+          "Initial assessment and management of the adult post-cardiac arrest patient", section on 'Temperature management'
+         </a>
+         .)
+        </p>
+        <p>
+         Methods of enhancing the elimination of poisons, such as gastric lavage, activated charcoal, whole bowel irrigation, and hemodialysis, may be helpful for selected patients (see
+         <a class="medical medical_review" href="/z/d/html/321.html" rel="external">
+          "Gastrointestinal decontamination of the poisoned patient"
+         </a>
+         ). Circumstances may suggest the presence of concealed drug packages in the GI tract or vagina. (See
+         <a class="medical medical_review" href="/z/d/html/327.html" rel="external">
+          "Internal concealment of drugs of abuse (body packing)"
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H7708176">
+         <span class="h1">
+          CESSATION OF RESUSCITATIVE EFFORTS
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Unlike most cardiac arrest patients, prolonged resuscitation efforts are not necessarily futile for poisoned patients [
+         <a href="#rid26">
+          26-28
+         </a>
+         ]. Neurologically intact survival after more than 60 minutes of pulseless arrest and external chest compressions is possible [
+         <a href="#rid29">
+          29-31
+         </a>
+         ]. Prolonged resuscitative efforts including extracorporeal circulatory assistance may be warranted for previously healthy patients with witnessed cardiac arrest following drug overdose [
+         <a href="#rid13">
+          13,32
+         </a>
+         ]. Even if neurologic recovery is not possible, selected patients poisoned with neurotoxins such as methanol, carbon monoxide, and cyanide can serve as organ donors.
+        </p>
+        <p class="headingAnchor" id="H7532088">
+         <span class="h1">
+          ADDITIONAL RESOURCES
+         </span>
+        </p>
+        <p class="headingAnchor" id="H169071877">
+         <span class="h2">
+          Regional poison control centers
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Regional poison control centers in the United States are available at all times for consultation on patients with known or suspected poisoning, and who may be critically ill, require admission, or have clinical pictures that are unclear (1-800-222-1222). In addition, some hospitals have medical toxicologists available for bedside consultation. Whenever available, these are invaluable resources to help in the diagnosis and management of ingestions or overdoses. Contact information for poison centers around the world is provided separately. (See
+         <a class="medical medical_society_guidelines" href="/z/d/html/138307.html" rel="external">
+          "Society guideline links: Regional poison control centers"
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H3885897043">
+         <span class="h2">
+          Society guideline links
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Links to society and government-sponsored guidelines from selected countries and regions around the world are provided separately. (See
+         <a class="medical medical_society_guidelines" href="/z/d/html/112689.html" rel="external">
+          "Society guideline links: General measures for acute poisoning treatment"
+         </a>
+         and
+         <a class="medical medical_society_guidelines" href="/z/d/html/114014.html" rel="external">
+          "Society guideline links: Treatment of acute poisoning caused by specific agents other than drugs of abuse"
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H7708202">
+         <span class="h1">
+          SUMMARY AND RECOMMENDATIONS
+         </span>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Protection of clinicians and emergency department (ED)
+         </strong>
+         – While resuscitating a critically ill adult with an unknown poisoning, the clinician must preserve the operational capacity of the emergency health care system and ensure the safety of health care workers. In addition to multiple casualty scenarios, even a single patient contaminated or potentially contaminated with a highly potent toxin can disable an entire ED. (See
+         <a class="local">
+          'First priorities'
+         </a>
+         above and
+         <a class="local">
+          'Initial data acquisition'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Examination and identification of toxin
+         </strong>
+         – During the resuscitation, characteristic combinations of selected findings (so called "toxidromes")  (
+         <a class="graphic graphic_table graphicRef71268" href="/z/d/graphic/71268.html" rel="external">
+          table 1
+         </a>
+         ) should be rapidly sought, including: vital signs; level of alertness; pupil size and position; mucous membrane moisture and secretions; skin temperature and moisture; presence or absence of bowel sounds; and motor tone. Diagnostic tests to be obtained as part of the initial evaluation are described in the text. (See
+         <a class="local">
+          'Rapid first look: Examination, monitoring, and testing'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Management
+         </strong>
+         – A systematic approach is essential to the resuscitation of the critically ill adult with an unknown overdose and can be adapted from the basic "ABC" (airway, breathing, circulation) scheme used for cardiac arrest and trauma patients. An exception is that we do not solely use a Glasgow Coma Scale ≤8 to identify the need for tracheal intubation in an unresponsive poisoned patient who is protecting their airway, maintaining adequate oxygen saturation, hemodynamically stable, and expected to not deteriorate based on the suspected ingestion. The steps are organized according to the issues that pose the most immediate life threats: airway, breathing, circulation, disability (neurologic stabilization), and exposure &amp; elimination. Problems are managed immediately and concurrently as identified. (See
+         <a class="local">
+          'Systematic evaluation: The "ABCDE" approach'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Prolonged resuscitation
+         </strong>
+         – Unlike most cardiac arrest patients, prolonged resuscitation efforts are not necessarily futile for poisoned patients. Neurologically intact survival after more than 60 minutes of pulseless arrest and external chest compressions is possible in some instances. (See
+         <a class="local">
+          'Cessation of resuscitative efforts'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H171460511">
+         <span class="h1">
+          ACKNOWLEDGMENT
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The UpToDate editorial staff acknowledges Stephen J Traub, MD, former section editor of the toxicology program, for 20 years of dedicated service.
+        </p>
+       </div>
+       <div class="headingAnchor" id="references">
+        <ol id="reference">
+         <li>
+          <a class="nounderline abstract_t">
+           Tanz LJ, Dinwiddie AT, Mattson CL, et al. Drug Overdose Deaths Among Persons Aged 10-19 Years - United States, July 2019-December 2021. MMWR Morb Mortal Wkly Rep 2022; 71:1576.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Spencer MR, Miniño AM, Warner M. Drug Overdose Deaths in the United States, 2001-2021. NCHS Data Brief 2022; :1.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Albertson TE, Dawson A, de Latorre F, et al. TOX-ACLS: toxicologic-oriented advanced cardiac life support. Ann Emerg Med 2001; 37:S78.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Panchal AR, Bartos JA, Cabañas JG, et al. Part 3: Adult Basic and Advanced Life Support: 2020 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation 2020; 142:S366.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Traub SJ, Hoffman RS, Nelson LS. Body packing--the internal concealment of illicit drugs. N Engl J Med 2003; 349:2519.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Del Pozo B, Sightes E, Kang S, et al. Can touch this: training to correct police officer beliefs about overdose from incidental contact with fentanyl. Health Justice 2021; 9:34.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Moss MJ, Warrick BJ, Nelson LS, et al. ACMT and AACT Position Statement: Preventing Occupational Fentanyl and Fentanyl Analog Exposure to Emergency Responders. J Med Toxicol 2017; 13:347.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           De Groot R, Van Zoelen GA, Leenders MEC, et al. Is secondary chemical exposure of hospital personnel of clinical importance? Clin Toxicol (Phila) 2021; 59:269.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Sivilotti ML. Flumazenil, naloxone and the 'coma cocktail'. Br J Clin Pharmacol 2016; 81:428.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Freund Y, Viglino D, Cachanado M, et al. Effect of Noninvasive Airway Management of Comatose Patients With Acute Poisoning: A Randomized Clinical Trial. JAMA 2023; 330:2267.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Adnet F, Borron SW, Finot MA, et al. Intubation difficulty in poisoned patients: association with initial Glasgow Coma Scale score. Acad Emerg Med 1998; 5:123.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Skoog CA, Engebretsen KM. Are vasopressors useful in toxin-induced cardiogenic shock? Clin Toxicol (Phila) 2017; 55:285.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           de Lange DW, Sikma MA, Meulenbelt J. Extracorporeal membrane oxygenation in the treatment of poisoned patients. Clin Toxicol (Phila) 2013; 51:385.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Upchurch C, Blumenberg A, Brodie D, et al. Extracorporeal membrane oxygenation use in poisoning: a narrative review with clinical recommendations. Clin Toxicol (Phila) 2021; 59:877.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Gosselin S, Hoegberg LC, Hoffman RS, et al. Evidence-based recommendations on the use of intravenous lipid emulsion therapy in poisoning(). Clin Toxicol (Phila) 2016; 54:899.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Levine M, Hoffman RS, Lavergne V, et al. Systematic review of the effect of intravenous lipid emulsion therapy for non-local anesthetics toxicity. Clin Toxicol (Phila) 2016; 54:194.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Warrick BJ, Tataru AP, Smolinske S. A systematic analysis of methylene blue for drug-induced shock. Clin Toxicol (Phila) 2016; 54:547.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Chan A, Isbister GK, Kirkpatrick CM, Dufful SB. Drug-induced QT prolongation and torsades de pointes: evaluation of a QT nomogram. QJM 2007; 100:609.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Burns MJ, Dickson EW, Sivilotti ML, Cuenoud H. Phentolamine reduces myocardial injury and mortality in a rat model of phenylpropanolamine poisoning. J Toxicol Clin Toxicol 2001; 39:129.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Wood DM, Dargan PI, Hoffman RS. Management of cocaine-induced cardiac arrhythmias due to cardiac ion channel dysfunction. Clin Toxicol (Phila) 2009; 47:14.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Wu S, Pearl-Davis MS, Manini AF, Hoffman RS. Use of antipsychotics to treat cocaine toxicity? Acad Emerg Med 2008; 15:105; author reply 106.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Hoffman RS. Cocaine and beta-blockers: should the controversy continue? Ann Emerg Med 2008; 51:127.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Hoffman RS, Goldfrank LR. The poisoned patient with altered consciousness. Controversies in the use of a 'coma cocktail'. JAMA 1995; 274:562.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Jackson R, Teece S. Best evidence topic report. Oral or intravenous thiamine in the emergency department. Emerg Med J 2004; 21:501.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Fletcher ML, Sarangarm P, Nash J, et al. A systematic review of second line therapies in toxic seizures. Clin Toxicol (Phila) 2021; 59:451.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Morrison LJ, Verbeek PR, Zhan C, et al. Validation of a universal prehospital termination of resuscitation clinical prediction rule for advanced and basic life support providers. Resuscitation 2009; 80:324.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Kellermann AL, Hackman BB, Somes G. Predicting the outcome of unsuccessful prehospital advanced cardiac life support. JAMA 1993; 270:1433.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Bonnin MJ, Pepe PE, Kimball KT, Clark PS Jr. Distinct criteria for termination of resuscitation in the out-of-hospital setting. JAMA 1993; 270:1457.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Ramsay ID. Survival after imipramine poisoning. Lancet 1967; 2:1308.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Southall DP, Kilpatrick SM. Imipramine poisoning: survival of a child after prolonged cardiac massage. Br Med J 1974; 4:508.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Orr DA, Bramble MG. Tricyclic antidepressant poisoning and prolonged external cardiac massage during asystole. Br Med J (Clin Res Ed) 1981; 283:1107.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           International Liaison Committee on Resuscitation. 2005 International Consensus on Cardiopulmonary Resuscitation and Emergency Cardiovascular Care Science with Treatment Recommendations. Part 4: Advanced life support. Resuscitation 2005; 67:213.
+          </a>
+         </li>
+        </ol>
+       </div>
+       <div id="topicVersionRevision">
+        Topic 13850 Version 31.0
+       </div>
+      </div>
+      <div class="row">
+       <div class="col-12">
+        <h4 style="text-align: center;padding: 20px;color: cadetblue;">
+         References
+        </h4>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/36520659" id="rid0" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          1 : Drug Overdose Deaths Among Persons Aged 10-19 Years - United States, July 2019-December 2021.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/36598401" id="rid1" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          2 : Drug Overdose Deaths in the United States, 2001-2021.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/11290973" id="rid2" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          3 : TOX-ACLS: toxicologic-oriented advanced cardiac life support.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/33081529" id="rid3" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          4 : Part 3: Adult Basic and Advanced Life Support: 2020 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/14695412" id="rid4" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          5 : Body packing--the internal concealment of illicit drugs.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/34817717" id="rid5" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          6 : Can touch this: training to correct police officer beliefs about overdose from incidental contact with fentanyl.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/28842825" id="rid6" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          7 : ACMT and AACT Position Statement: Preventing Occupational Fentanyl and Fentanyl Analog Exposure to Emergency Responders.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/33448889" id="rid7" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          8 : Is secondary chemical exposure of hospital personnel of clinical importance?
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/26469689" id="rid8" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          9 : Flumazenil, naloxone and the 'coma cocktail'.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/38019968" id="rid9" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          10 : Effect of Noninvasive Airway Management of Comatose Patients With Acute Poisoning: A Randomized Clinical Trial.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/9492132" id="rid10" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          11 : Intubation difficulty in poisoned patients: association with initial Glasgow Coma Scale score.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/28152638" id="rid11" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          12 : Are vasopressors useful in toxin-induced cardiogenic shock?
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/23697460" id="rid12" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          13 : Extracorporeal membrane oxygenation in the treatment of poisoned patients.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/34396873" id="rid13" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          14 : Extracorporeal membrane oxygenation use in poisoning: a narrative review with clinical recommendations.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/27608281" id="rid14" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          15 : Evidence-based recommendations on the use of intravenous lipid emulsion therapy in poisoning().
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/26852931" id="rid15" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          16 : Systematic review of the effect of intravenous lipid emulsion therapy for non-local anesthetics toxicity.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/27196698" id="rid16" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          17 : A systematic analysis of methylene blue for drug-induced shock.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/17881416" id="rid17" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          18 : Drug-induced QT prolongation and torsades de pointes: evaluation of a QT nomogram.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/11407498" id="rid18" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          19 : Phentolamine reduces myocardial injury and mortality in a rat model of phenylpropanolamine poisoning.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/18815938" id="rid19" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          20 : Management of cocaine-induced cardiac arrhythmias due to cardiac ion channel dysfunction.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/18211326" id="rid20" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          21 : Use of antipsychotics to treat cocaine toxicity?
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/17889405" id="rid21" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          22 : Cocaine and beta-blockers: should the controversy continue?
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/7629986" id="rid22" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          23 : The poisoned patient with altered consciousness. Controversies in the use of a 'coma cocktail'.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/15208245" id="rid23" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          24 : Best evidence topic report. Oral or intravenous thiamine in the emergency department.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/33755521" id="rid24" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          25 : A systematic review of second line therapies in toxic seizures.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/19150167" id="rid25" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          26 : Validation of a universal prehospital termination of resuscitation clinical prediction rule for advanced and basic life support providers.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/8371442" id="rid26" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          27 : Predicting the outcome of unsuccessful prehospital advanced cardiac life support.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/8204131" id="rid27" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          28 : Distinct criteria for termination of resuscitation in the out-of-hospital setting.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/4168633" id="rid28" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          29 : Survival after imipramine poisoning.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/4434118" id="rid29" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          30 : Imipramine poisoning: survival of a child after prolonged cardiac massage.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/6794780" id="rid30" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          31 : Tricyclic antidepressant poisoning and prolonged external cardiac massage during asystole.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/16324990" id="rid31" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          32 : 2005 International Consensus on Cardiopulmonary Resuscitation and Emergency Cardiovascular Care Science with Treatment Recommendations. Part 4: Advanced life support.
+         </p>
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </section>
+  <!-- End Main Menu Area -->
+  <!-- Start Search Popup Area -->
+  <!-- End Footer Area -->
+  <!-- Back to top -->
+  <a class="scrolltop" href="#top">
+   <i class="icofont-hand-drawn-up">
+   </i>
+  </a>
+  <!-- End Back to top -->
+  <!-- jQuery Min JS -->
+  <!-- Prpper JS -->
+  <!-- Bootstrap Min JS -->
+  <!-- Classy Nav Min Js -->
+  <!-- Owl Carousel Min Js -->
+  <!-- Magnific Popup JS -->
+  <!-- CounterUp JS -->
+  <!-- Waypoints JS -->
+  <!-- Form Validator Min JS -->
+  <!-- Contact Form Min JS -->
+  <!-- Main JS -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+ </body>
 </html>

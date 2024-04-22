@@ -1,387 +1,488 @@
 <!DOCTYPE html>
-
 <html lang="fa">
-<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
-<head><title>Calculator: Thrombolysis in Myocardial Infarction (TIMI) score for ST elevation MI in adults</title><link href="/z/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/z/d/css/icofont.min.css" rel="stylesheet"/><link href="/z/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/z/d/css/animate.css" rel="stylesheet"/><link href="/z/d/css/owl.carousel.css" rel="stylesheet"/><link href="/z/d/css/magnific-popup.css" rel="stylesheet"/><link href="/z/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/z/d/css/style.css" rel="stylesheet"/><link href="/z/d/css/rtl_edited.css" rel="stylesheet"/><link href="/z/d/css/responsive.css" rel="stylesheet"/><link href="https:///uptodate_assets/main.css" rel="stylesheet"/>
-<style>
-
-#myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 16px;
-  color: black;
-  display: block
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee;
-}
-
-#searchResult {
-
-  list-style-type: none;
-  padding: 0;
-  padding-right: 20px;
-}
-
-#searchResult li a {
-  border: .5px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #79bc21;
-  padding: 7px;
-  text-decoration: none;
-  font-size: 14px;
-  color: white;
-  display: block
-}
-
-#searchResult li a:hover:not(.header) {
-  background-color: #222;
-}
-
-
-#txtHint   {
-  position: absolute;
-  text-shadow: none;
-  width: 100%;
-  margin-top: -15px;
-  padding-right: 10px;
-
-  filter: alpha(opacity=95);
-  -moz-opacity: 0.95;
-  opacity: 1;
-  z-index: 200;
-}
-.countBubl {
-  background:#eb0029;
-  color:#fff;
-  padding:5px;
-  margin-top: 50%;
-
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
- width: 55%;
- padding-left: 20px;
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
- width: 20%;
-}
- #Uptodate_image {
-      width: 50%;
-  }#uptodate-area {
-      /*z-index: 99;*/
-  }
-#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
- margin-left: 10px;
- margin-bottom: 6%;
-}
-@media (max-width: @screen-xs) {
-    .countBubl {
-        font-size: 4px ;
-    }
-    #uptodate_version {
-        font-size: 4px ;
-    }
-}
-
-@media (max-width: @screen-sm) {
-    .countBubl {
-        font-size: 14px ;
-    }
-}
-@media  all and(max-width: 820) {
-    #Uptodate_image {
-        width: 80% ;
-    }#uptodate-area {
-        z-index: 99;
-    }
-}@media  all and (min-width: 820) and(max-width: 88820){
-    #Uptodate_image {
-        width: 100% !important;
-    }
-    .countBubl {
-        font-size: 4px ;
-    }
-}
-div.col-md-3:nth-child(3) {
- margin-top: 6%;
-}
-
-div.col-md-3:nth-child(3) > img:nth-child(1) {
- width: 100%;
- margin-left: 11px;
-}
-
-</style>
-<style media="screen" type="text/css">
-  .goback {
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    position: fixed;
-    display: none;
-    font-size: 15px;
-    background: #71c0fa;
-    z-index: 1000;
-    text-align: center;
-    color: #ffffff;
-    -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
-    border-radius: 50px;
-    bottom: 3.8%;
-    right: 2%;
-}
-  .buyPackage {
-  width: 100px;
-  height: 100px;
-  line-height: 40px;
-  position: fixed;
-  display: none;
-  font-size: 10px;
-  background: #fa759e;
-  z-index: 1000;
-  text-align: center;
-  color: #ffffff;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  border-radius: 10px;
-  top: 150px;
-  right: 2%;
-  text-align: center;
-}
-.uptodate-area {
-  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-    background-attachment: fixed;
-  position: relative;
-}
-.uptodate-area::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  padding-top: 100px;
-  width: 100%;
-}
-#references{
-  display: none;
-}
-</style>
-<style>
-section.sticky {
-  position: sticky;
-  top: 0;
-  background-color: #fff !important;
-  /*z-index: 100;*/
-  /*padding-top: 80px;*/
-
-}
-.m4inb{
-    border: solid !important;
-  }
-
-  .newsletter-area::before {
-       background: unset !important;
-  }
-p {
-    color: #555;
-}
-</style>
-<meta content="" name="description"/>
-<link href="/z/d/img/favicon.png" rel="icon" type="image/png">
-</link></head>
-<body>
-<!-- Start Main Menu Area -->
-<br/>
-<br/>
-<br/>
-<br/>
-<div class="container">
-<div class="row">
-</div>
-</div>
-<section class="teacher-area ptb-10">
-<div class="container">
-</div>
-<section class="course-details-area ptb-60">
-<div class="container">
-<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-<h1 style="text-align:center">Calculator: Thrombolysis in Myocardial Infarction (TIMI) score for ST elevation MI in adults</h1>
-<div class="utdArticleSection" id="topicContentCalculator"><div id="topicText">
-<div id="mc3k">
-<form action="" id="TIMI_STEMI_form" name="TIMI_STEMI_form" onreset="rrclr(); document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
-<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
-<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
-<td align="left" bgcolor="#eeeeee">
-<span class="medCalcFontTitleBox">
-
- 
-Calculator: Thrombolysis in Myocardial Infarction (TIMI) score for ST elevation MI in adults
-</span></td></tr></tbody></table><br/> <br/>
-<div id="calc_main">
-<div id="calc_input">
-<center>
-<table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
-<tbody><tr><td width="20"><br/></td>
-<td align="right" valign="top"><input aria-label="Check this box to indicate DM, history of HTN, or history of angina (1 point)" id="togel1" name="cc1" onclick="TIMI_STEMI_fx();" type="checkbox"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="togCB('togel1');">DM, history of HTN, or history of angina (1 point)</span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right" valign="top"><input aria-label="Check this box to indicate Systolic blood pressure less than 100 mmHg (3 points)" id="togel2" name="cc2" onclick="TIMI_STEMI_fx();" type="checkbox"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="togCB('togel2');">Systolic blood pressure less than 100 mmHg (3 points)</span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right" valign="top"><input aria-label="Check this box to indicate Heart rate greater than 100 BPM (2 points)" id="togel3" name="cc3" onclick="TIMI_STEMI_fx();" type="checkbox"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="togCB('togel3');">Heart rate greater than 100 BPM (2 points)</span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right" valign="top"><input aria-label="Check this box to indicate Killip class II to IV (2 points)" id="togel4" name="cc4" onclick="TIMI_STEMI_fx();" type="checkbox"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="togCB('togel4');">Killip class II to IV (2 points)</span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right" valign="top"><input aria-label="Check this box to indicate Body weight less than 150 lb or 67 kg (1 point)" id="togel5" name="cc5" onclick="TIMI_STEMI_fx();" type="checkbox"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="togCB('togel5');">Body weight less than 150 lb or 67 kg (1 point)</span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right" valign="top"><input aria-label="Check this box to indicate Anterior lead ST elevation or left BBB (1 point)" id="togel6" name="cc6" onclick="TIMI_STEMI_fx();" type="checkbox"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="togCB('togel6');">Anterior lead ST elevation or left BBB (1 point)</span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right" valign="top"><input aria-label="Check this box to indicate Time to treat more than 4 hours (1 point)" id="togel7" name="cc7" onclick="TIMI_STEMI_fx();" type="checkbox"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="togCB('togel7');">Time to treat more than 4 hours (1 point)</span></td></tr>
-<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">Age </span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right"><input aria-label="This button selects an option for: Age. The option is ≥75 years old (3 points)" id="togel8" name="cc8" onclick="TIMI_STEMI_fx();" type="radio"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel8');">≥75 years old (3 points)</span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right"><input aria-label="This button selects an option for: Age. The option is 65 to 74 years old (2 points)" id="togel9" name="cc8" onclick="TIMI_STEMI_fx();" type="radio"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel9');">65 to 74 years old (2 points)</span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right"><input aria-label="This button selects an option for: Age. The option is Less than 65 years old (0 points)" id="togel10" name="cc8" onclick="TIMI_STEMI_fx();" type="radio"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="setRB('togel10');">Less than 65 years old (0 points)</span></td></tr>
-</tbody></table>
-<span class="medCalcFontOne" id="inputchk"><br/> <br/><b>Important:</b> Inputs must be complete to perform calculation. <br/></span>
-</center>
-</div>
-<br/> <br/>
-<div id="calc_result">
-<span class="medCalcFontCCTabBold">
-Total criteria point count:
-</span>
-<input aria-label="This box holds the total criteria point count" aria-readonly="true" name="cctotal" size="6" type="text"/><br/> <br/>
-<center><input name="reset" type="reset" value="Reset form"/> </center>
-<br/> <br/>
-<div aria-label="This table highlights the result TIMI risk score and predicted 30-day mortality after an MI. No result is highlighted" id="rr1_tag" tabindex="0">
-<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
-<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
-<td align="left" bgcolor="#eeeeee">
-<span class="medCalcFontTitleBox">
-
-
-TIMI risk score and predicted 30-day mortality after an MI
-</span></td></tr></tbody></table><br/> <br/>
-</div>
-<center>
-<table border="1" cellpadding="4" cellspacing="0" summary="RRTable">
-<tbody><tr bgcolor="#ffffff">
-<td align="center"><span class="medCalcFontOneBold"> TIMI risk score (points)</span></td>
-<td align="center"><span class="medCalcFontOneBold">Predicted 30-day mortality following MI</span></td>
-</tr>
-<tr id="rr1_1"><td align="center" nowrap="nowrap"><span class="medCalcFontOneBold"> 0</span></td>
-<td align="center"><span class="medCalcFontOne">0.8%</span></td>
-</tr>
-<tr id="rr1_2"><td align="center" nowrap="nowrap"><span class="medCalcFontOneBold"> 1</span></td>
-<td align="center"><span class="medCalcFontOne">1.6%</span></td>
-</tr>
-<tr id="rr1_3"><td align="center" nowrap="nowrap"><span class="medCalcFontOneBold"> 2</span></td>
-<td align="center"><span class="medCalcFontOne">2.2%</span></td>
-</tr>
-<tr id="rr1_4"><td align="center" nowrap="nowrap"><span class="medCalcFontOneBold"> 3</span></td>
-<td align="center"><span class="medCalcFontOne">4.4%</span></td>
-</tr>
-<tr id="rr1_5"><td align="center" nowrap="nowrap"><span class="medCalcFontOneBold"> 4</span></td>
-<td align="center"><span class="medCalcFontOne">7.3%</span></td>
-</tr>
-<tr id="rr1_6"><td align="center" nowrap="nowrap"><span class="medCalcFontOneBold"> 5</span></td>
-<td align="center"><span class="medCalcFontOne">12%</span></td>
-</tr>
-<tr id="rr1_7"><td align="center" nowrap="nowrap"><span class="medCalcFontOneBold"> 6</span></td>
-<td align="center"><span class="medCalcFontOne">16%</span></td>
-</tr>
-<tr id="rr1_8"><td align="center" nowrap="nowrap"><span class="medCalcFontOneBold"> 7</span></td>
-<td align="center"><span class="medCalcFontOne">23%</span></td>
-</tr>
-<tr id="rr1_9"><td align="center" nowrap="nowrap"><span class="medCalcFontOneBold"> 8</span></td>
-<td align="center"><span class="medCalcFontOne">27%</span></td>
-</tr>
-<tr id="rr1_10"><td align="center" nowrap="nowrap"><span class="medCalcFontOneBold"> 9 to 14</span></td>
-<td align="center"><span class="medCalcFontOne">36%</span></td>
-</tr>
-</tbody></table>
-</center>
-<br/> <br/>
-</div>
-</div>
-<div id="calc_notes">
-<span class="medCalcFontOneBold">Notes</span>
-<ul class="medCalcFontOne">
-<li>Entry criteria: Chest pain for more than 30 minutes, ST elevation, symptom onset less than 6 hours, fibrinolytic eligible.</li>
-<li><b>DM</b>: diabetes mellitus; <b>HTN</b>: hypertension; <b>BPM</b>: beats per minute; <b>BBB</b>: bundle branch block.</li>
-</ul>
-</div>
-<br/> <br/>
-<div id="calc_refs">
-<span class="medCalcFontRef"><b>References</b></span>
-<ol>
-<li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/11044416" style="color: green; text-decoration: none;" target="_blank">Morrow DA, Antman EM, Charlesworth A, et al. TIMI risk score for ST-elevation myocardial infarction: A convenient, bedside, clinical score for risk assessment at presentation: An intravenous nPA for treatment of infarcting myocardium early II trial substudy. Circulation 2000; 102:2031.</a></span></li>
-</ol>
-</div>
-</form>
-</div>
-<span class="calculatorVendorId" id="T1678215895">
-</span></div><div id="printDisclaimer">
-<b>Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.</b>
-<p>
-	Information on this page may not appear correctly if printed. </p>
-</div>
-<div id="disclaimerCalculator">
-<div class="medCalcFontTwo">
-<p class="header">Legal Notices and Disclaimer</p>
-<p>
-			All information contained in and produced by the EBMcalc system is provided
+ <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+ <head>
+  <title>
+   Calculator: Thrombolysis in Myocardial Infarction (TIMI) score for ST elevation MI in adults
+  </title>
+  <link href="d/css/1.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!-- Start Main Menu Area -->
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="container">
+   <div class="row">
+   </div>
+  </div>
+  <section class="teacher-area ptb-10">
+   <div class="container">
+   </div>
+   <section class="course-details-area ptb-60">
+    <div class="container">
+     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+      <h1 style="text-align:center">
+       Calculator: Thrombolysis in Myocardial Infarction (TIMI) score for ST elevation MI in adults
+      </h1>
+      <div class="utdArticleSection" id="topicContentCalculator">
+       <div id="topicText">
+        <div id="mc3k">
+         <form action="" id="TIMI_STEMI_form" name="TIMI_STEMI_form" onreset="rrclr(); document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
+          <table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+           <tbody>
+            <tr>
+             <td bgcolor="#eeeeee" width="1%">
+              <br/>
+             </td>
+             <td align="left" bgcolor="#eeeeee">
+              <span class="medCalcFontTitleBox">
+               Calculator: Thrombolysis in Myocardial Infarction (TIMI) score for ST elevation MI in adults
+              </span>
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <br/>
+          <br/>
+          <div id="calc_main">
+           <div id="calc_input">
+            <center>
+             <table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
+              <tbody>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right" valign="top">
+                 <input aria-label="Check this box to indicate DM, history of HTN, or history of angina (1 point)" id="togel1" name="cc1" onclick="TIMI_STEMI_fx();" type="checkbox"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="togCB('togel1');">
+                  DM, history of HTN, or history of angina (1 point)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right" valign="top">
+                 <input aria-label="Check this box to indicate Systolic blood pressure less than 100 mmHg (3 points)" id="togel2" name="cc2" onclick="TIMI_STEMI_fx();" type="checkbox"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="togCB('togel2');">
+                  Systolic blood pressure less than 100 mmHg (3 points)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right" valign="top">
+                 <input aria-label="Check this box to indicate Heart rate greater than 100 BPM (2 points)" id="togel3" name="cc3" onclick="TIMI_STEMI_fx();" type="checkbox"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="togCB('togel3');">
+                  Heart rate greater than 100 BPM (2 points)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right" valign="top">
+                 <input aria-label="Check this box to indicate Killip class II to IV (2 points)" id="togel4" name="cc4" onclick="TIMI_STEMI_fx();" type="checkbox"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="togCB('togel4');">
+                  Killip class II to IV (2 points)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right" valign="top">
+                 <input aria-label="Check this box to indicate Body weight less than 150 lb or 67 kg (1 point)" id="togel5" name="cc5" onclick="TIMI_STEMI_fx();" type="checkbox"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="togCB('togel5');">
+                  Body weight less than 150 lb or 67 kg (1 point)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right" valign="top">
+                 <input aria-label="Check this box to indicate Anterior lead ST elevation or left BBB (1 point)" id="togel6" name="cc6" onclick="TIMI_STEMI_fx();" type="checkbox"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="togCB('togel6');">
+                  Anterior lead ST elevation or left BBB (1 point)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right" valign="top">
+                 <input aria-label="Check this box to indicate Time to treat more than 4 hours (1 point)" id="togel7" name="cc7" onclick="TIMI_STEMI_fx();" type="checkbox"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="togCB('togel7');">
+                  Time to treat more than 4 hours (1 point)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td align="left" colspan="3">
+                 <span class="medCalcFontCCTabBold">
+                  Age
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right">
+                 <input aria-label="This button selects an option for: Age. The option is ≥75 years old (3 points)" id="togel8" name="cc8" onclick="TIMI_STEMI_fx();" type="radio"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="setRB('togel8');">
+                  ≥75 years old (3 points)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right">
+                 <input aria-label="This button selects an option for: Age. The option is 65 to 74 years old (2 points)" id="togel9" name="cc8" onclick="TIMI_STEMI_fx();" type="radio"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="setRB('togel9');">
+                  65 to 74 years old (2 points)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right">
+                 <input aria-label="This button selects an option for: Age. The option is Less than 65 years old (0 points)" id="togel10" name="cc8" onclick="TIMI_STEMI_fx();" type="radio"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="setRB('togel10');">
+                  Less than 65 years old (0 points)
+                 </span>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+             <span class="medCalcFontOne" id="inputchk">
+              <br/>
+              <br/>
+              <b>
+               Important:
+              </b>
+              Inputs must be complete to perform calculation.
+              <br/>
+             </span>
+            </center>
+           </div>
+           <br/>
+           <br/>
+           <div id="calc_result">
+            <span class="medCalcFontCCTabBold">
+             Total criteria point count:
+            </span>
+            <input aria-label="This box holds the total criteria point count" aria-readonly="true" name="cctotal" size="6" type="text"/>
+            <br/>
+            <br/>
+            <center>
+             <input name="reset" type="reset" value="Reset form"/>
+            </center>
+            <br/>
+            <br/>
+            <div aria-label="This table highlights the result TIMI risk score and predicted 30-day mortality after an MI. No result is highlighted" id="rr1_tag" tabindex="0">
+             <table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+              <tbody>
+               <tr>
+                <td bgcolor="#eeeeee" width="1%">
+                 <br/>
+                </td>
+                <td align="left" bgcolor="#eeeeee">
+                 <span class="medCalcFontTitleBox">
+                  TIMI risk score and predicted 30-day mortality after an MI
+                 </span>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+             <br/>
+             <br/>
+            </div>
+            <center>
+             <table border="1" cellpadding="4" cellspacing="0" summary="RRTable">
+              <tbody>
+               <tr bgcolor="#ffffff">
+                <td align="center">
+                 <span class="medCalcFontOneBold">
+                  TIMI risk score (points)
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOneBold">
+                  Predicted 30-day mortality following MI
+                 </span>
+                </td>
+               </tr>
+               <tr id="rr1_1">
+                <td align="center" nowrap="nowrap">
+                 <span class="medCalcFontOneBold">
+                  0
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  0.8%
+                 </span>
+                </td>
+               </tr>
+               <tr id="rr1_2">
+                <td align="center" nowrap="nowrap">
+                 <span class="medCalcFontOneBold">
+                  1
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  1.6%
+                 </span>
+                </td>
+               </tr>
+               <tr id="rr1_3">
+                <td align="center" nowrap="nowrap">
+                 <span class="medCalcFontOneBold">
+                  2
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  2.2%
+                 </span>
+                </td>
+               </tr>
+               <tr id="rr1_4">
+                <td align="center" nowrap="nowrap">
+                 <span class="medCalcFontOneBold">
+                  3
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  4.4%
+                 </span>
+                </td>
+               </tr>
+               <tr id="rr1_5">
+                <td align="center" nowrap="nowrap">
+                 <span class="medCalcFontOneBold">
+                  4
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  7.3%
+                 </span>
+                </td>
+               </tr>
+               <tr id="rr1_6">
+                <td align="center" nowrap="nowrap">
+                 <span class="medCalcFontOneBold">
+                  5
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  12%
+                 </span>
+                </td>
+               </tr>
+               <tr id="rr1_7">
+                <td align="center" nowrap="nowrap">
+                 <span class="medCalcFontOneBold">
+                  6
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  16%
+                 </span>
+                </td>
+               </tr>
+               <tr id="rr1_8">
+                <td align="center" nowrap="nowrap">
+                 <span class="medCalcFontOneBold">
+                  7
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  23%
+                 </span>
+                </td>
+               </tr>
+               <tr id="rr1_9">
+                <td align="center" nowrap="nowrap">
+                 <span class="medCalcFontOneBold">
+                  8
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  27%
+                 </span>
+                </td>
+               </tr>
+               <tr id="rr1_10">
+                <td align="center" nowrap="nowrap">
+                 <span class="medCalcFontOneBold">
+                  9 to 14
+                 </span>
+                </td>
+                <td align="center">
+                 <span class="medCalcFontOne">
+                  36%
+                 </span>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </center>
+            <br/>
+            <br/>
+           </div>
+          </div>
+          <div id="calc_notes">
+           <span class="medCalcFontOneBold">
+            Notes
+           </span>
+           <ul class="medCalcFontOne">
+            <li>
+             Entry criteria: Chest pain for more than 30 minutes, ST elevation, symptom onset less than 6 hours, fibrinolytic eligible.
+            </li>
+            <li>
+             <b>
+              DM
+             </b>
+             : diabetes mellitus;
+             <b>
+              HTN
+             </b>
+             : hypertension;
+             <b>
+              BPM
+             </b>
+             : beats per minute;
+             <b>
+              BBB
+             </b>
+             : bundle branch block.
+            </li>
+           </ul>
+          </div>
+          <br/>
+          <br/>
+          <div id="calc_refs">
+           <span class="medCalcFontRef">
+            <b>
+             References
+            </b>
+           </span>
+           <ol>
+            <li>
+             <span class="medCalcFontRef">
+              <a href="https://www.ncbi.nlm.nih.gov/pubmed/11044416" style="color: green; text-decoration: none;" target="_blank">
+               Morrow DA, Antman EM, Charlesworth A, et al. TIMI risk score for ST-elevation myocardial infarction: A convenient, bedside, clinical score for risk assessment at presentation: An intravenous nPA for treatment of infarcting myocardium early II trial substudy. Circulation 2000; 102:2031.
+              </a>
+             </span>
+            </li>
+           </ol>
+          </div>
+         </form>
+        </div>
+        <span class="calculatorVendorId" id="T1678215895">
+        </span>
+       </div>
+       <div id="printDisclaimer">
+        <b>
+         Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.
+        </b>
+        <p>
+         Information on this page may not appear correctly if printed.
+        </p>
+       </div>
+       <div id="disclaimerCalculator">
+        <div class="medCalcFontTwo">
+         <p class="header">
+          Legal Notices and Disclaimer
+         </p>
+         <p>
+          All information contained in and produced by the EBMcalc system is provided
 			for educational purposes only. This information should not be used for the diagnosis or treatment
-			of any health problem or disease. 
-			<b>THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.</b>
-<a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">Click here for full notice and disclaimer.</a>
-</p>
-<p class="copy">EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC</p>
-</div>
-</div><div id="topicVersionRevision">Topic 13467 Version 10.0</div></div>
-</div>
-</div>
-</section>
-</section>
-<!-- End Main Menu Area -->
-<!-- Start Search Popup Area -->
-<!-- End Footer Area -->
-<!-- Back to top -->
-<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
-<!-- End Back to top -->
-<!-- jQuery Min JS -->
-<!-- Prpper JS -->
-<!-- Bootstrap Min JS -->
-<!-- Classy Nav Min Js -->
-<!-- Owl Carousel Min Js -->
-<!-- Magnific Popup JS -->
-<!-- CounterUp JS -->
-<!-- Waypoints JS -->
-<!-- Form Validator Min JS -->
-<!-- Contact Form Min JS -->
-<!-- Main JS -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-</body>
+			of any health problem or disease.
+          <b>
+           THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.
+          </b>
+          <a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">
+           Click here for full notice and disclaimer.
+          </a>
+         </p>
+         <p class="copy">
+          EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC
+         </p>
+        </div>
+       </div>
+       <div id="topicVersionRevision">
+        Topic 13467 Version 10.0
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </section>
+  <!-- End Main Menu Area -->
+  <!-- Start Search Popup Area -->
+  <!-- End Footer Area -->
+  <!-- Back to top -->
+  <a class="scrolltop" href="#top">
+   <i class="icofont-hand-drawn-up">
+   </i>
+  </a>
+  <!-- End Back to top -->
+  <!-- jQuery Min JS -->
+  <!-- Prpper JS -->
+  <!-- Bootstrap Min JS -->
+  <!-- Classy Nav Min Js -->
+  <!-- Owl Carousel Min Js -->
+  <!-- Magnific Popup JS -->
+  <!-- CounterUp JS -->
+  <!-- Waypoints JS -->
+  <!-- Form Validator Min JS -->
+  <!-- Contact Form Min JS -->
+  <!-- Main JS -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+ </body>
 </html>

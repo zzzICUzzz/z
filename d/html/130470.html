@@ -1,549 +1,1901 @@
 <!DOCTYPE html>
-
 <html lang="fa">
-<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
-<head><title>Overview of component separation</title><link href="/z/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/z/d/css/icofont.min.css" rel="stylesheet"/><link href="/z/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/z/d/css/animate.css" rel="stylesheet"/><link href="/z/d/css/owl.carousel.css" rel="stylesheet"/><link href="/z/d/css/magnific-popup.css" rel="stylesheet"/><link href="/z/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/z/d/css/style.css" rel="stylesheet"/><link href="/z/d/css/rtl_edited.css" rel="stylesheet"/><link href="/z/d/css/responsive.css" rel="stylesheet"/><link href="https:///uptodate_assets/main.css" rel="stylesheet"/>
-<style>
-
-#myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 16px;
-  color: black;
-  display: block
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee;
-}
-
-#searchResult {
-
-  list-style-type: none;
-  padding: 0;
-  padding-right: 20px;
-}
-
-#searchResult li a {
-  border: .5px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #79bc21;
-  padding: 7px;
-  text-decoration: none;
-  font-size: 14px;
-  color: white;
-  display: block
-}
-
-#searchResult li a:hover:not(.header) {
-  background-color: #222;
-}
-
-
-#txtHint   {
-  position: absolute;
-  text-shadow: none;
-  width: 100%;
-  margin-top: -15px;
-  padding-right: 10px;
-
-  filter: alpha(opacity=95);
-  -moz-opacity: 0.95;
-  opacity: 1;
-  z-index: 200;
-}
-.countBubl {
-  background:#eb0029;
-  color:#fff;
-  padding:5px;
-  margin-top: 50%;
-
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
- width: 55%;
- padding-left: 20px;
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
- width: 20%;
-}
- #Uptodate_image {
-      width: 50%;
-  }#uptodate-area {
-      /*z-index: 99;*/
-  }
-#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
- margin-left: 10px;
- margin-bottom: 6%;
-}
-@media (max-width: @screen-xs) {
-    .countBubl {
-        font-size: 4px ;
-    }
-    #uptodate_version {
-        font-size: 4px ;
-    }
-}
-
-@media (max-width: @screen-sm) {
-    .countBubl {
-        font-size: 14px ;
-    }
-}
-@media  all and(max-width: 820) {
-    #Uptodate_image {
-        width: 80% ;
-    }#uptodate-area {
-        z-index: 99;
-    }
-}@media  all and (min-width: 820) and(max-width: 88820){
-    #Uptodate_image {
-        width: 100% !important;
-    }
-    .countBubl {
-        font-size: 4px ;
-    }
-}
-div.col-md-3:nth-child(3) {
- margin-top: 6%;
-}
-
-div.col-md-3:nth-child(3) > img:nth-child(1) {
- width: 100%;
- margin-left: 11px;
-}
-
-</style>
-<style media="screen" type="text/css">
-  .goback {
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    position: fixed;
-    display: none;
-    font-size: 15px;
-    background: #71c0fa;
-    z-index: 1000;
-    text-align: center;
-    color: #ffffff;
-    -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
-    border-radius: 50px;
-    bottom: 3.8%;
-    right: 2%;
-}
-  .buyPackage {
-  width: 100px;
-  height: 100px;
-  line-height: 40px;
-  position: fixed;
-  display: none;
-  font-size: 10px;
-  background: #fa759e;
-  z-index: 1000;
-  text-align: center;
-  color: #ffffff;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  border-radius: 10px;
-  top: 150px;
-  right: 2%;
-  text-align: center;
-}
-.uptodate-area {
-  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-    background-attachment: fixed;
-  position: relative;
-}
-.uptodate-area::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  padding-top: 100px;
-  width: 100%;
-}
-#references{
-  display: none;
-}
-</style>
-<style>
-section.sticky {
-  position: sticky;
-  top: 0;
-  background-color: #fff !important;
-  /*z-index: 100;*/
-  /*padding-top: 80px;*/
-
-}
-.m4inb{
-    border: solid !important;
-  }
-
-  .newsletter-area::before {
-       background: unset !important;
-  }
-p {
-    color: #555;
-}
-</style>
-<meta content="" name="description"/>
-<link href="/z/d/img/favicon.png" rel="icon" type="image/png">
-</link></head>
-<body>
-<!-- Start Main Menu Area -->
-<br/>
-<br/>
-<br/>
-<br/>
-<div class="container">
-<div class="row">
-</div>
-</div>
-<section class="teacher-area ptb-10">
-<div class="container">
-</div>
-<section class="course-details-area ptb-60">
-<div class="container">
-<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-<h1 style="text-align:center">Overview of component separation</h1>
-<div class="utdArticleSection utdStyle" id="topicContent"><div id="topicTitle">Overview of component separation</div> <div class="authorSectionElem"><div class="authorsElementsLeft"><dl id="topicContributors"><dt><span> </span>Author:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Clayton C Petro, MD</a></dd><dt><span> </span>Section Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Michael Rosen, MD</a></dd><dt><span> </span>Deputy Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Wenliang Chen, MD, PhD</a></dd></dl></div><div class="authorsElementsRight"><div id="literatureReviewDate"><div class="litReviewSingleLine"><bdi><span class="emphasis">Literature review current through:</span> Jan 2024.</bdi></div><div class="litReviewSingleLine"><bdi><span class="emphasis">This topic last updated:</span> Mar 30, 2023.</bdi></div></div></div></div><div id="topicWhatsNewContainer"></div><div id="topicText"><p class="headingAnchor" id="H3655241154"><span class="h1">INTRODUCTION</span><span class="headingEndMark"> — </span>More than 350,000 ventral hernias are repaired annually in the United States [<a href="#rid1">1,2</a>]. All repair techniques have limitations to their durability, leading to some inevitable recurrences that beget further complexity [<a href="#rid3">3,4</a>]. In the 21<sup>st</sup> century, component separation techniques have emerged as an important tool in the surgeon's armamentarium for large or complex hernias [<a href="#rid5">5</a>].</p><p>Ramirez first defined the term "components separation" in 1990 as a way "large abdominal wall defects can be reconstructed with functional transfer of abdominal-wall components," rather than relying on remote muscle flaps or bridging prosthetics [<a href="#rid6">6</a>]. Since then, strategic, serial division of the rectus and lateral abdominal wall musculofascial layers has been explored to address undue tension when closing large midline defects. </p><p>In this overview topic, we will discuss the relevant abdominal wall anatomy, purposes and techniques of component separation, patient selection criteria, preoperative adjuncts that could potentially assist with fascial or soft tissue closure, and complications of component separation. </p><p>Technical details of various component separation techniques can be found elsewhere. (See  <a class="medical medical_review" href="/z/d/html/130471.html" rel="external">"Open anterior component separation techniques"</a> and  <a class="medical medical_review" href="/z/d/html/130472.html" rel="external">"Open posterior component separation techniques"</a> and  <a class="medical medical_review" href="/z/d/html/130918.html" rel="external">"Robotic component separation techniques"</a>.)</p><p>Basic ventral hernia repair techniques that do not involve component separation are discussed in other topics. (See  <a class="medical medical_review" href="/z/d/html/96301.html" rel="external">"Management of ventral hernias"</a> and  <a class="medical medical_review" href="/z/d/html/116246.html" rel="external">"Laparoscopic ventral hernia repair"</a> and  <a class="medical medical_review" href="/z/d/html/122042.html" rel="external">"Robotic ventral hernia repair"</a> and  <a class="medical medical_review" href="/z/d/html/126998.html" rel="external">"Lateral abdominal wall hernia repair"</a>.)</p><p class="headingAnchor" id="H2680604045"><span class="h1">ANATOMY OF ANTERIOR ABDOMINAL WALL</span></p><p class="headingAnchor" id="H782543368"><span class="h2">Muscles</span><span class="headingEndMark"> — </span>Three muscles constitute the lateral abdominal wall. From superficial to deep, they are the external oblique (EO), internal oblique (IO), and transversus abdominis (TA) muscles, followed by layers of transversalis fascia and peritoneum  (<a class="graphic graphic_figure graphicRef72219" href="/z/d/graphic/72219.html" rel="external">figure 1</a> and <a class="graphic graphic_figure graphicRef66280" href="/z/d/graphic/66280.html" rel="external">figure 2</a>). (See  <a class="medical medical_review" href="/z/d/html/3.html" rel="external">"Anatomy of the abdominal wall", section on 'Muscles'</a>.)</p><p class="headingAnchor" id="H2559201780"><span class="h3">Linea semilunaris</span><span class="headingEndMark"> — </span>The three lateral abdominal wall muscle layers do not fuse at a single point. Rather, fibers of the IO aponeurosis branch into anterior and posterior lamellae at the linea semilunaris  (<a class="graphic graphic_figure graphicRef77053" href="/z/d/graphic/77053.html" rel="external">figure 3</a>). More medially (1 to 3 cm), fibers of the EO aponeurosis fuse with fibers of the anterior lamella of the IO to form the anterior rectus sheath, while fibers of the posterior lamella of the IO fuse with the TA to form the posterior rectus sheath. The semilunar line marks the lateral extent of the rectus space and is a key anatomical concept for understanding component separation techniques. </p><p class="headingAnchor" id="H2927756114"><span class="h3">Linea alba</span><span class="headingEndMark"> — </span>The anterior and posterior rectus sheaths encase the rectus muscle, then fuse medially to form the linea alba. Depending on the width of the linea alba, associated diastasis, or midline hernia, the distance of the rectus muscles from the midline can be somewhat variable. (See  <a class="medical medical_review" href="/z/d/html/100494.html" rel="external">"Rectus abdominis diastasis"</a>.)</p><p class="headingAnchor" id="H2717146390"><span class="h3">Posterior rectus sheath</span><span class="headingEndMark"> — </span>The cross-sectional composition of the posterior rectus sheath varies by its anatomical location  (<a class="graphic graphic_figure graphicRef77053" href="/z/d/graphic/77053.html" rel="external">figure 3</a>):</p><p class="bulletIndent1"><span class="glyph">●</span>In the superior one-third of the abdomen, there is a prominent TA muscle belly beneath the posterior lamella of the IO before each aponeurosis fuses medially to form the posterior rectus sheath  (<a class="graphic graphic_diagnosticimage graphicRef131397" href="/z/d/graphic/131397.html" rel="external">image 1</a>). </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>In the middle third of the abdomen, the TA is aponeurotic beneath the posterior lamella of the IO before these layers fuse medially to form the posterior rectus sheath. Above the arcuate line, the peritoneum and transversalis fascia are densely adherent to the posterior rectus sheath. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>In the lower third of the abdomen, the posterior rectus sheath ends abruptly at the arcuate line and becomes contiguous with peritoneum and transversalis fascia  (<a class="graphic graphic_figure graphicRef77053" href="/z/d/graphic/77053.html" rel="external">figure 3</a>). All lateral muscle layers travel anterior to the rectus muscles below the arcuate line. </p><p></p><p>Finally, the superior third of the TA begins to interdigitate with the diaphragm along the costal margin, and the two can be difficult to distinguish. </p><p class="headingAnchor" id="H864636328"><span class="h2">Blood vessels and nerves</span></p><p class="headingAnchor" id="H1227727142"><span class="h3">Retrorectus space</span><span class="headingEndMark"> — </span>The medial retrorectus space is relatively avascular. As the lateral retrorectus space is developed, the inferior epigastric vessels are encountered just medial to the linea semilunaris in the lower third of the abdominal wall. As the inferior epigastric vessels course superiorly, they bury themselves in the belly of the rectus muscle. Only at the most cephalad aspect of the rectus muscles do the superior epigastric vessels become visible before they too become invested in rectus muscle  (<a class="graphic graphic_figure graphicRef81343" href="/z/d/graphic/81343.html" rel="external">figure 4</a>). </p><p>Also housed in the retrorectus space are laterally perforating neurovascular bundles that originate from T6 to L1 and travel between the TA and IO until they pierce the posterior lamella of the IO to enter the retrorectus space [<a href="#rid7">7</a>]. Their presence, just medial to the linea semilunaris, serves as a valuable landmark. Along with the musculophrenic and lumbar arteries, these lateral perforators supply the lateral (flank) abdominal wall  (<a class="graphic graphic_figure graphicRef131104" href="/z/d/graphic/131104.html" rel="external">figure 5</a>). </p><p>The suprapubic abdominal wall at and below the anterior superior iliac spines is also supplied by the inferior epigastric arcade, along with help from the superficial external pudendal, superficial, and deep circumflex iliac arteries. </p><p>Just below the arcuate line, there is consistently an unnamed vessel that branches medially off the epigastric vessels coursing toward the midline. Also, while most laterally perforating neurovascular bundles appear just medial to the semilunar line, there is typically a single large perforator in the superior third of the abdomen that is much more medial than the rest. </p><p class="headingAnchor" id="H765591634"><span class="h3">Subcutaneous space</span><span class="headingEndMark"> — </span>Anterior perforators off the deep epigastric vessels pierce the anterior rectus sheath to supply the subcutaneous tissue above the rectus muscles, and for this reason the rectus muscle is more closely bound to its anterior fascial envelope [<a href="#rid8">8</a>]. The surgeon should remain mindful of the blood supply to the anterior abdominal wall, particularly when a patient has had several abdominal incisions that could compromise blood flow and lead to tissue necrosis in "watershed" areas  (<a class="graphic graphic_picture graphicRef131398" href="/z/d/graphic/131398.html" rel="external">picture 1</a>). </p><p class="headingAnchor" id="H451522816"><span class="h1">PURPOSES OF COMPONENT SEPARATION</span><span class="headingEndMark"> — </span>In contemporary hernia surgery, component separation serves two purposes.</p><p class="headingAnchor" id="H2936772798"><span class="h2">Relieve tension on midline fascial closure</span><span class="headingEndMark"> — </span>The traditional aim of a component separation is to strategically divide myofascial layers of the abdominal wall to alleviate tension on fascial approximation, typically in the midline. </p><p>The benefits of reestablishing the midline during any hernia repair are to improve core muscle function by aligning the rectus muscles in the vector of their proper usage and to give lateral abdominal muscles a firm insertion point. The functional benefits in strength, stability, respiratory function, and quality of life warrant "sacrifice" of one of the lateral muscles [<a href="#rid9">9-12</a>]. Cross-sectional imaging has even suggested that division of one lateral abdominal wall muscle to achieve midline closure results in compensatory hypertrophy of the other two remaining muscles [<a href="#rid13">13</a>].</p><p>Surgical technique to relieve tension on midline fascial closure has been pursued as early as 1916 [<a href="#rid14">14,15</a>], but earlier techniques of relaxing incisions on the medial rectus sheaths were insufficient for closing larger midline defects [<a href="#rid16">16,17</a>]. Bridging synthetic mesh is not a good option, given the high rates of infection, excision, fistulization, and hernia recurrence [<a href="#rid18">18-20</a>]. Meanwhile, autologous tissue transfers such as the free or pedicled tensor fascia lata flaps are also associated with high recurrence rates in addition to donor site morbidities [<a href="#rid21">21,22</a>]. </p><p>Oscar Ramirez first described a localized dissection of the lateral abdominal wall that would provide additional fascial medialization beyond that which can be accomplished with dissections limited to the rectus fascial envelope [<a href="#rid6">6</a>]. Since then, strategic, serial division of the rectus and lateral abdominal wall musculofascial layers has been explored to address undue tension when closing large midline defects. (See <a class="local">'Techniques of component separation'</a> below.)</p><p>The size of a fascial defect that justifies usage of a component separation is not well defined, and this ambiguity exists for several reasons: </p><p class="bulletIndent1"><span class="glyph">●</span>The compliance of each patient's abdominal wall is variable. One patient with a large defect but more compliant abdominal wall may achieve fascial closure more easily than other patients with smaller defects but more rigid abdominal walls. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>The length and width of a fascial defect alone are often not reflective of the rest of the hernia, as small fascial defects can be associated with voluminous hernia sacs and loss of domain. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>There are advantages to a component separation other than midline fascial approximation. This point is critical to understanding the evolution of component separation utilization and its wide adoption during the past 10 years and is further discussed below. (See <a class="local">'Facilitate retromuscular mesh placement'</a> below.)</p><p></p><p class="headingAnchor" id="H1198821822"><span class="h2">Facilitate retromuscular mesh placement</span><span class="headingEndMark"> — </span>A posterior component separation, specifically transversus abdominis release (TAR), has allowed for additional benefits other than midline fascial advancement, including [<a href="#rid23">23</a>]:</p><p class="bulletIndent1"><span class="glyph">●</span>Relief of tension on the posterior rectus sheath/peritoneal closure</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>A large retromuscular pocket for mesh reinforcement with wide overlap</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>A well-vascularized plane for optimal mesh ingrowth</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Mesh placement that is not in contact with the viscera and is separated by muscle from the superficial wound</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Allows for the use of uncoated monofilament polypropylene (both inexpensive and resilient to infection)</p><p></p><p>Because of these benefits offered by retromuscular mesh placement, contemporary surgeons now have an additional motivation to utilize a TAR other than just anterior rectus approximation. (See <a class="local">'Patient selection'</a> below.)</p><p class="headingAnchor" id="H931018064"><span class="h1">TECHNIQUES OF COMPONENT SEPARATION</span><span class="headingEndMark"> — </span>Depending on the lateral abdominal wall muscle(s) divided, techniques of component separation can be broadly categorized into anterior and posterior. Both anterior and posterior component separations allow for a maximum bilateral rectus advancement of approximately 20 cm. Uniquely, transversus abdominis release (TAR) also allows for significant posterior fascial advancement &gt;20 cm to create a large visceral sac and retromuscular pocket.</p><p>It should be emphasized that anterior and posterior component separations should not be performed concomitantly, or else the anterior abdominal wall may be destabilized. </p><p class="headingAnchor" id="H115343904"><span class="h2">Open anterior component separation</span><span class="headingEndMark"> — </span>The original Ramirez component separation involved two myofascial divisions on each side of the abdominal wall. First, medial division of the posterior rectus sheath and its separation from the overlying rectus muscle allows for each rectus muscle and its associated anterior fascia to be advanced medially 3, 5, and 3 cm in the upper, middle, and lower third of the abdominal wall, respectively (6, 10, and 6 cm bilaterally). </p><p>If this is insufficient to alleviate midline tension, the external oblique muscle can be longitudinally divided 1 to 2 cm lateral to the semilunar line and separated from the underlying internal oblique muscle in a relatively avascular plane. When combined with posterior rectus sheath division, this allows for 5, 10, and 3 cm of advancement, again respectively in each third of the abdominal wall, totaling 10, 20, and 6 cm of bilateral advancement  (<a class="graphic graphic_table graphicRef131399" href="/z/d/graphic/131399.html" rel="external">table 1</a>) [<a href="#rid6">6</a>]. </p><p>While this operation was initially referred to as a "components separation" without ambiguity, when newer techniques of separating the posterior rectus sheath and contiguous transversus abdominis (TA) from the anterior internal oblique (IO)/external oblique (EO)/rectus muscle bodies were termed a "posterior component separation," Ramirez's division of the anterior EO inherited the designation "anterior component separation" retroactively. </p><p>Open anterior component separation techniques are discussed separately. (See  <a class="medical medical_review" href="/z/d/html/130471.html" rel="external">"Open anterior component separation techniques"</a>.)</p><p class="headingAnchor" id="H959375833"><span class="h2">Open posterior component separation</span><span class="headingEndMark"> — </span>Following medial division of the posterior rectus sheath, the retrorectus space is entered and can be dissected as lateral as the linea semilunaris; this retrorectus dissection is usually referred to as the "Rives-Stoppa" repair [<a href="#rid24">24</a>]. If further myofascial release is required for midline fascial approximation or posterior rectus sheath closure, the posterior lamella of the IO and TA can both be divided to continue the retromuscular dissection in the preperitoneal space (TAR). The space between the IO and TA is not usually developed, as it would require division of laterally perforating neurovascular bundles. (See <a class="local">'Retrorectus space'</a> above.)</p><p>In order to assess the relative effectiveness of a posterior component separation in regards to fascial advancement, cadaveric dissections were performed [<a href="#rid25">25</a>]. Each of these operative steps offers consistent medial advancement of the anterior and posterior layers. Unilateral maximum anterior advancement is 7.6 cm after a retrorectus dissection, 8.0 cm after division of the posterior lamella of the IO, 8.6 cm after TA division, and 9.9 cm after completion of the retromuscular dissection. Respective posterior sheath advancement is 7.5, 8.3, 9.5, and 11.2 cm after each corresponding step. These results are comparable to Ramirez's findings  (<a class="graphic graphic_table graphicRef131399" href="/z/d/graphic/131399.html" rel="external">table 1</a>). </p><p>Open posterior component separation techniques are discussed separately. (See  <a class="medical medical_review" href="/z/d/html/130472.html" rel="external">"Open posterior component separation techniques"</a>.)</p><p class="headingAnchor" id="H3108378642"><span class="h2">Robotic posterior component separation</span><span class="headingEndMark"> — </span>The robotic platform has allowed for minimally invasive adaptations of these retromuscular hernia repairs that, for most surgeons, could not be done using traditional laparoscopy. There are both transabdominal and totally extraperitoneal iterations of the Rives-Stoppa retrorectus repair for hernias &lt;7 cm wide [<a href="#rid26">26</a>]. For hernias &gt;7 cm wide, a robotic transversus abdominis release is also a potential option [<a href="#rid27">27</a>]. (See  <a class="medical medical_review" href="/z/d/html/130918.html" rel="external">"Robotic component separation techniques"</a>.)</p><p>Basic requirements for robotic repairs include the ability to achieve minimally invasive access to the peritoneal cavity and safely clear the anterior abdominal wall of visceral adhesions, including safe reduction of the hernia contents. While the surgeon can often avoid a laparotomy using these techniques, any residual scar from a previous laparotomy would be left behind, and this can sometimes impact a patient's preference. </p><p>In line with the evolution of other techniques from open to a minimally invasive approach, evidence has begun to accrue demonstrating shorter length of stay and decreased wound morbidity for these robotic retromuscular hernia repairs [<a href="#rid28">28,29</a>]. </p><p>Robotic component separation techniques are discussed separately. (See  <a class="medical medical_review" href="/z/d/html/130918.html" rel="external">"Robotic component separation techniques"</a>.)</p><p class="headingAnchor" id="H3615306989"><span class="h2">Mesh reinforcement</span><span class="headingEndMark"> — </span>Although component separation was portrayed as a method to alleviate tension on midline hernia repairs without any prosthetic reinforcement, subsequent reports have revealed early recurrence rates (within one year) as high as 53 percent [<a href="#rid30">30</a>]. Given our modern understanding that mesh is critical to the durability of any hernia repair, contemporary descriptions of any component separation include some prosthetic reinforcement. </p><p>Mesh reinforcement is suboptimal with anterior component separation techniques for several reasons. Large defects will not allow for retrorectus mesh placement, because the posterior rectus sheaths will be under too much tension for closure, and a concomitant posterior component separation to aid posterior sheath closure cannot be combined with any anterior component separation. While raising large skin flaps allows for large onlay meshes, it is also more likely to undermine the blood supply of the subcutaneous tissue and predispose patients to wound morbidities. Conversely, minimizing skin flaps curtails mesh overlap, which makes an onlay technique impractical. Ultimately, intraperitoneal mesh is commonly utilized, and these barrier-coated synthetics or bio-prosthetics incur additional cost. </p><p>Taking all this into consideration, it becomes obvious that the reason the posterior component separation technique TAR has gained such wide popularity is not just because TA division offers superior fascial medialization compared with EO division. Rather, it is also because TAR, in addition to allowing for equivalent myofascial relaxation to approximate the midline, creates a reproducible, well-vascularized, retromuscular pocket for mesh placement, all through a midline incision without the need for skin flaps [<a href="#rid31">31</a>]. Release of the posterior rectus sheaths allows for creation of a large visceral sac to isolate the viscera. With rare exception, this consistently allows for use of uncoated monofilament polypropylene, which is inexpensive and resilient to infection. (See <a class="local">'Facilitate retromuscular mesh placement'</a> above.)</p><p class="headingAnchor" id="H2987963243"><span class="h1">PATIENT SELECTION</span><span class="headingEndMark"> — </span>The decision to pursue a component separation is first guided by hernia width that can be determined preoperatively by physical exam or cross-sectional imaging  (<a class="graphic graphic_algorithm graphicRef131400" href="/z/d/graphic/131400.html" rel="external">algorithm 1</a>). The further choice among multiple options within each hernia width category is usually dictated by surgeon experience and preference.</p><p class="bulletIndent1"><span class="glyph">●</span>Typically, hernias &lt;7 cm do not require a component separation and can often be repaired with either an open, laparoscopic, or robotic approach with intraperitoneal mesh or an open or robotic approach with retrorectus mesh as described by Rives and Stoppa. There are both transabdominal and totally extraperitoneal iterations of the robotic Rives-Stoppa retrorectus repair for hernias &lt;7 cm wide [<a href="#rid26">26</a>]. Such hernias can also be repaired with onlay mesh using open techniques.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Hernias 7 to 10 cm typically will not require a component separation for midline fascial approximation and can be repaired laparoscopically with a large piece of intraperitoneal mesh or repaired in an open retromuscular approach. An open or robotic TAR can be added to achieve posterior rectus sheath closure if necessary. A rectus width to hernia width ratio &gt;2 reliably predicts the ability to close the fascia with a Rives-Stoppa repair alone and no further myofascial release in almost 90 percent of cases [<a href="#rid32">32</a>]. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Hernias &gt;10 cm, depending on abdominal wall compliance, may require either an anterior or posterior component separation for both rectus approximation (midline closure) and posterior fascial approximation. This can be accomplished with either open anterior component separation or open or robotic TAR.</p><p></p><p>We reserve component separation for nonemergency hernia repairs. Use of these techniques to achieve fascial closure in an open abdomen situation after an abdominal catastrophe is feasible but will negate future abdominal wall reconstruction options. During emergency operations, we prefer to attempt primary closure with interrupted figure-of-eight sutures or bridge the fascial defect with a nonpermanent prosthetic. </p><p class="headingAnchor" id="H2762631220"><span class="h1">PREOPERATIVE ADJUNCTS</span><span class="headingEndMark"> — </span>Preoperative adjuncts (such as botulinum toxin injection or tissue expansion) have been used to facilitate fascial and/or abdominal wall closure when a hernia volume to peritoneal volume ratio is &gt;20 to 25 percent. However, there is a lack of consensus regarding the routine use of preoperative adjuncts in abdominal wall reconstruction, especially progressive pneumoperitoneum with its associated severe complications [<a href="#rid33">33</a>]. </p><p class="headingAnchor" id="H824328156"><span class="h2">Botulinum toxin</span><span class="headingEndMark"> — </span>The use of botulinum neurotoxin type A (BoNT-A) to preoperatively relax the lateral abdominal wall muscles and reduce tension on midline abdominal wall closure has been termed a "chemical component separation" or "chemical component paralysis" [<a href="#rid34">34</a>].</p><p>There is no consensus on which patients would benefit from BoNT-A injections prior to ventral hernia repair, but many authors have cited hernia volume to peritoneal volume ratio &gt;20 to 25 percent (as defined by Tanaka [<a href="#rid35">35</a>]) to warrant consideration of preoperative BoNT-A [<a href="#rid36">36</a>]. </p><p>While BoNT-A injection is a safe procedure, evidence to support its use and the associated cost is limited. In small case series and a meta-analysis, the use of BoNT-A before ventral hernia repair decreased the width of the abdominal wall defect by approximately 5.8 cm, increased the length of the abdominal wall by approximately 3 to 4 cm, and increased the volume of the peritoneal cavity [<a href="#rid34">34,37-40</a>]. However, such radiographic changes have not translated into tangible clinical benefits such as reduced need for component separation [<a href="#rid40">40,41</a>]. A propensity-score matched study of 145 patients undergoing abdominal wall reconstruction found a higher percentage of fascial closure (92 versus 81 percent), but also a greater need for component separation with preoperative BoNT (61 versus 47 percent) [<a href="#rid42">42</a>]. </p><p>BoNT-A is typically delivered as three to five injections per side of the abdominal wall [<a href="#rid43">43</a>].</p><p class="bulletIndent1"><span class="glyph">●</span>When possible, these injections should be given under conscious sedation to minimize patient discomfort. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>A total of 300 units of BoNT-A is reconstituted in 150 cc of injectable 0.9% sodium chloride solution (final concentration of 2 units/cc). </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Two syringes are labeled and loaded onto a three-way stopcock, one with the BoNT-A solution and the other with injectable <a class="drug drug_general" data-topicid="9929" href="/z/d/drug information/9929.html" rel="external">saline</a>. This stopcock is attached to an extension tubing secured to an 18 gauge spinal needle.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>The three muscle bellies of the lateral abdominal wall (external oblique [EO], internal oblique [IO], transversus abdominis [TA]) are identified by ultrasound at three sites on each side of the abdomen (subcostal, anterior axillary line, and lower quadrant). </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Under ultrasound guidance, the spinal needle is passed into the TA muscle belly first at each of the sites. Sterile <a class="drug drug_general" data-topicid="9929" href="/z/d/drug information/9929.html" rel="external">saline</a> is injected to confirm needle location, before 8.3 cc (16.6 u) of BoNT-A is injected into the TA muscle belly. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Next, the needle is withdrawn into the IO and then the EO muscle and the sequence is repeated twice, injecting a total of 25 cc and 50 units of BoNT-A at each site.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>The same sequence is repeated at each of the six sites.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>This should be done at least two weeks before attempting the ventral hernia repair. </p><p></p><p class="headingAnchor" id="H465084362"><span class="h2">Tissue expanders</span><span class="headingEndMark"> — </span>Tissue expansion involves placement of a silicone balloon under subcutaneous tissue or fascia followed by serial injections of <a class="drug drug_general" data-topicid="9929" href="/z/d/drug information/9929.html" rel="external">saline</a> to inflate the balloon to expand the local tissue in preparation for a local reconstruction [<a href="#rid44">44,45</a>]. </p><p>Tissue expansion can be used for patients with very large fascial and soft tissue defects in the context of a large ventral hernia with loss of domain or tissue loss from traumatic injury, soft tissue infection, oncologic resections, or a prior open abdomen. Pediatric surgeons encounter these scenarios in the setting of gastroschisis and omphalocele. </p><p>Tissue expanders can be placed in two types of planes: </p><p class="bulletIndent1"><span class="glyph">●</span>Placement between the lateral abdominal wall muscle layers (IO/EO or IO/TA) results in bidirectional expansion, indirectly increasing intra-abdominal pressure. This results in a less effective expansion of the skin and subcutaneous tissue [<a href="#rid46">46</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Alternatively, expansion of the skin and subcutaneous tissue is more effective when the expansion devices are placed between the subcutaneous tissue and the abdominal wall muscles. In the context of an abdominal wall reconstruction where component separation is providing sufficient myofascial advancement in the vast majority of cases, we reserve the role of tissue expansion for assuring the patient has sufficient soft tissue at the end of a case. </p><p></p><p>Balloon implants come in a variety of shapes and sizes and can include remote or integrated ports. When possible, the implant should match the length of the wound. Placement should be through an incision that will either be incorporated into one margin of the eventual flap or placed perpendicular to the line of expansion to prevent dehiscence. Expansion of the device can begin at the time of implantation or one to three weeks later, providing sufficient tension for expansion without compromising perfusion or the integrity of the wound through which it was placed. Generally, the devices are injected weekly for 6 to 12 weeks to maximize expansion. </p><p>Tissue expansion requires multiple surgeries and careful management of the expansion in between. It should start at least 6 to 12 weeks prior to the hernia repair. Complications such as device infections or flap necrosis can occur in 15 percent of patients [<a href="#rid47">47</a>]. </p><p class="headingAnchor" id="H1495522342"><span class="h1">COMPLICATIONS</span></p><p class="headingAnchor" id="H3232870845"><span class="h2">Wound morbidity</span><span class="headingEndMark"> — </span>Open anterior component separation is associated with wound morbidities in as many as 50 percent of patients, about half of whom developed surgical site infections [<a href="#rid48">48,49</a>]. Alternatives to traditional open component separation are associated with much lower rates of wound complications ranging from 2 to 14 percent [<a href="#rid50">50-52</a>]. (See  <a class="medical medical_review" href="/z/d/html/130471.html" rel="external">"Open anterior component separation techniques"</a>.)</p><p>The wound morbidity rates of anterior and posterior component separation techniques are generally comparable [<a href="#rid53">53-55</a>]. </p><p>Risk factors for wound morbidity and mesh complications include patient factors (eg, body mass index, poorly controlled diabetes, history of a previous surgical site infection), hernia factors (size and wound class), and technical factors related to the surgical approach (open versus minimally invasive, mesh type and position) [<a href="#rid56">56</a>]. </p><p>The Abdominal Core Health Quality Collaborative (ACHQC) <a class="external" href="/external-redirect?target_url=https%3A%2F%2Fwww.achqc.org%2Fpatients%2Fachqc-mobile-app&amp;token=IQxLzDq4doJGUgaZgeIY0%2BPEtHFqY5LHURz8DB6%2Fjx73oVADbrfbzU97O4Gmj1x%2FjuBWX2wsyrmRRVlhaYDa%2Bw%3D%3D&amp;TOPIC_ID=130470" target="_blank">app</a> can use preoperative and intraoperative information to provide patient-specific risk-adjusted 30 day and one-year outcomes.</p><p class="headingAnchor" id="H353151173"><span class="h2">Pulmonary complications due to intra-abdominal hypertension</span><span class="headingEndMark"> — </span>Another postoperative concern specifically for massive ventral hernia repairs with loss of domain is the potential development of postoperative abdominal compartment syndrome. </p><p>In our experience, abdominal compartment syndrome in the setting of elective myofascial release most commonly manifests as postoperative respiratory complications requiring reintubation and/or transfer to the intensive care unit (ICU). We found that changes in plateau pressure (PP) after ventral hernia repair directly correlated with postoperative respiratory complications (increase in PP ≥6 mmHg, odds ratio [OR] 8.67; increase in PP ≥9 mmHg, OR 11.5) [<a href="#rid57">57</a>]. </p><p>Thus, for large abdominal wall reconstruction patients with a tight abdominal wall closure, we will have the anesthesia provider measure the PP before and after closure of the anterior abdominal wall fascia using the same tidal volume. </p><p class="bulletIndent1"><span class="glyph">●</span>Patients with a PP increase of &lt;6 mmHg can be safely extubated.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Young patients with no pulmonary disease or concern from anesthesia staff are extubated even with a PP increase of ≥6 mmHg but are still monitored in the ICU overnight. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Those with a PP increase of ≥6 mmHg and any concern for pulmonary compromise (old age, history of obstructive sleep apnea or underlying lung disease) will typically remain intubated until they are reassessed by the ICU staff in the morning. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Paralytics are only added if there is difficulty ventilating the patient or decreased urine output that is not due to hypovolemia. Such clinical signs are usually associated with a PP increase of ≥9 mmHg, although a PP increase of ≥9 mmHg per se is not an indication to paralyze the patient. </p><p></p><p>Elevations in intra-abdominal pressure after ventral hernia repair are unique in that they are usually transient and can be expected to resolve within 48 hours. This could be due to fluid shifts and increase in compliance of the abdominal wall as a result of component separation. However, such patients are still at risk of developing postoperative respiratory complications [<a href="#rid58">58</a>]. </p><p>Twenty percent of patients in a historic series had an increase in PP by &gt;6 mmHg [<a href="#rid57">57</a>]. By contrast, &lt;5 percent of patients require postoperative intubation in contemporary practice as anesthesia providers are using lower tidal volumes and less crystalloid fluid. Of note, we no longer measure bladder pressure, as it does not provide additional information. </p><p>It should be recognized that patients undergoing elective hernia repair with a myofascial release are very different from the context in which abdominal compartment syndrome is traditionally encountered (typically acute abdominal catastrophes). As a result of these findings, the World Society of the Abdominal Compartment Syndrome has recognized intra-abdominal pressure changes in the elective setting as a separate and distinct phenomenon [<a href="#rid59">59</a>]. </p><p class="headingAnchor" id="H3853427525"><span class="h2">Linea semilunaris disruption</span><span class="headingEndMark"> — </span>Inappropriate anteromedial dissection during a TAR dissection or inappropriate posteromedial dissection during an anterior component separation can result in complete transection of the linea semilunaris, separating the medial rectus muscle from the lateral oblique muscles [<a href="#rid60">60</a>]. These patients can present with a lateral bulge as early as a few months after their operation. When bilateral bulges flank a "floating" rectus muscle, it gives the appearance of a "Mickey Mouse" hernia defect  (<a class="graphic graphic_diagnosticimage graphicRef131401" href="/z/d/graphic/131401.html" rel="external">image 2</a>). </p><p>The incidence of these complications is currently unknown but could be increasing given the growing popularity of component separation techniques (especially robotic retromuscular adaptations) [<a href="#rid61">61</a>]. While this complication is typically only encountered by inexperienced surgeons during the "learning curves" of open or robotic TAR, those who are affected will likely never restore a "normal" or dynamic abdominal wall. Thus, surgeons who attempt component separations must have an appropriate respect for the complexity of the anatomy.</p><p class="headingAnchor" id="H2679840128"><span class="h1">SOCIETY GUIDELINE LINKS</span><span class="headingEndMark"> — </span>Links to society and government-sponsored guidelines from selected countries and regions around the world are provided separately. (See  <a class="medical medical_society_guidelines" href="/z/d/html/117292.html" rel="external">"Society guideline links: Ventral hernia"</a>.)</p><p class="headingAnchor" id="H3995199194"><span class="h1">SUMMARY AND RECOMMENDATIONS</span></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Purposes of component separation</strong> – Component separation serves two purposes in modern hernia surgery: to alleviate tension on midline fascial approximation and to facilitate closure of the posterior rectus sheath and create a retromuscular pocket to accommodate mesh. (See <a class="local">'Purposes of component separation'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Techniques of component separation</strong> – Component separation can be performed with either anterior or posterior techniques, both permitting maximum bilateral rectus advancement of approximately 20 cm. In addition, transversus abdominis release (TAR) also allows for significant posterior fascial advancement &gt;20 cm to create a large visceral sac and retromuscular pocket. Specific techniques are discussed in other topics, but it should be emphasized that anterior and posterior component separations should not be performed concomitantly, or else the anterior abdominal wall may be destabilized. (See <a class="local">'Techniques of component separation'</a> above and  <a class="medical medical_review" href="/z/d/html/130471.html" rel="external">"Open anterior component separation techniques"</a> and  <a class="medical medical_review" href="/z/d/html/130472.html" rel="external">"Open posterior component separation techniques"</a>.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Patient selection for component separation</strong> – The decision to pursue a component separation is typically guided by hernia width, which can be determined preoperatively by physical exam or cross-sectional imaging  (<a class="graphic graphic_algorithm graphicRef131400" href="/z/d/graphic/131400.html" rel="external">algorithm 1</a>) (see <a class="local">'Patient selection'</a> above):</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>For patient with hernias &lt;7 cm wide, hernias can typically be repaired without component separation. </p><p></p><p class="bulletIndent2"><span class="glyph">•</span>For patients with hernias 7 to 10 cm wide, the decision to use component separation is influenced by the width of the hernia versus the width of the rectus muscle. Although such hernias can be repaired without component separation, a TAR may be performed to achieve posterior rectus fascia closure if a retromuscular approach is undertaken. </p><p></p><p class="bulletIndent2"><span class="glyph">•</span>For patients with hernias &gt;10 cm wide, we suggest repair with component separation rather than other techniques (<a class="grade" href="https:///uptodate/show/grade_6" rel="external">Grade 2C</a>). However, for patients with good abdominal wall compliance, hernia repair without component separation may be feasible. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Preoperative adjuncts for component separation</strong> – Preoperative adjuncts (such as botulinum toxin injection or tissue expansion) have been used to facilitate fascial and/or abdominal wall closure when the hernia volume to peritoneal volume ratio is &gt;20 to 25 percent. However, there is a lack of consensus regarding the routine use of preoperative adjuncts in abdominal wall reconstruction. (See <a class="local">'Preoperative adjuncts'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Complications of component separation</strong></p><p></p><p class="bulletIndent2"><span class="glyph">•</span>The wound complication rate of open anterior component separation is substantially higher than that of less invasive anterior alternatives, while the wound complication rates of comparable anterior and posterior component separation techniques are similar. (See <a class="local">'Wound morbidity'</a> above.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>Postoperative respiratory failure requiring reintubation can be a manifestation of intra-abdominal compartment hypertension after large or complex ventral hernia repair. We use the increase in plateau pressure after fascial closure to decide whether to leave the patient intubated at the end of surgery. The increase in intra-abdominal pressure is usually transient for up to 48 hours. (See <a class="local">'Pulmonary complications due to intra-abdominal hypertension'</a> above.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>Linea semilunar line disruption is a technical complication that causes separation of the medial rectus muscle from the lateral oblique muscles. The resulting deformity can be long-lasting or permanent. To avoid that, the surgeon should understand the relevant anatomy before pursuing these dissections. (See <a class="local">'Linea semilunaris disruption'</a> above.)</p></div><div class="headingAnchor" id="references"><ol id="reference"><li><a class="nounderline abstract_t">Poulose BK, Shelton J, Phillips S, et al. Epidemiology and cost of ventral hernia repair: making the case for hernia research. Hernia 2012; 16:179.</a></li><li><a class="nounderline abstract_t">Fischer JP, Basta MN, Mirzabeigi MN, et al. A Risk Model and Cost Analysis of Incisional Hernia After Elective, Abdominal Surgery Based Upon 12,373 Cases: The Case for Targeted Prophylactic Intervention. Ann Surg 2016; 263:1010.</a></li><li><a class="nounderline abstract_t">Flum DR, Horvath K, Koepsell T. Have outcomes of incisional hernia repair improved with time? A population-based analysis. Ann Surg 2003; 237:129.</a></li><li><a class="nounderline abstract_t">Köckerling F, Sheen AJ, Berrevoet F, et al. The reality of general surgery training and increased complexity of abdominal wall hernia surgery. Hernia 2019; 23:1081.</a></li><li class="breakAll">Clarke TM, Goldberg RF, Lloyd JM, et al. The increasing utilization of component separation technique during ventral hernia repair: Association of patient, payor, and community demographics. 2012. Available at: https://www.sages.org/meetings/annual-meeting/abstracts-archive/the-increasing-utilization-of-component-separation-technique-during-ventral-hernia-repair-association-of-patient-payor-and-community-demographics (Accessed on September 10, 2020).</li><li><a class="nounderline abstract_t">Ramirez OM, Ruas E, Dellon AL. "Components separation" method for closure of abdominal-wall defects: an anatomic and clinical study. Plast Reconstr Surg 1990; 86:519.</a></li><li class="breakAll">Gray's Anatomy: The Anatomical Basis of Clinical Practice, 41st ed, Standring S (Ed), Elsevier, 2016.</li><li><a class="nounderline abstract_t">Huger WE Jr. The anatomic rationale for abdominal lipectomy. Am Surg 1979; 45:612.</a></li><li><a class="nounderline abstract_t">Criss CN, Petro CC, Krpata DM, et al. Functional abdominal wall reconstruction improves core physiology and quality-of-life. Surgery 2014; 156:176.</a></li><li><a class="nounderline abstract_t">Haskins IN, Prabhu AS, Jensen KK, et al. Effect of transversus abdominis release on core stability: Short-term results from a single institution. Surgery 2019; 165:412.</a></li><li><a class="nounderline abstract_t">Licari L, Campanella S, Carolla C, et al. Abdominal wall incisional hernia repair improves respiratory function: results after 3 years of follow-up. Hernia 2021; 25:999.</a></li><li><a class="nounderline abstract_t">Licari L, Guercio G, Campanella S, et al. Clinical and Functional Outcome After Abdominal Wall Incisional Hernia Repair: Evaluation of Quality-of-Life Improvement and Comparison of Assessment Scales. World J Surg 2019; 43:1914.</a></li><li><a class="nounderline abstract_t">De Silva GS, Krpata DM, Hicks CW, et al. Comparative radiographic analysis of changes in the abdominal wall musculature morphology after open posterior component separation or bridging laparoscopic ventral hernia repair. J Am Coll Surg 2014; 218:353.</a></li><li><a class="nounderline abstract_t">Gibson CL. OPERATION FOR CURE OF LARGE VENTRAL HERNIA. Ann Surg 1920; 72:214.</a></li><li><a class="nounderline abstract_t">Gibson CL. POST-OPERATIVE INTESTINAL OBSTRUCTION. Ann Surg 1916; 63:442.</a></li><li><a class="nounderline abstract_t">Köckerling F. What Do We Know About the Chevrel Technique in Ventral Incisional Hernia Repair? Front Surg 2019; 6:15.</a></li><li><a class="nounderline abstract_t">Chevrel JP. [The treatment of large midline incisional hernias by "overcoat" plasty and prothesis (author's transl)]. Nouv Presse Med 1979; 8:695.</a></li><li><a class="nounderline abstract_t">Leber GE, Garb JL, Alexander AI, Reed WP. Long-term complications associated with prosthetic repair of incisional hernias. Arch Surg 1998; 133:378.</a></li><li><a class="nounderline abstract_t">de Vries Reilingh TS, van Geldere D, Langenhorst B, et al. Repair of large midline incisional hernias with polypropylene mesh: comparison of three operative techniques. Hernia 2004; 8:56.</a></li><li><a class="nounderline abstract_t">Lichtenstein IL, Shore JM. Repair of recurrent ventral hernias by an internal "binder". Am J Surg 1976; 132:121.</a></li><li><a class="nounderline abstract_t">Williams JK, Carlson GW, deChalain T, et al. Role of tensor fasciae latae in abdominal wall reconstruction. Plast Reconstr Surg 1998; 101:713.</a></li><li><a class="nounderline abstract_t">Williams JK, Carlson GW, Howell RL, et al. The tensor fascia lata free flap in abdominal-wall reconstruction. J Reconstr Microsurg 1997; 13:83.</a></li><li><a class="nounderline abstract_t">Novitsky YW, Elliott HL, Orenstein SB, Rosen MJ. Transversus abdominis muscle release: a novel approach to posterior component separation during complex abdominal wall reconstruction. Am J Surg 2012; 204:709.</a></li><li><a class="nounderline abstract_t">Hartog FPJD, Sneiders D, Darwish EF, et al. Favorable Outcomes After Retro-Rectus (Rives-Stoppa) Mesh Repair as Treatment for Noncomplex Ventral Abdominal Wall Hernia, a Systematic Review and Meta-analysis. Ann Surg 2022; 276:55.</a></li><li><a class="nounderline abstract_t">Majumder A, Miller HJ, Del Campo LM, et al. Assessment of myofascial medialization following posterior component separation via transversus abdominis muscle release in a cadaveric model. Hernia 2018; 22:637.</a></li><li><a class="nounderline abstract_t">Santos DA, Limmer AR, Gibson HM, Ledet CR. The current state of robotic retromuscular repairs-a qualitative review of the literature. Surg Endosc 2021; 35:456.</a></li><li><a class="nounderline abstract_t">Warren JA, Cobb WS, Ewing JA, Carbonell AM. Standard laparoscopic versus robotic retromuscular ventral hernia repair. Surg Endosc 2017; 31:324.</a></li><li><a class="nounderline abstract_t">Carbonell AM, Warren JA, Prabhu AS, et al. Reducing Length of Stay Using a Robotic-assisted Approach for Retromuscular Ventral Hernia Repair: A Comparative Analysis From the Americas Hernia Society Quality Collaborative. Ann Surg 2018; 267:210.</a></li><li><a class="nounderline abstract_t">Martin-Del-Campo LA, Weltz AS, Belyansky I, Novitsky YW. Comparative analysis of perioperative outcomes of robotic versus open transversus abdominis release. Surg Endosc 2018; 32:840.</a></li><li><a class="nounderline abstract_t">de Vries Reilingh TS, van Goor H, Charbon JA, et al. Repair of giant midline abdominal wall hernias: "components separation technique" versus prosthetic repair : interim analysis of a randomized controlled trial. World J Surg 2007; 31:756.</a></li><li><a class="nounderline abstract_t">Zolin SJ, Fafaj A, Krpata DM. Transversus abdominis release (TAR): what are the real indications and where is the limit? Hernia 2020; 24:333.</a></li><li><a class="nounderline abstract_t">Love MW, Warren JA, Davis S, et al. Computed tomography imaging in ventral hernia repair: can we predict the need for myofascial release? Hernia 2021; 25:471.</a></li><li><a class="nounderline abstract_t">van Rooijen MMJ, Yurtkap Y, Allaeys M, et al. Fascial closure in giant ventral hernias after preoperative botulinum toxin a and progressive pneumoperitoneum: A systematic review and meta-analysis. Surgery 2021; 170:769.</a></li><li><a class="nounderline abstract_t">Ibarra-Hurtado TR, Nuño-Guzmán CM, Echeagaray-Herrera JE, et al. Use of botulinum toxin type a before abdominal wall hernia reconstruction. World J Surg 2009; 33:2553.</a></li><li><a class="nounderline abstract_t">Tanaka EY, Yoo JH, Rodrigues AJ Jr, et al. A computerized tomography scan method for calculating the hernia sac and abdominal cavity volume in complex large incisional hernia with loss of domain. Hernia 2010; 14:63.</a></li><li><a class="nounderline abstract_t">Afaque MY. Assessing the complexity of ventral hernia by methods of Tanaka, Sabbagh, Carbonell, and Love. Hernia 2021; 25:557.</a></li><li><a class="nounderline abstract_t">Ibarra-Hurtado TR, Nuño-Guzmán CM, Miranda-Díaz AG, et al. Effect of botulinum toxin type A in lateral abdominal wall muscles thickness and length of patients with midline incisional hernia secondary to open abdomen management. Hernia 2014; 18:647.</a></li><li><a class="nounderline abstract_t">Elstner KE, Read JW, Saunders J, et al. Selective muscle botulinum toxin A component paralysis in complex ventral hernia repair. Hernia 2020; 24:287.</a></li><li><a class="nounderline abstract_t">Weissler JM, Lanni MA, Tecce MG, et al. Chemical component separation: a systematic review and meta-analysis of botulinum toxin for management of ventral hernia. J Plast Surg Hand Surg 2017; 51:366.</a></li><li><a class="nounderline abstract_t">Wegdam JA, de Vries Reilingh TS, Bouvy ND, Nienhuijs SW. Prehabilitation of complex ventral hernia patients with Botulinum: a systematic review of the quantifiable effects of Botulinum. Hernia 2021; 25:1427.</a></li><li><a class="nounderline abstract_t">Horne CM, Augenstein V, Malcher F, et al. Understanding the benefits of botulinum toxin A: retrospective analysis of the Abdominal Core Health Quality Collaborative. Br J Surg 2021; 108:112.</a></li><li><a class="nounderline abstract_t">Deerenberg EB, Shao JM, Elhage SA, et al. Preoperative botulinum toxin A injection in complex abdominal wall reconstruction- a propensity-scored matched study. Am J Surg 2021; 222:638.</a></li><li><a class="nounderline abstract_t">Zendejas B, Khasawneh MA, Srvantstyan B, et al. Outcomes of chemical component paralysis using botulinum toxin for incisional hernia repairs. World J Surg 2013; 37:2830.</a></li><li><a class="nounderline abstract_t">Byrd HS, Hobar PC. Abdominal wall expansion in congenital defects. Plast Reconstr Surg 1989; 84:347.</a></li><li><a class="nounderline abstract_t">Althubaiti G, Butler CE. Abdominal wall and chest wall reconstruction. Plast Reconstr Surg 2014; 133:688e.</a></li><li class="breakAll">Chmielewski L, Lee M, Hooman S. Tissue expansion during abdominal wall reconstruction. In: Hernia Surgery: Current Principles, Novitsky YW (Ed), Springer, 2016. p.307.</li><li><a class="nounderline abstract_t">Paletta CE, Huang DB, Dehghan K, Kelly C. The use of tissue expanders in staged abdominal wall reconstruction. Ann Plast Surg 1999; 42:259.</a></li><li><a class="nounderline abstract_t">Girotto JA, Ko MJ, Redett R, et al. Closure of chronic abdominal wall defects: a long-term evaluation of the components separation method. Ann Plast Surg 1999; 42:385.</a></li><li><a class="nounderline abstract_t">Ko JH, Salvay DM, Paul BC, et al. Soft polypropylene mesh, but not cadaveric dermis, significantly improves outcomes in midline hernia repairs using the components separation technique. Plast Reconstr Surg 2009; 124:836.</a></li><li><a class="nounderline abstract_t">Saulis AS, Dumanian GA. Periumbilical rectus abdominis perforator preservation significantly reduces superficial wound complications in "separation of parts" hernia repairs. Plast Reconstr Surg 2002; 109:2275.</a></li><li><a class="nounderline abstract_t">Ghali S, Turza KC, Baumann DP, Butler CE. Minimally invasive component separation results in fewer wound-healing complications than open component separation for large ventral hernia repairs. J Am Coll Surg 2012; 214:981.</a></li><li><a class="nounderline abstract_t">Jensen KK, Henriksen NA, Jorgensen LN. Endoscopic component separation for ventral hernia causes fewer wound complications compared to open components separation: a systematic review and meta-analysis. Surg Endosc 2014; 28:3046.</a></li><li><a class="nounderline abstract_t">Krpata DM, Blatnik JA, Novitsky YW, Rosen MJ. Posterior and open anterior components separations: a comparative analysis. Am J Surg 2012; 203:318.</a></li><li><a class="nounderline abstract_t">Parent B, Horn D, Jacobson L, et al. Wound Morbidity in Minimally Invasive Anterior Component Separation Compared to Transversus Abdominis Release. Plast Reconstr Surg 2017; 139:472.</a></li><li><a class="nounderline abstract_t">Hodgkinson JD, Leo CA, Maeda Y, et al. A meta-analysis comparing open anterior component separation with posterior component separation and transversus abdominis release in the repair of midline ventral hernias. Hernia 2018; 22:617.</a></li><li><a class="nounderline abstract_t">Petro CC, O'Rourke CP, Posielski NM, et al. Designing a ventral hernia staging system. Hernia 2016; 20:111.</a></li><li><a class="nounderline abstract_t">Blatnik JA, Krpata DM, Pesa NL, et al. Predicting severe postoperative respiratory complications following abdominal wall reconstruction. Plast Reconstr Surg 2012; 130:836.</a></li><li><a class="nounderline abstract_t">Petro CC, Raigani S, Fayezizadeh M, et al. Permissible Intraabdominal Hypertension following Complex Abdominal Wall Reconstruction. Plast Reconstr Surg 2015; 136:868.</a></li><li><a class="nounderline abstract_t">Kirkpatrick AW, Nickerson D, Roberts DJ, et al. Intra-Abdominal Hypertension and Abdominal Compartment Syndrome after Abdominal Wall Reconstruction: Quaternary Syndromes? Scand J Surg 2017; 106:97.</a></li><li><a class="nounderline abstract_t">Pauli EM, Wang J, Petro CC, et al. Posterior component separation with transversus abdominis release successfully addresses recurrent ventral hernias following anterior component separation. Hernia 2015; 19:285.</a></li><li class="breakAll">Pauli EM, Juza RM. Managing complications of open hernia repair. In: Hernia Surgery: Current Principles, Novitsky YW (Ed), Springer, 2016. p.207.</li></ol></div><div id="topicVersionRevision">Topic 130470 Version 10.0</div></div>
-<div class="row">
-<div class="col-12">
-<h4 style="text-align: center;padding: 20px;color: cadetblue;">References</h4>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/21904861" id="rid0" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>1 : Epidemiology and cost of ventral hernia repair: making the case for hernia research.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/26465784" id="rid1" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>2 : A Risk Model and Cost Analysis of Incisional Hernia After Elective, Abdominal Surgery Based Upon 12,373 Cases: The Case for Targeted Prophylactic Intervention.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/12496540" id="rid2" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>3 : Have outcomes of incisional hernia repair improved with time? A population-based analysis.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/31754953" id="rid3" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>4 : The reality of general surgery training and increased complexity of abdominal wall hernia surgery.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/31754953" id="rid4" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>5 : The reality of general surgery training and increased complexity of abdominal wall hernia surgery.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/2143588" id="rid5" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>6 : "Components separation" method for closure of abdominal-wall defects: an anatomic and clinical study.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/2143588" id="rid6" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>7 : "Components separation" method for closure of abdominal-wall defects: an anatomic and clinical study.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/159651" id="rid7" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>8 : The anatomic rationale for abdominal lipectomy.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/24929767" id="rid8" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>9 : Functional abdominal wall reconstruction improves core physiology and quality-of-life.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/30224083" id="rid9" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>10 : Effect of transversus abdominis release on core stability: Short-term results from a single institution.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/32929633" id="rid10" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>11 : Abdominal wall incisional hernia repair improves respiratory function: results after 3 years of follow-up.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/31011821" id="rid11" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>12 : Clinical and Functional Outcome After Abdominal Wall Incisional Hernia Repair: Evaluation of Quality-of-Life Improvement and Comparison of Assessment Scales.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/24468226" id="rid12" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>13 : Comparative radiographic analysis of changes in the abdominal wall musculature morphology after open posterior component separation or bridging laparoscopic ventral hernia repair.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/17864331" id="rid13" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>14 : OPERATION FOR CURE OF LARGE VENTRAL HERNIA.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/17863520" id="rid14" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>15 : POST-OPERATIVE INTESTINAL OBSTRUCTION.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/31058162" id="rid15" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>16 : What Do We Know About the Chevrel Technique in Ventral Incisional Hernia Repair?</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/450684" id="rid16" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>17 : [The treatment of large midline incisional hernias by "overcoat" plasty and prothesis (author's transl)].</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/9565117" id="rid17" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>18 : Long-term complications associated with prosthetic repair of incisional hernias.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/14586775" id="rid18" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>19 : Repair of large midline incisional hernias with polypropylene mesh: comparison of three operative techniques.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/782263" id="rid19" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>20 : Repair of recurrent ventral hernias by an internal "binder".</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/9500388" id="rid20" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>21 : Role of tensor fasciae latae in abdominal wall reconstruction.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/9044181" id="rid21" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>22 : The tensor fascia lata free flap in abdominal-wall reconstruction.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/22607741" id="rid22" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>23 : Transversus abdominis muscle release: a novel approach to posterior component separation during complex abdominal wall reconstruction.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/35185120" id="rid23" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>24 : Favorable Outcomes After Retro-Rectus (Rives-Stoppa) Mesh Repair as Treatment for Noncomplex Ventral Abdominal Wall Hernia, a Systematic Review and Meta-analysis.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/29713832" id="rid24" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>25 : Assessment of myofascial medialization following posterior component separation via transversus abdominis muscle release in a cadaveric model.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/32926251" id="rid25" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>26 : The current state of robotic retromuscular repairs-a qualitative review of the literature.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/27287903" id="rid26" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>27 : Standard laparoscopic versus robotic retromuscular ventral hernia repair.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/28350568" id="rid27" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>28 : Reducing Length of Stay Using a Robotic-assisted Approach for Retromuscular Ventral Hernia Repair: A Comparative Analysis From the Americas Hernia Society Quality Collaborative.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/28733746" id="rid28" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>29 : Comparative analysis of perioperative outcomes of robotic versus open transversus abdominis release.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/17372669" id="rid29" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>30 : Repair of giant midline abdominal wall hernias: "components separation technique" versus prosthetic repair : interim analysis of a randomized controlled trial.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/32152808" id="rid30" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>31 : Transversus abdominis release (TAR): what are the real indications and where is the limit?</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/32277369" id="rid31" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>32 : Computed tomography imaging in ventral hernia repair: can we predict the need for myofascial release?</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/33888320" id="rid32" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>33 : Fascial closure in giant ventral hernias after preoperative botulinum toxin a and progressive pneumoperitoneum: A systematic review and meta-analysis.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/19771472" id="rid33" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>34 : Use of botulinum toxin type a before abdominal wall hernia reconstruction.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/19756913" id="rid34" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>35 : A computerized tomography scan method for calculating the hernia sac and abdominal cavity volume in complex large incisional hernia with loss of domain.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/32696149" id="rid35" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>36 : Assessing the complexity of ventral hernia by methods of Tanaka, Sabbagh, Carbonell, and Love.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/25033942" id="rid36" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>37 : Effect of botulinum toxin type A in lateral abdominal wall muscles thickness and length of patients with midline incisional hernia secondary to open abdomen management.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/30949893" id="rid37" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>38 : Selective muscle botulinum toxin A component paralysis in complex ventral hernia repair.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/28277071" id="rid38" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>39 : Chemical component separation: a systematic review and meta-analysis of botulinum toxin for management of ventral hernia.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/33215244" id="rid39" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>40 : Prehabilitation of complex ventral hernia patients with Botulinum: a systematic review of the quantifiable effects of Botulinum.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/33711107" id="rid40" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>41 : Understanding the benefits of botulinum toxin A: retrospective analysis of the Abdominal Core Health Quality Collaborative.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/33478721" id="rid41" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>42 : Preoperative botulinum toxin A injection in complex abdominal wall reconstruction- a propensity-scored matched study.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/24081529" id="rid42" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>43 : Outcomes of chemical component paralysis using botulinum toxin for incisional hernia repairs.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/2526344" id="rid43" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>44 : Abdominal wall expansion in congenital defects.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/24776572" id="rid44" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>45 : Abdominal wall and chest wall reconstruction.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/24776572" id="rid45" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>46 : Abdominal wall and chest wall reconstruction.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/10096616" id="rid46" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>47 : The use of tissue expanders in staged abdominal wall reconstruction.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/10213399" id="rid47" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>48 : Closure of chronic abdominal wall defects: a long-term evaluation of the components separation method.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/19730302" id="rid48" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>49 : Soft polypropylene mesh, but not cadaveric dermis, significantly improves outcomes in midline hernia repairs using the components separation technique.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/12045549" id="rid49" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>50 : Periumbilical rectus abdominis perforator preservation significantly reduces superficial wound complications in "separation of parts" hernia repairs.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/22521439" id="rid50" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>51 : Minimally invasive component separation results in fewer wound-healing complications than open component separation for large ventral hernia repairs.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/24942783" id="rid51" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>52 : Endoscopic component separation for ventral hernia causes fewer wound complications compared to open components separation: a systematic review and meta-analysis.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/22244073" id="rid52" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>53 : Posterior and open anterior components separations: a comparative analysis.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/28125536" id="rid53" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>54 : Wound Morbidity in Minimally Invasive Anterior Component Separation Compared to Transversus Abdominis Release.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/29516294" id="rid54" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>55 : A meta-analysis comparing open anterior component separation with posterior component separation and transversus abdominis release in the repair of midline ventral hernias.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/26342924" id="rid55" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>56 : Designing a ventral hernia staging system.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/22691844" id="rid56" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>57 : Predicting severe postoperative respiratory complications following abdominal wall reconstruction.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/26090761" id="rid57" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>58 : Permissible Intraabdominal Hypertension following Complex Abdominal Wall Reconstruction.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/27465223" id="rid58" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>59 : Intra-Abdominal Hypertension and Abdominal Compartment Syndrome after Abdominal Wall Reconstruction: Quaternary Syndromes?</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/25537570" id="rid59" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>60 : Posterior component separation with transversus abdominis release successfully addresses recurrent ventral hernias following anterior component separation.</p>
-</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-</section>
-<!-- End Main Menu Area -->
-<!-- Start Search Popup Area -->
-<!-- End Footer Area -->
-<!-- Back to top -->
-<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
-<!-- End Back to top -->
-<!-- jQuery Min JS -->
-<!-- Prpper JS -->
-<!-- Bootstrap Min JS -->
-<!-- Classy Nav Min Js -->
-<!-- Owl Carousel Min Js -->
-<!-- Magnific Popup JS -->
-<!-- CounterUp JS -->
-<!-- Waypoints JS -->
-<!-- Form Validator Min JS -->
-<!-- Contact Form Min JS -->
-<!-- Main JS -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-</body>
+ <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+ <head>
+  <title>
+   Overview of component separation
+  </title>
+  <link href="d/css/1.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!-- Start Main Menu Area -->
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="container">
+   <div class="row">
+   </div>
+  </div>
+  <section class="teacher-area ptb-10">
+   <div class="container">
+   </div>
+   <section class="course-details-area ptb-60">
+    <div class="container">
+     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+      <h1 style="text-align:center">
+       Overview of component separation
+      </h1>
+      <div class="utdArticleSection utdStyle" id="topicContent">
+       <div id="topicTitle">
+        Overview of component separation
+       </div>
+       <div class="authorSectionElem">
+        <div class="authorsElementsLeft">
+         <dl id="topicContributors">
+          <dt>
+           <span>
+           </span>
+           Author:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Clayton C Petro, MD
+           </a>
+          </dd>
+          <dt>
+           <span>
+           </span>
+           Section Editor:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Michael Rosen, MD
+           </a>
+          </dd>
+          <dt>
+           <span>
+           </span>
+           Deputy Editor:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Wenliang Chen, MD, PhD
+           </a>
+          </dd>
+         </dl>
+        </div>
+        <div class="authorsElementsRight">
+         <div id="literatureReviewDate">
+          <div class="litReviewSingleLine">
+           <bdi>
+            <span class="emphasis">
+             Literature review current through:
+            </span>
+            Jan 2024.
+           </bdi>
+          </div>
+          <div class="litReviewSingleLine">
+           <bdi>
+            <span class="emphasis">
+             This topic last updated:
+            </span>
+            Mar 30, 2023.
+           </bdi>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div id="topicWhatsNewContainer">
+       </div>
+       <div id="topicText">
+        <p class="headingAnchor" id="H3655241154">
+         <span class="h1">
+          INTRODUCTION
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         More than 350,000 ventral hernias are repaired annually in the United States [
+         <a href="#rid1">
+          1,2
+         </a>
+         ]. All repair techniques have limitations to their durability, leading to some inevitable recurrences that beget further complexity [
+         <a href="#rid3">
+          3,4
+         </a>
+         ]. In the 21
+         <sup>
+          st
+         </sup>
+         century, component separation techniques have emerged as an important tool in the surgeon's armamentarium for large or complex hernias [
+         <a href="#rid5">
+          5
+         </a>
+         ].
+        </p>
+        <p>
+         Ramirez first defined the term "components separation" in 1990 as a way "large abdominal wall defects can be reconstructed with functional transfer of abdominal-wall components," rather than relying on remote muscle flaps or bridging prosthetics [
+         <a href="#rid6">
+          6
+         </a>
+         ]. Since then, strategic, serial division of the rectus and lateral abdominal wall musculofascial layers has been explored to address undue tension when closing large midline defects.
+        </p>
+        <p>
+         In this overview topic, we will discuss the relevant abdominal wall anatomy, purposes and techniques of component separation, patient selection criteria, preoperative adjuncts that could potentially assist with fascial or soft tissue closure, and complications of component separation.
+        </p>
+        <p>
+         Technical details of various component separation techniques can be found elsewhere. (See
+         <a class="medical medical_review" href="/z/d/html/130471.html" rel="external">
+          "Open anterior component separation techniques"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/130472.html" rel="external">
+          "Open posterior component separation techniques"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/130918.html" rel="external">
+          "Robotic component separation techniques"
+         </a>
+         .)
+        </p>
+        <p>
+         Basic ventral hernia repair techniques that do not involve component separation are discussed in other topics. (See
+         <a class="medical medical_review" href="/z/d/html/96301.html" rel="external">
+          "Management of ventral hernias"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/116246.html" rel="external">
+          "Laparoscopic ventral hernia repair"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/122042.html" rel="external">
+          "Robotic ventral hernia repair"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/126998.html" rel="external">
+          "Lateral abdominal wall hernia repair"
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H2680604045">
+         <span class="h1">
+          ANATOMY OF ANTERIOR ABDOMINAL WALL
+         </span>
+        </p>
+        <p class="headingAnchor" id="H782543368">
+         <span class="h2">
+          Muscles
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Three muscles constitute the lateral abdominal wall. From superficial to deep, they are the external oblique (EO), internal oblique (IO), and transversus abdominis (TA) muscles, followed by layers of transversalis fascia and peritoneum  (
+         <a class="graphic graphic_figure graphicRef72219" href="/z/d/graphic/72219.html" rel="external">
+          figure 1
+         </a>
+         and
+         <a class="graphic graphic_figure graphicRef66280" href="/z/d/graphic/66280.html" rel="external">
+          figure 2
+         </a>
+         ). (See
+         <a class="medical medical_review" href="/z/d/html/3.html" rel="external">
+          "Anatomy of the abdominal wall", section on 'Muscles'
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H2559201780">
+         <span class="h3">
+          Linea semilunaris
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The three lateral abdominal wall muscle layers do not fuse at a single point. Rather, fibers of the IO aponeurosis branch into anterior and posterior lamellae at the linea semilunaris  (
+         <a class="graphic graphic_figure graphicRef77053" href="/z/d/graphic/77053.html" rel="external">
+          figure 3
+         </a>
+         ). More medially (1 to 3 cm), fibers of the EO aponeurosis fuse with fibers of the anterior lamella of the IO to form the anterior rectus sheath, while fibers of the posterior lamella of the IO fuse with the TA to form the posterior rectus sheath. The semilunar line marks the lateral extent of the rectus space and is a key anatomical concept for understanding component separation techniques.
+        </p>
+        <p class="headingAnchor" id="H2927756114">
+         <span class="h3">
+          Linea alba
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The anterior and posterior rectus sheaths encase the rectus muscle, then fuse medially to form the linea alba. Depending on the width of the linea alba, associated diastasis, or midline hernia, the distance of the rectus muscles from the midline can be somewhat variable. (See
+         <a class="medical medical_review" href="/z/d/html/100494.html" rel="external">
+          "Rectus abdominis diastasis"
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H2717146390">
+         <span class="h3">
+          Posterior rectus sheath
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The cross-sectional composition of the posterior rectus sheath varies by its anatomical location  (
+         <a class="graphic graphic_figure graphicRef77053" href="/z/d/graphic/77053.html" rel="external">
+          figure 3
+         </a>
+         ):
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         In the superior one-third of the abdomen, there is a prominent TA muscle belly beneath the posterior lamella of the IO before each aponeurosis fuses medially to form the posterior rectus sheath  (
+         <a class="graphic graphic_diagnosticimage graphicRef131397" href="/z/d/graphic/131397.html" rel="external">
+          image 1
+         </a>
+         ).
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         In the middle third of the abdomen, the TA is aponeurotic beneath the posterior lamella of the IO before these layers fuse medially to form the posterior rectus sheath. Above the arcuate line, the peritoneum and transversalis fascia are densely adherent to the posterior rectus sheath.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         In the lower third of the abdomen, the posterior rectus sheath ends abruptly at the arcuate line and becomes contiguous with peritoneum and transversalis fascia  (
+         <a class="graphic graphic_figure graphicRef77053" href="/z/d/graphic/77053.html" rel="external">
+          figure 3
+         </a>
+         ). All lateral muscle layers travel anterior to the rectus muscles below the arcuate line.
+        </p>
+        <p>
+        </p>
+        <p>
+         Finally, the superior third of the TA begins to interdigitate with the diaphragm along the costal margin, and the two can be difficult to distinguish.
+        </p>
+        <p class="headingAnchor" id="H864636328">
+         <span class="h2">
+          Blood vessels and nerves
+         </span>
+        </p>
+        <p class="headingAnchor" id="H1227727142">
+         <span class="h3">
+          Retrorectus space
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The medial retrorectus space is relatively avascular. As the lateral retrorectus space is developed, the inferior epigastric vessels are encountered just medial to the linea semilunaris in the lower third of the abdominal wall. As the inferior epigastric vessels course superiorly, they bury themselves in the belly of the rectus muscle. Only at the most cephalad aspect of the rectus muscles do the superior epigastric vessels become visible before they too become invested in rectus muscle  (
+         <a class="graphic graphic_figure graphicRef81343" href="/z/d/graphic/81343.html" rel="external">
+          figure 4
+         </a>
+         ).
+        </p>
+        <p>
+         Also housed in the retrorectus space are laterally perforating neurovascular bundles that originate from T6 to L1 and travel between the TA and IO until they pierce the posterior lamella of the IO to enter the retrorectus space [
+         <a href="#rid7">
+          7
+         </a>
+         ]. Their presence, just medial to the linea semilunaris, serves as a valuable landmark. Along with the musculophrenic and lumbar arteries, these lateral perforators supply the lateral (flank) abdominal wall  (
+         <a class="graphic graphic_figure graphicRef131104" href="/z/d/graphic/131104.html" rel="external">
+          figure 5
+         </a>
+         ).
+        </p>
+        <p>
+         The suprapubic abdominal wall at and below the anterior superior iliac spines is also supplied by the inferior epigastric arcade, along with help from the superficial external pudendal, superficial, and deep circumflex iliac arteries.
+        </p>
+        <p>
+         Just below the arcuate line, there is consistently an unnamed vessel that branches medially off the epigastric vessels coursing toward the midline. Also, while most laterally perforating neurovascular bundles appear just medial to the semilunar line, there is typically a single large perforator in the superior third of the abdomen that is much more medial than the rest.
+        </p>
+        <p class="headingAnchor" id="H765591634">
+         <span class="h3">
+          Subcutaneous space
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Anterior perforators off the deep epigastric vessels pierce the anterior rectus sheath to supply the subcutaneous tissue above the rectus muscles, and for this reason the rectus muscle is more closely bound to its anterior fascial envelope [
+         <a href="#rid8">
+          8
+         </a>
+         ]. The surgeon should remain mindful of the blood supply to the anterior abdominal wall, particularly when a patient has had several abdominal incisions that could compromise blood flow and lead to tissue necrosis in "watershed" areas  (
+         <a class="graphic graphic_picture graphicRef131398" href="/z/d/graphic/131398.html" rel="external">
+          picture 1
+         </a>
+         ).
+        </p>
+        <p class="headingAnchor" id="H451522816">
+         <span class="h1">
+          PURPOSES OF COMPONENT SEPARATION
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         In contemporary hernia surgery, component separation serves two purposes.
+        </p>
+        <p class="headingAnchor" id="H2936772798">
+         <span class="h2">
+          Relieve tension on midline fascial closure
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The traditional aim of a component separation is to strategically divide myofascial layers of the abdominal wall to alleviate tension on fascial approximation, typically in the midline.
+        </p>
+        <p>
+         The benefits of reestablishing the midline during any hernia repair are to improve core muscle function by aligning the rectus muscles in the vector of their proper usage and to give lateral abdominal muscles a firm insertion point. The functional benefits in strength, stability, respiratory function, and quality of life warrant "sacrifice" of one of the lateral muscles [
+         <a href="#rid9">
+          9-12
+         </a>
+         ]. Cross-sectional imaging has even suggested that division of one lateral abdominal wall muscle to achieve midline closure results in compensatory hypertrophy of the other two remaining muscles [
+         <a href="#rid13">
+          13
+         </a>
+         ].
+        </p>
+        <p>
+         Surgical technique to relieve tension on midline fascial closure has been pursued as early as 1916 [
+         <a href="#rid14">
+          14,15
+         </a>
+         ], but earlier techniques of relaxing incisions on the medial rectus sheaths were insufficient for closing larger midline defects [
+         <a href="#rid16">
+          16,17
+         </a>
+         ]. Bridging synthetic mesh is not a good option, given the high rates of infection, excision, fistulization, and hernia recurrence [
+         <a href="#rid18">
+          18-20
+         </a>
+         ]. Meanwhile, autologous tissue transfers such as the free or pedicled tensor fascia lata flaps are also associated with high recurrence rates in addition to donor site morbidities [
+         <a href="#rid21">
+          21,22
+         </a>
+         ].
+        </p>
+        <p>
+         Oscar Ramirez first described a localized dissection of the lateral abdominal wall that would provide additional fascial medialization beyond that which can be accomplished with dissections limited to the rectus fascial envelope [
+         <a href="#rid6">
+          6
+         </a>
+         ]. Since then, strategic, serial division of the rectus and lateral abdominal wall musculofascial layers has been explored to address undue tension when closing large midline defects. (See
+         <a class="local">
+          'Techniques of component separation'
+         </a>
+         below.)
+        </p>
+        <p>
+         The size of a fascial defect that justifies usage of a component separation is not well defined, and this ambiguity exists for several reasons:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         The compliance of each patient's abdominal wall is variable. One patient with a large defect but more compliant abdominal wall may achieve fascial closure more easily than other patients with smaller defects but more rigid abdominal walls.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         The length and width of a fascial defect alone are often not reflective of the rest of the hernia, as small fascial defects can be associated with voluminous hernia sacs and loss of domain.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         There are advantages to a component separation other than midline fascial approximation. This point is critical to understanding the evolution of component separation utilization and its wide adoption during the past 10 years and is further discussed below. (See
+         <a class="local">
+          'Facilitate retromuscular mesh placement'
+         </a>
+         below.)
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H1198821822">
+         <span class="h2">
+          Facilitate retromuscular mesh placement
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         A posterior component separation, specifically transversus abdominis release (TAR), has allowed for additional benefits other than midline fascial advancement, including [
+         <a href="#rid23">
+          23
+         </a>
+         ]:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Relief of tension on the posterior rectus sheath/peritoneal closure
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         A large retromuscular pocket for mesh reinforcement with wide overlap
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         A well-vascularized plane for optimal mesh ingrowth
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Mesh placement that is not in contact with the viscera and is separated by muscle from the superficial wound
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Allows for the use of uncoated monofilament polypropylene (both inexpensive and resilient to infection)
+        </p>
+        <p>
+        </p>
+        <p>
+         Because of these benefits offered by retromuscular mesh placement, contemporary surgeons now have an additional motivation to utilize a TAR other than just anterior rectus approximation. (See
+         <a class="local">
+          'Patient selection'
+         </a>
+         below.)
+        </p>
+        <p class="headingAnchor" id="H931018064">
+         <span class="h1">
+          TECHNIQUES OF COMPONENT SEPARATION
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Depending on the lateral abdominal wall muscle(s) divided, techniques of component separation can be broadly categorized into anterior and posterior. Both anterior and posterior component separations allow for a maximum bilateral rectus advancement of approximately 20 cm. Uniquely, transversus abdominis release (TAR) also allows for significant posterior fascial advancement &gt;20 cm to create a large visceral sac and retromuscular pocket.
+        </p>
+        <p>
+         It should be emphasized that anterior and posterior component separations should not be performed concomitantly, or else the anterior abdominal wall may be destabilized.
+        </p>
+        <p class="headingAnchor" id="H115343904">
+         <span class="h2">
+          Open anterior component separation
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The original Ramirez component separation involved two myofascial divisions on each side of the abdominal wall. First, medial division of the posterior rectus sheath and its separation from the overlying rectus muscle allows for each rectus muscle and its associated anterior fascia to be advanced medially 3, 5, and 3 cm in the upper, middle, and lower third of the abdominal wall, respectively (6, 10, and 6 cm bilaterally).
+        </p>
+        <p>
+         If this is insufficient to alleviate midline tension, the external oblique muscle can be longitudinally divided 1 to 2 cm lateral to the semilunar line and separated from the underlying internal oblique muscle in a relatively avascular plane. When combined with posterior rectus sheath division, this allows for 5, 10, and 3 cm of advancement, again respectively in each third of the abdominal wall, totaling 10, 20, and 6 cm of bilateral advancement  (
+         <a class="graphic graphic_table graphicRef131399" href="/z/d/graphic/131399.html" rel="external">
+          table 1
+         </a>
+         ) [
+         <a href="#rid6">
+          6
+         </a>
+         ].
+        </p>
+        <p>
+         While this operation was initially referred to as a "components separation" without ambiguity, when newer techniques of separating the posterior rectus sheath and contiguous transversus abdominis (TA) from the anterior internal oblique (IO)/external oblique (EO)/rectus muscle bodies were termed a "posterior component separation," Ramirez's division of the anterior EO inherited the designation "anterior component separation" retroactively.
+        </p>
+        <p>
+         Open anterior component separation techniques are discussed separately. (See
+         <a class="medical medical_review" href="/z/d/html/130471.html" rel="external">
+          "Open anterior component separation techniques"
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H959375833">
+         <span class="h2">
+          Open posterior component separation
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Following medial division of the posterior rectus sheath, the retrorectus space is entered and can be dissected as lateral as the linea semilunaris; this retrorectus dissection is usually referred to as the "Rives-Stoppa" repair [
+         <a href="#rid24">
+          24
+         </a>
+         ]. If further myofascial release is required for midline fascial approximation or posterior rectus sheath closure, the posterior lamella of the IO and TA can both be divided to continue the retromuscular dissection in the preperitoneal space (TAR). The space between the IO and TA is not usually developed, as it would require division of laterally perforating neurovascular bundles. (See
+         <a class="local">
+          'Retrorectus space'
+         </a>
+         above.)
+        </p>
+        <p>
+         In order to assess the relative effectiveness of a posterior component separation in regards to fascial advancement, cadaveric dissections were performed [
+         <a href="#rid25">
+          25
+         </a>
+         ]. Each of these operative steps offers consistent medial advancement of the anterior and posterior layers. Unilateral maximum anterior advancement is 7.6 cm after a retrorectus dissection, 8.0 cm after division of the posterior lamella of the IO, 8.6 cm after TA division, and 9.9 cm after completion of the retromuscular dissection. Respective posterior sheath advancement is 7.5, 8.3, 9.5, and 11.2 cm after each corresponding step. These results are comparable to Ramirez's findings  (
+         <a class="graphic graphic_table graphicRef131399" href="/z/d/graphic/131399.html" rel="external">
+          table 1
+         </a>
+         ).
+        </p>
+        <p>
+         Open posterior component separation techniques are discussed separately. (See
+         <a class="medical medical_review" href="/z/d/html/130472.html" rel="external">
+          "Open posterior component separation techniques"
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H3108378642">
+         <span class="h2">
+          Robotic posterior component separation
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The robotic platform has allowed for minimally invasive adaptations of these retromuscular hernia repairs that, for most surgeons, could not be done using traditional laparoscopy. There are both transabdominal and totally extraperitoneal iterations of the Rives-Stoppa retrorectus repair for hernias &lt;7 cm wide [
+         <a href="#rid26">
+          26
+         </a>
+         ]. For hernias &gt;7 cm wide, a robotic transversus abdominis release is also a potential option [
+         <a href="#rid27">
+          27
+         </a>
+         ]. (See
+         <a class="medical medical_review" href="/z/d/html/130918.html" rel="external">
+          "Robotic component separation techniques"
+         </a>
+         .)
+        </p>
+        <p>
+         Basic requirements for robotic repairs include the ability to achieve minimally invasive access to the peritoneal cavity and safely clear the anterior abdominal wall of visceral adhesions, including safe reduction of the hernia contents. While the surgeon can often avoid a laparotomy using these techniques, any residual scar from a previous laparotomy would be left behind, and this can sometimes impact a patient's preference.
+        </p>
+        <p>
+         In line with the evolution of other techniques from open to a minimally invasive approach, evidence has begun to accrue demonstrating shorter length of stay and decreased wound morbidity for these robotic retromuscular hernia repairs [
+         <a href="#rid28">
+          28,29
+         </a>
+         ].
+        </p>
+        <p>
+         Robotic component separation techniques are discussed separately. (See
+         <a class="medical medical_review" href="/z/d/html/130918.html" rel="external">
+          "Robotic component separation techniques"
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H3615306989">
+         <span class="h2">
+          Mesh reinforcement
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Although component separation was portrayed as a method to alleviate tension on midline hernia repairs without any prosthetic reinforcement, subsequent reports have revealed early recurrence rates (within one year) as high as 53 percent [
+         <a href="#rid30">
+          30
+         </a>
+         ]. Given our modern understanding that mesh is critical to the durability of any hernia repair, contemporary descriptions of any component separation include some prosthetic reinforcement.
+        </p>
+        <p>
+         Mesh reinforcement is suboptimal with anterior component separation techniques for several reasons. Large defects will not allow for retrorectus mesh placement, because the posterior rectus sheaths will be under too much tension for closure, and a concomitant posterior component separation to aid posterior sheath closure cannot be combined with any anterior component separation. While raising large skin flaps allows for large onlay meshes, it is also more likely to undermine the blood supply of the subcutaneous tissue and predispose patients to wound morbidities. Conversely, minimizing skin flaps curtails mesh overlap, which makes an onlay technique impractical. Ultimately, intraperitoneal mesh is commonly utilized, and these barrier-coated synthetics or bio-prosthetics incur additional cost.
+        </p>
+        <p>
+         Taking all this into consideration, it becomes obvious that the reason the posterior component separation technique TAR has gained such wide popularity is not just because TA division offers superior fascial medialization compared with EO division. Rather, it is also because TAR, in addition to allowing for equivalent myofascial relaxation to approximate the midline, creates a reproducible, well-vascularized, retromuscular pocket for mesh placement, all through a midline incision without the need for skin flaps [
+         <a href="#rid31">
+          31
+         </a>
+         ]. Release of the posterior rectus sheaths allows for creation of a large visceral sac to isolate the viscera. With rare exception, this consistently allows for use of uncoated monofilament polypropylene, which is inexpensive and resilient to infection. (See
+         <a class="local">
+          'Facilitate retromuscular mesh placement'
+         </a>
+         above.)
+        </p>
+        <p class="headingAnchor" id="H2987963243">
+         <span class="h1">
+          PATIENT SELECTION
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The decision to pursue a component separation is first guided by hernia width that can be determined preoperatively by physical exam or cross-sectional imaging  (
+         <a class="graphic graphic_algorithm graphicRef131400" href="/z/d/graphic/131400.html" rel="external">
+          algorithm 1
+         </a>
+         ). The further choice among multiple options within each hernia width category is usually dictated by surgeon experience and preference.
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Typically, hernias &lt;7 cm do not require a component separation and can often be repaired with either an open, laparoscopic, or robotic approach with intraperitoneal mesh or an open or robotic approach with retrorectus mesh as described by Rives and Stoppa. There are both transabdominal and totally extraperitoneal iterations of the robotic Rives-Stoppa retrorectus repair for hernias &lt;7 cm wide [
+         <a href="#rid26">
+          26
+         </a>
+         ]. Such hernias can also be repaired with onlay mesh using open techniques.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Hernias 7 to 10 cm typically will not require a component separation for midline fascial approximation and can be repaired laparoscopically with a large piece of intraperitoneal mesh or repaired in an open retromuscular approach. An open or robotic TAR can be added to achieve posterior rectus sheath closure if necessary. A rectus width to hernia width ratio &gt;2 reliably predicts the ability to close the fascia with a Rives-Stoppa repair alone and no further myofascial release in almost 90 percent of cases [
+         <a href="#rid32">
+          32
+         </a>
+         ].
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Hernias &gt;10 cm, depending on abdominal wall compliance, may require either an anterior or posterior component separation for both rectus approximation (midline closure) and posterior fascial approximation. This can be accomplished with either open anterior component separation or open or robotic TAR.
+        </p>
+        <p>
+        </p>
+        <p>
+         We reserve component separation for nonemergency hernia repairs. Use of these techniques to achieve fascial closure in an open abdomen situation after an abdominal catastrophe is feasible but will negate future abdominal wall reconstruction options. During emergency operations, we prefer to attempt primary closure with interrupted figure-of-eight sutures or bridge the fascial defect with a nonpermanent prosthetic.
+        </p>
+        <p class="headingAnchor" id="H2762631220">
+         <span class="h1">
+          PREOPERATIVE ADJUNCTS
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Preoperative adjuncts (such as botulinum toxin injection or tissue expansion) have been used to facilitate fascial and/or abdominal wall closure when a hernia volume to peritoneal volume ratio is &gt;20 to 25 percent. However, there is a lack of consensus regarding the routine use of preoperative adjuncts in abdominal wall reconstruction, especially progressive pneumoperitoneum with its associated severe complications [
+         <a href="#rid33">
+          33
+         </a>
+         ].
+        </p>
+        <p class="headingAnchor" id="H824328156">
+         <span class="h2">
+          Botulinum toxin
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The use of botulinum neurotoxin type A (BoNT-A) to preoperatively relax the lateral abdominal wall muscles and reduce tension on midline abdominal wall closure has been termed a "chemical component separation" or "chemical component paralysis" [
+         <a href="#rid34">
+          34
+         </a>
+         ].
+        </p>
+        <p>
+         There is no consensus on which patients would benefit from BoNT-A injections prior to ventral hernia repair, but many authors have cited hernia volume to peritoneal volume ratio &gt;20 to 25 percent (as defined by Tanaka [
+         <a href="#rid35">
+          35
+         </a>
+         ]) to warrant consideration of preoperative BoNT-A [
+         <a href="#rid36">
+          36
+         </a>
+         ].
+        </p>
+        <p>
+         While BoNT-A injection is a safe procedure, evidence to support its use and the associated cost is limited. In small case series and a meta-analysis, the use of BoNT-A before ventral hernia repair decreased the width of the abdominal wall defect by approximately 5.8 cm, increased the length of the abdominal wall by approximately 3 to 4 cm, and increased the volume of the peritoneal cavity [
+         <a href="#rid34">
+          34,37-40
+         </a>
+         ]. However, such radiographic changes have not translated into tangible clinical benefits such as reduced need for component separation [
+         <a href="#rid40">
+          40,41
+         </a>
+         ]. A propensity-score matched study of 145 patients undergoing abdominal wall reconstruction found a higher percentage of fascial closure (92 versus 81 percent), but also a greater need for component separation with preoperative BoNT (61 versus 47 percent) [
+         <a href="#rid42">
+          42
+         </a>
+         ].
+        </p>
+        <p>
+         BoNT-A is typically delivered as three to five injections per side of the abdominal wall [
+         <a href="#rid43">
+          43
+         </a>
+         ].
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         When possible, these injections should be given under conscious sedation to minimize patient discomfort.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         A total of 300 units of BoNT-A is reconstituted in 150 cc of injectable 0.9% sodium chloride solution (final concentration of 2 units/cc).
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Two syringes are labeled and loaded onto a three-way stopcock, one with the BoNT-A solution and the other with injectable
+         <a class="drug drug_general" data-topicid="9929" href="/z/d/drug information/9929.html" rel="external">
+          saline
+         </a>
+         . This stopcock is attached to an extension tubing secured to an 18 gauge spinal needle.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         The three muscle bellies of the lateral abdominal wall (external oblique [EO], internal oblique [IO], transversus abdominis [TA]) are identified by ultrasound at three sites on each side of the abdomen (subcostal, anterior axillary line, and lower quadrant).
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Under ultrasound guidance, the spinal needle is passed into the TA muscle belly first at each of the sites. Sterile
+         <a class="drug drug_general" data-topicid="9929" href="/z/d/drug information/9929.html" rel="external">
+          saline
+         </a>
+         is injected to confirm needle location, before 8.3 cc (16.6 u) of BoNT-A is injected into the TA muscle belly.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Next, the needle is withdrawn into the IO and then the EO muscle and the sequence is repeated twice, injecting a total of 25 cc and 50 units of BoNT-A at each site.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         The same sequence is repeated at each of the six sites.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         This should be done at least two weeks before attempting the ventral hernia repair.
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H465084362">
+         <span class="h2">
+          Tissue expanders
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Tissue expansion involves placement of a silicone balloon under subcutaneous tissue or fascia followed by serial injections of
+         <a class="drug drug_general" data-topicid="9929" href="/z/d/drug information/9929.html" rel="external">
+          saline
+         </a>
+         to inflate the balloon to expand the local tissue in preparation for a local reconstruction [
+         <a href="#rid44">
+          44,45
+         </a>
+         ].
+        </p>
+        <p>
+         Tissue expansion can be used for patients with very large fascial and soft tissue defects in the context of a large ventral hernia with loss of domain or tissue loss from traumatic injury, soft tissue infection, oncologic resections, or a prior open abdomen. Pediatric surgeons encounter these scenarios in the setting of gastroschisis and omphalocele.
+        </p>
+        <p>
+         Tissue expanders can be placed in two types of planes:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Placement between the lateral abdominal wall muscle layers (IO/EO or IO/TA) results in bidirectional expansion, indirectly increasing intra-abdominal pressure. This results in a less effective expansion of the skin and subcutaneous tissue [
+         <a href="#rid46">
+          46
+         </a>
+         ].
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Alternatively, expansion of the skin and subcutaneous tissue is more effective when the expansion devices are placed between the subcutaneous tissue and the abdominal wall muscles. In the context of an abdominal wall reconstruction where component separation is providing sufficient myofascial advancement in the vast majority of cases, we reserve the role of tissue expansion for assuring the patient has sufficient soft tissue at the end of a case.
+        </p>
+        <p>
+        </p>
+        <p>
+         Balloon implants come in a variety of shapes and sizes and can include remote or integrated ports. When possible, the implant should match the length of the wound. Placement should be through an incision that will either be incorporated into one margin of the eventual flap or placed perpendicular to the line of expansion to prevent dehiscence. Expansion of the device can begin at the time of implantation or one to three weeks later, providing sufficient tension for expansion without compromising perfusion or the integrity of the wound through which it was placed. Generally, the devices are injected weekly for 6 to 12 weeks to maximize expansion.
+        </p>
+        <p>
+         Tissue expansion requires multiple surgeries and careful management of the expansion in between. It should start at least 6 to 12 weeks prior to the hernia repair. Complications such as device infections or flap necrosis can occur in 15 percent of patients [
+         <a href="#rid47">
+          47
+         </a>
+         ].
+        </p>
+        <p class="headingAnchor" id="H1495522342">
+         <span class="h1">
+          COMPLICATIONS
+         </span>
+        </p>
+        <p class="headingAnchor" id="H3232870845">
+         <span class="h2">
+          Wound morbidity
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Open anterior component separation is associated with wound morbidities in as many as 50 percent of patients, about half of whom developed surgical site infections [
+         <a href="#rid48">
+          48,49
+         </a>
+         ]. Alternatives to traditional open component separation are associated with much lower rates of wound complications ranging from 2 to 14 percent [
+         <a href="#rid50">
+          50-52
+         </a>
+         ]. (See
+         <a class="medical medical_review" href="/z/d/html/130471.html" rel="external">
+          "Open anterior component separation techniques"
+         </a>
+         .)
+        </p>
+        <p>
+         The wound morbidity rates of anterior and posterior component separation techniques are generally comparable [
+         <a href="#rid53">
+          53-55
+         </a>
+         ].
+        </p>
+        <p>
+         Risk factors for wound morbidity and mesh complications include patient factors (eg, body mass index, poorly controlled diabetes, history of a previous surgical site infection), hernia factors (size and wound class), and technical factors related to the surgical approach (open versus minimally invasive, mesh type and position) [
+         <a href="#rid56">
+          56
+         </a>
+         ].
+        </p>
+        <p>
+         The Abdominal Core Health Quality Collaborative (ACHQC)
+         <a class="external" href="/external-redirect?target_url=https%3A%2F%2Fwww.achqc.org%2Fpatients%2Fachqc-mobile-app&amp;token=IQxLzDq4doJGUgaZgeIY0%2BPEtHFqY5LHURz8DB6%2Fjx73oVADbrfbzU97O4Gmj1x%2FjuBWX2wsyrmRRVlhaYDa%2Bw%3D%3D&amp;TOPIC_ID=130470" target="_blank">
+          app
+         </a>
+         can use preoperative and intraoperative information to provide patient-specific risk-adjusted 30 day and one-year outcomes.
+        </p>
+        <p class="headingAnchor" id="H353151173">
+         <span class="h2">
+          Pulmonary complications due to intra-abdominal hypertension
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Another postoperative concern specifically for massive ventral hernia repairs with loss of domain is the potential development of postoperative abdominal compartment syndrome.
+        </p>
+        <p>
+         In our experience, abdominal compartment syndrome in the setting of elective myofascial release most commonly manifests as postoperative respiratory complications requiring reintubation and/or transfer to the intensive care unit (ICU). We found that changes in plateau pressure (PP) after ventral hernia repair directly correlated with postoperative respiratory complications (increase in PP ≥6 mmHg, odds ratio [OR] 8.67; increase in PP ≥9 mmHg, OR 11.5) [
+         <a href="#rid57">
+          57
+         </a>
+         ].
+        </p>
+        <p>
+         Thus, for large abdominal wall reconstruction patients with a tight abdominal wall closure, we will have the anesthesia provider measure the PP before and after closure of the anterior abdominal wall fascia using the same tidal volume.
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Patients with a PP increase of &lt;6 mmHg can be safely extubated.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Young patients with no pulmonary disease or concern from anesthesia staff are extubated even with a PP increase of ≥6 mmHg but are still monitored in the ICU overnight.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Those with a PP increase of ≥6 mmHg and any concern for pulmonary compromise (old age, history of obstructive sleep apnea or underlying lung disease) will typically remain intubated until they are reassessed by the ICU staff in the morning.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Paralytics are only added if there is difficulty ventilating the patient or decreased urine output that is not due to hypovolemia. Such clinical signs are usually associated with a PP increase of ≥9 mmHg, although a PP increase of ≥9 mmHg per se is not an indication to paralyze the patient.
+        </p>
+        <p>
+        </p>
+        <p>
+         Elevations in intra-abdominal pressure after ventral hernia repair are unique in that they are usually transient and can be expected to resolve within 48 hours. This could be due to fluid shifts and increase in compliance of the abdominal wall as a result of component separation. However, such patients are still at risk of developing postoperative respiratory complications [
+         <a href="#rid58">
+          58
+         </a>
+         ].
+        </p>
+        <p>
+         Twenty percent of patients in a historic series had an increase in PP by &gt;6 mmHg [
+         <a href="#rid57">
+          57
+         </a>
+         ]. By contrast, &lt;5 percent of patients require postoperative intubation in contemporary practice as anesthesia providers are using lower tidal volumes and less crystalloid fluid. Of note, we no longer measure bladder pressure, as it does not provide additional information.
+        </p>
+        <p>
+         It should be recognized that patients undergoing elective hernia repair with a myofascial release are very different from the context in which abdominal compartment syndrome is traditionally encountered (typically acute abdominal catastrophes). As a result of these findings, the World Society of the Abdominal Compartment Syndrome has recognized intra-abdominal pressure changes in the elective setting as a separate and distinct phenomenon [
+         <a href="#rid59">
+          59
+         </a>
+         ].
+        </p>
+        <p class="headingAnchor" id="H3853427525">
+         <span class="h2">
+          Linea semilunaris disruption
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Inappropriate anteromedial dissection during a TAR dissection or inappropriate posteromedial dissection during an anterior component separation can result in complete transection of the linea semilunaris, separating the medial rectus muscle from the lateral oblique muscles [
+         <a href="#rid60">
+          60
+         </a>
+         ]. These patients can present with a lateral bulge as early as a few months after their operation. When bilateral bulges flank a "floating" rectus muscle, it gives the appearance of a "Mickey Mouse" hernia defect  (
+         <a class="graphic graphic_diagnosticimage graphicRef131401" href="/z/d/graphic/131401.html" rel="external">
+          image 2
+         </a>
+         ).
+        </p>
+        <p>
+         The incidence of these complications is currently unknown but could be increasing given the growing popularity of component separation techniques (especially robotic retromuscular adaptations) [
+         <a href="#rid61">
+          61
+         </a>
+         ]. While this complication is typically only encountered by inexperienced surgeons during the "learning curves" of open or robotic TAR, those who are affected will likely never restore a "normal" or dynamic abdominal wall. Thus, surgeons who attempt component separations must have an appropriate respect for the complexity of the anatomy.
+        </p>
+        <p class="headingAnchor" id="H2679840128">
+         <span class="h1">
+          SOCIETY GUIDELINE LINKS
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Links to society and government-sponsored guidelines from selected countries and regions around the world are provided separately. (See
+         <a class="medical medical_society_guidelines" href="/z/d/html/117292.html" rel="external">
+          "Society guideline links: Ventral hernia"
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H3995199194">
+         <span class="h1">
+          SUMMARY AND RECOMMENDATIONS
+         </span>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Purposes of component separation
+         </strong>
+         – Component separation serves two purposes in modern hernia surgery: to alleviate tension on midline fascial approximation and to facilitate closure of the posterior rectus sheath and create a retromuscular pocket to accommodate mesh. (See
+         <a class="local">
+          'Purposes of component separation'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Techniques of component separation
+         </strong>
+         – Component separation can be performed with either anterior or posterior techniques, both permitting maximum bilateral rectus advancement of approximately 20 cm. In addition, transversus abdominis release (TAR) also allows for significant posterior fascial advancement &gt;20 cm to create a large visceral sac and retromuscular pocket. Specific techniques are discussed in other topics, but it should be emphasized that anterior and posterior component separations should not be performed concomitantly, or else the anterior abdominal wall may be destabilized. (See
+         <a class="local">
+          'Techniques of component separation'
+         </a>
+         above and
+         <a class="medical medical_review" href="/z/d/html/130471.html" rel="external">
+          "Open anterior component separation techniques"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/130472.html" rel="external">
+          "Open posterior component separation techniques"
+         </a>
+         .)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Patient selection for component separation
+         </strong>
+         – The decision to pursue a component separation is typically guided by hernia width, which can be determined preoperatively by physical exam or cross-sectional imaging  (
+         <a class="graphic graphic_algorithm graphicRef131400" href="/z/d/graphic/131400.html" rel="external">
+          algorithm 1
+         </a>
+         ) (see
+         <a class="local">
+          'Patient selection'
+         </a>
+         above):
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         For patient with hernias &lt;7 cm wide, hernias can typically be repaired without component separation.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         For patients with hernias 7 to 10 cm wide, the decision to use component separation is influenced by the width of the hernia versus the width of the rectus muscle. Although such hernias can be repaired without component separation, a TAR may be performed to achieve posterior rectus fascia closure if a retromuscular approach is undertaken.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         For patients with hernias &gt;10 cm wide, we suggest repair with component separation rather than other techniques (
+         <a class="grade" href="https:///uptodate/show/grade_6" rel="external">
+          Grade 2C
+         </a>
+         ). However, for patients with good abdominal wall compliance, hernia repair without component separation may be feasible.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Preoperative adjuncts for component separation
+         </strong>
+         – Preoperative adjuncts (such as botulinum toxin injection or tissue expansion) have been used to facilitate fascial and/or abdominal wall closure when the hernia volume to peritoneal volume ratio is &gt;20 to 25 percent. However, there is a lack of consensus regarding the routine use of preoperative adjuncts in abdominal wall reconstruction. (See
+         <a class="local">
+          'Preoperative adjuncts'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Complications of component separation
+         </strong>
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         The wound complication rate of open anterior component separation is substantially higher than that of less invasive anterior alternatives, while the wound complication rates of comparable anterior and posterior component separation techniques are similar. (See
+         <a class="local">
+          'Wound morbidity'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Postoperative respiratory failure requiring reintubation can be a manifestation of intra-abdominal compartment hypertension after large or complex ventral hernia repair. We use the increase in plateau pressure after fascial closure to decide whether to leave the patient intubated at the end of surgery. The increase in intra-abdominal pressure is usually transient for up to 48 hours. (See
+         <a class="local">
+          'Pulmonary complications due to intra-abdominal hypertension'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Linea semilunar line disruption is a technical complication that causes separation of the medial rectus muscle from the lateral oblique muscles. The resulting deformity can be long-lasting or permanent. To avoid that, the surgeon should understand the relevant anatomy before pursuing these dissections. (See
+         <a class="local">
+          'Linea semilunaris disruption'
+         </a>
+         above.)
+        </p>
+       </div>
+       <div class="headingAnchor" id="references">
+        <ol id="reference">
+         <li>
+          <a class="nounderline abstract_t">
+           Poulose BK, Shelton J, Phillips S, et al. Epidemiology and cost of ventral hernia repair: making the case for hernia research. Hernia 2012; 16:179.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Fischer JP, Basta MN, Mirzabeigi MN, et al. A Risk Model and Cost Analysis of Incisional Hernia After Elective, Abdominal Surgery Based Upon 12,373 Cases: The Case for Targeted Prophylactic Intervention. Ann Surg 2016; 263:1010.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Flum DR, Horvath K, Koepsell T. Have outcomes of incisional hernia repair improved with time? A population-based analysis. Ann Surg 2003; 237:129.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Köckerling F, Sheen AJ, Berrevoet F, et al. The reality of general surgery training and increased complexity of abdominal wall hernia surgery. Hernia 2019; 23:1081.
+          </a>
+         </li>
+         <li class="breakAll">
+          Clarke TM, Goldberg RF, Lloyd JM, et al. The increasing utilization of component separation technique during ventral hernia repair: Association of patient, payor, and community demographics. 2012. Available at: https://www.sages.org/meetings/annual-meeting/abstracts-archive/the-increasing-utilization-of-component-separation-technique-during-ventral-hernia-repair-association-of-patient-payor-and-community-demographics (Accessed on September 10, 2020).
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Ramirez OM, Ruas E, Dellon AL. "Components separation" method for closure of abdominal-wall defects: an anatomic and clinical study. Plast Reconstr Surg 1990; 86:519.
+          </a>
+         </li>
+         <li class="breakAll">
+          Gray's Anatomy: The Anatomical Basis of Clinical Practice, 41st ed, Standring S (Ed), Elsevier, 2016.
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Huger WE Jr. The anatomic rationale for abdominal lipectomy. Am Surg 1979; 45:612.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Criss CN, Petro CC, Krpata DM, et al. Functional abdominal wall reconstruction improves core physiology and quality-of-life. Surgery 2014; 156:176.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Haskins IN, Prabhu AS, Jensen KK, et al. Effect of transversus abdominis release on core stability: Short-term results from a single institution. Surgery 2019; 165:412.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Licari L, Campanella S, Carolla C, et al. Abdominal wall incisional hernia repair improves respiratory function: results after 3 years of follow-up. Hernia 2021; 25:999.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Licari L, Guercio G, Campanella S, et al. Clinical and Functional Outcome After Abdominal Wall Incisional Hernia Repair: Evaluation of Quality-of-Life Improvement and Comparison of Assessment Scales. World J Surg 2019; 43:1914.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           De Silva GS, Krpata DM, Hicks CW, et al. Comparative radiographic analysis of changes in the abdominal wall musculature morphology after open posterior component separation or bridging laparoscopic ventral hernia repair. J Am Coll Surg 2014; 218:353.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Gibson CL. OPERATION FOR CURE OF LARGE VENTRAL HERNIA. Ann Surg 1920; 72:214.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Gibson CL. POST-OPERATIVE INTESTINAL OBSTRUCTION. Ann Surg 1916; 63:442.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Köckerling F. What Do We Know About the Chevrel Technique in Ventral Incisional Hernia Repair? Front Surg 2019; 6:15.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Chevrel JP. [The treatment of large midline incisional hernias by "overcoat" plasty and prothesis (author's transl)]. Nouv Presse Med 1979; 8:695.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Leber GE, Garb JL, Alexander AI, Reed WP. Long-term complications associated with prosthetic repair of incisional hernias. Arch Surg 1998; 133:378.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           de Vries Reilingh TS, van Geldere D, Langenhorst B, et al. Repair of large midline incisional hernias with polypropylene mesh: comparison of three operative techniques. Hernia 2004; 8:56.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Lichtenstein IL, Shore JM. Repair of recurrent ventral hernias by an internal "binder". Am J Surg 1976; 132:121.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Williams JK, Carlson GW, deChalain T, et al. Role of tensor fasciae latae in abdominal wall reconstruction. Plast Reconstr Surg 1998; 101:713.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Williams JK, Carlson GW, Howell RL, et al. The tensor fascia lata free flap in abdominal-wall reconstruction. J Reconstr Microsurg 1997; 13:83.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Novitsky YW, Elliott HL, Orenstein SB, Rosen MJ. Transversus abdominis muscle release: a novel approach to posterior component separation during complex abdominal wall reconstruction. Am J Surg 2012; 204:709.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Hartog FPJD, Sneiders D, Darwish EF, et al. Favorable Outcomes After Retro-Rectus (Rives-Stoppa) Mesh Repair as Treatment for Noncomplex Ventral Abdominal Wall Hernia, a Systematic Review and Meta-analysis. Ann Surg 2022; 276:55.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Majumder A, Miller HJ, Del Campo LM, et al. Assessment of myofascial medialization following posterior component separation via transversus abdominis muscle release in a cadaveric model. Hernia 2018; 22:637.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Santos DA, Limmer AR, Gibson HM, Ledet CR. The current state of robotic retromuscular repairs-a qualitative review of the literature. Surg Endosc 2021; 35:456.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Warren JA, Cobb WS, Ewing JA, Carbonell AM. Standard laparoscopic versus robotic retromuscular ventral hernia repair. Surg Endosc 2017; 31:324.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Carbonell AM, Warren JA, Prabhu AS, et al. Reducing Length of Stay Using a Robotic-assisted Approach for Retromuscular Ventral Hernia Repair: A Comparative Analysis From the Americas Hernia Society Quality Collaborative. Ann Surg 2018; 267:210.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Martin-Del-Campo LA, Weltz AS, Belyansky I, Novitsky YW. Comparative analysis of perioperative outcomes of robotic versus open transversus abdominis release. Surg Endosc 2018; 32:840.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           de Vries Reilingh TS, van Goor H, Charbon JA, et al. Repair of giant midline abdominal wall hernias: "components separation technique" versus prosthetic repair : interim analysis of a randomized controlled trial. World J Surg 2007; 31:756.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Zolin SJ, Fafaj A, Krpata DM. Transversus abdominis release (TAR): what are the real indications and where is the limit? Hernia 2020; 24:333.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Love MW, Warren JA, Davis S, et al. Computed tomography imaging in ventral hernia repair: can we predict the need for myofascial release? Hernia 2021; 25:471.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           van Rooijen MMJ, Yurtkap Y, Allaeys M, et al. Fascial closure in giant ventral hernias after preoperative botulinum toxin a and progressive pneumoperitoneum: A systematic review and meta-analysis. Surgery 2021; 170:769.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Ibarra-Hurtado TR, Nuño-Guzmán CM, Echeagaray-Herrera JE, et al. Use of botulinum toxin type a before abdominal wall hernia reconstruction. World J Surg 2009; 33:2553.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Tanaka EY, Yoo JH, Rodrigues AJ Jr, et al. A computerized tomography scan method for calculating the hernia sac and abdominal cavity volume in complex large incisional hernia with loss of domain. Hernia 2010; 14:63.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Afaque MY. Assessing the complexity of ventral hernia by methods of Tanaka, Sabbagh, Carbonell, and Love. Hernia 2021; 25:557.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Ibarra-Hurtado TR, Nuño-Guzmán CM, Miranda-Díaz AG, et al. Effect of botulinum toxin type A in lateral abdominal wall muscles thickness and length of patients with midline incisional hernia secondary to open abdomen management. Hernia 2014; 18:647.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Elstner KE, Read JW, Saunders J, et al. Selective muscle botulinum toxin A component paralysis in complex ventral hernia repair. Hernia 2020; 24:287.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Weissler JM, Lanni MA, Tecce MG, et al. Chemical component separation: a systematic review and meta-analysis of botulinum toxin for management of ventral hernia. J Plast Surg Hand Surg 2017; 51:366.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Wegdam JA, de Vries Reilingh TS, Bouvy ND, Nienhuijs SW. Prehabilitation of complex ventral hernia patients with Botulinum: a systematic review of the quantifiable effects of Botulinum. Hernia 2021; 25:1427.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Horne CM, Augenstein V, Malcher F, et al. Understanding the benefits of botulinum toxin A: retrospective analysis of the Abdominal Core Health Quality Collaborative. Br J Surg 2021; 108:112.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Deerenberg EB, Shao JM, Elhage SA, et al. Preoperative botulinum toxin A injection in complex abdominal wall reconstruction- a propensity-scored matched study. Am J Surg 2021; 222:638.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Zendejas B, Khasawneh MA, Srvantstyan B, et al. Outcomes of chemical component paralysis using botulinum toxin for incisional hernia repairs. World J Surg 2013; 37:2830.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Byrd HS, Hobar PC. Abdominal wall expansion in congenital defects. Plast Reconstr Surg 1989; 84:347.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Althubaiti G, Butler CE. Abdominal wall and chest wall reconstruction. Plast Reconstr Surg 2014; 133:688e.
+          </a>
+         </li>
+         <li class="breakAll">
+          Chmielewski L, Lee M, Hooman S. Tissue expansion during abdominal wall reconstruction. In: Hernia Surgery: Current Principles, Novitsky YW (Ed), Springer, 2016. p.307.
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Paletta CE, Huang DB, Dehghan K, Kelly C. The use of tissue expanders in staged abdominal wall reconstruction. Ann Plast Surg 1999; 42:259.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Girotto JA, Ko MJ, Redett R, et al. Closure of chronic abdominal wall defects: a long-term evaluation of the components separation method. Ann Plast Surg 1999; 42:385.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Ko JH, Salvay DM, Paul BC, et al. Soft polypropylene mesh, but not cadaveric dermis, significantly improves outcomes in midline hernia repairs using the components separation technique. Plast Reconstr Surg 2009; 124:836.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Saulis AS, Dumanian GA. Periumbilical rectus abdominis perforator preservation significantly reduces superficial wound complications in "separation of parts" hernia repairs. Plast Reconstr Surg 2002; 109:2275.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Ghali S, Turza KC, Baumann DP, Butler CE. Minimally invasive component separation results in fewer wound-healing complications than open component separation for large ventral hernia repairs. J Am Coll Surg 2012; 214:981.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Jensen KK, Henriksen NA, Jorgensen LN. Endoscopic component separation for ventral hernia causes fewer wound complications compared to open components separation: a systematic review and meta-analysis. Surg Endosc 2014; 28:3046.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Krpata DM, Blatnik JA, Novitsky YW, Rosen MJ. Posterior and open anterior components separations: a comparative analysis. Am J Surg 2012; 203:318.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Parent B, Horn D, Jacobson L, et al. Wound Morbidity in Minimally Invasive Anterior Component Separation Compared to Transversus Abdominis Release. Plast Reconstr Surg 2017; 139:472.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Hodgkinson JD, Leo CA, Maeda Y, et al. A meta-analysis comparing open anterior component separation with posterior component separation and transversus abdominis release in the repair of midline ventral hernias. Hernia 2018; 22:617.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Petro CC, O'Rourke CP, Posielski NM, et al. Designing a ventral hernia staging system. Hernia 2016; 20:111.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Blatnik JA, Krpata DM, Pesa NL, et al. Predicting severe postoperative respiratory complications following abdominal wall reconstruction. Plast Reconstr Surg 2012; 130:836.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Petro CC, Raigani S, Fayezizadeh M, et al. Permissible Intraabdominal Hypertension following Complex Abdominal Wall Reconstruction. Plast Reconstr Surg 2015; 136:868.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Kirkpatrick AW, Nickerson D, Roberts DJ, et al. Intra-Abdominal Hypertension and Abdominal Compartment Syndrome after Abdominal Wall Reconstruction: Quaternary Syndromes? Scand J Surg 2017; 106:97.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Pauli EM, Wang J, Petro CC, et al. Posterior component separation with transversus abdominis release successfully addresses recurrent ventral hernias following anterior component separation. Hernia 2015; 19:285.
+          </a>
+         </li>
+         <li class="breakAll">
+          Pauli EM, Juza RM. Managing complications of open hernia repair. In: Hernia Surgery: Current Principles, Novitsky YW (Ed), Springer, 2016. p.207.
+         </li>
+        </ol>
+       </div>
+       <div id="topicVersionRevision">
+        Topic 130470 Version 10.0
+       </div>
+      </div>
+      <div class="row">
+       <div class="col-12">
+        <h4 style="text-align: center;padding: 20px;color: cadetblue;">
+         References
+        </h4>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/21904861" id="rid0" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          1 : Epidemiology and cost of ventral hernia repair: making the case for hernia research.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/26465784" id="rid1" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          2 : A Risk Model and Cost Analysis of Incisional Hernia After Elective, Abdominal Surgery Based Upon 12,373 Cases: The Case for Targeted Prophylactic Intervention.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/12496540" id="rid2" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          3 : Have outcomes of incisional hernia repair improved with time? A population-based analysis.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/31754953" id="rid3" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          4 : The reality of general surgery training and increased complexity of abdominal wall hernia surgery.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/31754953" id="rid4" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          5 : The reality of general surgery training and increased complexity of abdominal wall hernia surgery.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/2143588" id="rid5" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          6 : "Components separation" method for closure of abdominal-wall defects: an anatomic and clinical study.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/2143588" id="rid6" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          7 : "Components separation" method for closure of abdominal-wall defects: an anatomic and clinical study.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/159651" id="rid7" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          8 : The anatomic rationale for abdominal lipectomy.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/24929767" id="rid8" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          9 : Functional abdominal wall reconstruction improves core physiology and quality-of-life.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/30224083" id="rid9" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          10 : Effect of transversus abdominis release on core stability: Short-term results from a single institution.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/32929633" id="rid10" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          11 : Abdominal wall incisional hernia repair improves respiratory function: results after 3 years of follow-up.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/31011821" id="rid11" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          12 : Clinical and Functional Outcome After Abdominal Wall Incisional Hernia Repair: Evaluation of Quality-of-Life Improvement and Comparison of Assessment Scales.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/24468226" id="rid12" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          13 : Comparative radiographic analysis of changes in the abdominal wall musculature morphology after open posterior component separation or bridging laparoscopic ventral hernia repair.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/17864331" id="rid13" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          14 : OPERATION FOR CURE OF LARGE VENTRAL HERNIA.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/17863520" id="rid14" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          15 : POST-OPERATIVE INTESTINAL OBSTRUCTION.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/31058162" id="rid15" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          16 : What Do We Know About the Chevrel Technique in Ventral Incisional Hernia Repair?
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/450684" id="rid16" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          17 : [The treatment of large midline incisional hernias by "overcoat" plasty and prothesis (author's transl)].
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/9565117" id="rid17" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          18 : Long-term complications associated with prosthetic repair of incisional hernias.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/14586775" id="rid18" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          19 : Repair of large midline incisional hernias with polypropylene mesh: comparison of three operative techniques.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/782263" id="rid19" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          20 : Repair of recurrent ventral hernias by an internal "binder".
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/9500388" id="rid20" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          21 : Role of tensor fasciae latae in abdominal wall reconstruction.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/9044181" id="rid21" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          22 : The tensor fascia lata free flap in abdominal-wall reconstruction.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/22607741" id="rid22" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          23 : Transversus abdominis muscle release: a novel approach to posterior component separation during complex abdominal wall reconstruction.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/35185120" id="rid23" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          24 : Favorable Outcomes After Retro-Rectus (Rives-Stoppa) Mesh Repair as Treatment for Noncomplex Ventral Abdominal Wall Hernia, a Systematic Review and Meta-analysis.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/29713832" id="rid24" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          25 : Assessment of myofascial medialization following posterior component separation via transversus abdominis muscle release in a cadaveric model.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/32926251" id="rid25" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          26 : The current state of robotic retromuscular repairs-a qualitative review of the literature.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/27287903" id="rid26" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          27 : Standard laparoscopic versus robotic retromuscular ventral hernia repair.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/28350568" id="rid27" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          28 : Reducing Length of Stay Using a Robotic-assisted Approach for Retromuscular Ventral Hernia Repair: A Comparative Analysis From the Americas Hernia Society Quality Collaborative.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/28733746" id="rid28" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          29 : Comparative analysis of perioperative outcomes of robotic versus open transversus abdominis release.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/17372669" id="rid29" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          30 : Repair of giant midline abdominal wall hernias: "components separation technique" versus prosthetic repair : interim analysis of a randomized controlled trial.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/32152808" id="rid30" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          31 : Transversus abdominis release (TAR): what are the real indications and where is the limit?
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/32277369" id="rid31" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          32 : Computed tomography imaging in ventral hernia repair: can we predict the need for myofascial release?
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/33888320" id="rid32" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          33 : Fascial closure in giant ventral hernias after preoperative botulinum toxin a and progressive pneumoperitoneum: A systematic review and meta-analysis.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/19771472" id="rid33" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          34 : Use of botulinum toxin type a before abdominal wall hernia reconstruction.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/19756913" id="rid34" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          35 : A computerized tomography scan method for calculating the hernia sac and abdominal cavity volume in complex large incisional hernia with loss of domain.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/32696149" id="rid35" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          36 : Assessing the complexity of ventral hernia by methods of Tanaka, Sabbagh, Carbonell, and Love.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/25033942" id="rid36" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          37 : Effect of botulinum toxin type A in lateral abdominal wall muscles thickness and length of patients with midline incisional hernia secondary to open abdomen management.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/30949893" id="rid37" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          38 : Selective muscle botulinum toxin A component paralysis in complex ventral hernia repair.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/28277071" id="rid38" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          39 : Chemical component separation: a systematic review and meta-analysis of botulinum toxin for management of ventral hernia.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/33215244" id="rid39" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          40 : Prehabilitation of complex ventral hernia patients with Botulinum: a systematic review of the quantifiable effects of Botulinum.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/33711107" id="rid40" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          41 : Understanding the benefits of botulinum toxin A: retrospective analysis of the Abdominal Core Health Quality Collaborative.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/33478721" id="rid41" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          42 : Preoperative botulinum toxin A injection in complex abdominal wall reconstruction- a propensity-scored matched study.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/24081529" id="rid42" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          43 : Outcomes of chemical component paralysis using botulinum toxin for incisional hernia repairs.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/2526344" id="rid43" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          44 : Abdominal wall expansion in congenital defects.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/24776572" id="rid44" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          45 : Abdominal wall and chest wall reconstruction.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/24776572" id="rid45" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          46 : Abdominal wall and chest wall reconstruction.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/10096616" id="rid46" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          47 : The use of tissue expanders in staged abdominal wall reconstruction.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/10213399" id="rid47" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          48 : Closure of chronic abdominal wall defects: a long-term evaluation of the components separation method.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/19730302" id="rid48" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          49 : Soft polypropylene mesh, but not cadaveric dermis, significantly improves outcomes in midline hernia repairs using the components separation technique.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/12045549" id="rid49" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          50 : Periumbilical rectus abdominis perforator preservation significantly reduces superficial wound complications in "separation of parts" hernia repairs.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/22521439" id="rid50" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          51 : Minimally invasive component separation results in fewer wound-healing complications than open component separation for large ventral hernia repairs.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/24942783" id="rid51" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          52 : Endoscopic component separation for ventral hernia causes fewer wound complications compared to open components separation: a systematic review and meta-analysis.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/22244073" id="rid52" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          53 : Posterior and open anterior components separations: a comparative analysis.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/28125536" id="rid53" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          54 : Wound Morbidity in Minimally Invasive Anterior Component Separation Compared to Transversus Abdominis Release.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/29516294" id="rid54" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          55 : A meta-analysis comparing open anterior component separation with posterior component separation and transversus abdominis release in the repair of midline ventral hernias.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/26342924" id="rid55" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          56 : Designing a ventral hernia staging system.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/22691844" id="rid56" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          57 : Predicting severe postoperative respiratory complications following abdominal wall reconstruction.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/26090761" id="rid57" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          58 : Permissible Intraabdominal Hypertension following Complex Abdominal Wall Reconstruction.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/27465223" id="rid58" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          59 : Intra-Abdominal Hypertension and Abdominal Compartment Syndrome after Abdominal Wall Reconstruction: Quaternary Syndromes?
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/25537570" id="rid59" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          60 : Posterior component separation with transversus abdominis release successfully addresses recurrent ventral hernias following anterior component separation.
+         </p>
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </section>
+  <!-- End Main Menu Area -->
+  <!-- Start Search Popup Area -->
+  <!-- End Footer Area -->
+  <!-- Back to top -->
+  <a class="scrolltop" href="#top">
+   <i class="icofont-hand-drawn-up">
+   </i>
+  </a>
+  <!-- End Back to top -->
+  <!-- jQuery Min JS -->
+  <!-- Prpper JS -->
+  <!-- Bootstrap Min JS -->
+  <!-- Classy Nav Min Js -->
+  <!-- Owl Carousel Min Js -->
+  <!-- Magnific Popup JS -->
+  <!-- CounterUp JS -->
+  <!-- Waypoints JS -->
+  <!-- Form Validator Min JS -->
+  <!-- Contact Form Min JS -->
+  <!-- Main JS -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+ </body>
 </html>

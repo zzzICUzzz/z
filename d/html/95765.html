@@ -1,484 +1,1391 @@
 <!DOCTYPE html>
-
 <html lang="fa">
-<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
-<head><title>Component testing for pollen-related, plant-derived food allergies</title><link href="/z/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/z/d/css/icofont.min.css" rel="stylesheet"/><link href="/z/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/z/d/css/animate.css" rel="stylesheet"/><link href="/z/d/css/owl.carousel.css" rel="stylesheet"/><link href="/z/d/css/magnific-popup.css" rel="stylesheet"/><link href="/z/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/z/d/css/style.css" rel="stylesheet"/><link href="/z/d/css/rtl_edited.css" rel="stylesheet"/><link href="/z/d/css/responsive.css" rel="stylesheet"/><link href="https:///uptodate_assets/main.css" rel="stylesheet"/>
-<style>
-
-#myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 16px;
-  color: black;
-  display: block
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee;
-}
-
-#searchResult {
-
-  list-style-type: none;
-  padding: 0;
-  padding-right: 20px;
-}
-
-#searchResult li a {
-  border: .5px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #79bc21;
-  padding: 7px;
-  text-decoration: none;
-  font-size: 14px;
-  color: white;
-  display: block
-}
-
-#searchResult li a:hover:not(.header) {
-  background-color: #222;
-}
-
-
-#txtHint   {
-  position: absolute;
-  text-shadow: none;
-  width: 100%;
-  margin-top: -15px;
-  padding-right: 10px;
-
-  filter: alpha(opacity=95);
-  -moz-opacity: 0.95;
-  opacity: 1;
-  z-index: 200;
-}
-.countBubl {
-  background:#eb0029;
-  color:#fff;
-  padding:5px;
-  margin-top: 50%;
-
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
- width: 55%;
- padding-left: 20px;
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
- width: 20%;
-}
- #Uptodate_image {
-      width: 50%;
-  }#uptodate-area {
-      /*z-index: 99;*/
-  }
-#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
- margin-left: 10px;
- margin-bottom: 6%;
-}
-@media (max-width: @screen-xs) {
-    .countBubl {
-        font-size: 4px ;
-    }
-    #uptodate_version {
-        font-size: 4px ;
-    }
-}
-
-@media (max-width: @screen-sm) {
-    .countBubl {
-        font-size: 14px ;
-    }
-}
-@media  all and(max-width: 820) {
-    #Uptodate_image {
-        width: 80% ;
-    }#uptodate-area {
-        z-index: 99;
-    }
-}@media  all and (min-width: 820) and(max-width: 88820){
-    #Uptodate_image {
-        width: 100% !important;
-    }
-    .countBubl {
-        font-size: 4px ;
-    }
-}
-div.col-md-3:nth-child(3) {
- margin-top: 6%;
-}
-
-div.col-md-3:nth-child(3) > img:nth-child(1) {
- width: 100%;
- margin-left: 11px;
-}
-
-</style>
-<style media="screen" type="text/css">
-  .goback {
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    position: fixed;
-    display: none;
-    font-size: 15px;
-    background: #71c0fa;
-    z-index: 1000;
-    text-align: center;
-    color: #ffffff;
-    -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
-    border-radius: 50px;
-    bottom: 3.8%;
-    right: 2%;
-}
-  .buyPackage {
-  width: 100px;
-  height: 100px;
-  line-height: 40px;
-  position: fixed;
-  display: none;
-  font-size: 10px;
-  background: #fa759e;
-  z-index: 1000;
-  text-align: center;
-  color: #ffffff;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  border-radius: 10px;
-  top: 150px;
-  right: 2%;
-  text-align: center;
-}
-.uptodate-area {
-  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-    background-attachment: fixed;
-  position: relative;
-}
-.uptodate-area::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  padding-top: 100px;
-  width: 100%;
-}
-#references{
-  display: none;
-}
-</style>
-<style>
-section.sticky {
-  position: sticky;
-  top: 0;
-  background-color: #fff !important;
-  /*z-index: 100;*/
-  /*padding-top: 80px;*/
-
-}
-.m4inb{
-    border: solid !important;
-  }
-
-  .newsletter-area::before {
-       background: unset !important;
-  }
-p {
-    color: #555;
-}
-</style>
-<meta content="" name="description"/>
-<link href="/z/d/img/favicon.png" rel="icon" type="image/png">
-</link></head>
-<body>
-<!-- Start Main Menu Area -->
-<br/>
-<br/>
-<br/>
-<br/>
-<div class="container">
-<div class="row">
-</div>
-</div>
-<section class="teacher-area ptb-10">
-<div class="container">
-</div>
-<section class="course-details-area ptb-60">
-<div class="container">
-<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-<h1 style="text-align:center">Component testing for pollen-related, plant-derived food allergies</h1>
-<div class="utdArticleSection utdStyle" id="topicContent"><div id="topicTitle">Component testing for pollen-related, plant-derived food allergies</div> <div class="authorSectionElem"><div class="authorsElementsLeft"><dl id="topicContributors"><dt><span> </span>Author:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Julie Wang, MD</a></dd><dt><span> </span>Section Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Scott H Sicherer, MD, FAAAAI</a></dd><dt><span> </span>Deputy Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Elizabeth TePas, MD, MS</a></dd></dl></div><div class="authorsElementsRight"><div id="literatureReviewDate"><div class="litReviewSingleLine"><bdi><span class="emphasis">Literature review current through:</span> Jan 2024.</bdi></div><div class="litReviewSingleLine"><bdi><span class="emphasis">This topic last updated:</span> Oct 14, 2022.</bdi></div></div></div></div><div id="topicWhatsNewContainer"></div><div id="topicText"><p class="headingAnchor" id="H9556903"><span class="h1">INTRODUCTION</span><span class="headingEndMark"> — </span>Advances in the identification of clinically relevant allergens and the development of recombinant proteins allow for assessment of immunoglobulin E (IgE) binding to individual proteins within an allergenic food. This type of testing is known as component-resolved diagnosis (CRD). Increased sensitivity and specificity can be achieved by assessing IgE binding to separate proteins, either purified native or recombinant, thereby providing improved diagnostic accuracy for predicting clinical reactivity. CRD may also provide additional prognostic information regarding the severity or persistence of food allergies.</p><p>CRD testing for pollen-related, plant-derived food allergies is reviewed here. Component testing for animal-derived food allergies is discussed separately. An overview of testing for food allergies is also presented separately. (See  <a class="medical medical_review" href="/z/d/html/95766.html" rel="external">"Component testing for animal-derived food allergies"</a> and  <a class="medical medical_review" href="/z/d/html/2396.html" rel="external">"Diagnostic evaluation of IgE-mediated food allergy"</a>.)</p><p class="headingAnchor" id="H9556909"><span class="h1">OVERVIEW</span><span class="headingEndMark"> — </span>Allergies to plant-derived foods may occur in pollen-sensitized individuals due to pollen allergens that cross-react with food allergens, such as profilins or pathogenesis-related class 10 (PR-10) proteins that are homologs of the major white birch pollen antigen (<em>Betula verrucosa</em> 1 [Bet v 1]). This type of allergy is associated with symptoms that are generally limited to the oropharyngeal area (oral allergy syndrome/pollen-food allergy syndrome). In the absence of sensitization to pollens, allergies to plant-derived foods are the result of sensitization to more stable proteins, such as the seed storage or nonspecific lipid transfer proteins (nsLTPs). In these cases, reactions are more often systemic, and there is a higher risk for anaphylaxis [<a href="#rid1">1</a>]. (See  <a class="medical medical_review" href="/z/d/html/2403.html" rel="external">"Pathogenesis of oral allergy syndrome (pollen-food allergy syndrome)"</a> and  <a class="medical medical_review" href="/z/d/html/2402.html" rel="external">"Clinical manifestations and diagnosis of oral allergy syndrome (pollen-food allergy syndrome)"</a>.)</p><p>Component-resolved diagnosis (CRD) entails measurement of specific IgE responses to individual allergens as opposed to measuring IgE responses to allergen extracts that contain a mixture of proteins, including ones that may have greater or less clinical relevance. The pattern of specific IgE reactivity to defined allergens can help determine which patients are at higher risk for allergic reactions versus those who are sensitized but clinically tolerant. It may also help distinguish between those who are at risk for more severe reactions versus those who are likely to have milder symptoms.</p><p>The prime example of the utility of CRD in the management of food allergy is peanut allergy [<a href="#rid2">2</a>]. Several studies have noted that having detectable levels of specific IgE to the seed storage proteins are associated with more severe, persistent peanut allergy [<a href="#rid3">3-7</a>], whereas exclusive sensitization to a Bet v 1 homolog is more often associated with a low risk of reactivity to peanut [<a href="#rid8">8,9</a>]. (See  <a class="medical medical_review" href="/z/d/html/2394.html" rel="external">"Peanut, tree nut, and seed allergy: Diagnosis"</a> and <a class="local">'Peanut'</a> below.)</p><p class="headingAnchor" id="H9556915"><span class="h1">ASSAY SYSTEMS</span><span class="headingEndMark"> — </span>Two different types of immunoassays are commercially available for the measurement of IgE levels to individual allergens:</p><p class="bulletIndent1"><span class="glyph">●</span>Measurement of specific IgE to individual allergens or components – Quantitative results of specific IgE levels to purified native or recombinant allergens can be obtained using a fluorescent enzyme immunoassay, such as the ImmunoCAP. Components may be selected for individual allergens with ImmunoCAP, allowing for individualized testing to further characterize a patient's allergies.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Measurement of specific IgE to multiple allergen components in one test panel simultaneously – A microarray-based immunoassay such as the ImmunoCAP ISAC (Immuno Solid-phase Allergy Chip) provides results for multiple components from different allergen sources that cover a wide spectrum of food and environmental allergens using a small quantity of blood. This is a semiquantitative assay and, as such, may be better suited as a screening tool rather than a test for diagnosis and management of allergies [<a href="#rid10">10</a>].</p><p></p><p>Technical differences in fixing allergen to the assay platforms result in variability of specific IgE binding. Thus, IgE values obtained with ImmunoCAP are not equivalent to the corresponding values obtained with the ISAC microarray system [<a href="#rid11">11,12</a>]. Different units of measurement are used in the two assays (kU<sub>A</sub>/L for ImmunoCAP versus ISAC standardized units [ISU] for ISAC).</p><p>In the United States, several of the individual component tests are approved by the US Food and Drug Administration (FDA), whereas others are not. This can impact the likelihood that the test will be covered by third-party payers. Thus, patients and/or clinicians may wish to determine if the tests are covered before they are ordered.</p><p class="headingAnchor" id="H9556921"><span class="h1">ALLERGEN-SPECIFIC USE/INTERPRETATION</span></p><p class="headingAnchor" id="H9556928"><span class="h2">Peanut</span><span class="headingEndMark"> — </span>Several peanut (<em>Arachis hypogaea</em>, Ara h) proteins have been characterized and are US Food and Drug Administration (FDA) approved and commercially available for component testing  (<a class="graphic graphic_table graphicRef95908" href="/z/d/graphic/95908.html" rel="external">table 1</a>). IgE levels to components, similar to whole-peanut IgE, provide a likelihood of clinical reactivity but, on their own, are not diagnostic of allergy or severity of reactions. Guidelines on when to use component testing for peanut allergy are available and are reviewed below  (<a class="graphic graphic_table graphicRef95963" href="/z/d/graphic/95963.html" rel="external">table 2</a>) [<a href="#rid13">13</a>]. (See <a class="local">'Peanut testing approach'</a> below.)</p><p class="headingAnchor" id="H1737974634"><span class="h3">Types of peanut proteins</span><span class="headingEndMark"> — </span>Ara h 1, 2, and 3 are seed storage proteins and are the major allergens for peanut. Ara h 6 is closely related to Ara h 2. Ara h 8 is a birch allergen (Bet v 1) homolog associated mainly with milder symptoms localized to the oropharyngeal area. Ara h 9 is a nonspecific lipid transfer protein (nsLTP). Sensitization to this peanut protein is predominantly seen in the Mediterranean area [<a href="#rid14">14-16</a>]. Ara h 10 and 11 are oleosins, and small studies have shown that some peanut-allergic patients have detectable IgE directed towards these proteins [<a href="#rid17">17</a>]. However, their clinical relevance is unclear. Ara h 12 and 13 are defensins that have antifungal activity. In one small series, they were associated with severe anaphylactic reactions [<a href="#rid18">18</a>].</p><p class="headingAnchor" id="H540174975"><span class="h3">Diagnostic performance</span><span class="headingEndMark"> — </span>IgE binding to Ara h 2 outperforms whole-peanut extract and other components in predicting clinical allergy [<a href="#rid3">3-7</a>], although optimal cutoff values for Ara h 2 with high positive predictive values have not yet been determined. A range of cutoffs with varying sensitivities and specificities have been reported in several studies, probably due at least in part to differing patient selection criteria and geographic locations, reflecting inherent differences in patient characteristics such as genetics, diet, and environmental exposures [<a href="#rid3">3-6,9</a>].</p><p>Component-resolved diagnosis (CRD) testing can facilitate patient selection of oral food challenges. A stepwise approach for peanut IgE and Ara h 2 component testing can significantly reduce the need for oral food challenges in patients who are highly likely to be allergic [<a href="#rid5">5,6</a>]. Data also suggest the utility of measuring IgE levels to other peanut components. Isolated sensitization to Ara h 8, for example, is associated with a high likelihood of tolerance to peanut [<a href="#rid8">8,9</a>]. Thus, testing for peanut components prior to a food challenge can be beneficial for risk stratification, enhancing the ability to select patients who are likely to pass a diagnostic food challenge.</p><p>The following studies are illustrative:</p><p class="bulletIndent1"><span class="glyph">●</span>A 2010 study using a population-based birth cohort of 933 children in the United Kingdom demonstrated a high rate of false-positive test results when using skin prick tests (SPTs) and specific IgE testing to whole peanut [<a href="#rid3">3</a>]. This study concluded that assessing IgE binding to Ara h 2 had higher accuracy than whole-peanut extract and other components in predicting clinical reactivity to peanut.</p><p></p><p class="bulletIndent1">One-hundred ten (110) children (11.8 percent) had positive testing to peanut at eight years of age. Approximately two-thirds of these children (n = 66) had no reaction at oral food challenge to peanut; approximately one-fifth were allergic (12 by convincing history without challenge, 7 by challenge); and the remainder (n = 6) were deemed inconclusive.</p><p></p><p class="bulletIndent1">Approximately 15 percent were misclassified when a peanut-specific IgE level of ≥15 kU<sub>A</sub>/L or a SPT wheal size of ≥8 mm was used for a cutoff, whereas the misclassification rate was reduced to approximately 7 percent when results from a microarray that included multiple recombinant allergens from peanut, tree pollens, grass pollens, and cross-reactive carbohydrate determinants (CCDs) were used. Subjects with peanut allergy tended to have higher-fold change values (calculated expression level estimates of the sample against the negative controls) to the major peanut components Ara h 1 to 3, whereas the peanut-tolerant subjects had higher values to CCDs and grass components (Phl p 1, Phl p 4, and Phl p 5).</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Findings from a Danish study suggest that additional peanut components not routinely included in test panels may play important roles for certain individuals. This study reported that 2 percent of positive challenges had undetectable Ara h 2 [<a href="#rid4">4</a>], whereas another European study found that 26 percent of subjects who were tolerant to peanut showed IgE binding to Ara h 2 [<a href="#rid19">19</a>]. In addition, isolated sensitization to Ara h 8 is sometimes associated with positive challenges with systemic symptoms [<a href="#rid8">8,20</a>]. As an example, a case was reported of a child with undetectable IgE to Ara h 2 and elevated IgE to Ara h 8 who experienced anaphylaxis at oral food challenge to peanut. After performing additional testing, he was found to have an elevated IgE to Ara h 6, a homolog of Ara h 2 [<a href="#rid21">21</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>One study has examined whether IgE levels to peanut components have prognostic value for persistence of disease. Sensitization to Ara h 1 to 3 at one year of age was associated with persistent peanut allergy at 13 years of age, but it did not provide independent predictive value in addition to the information provided by IgE levels to whole peanut [<a href="#rid22">22</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>A United States study examined threshold levels of Ara h 2 in the diagnosis of symptomatic peanut allergy in a general pediatric allergy referral population [<a href="#rid9">9</a>]. Measurement of specific IgE to Ara h 2 had a diagnostic sensitivity of 96 percent and specificity of 54 percent when sensitization was defined as &gt;0.1 kU<sub>A</sub>/L (sensitivity 88.5 percent and specificity 71.4 percent using a threshold of 0.35 kU<sub>A</sub>/L).</p><p></p><p class="headingAnchor" id="H95610046"><span class="h3">Peanut testing approach</span><span class="headingEndMark"> — </span>In a patient with a history consistent with IgE-mediated allergy to peanut, we suggest first testing peanut-specific IgE.</p><p>The following scenarios illustrate some instances where targeted testing with peanut components may or may not be useful  (<a class="graphic graphic_table graphicRef95963" href="/z/d/graphic/95963.html" rel="external">table 2</a>) [<a href="#rid2">2,13</a>]:</p><p class="bulletIndent1"><span class="glyph">●</span>Component testing can be informative for those with low peanut IgE levels (&lt;25 kU<sub>A</sub>/L), known birch pollen sensitization, and/or mild or no history of reaction to peanut. Having detectable IgE to Ara h 1, 2, or 3 is associated with higher risk of systemic reactions to peanut, and these patients would be advised to continue peanut avoidance.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Peanut component testing is probably useful in adults with seasonal allergies who had tolerated peanuts earlier in life but later reported mild symptoms with peanut ingestion. Isolated Ara h 8 sensitization (without detectable IgE to Ara h 1, 2, or 3) suggests low risk for systemic reactions to peanut. The risk of a reaction on oral food challenge is decreased in this population, but a challenge is probably still warranted to confirm lack of systemic reactivity.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>For a young child who has experienced immediate systemic symptoms upon peanut ingestion, component testing is unlikely to provide additional information that would influence management.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>When considering a food challenge for peanut, we typically obtain component tests because of the potential for improved predictive value compared with the standard peanut test. Interpretation requires evaluation of the component-specific IgE concentrations and pattern of sensitization. As an example, isolated positive testing to Ara h 8 suggests unlikely allergy, whereas high levels of IgE to Ara h 2 may indicate probable allergy. Sensitization to multiple stable proteins (eg, Ara h 1, 2, and 3) may indicate a greater chance of reaction compared with isolated sensitization to just one of these proteins. The risk of reaction based upon testing and other patient factors (eg, asthma) is assessed when deciding whether to offer a medically supervised feeding test and also potentially where to perform the procedure (eg, office versus hospital). (See  <a class="medical medical_review" href="/z/d/html/2394.html" rel="external">"Peanut, tree nut, and seed allergy: Diagnosis"</a> and  <a class="medical medical_review" href="/z/d/html/2399.html" rel="external">"Oral food challenges for diagnosis and management of food allergies"</a>.)</p><p></p><p class="headingAnchor" id="H2594500308"><span class="h2">Tree nuts</span><span class="headingEndMark"> — </span>Component testing is available for several tree nuts. The most well studied ones are listed below, although the studies are in small, selected populations with different outcomes and test cutoff points. Their utility in routine clinical practice is still unclear. Further studies are needed to determine optimal specific test cutoffs and in which patients testing will be most helpful.</p><p class="headingAnchor" id="H546488075"><span class="h3">Cashew</span><span class="headingEndMark"> — </span>One of the major cashew (<em>Anacardium occidentale</em>, Ana o) allergens, Ana o 3, is predictive of cashew allergy [<a href="#rid23">23-26</a>]. Ana o 3 belongs to the 2S albumin protein family, a group of proteins that have highly stable intrinsic protein structure. Several studies have shown that Ana o 3 discriminates between allergic and tolerant children better than cashew-specific IgE (area under the curve of 0.89 to 0.94 versus 0.76 to 0.79) [<a href="#rid24">24-26</a>]. The optimal cutoff for sensitivity and specificity for Ana o 3 was 0.70 kU<sub>A</sub>/L (sensitivity 85 percent; specificity 88 percent) in one study that confirmed cashew allergy by oral food challenge [<a href="#rid26">26</a>]. Another study found that the optimal cutoff was 0.16 kU<sub>A</sub>/L [<a href="#rid23">23</a>]. A positive decision point for a sensitivity of at least 95 percent was 2.0 to 2.3 kU<sub>A</sub>/L [<a href="#rid24">24,26</a>].</p><p>A systematic review and analysis of six previously published studies modeled outcomes for SPT (lower and upper cutoffs &lt;3 mm and ≥12 mm, respectively), cashew specific IgE ([sIgE] ≤0.1 and ≥8.5 kU<sub>A</sub>/L), Ana o 3 (≤0.1 and ≥0.35 kU<sub>A</sub>/L), or a combination of sIgE and Ana o 3, with home reintroduction at or below the lower cutoff, avoidance at or above the upper cutoff, and oral food challenge for patients in between [<a href="#rid27">27</a>]. False positives were lowest with SPT alone (0.5 percent) compared with Ana o 3 or sIgE plus Ana o 3 (7 and 8.1 percent, respectively), and false negatives were lowest with sIgE alone (0.4 percent) compared with Ana o 3 or sIgE plus Ana o 3 (1.1 percent). However, these approaches required oral food challenges to determine allergy or tolerance in a higher percentage of patients (58.4 and 74.5 percent, respectively) compared with screening with Ana o 3 alone (12.2 percent) or combination sIgE plus Ana o 3 (11.4 percent). One suggested testing approach that should minimize false positive and negative tests and limit the number of food challenges needed is shown in the algorithm  (<a class="graphic graphic_algorithm graphicRef139903" href="/z/d/graphic/139903.html" rel="external">algorithm 1</a>). </p><p class="headingAnchor" id="H9556935"><span class="h3">Hazelnut</span><span class="headingEndMark"> — </span>Several hazelnut (Corylus avellana<em>, Cor a</em>) allergens have been characterized. Cor a 1 is a heat-labile protein that is homologous with the major birch pollen allergen, Bet v 1. Sensitization to Cor a 1 is generally associated with tolerance to hazelnut or mild oropharyngeal symptoms [<a href="#rid28">28,29</a>]. Sensitization to Cor a 8, an nsLTP, has been linked with more severe symptoms in patients from the Mediterranean area [<a href="#rid29">29,30</a>]. Cor a 9 is an 11S globulin, and data have implicated sensitization to Cor a 9 in severe reactions in children in the United States and Europe [<a href="#rid28">28,31,32</a>]. Sensitization to Cor a 14, a 2S albumin, is also highly specific for more severe reactions at food challenge [<a href="#rid32">32</a>].</p><p>In a study of 26 children from a birch-endemic area (Spain) who had positive hazelnut IgE and underwent double-blind, placebo-controlled food challenge (DBPCFC), sensitization to Cor a 8 was found to be a good discriminator of severe allergic reactions to hazelnut [<a href="#rid30">30</a>].</p><p>A 2013 Dutch study investigated specific IgE binding to hazelnut components Cor a 9 and Cor a 14 as indicators for a more severe hazelnut allergy phenotype [<a href="#rid32">32</a>]. Diagnostic cutoffs of IgE levels ≥1 kU<sub>A</sub>/L to native Cor a 9 in children and adults or ≥5 kU<sub>A</sub>/L to recombinant Cor a 14 in children and ≥1 kU<sub>A</sub>/L in adults had a specificity of &gt;90 percent. This association was confirmed in a 2014 United States study of 116 patients who underwent hazelnut oral food challenge. Cor a 9 and 14 were highly sensitive and specific for predicting clinical reactivity to hazelnut.</p><p>Component testing for hazelnut is commercially available and can be informative for patients who test positive to hazelnut but have known birch pollen sensitization and/or mild or no history of reaction to hazelnut. Having detectable IgE to Cor a 8, 9, and/or 14 is associated with a higher likelihood of clinical reactivity to hazelnut, and these patients would be advised to continue hazelnut avoidance.</p><p class="headingAnchor" id="H1274201673"><span class="h3">Walnut</span><span class="headingEndMark"> — </span>The major English walnut (<em>Juglans regia</em>, Jug r) allergens include the seed storage proteins Jug r 1 (2S albumin), Jug r 2 and Jug r 6 (vicilins), and Jug r 4 (11S globulin) and an nsLTP, Jug r 3. Allergens associated with pollen allergies include Jug r 7 (profilin) and Jug r 5 (Bet v 1 homolog).</p><p>In one European study of 91 patients with walnut allergy and 24 tolerant controls, 96 percent were sensitized to at least one walnut component compared with 87 percent to walnut extract [<a href="#rid33">33</a>]. Sensitization to Jug r 5 was associated with mild symptoms and negative in vitro testing to walnut extract. Patients who had a history of severe reactions, most of whom developed the allergy before 14 years of age, had higher specific IgE levels to Jug r 1, Jug r 4, Jug r vicilin-L, and Jug r vicilin-H, but not Jug r 3 or Jug r 5, compared with patients with a history of mild reactions.</p><p>Another study found that Jug r 1 and/or Jug r 4 had the best diagnostic accuracy for walnut allergy and were superior to whole walnut extract and other components for predicting allergy versus asymptomatic sensitization [<a href="#rid34">34</a>]. No association was seen between IgE to individual components and type of symptoms or severity of reaction during an oral food challenge.</p><p class="headingAnchor" id="H9556942"><span class="h2">Wheat</span><span class="headingEndMark"> — </span>Several groups of allergens have been described for wheat (<em>Triticum aestivum</em>, Tri a). Some of these allergens are associated with specific forms of wheat allergy, such as baker's asthma or wheat-dependent, exercise-induced anaphylaxis. Others are associated with severe allergic reactions. However, detection of multiple wheat allergens concurrently does not identify all patients with wheat allergy [<a href="#rid35">35</a>]. Thus, further research is needed to confirm the relevance of these proteins in larger populations and to assess the utility of measuring IgE to these individual allergens in the diagnosis of wheat allergy. These allergens are discussed in greater detail separately. (See  <a class="medical medical_review" href="/z/d/html/90949.html" rel="external">"Grain allergy: Allergens and grain classification", section on 'Wheat'</a>.)</p><p class="headingAnchor" id="H9556949"><span class="h2">Soy</span><span class="headingEndMark"> — </span>Several soy (<em>Glycine max</em>, Gly m) allergens have been characterized [<a href="#rid36">36</a>]. However, sensitization to these specific allergens is not consistently associated with the diagnosis of clinical allergy or severity of reactions. Thus, further studies are needed to determine the clinical utility of measuring IgE to these components.</p><p>Birch pollen-related soy allergy is attributed to sensitization to Gly m 4, a Bet v 1 homolog [<a href="#rid37">37</a>]. Gly m 5 (beta-conglycinin) and Gly m 6 (glycinin) are storage proteins that are associated with severe reactions to soybean [<a href="#rid38">38,39</a>]. However, IgE levels to these allergens are not diagnostic for soy allergy, since nonsymptomatic individuals also have detectable IgE to these proteins. Although Gly m 4 sensitization is generally associated with milder symptoms or oral allergy, it is also related to severe, generalized symptoms in the absence of sensitization to Gly m 5 and 6 [<a href="#rid40">40</a>].</p><p>The storage protein 2S albumin (Gly m 2S albumin or Gly m 8) was reported to be an important allergen in Japanese children [<a href="#rid41">41</a>]. In this study, symptomatic children had significantly higher levels of IgE to Gly m 2S albumin than nonsymptomatic children. A study from the Netherlands also demonstrated that IgE to Gly m 2S albumin is important in adults with soy allergy. However, the diagnostic value of IgE to Gly m 2S albumin was comparable with SPT or IgE to soy extract [<a href="#rid42">42</a>]. In another study, the sensitivity of IgE to Gly m 8 was better than IgE to soy extract (78 versus 44 percent), but the specificity was lower (78 versus 87 percent) [<a href="#rid43">43</a>].</p><p class="headingAnchor" id="H9556956"><span class="h2">Fruits</span><span class="headingEndMark"> — </span>Fruits more commonly cause oral allergy syndrome (pollen-food allergy syndrome) than systemic allergic reactions. A number of fruit allergens have been identified that cross-react with pollen allergens such as Bet v 1. Sensitization to other allergens, particularly nsLTPs, is seen in patients with fruit allergy who do not also have pollen allergy. Testing for most of these allergens is not available outside of the research setting. In addition, the utility of testing is generally not clear. Fruit and vegetable allergens are discussed in greater detail separately. (See  <a class="medical medical_review" href="/z/d/html/2403.html" rel="external">"Pathogenesis of oral allergy syndrome (pollen-food allergy syndrome)"</a>.)</p><p>Measurement of IgE to specific kiwi (<em>Actinidia deliciosa</em>) allergens (Act d 1, 2, 5, and 8) on microarray testing is commercially available. Act d 5 is homologous with Bet v 1. Thus, determination of IgE reactivity to these proteins may distinguish those who have primary kiwi allergy and are at high risk for systemic reactions from those with secondary kiwi allergy due to pollen cross-reactivity [<a href="#rid44">44</a>].</p><p>Testing for IgE to several peach (<em>Prunus persica</em>) allergens is commercially available. Pru p 1 is a Bet v 1 homolog, Pru p 3 is an LTP, and Pru p 4 is a profilin. Some studies suggest utility in measuring IgE to these proteins in the characterization of peach reactions [<a href="#rid45">45,46</a>], but one study noted that sensitization to Pru p 3 was not associated with systemic symptoms nor was there an association with severity of reactions [<a href="#rid47">47</a>].</p><p class="headingAnchor" id="H1162819115"><span class="h1">SOCIETY GUIDELINE LINKS</span><span class="headingEndMark"> — </span>Links to society and government-sponsored guidelines from selected countries and regions around the world are provided separately. (See  <a class="medical medical_society_guidelines" href="/z/d/html/109355.html" rel="external">"Society guideline links: Food allergy"</a>.)</p><p class="headingAnchor" id="H9556963"><span class="h1">SUMMARY</span></p><p class="bulletIndent1"><span class="glyph">●</span>Advances in the identification of relevant allergens and the development of recombinant proteins allow for assessment of immunoglobulin E (IgE) binding to individual proteins within an allergenic food. This type of testing is known as component-resolved diagnosis (CRD). (See <a class="local">'Introduction'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>CRD holds promise for distinguishing patients with clinical allergy as opposed to those sensitized, but tolerant to, plant-derived foods. It also has the potential to provide additional information regarding the severity of symptoms that may occur in clinically reactive individuals, with those sensitized to pollen-related proteins having a lower risk of severe systemic reactions with exposure. (See <a class="local">'Overview'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Two different types of immunoassays are commercially available: those that measure specific IgE to individual allergens (components) and those that measure specific IgE to multiple components simultaneously (microarrays). (See <a class="local">'Assay systems'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>For peanut allergy, data indicate that CRD can provide useful information for discriminating between pollen-related symptoms as opposed to primary peanut allergy, particularly in older individuals. This information can be used to facilitate patient selection of oral food challenges  (<a class="graphic graphic_table graphicRef95963" href="/z/d/graphic/95963.html" rel="external">table 2</a>). (See <a class="local">'Peanut'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Further studies in larger populations are needed to determine the clinical utility of CRD for each different food. Oral food challenge remains the gold standard for food allergy diagnosis. (See <a class="local">'Allergen-specific use/interpretation'</a> above.)</p><p></p></div><div class="headingAnchor" id="references"><ol id="reference"><li><a class="nounderline abstract_t">Pastorello EA, Robino AM. Clinical role of lipid transfer proteins in food allergy. Mol Nutr Food Res 2004; 48:356.</a></li><li><a class="nounderline abstract_t">Sampson HA, Aceves S, Bock SA, et al. Food allergy: a practice parameter update-2014. J Allergy Clin Immunol 2014; 134:1016.</a></li><li><a class="nounderline abstract_t">Nicolaou N, Poorafshar M, Murray C, et al. Allergy or tolerance in children sensitized to peanut: prevalence and differentiation using component-resolved diagnostics. J Allergy Clin Immunol 2010; 125:191.</a></li><li><a class="nounderline abstract_t">Eller E, Bindslev-Jensen C. Clinical value of component-resolved diagnostics in peanut-allergic patients. Allergy 2013; 68:190.</a></li><li><a class="nounderline abstract_t">Dang TD, Tang M, Choo S, et al. Increasing the accuracy of peanut allergy diagnosis by using Ara h 2. J Allergy Clin Immunol 2012; 129:1056.</a></li><li><a class="nounderline abstract_t">Lieberman JA, Glaumann S, Batelson S, et al. The utility of peanut components in the diagnosis of IgE-mediated peanut allergy among distinct populations. J Allergy Clin Immunol Pract 2013; 1:75.</a></li><li><a class="nounderline abstract_t">Klemans RJ, Broekman HC, Knol EF, et al. Ara h 2 is the best predictor for peanut allergy in adults. J Allergy Clin Immunol Pract 2013; 1:632.</a></li><li><a class="nounderline abstract_t">Asarnoj A, Nilsson C, Lidholm J, et al. Peanut component Ara h 8 sensitization and tolerance to peanut. J Allergy Clin Immunol 2012; 130:468.</a></li><li><a class="nounderline abstract_t">Keet CA, Johnson K, Savage JH, et al. Evaluation of Ara h2 IgE thresholds in the diagnosis of peanut allergy in a clinical population. J Allergy Clin Immunol Pract 2013; 1:101.</a></li><li><a class="nounderline abstract_t">Martínez-Aranguren R, Lizaso MT, Goikoetxea MJ, et al. Is the determination of specific IgE against components using ISAC 112 a reproducible technique? PLoS One 2014; 9:e88394.</a></li><li><a class="nounderline abstract_t">Gadisseur R, Chapelle JP, Cavalier E. A new tool in the field of in-vitro diagnosis of allergy: preliminary results in the comparison of ImmunoCAP© 250 with the ImmunoCAP© ISAC. Clin Chem Lab Med 2011; 49:277.</a></li><li><a class="nounderline abstract_t">Goikoetxea MJ, Sanz ML, García BE, et al. Recommendations for the use of in vitro methods to detect specific immunoglobulin E: are they comparable? J Investig Allergol Clin Immunol 2013; 23:448.</a></li><li><a class="nounderline abstract_t">Sicherer SH, Wood RA. Advances in diagnosing peanut allergy. J Allergy Clin Immunol Pract 2013; 1:1.</a></li><li><a class="nounderline abstract_t">Koppelman SJ, Wensing M, Ertmann M, et al. Relevance of Ara h1, Ara h2 and Ara h3 in peanut-allergic patients, as determined by immunoglobulin E Western blotting, basophil-histamine release and intracutaneous testing: Ara h2 is the most important peanut allergen. Clin Exp Allergy 2004; 34:583.</a></li><li><a class="nounderline abstract_t">Asarnoj A, Movérare R, Ostblom E, et al. IgE to peanut allergen components: relation to peanut symptoms and pollen sensitization in 8-year-olds. Allergy 2010; 65:1189.</a></li><li><a class="nounderline abstract_t">Krause S, Reese G, Randow S, et al. Lipid transfer protein (Ara h 9) as a new peanut allergen relevant for a Mediterranean allergic population. J Allergy Clin Immunol 2009; 124:771.</a></li><li><a class="nounderline abstract_t">Bublin M, Breiteneder H. Cross-reactivity of peanut allergens. Curr Allergy Asthma Rep 2014; 14:426.</a></li><li><a class="nounderline abstract_t">Petersen A, Kull S, Rennert S, et al. Peanut defensins: Novel allergens isolated from lipophilic peanut extract. J Allergy Clin Immunol 2015; 136:1295.</a></li><li><a class="nounderline abstract_t">Lopes de Oliveira LC, Aderhold M, Brill M, et al. The value of specific IgE to peanut and its component Ara h 2 in the diagnosis of peanut allergy. J Allergy Clin Immunol Pract 2013; 1:394.</a></li><li><a class="nounderline abstract_t">Aalberse JA, Meijer Y, Derksen N, et al. Moving from peanut extract to peanut components: towards validation of component-resolved IgE tests. Allergy 2013; 68:748.</a></li><li><a class="nounderline abstract_t">Asarnoj A, Glaumann S, Elfström L, et al. Anaphylaxis to peanut in a patient predominantly sensitized to Ara h 6. Int Arch Allergy Immunol 2012; 159:209.</a></li><li><a class="nounderline abstract_t">Bégin P, Vitte J, Paradis L, et al. Long-term prognostic value of component-resolved diagnosis in infants and toddlers with peanut allergy. Pediatr Allergy Immunol 2014; 25:506.</a></li><li><a class="nounderline abstract_t">Savvatianos S, Konstantinopoulos AP, Borgå Å, et al. Sensitization to cashew nut 2S albumin, Ana o 3, is highly predictive of cashew and pistachio allergy in Greek children. J Allergy Clin Immunol 2015; 136:192.</a></li><li><a class="nounderline abstract_t">Lange L, Lasota L, Finger A, et al. Ana o 3-specific IgE is a good predictor for clinically relevant cashew allergy in children. Allergy 2017; 72:598.</a></li><li><a class="nounderline abstract_t">van der Valk JP, Gerth van Wijk R, Vergouwe Y, et al. sIgE Ana o 1, 2 and 3 accurately distinguish tolerant from allergic children sensitized to cashew nuts. Clin Exp Allergy 2017; 47:113.</a></li><li><a class="nounderline abstract_t">Sato S, Movérare R, Ohya Y, et al. Ana o 3-specific IgE is a predictive marker for cashew oral food challenge failure. J Allergy Clin Immunol Pract 2019; 7:2909.</a></li><li><a class="nounderline abstract_t">Brettig T, Koplin JJ, Dang T, et al. Cashew allergy diagnosis: A two-step algorithm leads to fewer oral food challenges. J Allergy Clin Immunol Pract 2022; 10:1652.</a></li><li><a class="nounderline abstract_t">De Knop KJ, Verweij MM, Grimmelikhuijsen M, et al. Age-related sensitization profiles for hazelnut (Corylus avellana) in a birch-endemic region. Pediatr Allergy Immunol 2011; 22:e139.</a></li><li><a class="nounderline abstract_t">Hansen KS, Ballmer-Weber BK, Sastre J, et al. Component-resolved in vitro diagnosis of hazelnut allergy in Europe. J Allergy Clin Immunol 2009; 123:1134.</a></li><li><a class="nounderline abstract_t">Schocker F, Lüttkopf D, Scheurer S, et al. Recombinant lipid transfer protein Cor a 8 from hazelnut: a new tool for in vitro diagnosis of potentially severe hazelnut allergy. J Allergy Clin Immunol 2004; 113:141.</a></li><li><a class="nounderline abstract_t">Beyer K, Grishina G, Bardina L, et al. Identification of an 11S globulin as a major hazelnut food allergen in hazelnut-induced systemic reactions. J Allergy Clin Immunol 2002; 110:517.</a></li><li><a class="nounderline abstract_t">Masthoff LJ, Mattsson L, Zuidmeer-Jongejan L, et al. Sensitization to Cor a 9 and Cor a 14 is highly specific for a hazelnut allergy with objective symptoms in Dutch children and adults. J Allergy Clin Immunol 2013; 132:393.</a></li><li><a class="nounderline abstract_t">Ballmer-Weber BK, Lidholm J, Lange L, et al. Allergen Recognition Patterns in Walnut Allergy Are Age Dependent and Correlate with the Severity of Allergic Reactions. J Allergy Clin Immunol Pract 2019; 7:1560.</a></li><li><a class="nounderline abstract_t">Elizur A, Appel MY, Nachshon L, et al. Clinical and Molecular Characterization of Walnut and Pecan Allergy (NUT CRACKER Study). J Allergy Clin Immunol Pract 2020; 8:157.</a></li><li><a class="nounderline abstract_t">Baar A, Pahr S, Constantin C, et al. Specific IgE reactivity to Tri a 36 in children with wheat food allergy. J Allergy Clin Immunol 2014; 133:585.</a></li><li><a class="nounderline abstract_t">Ballmer-Weber BK, Vieths S. Soy allergy in perspective. Curr Opin Allergy Clin Immunol 2008; 8:270.</a></li><li><a class="nounderline abstract_t">Mittag D, Vieths S, Vogel L, et al. Soybean allergy in patients allergic to birch pollen: clinical investigation and molecular characterization of allergens. J Allergy Clin Immunol 2004; 113:148.</a></li><li><a class="nounderline abstract_t">Ito K, Sjölander S, Sato S, et al. IgE to Gly m 5 and Gly m 6 is associated with severe allergic reactions to soybean in Japanese children. J Allergy Clin Immunol 2011; 128:673.</a></li><li><a class="nounderline abstract_t">Holzhauser T, Wackermann O, Ballmer-Weber BK, et al. Soybean (Glycine max) allergy in Europe: Gly m 5 (beta-conglycinin) and Gly m 6 (glycinin) are potential diagnostic markers for severe allergic reactions to soy. J Allergy Clin Immunol 2009; 123:452.</a></li><li><a class="nounderline abstract_t">Berneder M, Bublin M, Hoffmann-Sommergruber K, et al. Allergen chip diagnosis for soy-allergic patients: Gly m 4 as a marker for severe food-allergic reactions to soy. Int Arch Allergy Immunol 2013; 161:229.</a></li><li><a class="nounderline abstract_t">Ebisawa M, Brostedt P, Sjölander S, et al. Gly m 2S albumin is a major allergen with a high diagnostic value in soybean-allergic children. J Allergy Clin Immunol 2013; 132:976.</a></li><li><a class="nounderline abstract_t">Klemans RJ, Knol EF, Michelsen-Huisman A, et al. Components in soy allergy diagnostics: Gly m 2S albumin has the best diagnostic value in adults. Allergy 2013; 68:1396.</a></li><li><a class="nounderline abstract_t">Kattan JD, Sampson HA. Clinical reactivity to soy is best identified by component testing to Gly m 8. J Allergy Clin Immunol Pract 2015; 3:970.</a></li><li><a class="nounderline abstract_t">Bublin M, Pfister M, Radauer C, et al. Component-resolved diagnosis of kiwifruit allergy with purified natural and recombinant kiwifruit allergens. J Allergy Clin Immunol 2010; 125:687.</a></li><li><a class="nounderline abstract_t">Rossi RE, Monasterolo G, Canonica GW, Passalacqua G. Systemic reactions to peach are associated with high levels of specific IgE to Pru p 3. Allergy 2009; 64:1795.</a></li><li><a class="nounderline abstract_t">Gaier S, Oberhuber C, Hemmer W, et al. Pru p 3 as a marker for symptom severity for patients with peach allergy in a birch pollen environment. J Allergy Clin Immunol 2009; 124:166.</a></li><li><a class="nounderline abstract_t">Novembre E, Mori F, Contestabile S, et al. Correlation of anti-Pru p 3 IgE levels with severity of peach allergy reactions in children. Ann Allergy Asthma Immunol 2012; 108:271.</a></li></ol></div><div id="topicVersionRevision">Topic 95765 Version 13.0</div></div>
-<div class="row">
-<div class="col-12">
-<h4 style="text-align: center;padding: 20px;color: cadetblue;">References</h4>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/15672475" id="rid0" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>1 : Clinical role of lipid transfer proteins in food allergy.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/25174862" id="rid1" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>2 : Food allergy: a practice parameter update-2014.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/20109746" id="rid2" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>3 : Allergy or tolerance in children sensitized to peanut: prevalence and differentiation using component-resolved diagnostics.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/23240588" id="rid3" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>4 : Clinical value of component-resolved diagnostics in peanut-allergic patients.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/22385632" id="rid4" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>5 : Increasing the accuracy of peanut allergy diagnosis by using Ara h 2.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/24229825" id="rid5" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>6 : The utility of peanut components in the diagnosis of IgE-mediated peanut allergy among distinct populations.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/24565711" id="rid6" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>7 : Ara h 2 is the best predictor for peanut allergy in adults.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/22738678" id="rid7" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>8 : Peanut component Ara h 8 sensitization and tolerance to peanut.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/24229831" id="rid8" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>9 : Evaluation of Ara h2 IgE thresholds in the diagnosis of peanut allergy in a clinical population.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/24516646" id="rid9" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>10 : Is the determination of specific IgE against components using ISAC 112 a reproducible technique?</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/21143018" id="rid10" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>11 : A new tool in the field of in-vitro diagnosis of allergy: preliminary results in the comparison of ImmunoCAP©250 with the ImmunoCAP©ISAC.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/24654308" id="rid11" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>12 : Recommendations for the use of in vitro methods to detect specific immunoglobulin E: are they comparable?</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/24229816" id="rid12" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>13 : Advances in diagnosing peanut allergy.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/15080811" id="rid13" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>14 : Relevance of Ara h1, Ara h2 and Ara h3 in peanut-allergic patients, as determined by immunoglobulin E Western blotting, basophil-histamine release and intracutaneous testing: Ara h2 is the most important peanut allergen.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/20146729" id="rid14" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>15 : IgE to peanut allergen components: relation to peanut symptoms and pollen sensitization in 8-year-olds.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/19665774" id="rid15" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>16 : Lipid transfer protein (Ara h 9) as a new peanut allergen relevant for a Mediterranean allergic population.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/24554241" id="rid16" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>17 : Cross-reactivity of peanut allergens.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/26037551" id="rid17" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>18 : Peanut defensins: Novel allergens isolated from lipophilic peanut extract.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/24565545" id="rid18" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>19 : The value of specific IgE to peanut and its component Ara h 2 in the diagnosis of peanut allergy.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/23621551" id="rid19" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>20 : Moving from peanut extract to peanut components: towards validation of component-resolved IgE tests.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/22677622" id="rid20" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>21 : Anaphylaxis to peanut in a patient predominantly sensitized to Ara h 6.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/24641729" id="rid21" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>22 : Long-term prognostic value of component-resolved diagnosis in infants and toddlers with peanut allergy.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/25959668" id="rid22" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>23 : Sensitization to cashew nut 2S albumin, Ana o 3, is highly predictive of cashew and pistachio allergy in Greek children.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/27644013" id="rid23" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>24 : Ana o 3-specific IgE is a good predictor for clinically relevant cashew allergy in children.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/27513566" id="rid24" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>25 : sIgE Ana o 1, 2 and 3 accurately distinguish tolerant from allergic children sensitized to cashew nuts.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/31108216" id="rid25" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>26 : Ana o 3-specific IgE is a predictive marker for cashew oral food challenge failure.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/35074601" id="rid26" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>27 : Cashew allergy diagnosis: A two-step algorithm leads to fewer oral food challenges.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/21342279" id="rid27" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>28 : Age-related sensitization profiles for hazelnut (Corylus avellana) in a birch-endemic region.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/19344939" id="rid28" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>29 : Component-resolved in vitro diagnosis of hazelnut allergy in Europe.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/14713920" id="rid29" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>30 : Recombinant lipid transfer protein Cor a 8 from hazelnut: a new tool for in vitro diagnosis of potentially severe hazelnut allergy.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/12209105" id="rid30" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>31 : Identification of an 11S globulin as a major hazelnut food allergen in hazelnut-induced systemic reactions.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/23582909" id="rid31" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>32 : Sensitization to Cor a 9 and Cor a 14 is highly specific for a hazelnut allergy with objective symptoms in Dutch children and adults.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/30708144" id="rid32" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>33 : Allergen Recognition Patterns in Walnut Allergy Are Age Dependent and Correlate with the Severity of Allergic Reactions.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/31513892" id="rid33" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>34 : Clinical and Molecular Characterization of Walnut and Pecan Allergy (NUT CRACKER Study).</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/24332265" id="rid34" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>35 : Specific IgE reactivity to Tri a 36 in children with wheat food allergy.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/18560305" id="rid35" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>36 : Soy allergy in perspective.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/14713921" id="rid36" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>37 : Soybean allergy in patients allergic to birch pollen: clinical investigation and molecular characterization of allergens.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/21555150" id="rid37" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>38 : IgE to Gly m 5 and Gly m 6 is associated with severe allergic reactions to soybean in Japanese children.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/18996574" id="rid38" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>39 : Soybean (Glycine max) allergy in Europe: Gly m 5 (beta-conglycinin) and Gly m 6 (glycinin) are potential diagnostic markers for severe allergic reactions to soy.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/23548307" id="rid39" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>40 : Allergen chip diagnosis for soy-allergic patients: Gly m 4 as a marker for severe food-allergic reactions to soy.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/23763971" id="rid40" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>41 : Gly m 2S albumin is a major allergen with a high diagnostic value in soybean-allergic children.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/24117462" id="rid41" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>42 : Components in soy allergy diagnostics: Gly m 2S albumin has the best diagnostic value in adults.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/26164812" id="rid42" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>43 : Clinical reactivity to soy is best identified by component testing to Gly m 8.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/20061012" id="rid43" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>44 : Component-resolved diagnosis of kiwifruit allergy with purified natural and recombinant kiwifruit allergens.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/19732048" id="rid44" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>45 : Systemic reactions to peach are associated with high levels of specific IgE to Pru p 3.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/19368964" id="rid45" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>46 : Pru p 3 as a marker for symptom severity for patients with peach allergy in a birch pollen environment.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/22469448" id="rid46" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>47 : Correlation of anti-Pru p 3 IgE levels with severity of peach allergy reactions in children.</p>
-</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-</section>
-<!-- End Main Menu Area -->
-<!-- Start Search Popup Area -->
-<!-- End Footer Area -->
-<!-- Back to top -->
-<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
-<!-- End Back to top -->
-<!-- jQuery Min JS -->
-<!-- Prpper JS -->
-<!-- Bootstrap Min JS -->
-<!-- Classy Nav Min Js -->
-<!-- Owl Carousel Min Js -->
-<!-- Magnific Popup JS -->
-<!-- CounterUp JS -->
-<!-- Waypoints JS -->
-<!-- Form Validator Min JS -->
-<!-- Contact Form Min JS -->
-<!-- Main JS -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-</body>
+ <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+ <head>
+  <title>
+   Component testing for pollen-related, plant-derived food allergies
+  </title>
+  <link href="d/css/1.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!-- Start Main Menu Area -->
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="container">
+   <div class="row">
+   </div>
+  </div>
+  <section class="teacher-area ptb-10">
+   <div class="container">
+   </div>
+   <section class="course-details-area ptb-60">
+    <div class="container">
+     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+      <h1 style="text-align:center">
+       Component testing for pollen-related, plant-derived food allergies
+      </h1>
+      <div class="utdArticleSection utdStyle" id="topicContent">
+       <div id="topicTitle">
+        Component testing for pollen-related, plant-derived food allergies
+       </div>
+       <div class="authorSectionElem">
+        <div class="authorsElementsLeft">
+         <dl id="topicContributors">
+          <dt>
+           <span>
+           </span>
+           Author:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Julie Wang, MD
+           </a>
+          </dd>
+          <dt>
+           <span>
+           </span>
+           Section Editor:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Scott H Sicherer, MD, FAAAAI
+           </a>
+          </dd>
+          <dt>
+           <span>
+           </span>
+           Deputy Editor:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Elizabeth TePas, MD, MS
+           </a>
+          </dd>
+         </dl>
+        </div>
+        <div class="authorsElementsRight">
+         <div id="literatureReviewDate">
+          <div class="litReviewSingleLine">
+           <bdi>
+            <span class="emphasis">
+             Literature review current through:
+            </span>
+            Jan 2024.
+           </bdi>
+          </div>
+          <div class="litReviewSingleLine">
+           <bdi>
+            <span class="emphasis">
+             This topic last updated:
+            </span>
+            Oct 14, 2022.
+           </bdi>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div id="topicWhatsNewContainer">
+       </div>
+       <div id="topicText">
+        <p class="headingAnchor" id="H9556903">
+         <span class="h1">
+          INTRODUCTION
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Advances in the identification of clinically relevant allergens and the development of recombinant proteins allow for assessment of immunoglobulin E (IgE) binding to individual proteins within an allergenic food. This type of testing is known as component-resolved diagnosis (CRD). Increased sensitivity and specificity can be achieved by assessing IgE binding to separate proteins, either purified native or recombinant, thereby providing improved diagnostic accuracy for predicting clinical reactivity. CRD may also provide additional prognostic information regarding the severity or persistence of food allergies.
+        </p>
+        <p>
+         CRD testing for pollen-related, plant-derived food allergies is reviewed here. Component testing for animal-derived food allergies is discussed separately. An overview of testing for food allergies is also presented separately. (See
+         <a class="medical medical_review" href="/z/d/html/95766.html" rel="external">
+          "Component testing for animal-derived food allergies"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/2396.html" rel="external">
+          "Diagnostic evaluation of IgE-mediated food allergy"
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H9556909">
+         <span class="h1">
+          OVERVIEW
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Allergies to plant-derived foods may occur in pollen-sensitized individuals due to pollen allergens that cross-react with food allergens, such as profilins or pathogenesis-related class 10 (PR-10) proteins that are homologs of the major white birch pollen antigen (
+         <em>
+          Betula verrucosa
+         </em>
+         1 [Bet v 1]). This type of allergy is associated with symptoms that are generally limited to the oropharyngeal area (oral allergy syndrome/pollen-food allergy syndrome). In the absence of sensitization to pollens, allergies to plant-derived foods are the result of sensitization to more stable proteins, such as the seed storage or nonspecific lipid transfer proteins (nsLTPs). In these cases, reactions are more often systemic, and there is a higher risk for anaphylaxis [
+         <a href="#rid1">
+          1
+         </a>
+         ]. (See
+         <a class="medical medical_review" href="/z/d/html/2403.html" rel="external">
+          "Pathogenesis of oral allergy syndrome (pollen-food allergy syndrome)"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/2402.html" rel="external">
+          "Clinical manifestations and diagnosis of oral allergy syndrome (pollen-food allergy syndrome)"
+         </a>
+         .)
+        </p>
+        <p>
+         Component-resolved diagnosis (CRD) entails measurement of specific IgE responses to individual allergens as opposed to measuring IgE responses to allergen extracts that contain a mixture of proteins, including ones that may have greater or less clinical relevance. The pattern of specific IgE reactivity to defined allergens can help determine which patients are at higher risk for allergic reactions versus those who are sensitized but clinically tolerant. It may also help distinguish between those who are at risk for more severe reactions versus those who are likely to have milder symptoms.
+        </p>
+        <p>
+         The prime example of the utility of CRD in the management of food allergy is peanut allergy [
+         <a href="#rid2">
+          2
+         </a>
+         ]. Several studies have noted that having detectable levels of specific IgE to the seed storage proteins are associated with more severe, persistent peanut allergy [
+         <a href="#rid3">
+          3-7
+         </a>
+         ], whereas exclusive sensitization to a Bet v 1 homolog is more often associated with a low risk of reactivity to peanut [
+         <a href="#rid8">
+          8,9
+         </a>
+         ]. (See
+         <a class="medical medical_review" href="/z/d/html/2394.html" rel="external">
+          "Peanut, tree nut, and seed allergy: Diagnosis"
+         </a>
+         and
+         <a class="local">
+          'Peanut'
+         </a>
+         below.)
+        </p>
+        <p class="headingAnchor" id="H9556915">
+         <span class="h1">
+          ASSAY SYSTEMS
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Two different types of immunoassays are commercially available for the measurement of IgE levels to individual allergens:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Measurement of specific IgE to individual allergens or components – Quantitative results of specific IgE levels to purified native or recombinant allergens can be obtained using a fluorescent enzyme immunoassay, such as the ImmunoCAP. Components may be selected for individual allergens with ImmunoCAP, allowing for individualized testing to further characterize a patient's allergies.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Measurement of specific IgE to multiple allergen components in one test panel simultaneously – A microarray-based immunoassay such as the ImmunoCAP ISAC (Immuno Solid-phase Allergy Chip) provides results for multiple components from different allergen sources that cover a wide spectrum of food and environmental allergens using a small quantity of blood. This is a semiquantitative assay and, as such, may be better suited as a screening tool rather than a test for diagnosis and management of allergies [
+         <a href="#rid10">
+          10
+         </a>
+         ].
+        </p>
+        <p>
+        </p>
+        <p>
+         Technical differences in fixing allergen to the assay platforms result in variability of specific IgE binding. Thus, IgE values obtained with ImmunoCAP are not equivalent to the corresponding values obtained with the ISAC microarray system [
+         <a href="#rid11">
+          11,12
+         </a>
+         ]. Different units of measurement are used in the two assays (kU
+         <sub>
+          A
+         </sub>
+         /L for ImmunoCAP versus ISAC standardized units [ISU] for ISAC).
+        </p>
+        <p>
+         In the United States, several of the individual component tests are approved by the US Food and Drug Administration (FDA), whereas others are not. This can impact the likelihood that the test will be covered by third-party payers. Thus, patients and/or clinicians may wish to determine if the tests are covered before they are ordered.
+        </p>
+        <p class="headingAnchor" id="H9556921">
+         <span class="h1">
+          ALLERGEN-SPECIFIC USE/INTERPRETATION
+         </span>
+        </p>
+        <p class="headingAnchor" id="H9556928">
+         <span class="h2">
+          Peanut
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Several peanut (
+         <em>
+          Arachis hypogaea
+         </em>
+         , Ara h) proteins have been characterized and are US Food and Drug Administration (FDA) approved and commercially available for component testing  (
+         <a class="graphic graphic_table graphicRef95908" href="/z/d/graphic/95908.html" rel="external">
+          table 1
+         </a>
+         ). IgE levels to components, similar to whole-peanut IgE, provide a likelihood of clinical reactivity but, on their own, are not diagnostic of allergy or severity of reactions. Guidelines on when to use component testing for peanut allergy are available and are reviewed below  (
+         <a class="graphic graphic_table graphicRef95963" href="/z/d/graphic/95963.html" rel="external">
+          table 2
+         </a>
+         ) [
+         <a href="#rid13">
+          13
+         </a>
+         ]. (See
+         <a class="local">
+          'Peanut testing approach'
+         </a>
+         below.)
+        </p>
+        <p class="headingAnchor" id="H1737974634">
+         <span class="h3">
+          Types of peanut proteins
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Ara h 1, 2, and 3 are seed storage proteins and are the major allergens for peanut. Ara h 6 is closely related to Ara h 2. Ara h 8 is a birch allergen (Bet v 1) homolog associated mainly with milder symptoms localized to the oropharyngeal area. Ara h 9 is a nonspecific lipid transfer protein (nsLTP). Sensitization to this peanut protein is predominantly seen in the Mediterranean area [
+         <a href="#rid14">
+          14-16
+         </a>
+         ]. Ara h 10 and 11 are oleosins, and small studies have shown that some peanut-allergic patients have detectable IgE directed towards these proteins [
+         <a href="#rid17">
+          17
+         </a>
+         ]. However, their clinical relevance is unclear. Ara h 12 and 13 are defensins that have antifungal activity. In one small series, they were associated with severe anaphylactic reactions [
+         <a href="#rid18">
+          18
+         </a>
+         ].
+        </p>
+        <p class="headingAnchor" id="H540174975">
+         <span class="h3">
+          Diagnostic performance
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         IgE binding to Ara h 2 outperforms whole-peanut extract and other components in predicting clinical allergy [
+         <a href="#rid3">
+          3-7
+         </a>
+         ], although optimal cutoff values for Ara h 2 with high positive predictive values have not yet been determined. A range of cutoffs with varying sensitivities and specificities have been reported in several studies, probably due at least in part to differing patient selection criteria and geographic locations, reflecting inherent differences in patient characteristics such as genetics, diet, and environmental exposures [
+         <a href="#rid3">
+          3-6,9
+         </a>
+         ].
+        </p>
+        <p>
+         Component-resolved diagnosis (CRD) testing can facilitate patient selection of oral food challenges. A stepwise approach for peanut IgE and Ara h 2 component testing can significantly reduce the need for oral food challenges in patients who are highly likely to be allergic [
+         <a href="#rid5">
+          5,6
+         </a>
+         ]. Data also suggest the utility of measuring IgE levels to other peanut components. Isolated sensitization to Ara h 8, for example, is associated with a high likelihood of tolerance to peanut [
+         <a href="#rid8">
+          8,9
+         </a>
+         ]. Thus, testing for peanut components prior to a food challenge can be beneficial for risk stratification, enhancing the ability to select patients who are likely to pass a diagnostic food challenge.
+        </p>
+        <p>
+         The following studies are illustrative:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         A 2010 study using a population-based birth cohort of 933 children in the United Kingdom demonstrated a high rate of false-positive test results when using skin prick tests (SPTs) and specific IgE testing to whole peanut [
+         <a href="#rid3">
+          3
+         </a>
+         ]. This study concluded that assessing IgE binding to Ara h 2 had higher accuracy than whole-peanut extract and other components in predicting clinical reactivity to peanut.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         One-hundred ten (110) children (11.8 percent) had positive testing to peanut at eight years of age. Approximately two-thirds of these children (n = 66) had no reaction at oral food challenge to peanut; approximately one-fifth were allergic (12 by convincing history without challenge, 7 by challenge); and the remainder (n = 6) were deemed inconclusive.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         Approximately 15 percent were misclassified when a peanut-specific IgE level of ≥15 kU
+         <sub>
+          A
+         </sub>
+         /L or a SPT wheal size of ≥8 mm was used for a cutoff, whereas the misclassification rate was reduced to approximately 7 percent when results from a microarray that included multiple recombinant allergens from peanut, tree pollens, grass pollens, and cross-reactive carbohydrate determinants (CCDs) were used. Subjects with peanut allergy tended to have higher-fold change values (calculated expression level estimates of the sample against the negative controls) to the major peanut components Ara h 1 to 3, whereas the peanut-tolerant subjects had higher values to CCDs and grass components (Phl p 1, Phl p 4, and Phl p 5).
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Findings from a Danish study suggest that additional peanut components not routinely included in test panels may play important roles for certain individuals. This study reported that 2 percent of positive challenges had undetectable Ara h 2 [
+         <a href="#rid4">
+          4
+         </a>
+         ], whereas another European study found that 26 percent of subjects who were tolerant to peanut showed IgE binding to Ara h 2 [
+         <a href="#rid19">
+          19
+         </a>
+         ]. In addition, isolated sensitization to Ara h 8 is sometimes associated with positive challenges with systemic symptoms [
+         <a href="#rid8">
+          8,20
+         </a>
+         ]. As an example, a case was reported of a child with undetectable IgE to Ara h 2 and elevated IgE to Ara h 8 who experienced anaphylaxis at oral food challenge to peanut. After performing additional testing, he was found to have an elevated IgE to Ara h 6, a homolog of Ara h 2 [
+         <a href="#rid21">
+          21
+         </a>
+         ].
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         One study has examined whether IgE levels to peanut components have prognostic value for persistence of disease. Sensitization to Ara h 1 to 3 at one year of age was associated with persistent peanut allergy at 13 years of age, but it did not provide independent predictive value in addition to the information provided by IgE levels to whole peanut [
+         <a href="#rid22">
+          22
+         </a>
+         ].
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         A United States study examined threshold levels of Ara h 2 in the diagnosis of symptomatic peanut allergy in a general pediatric allergy referral population [
+         <a href="#rid9">
+          9
+         </a>
+         ]. Measurement of specific IgE to Ara h 2 had a diagnostic sensitivity of 96 percent and specificity of 54 percent when sensitization was defined as &gt;0.1 kU
+         <sub>
+          A
+         </sub>
+         /L (sensitivity 88.5 percent and specificity 71.4 percent using a threshold of 0.35 kU
+         <sub>
+          A
+         </sub>
+         /L).
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H95610046">
+         <span class="h3">
+          Peanut testing approach
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         In a patient with a history consistent with IgE-mediated allergy to peanut, we suggest first testing peanut-specific IgE.
+        </p>
+        <p>
+         The following scenarios illustrate some instances where targeted testing with peanut components may or may not be useful  (
+         <a class="graphic graphic_table graphicRef95963" href="/z/d/graphic/95963.html" rel="external">
+          table 2
+         </a>
+         ) [
+         <a href="#rid2">
+          2,13
+         </a>
+         ]:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Component testing can be informative for those with low peanut IgE levels (&lt;25 kU
+         <sub>
+          A
+         </sub>
+         /L), known birch pollen sensitization, and/or mild or no history of reaction to peanut. Having detectable IgE to Ara h 1, 2, or 3 is associated with higher risk of systemic reactions to peanut, and these patients would be advised to continue peanut avoidance.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Peanut component testing is probably useful in adults with seasonal allergies who had tolerated peanuts earlier in life but later reported mild symptoms with peanut ingestion. Isolated Ara h 8 sensitization (without detectable IgE to Ara h 1, 2, or 3) suggests low risk for systemic reactions to peanut. The risk of a reaction on oral food challenge is decreased in this population, but a challenge is probably still warranted to confirm lack of systemic reactivity.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         For a young child who has experienced immediate systemic symptoms upon peanut ingestion, component testing is unlikely to provide additional information that would influence management.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         When considering a food challenge for peanut, we typically obtain component tests because of the potential for improved predictive value compared with the standard peanut test. Interpretation requires evaluation of the component-specific IgE concentrations and pattern of sensitization. As an example, isolated positive testing to Ara h 8 suggests unlikely allergy, whereas high levels of IgE to Ara h 2 may indicate probable allergy. Sensitization to multiple stable proteins (eg, Ara h 1, 2, and 3) may indicate a greater chance of reaction compared with isolated sensitization to just one of these proteins. The risk of reaction based upon testing and other patient factors (eg, asthma) is assessed when deciding whether to offer a medically supervised feeding test and also potentially where to perform the procedure (eg, office versus hospital). (See
+         <a class="medical medical_review" href="/z/d/html/2394.html" rel="external">
+          "Peanut, tree nut, and seed allergy: Diagnosis"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/2399.html" rel="external">
+          "Oral food challenges for diagnosis and management of food allergies"
+         </a>
+         .)
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H2594500308">
+         <span class="h2">
+          Tree nuts
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Component testing is available for several tree nuts. The most well studied ones are listed below, although the studies are in small, selected populations with different outcomes and test cutoff points. Their utility in routine clinical practice is still unclear. Further studies are needed to determine optimal specific test cutoffs and in which patients testing will be most helpful.
+        </p>
+        <p class="headingAnchor" id="H546488075">
+         <span class="h3">
+          Cashew
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         One of the major cashew (
+         <em>
+          Anacardium occidentale
+         </em>
+         , Ana o) allergens, Ana o 3, is predictive of cashew allergy [
+         <a href="#rid23">
+          23-26
+         </a>
+         ]. Ana o 3 belongs to the 2S albumin protein family, a group of proteins that have highly stable intrinsic protein structure. Several studies have shown that Ana o 3 discriminates between allergic and tolerant children better than cashew-specific IgE (area under the curve of 0.89 to 0.94 versus 0.76 to 0.79) [
+         <a href="#rid24">
+          24-26
+         </a>
+         ]. The optimal cutoff for sensitivity and specificity for Ana o 3 was 0.70 kU
+         <sub>
+          A
+         </sub>
+         /L (sensitivity 85 percent; specificity 88 percent) in one study that confirmed cashew allergy by oral food challenge [
+         <a href="#rid26">
+          26
+         </a>
+         ]. Another study found that the optimal cutoff was 0.16 kU
+         <sub>
+          A
+         </sub>
+         /L [
+         <a href="#rid23">
+          23
+         </a>
+         ]. A positive decision point for a sensitivity of at least 95 percent was 2.0 to 2.3 kU
+         <sub>
+          A
+         </sub>
+         /L [
+         <a href="#rid24">
+          24,26
+         </a>
+         ].
+        </p>
+        <p>
+         A systematic review and analysis of six previously published studies modeled outcomes for SPT (lower and upper cutoffs &lt;3 mm and ≥12 mm, respectively), cashew specific IgE ([sIgE] ≤0.1 and ≥8.5 kU
+         <sub>
+          A
+         </sub>
+         /L), Ana o 3 (≤0.1 and ≥0.35 kU
+         <sub>
+          A
+         </sub>
+         /L), or a combination of sIgE and Ana o 3, with home reintroduction at or below the lower cutoff, avoidance at or above the upper cutoff, and oral food challenge for patients in between [
+         <a href="#rid27">
+          27
+         </a>
+         ]. False positives were lowest with SPT alone (0.5 percent) compared with Ana o 3 or sIgE plus Ana o 3 (7 and 8.1 percent, respectively), and false negatives were lowest with sIgE alone (0.4 percent) compared with Ana o 3 or sIgE plus Ana o 3 (1.1 percent). However, these approaches required oral food challenges to determine allergy or tolerance in a higher percentage of patients (58.4 and 74.5 percent, respectively) compared with screening with Ana o 3 alone (12.2 percent) or combination sIgE plus Ana o 3 (11.4 percent). One suggested testing approach that should minimize false positive and negative tests and limit the number of food challenges needed is shown in the algorithm  (
+         <a class="graphic graphic_algorithm graphicRef139903" href="/z/d/graphic/139903.html" rel="external">
+          algorithm 1
+         </a>
+         ).
+        </p>
+        <p class="headingAnchor" id="H9556935">
+         <span class="h3">
+          Hazelnut
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Several hazelnut (Corylus avellana
+         <em>
+          , Cor a
+         </em>
+         ) allergens have been characterized. Cor a 1 is a heat-labile protein that is homologous with the major birch pollen allergen, Bet v 1. Sensitization to Cor a 1 is generally associated with tolerance to hazelnut or mild oropharyngeal symptoms [
+         <a href="#rid28">
+          28,29
+         </a>
+         ]. Sensitization to Cor a 8, an nsLTP, has been linked with more severe symptoms in patients from the Mediterranean area [
+         <a href="#rid29">
+          29,30
+         </a>
+         ]. Cor a 9 is an 11S globulin, and data have implicated sensitization to Cor a 9 in severe reactions in children in the United States and Europe [
+         <a href="#rid28">
+          28,31,32
+         </a>
+         ]. Sensitization to Cor a 14, a 2S albumin, is also highly specific for more severe reactions at food challenge [
+         <a href="#rid32">
+          32
+         </a>
+         ].
+        </p>
+        <p>
+         In a study of 26 children from a birch-endemic area (Spain) who had positive hazelnut IgE and underwent double-blind, placebo-controlled food challenge (DBPCFC), sensitization to Cor a 8 was found to be a good discriminator of severe allergic reactions to hazelnut [
+         <a href="#rid30">
+          30
+         </a>
+         ].
+        </p>
+        <p>
+         A 2013 Dutch study investigated specific IgE binding to hazelnut components Cor a 9 and Cor a 14 as indicators for a more severe hazelnut allergy phenotype [
+         <a href="#rid32">
+          32
+         </a>
+         ]. Diagnostic cutoffs of IgE levels ≥1 kU
+         <sub>
+          A
+         </sub>
+         /L to native Cor a 9 in children and adults or ≥5 kU
+         <sub>
+          A
+         </sub>
+         /L to recombinant Cor a 14 in children and ≥1 kU
+         <sub>
+          A
+         </sub>
+         /L in adults had a specificity of &gt;90 percent. This association was confirmed in a 2014 United States study of 116 patients who underwent hazelnut oral food challenge. Cor a 9 and 14 were highly sensitive and specific for predicting clinical reactivity to hazelnut.
+        </p>
+        <p>
+         Component testing for hazelnut is commercially available and can be informative for patients who test positive to hazelnut but have known birch pollen sensitization and/or mild or no history of reaction to hazelnut. Having detectable IgE to Cor a 8, 9, and/or 14 is associated with a higher likelihood of clinical reactivity to hazelnut, and these patients would be advised to continue hazelnut avoidance.
+        </p>
+        <p class="headingAnchor" id="H1274201673">
+         <span class="h3">
+          Walnut
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The major English walnut (
+         <em>
+          Juglans regia
+         </em>
+         , Jug r) allergens include the seed storage proteins Jug r 1 (2S albumin), Jug r 2 and Jug r 6 (vicilins), and Jug r 4 (11S globulin) and an nsLTP, Jug r 3. Allergens associated with pollen allergies include Jug r 7 (profilin) and Jug r 5 (Bet v 1 homolog).
+        </p>
+        <p>
+         In one European study of 91 patients with walnut allergy and 24 tolerant controls, 96 percent were sensitized to at least one walnut component compared with 87 percent to walnut extract [
+         <a href="#rid33">
+          33
+         </a>
+         ]. Sensitization to Jug r 5 was associated with mild symptoms and negative in vitro testing to walnut extract. Patients who had a history of severe reactions, most of whom developed the allergy before 14 years of age, had higher specific IgE levels to Jug r 1, Jug r 4, Jug r vicilin-L, and Jug r vicilin-H, but not Jug r 3 or Jug r 5, compared with patients with a history of mild reactions.
+        </p>
+        <p>
+         Another study found that Jug r 1 and/or Jug r 4 had the best diagnostic accuracy for walnut allergy and were superior to whole walnut extract and other components for predicting allergy versus asymptomatic sensitization [
+         <a href="#rid34">
+          34
+         </a>
+         ]. No association was seen between IgE to individual components and type of symptoms or severity of reaction during an oral food challenge.
+        </p>
+        <p class="headingAnchor" id="H9556942">
+         <span class="h2">
+          Wheat
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Several groups of allergens have been described for wheat (
+         <em>
+          Triticum aestivum
+         </em>
+         , Tri a). Some of these allergens are associated with specific forms of wheat allergy, such as baker's asthma or wheat-dependent, exercise-induced anaphylaxis. Others are associated with severe allergic reactions. However, detection of multiple wheat allergens concurrently does not identify all patients with wheat allergy [
+         <a href="#rid35">
+          35
+         </a>
+         ]. Thus, further research is needed to confirm the relevance of these proteins in larger populations and to assess the utility of measuring IgE to these individual allergens in the diagnosis of wheat allergy. These allergens are discussed in greater detail separately. (See
+         <a class="medical medical_review" href="/z/d/html/90949.html" rel="external">
+          "Grain allergy: Allergens and grain classification", section on 'Wheat'
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H9556949">
+         <span class="h2">
+          Soy
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Several soy (
+         <em>
+          Glycine max
+         </em>
+         , Gly m) allergens have been characterized [
+         <a href="#rid36">
+          36
+         </a>
+         ]. However, sensitization to these specific allergens is not consistently associated with the diagnosis of clinical allergy or severity of reactions. Thus, further studies are needed to determine the clinical utility of measuring IgE to these components.
+        </p>
+        <p>
+         Birch pollen-related soy allergy is attributed to sensitization to Gly m 4, a Bet v 1 homolog [
+         <a href="#rid37">
+          37
+         </a>
+         ]. Gly m 5 (beta-conglycinin) and Gly m 6 (glycinin) are storage proteins that are associated with severe reactions to soybean [
+         <a href="#rid38">
+          38,39
+         </a>
+         ]. However, IgE levels to these allergens are not diagnostic for soy allergy, since nonsymptomatic individuals also have detectable IgE to these proteins. Although Gly m 4 sensitization is generally associated with milder symptoms or oral allergy, it is also related to severe, generalized symptoms in the absence of sensitization to Gly m 5 and 6 [
+         <a href="#rid40">
+          40
+         </a>
+         ].
+        </p>
+        <p>
+         The storage protein 2S albumin (Gly m 2S albumin or Gly m 8) was reported to be an important allergen in Japanese children [
+         <a href="#rid41">
+          41
+         </a>
+         ]. In this study, symptomatic children had significantly higher levels of IgE to Gly m 2S albumin than nonsymptomatic children. A study from the Netherlands also demonstrated that IgE to Gly m 2S albumin is important in adults with soy allergy. However, the diagnostic value of IgE to Gly m 2S albumin was comparable with SPT or IgE to soy extract [
+         <a href="#rid42">
+          42
+         </a>
+         ]. In another study, the sensitivity of IgE to Gly m 8 was better than IgE to soy extract (78 versus 44 percent), but the specificity was lower (78 versus 87 percent) [
+         <a href="#rid43">
+          43
+         </a>
+         ].
+        </p>
+        <p class="headingAnchor" id="H9556956">
+         <span class="h2">
+          Fruits
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Fruits more commonly cause oral allergy syndrome (pollen-food allergy syndrome) than systemic allergic reactions. A number of fruit allergens have been identified that cross-react with pollen allergens such as Bet v 1. Sensitization to other allergens, particularly nsLTPs, is seen in patients with fruit allergy who do not also have pollen allergy. Testing for most of these allergens is not available outside of the research setting. In addition, the utility of testing is generally not clear. Fruit and vegetable allergens are discussed in greater detail separately. (See
+         <a class="medical medical_review" href="/z/d/html/2403.html" rel="external">
+          "Pathogenesis of oral allergy syndrome (pollen-food allergy syndrome)"
+         </a>
+         .)
+        </p>
+        <p>
+         Measurement of IgE to specific kiwi (
+         <em>
+          Actinidia deliciosa
+         </em>
+         ) allergens (Act d 1, 2, 5, and 8) on microarray testing is commercially available. Act d 5 is homologous with Bet v 1. Thus, determination of IgE reactivity to these proteins may distinguish those who have primary kiwi allergy and are at high risk for systemic reactions from those with secondary kiwi allergy due to pollen cross-reactivity [
+         <a href="#rid44">
+          44
+         </a>
+         ].
+        </p>
+        <p>
+         Testing for IgE to several peach (
+         <em>
+          Prunus persica
+         </em>
+         ) allergens is commercially available. Pru p 1 is a Bet v 1 homolog, Pru p 3 is an LTP, and Pru p 4 is a profilin. Some studies suggest utility in measuring IgE to these proteins in the characterization of peach reactions [
+         <a href="#rid45">
+          45,46
+         </a>
+         ], but one study noted that sensitization to Pru p 3 was not associated with systemic symptoms nor was there an association with severity of reactions [
+         <a href="#rid47">
+          47
+         </a>
+         ].
+        </p>
+        <p class="headingAnchor" id="H1162819115">
+         <span class="h1">
+          SOCIETY GUIDELINE LINKS
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Links to society and government-sponsored guidelines from selected countries and regions around the world are provided separately. (See
+         <a class="medical medical_society_guidelines" href="/z/d/html/109355.html" rel="external">
+          "Society guideline links: Food allergy"
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H9556963">
+         <span class="h1">
+          SUMMARY
+         </span>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Advances in the identification of relevant allergens and the development of recombinant proteins allow for assessment of immunoglobulin E (IgE) binding to individual proteins within an allergenic food. This type of testing is known as component-resolved diagnosis (CRD). (See
+         <a class="local">
+          'Introduction'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         CRD holds promise for distinguishing patients with clinical allergy as opposed to those sensitized, but tolerant to, plant-derived foods. It also has the potential to provide additional information regarding the severity of symptoms that may occur in clinically reactive individuals, with those sensitized to pollen-related proteins having a lower risk of severe systemic reactions with exposure. (See
+         <a class="local">
+          'Overview'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Two different types of immunoassays are commercially available: those that measure specific IgE to individual allergens (components) and those that measure specific IgE to multiple components simultaneously (microarrays). (See
+         <a class="local">
+          'Assay systems'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         For peanut allergy, data indicate that CRD can provide useful information for discriminating between pollen-related symptoms as opposed to primary peanut allergy, particularly in older individuals. This information can be used to facilitate patient selection of oral food challenges  (
+         <a class="graphic graphic_table graphicRef95963" href="/z/d/graphic/95963.html" rel="external">
+          table 2
+         </a>
+         ). (See
+         <a class="local">
+          'Peanut'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Further studies in larger populations are needed to determine the clinical utility of CRD for each different food. Oral food challenge remains the gold standard for food allergy diagnosis. (See
+         <a class="local">
+          'Allergen-specific use/interpretation'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+       </div>
+       <div class="headingAnchor" id="references">
+        <ol id="reference">
+         <li>
+          <a class="nounderline abstract_t">
+           Pastorello EA, Robino AM. Clinical role of lipid transfer proteins in food allergy. Mol Nutr Food Res 2004; 48:356.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Sampson HA, Aceves S, Bock SA, et al. Food allergy: a practice parameter update-2014. J Allergy Clin Immunol 2014; 134:1016.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Nicolaou N, Poorafshar M, Murray C, et al. Allergy or tolerance in children sensitized to peanut: prevalence and differentiation using component-resolved diagnostics. J Allergy Clin Immunol 2010; 125:191.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Eller E, Bindslev-Jensen C. Clinical value of component-resolved diagnostics in peanut-allergic patients. Allergy 2013; 68:190.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Dang TD, Tang M, Choo S, et al. Increasing the accuracy of peanut allergy diagnosis by using Ara h 2. J Allergy Clin Immunol 2012; 129:1056.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Lieberman JA, Glaumann S, Batelson S, et al. The utility of peanut components in the diagnosis of IgE-mediated peanut allergy among distinct populations. J Allergy Clin Immunol Pract 2013; 1:75.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Klemans RJ, Broekman HC, Knol EF, et al. Ara h 2 is the best predictor for peanut allergy in adults. J Allergy Clin Immunol Pract 2013; 1:632.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Asarnoj A, Nilsson C, Lidholm J, et al. Peanut component Ara h 8 sensitization and tolerance to peanut. J Allergy Clin Immunol 2012; 130:468.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Keet CA, Johnson K, Savage JH, et al. Evaluation of Ara h2 IgE thresholds in the diagnosis of peanut allergy in a clinical population. J Allergy Clin Immunol Pract 2013; 1:101.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Martínez-Aranguren R, Lizaso MT, Goikoetxea MJ, et al. Is the determination of specific IgE against components using ISAC 112 a reproducible technique? PLoS One 2014; 9:e88394.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Gadisseur R, Chapelle JP, Cavalier E. A new tool in the field of in-vitro diagnosis of allergy: preliminary results in the comparison of ImmunoCAP© 250 with the ImmunoCAP© ISAC. Clin Chem Lab Med 2011; 49:277.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Goikoetxea MJ, Sanz ML, García BE, et al. Recommendations for the use of in vitro methods to detect specific immunoglobulin E: are they comparable? J Investig Allergol Clin Immunol 2013; 23:448.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Sicherer SH, Wood RA. Advances in diagnosing peanut allergy. J Allergy Clin Immunol Pract 2013; 1:1.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Koppelman SJ, Wensing M, Ertmann M, et al. Relevance of Ara h1, Ara h2 and Ara h3 in peanut-allergic patients, as determined by immunoglobulin E Western blotting, basophil-histamine release and intracutaneous testing: Ara h2 is the most important peanut allergen. Clin Exp Allergy 2004; 34:583.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Asarnoj A, Movérare R, Ostblom E, et al. IgE to peanut allergen components: relation to peanut symptoms and pollen sensitization in 8-year-olds. Allergy 2010; 65:1189.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Krause S, Reese G, Randow S, et al. Lipid transfer protein (Ara h 9) as a new peanut allergen relevant for a Mediterranean allergic population. J Allergy Clin Immunol 2009; 124:771.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Bublin M, Breiteneder H. Cross-reactivity of peanut allergens. Curr Allergy Asthma Rep 2014; 14:426.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Petersen A, Kull S, Rennert S, et al. Peanut defensins: Novel allergens isolated from lipophilic peanut extract. J Allergy Clin Immunol 2015; 136:1295.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Lopes de Oliveira LC, Aderhold M, Brill M, et al. The value of specific IgE to peanut and its component Ara h 2 in the diagnosis of peanut allergy. J Allergy Clin Immunol Pract 2013; 1:394.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Aalberse JA, Meijer Y, Derksen N, et al. Moving from peanut extract to peanut components: towards validation of component-resolved IgE tests. Allergy 2013; 68:748.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Asarnoj A, Glaumann S, Elfström L, et al. Anaphylaxis to peanut in a patient predominantly sensitized to Ara h 6. Int Arch Allergy Immunol 2012; 159:209.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Bégin P, Vitte J, Paradis L, et al. Long-term prognostic value of component-resolved diagnosis in infants and toddlers with peanut allergy. Pediatr Allergy Immunol 2014; 25:506.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Savvatianos S, Konstantinopoulos AP, Borgå Å, et al. Sensitization to cashew nut 2S albumin, Ana o 3, is highly predictive of cashew and pistachio allergy in Greek children. J Allergy Clin Immunol 2015; 136:192.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Lange L, Lasota L, Finger A, et al. Ana o 3-specific IgE is a good predictor for clinically relevant cashew allergy in children. Allergy 2017; 72:598.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           van der Valk JP, Gerth van Wijk R, Vergouwe Y, et al. sIgE Ana o 1, 2 and 3 accurately distinguish tolerant from allergic children sensitized to cashew nuts. Clin Exp Allergy 2017; 47:113.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Sato S, Movérare R, Ohya Y, et al. Ana o 3-specific IgE is a predictive marker for cashew oral food challenge failure. J Allergy Clin Immunol Pract 2019; 7:2909.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Brettig T, Koplin JJ, Dang T, et al. Cashew allergy diagnosis: A two-step algorithm leads to fewer oral food challenges. J Allergy Clin Immunol Pract 2022; 10:1652.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           De Knop KJ, Verweij MM, Grimmelikhuijsen M, et al. Age-related sensitization profiles for hazelnut (Corylus avellana) in a birch-endemic region. Pediatr Allergy Immunol 2011; 22:e139.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Hansen KS, Ballmer-Weber BK, Sastre J, et al. Component-resolved in vitro diagnosis of hazelnut allergy in Europe. J Allergy Clin Immunol 2009; 123:1134.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Schocker F, Lüttkopf D, Scheurer S, et al. Recombinant lipid transfer protein Cor a 8 from hazelnut: a new tool for in vitro diagnosis of potentially severe hazelnut allergy. J Allergy Clin Immunol 2004; 113:141.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Beyer K, Grishina G, Bardina L, et al. Identification of an 11S globulin as a major hazelnut food allergen in hazelnut-induced systemic reactions. J Allergy Clin Immunol 2002; 110:517.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Masthoff LJ, Mattsson L, Zuidmeer-Jongejan L, et al. Sensitization to Cor a 9 and Cor a 14 is highly specific for a hazelnut allergy with objective symptoms in Dutch children and adults. J Allergy Clin Immunol 2013; 132:393.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Ballmer-Weber BK, Lidholm J, Lange L, et al. Allergen Recognition Patterns in Walnut Allergy Are Age Dependent and Correlate with the Severity of Allergic Reactions. J Allergy Clin Immunol Pract 2019; 7:1560.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Elizur A, Appel MY, Nachshon L, et al. Clinical and Molecular Characterization of Walnut and Pecan Allergy (NUT CRACKER Study). J Allergy Clin Immunol Pract 2020; 8:157.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Baar A, Pahr S, Constantin C, et al. Specific IgE reactivity to Tri a 36 in children with wheat food allergy. J Allergy Clin Immunol 2014; 133:585.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Ballmer-Weber BK, Vieths S. Soy allergy in perspective. Curr Opin Allergy Clin Immunol 2008; 8:270.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Mittag D, Vieths S, Vogel L, et al. Soybean allergy in patients allergic to birch pollen: clinical investigation and molecular characterization of allergens. J Allergy Clin Immunol 2004; 113:148.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Ito K, Sjölander S, Sato S, et al. IgE to Gly m 5 and Gly m 6 is associated with severe allergic reactions to soybean in Japanese children. J Allergy Clin Immunol 2011; 128:673.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Holzhauser T, Wackermann O, Ballmer-Weber BK, et al. Soybean (Glycine max) allergy in Europe: Gly m 5 (beta-conglycinin) and Gly m 6 (glycinin) are potential diagnostic markers for severe allergic reactions to soy. J Allergy Clin Immunol 2009; 123:452.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Berneder M, Bublin M, Hoffmann-Sommergruber K, et al. Allergen chip diagnosis for soy-allergic patients: Gly m 4 as a marker for severe food-allergic reactions to soy. Int Arch Allergy Immunol 2013; 161:229.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Ebisawa M, Brostedt P, Sjölander S, et al. Gly m 2S albumin is a major allergen with a high diagnostic value in soybean-allergic children. J Allergy Clin Immunol 2013; 132:976.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Klemans RJ, Knol EF, Michelsen-Huisman A, et al. Components in soy allergy diagnostics: Gly m 2S albumin has the best diagnostic value in adults. Allergy 2013; 68:1396.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Kattan JD, Sampson HA. Clinical reactivity to soy is best identified by component testing to Gly m 8. J Allergy Clin Immunol Pract 2015; 3:970.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Bublin M, Pfister M, Radauer C, et al. Component-resolved diagnosis of kiwifruit allergy with purified natural and recombinant kiwifruit allergens. J Allergy Clin Immunol 2010; 125:687.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Rossi RE, Monasterolo G, Canonica GW, Passalacqua G. Systemic reactions to peach are associated with high levels of specific IgE to Pru p 3. Allergy 2009; 64:1795.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Gaier S, Oberhuber C, Hemmer W, et al. Pru p 3 as a marker for symptom severity for patients with peach allergy in a birch pollen environment. J Allergy Clin Immunol 2009; 124:166.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Novembre E, Mori F, Contestabile S, et al. Correlation of anti-Pru p 3 IgE levels with severity of peach allergy reactions in children. Ann Allergy Asthma Immunol 2012; 108:271.
+          </a>
+         </li>
+        </ol>
+       </div>
+       <div id="topicVersionRevision">
+        Topic 95765 Version 13.0
+       </div>
+      </div>
+      <div class="row">
+       <div class="col-12">
+        <h4 style="text-align: center;padding: 20px;color: cadetblue;">
+         References
+        </h4>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/15672475" id="rid0" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          1 : Clinical role of lipid transfer proteins in food allergy.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/25174862" id="rid1" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          2 : Food allergy: a practice parameter update-2014.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/20109746" id="rid2" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          3 : Allergy or tolerance in children sensitized to peanut: prevalence and differentiation using component-resolved diagnostics.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/23240588" id="rid3" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          4 : Clinical value of component-resolved diagnostics in peanut-allergic patients.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/22385632" id="rid4" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          5 : Increasing the accuracy of peanut allergy diagnosis by using Ara h 2.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/24229825" id="rid5" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          6 : The utility of peanut components in the diagnosis of IgE-mediated peanut allergy among distinct populations.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/24565711" id="rid6" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          7 : Ara h 2 is the best predictor for peanut allergy in adults.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/22738678" id="rid7" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          8 : Peanut component Ara h 8 sensitization and tolerance to peanut.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/24229831" id="rid8" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          9 : Evaluation of Ara h2 IgE thresholds in the diagnosis of peanut allergy in a clinical population.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/24516646" id="rid9" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          10 : Is the determination of specific IgE against components using ISAC 112 a reproducible technique?
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/21143018" id="rid10" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          11 : A new tool in the field of in-vitro diagnosis of allergy: preliminary results in the comparison of ImmunoCAP©250 with the ImmunoCAP©ISAC.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/24654308" id="rid11" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          12 : Recommendations for the use of in vitro methods to detect specific immunoglobulin E: are they comparable?
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/24229816" id="rid12" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          13 : Advances in diagnosing peanut allergy.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/15080811" id="rid13" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          14 : Relevance of Ara h1, Ara h2 and Ara h3 in peanut-allergic patients, as determined by immunoglobulin E Western blotting, basophil-histamine release and intracutaneous testing: Ara h2 is the most important peanut allergen.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/20146729" id="rid14" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          15 : IgE to peanut allergen components: relation to peanut symptoms and pollen sensitization in 8-year-olds.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/19665774" id="rid15" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          16 : Lipid transfer protein (Ara h 9) as a new peanut allergen relevant for a Mediterranean allergic population.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/24554241" id="rid16" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          17 : Cross-reactivity of peanut allergens.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/26037551" id="rid17" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          18 : Peanut defensins: Novel allergens isolated from lipophilic peanut extract.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/24565545" id="rid18" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          19 : The value of specific IgE to peanut and its component Ara h 2 in the diagnosis of peanut allergy.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/23621551" id="rid19" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          20 : Moving from peanut extract to peanut components: towards validation of component-resolved IgE tests.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/22677622" id="rid20" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          21 : Anaphylaxis to peanut in a patient predominantly sensitized to Ara h 6.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/24641729" id="rid21" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          22 : Long-term prognostic value of component-resolved diagnosis in infants and toddlers with peanut allergy.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/25959668" id="rid22" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          23 : Sensitization to cashew nut 2S albumin, Ana o 3, is highly predictive of cashew and pistachio allergy in Greek children.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/27644013" id="rid23" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          24 : Ana o 3-specific IgE is a good predictor for clinically relevant cashew allergy in children.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/27513566" id="rid24" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          25 : sIgE Ana o 1, 2 and 3 accurately distinguish tolerant from allergic children sensitized to cashew nuts.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/31108216" id="rid25" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          26 : Ana o 3-specific IgE is a predictive marker for cashew oral food challenge failure.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/35074601" id="rid26" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          27 : Cashew allergy diagnosis: A two-step algorithm leads to fewer oral food challenges.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/21342279" id="rid27" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          28 : Age-related sensitization profiles for hazelnut (Corylus avellana) in a birch-endemic region.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/19344939" id="rid28" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          29 : Component-resolved in vitro diagnosis of hazelnut allergy in Europe.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/14713920" id="rid29" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          30 : Recombinant lipid transfer protein Cor a 8 from hazelnut: a new tool for in vitro diagnosis of potentially severe hazelnut allergy.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/12209105" id="rid30" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          31 : Identification of an 11S globulin as a major hazelnut food allergen in hazelnut-induced systemic reactions.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/23582909" id="rid31" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          32 : Sensitization to Cor a 9 and Cor a 14 is highly specific for a hazelnut allergy with objective symptoms in Dutch children and adults.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/30708144" id="rid32" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          33 : Allergen Recognition Patterns in Walnut Allergy Are Age Dependent and Correlate with the Severity of Allergic Reactions.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/31513892" id="rid33" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          34 : Clinical and Molecular Characterization of Walnut and Pecan Allergy (NUT CRACKER Study).
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/24332265" id="rid34" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          35 : Specific IgE reactivity to Tri a 36 in children with wheat food allergy.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/18560305" id="rid35" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          36 : Soy allergy in perspective.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/14713921" id="rid36" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          37 : Soybean allergy in patients allergic to birch pollen: clinical investigation and molecular characterization of allergens.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/21555150" id="rid37" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          38 : IgE to Gly m 5 and Gly m 6 is associated with severe allergic reactions to soybean in Japanese children.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/18996574" id="rid38" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          39 : Soybean (Glycine max) allergy in Europe: Gly m 5 (beta-conglycinin) and Gly m 6 (glycinin) are potential diagnostic markers for severe allergic reactions to soy.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/23548307" id="rid39" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          40 : Allergen chip diagnosis for soy-allergic patients: Gly m 4 as a marker for severe food-allergic reactions to soy.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/23763971" id="rid40" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          41 : Gly m 2S albumin is a major allergen with a high diagnostic value in soybean-allergic children.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/24117462" id="rid41" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          42 : Components in soy allergy diagnostics: Gly m 2S albumin has the best diagnostic value in adults.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/26164812" id="rid42" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          43 : Clinical reactivity to soy is best identified by component testing to Gly m 8.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/20061012" id="rid43" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          44 : Component-resolved diagnosis of kiwifruit allergy with purified natural and recombinant kiwifruit allergens.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/19732048" id="rid44" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          45 : Systemic reactions to peach are associated with high levels of specific IgE to Pru p 3.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/19368964" id="rid45" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          46 : Pru p 3 as a marker for symptom severity for patients with peach allergy in a birch pollen environment.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/22469448" id="rid46" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          47 : Correlation of anti-Pru p 3 IgE levels with severity of peach allergy reactions in children.
+         </p>
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </section>
+  <!-- End Main Menu Area -->
+  <!-- Start Search Popup Area -->
+  <!-- End Footer Area -->
+  <!-- Back to top -->
+  <a class="scrolltop" href="#top">
+   <i class="icofont-hand-drawn-up">
+   </i>
+  </a>
+  <!-- End Back to top -->
+  <!-- jQuery Min JS -->
+  <!-- Prpper JS -->
+  <!-- Bootstrap Min JS -->
+  <!-- Classy Nav Min Js -->
+  <!-- Owl Carousel Min Js -->
+  <!-- Magnific Popup JS -->
+  <!-- CounterUp JS -->
+  <!-- Waypoints JS -->
+  <!-- Form Validator Min JS -->
+  <!-- Contact Form Min JS -->
+  <!-- Main JS -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+ </body>
 </html>

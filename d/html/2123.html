@@ -1,269 +1,753 @@
 <!DOCTYPE html>
-
 <html lang="fa">
-<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
-<head><title>ECG tutorial: Chamber enlargement and hypertrophy</title><link href="/z/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/z/d/css/icofont.min.css" rel="stylesheet"/><link href="/z/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/z/d/css/animate.css" rel="stylesheet"/><link href="/z/d/css/owl.carousel.css" rel="stylesheet"/><link href="/z/d/css/magnific-popup.css" rel="stylesheet"/><link href="/z/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/z/d/css/style.css" rel="stylesheet"/><link href="/z/d/css/rtl_edited.css" rel="stylesheet"/><link href="/z/d/css/responsive.css" rel="stylesheet"/><link href="https:///uptodate_assets/main.css" rel="stylesheet"/>
-<style>
-
-#myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 16px;
-  color: black;
-  display: block
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee;
-}
-
-#searchResult {
-
-  list-style-type: none;
-  padding: 0;
-  padding-right: 20px;
-}
-
-#searchResult li a {
-  border: .5px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #79bc21;
-  padding: 7px;
-  text-decoration: none;
-  font-size: 14px;
-  color: white;
-  display: block
-}
-
-#searchResult li a:hover:not(.header) {
-  background-color: #222;
-}
-
-
-#txtHint   {
-  position: absolute;
-  text-shadow: none;
-  width: 100%;
-  margin-top: -15px;
-  padding-right: 10px;
-
-  filter: alpha(opacity=95);
-  -moz-opacity: 0.95;
-  opacity: 1;
-  z-index: 200;
-}
-.countBubl {
-  background:#eb0029;
-  color:#fff;
-  padding:5px;
-  margin-top: 50%;
-
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
- width: 55%;
- padding-left: 20px;
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
- width: 20%;
-}
- #Uptodate_image {
-      width: 50%;
-  }#uptodate-area {
-      /*z-index: 99;*/
-  }
-#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
- margin-left: 10px;
- margin-bottom: 6%;
-}
-@media (max-width: @screen-xs) {
-    .countBubl {
-        font-size: 4px ;
-    }
-    #uptodate_version {
-        font-size: 4px ;
-    }
-}
-
-@media (max-width: @screen-sm) {
-    .countBubl {
-        font-size: 14px ;
-    }
-}
-@media  all and(max-width: 820) {
-    #Uptodate_image {
-        width: 80% ;
-    }#uptodate-area {
-        z-index: 99;
-    }
-}@media  all and (min-width: 820) and(max-width: 88820){
-    #Uptodate_image {
-        width: 100% !important;
-    }
-    .countBubl {
-        font-size: 4px ;
-    }
-}
-div.col-md-3:nth-child(3) {
- margin-top: 6%;
-}
-
-div.col-md-3:nth-child(3) > img:nth-child(1) {
- width: 100%;
- margin-left: 11px;
-}
-
-</style>
-<style media="screen" type="text/css">
-  .goback {
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    position: fixed;
-    display: none;
-    font-size: 15px;
-    background: #71c0fa;
-    z-index: 1000;
-    text-align: center;
-    color: #ffffff;
-    -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
-    border-radius: 50px;
-    bottom: 3.8%;
-    right: 2%;
-}
-  .buyPackage {
-  width: 100px;
-  height: 100px;
-  line-height: 40px;
-  position: fixed;
-  display: none;
-  font-size: 10px;
-  background: #fa759e;
-  z-index: 1000;
-  text-align: center;
-  color: #ffffff;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  border-radius: 10px;
-  top: 150px;
-  right: 2%;
-  text-align: center;
-}
-.uptodate-area {
-  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-    background-attachment: fixed;
-  position: relative;
-}
-.uptodate-area::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  padding-top: 100px;
-  width: 100%;
-}
-#references{
-  display: none;
-}
-</style>
-<style>
-section.sticky {
-  position: sticky;
-  top: 0;
-  background-color: #fff !important;
-  /*z-index: 100;*/
-  /*padding-top: 80px;*/
-
-}
-.m4inb{
-    border: solid !important;
-  }
-
-  .newsletter-area::before {
-       background: unset !important;
-  }
-p {
-    color: #555;
-}
-</style>
-<meta content="" name="description"/>
-<link href="/z/d/img/favicon.png" rel="icon" type="image/png">
-</link></head>
-<body>
-<!-- Start Main Menu Area -->
-<br/>
-<br/>
-<br/>
-<br/>
-<div class="container">
-<div class="row">
-</div>
-</div>
-<section class="teacher-area ptb-10">
-<div class="container">
-</div>
-<section class="course-details-area ptb-60">
-<div class="container">
-<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-<h1 style="text-align:center">ECG tutorial: Chamber enlargement and hypertrophy</h1>
-<div class="utdArticleSection utdStyle" id="topicContent"><div id="topicTitle">ECG tutorial: Chamber enlargement and hypertrophy</div> <div class="authorSectionElem"><div class="authorsElementsLeft"><dl id="topicContributors"><dt><span> </span>Author:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Jordan M Prutkin, MD, MHA, MHS</a></dd><dt><span> </span>Section Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Ary L Goldberger, MD</a></dd><dt><span> </span>Deputy Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Todd F Dardas, MD, MS</a></dd></dl></div><div class="authorsElementsRight"><div id="literatureReviewDate"><div class="litReviewSingleLine"><bdi><span class="emphasis">Literature review current through:</span> Jan 2024.</bdi></div><div class="litReviewSingleLine"><bdi><span class="emphasis">This topic last updated:</span> Jun 08, 2022.</bdi></div></div></div></div><div id="topicWhatsNewContainer"></div><div id="topicText"><p class="headingAnchor" id="H2181310246"><span class="h1">INTRODUCTION</span><span class="headingEndMark"> — </span>This topic will discuss electrocardiographic (ECG) manifestations of cardiac chamber enlargement or cardiac muscular hypertrophy.</p><p class="headingAnchor" id="H1"><span class="h1">LEFT ATRIAL ABNORMALITY/ENLARGEMENT</span><span class="headingEndMark"> — </span>Atrial activation occurs after impulse formation from the sinus node. Normally, activation of the right atrium occurs first, followed by left atrial activation, sometimes leading to slight physiologic notching of the P wave. Left atrial enlargement is manifested as the P wave on the surface ECG becoming broadened and often substantially notched, with an interpeak interval &gt;0.04 s (<a class="graphic graphic_figure graphicRef79437" href="/z/d/graphic/79437.html" rel="external">figure 1</a> and <a class="graphic graphic_waveform graphicRef52162" href="/z/d/graphic/52162.html" rel="external">waveform 1</a>). The voltage of the terminal portion of the P wave is increased if there is left atrial enlargement ("P mitrale"), reflecting left atrial depolarization.</p><p>Causes include:</p><p class="bulletIndent1"><span class="glyph">●</span>Left atrial hypertrophy</p><p class="bulletIndent1"><span class="glyph">●</span>Left atrial dilation</p><p class="bulletIndent1"><span class="glyph">●</span>Left atrial distention</p><p class="bulletIndent1"><span class="glyph">●</span>Left atrial scarring</p><p class="bulletIndent1"><span class="glyph">●</span>Intraatrial conduction delay</p><p class="bulletIndent1"><span class="glyph">●</span>Interatrial block (see <a class="local">'Interatrial block'</a> below)</p><p></p><p>These ECG changes of left atrial enlargement are most apparent in the inferior leads. Leads V1 and V2 show a deeply inverted or negative portion of the P wave (reflecting left atrial activation, which is directed posteriorly) with an area that is greater than that of the initial upright portion of the P wave (reflecting right atrial activation, which is directed anteriorly). The negative portion of the P wave in V1 is &gt;1 mm wide and &gt;1 mm deep at normal voltage and sweep speed settings. If the P wave in V1 is completely negative, this usually reflects left atrial abnormality, but may be normal or indicate an ectopic atrial focus or lead malposition. In lead II, the P wave is ≥0.12 s. The left atrial vector may also increase toward the left (-30° to -90°) if left atrial enlargement progresses and becomes more pronounced, resulting in a negative terminal deflection of the P wave in leads III and aVF.</p><p>As noted below, a narrow but prominent, entirely negative P wave in lead V1 may also, paradoxically, occur in certain cases of right atrial abnormality, especially when the right atrium is located below the level of the V1 electrode. In such cases, tall, peaked P waves are usually seen in the inferior leads, more typical of right atrial abnormality ("P pulmonale").</p><p>The following criteria suggest left atrial enlargement/abnormality when correlated with echocardiographic data:</p><p class="bulletIndent1"><span class="glyph">●</span>Negative phase of P in V1 &gt;0.04 s – sensitivity 83 percent; specificity 80 percent</p><p class="bulletIndent1"><span class="glyph">●</span>Negative phase of P in V1 &gt;1 mm – sensitivity 60 percent; specificity 93 percent</p><p class="bulletIndent1"><span class="glyph">●</span>P-terminal force &gt;0.04 mm/s – sensitivity 69 percent; specificity 93 percent</p><p class="bulletIndent1"><span class="glyph">●</span>Notched P, interpeak interval &gt;0.04 s – sensitivity 15 percent; specificity 100 percent</p><p class="bulletIndent1"><span class="glyph">●</span>P wave duration &gt;0.11 s – sensitivity 33 percent; specificity 88 percent</p><p class="bulletIndent1"><span class="glyph">●</span>P wave/PR duration &gt;1.6 – sensitivity 31 percent; specificity 64 percent</p><p></p><p class="headingAnchor" id="H6705790"><span class="h2">Interatrial block</span><span class="headingEndMark"> — </span>Interatrial block reflects delay of conduction to the left atrium, usually at the level of the Bachmann bundle. Diagnosis of interatrial block versus left atrial abnormality can be difficult or impossible from the surface ECG. First degree interatrial block is recognized by a P wave ≥0.12 s, which is usually bimodal in leads I, II, or III (<a class="graphic graphic_waveform graphicRef128116" href="/z/d/graphic/128116.html" rel="external">waveform 2</a>). This common finding in older adults may be seen in those with no evidence of left atrial enlargement on imaging. Second degree interatrial block is defined by a pattern of changing P wave morphology from normal to interatrial block or from first to third degree interatrial block, usually after a premature atrial or ventricular contraction. It is infrequently seen. Third degree interatrial block, also infrequently seen, is due to absent conduction through the interatrial septum where conduction to the left atrium occurs through the coronary sinus musculature. The ECG criteria are a P wave ≥0.12 s, usually with a bimodal P wave in leads I and aVL, and a biphasic P wave (positive, then negative) in leads II, III, and aVF, and frequently also in V1 to V2 (<a class="graphic graphic_waveform graphicRef128117" href="/z/d/graphic/128117.html" rel="external">waveform 3</a>).</p><p>First degree interatrial block with a prolonged P wave duration, especially with a P wave &gt;0.123 s, has been associated with an increase in all-cause and cardiovascular mortality [<a href="#rid1">1</a>]. Third degree interatrial block has been associated with supraventricular arrhythmias [<a href="#rid2">2</a>].</p><p class="headingAnchor" id="H2"><span class="h1">RIGHT ATRIAL ABNORMALITY/ENLARGEMENT</span><span class="headingEndMark"> — </span>Delayed activation of the right atrium as a result of dilatation, hypertrophy, scarring, or a conduction abnormality leads to simultaneous activation of the right and left atria. This synchronous electrical activity has an additive effect upon the surface ECG, resulting in a relatively narrow P wave that is of increased amplitude ("P pulmonale") (<a class="graphic graphic_figure graphicRef63181" href="/z/d/graphic/63181.html" rel="external">figure 2</a> and <a class="graphic graphic_waveform graphicRef78126" href="/z/d/graphic/78126.html" rel="external">waveform 4</a>). The most common finding is a P wave &gt;2.5 mm in lead II. In addition, a P wave &gt;1.5 mm in V1 or V2 or a P wave that has a rightward axis may be seen. The amplitude of the P wave may become significantly increased in the presence of right atrial hypertrophy/overload, and it becomes peaked due to the increase in amount of depolarized tissue. If the right atrium becomes sufficiently large, it may extend toward the left, causing P waves in V1 to be inverted and giving the illusion of left atrial enlargement. In contrast to left atrial abnormality or interatrial block, the P wave duration is usually normal.</p><p>Causes include:</p><p class="bulletIndent1"><span class="glyph">●</span>Right atrial hypertrophy</p><p class="bulletIndent1"><span class="glyph">●</span>Right atrial dilation</p><p class="bulletIndent1"><span class="glyph">●</span>Right atrial distention</p><p class="bulletIndent1"><span class="glyph">●</span>Right atrial scarring</p><p class="bulletIndent1"><span class="glyph">●</span>Intraatrial conduction delay</p><p></p><p class="headingAnchor" id="H3"><span class="h1">LEFT VENTRICULAR HYPERTROPHY</span><span class="headingEndMark"> — </span>Pathologic left ventricular hypertrophy (LVH) is present when there is substantially increased LV muscle mass associated with concentric, eccentric, or asymmetric patterns. LVH is usually the result of an increase in systolic pressure generated by the LV in response to increased resistance to contraction; this type of pressure load most commonly occurs with long-standing hypertension or aortic outflow obstruction, particularly aortic stenosis. LVH can also be due to sustained mitral or aortic regurgitation (volume loads), dilated cardiomyopathy, or hypertrophic cardiomyopathy and its variants.</p><p>It takes longer for an electrical impulse to traverse the hypertrophied ventricular muscle, and the amplitude of the impulse is increased since there is a greater muscle mass. Thus, the QRS complex has an increased amplitude and is often slightly widened, reflecting an intraventricular conduction delay (<a class="graphic graphic_waveform graphicRef117851 graphicRef117850" href="/z/d/graphic/117851.html" rel="external">waveform 5A-B</a>) (see  <a class="medical medical_review" href="/z/d/html/2112.html" rel="external">"Left ventricular hypertrophy: Clinical findings and ECG diagnosis"</a>). The widening is primarily observed as an initial slowing in the inscription of the QRS complex to &gt;0.04 s (the time to reach the peak of the R wave is delayed); this is known as a delay in the intrinsicoid deflection. A similar pattern of tall QRS voltage may be seen in young people who have thin chest walls; however, in these patients, the intrinsicoid deflection is normal and there is no hypertrophy or delay in activation or conduction.</p><p>The changes of LVH are often associated with other ECG abnormalities, including:</p><p class="bulletIndent1"><span class="glyph">●</span>Left atrial abnormality</p><p class="bulletIndent1"><span class="glyph">●</span>Left axis deviation due to the increased mass of left ventricular muscle</p><p class="bulletIndent1"><span class="glyph">●</span>ST segment and T wave abnormalities (downsloping ST segment depression and T wave inversion)</p><p></p><p>The ST-T wave abnormalities have often been termed a "strain pattern," though are now more frequently described as "LVH with associated ST-T wave abnormalities." They probably represent either subendocardial ischemia, which results from a relative lack of blood and oxygen supply to the hypertrophied muscle as demand is greater than supply, or repolarization abnormalities of the hypertrophied cardiac muscle. The changes are most frequently seen in the left lateral leads (I, aVL, V5 to V6); they may also occur in the inferior leads when a vertical heart is present.</p><p class="headingAnchor" id="H4"><span class="h2">ECG criteria</span><span class="headingEndMark"> — </span>There have been multiple ECG criteria proposed for diagnosing LVH. The most popular include:</p><p class="bulletIndent1"><span class="glyph">●</span>Sokolow and Lyon – Amplitude of S wave in lead V1 + amplitude of R wave in V5 or V6 (whichever is the tallest) ≥35 mm.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Cornell – Amplitude of R wave in aVL + amplitude of S wave in V3 &gt;28 mm for men, or &gt;20 mm for women.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Roberts – QRS voltage in all leads &gt;175 to 225 mm.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Scott</p><p></p><p class="bulletIndent1">Limb leads:</p><p></p><p class="bulletIndent2">R in I + S in 3 more than 25 mm</p><p class="bulletIndent2">R in aVL more than 11 mm or &gt;18 mm if left axis is present</p><p class="bulletIndent2">R in aVF more than 20 mm</p><p class="bulletIndent2">S in aVR more than 14 mm</p><p></p><p class="bulletIndent1">Chest leads:</p><p></p><p class="bulletIndent2">S in V1 or V2 + R in V5 or V6 more than 35 mm</p><p class="bulletIndent2">R in V5 or V6 more than 26 mm</p><p class="bulletIndent2">R + S in any V lead more than 45 mm</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Romhilt-Estes scoring system – This index gives different weights to specific findings (<a class="graphic graphic_table graphicRef51012" href="/z/d/graphic/51012.html" rel="external">table 1</a>). A score of 5 or more indicates "definite" LVH; a score of 4 indicates "probable" LVH.</p><p></p><p>Among the most specific (although not sensitive) criterion is the amplitude of the R wave in lead aVL; LVH is present when this is greater than 11 mm (or 18 mm in the presence of left axis deviation).</p><p class="headingAnchor" id="H5"><span class="h1">RIGHT VENTRICULAR HYPERTROPHY</span><span class="headingEndMark"> — </span>Right ventricular hypertrophy (RVH) is present when there is a pathologic increase in muscle mass of the right ventricle. This may be seen with pulmonary hypertension, pulmonic stenosis, or severe lung disease and cor pulmonale. There are multiple criteria for the diagnosis of RVH that have been proposed [<a href="#rid3">3</a>]. However, no one set of criteria has sufficiently high sensitivity and specificity to allow it to be used to screen for RVH [<a href="#rid4">4</a>].</p><p>The RV forces become predominant in patients with RVH (especially due to a pressure load as with pulmonic outflow obstruction or severe pulmonary hypertension), producing tall R waves in the right precordial leads (V1 and V2), and deep S waves in the left precordial leads (V5 and V6) (<a class="graphic graphic_waveform graphicRef63763" href="/z/d/graphic/63763.html" rel="external">waveform 6</a>). Because of the increase in the amplitude of the R wave and decrease in the depth of the S wave, the R:S ratio in V1 &gt;1 is suggestive of RVH. However, there are other causes of an increased R:S ratio in adults that must be excluded before a diagnosis of RVH can be definitively established (<a class="graphic graphic_table graphicRef53051" href="/z/d/graphic/53051.html" rel="external">table 2</a>):</p><p class="bulletIndent1"><span class="glyph">●</span>Right bundle branch block</p><p class="bulletIndent1"><span class="glyph">●</span>Posterior wall myocardial infarction</p><p class="bulletIndent1"><span class="glyph">●</span>Wolff-Parkinson-White pattern (especially due to lateral or posterolateral left-sided pathways)</p><p class="bulletIndent1"><span class="glyph">●</span>Hypertrophic cardiomyopathy (septal hypertrophy)</p><p class="bulletIndent1"><span class="glyph">●</span>Early precordial transition (counterclockwise rotation)</p><p class="bulletIndent1"><span class="glyph">●</span>Normal or positional variant</p><p></p><p>Obtaining an R:S ratio &gt;1 from a right sided precordial lead (V3R or V4R) may be a more reliable indicator of RVH.</p><p>Right axis deviation (axis &gt;+90º-100º) is often present with RVH. There also may be associated right atrial overload and ST segment and T wave abnormalities in the right precordial leads (formerly called “RV strain”), reflecting subendocardial ischemia or repolarization abnormalities of the right ventricular myocardium.</p><p>Thus, reported clues to the diagnosis of right ventricular hypertrophy include:</p><p class="bulletIndent1"><span class="glyph">●</span>Right axis deviation (&gt;+90)</p><p class="bulletIndent1"><span class="glyph">●</span>R in V1 &gt;6 mm</p><p class="bulletIndent1"><span class="glyph">●</span>R in V1 + S in V5 or V6 &gt;10.5 mm</p><p class="bulletIndent1"><span class="glyph">●</span>R/S ratio in V1 &gt;1</p><p class="bulletIndent1"><span class="glyph">●</span>S/R ratio in V6 &gt;1</p><p class="bulletIndent1"><span class="glyph">●</span>Late intrinsicoid deflection in V1 (&gt;0.035 s)</p><p class="bulletIndent1"><span class="glyph">●</span>Incomplete right bundle branch block</p><p class="bulletIndent1"><span class="glyph">●</span>ST-T wave abnormalities ("strain") in inferior leads</p><p class="bulletIndent1"><span class="glyph">●</span>Right atrial hypertrophy/overload ("P pulmonale")</p><p class="bulletIndent1"><span class="glyph">●</span>S&gt;R in leads I, II, III, particularly in children (S1S2S3 pattern)</p><p></p><p>Clinicians should also be aware that apparent limitations in the accuracy of RVH criteria, and conflicting results in the literature, may reflect the fact that different pathophysiologic substrates give rise to very different ECG findings. Tall (normal duration) right precordial R waves (as part of R, RS, or qR morphologies) with right axis deviation, as noted above, are most likely to be associated with severe RV pressure overloads due to pulmonic stenosis (and its variants) or pulmonary hypertension from causes other than chronic obstructive pulmonary disease (COPD) (eg, primary pulmonary hypertension or recurrent pulmonary emboli). Pulmonary hypertension due to severe COPD (emphysema) may be associated with very slow R wave progression, delayed precordial transition zone, and right axis deviation. In contrast, RVH due to a classic volume load state (eg, ostium secundum atrial septal defect) may be associated with RV conduction delay and right axis deviation.</p><p class="headingAnchor" id="H6"><span class="h1">BIVENTRICULAR HYPERTROPHY</span><span class="headingEndMark"> — </span>Biventricular hypertrophy is suggested on the ECG if there are voltage criteria for left ventricular hypertrophy, combined with right axis deviation, prominent R wave in V1 to V2, prominent S wave in V5 to V6, tall biphasic R/S complexes, and/or right atrial abnormality (<a class="graphic graphic_waveform graphicRef75570" href="/z/d/graphic/75570.html" rel="external">waveform 7</a>). In some cases, there will be evidence of left atrial enlargement or tall R wave and deep S waves in V2 to V4 (&gt;60 mm combined) combined with criteria diagnostic of right ventricular hypertrophy, including R/S ratio &gt;1 in V1 to V2 or S/R ratio &gt;1 in V5 to V6, a deep S wave in V5 to V6, or right axis deviation. The latter may also be seen with mitral stenosis.</p><p class="headingAnchor" id="H6705841"><span class="h1">SUMMARY</span></p><p class="bulletIndent1"><span class="glyph">●</span>There is no single best ECG criterion for diagnosis of hypertrophy or enlargement of any of the cardiac chambers. Several different sets of criteria have been used with various sensitivities and specificities.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Left atrial abnormality/enlargement is characterized by P waves that are broad and often notched, with an interpeak interval &gt;0.04 s (<a class="graphic graphic_figure graphicRef79437" href="/z/d/graphic/79437.html" rel="external">figure 1</a> and <a class="graphic graphic_waveform graphicRef52162" href="/z/d/graphic/52162.html" rel="external">waveform 1</a>). The voltage of the terminal portion of the P wave may be increased, especially if there is left atrial enlargement (classical "P mitrale"), reflecting left atrial depolarization. These ECG changes are most apparent in the inferior leads and V1. (See <a class="local">'Left atrial abnormality/enlargement'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Right atrial abnormality/enlargement is characterized by P waves that are relatively narrow but of increased amplitude (classic "P pulmonale") (<a class="graphic graphic_figure graphicRef63181" href="/z/d/graphic/63181.html" rel="external">figure 2</a> and <a class="graphic graphic_waveform graphicRef78126" href="/z/d/graphic/78126.html" rel="external">waveform 4</a>). (See <a class="local">'Right atrial abnormality/enlargement'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Left ventricular hypertrophy is characterized by the QRS complex having increased amplitude and usually slight widening, reflecting an intraventricular conduction delay (<a class="graphic graphic_waveform graphicRef117850 graphicRef117851" href="/z/d/graphic/117850.html" rel="external">waveform 5A-B</a>). There are often associated ST segment and T wave abnormalities. Evidence of left atrial abnormality and left axis deviation is commonly seen. (See <a class="local">'Left ventricular hypertrophy'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Right ventricular hypertrophy, especially due to right ventricular pressure loads from pulmonic stenosis or pulmonary hypertension not due to chronic obstructive pulmonary disease, may be characterized by an increase in the amplitude of the R wave and a decrease in the depth of the S wave in the right precordial leads, causing an increase in the R:S ratio (<a class="graphic graphic_waveform graphicRef63763" href="/z/d/graphic/63763.html" rel="external">waveform 6</a>) usually with a vertical or frankly rightward QRS axis. Evidence of right atrial abnormality may be present. (See <a class="local">'Right ventricular hypertrophy'</a> above.)</p></div><div class="headingAnchor" id="references"><ol id="reference"><li><a class="nounderline abstract_t">Bayés de Luna A, Platonov P, Cosio FG, et al. Interatrial blocks. A separate entity from left atrial enlargement: a consensus report. J Electrocardiol 2012; 45:445.</a></li><li><a class="nounderline abstract_t">Magnani JW, Gorodeski EZ, Johnson VM, et al. P wave duration is associated with cardiovascular and all-cause mortality outcomes: the National Health and Nutrition Examination Survey. Heart Rhythm 2011; 8:93.</a></li><li><a class="nounderline abstract_t">Hancock EW, Deal BJ, Mirvis DM, et al. AHA/ACCF/HRS recommendations for the standardization and interpretation of the electrocardiogram: part V: electrocardiogram changes associated with cardiac chamber hypertrophy: a scientific statement from the American Heart Association Electrocardiography and Arrhythmias Committee, Council on Clinical Cardiology; the American College of Cardiology Foundation; and the Heart Rhythm Society: endorsed by the International Society for Computerized Electrocardiology. Circulation 2009; 119:e251.</a></li><li><a class="nounderline abstract_t">Whitman IR, Patel VV, Soliman EZ, et al. Validity of the surface electrocardiogram criteria for right ventricular hypertrophy: the MESA-RV Study (Multi-Ethnic Study of Atherosclerosis-Right Ventricle). J Am Coll Cardiol 2014; 63:672.</a></li></ol></div><div id="topicVersionRevision">Topic 2123 Version 22.0</div></div>
-<div class="row">
-<div class="col-12">
-<h4 style="text-align: center;padding: 20px;color: cadetblue;">References</h4>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/22920783" id="rid0" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>1 : Interatrial blocks. A separate entity from left atrial enlargement: a consensus report.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/20868770" id="rid1" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>2 : P wave duration is associated with cardiovascular and all-cause mortality outcomes: the National Health and Nutrition Examination Survey.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/19228820" id="rid2" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>3 : AHA/ACCF/HRS recommendations for the standardization and interpretation of the electrocardiogram: part V: electrocardiogram changes associated with cardiac chamber hypertrophy: a scientific statement from the American Heart Association Electrocardiography and Arrhythmias Committee, Council on Clinical Cardiology; the American College of Cardiology Foundation; and the Heart Rhythm Society: endorsed by the International Society for Computerized Electrocardiology.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/24080107" id="rid3" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>4 : Validity of the surface electrocardiogram criteria for right ventricular hypertrophy: the MESA-RV Study (Multi-Ethnic Study of Atherosclerosis-Right Ventricle).</p>
-</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-</section>
-<!-- End Main Menu Area -->
-<!-- Start Search Popup Area -->
-<!-- End Footer Area -->
-<!-- Back to top -->
-<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
-<!-- End Back to top -->
-<!-- jQuery Min JS -->
-<!-- Prpper JS -->
-<!-- Bootstrap Min JS -->
-<!-- Classy Nav Min Js -->
-<!-- Owl Carousel Min Js -->
-<!-- Magnific Popup JS -->
-<!-- CounterUp JS -->
-<!-- Waypoints JS -->
-<!-- Form Validator Min JS -->
-<!-- Contact Form Min JS -->
-<!-- Main JS -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-</body>
+ <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+ <head>
+  <title>
+   ECG tutorial: Chamber enlargement and hypertrophy
+  </title>
+  <link href="d/css/1.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!-- Start Main Menu Area -->
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="container">
+   <div class="row">
+   </div>
+  </div>
+  <section class="teacher-area ptb-10">
+   <div class="container">
+   </div>
+   <section class="course-details-area ptb-60">
+    <div class="container">
+     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+      <h1 style="text-align:center">
+       ECG tutorial: Chamber enlargement and hypertrophy
+      </h1>
+      <div class="utdArticleSection utdStyle" id="topicContent">
+       <div id="topicTitle">
+        ECG tutorial: Chamber enlargement and hypertrophy
+       </div>
+       <div class="authorSectionElem">
+        <div class="authorsElementsLeft">
+         <dl id="topicContributors">
+          <dt>
+           <span>
+           </span>
+           Author:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Jordan M Prutkin, MD, MHA, MHS
+           </a>
+          </dd>
+          <dt>
+           <span>
+           </span>
+           Section Editor:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Ary L Goldberger, MD
+           </a>
+          </dd>
+          <dt>
+           <span>
+           </span>
+           Deputy Editor:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Todd F Dardas, MD, MS
+           </a>
+          </dd>
+         </dl>
+        </div>
+        <div class="authorsElementsRight">
+         <div id="literatureReviewDate">
+          <div class="litReviewSingleLine">
+           <bdi>
+            <span class="emphasis">
+             Literature review current through:
+            </span>
+            Jan 2024.
+           </bdi>
+          </div>
+          <div class="litReviewSingleLine">
+           <bdi>
+            <span class="emphasis">
+             This topic last updated:
+            </span>
+            Jun 08, 2022.
+           </bdi>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div id="topicWhatsNewContainer">
+       </div>
+       <div id="topicText">
+        <p class="headingAnchor" id="H2181310246">
+         <span class="h1">
+          INTRODUCTION
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         This topic will discuss electrocardiographic (ECG) manifestations of cardiac chamber enlargement or cardiac muscular hypertrophy.
+        </p>
+        <p class="headingAnchor" id="H1">
+         <span class="h1">
+          LEFT ATRIAL ABNORMALITY/ENLARGEMENT
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Atrial activation occurs after impulse formation from the sinus node. Normally, activation of the right atrium occurs first, followed by left atrial activation, sometimes leading to slight physiologic notching of the P wave. Left atrial enlargement is manifested as the P wave on the surface ECG becoming broadened and often substantially notched, with an interpeak interval &gt;0.04 s (
+         <a class="graphic graphic_figure graphicRef79437" href="/z/d/graphic/79437.html" rel="external">
+          figure 1
+         </a>
+         and
+         <a class="graphic graphic_waveform graphicRef52162" href="/z/d/graphic/52162.html" rel="external">
+          waveform 1
+         </a>
+         ). The voltage of the terminal portion of the P wave is increased if there is left atrial enlargement ("P mitrale"), reflecting left atrial depolarization.
+        </p>
+        <p>
+         Causes include:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Left atrial hypertrophy
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Left atrial dilation
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Left atrial distention
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Left atrial scarring
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Intraatrial conduction delay
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Interatrial block (see
+         <a class="local">
+          'Interatrial block'
+         </a>
+         below)
+        </p>
+        <p>
+        </p>
+        <p>
+         These ECG changes of left atrial enlargement are most apparent in the inferior leads. Leads V1 and V2 show a deeply inverted or negative portion of the P wave (reflecting left atrial activation, which is directed posteriorly) with an area that is greater than that of the initial upright portion of the P wave (reflecting right atrial activation, which is directed anteriorly). The negative portion of the P wave in V1 is &gt;1 mm wide and &gt;1 mm deep at normal voltage and sweep speed settings. If the P wave in V1 is completely negative, this usually reflects left atrial abnormality, but may be normal or indicate an ectopic atrial focus or lead malposition. In lead II, the P wave is ≥0.12 s. The left atrial vector may also increase toward the left (-30° to -90°) if left atrial enlargement progresses and becomes more pronounced, resulting in a negative terminal deflection of the P wave in leads III and aVF.
+        </p>
+        <p>
+         As noted below, a narrow but prominent, entirely negative P wave in lead V1 may also, paradoxically, occur in certain cases of right atrial abnormality, especially when the right atrium is located below the level of the V1 electrode. In such cases, tall, peaked P waves are usually seen in the inferior leads, more typical of right atrial abnormality ("P pulmonale").
+        </p>
+        <p>
+         The following criteria suggest left atrial enlargement/abnormality when correlated with echocardiographic data:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Negative phase of P in V1 &gt;0.04 s – sensitivity 83 percent; specificity 80 percent
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Negative phase of P in V1 &gt;1 mm – sensitivity 60 percent; specificity 93 percent
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         P-terminal force &gt;0.04 mm/s – sensitivity 69 percent; specificity 93 percent
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Notched P, interpeak interval &gt;0.04 s – sensitivity 15 percent; specificity 100 percent
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         P wave duration &gt;0.11 s – sensitivity 33 percent; specificity 88 percent
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         P wave/PR duration &gt;1.6 – sensitivity 31 percent; specificity 64 percent
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H6705790">
+         <span class="h2">
+          Interatrial block
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Interatrial block reflects delay of conduction to the left atrium, usually at the level of the Bachmann bundle. Diagnosis of interatrial block versus left atrial abnormality can be difficult or impossible from the surface ECG. First degree interatrial block is recognized by a P wave ≥0.12 s, which is usually bimodal in leads I, II, or III (
+         <a class="graphic graphic_waveform graphicRef128116" href="/z/d/graphic/128116.html" rel="external">
+          waveform 2
+         </a>
+         ). This common finding in older adults may be seen in those with no evidence of left atrial enlargement on imaging. Second degree interatrial block is defined by a pattern of changing P wave morphology from normal to interatrial block or from first to third degree interatrial block, usually after a premature atrial or ventricular contraction. It is infrequently seen. Third degree interatrial block, also infrequently seen, is due to absent conduction through the interatrial septum where conduction to the left atrium occurs through the coronary sinus musculature. The ECG criteria are a P wave ≥0.12 s, usually with a bimodal P wave in leads I and aVL, and a biphasic P wave (positive, then negative) in leads II, III, and aVF, and frequently also in V1 to V2 (
+         <a class="graphic graphic_waveform graphicRef128117" href="/z/d/graphic/128117.html" rel="external">
+          waveform 3
+         </a>
+         ).
+        </p>
+        <p>
+         First degree interatrial block with a prolonged P wave duration, especially with a P wave &gt;0.123 s, has been associated with an increase in all-cause and cardiovascular mortality [
+         <a href="#rid1">
+          1
+         </a>
+         ]. Third degree interatrial block has been associated with supraventricular arrhythmias [
+         <a href="#rid2">
+          2
+         </a>
+         ].
+        </p>
+        <p class="headingAnchor" id="H2">
+         <span class="h1">
+          RIGHT ATRIAL ABNORMALITY/ENLARGEMENT
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Delayed activation of the right atrium as a result of dilatation, hypertrophy, scarring, or a conduction abnormality leads to simultaneous activation of the right and left atria. This synchronous electrical activity has an additive effect upon the surface ECG, resulting in a relatively narrow P wave that is of increased amplitude ("P pulmonale") (
+         <a class="graphic graphic_figure graphicRef63181" href="/z/d/graphic/63181.html" rel="external">
+          figure 2
+         </a>
+         and
+         <a class="graphic graphic_waveform graphicRef78126" href="/z/d/graphic/78126.html" rel="external">
+          waveform 4
+         </a>
+         ). The most common finding is a P wave &gt;2.5 mm in lead II. In addition, a P wave &gt;1.5 mm in V1 or V2 or a P wave that has a rightward axis may be seen. The amplitude of the P wave may become significantly increased in the presence of right atrial hypertrophy/overload, and it becomes peaked due to the increase in amount of depolarized tissue. If the right atrium becomes sufficiently large, it may extend toward the left, causing P waves in V1 to be inverted and giving the illusion of left atrial enlargement. In contrast to left atrial abnormality or interatrial block, the P wave duration is usually normal.
+        </p>
+        <p>
+         Causes include:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Right atrial hypertrophy
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Right atrial dilation
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Right atrial distention
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Right atrial scarring
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Intraatrial conduction delay
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H3">
+         <span class="h1">
+          LEFT VENTRICULAR HYPERTROPHY
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Pathologic left ventricular hypertrophy (LVH) is present when there is substantially increased LV muscle mass associated with concentric, eccentric, or asymmetric patterns. LVH is usually the result of an increase in systolic pressure generated by the LV in response to increased resistance to contraction; this type of pressure load most commonly occurs with long-standing hypertension or aortic outflow obstruction, particularly aortic stenosis. LVH can also be due to sustained mitral or aortic regurgitation (volume loads), dilated cardiomyopathy, or hypertrophic cardiomyopathy and its variants.
+        </p>
+        <p>
+         It takes longer for an electrical impulse to traverse the hypertrophied ventricular muscle, and the amplitude of the impulse is increased since there is a greater muscle mass. Thus, the QRS complex has an increased amplitude and is often slightly widened, reflecting an intraventricular conduction delay (
+         <a class="graphic graphic_waveform graphicRef117851 graphicRef117850" href="/z/d/graphic/117851.html" rel="external">
+          waveform 5A-B
+         </a>
+         ) (see
+         <a class="medical medical_review" href="/z/d/html/2112.html" rel="external">
+          "Left ventricular hypertrophy: Clinical findings and ECG diagnosis"
+         </a>
+         ). The widening is primarily observed as an initial slowing in the inscription of the QRS complex to &gt;0.04 s (the time to reach the peak of the R wave is delayed); this is known as a delay in the intrinsicoid deflection. A similar pattern of tall QRS voltage may be seen in young people who have thin chest walls; however, in these patients, the intrinsicoid deflection is normal and there is no hypertrophy or delay in activation or conduction.
+        </p>
+        <p>
+         The changes of LVH are often associated with other ECG abnormalities, including:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Left atrial abnormality
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Left axis deviation due to the increased mass of left ventricular muscle
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         ST segment and T wave abnormalities (downsloping ST segment depression and T wave inversion)
+        </p>
+        <p>
+        </p>
+        <p>
+         The ST-T wave abnormalities have often been termed a "strain pattern," though are now more frequently described as "LVH with associated ST-T wave abnormalities." They probably represent either subendocardial ischemia, which results from a relative lack of blood and oxygen supply to the hypertrophied muscle as demand is greater than supply, or repolarization abnormalities of the hypertrophied cardiac muscle. The changes are most frequently seen in the left lateral leads (I, aVL, V5 to V6); they may also occur in the inferior leads when a vertical heart is present.
+        </p>
+        <p class="headingAnchor" id="H4">
+         <span class="h2">
+          ECG criteria
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         There have been multiple ECG criteria proposed for diagnosing LVH. The most popular include:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Sokolow and Lyon – Amplitude of S wave in lead V1 + amplitude of R wave in V5 or V6 (whichever is the tallest) ≥35 mm.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Cornell – Amplitude of R wave in aVL + amplitude of S wave in V3 &gt;28 mm for men, or &gt;20 mm for women.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Roberts – QRS voltage in all leads &gt;175 to 225 mm.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Scott
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         Limb leads:
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         R in I + S in 3 more than 25 mm
+        </p>
+        <p class="bulletIndent2">
+         R in aVL more than 11 mm or &gt;18 mm if left axis is present
+        </p>
+        <p class="bulletIndent2">
+         R in aVF more than 20 mm
+        </p>
+        <p class="bulletIndent2">
+         S in aVR more than 14 mm
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         Chest leads:
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         S in V1 or V2 + R in V5 or V6 more than 35 mm
+        </p>
+        <p class="bulletIndent2">
+         R in V5 or V6 more than 26 mm
+        </p>
+        <p class="bulletIndent2">
+         R + S in any V lead more than 45 mm
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Romhilt-Estes scoring system – This index gives different weights to specific findings (
+         <a class="graphic graphic_table graphicRef51012" href="/z/d/graphic/51012.html" rel="external">
+          table 1
+         </a>
+         ). A score of 5 or more indicates "definite" LVH; a score of 4 indicates "probable" LVH.
+        </p>
+        <p>
+        </p>
+        <p>
+         Among the most specific (although not sensitive) criterion is the amplitude of the R wave in lead aVL; LVH is present when this is greater than 11 mm (or 18 mm in the presence of left axis deviation).
+        </p>
+        <p class="headingAnchor" id="H5">
+         <span class="h1">
+          RIGHT VENTRICULAR HYPERTROPHY
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Right ventricular hypertrophy (RVH) is present when there is a pathologic increase in muscle mass of the right ventricle. This may be seen with pulmonary hypertension, pulmonic stenosis, or severe lung disease and cor pulmonale. There are multiple criteria for the diagnosis of RVH that have been proposed [
+         <a href="#rid3">
+          3
+         </a>
+         ]. However, no one set of criteria has sufficiently high sensitivity and specificity to allow it to be used to screen for RVH [
+         <a href="#rid4">
+          4
+         </a>
+         ].
+        </p>
+        <p>
+         The RV forces become predominant in patients with RVH (especially due to a pressure load as with pulmonic outflow obstruction or severe pulmonary hypertension), producing tall R waves in the right precordial leads (V1 and V2), and deep S waves in the left precordial leads (V5 and V6) (
+         <a class="graphic graphic_waveform graphicRef63763" href="/z/d/graphic/63763.html" rel="external">
+          waveform 6
+         </a>
+         ). Because of the increase in the amplitude of the R wave and decrease in the depth of the S wave, the R:S ratio in V1 &gt;1 is suggestive of RVH. However, there are other causes of an increased R:S ratio in adults that must be excluded before a diagnosis of RVH can be definitively established (
+         <a class="graphic graphic_table graphicRef53051" href="/z/d/graphic/53051.html" rel="external">
+          table 2
+         </a>
+         ):
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Right bundle branch block
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Posterior wall myocardial infarction
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Wolff-Parkinson-White pattern (especially due to lateral or posterolateral left-sided pathways)
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Hypertrophic cardiomyopathy (septal hypertrophy)
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Early precordial transition (counterclockwise rotation)
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Normal or positional variant
+        </p>
+        <p>
+        </p>
+        <p>
+         Obtaining an R:S ratio &gt;1 from a right sided precordial lead (V3R or V4R) may be a more reliable indicator of RVH.
+        </p>
+        <p>
+         Right axis deviation (axis &gt;+90º-100º) is often present with RVH. There also may be associated right atrial overload and ST segment and T wave abnormalities in the right precordial leads (formerly called “RV strain”), reflecting subendocardial ischemia or repolarization abnormalities of the right ventricular myocardium.
+        </p>
+        <p>
+         Thus, reported clues to the diagnosis of right ventricular hypertrophy include:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Right axis deviation (&gt;+90)
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         R in V1 &gt;6 mm
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         R in V1 + S in V5 or V6 &gt;10.5 mm
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         R/S ratio in V1 &gt;1
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         S/R ratio in V6 &gt;1
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Late intrinsicoid deflection in V1 (&gt;0.035 s)
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Incomplete right bundle branch block
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         ST-T wave abnormalities ("strain") in inferior leads
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Right atrial hypertrophy/overload ("P pulmonale")
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         S&gt;R in leads I, II, III, particularly in children (S1S2S3 pattern)
+        </p>
+        <p>
+        </p>
+        <p>
+         Clinicians should also be aware that apparent limitations in the accuracy of RVH criteria, and conflicting results in the literature, may reflect the fact that different pathophysiologic substrates give rise to very different ECG findings. Tall (normal duration) right precordial R waves (as part of R, RS, or qR morphologies) with right axis deviation, as noted above, are most likely to be associated with severe RV pressure overloads due to pulmonic stenosis (and its variants) or pulmonary hypertension from causes other than chronic obstructive pulmonary disease (COPD) (eg, primary pulmonary hypertension or recurrent pulmonary emboli). Pulmonary hypertension due to severe COPD (emphysema) may be associated with very slow R wave progression, delayed precordial transition zone, and right axis deviation. In contrast, RVH due to a classic volume load state (eg, ostium secundum atrial septal defect) may be associated with RV conduction delay and right axis deviation.
+        </p>
+        <p class="headingAnchor" id="H6">
+         <span class="h1">
+          BIVENTRICULAR HYPERTROPHY
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Biventricular hypertrophy is suggested on the ECG if there are voltage criteria for left ventricular hypertrophy, combined with right axis deviation, prominent R wave in V1 to V2, prominent S wave in V5 to V6, tall biphasic R/S complexes, and/or right atrial abnormality (
+         <a class="graphic graphic_waveform graphicRef75570" href="/z/d/graphic/75570.html" rel="external">
+          waveform 7
+         </a>
+         ). In some cases, there will be evidence of left atrial enlargement or tall R wave and deep S waves in V2 to V4 (&gt;60 mm combined) combined with criteria diagnostic of right ventricular hypertrophy, including R/S ratio &gt;1 in V1 to V2 or S/R ratio &gt;1 in V5 to V6, a deep S wave in V5 to V6, or right axis deviation. The latter may also be seen with mitral stenosis.
+        </p>
+        <p class="headingAnchor" id="H6705841">
+         <span class="h1">
+          SUMMARY
+         </span>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         There is no single best ECG criterion for diagnosis of hypertrophy or enlargement of any of the cardiac chambers. Several different sets of criteria have been used with various sensitivities and specificities.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Left atrial abnormality/enlargement is characterized by P waves that are broad and often notched, with an interpeak interval &gt;0.04 s (
+         <a class="graphic graphic_figure graphicRef79437" href="/z/d/graphic/79437.html" rel="external">
+          figure 1
+         </a>
+         and
+         <a class="graphic graphic_waveform graphicRef52162" href="/z/d/graphic/52162.html" rel="external">
+          waveform 1
+         </a>
+         ). The voltage of the terminal portion of the P wave may be increased, especially if there is left atrial enlargement (classical "P mitrale"), reflecting left atrial depolarization. These ECG changes are most apparent in the inferior leads and V1. (See
+         <a class="local">
+          'Left atrial abnormality/enlargement'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Right atrial abnormality/enlargement is characterized by P waves that are relatively narrow but of increased amplitude (classic "P pulmonale") (
+         <a class="graphic graphic_figure graphicRef63181" href="/z/d/graphic/63181.html" rel="external">
+          figure 2
+         </a>
+         and
+         <a class="graphic graphic_waveform graphicRef78126" href="/z/d/graphic/78126.html" rel="external">
+          waveform 4
+         </a>
+         ). (See
+         <a class="local">
+          'Right atrial abnormality/enlargement'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Left ventricular hypertrophy is characterized by the QRS complex having increased amplitude and usually slight widening, reflecting an intraventricular conduction delay (
+         <a class="graphic graphic_waveform graphicRef117850 graphicRef117851" href="/z/d/graphic/117850.html" rel="external">
+          waveform 5A-B
+         </a>
+         ). There are often associated ST segment and T wave abnormalities. Evidence of left atrial abnormality and left axis deviation is commonly seen. (See
+         <a class="local">
+          'Left ventricular hypertrophy'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Right ventricular hypertrophy, especially due to right ventricular pressure loads from pulmonic stenosis or pulmonary hypertension not due to chronic obstructive pulmonary disease, may be characterized by an increase in the amplitude of the R wave and a decrease in the depth of the S wave in the right precordial leads, causing an increase in the R:S ratio (
+         <a class="graphic graphic_waveform graphicRef63763" href="/z/d/graphic/63763.html" rel="external">
+          waveform 6
+         </a>
+         ) usually with a vertical or frankly rightward QRS axis. Evidence of right atrial abnormality may be present. (See
+         <a class="local">
+          'Right ventricular hypertrophy'
+         </a>
+         above.)
+        </p>
+       </div>
+       <div class="headingAnchor" id="references">
+        <ol id="reference">
+         <li>
+          <a class="nounderline abstract_t">
+           Bayés de Luna A, Platonov P, Cosio FG, et al. Interatrial blocks. A separate entity from left atrial enlargement: a consensus report. J Electrocardiol 2012; 45:445.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Magnani JW, Gorodeski EZ, Johnson VM, et al. P wave duration is associated with cardiovascular and all-cause mortality outcomes: the National Health and Nutrition Examination Survey. Heart Rhythm 2011; 8:93.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Hancock EW, Deal BJ, Mirvis DM, et al. AHA/ACCF/HRS recommendations for the standardization and interpretation of the electrocardiogram: part V: electrocardiogram changes associated with cardiac chamber hypertrophy: a scientific statement from the American Heart Association Electrocardiography and Arrhythmias Committee, Council on Clinical Cardiology; the American College of Cardiology Foundation; and the Heart Rhythm Society: endorsed by the International Society for Computerized Electrocardiology. Circulation 2009; 119:e251.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Whitman IR, Patel VV, Soliman EZ, et al. Validity of the surface electrocardiogram criteria for right ventricular hypertrophy: the MESA-RV Study (Multi-Ethnic Study of Atherosclerosis-Right Ventricle). J Am Coll Cardiol 2014; 63:672.
+          </a>
+         </li>
+        </ol>
+       </div>
+       <div id="topicVersionRevision">
+        Topic 2123 Version 22.0
+       </div>
+      </div>
+      <div class="row">
+       <div class="col-12">
+        <h4 style="text-align: center;padding: 20px;color: cadetblue;">
+         References
+        </h4>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/22920783" id="rid0" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          1 : Interatrial blocks. A separate entity from left atrial enlargement: a consensus report.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/20868770" id="rid1" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          2 : P wave duration is associated with cardiovascular and all-cause mortality outcomes: the National Health and Nutrition Examination Survey.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/19228820" id="rid2" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          3 : AHA/ACCF/HRS recommendations for the standardization and interpretation of the electrocardiogram: part V: electrocardiogram changes associated with cardiac chamber hypertrophy: a scientific statement from the American Heart Association Electrocardiography and Arrhythmias Committee, Council on Clinical Cardiology; the American College of Cardiology Foundation; and the Heart Rhythm Society: endorsed by the International Society for Computerized Electrocardiology.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/24080107" id="rid3" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          4 : Validity of the surface electrocardiogram criteria for right ventricular hypertrophy: the MESA-RV Study (Multi-Ethnic Study of Atherosclerosis-Right Ventricle).
+         </p>
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </section>
+  <!-- End Main Menu Area -->
+  <!-- Start Search Popup Area -->
+  <!-- End Footer Area -->
+  <!-- Back to top -->
+  <a class="scrolltop" href="#top">
+   <i class="icofont-hand-drawn-up">
+   </i>
+  </a>
+  <!-- End Back to top -->
+  <!-- jQuery Min JS -->
+  <!-- Prpper JS -->
+  <!-- Bootstrap Min JS -->
+  <!-- Classy Nav Min Js -->
+  <!-- Owl Carousel Min Js -->
+  <!-- Magnific Popup JS -->
+  <!-- CounterUp JS -->
+  <!-- Waypoints JS -->
+  <!-- Form Validator Min JS -->
+  <!-- Contact Form Min JS -->
+  <!-- Main JS -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+ </body>
 </html>

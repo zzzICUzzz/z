@@ -1,394 +1,524 @@
 <!DOCTYPE html>
-
 <html lang="fa">
-<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
-<head><title>Calculator: GRACE score estimate of 6-month mortality following acute coronary syndrome (ACS) in adults</title><link href="/z/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/z/d/css/icofont.min.css" rel="stylesheet"/><link href="/z/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/z/d/css/animate.css" rel="stylesheet"/><link href="/z/d/css/owl.carousel.css" rel="stylesheet"/><link href="/z/d/css/magnific-popup.css" rel="stylesheet"/><link href="/z/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/z/d/css/style.css" rel="stylesheet"/><link href="/z/d/css/rtl_edited.css" rel="stylesheet"/><link href="/z/d/css/responsive.css" rel="stylesheet"/><link href="https:///uptodate_assets/main.css" rel="stylesheet"/>
-<style>
-
-#myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 16px;
-  color: black;
-  display: block
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee;
-}
-
-#searchResult {
-
-  list-style-type: none;
-  padding: 0;
-  padding-right: 20px;
-}
-
-#searchResult li a {
-  border: .5px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #79bc21;
-  padding: 7px;
-  text-decoration: none;
-  font-size: 14px;
-  color: white;
-  display: block
-}
-
-#searchResult li a:hover:not(.header) {
-  background-color: #222;
-}
-
-
-#txtHint   {
-  position: absolute;
-  text-shadow: none;
-  width: 100%;
-  margin-top: -15px;
-  padding-right: 10px;
-
-  filter: alpha(opacity=95);
-  -moz-opacity: 0.95;
-  opacity: 1;
-  z-index: 200;
-}
-.countBubl {
-  background:#eb0029;
-  color:#fff;
-  padding:5px;
-  margin-top: 50%;
-
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
- width: 55%;
- padding-left: 20px;
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
- width: 20%;
-}
- #Uptodate_image {
-      width: 50%;
-  }#uptodate-area {
-      /*z-index: 99;*/
-  }
-#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
- margin-left: 10px;
- margin-bottom: 6%;
-}
-@media (max-width: @screen-xs) {
-    .countBubl {
-        font-size: 4px ;
-    }
-    #uptodate_version {
-        font-size: 4px ;
-    }
-}
-
-@media (max-width: @screen-sm) {
-    .countBubl {
-        font-size: 14px ;
-    }
-}
-@media  all and(max-width: 820) {
-    #Uptodate_image {
-        width: 80% ;
-    }#uptodate-area {
-        z-index: 99;
-    }
-}@media  all and (min-width: 820) and(max-width: 88820){
-    #Uptodate_image {
-        width: 100% !important;
-    }
-    .countBubl {
-        font-size: 4px ;
-    }
-}
-div.col-md-3:nth-child(3) {
- margin-top: 6%;
-}
-
-div.col-md-3:nth-child(3) > img:nth-child(1) {
- width: 100%;
- margin-left: 11px;
-}
-
-</style>
-<style media="screen" type="text/css">
-  .goback {
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    position: fixed;
-    display: none;
-    font-size: 15px;
-    background: #71c0fa;
-    z-index: 1000;
-    text-align: center;
-    color: #ffffff;
-    -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
-    border-radius: 50px;
-    bottom: 3.8%;
-    right: 2%;
-}
-  .buyPackage {
-  width: 100px;
-  height: 100px;
-  line-height: 40px;
-  position: fixed;
-  display: none;
-  font-size: 10px;
-  background: #fa759e;
-  z-index: 1000;
-  text-align: center;
-  color: #ffffff;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  border-radius: 10px;
-  top: 150px;
-  right: 2%;
-  text-align: center;
-}
-.uptodate-area {
-  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-    background-attachment: fixed;
-  position: relative;
-}
-.uptodate-area::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  padding-top: 100px;
-  width: 100%;
-}
-#references{
-  display: none;
-}
-</style>
-<style>
-section.sticky {
-  position: sticky;
-  top: 0;
-  background-color: #fff !important;
-  /*z-index: 100;*/
-  /*padding-top: 80px;*/
-
-}
-.m4inb{
-    border: solid !important;
-  }
-
-  .newsletter-area::before {
-       background: unset !important;
-  }
-p {
-    color: #555;
-}
-</style>
-<meta content="" name="description"/>
-<link href="/z/d/img/favicon.png" rel="icon" type="image/png">
-</link></head>
-<body>
-<!-- Start Main Menu Area -->
-<br/>
-<br/>
-<br/>
-<br/>
-<div class="container">
-<div class="row">
-</div>
-</div>
-<section class="teacher-area ptb-10">
-<div class="container">
-</div>
-<section class="course-details-area ptb-60">
-<div class="container">
-<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-<h1 style="text-align:center">Calculator: GRACE score estimate of 6-month mortality following acute coronary syndrome (ACS) in adults</h1>
-<div class="utdArticleSection" id="topicContentCalculator"><div id="topicText">
-<div id="mc3k">
-<form action="" id="GRACEScore_form" name="GRACEScore_form" onreset="rrclr(); document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
-<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
-<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
-<td align="left" bgcolor="#eeeeee">
-<span class="medCalcFontTitleBox">
-
- 
-Calculator: GRACE score estimate of 6-month mortality following acute coronary syndrome (ACS) in adults
-</span></td></tr></tbody></table><br/> <br/>
-<div id="calc_main">
-<div id="calc_input">
-<center>
-<table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
-<tbody><tr><td colspan="3"><span class="medCalcFontCCTabBold">Age</span></td></tr>
-<tr><td width="20"><br/></td><td colspan="2"> <select aria-label="Use this pull-down selector to choose a value for Age" class="medCalcFontSelect" name="cc1" onchange="GRACEScore_fx();">
-<option value="0">Less than 40 years (0 points)</option>
-<option value="18">40 to 49 years (18 points)</option>
-<option value="36">50 to 59 years (36 points)</option>
-<option value="55">60 to 69 years (55 points)</option>
-<option value="73">70 to 79 years (73 points)</option>
-<option value="91">80 to 89 Years (91 points)</option>
-<option value="100">90 years or more (100 points)</option>
-</select>   </td></tr>
-<tr><td colspan="3"><span class="medCalcFontCCTabBold">Resting heart rate</span></td></tr>
-<tr><td width="20"><br/></td><td colspan="2"> <select aria-label="Use this pull-down selector to choose a value for Resting heart rate" class="medCalcFontSelect" name="cc2" onchange="GRACEScore_fx();">
-<option value="0">Less than 50/min (0 points)</option>
-<option value="3">50 to 69.9/min (3 points)</option>
-<option value="9">70 to 89.9/min (9 points)</option>
-<option value="14">90 to 109.9/min (14 points)</option>
-<option value="23">110 to 149.9/min (23 points)</option>
-<option value="35">150 to 199.9 (35 points)</option>
-<option value="43">200/min or higher (43 points)</option>
-</select>   </td></tr>
-<tr><td colspan="3"><span class="medCalcFontCCTabBold">Systolic blood pressure</span></td></tr>
-<tr><td width="20"><br/></td><td colspan="2"> <select aria-label="Use this pull-down selector to choose a value for Systolic blood pressure" class="medCalcFontSelect" name="cc3" onchange="GRACEScore_fx();">
-<option value="24">79.9 mmHg or less (24 points)</option>
-<option value="22">80 to 99.9 mmHg (22 points)</option>
-<option value="18">100 to 119.9 mmHg (18 points)</option>
-<option value="14">120 to 139.9 mmHg (14 points)</option>
-<option value="10">140 to 159.9 mmHg (10 points)</option>
-<option value="4">160 to 199.9 mmHg (4 points)</option>
-<option value="0">200 mmHg or more (0 points)</option>
-</select>   </td></tr>
-<tr><td colspan="3"><span class="medCalcFontCCTabBold">Initial serum creatinine</span></td></tr>
-<tr><td width="20"><br/></td><td colspan="2"> <select aria-label="Use this pull-down selector to choose a value for Initial serum creatinine" class="medCalcFontSelect" name="cc4" onchange="GRACEScore_fx();">
-<option value="1">0 to 0.39 mg/dL [0 to 34 mcmol/L] (1 point)</option>
-<option value="3">0.4 to 0.79 mg/dL [35 to 70 mcmol/L] (3 points)</option>
-<option value="5">0.8 to 1.19 mg/dL [71 to 105 mcmol/L] (5 points)</option>
-<option value="7">1.2 to 1.59 mg/dL [106 to 141 mcmol/L] (7 points)</option>
-<option value="9">1.6 to 1.99 mg/dL [142 to 176 mcmol/L] (9 points)</option>
-<option value="15">2.0 to 3.99 mg/dL [177 to 353 mcmol/L] (15 points)</option>
-<option value="20">4 mg/dL [354 mcmol/L] or more (20 points)</option>
-</select>   </td></tr>
-<tr><td align="left" colspan="3"><span class="medCalcFontCCTabBold">Other factors</span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right" valign="top"><input aria-label="Check this box to indicate History of heart failure (24 points)" id="togel1" name="cc5" onclick="GRACEScore_fx();" type="checkbox"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="togCB('togel1');">History of heart failure (24 points)</span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right" valign="top"><input aria-label="Check this box to indicate History of myocardial infarction (12 points)" id="togel2" name="cc6" onclick="GRACEScore_fx();" type="checkbox"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="togCB('togel2');">History of myocardial infarction (12 points)</span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right" valign="top"><input aria-label="Check this box to indicate ST segment depression (11 points)" id="togel3" name="cc7" onclick="GRACEScore_fx();" type="checkbox"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="togCB('togel3');">ST segment depression (11 points)</span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right" valign="top"><input aria-label="Check this box to indicate Elevated cardiac enzymes (15 points)" id="togel4" name="cc8" onclick="GRACEScore_fx();" type="checkbox"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="togCB('togel4');">Elevated cardiac enzymes (15 points)</span></td></tr>
-<tr><td width="20"><br/></td>
-<td align="right" valign="top"><input aria-label="Check this box to indicate No in-hospital percutaneous coronary intervention done (14 points)" id="togel5" name="cc9" onclick="GRACEScore_fx();" type="checkbox"/></td>
-<td align="left"><span class="medCalcFontOneClick" onclick="togCB('togel5');">No in-hospital percutaneous coronary intervention done (14 points)</span></td></tr>
-</tbody></table>
-<span class="medCalcFontOne" id="inputchk"><br/> <br/><b>Important:</b> Inputs must be complete to perform calculation. <br/></span>
-</center>
-</div>
-<br/> <br/>
-<div id="calc_result">
-<span class="medCalcFontCCTabBold">
-Total criteria point count:
-</span>
-<input aria-label="This box holds the total criteria point count" aria-readonly="true" name="cctotal" size="6" type="text"/><br/> <br/>
-<center><input name="reset" type="reset" value="Reset form"/> </center>
-<br/> <br/>
-<div aria-label="This table highlights the result 6-month estimated mortality. No result is highlighted" id="rr1_tag" tabindex="0">
-<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
-<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
-<td align="left" bgcolor="#eeeeee">
-<span class="medCalcFontTitleBox">
-
-
-6-month estimated mortality
-</span></td></tr></tbody></table><br/> <br/>
-</div>
-<center>
-<table border="1" cellpadding="4" cellspacing="0" summary="RRTable">
-<tbody><tr id="rr1_1"><td align="right" nowrap="nowrap" style="border-right: 0px;"><span class="medCalcFontOneBold">1 to 69 points:</span></td>
-<td align="left" style="border-left: 0px;"><span class="medCalcFontOne">Less than 1%</span></td></tr>
-<tr id="rr1_2"><td align="right" nowrap="nowrap" style="border-right: 0px;"><span class="medCalcFontOneBold">70 to 90 points:</span></td>
-<td align="left" style="border-left: 0px;"><span class="medCalcFontOne">1 to 2.9%</span></td></tr>
-<tr id="rr1_3"><td align="right" nowrap="nowrap" style="border-right: 0px;"><span class="medCalcFontOneBold">91 to 110 points:</span></td>
-<td align="left" style="border-left: 0px;"><span class="medCalcFontOne">3 to 3.9%</span></td></tr>
-<tr id="rr1_4"><td align="right" nowrap="nowrap" style="border-right: 0px;"><span class="medCalcFontOneBold">111 to 130 points:</span></td>
-<td align="left" style="border-left: 0px;"><span class="medCalcFontOne">4 to 5.9%</span></td></tr>
-<tr id="rr1_5"><td align="right" nowrap="nowrap" style="border-right: 0px;"><span class="medCalcFontOneBold">131 to 150 points:</span></td>
-<td align="left" style="border-left: 0px;"><span class="medCalcFontOne">6 to 11%</span></td></tr>
-<tr id="rr1_6"><td align="right" nowrap="nowrap" style="border-right: 0px;"><span class="medCalcFontOneBold">151 to 170 points:</span></td>
-<td align="left" style="border-left: 0px;"><span class="medCalcFontOne">12 to 19%</span></td></tr>
-<tr id="rr1_7"><td align="right" nowrap="nowrap" style="border-right: 0px;"><span class="medCalcFontOneBold">171 to 190 points:</span></td>
-<td align="left" style="border-left: 0px;"><span class="medCalcFontOne">20 to 33%</span></td></tr>
-<tr id="rr1_8"><td align="right" nowrap="nowrap" style="border-right: 0px;"><span class="medCalcFontOneBold">191 to 263 points:</span></td>
-<td align="left" style="border-left: 0px;"><span class="medCalcFontOne">34 to 54%</span></td></tr>
-</tbody></table>
-</center>
-<br/> <br/>
-</div>
-</div>
-<div id="calc_notes">
-<span class="medCalcFontOneBold">Notes</span>
-<ul class="medCalcFontOne">
-<li>GRACE: Global Registry of Acute Coronary Events.</li>
-</ul>
-</div>
-<br/> <br/>
-<div id="calc_refs">
-<span class="medCalcFontRef"><b>References</b></span>
-<ol>
-<li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/15518464" style="color: green; text-decoration: none;" target="_blank">O'Flaherty M. A bedside prediction tool predicted all-cause mortality 6 months  after discharge for the acute coronary syndrome. ACP J Club 2004; 141:80.</a></span></li>
-<li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/15187054" style="color: green; text-decoration: none;" target="_blank">Eagle KA, Lim MJ, Dabbous OH, et al. A validated prediction model for all forms of acute coronary syndrome: estimating the risk of 6-month postdischarge death in an international registry. JAMA 2004; 291:2727.</a></span></li>
-</ol>
-</div>
-</form>
-</div>
-<span class="calculatorVendorId" id="T1678215870">
-</span></div><div id="printDisclaimer">
-<b>Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.</b>
-<p>
-	Information on this page may not appear correctly if printed. </p>
-</div>
-<div id="disclaimerCalculator">
-<div class="medCalcFontTwo">
-<p class="header">Legal Notices and Disclaimer</p>
-<p>
-			All information contained in and produced by the EBMcalc system is provided
+ <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+ <head>
+  <title>
+   Calculator: GRACE score estimate of 6-month mortality following acute coronary syndrome (ACS) in adults
+  </title>
+  <link href="d/css/1.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!-- Start Main Menu Area -->
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="container">
+   <div class="row">
+   </div>
+  </div>
+  <section class="teacher-area ptb-10">
+   <div class="container">
+   </div>
+   <section class="course-details-area ptb-60">
+    <div class="container">
+     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+      <h1 style="text-align:center">
+       Calculator: GRACE score estimate of 6-month mortality following acute coronary syndrome (ACS) in adults
+      </h1>
+      <div class="utdArticleSection" id="topicContentCalculator">
+       <div id="topicText">
+        <div id="mc3k">
+         <form action="" id="GRACEScore_form" name="GRACEScore_form" onreset="rrclr(); document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
+          <table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+           <tbody>
+            <tr>
+             <td bgcolor="#eeeeee" width="1%">
+              <br/>
+             </td>
+             <td align="left" bgcolor="#eeeeee">
+              <span class="medCalcFontTitleBox">
+               Calculator: GRACE score estimate of 6-month mortality following acute coronary syndrome (ACS) in adults
+              </span>
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <br/>
+          <br/>
+          <div id="calc_main">
+           <div id="calc_input">
+            <center>
+             <table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
+              <tbody>
+               <tr>
+                <td colspan="3">
+                 <span class="medCalcFontCCTabBold">
+                  Age
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td colspan="2">
+                 <select aria-label="Use this pull-down selector to choose a value for Age" class="medCalcFontSelect" name="cc1" onchange="GRACEScore_fx();">
+                  <option value="0">
+                   Less than 40 years (0 points)
+                  </option>
+                  <option value="18">
+                   40 to 49 years (18 points)
+                  </option>
+                  <option value="36">
+                   50 to 59 years (36 points)
+                  </option>
+                  <option value="55">
+                   60 to 69 years (55 points)
+                  </option>
+                  <option value="73">
+                   70 to 79 years (73 points)
+                  </option>
+                  <option value="91">
+                   80 to 89 Years (91 points)
+                  </option>
+                  <option value="100">
+                   90 years or more (100 points)
+                  </option>
+                 </select>
+                </td>
+               </tr>
+               <tr>
+                <td colspan="3">
+                 <span class="medCalcFontCCTabBold">
+                  Resting heart rate
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td colspan="2">
+                 <select aria-label="Use this pull-down selector to choose a value for Resting heart rate" class="medCalcFontSelect" name="cc2" onchange="GRACEScore_fx();">
+                  <option value="0">
+                   Less than 50/min (0 points)
+                  </option>
+                  <option value="3">
+                   50 to 69.9/min (3 points)
+                  </option>
+                  <option value="9">
+                   70 to 89.9/min (9 points)
+                  </option>
+                  <option value="14">
+                   90 to 109.9/min (14 points)
+                  </option>
+                  <option value="23">
+                   110 to 149.9/min (23 points)
+                  </option>
+                  <option value="35">
+                   150 to 199.9 (35 points)
+                  </option>
+                  <option value="43">
+                   200/min or higher (43 points)
+                  </option>
+                 </select>
+                </td>
+               </tr>
+               <tr>
+                <td colspan="3">
+                 <span class="medCalcFontCCTabBold">
+                  Systolic blood pressure
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td colspan="2">
+                 <select aria-label="Use this pull-down selector to choose a value for Systolic blood pressure" class="medCalcFontSelect" name="cc3" onchange="GRACEScore_fx();">
+                  <option value="24">
+                   79.9 mmHg or less (24 points)
+                  </option>
+                  <option value="22">
+                   80 to 99.9 mmHg (22 points)
+                  </option>
+                  <option value="18">
+                   100 to 119.9 mmHg (18 points)
+                  </option>
+                  <option value="14">
+                   120 to 139.9 mmHg (14 points)
+                  </option>
+                  <option value="10">
+                   140 to 159.9 mmHg (10 points)
+                  </option>
+                  <option value="4">
+                   160 to 199.9 mmHg (4 points)
+                  </option>
+                  <option value="0">
+                   200 mmHg or more (0 points)
+                  </option>
+                 </select>
+                </td>
+               </tr>
+               <tr>
+                <td colspan="3">
+                 <span class="medCalcFontCCTabBold">
+                  Initial serum creatinine
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td colspan="2">
+                 <select aria-label="Use this pull-down selector to choose a value for Initial serum creatinine" class="medCalcFontSelect" name="cc4" onchange="GRACEScore_fx();">
+                  <option value="1">
+                   0 to 0.39 mg/dL [0 to 34 mcmol/L] (1 point)
+                  </option>
+                  <option value="3">
+                   0.4 to 0.79 mg/dL [35 to 70 mcmol/L] (3 points)
+                  </option>
+                  <option value="5">
+                   0.8 to 1.19 mg/dL [71 to 105 mcmol/L] (5 points)
+                  </option>
+                  <option value="7">
+                   1.2 to 1.59 mg/dL [106 to 141 mcmol/L] (7 points)
+                  </option>
+                  <option value="9">
+                   1.6 to 1.99 mg/dL [142 to 176 mcmol/L] (9 points)
+                  </option>
+                  <option value="15">
+                   2.0 to 3.99 mg/dL [177 to 353 mcmol/L] (15 points)
+                  </option>
+                  <option value="20">
+                   4 mg/dL [354 mcmol/L] or more (20 points)
+                  </option>
+                 </select>
+                </td>
+               </tr>
+               <tr>
+                <td align="left" colspan="3">
+                 <span class="medCalcFontCCTabBold">
+                  Other factors
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right" valign="top">
+                 <input aria-label="Check this box to indicate History of heart failure (24 points)" id="togel1" name="cc5" onclick="GRACEScore_fx();" type="checkbox"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="togCB('togel1');">
+                  History of heart failure (24 points)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right" valign="top">
+                 <input aria-label="Check this box to indicate History of myocardial infarction (12 points)" id="togel2" name="cc6" onclick="GRACEScore_fx();" type="checkbox"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="togCB('togel2');">
+                  History of myocardial infarction (12 points)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right" valign="top">
+                 <input aria-label="Check this box to indicate ST segment depression (11 points)" id="togel3" name="cc7" onclick="GRACEScore_fx();" type="checkbox"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="togCB('togel3');">
+                  ST segment depression (11 points)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right" valign="top">
+                 <input aria-label="Check this box to indicate Elevated cardiac enzymes (15 points)" id="togel4" name="cc8" onclick="GRACEScore_fx();" type="checkbox"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="togCB('togel4');">
+                  Elevated cardiac enzymes (15 points)
+                 </span>
+                </td>
+               </tr>
+               <tr>
+                <td width="20">
+                 <br/>
+                </td>
+                <td align="right" valign="top">
+                 <input aria-label="Check this box to indicate No in-hospital percutaneous coronary intervention done (14 points)" id="togel5" name="cc9" onclick="GRACEScore_fx();" type="checkbox"/>
+                </td>
+                <td align="left">
+                 <span class="medCalcFontOneClick" onclick="togCB('togel5');">
+                  No in-hospital percutaneous coronary intervention done (14 points)
+                 </span>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+             <span class="medCalcFontOne" id="inputchk">
+              <br/>
+              <br/>
+              <b>
+               Important:
+              </b>
+              Inputs must be complete to perform calculation.
+              <br/>
+             </span>
+            </center>
+           </div>
+           <br/>
+           <br/>
+           <div id="calc_result">
+            <span class="medCalcFontCCTabBold">
+             Total criteria point count:
+            </span>
+            <input aria-label="This box holds the total criteria point count" aria-readonly="true" name="cctotal" size="6" type="text"/>
+            <br/>
+            <br/>
+            <center>
+             <input name="reset" type="reset" value="Reset form"/>
+            </center>
+            <br/>
+            <br/>
+            <div aria-label="This table highlights the result 6-month estimated mortality. No result is highlighted" id="rr1_tag" tabindex="0">
+             <table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+              <tbody>
+               <tr>
+                <td bgcolor="#eeeeee" width="1%">
+                 <br/>
+                </td>
+                <td align="left" bgcolor="#eeeeee">
+                 <span class="medCalcFontTitleBox">
+                  6-month estimated mortality
+                 </span>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+             <br/>
+             <br/>
+            </div>
+            <center>
+             <table border="1" cellpadding="4" cellspacing="0" summary="RRTable">
+              <tbody>
+               <tr id="rr1_1">
+                <td align="right" nowrap="nowrap" style="border-right: 0px;">
+                 <span class="medCalcFontOneBold">
+                  1 to 69 points:
+                 </span>
+                </td>
+                <td align="left" style="border-left: 0px;">
+                 <span class="medCalcFontOne">
+                  Less than 1%
+                 </span>
+                </td>
+               </tr>
+               <tr id="rr1_2">
+                <td align="right" nowrap="nowrap" style="border-right: 0px;">
+                 <span class="medCalcFontOneBold">
+                  70 to 90 points:
+                 </span>
+                </td>
+                <td align="left" style="border-left: 0px;">
+                 <span class="medCalcFontOne">
+                  1 to 2.9%
+                 </span>
+                </td>
+               </tr>
+               <tr id="rr1_3">
+                <td align="right" nowrap="nowrap" style="border-right: 0px;">
+                 <span class="medCalcFontOneBold">
+                  91 to 110 points:
+                 </span>
+                </td>
+                <td align="left" style="border-left: 0px;">
+                 <span class="medCalcFontOne">
+                  3 to 3.9%
+                 </span>
+                </td>
+               </tr>
+               <tr id="rr1_4">
+                <td align="right" nowrap="nowrap" style="border-right: 0px;">
+                 <span class="medCalcFontOneBold">
+                  111 to 130 points:
+                 </span>
+                </td>
+                <td align="left" style="border-left: 0px;">
+                 <span class="medCalcFontOne">
+                  4 to 5.9%
+                 </span>
+                </td>
+               </tr>
+               <tr id="rr1_5">
+                <td align="right" nowrap="nowrap" style="border-right: 0px;">
+                 <span class="medCalcFontOneBold">
+                  131 to 150 points:
+                 </span>
+                </td>
+                <td align="left" style="border-left: 0px;">
+                 <span class="medCalcFontOne">
+                  6 to 11%
+                 </span>
+                </td>
+               </tr>
+               <tr id="rr1_6">
+                <td align="right" nowrap="nowrap" style="border-right: 0px;">
+                 <span class="medCalcFontOneBold">
+                  151 to 170 points:
+                 </span>
+                </td>
+                <td align="left" style="border-left: 0px;">
+                 <span class="medCalcFontOne">
+                  12 to 19%
+                 </span>
+                </td>
+               </tr>
+               <tr id="rr1_7">
+                <td align="right" nowrap="nowrap" style="border-right: 0px;">
+                 <span class="medCalcFontOneBold">
+                  171 to 190 points:
+                 </span>
+                </td>
+                <td align="left" style="border-left: 0px;">
+                 <span class="medCalcFontOne">
+                  20 to 33%
+                 </span>
+                </td>
+               </tr>
+               <tr id="rr1_8">
+                <td align="right" nowrap="nowrap" style="border-right: 0px;">
+                 <span class="medCalcFontOneBold">
+                  191 to 263 points:
+                 </span>
+                </td>
+                <td align="left" style="border-left: 0px;">
+                 <span class="medCalcFontOne">
+                  34 to 54%
+                 </span>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </center>
+            <br/>
+            <br/>
+           </div>
+          </div>
+          <div id="calc_notes">
+           <span class="medCalcFontOneBold">
+            Notes
+           </span>
+           <ul class="medCalcFontOne">
+            <li>
+             GRACE: Global Registry of Acute Coronary Events.
+            </li>
+           </ul>
+          </div>
+          <br/>
+          <br/>
+          <div id="calc_refs">
+           <span class="medCalcFontRef">
+            <b>
+             References
+            </b>
+           </span>
+           <ol>
+            <li>
+             <span class="medCalcFontRef">
+              <a href="https://www.ncbi.nlm.nih.gov/pubmed/15518464" style="color: green; text-decoration: none;" target="_blank">
+               O'Flaherty M. A bedside prediction tool predicted all-cause mortality 6 months  after discharge for the acute coronary syndrome. ACP J Club 2004; 141:80.
+              </a>
+             </span>
+            </li>
+            <li>
+             <span class="medCalcFontRef">
+              <a href="https://www.ncbi.nlm.nih.gov/pubmed/15187054" style="color: green; text-decoration: none;" target="_blank">
+               Eagle KA, Lim MJ, Dabbous OH, et al. A validated prediction model for all forms of acute coronary syndrome: estimating the risk of 6-month postdischarge death in an international registry. JAMA 2004; 291:2727.
+              </a>
+             </span>
+            </li>
+           </ol>
+          </div>
+         </form>
+        </div>
+        <span class="calculatorVendorId" id="T1678215870">
+        </span>
+       </div>
+       <div id="printDisclaimer">
+        <b>
+         Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.
+        </b>
+        <p>
+         Information on this page may not appear correctly if printed.
+        </p>
+       </div>
+       <div id="disclaimerCalculator">
+        <div class="medCalcFontTwo">
+         <p class="header">
+          Legal Notices and Disclaimer
+         </p>
+         <p>
+          All information contained in and produced by the EBMcalc system is provided
 			for educational purposes only. This information should not be used for the diagnosis or treatment
-			of any health problem or disease. 
-			<b>THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.</b>
-<a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">Click here for full notice and disclaimer.</a>
-</p>
-<p class="copy">EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC</p>
-</div>
-</div><div id="topicVersionRevision">Topic 118467 Version 6.0</div></div>
-</div>
-</div>
-</section>
-</section>
-<!-- End Main Menu Area -->
-<!-- Start Search Popup Area -->
-<!-- End Footer Area -->
-<!-- Back to top -->
-<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
-<!-- End Back to top -->
-<!-- jQuery Min JS -->
-<!-- Prpper JS -->
-<!-- Bootstrap Min JS -->
-<!-- Classy Nav Min Js -->
-<!-- Owl Carousel Min Js -->
-<!-- Magnific Popup JS -->
-<!-- CounterUp JS -->
-<!-- Waypoints JS -->
-<!-- Form Validator Min JS -->
-<!-- Contact Form Min JS -->
-<!-- Main JS -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-</body>
+			of any health problem or disease.
+          <b>
+           THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.
+          </b>
+          <a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">
+           Click here for full notice and disclaimer.
+          </a>
+         </p>
+         <p class="copy">
+          EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC
+         </p>
+        </div>
+       </div>
+       <div id="topicVersionRevision">
+        Topic 118467 Version 6.0
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </section>
+  <!-- End Main Menu Area -->
+  <!-- Start Search Popup Area -->
+  <!-- End Footer Area -->
+  <!-- Back to top -->
+  <a class="scrolltop" href="#top">
+   <i class="icofont-hand-drawn-up">
+   </i>
+  </a>
+  <!-- End Back to top -->
+  <!-- jQuery Min JS -->
+  <!-- Prpper JS -->
+  <!-- Bootstrap Min JS -->
+  <!-- Classy Nav Min Js -->
+  <!-- Owl Carousel Min Js -->
+  <!-- Magnific Popup JS -->
+  <!-- CounterUp JS -->
+  <!-- Waypoints JS -->
+  <!-- Form Validator Min JS -->
+  <!-- Contact Form Min JS -->
+  <!-- Main JS -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+ </body>
 </html>

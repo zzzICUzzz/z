@@ -1,284 +1,791 @@
 <!DOCTYPE html>
-
 <html lang="fa">
-<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
-<head><title>Hypothesis testing in clinical research: Proof, p-values, and confidence intervals</title><link href="/z/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/z/d/css/icofont.min.css" rel="stylesheet"/><link href="/z/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/z/d/css/animate.css" rel="stylesheet"/><link href="/z/d/css/owl.carousel.css" rel="stylesheet"/><link href="/z/d/css/magnific-popup.css" rel="stylesheet"/><link href="/z/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/z/d/css/style.css" rel="stylesheet"/><link href="/z/d/css/rtl_edited.css" rel="stylesheet"/><link href="/z/d/css/responsive.css" rel="stylesheet"/><link href="https:///uptodate_assets/main.css" rel="stylesheet"/>
-<style>
-
-#myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 16px;
-  color: black;
-  display: block
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee;
-}
-
-#searchResult {
-
-  list-style-type: none;
-  padding: 0;
-  padding-right: 20px;
-}
-
-#searchResult li a {
-  border: .5px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #79bc21;
-  padding: 7px;
-  text-decoration: none;
-  font-size: 14px;
-  color: white;
-  display: block
-}
-
-#searchResult li a:hover:not(.header) {
-  background-color: #222;
-}
-
-
-#txtHint   {
-  position: absolute;
-  text-shadow: none;
-  width: 100%;
-  margin-top: -15px;
-  padding-right: 10px;
-
-  filter: alpha(opacity=95);
-  -moz-opacity: 0.95;
-  opacity: 1;
-  z-index: 200;
-}
-.countBubl {
-  background:#eb0029;
-  color:#fff;
-  padding:5px;
-  margin-top: 50%;
-
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
- width: 55%;
- padding-left: 20px;
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
- width: 20%;
-}
- #Uptodate_image {
-      width: 50%;
-  }#uptodate-area {
-      /*z-index: 99;*/
-  }
-#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
- margin-left: 10px;
- margin-bottom: 6%;
-}
-@media (max-width: @screen-xs) {
-    .countBubl {
-        font-size: 4px ;
-    }
-    #uptodate_version {
-        font-size: 4px ;
-    }
-}
-
-@media (max-width: @screen-sm) {
-    .countBubl {
-        font-size: 14px ;
-    }
-}
-@media  all and(max-width: 820) {
-    #Uptodate_image {
-        width: 80% ;
-    }#uptodate-area {
-        z-index: 99;
-    }
-}@media  all and (min-width: 820) and(max-width: 88820){
-    #Uptodate_image {
-        width: 100% !important;
-    }
-    .countBubl {
-        font-size: 4px ;
-    }
-}
-div.col-md-3:nth-child(3) {
- margin-top: 6%;
-}
-
-div.col-md-3:nth-child(3) > img:nth-child(1) {
- width: 100%;
- margin-left: 11px;
-}
-
-</style>
-<style media="screen" type="text/css">
-  .goback {
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    position: fixed;
-    display: none;
-    font-size: 15px;
-    background: #71c0fa;
-    z-index: 1000;
-    text-align: center;
-    color: #ffffff;
-    -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
-    border-radius: 50px;
-    bottom: 3.8%;
-    right: 2%;
-}
-  .buyPackage {
-  width: 100px;
-  height: 100px;
-  line-height: 40px;
-  position: fixed;
-  display: none;
-  font-size: 10px;
-  background: #fa759e;
-  z-index: 1000;
-  text-align: center;
-  color: #ffffff;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  border-radius: 10px;
-  top: 150px;
-  right: 2%;
-  text-align: center;
-}
-.uptodate-area {
-  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-    background-attachment: fixed;
-  position: relative;
-}
-.uptodate-area::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  padding-top: 100px;
-  width: 100%;
-}
-#references{
-  display: none;
-}
-</style>
-<style>
-section.sticky {
-  position: sticky;
-  top: 0;
-  background-color: #fff !important;
-  /*z-index: 100;*/
-  /*padding-top: 80px;*/
-
-}
-.m4inb{
-    border: solid !important;
-  }
-
-  .newsletter-area::before {
-       background: unset !important;
-  }
-p {
-    color: #555;
-}
-</style>
-<meta content="" name="description"/>
-<link href="/z/d/img/favicon.png" rel="icon" type="image/png">
-</link></head>
-<body>
-<!-- Start Main Menu Area -->
-<br/>
-<br/>
-<br/>
-<br/>
-<div class="container">
-<div class="row">
-</div>
-</div>
-<section class="teacher-area ptb-10">
-<div class="container">
-</div>
-<section class="course-details-area ptb-60">
-<div class="container">
-<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-<h1 style="text-align:center">Hypothesis testing in clinical research: Proof, p-values, and confidence intervals</h1>
-<div class="utdArticleSection utdStyle" id="topicContent"><div id="topicTitle">Hypothesis testing in clinical research: Proof, p-values, and confidence intervals</div> <div class="authorSectionElem"><div class="authorsElementsLeft"><dl id="topicContributors"><dt><span> </span>Author:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">David M Rind, MD</a></dd><dt><span> </span>Section Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Joann G Elmore, MD, MPH</a></dd><dt><span> </span>Deputy Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Carrie Armsby, MD, MPH</a></dd></dl></div><div class="authorsElementsRight"><div id="literatureReviewDate"><div class="litReviewSingleLine"><bdi><span class="emphasis">Literature review current through:</span> Jan 2024.</bdi></div><div class="litReviewSingleLine"><bdi><span class="emphasis">This topic last updated:</span> Jan 23, 2024.</bdi></div></div></div></div><div id="topicWhatsNewContainer"></div><div id="topicText"><p class="headingAnchor" id="H1"><span class="h1">INTRODUCTION</span><span class="headingEndMark"> — </span>Biostatistical concepts can be confusing to clinicians. The meaning of a p-value in particular is commonly misunderstood and yet is central to the way most clinicians interpret the results of scientific studies [<a href="#rid1">1</a>].</p><p>This topic will review the interpretation of p-values and confidence intervals, the idea of proof, and the concept of statistical power. </p><p>A glossary of these and other biostatistical and epidemiological terms is provided separately. (See  <a class="medical medical_review" href="/z/d/html/2759.html" rel="external">"Glossary of common biostatistical and epidemiological terms"</a>.)</p><p class="headingAnchor" id="H2"><span class="h1">PROOF</span><span class="headingEndMark"> — </span>A common question to be addressed in clinical research, and in scientific research in general, is "what constitutes proof?" How do we decide when the evidence for or against a hypothesis is adequate to consider the matter proven?</p><p>Certain clinical research methodologies are considered "higher quality" than other methodologies. For instance, randomized clinical trials are generally considered better evidence than case-control studies. (See  <a class="medical medical_review" href="/z/d/html/2763.html" rel="external">"Evidence-based medicine", section on 'Categories of evidence'</a>.)</p><p>Proof, however, never exists in a single trial result or a single piece of evidence. Proof is a human concept having to do with the rational thought process. Information may be sufficient to allow one person to consider something proven, whereas another may not.</p><p>As an example, there are no clinical trials demonstrating that cigarette smoking causes lung cancer in humans. However, evidence from epidemiologic studies overwhelmingly shows a relationship between smoking and lung cancer. A dose-response relationship in these studies and evidence from animal studies provide strong support for a causal relationship (ie, smoking is not just associated with lung cancer but it causes lung cancer). Most people consider it proven that smoking causes lung cancer despite the absence of clinical trials in humans.</p><p>In contrast, there are claims of certain homeopathic preparations (essentially extremely diluted preparations that on average will have very little of the original "therapeutic" substance remaining) having "proven" efficacy because a randomized clinical trial achieved a p-value of &lt;0.05 (see <a class="local">'P-values'</a> below). However, a much higher statistical standard of proof may be appropriate for such claims given the implausibility of the underlying hypothesis.</p><p>Thus, when discussing whether an issue in medicine has been proven, disproven, or remains uncertain, it is important to remember that no single statistic or value will provide the answer.</p><p>In the practice of evidence-based medicine, assessing the certainty or validity of a body of evidence also involves addressing questions about the internal validity (Could the study's findings be biased or confounded?) and external validity (Do the results apply to my patients?). This is discussed separately. (See  <a class="medical medical_review" href="/z/d/html/2763.html" rel="external">"Evidence-based medicine", section on 'Assessing the validity of the evidence'</a>.)</p><p class="headingAnchor" id="H3"><span class="h1">STATISTICAL TESTS AND THE NULL HYPOTHESIS</span></p><p class="headingAnchor" id="H4"><span class="h2">Samples</span><span class="headingEndMark"> — </span>Statistical testing is performed to assess how likely it is that the findings in the study are different from what would be expected by chance or random variation in sampling. Because of random variation, a sample is likely to differ in various ways from the population from which it was selected. Statistical testing is used to estimate the effects of random variation in samples and to predict how likely it is that the results in the sample accurately reflect what would be seen in the entire population. In general, the size of the sample, but not the size of the population, matters when considering random variation.</p><p>As an example, if three people are randomly selected from a population of 1000 and given a drug for high blood pressure, the results in those three people are unlikely to accurately reflect what would be seen in the entire population. By contrast, if 500 people were randomly selected, the results would be expected to more accurately reflect the underlying population.</p><p class="headingAnchor" id="H5"><span class="h2">Null hypothesis</span><span class="headingEndMark"> — </span>The null hypothesis proposes that there is no association between the exposure or intervention that is being studied and the outcome of interest. When statistical tests are used in research, it is generally to decide whether to reject the null hypothesis. Thus, if a certain level of statistical significance is reached, the null hypothesis will be rejected (ie, the study will conclude that there is an association). Otherwise, the null hypothesis will not be rejected. (See <a class="local">'P-values'</a> below and <a class="local">'Statistical significance'</a> below.)</p><p>As an example, consider a clinical trial studying the effect of beta blockade on mortality in patients with heart failure. The null hypothesis would be that the effect of beta blockade is not different from placebo. Even if beta blockers really have no effect on mortality, the mortality rates in patients receiving beta blockers will likely not be exactly the same as in patients receiving placebo due to random variation in the study population. Thus, some method is needed to decide how different is "different enough" to reject this null hypothesis and conclude that beta blockade has an effect. Statistical tests are used for this purpose.</p><p class="headingAnchor" id="H2749915738"><span class="h1">INFORMATION PROVIDED BY STATISTICAL TESTS</span><span class="headingEndMark"> — </span>Once data are gathered from a study, statistical tests are performed on the results. Statistical tests pool the data and assess the probability that the findings would have occurred given some assumptions about the underlying population being studied. </p><p>Statistical tests calculate many different values that are used for interpreting the data. Some of these statistics are purely descriptive (eg, mean age of the cohort). However, hypothesis testing requires making comparisons (eg, was the mortality rate in treated patients different from that of the control group?). </p><p>For comparative data, three key pieces of information provided by statistical tests include:</p><p class="bulletIndent1"><span class="glyph">●</span>The effect estimate (see <a class="local">'Effect estimates'</a> below)</p><p class="bulletIndent1"><span class="glyph">●</span>The confidence interval (see <a class="local">'Confidence intervals'</a> below)</p><p class="bulletIndent1"><span class="glyph">●</span>The p-value (see <a class="local">'P-values'</a> below)</p><p></p><p class="headingAnchor" id="H3495737760"><span class="h2">Effect estimates</span><span class="headingEndMark"> — </span>The effect estimate conveys the magnitude of the association between the exposure (or treatment) and the outcome of interest. In studies investigating treatments, this is often referred to as the treatment effect or treatment effect size. Effect estimates measure the magnitude of the difference in outcomes between two groups (eg, patient who received the treatment versus the control group). This can be expressed as a relative difference (eg, relative risk [RR], odds ratio [OR], hazard ratio [HR]) or absolute difference. These terms are discussed in greater detail separately. (See  <a class="medical medical_review" href="/z/d/html/2759.html" rel="external">"Glossary of common biostatistical and epidemiological terms", section on 'Terms used to describe the magnitude of an effect'</a>.)</p><p class="headingAnchor" id="H8"><span class="h2">Confidence intervals</span><span class="headingEndMark"> — </span>Confidence intervals (CIs) convey the range of values that could be considered reasonably likely based upon statistical testing. </p><p>The most commonly reported interval is the 95% CI. The CI and the p-value are related; the narrower the CI, the smaller the p-value. A finding is generally considered statistically significant if the 95% CI excludes the null value (ie, for RR, if the 95% CI does not include 1.0; for absolute risk difference, if the 95% CI does not include 0). However, the threshold used to determine statistical significance is somewhat arbitrary, as discussed below. (See <a class="local">'Thresholds for statistical significance'</a> below.)</p><p>Despite its name, the CI cannot be used to directly infer how confident one should be in the result. Consider a clinical trial that finds lower mortality in patients treated with beta blockers compared with placebo, with a RR of 0.75 and 95% CI 0.7-0.8. This does <strong>not</strong> mean that there is only a 5 percent chance that the real RR is below 0.7 or above 0.8. Instead, it means that in correctly performed studies, we would expect the CI to surround the true value for the RR 95 percent of the time. The difference between these two views is that the actual likelihood that the RR is between 0.7 and 0.8 depends upon the prior likelihood (before the study was performed) that the RR was in that range. If it were very unlikely prior to the study, then the likelihood after the study would not be 95 percent despite the apparent meaning of the term "confidence interval."</p><p>However, because it may be very difficult to know the prior probability, CIs are often interpreted as representing a range of believable values. This is particularly useful in deciding whether a study had an adequate number of patients (ie, whether there was adequate power). (See <a class="local">'Power'</a> below.) </p><p>Using the same example as above, if the trial found that the RR was 0.75 with 95% CI 0.5-1.12, the study might have been reported as "negative," when in reality, the study was simply too small to answer the clinical question. A 50 percent relative reduction in mortality would clearly be clinically meaningful, and a 12 percent relative increase in mortality would likely also be meaningful. If, instead, the trial found a RR of 0.99 with 95% CI 0.97-1.01, it would be appropriate to conclude that there was little to no effect on mortality.</p><p>The interpretation of confidence intervals, like the interpretation of p-values, should ideally consider the totality of evidence for or against a hypothesis.</p><p class="headingAnchor" id="H3635044518"><span class="h2">P-values</span><span class="headingEndMark"> — </span>A simplistic view of the p-value is to think of it as the probability that the observed result could have occurred by chance alone (ie, due to random variation in the sample). More accurately, it is the probability that if the null hypothesis were true (see <a class="local">'Null hypothesis'</a> above), and assuming the results were not affected by bias or confounding, that a result as extreme or more extreme than the one seen in the study would have been observed. The p-value is <strong>not</strong> the probability that the result of the study is true or false. </p><p>In most studies, a threshold of p &lt;0.05 is chosen as the threshold for claiming a "statistically significant" finding. However, the threshold is somewhat arbitrary, as discussed below. (See <a class="local">'Statistical significance'</a> below.)</p><p>As an example, consider a hypothetical clinical trial comparing beta blockers to placebo in patients with heart failure. If the trial is methodologically high-quality (ie, low risk of bias and confounding) and finds that mortality is lower in the beta blocker group with a RR of 0.75 and p-value of 0.03, this means that if beta blockers truly had no effect, we would have expected to see a RR ≤0.75 only 3 percent of the time. </p><p>Importantly, the p-value says nothing directly about the probabilities that we are most interested in: The probability that beta blockers actually work or the probability that the RR is truly 0.75. These probabilities are not knowable from a single study. If the prior probability (the probability before the study was performed) that beta blockers affect mortality was very low, then even after the study was performed and resulted in a p-value of 0.03, the likelihood that beta blockers affect mortality would be much lower than 97 percent. In contrast, if the prior probability was very high (eg, because of evidence from other studies), then the probability that beta blockers affect mortality after the above study was performed would be higher than 97 percent.</p><p>It is sometimes assumed that if the p-value is very low (&lt;0.005), there is a high likelihood that the finding would be confirmed subsequent studies (ie, that there is a high "replication probability"). However, this may not be the case. In an analysis of &gt;23,000 clinical trials in the Cochrane Database of Systematic Reviews, trials with an initial p-value between 0.001 and 0.005 had only a 60 percent chance of yielding a subsequent p-value &lt;0.05 upon attempted replication [<a href="#rid2">2</a>].</p><p class="headingAnchor" id="H2762468329"><span class="h1">INTERPRETATION</span></p><p class="headingAnchor" id="H3473084854"><span class="h2">Explanation for the results of a study</span><span class="headingEndMark"> — </span>There are four possible explanations for findings in clinical research (regardless of whether the study has a positive or negative result):</p><p class="bulletIndent1"><span class="glyph">●</span>Truth – The findings in the study may accurately reflect the answer to the underlying question that was being asked.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Bias – There may be one or more errors in the way the study was performed that distort the results and affect the findings.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Confounding – There may be one or more variables that are associated both with the exposure being studied and also with the outcome of interest that affect the results of the study. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Chance – Random variations that occurred within the sample of the population being studied may lead to erroneous conclusions. If random chance leads to a mistaken conclusion that there was an effect, the mistake is called a type 1 error (alpha error); if random chance leads to a mistaken conclusion that there was no effect, the mistake is called a type 2 error (beta error). (See  <a class="medical medical_review" href="/z/d/html/2759.html" rel="external">"Glossary of common biostatistical and epidemiological terms", section on 'Errors'</a>.)</p><p></p><p>Of these four explanations, statistical tests that yield p-values and confidence intervals (CIs) only address the final one (ie, whether chance could explain the findings). P-values and CIs do <strong>not</strong> help in determining whether the study's finding represent the truth nor whether the study has problematic bias or confounding.</p><p class="headingAnchor" id="H9"><span class="h2">Statistical significance</span></p><p class="headingAnchor" id="H2438625033"><span class="h3">Thresholds for statistical significance</span><span class="headingEndMark"> — </span>The choice of a specific threshold for a p-value or degree of confidence for a confidence interval is arbitrary. In most studies, a threshold of p &lt;0.05 (and the corresponding 95% CI) is chosen as the threshold for claiming a "statistically significant" finding. But there is no particular reason why a p-value of 0.02 (and a corresponding 98% CI) isn't the standard for calling a result "statistically significant."</p><p>There is debate as to what the most appropriate threshold is for defining statistical significance in clinical research [<a href="#rid3">3-6</a>]. Some experts favor a more restrictive threshold (eg, p &lt;0.005), whereas other experts advocate for de-emphasizing or abandoning the p-value altogether. </p><p>Although the choice of the threshold is arbitrary, it is important to set a threshold of statistical significance when testing hypotheses. This allows us to know what percentage of "statistically significant" findings are likely false-positives (ie, type I error or alpha error). Since the usual threshold for statistical significance is a p-value of &lt;0.05, this means that approximately 5 percent of all "statistically significant" findings could have resulted from chance alone. (See  <a class="medical medical_review" href="/z/d/html/2759.html" rel="external">"Glossary of common biostatistical and epidemiological terms", section on 'Errors'</a>.)</p><p>A result with a p-value of 0.001 is less likely to be due to chance (all other things being equal) than one with a p-value of 0.05, and a result with a p-value of 0.06 is only slightly more likely to be due to chance than one with a p-value of 0.05. However, we generally do not interpret p-values on a scale. If we try to use these values in any way other than as falling on one side or the other of a threshold (arbitrarily p = 0.05), we will no longer be able to say with certainty what percentage of "statistically significant" results were really the result of type 1 error.</p><p class="headingAnchor" id="H977882525"><span class="h3">Misconceptions about statistical significance</span><span class="headingEndMark"> — </span>Common misconceptions about statistical significance include:</p><p class="bulletIndent1"><span class="glyph">●</span>A statistically significant result (eg, p-value &lt;0.05) means the study's finding is true. As discussed above, p-values cannot answer the question of whether a finding is true or false. Rather, they assess how likely it would be to observe the result (or a more extreme result) if there truly were no difference. (See <a class="local">'P-values'</a> above.) </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>A statistically significant result (eg, p-value &lt;0.05) means the study's finding is clinically important or meaningful. This is not true. There are many examples of reports of statistically significant findings that are of questionable clinical significance. For example, a trial may find that systolic blood pressure in treated patients was on average 1 mmHg lower than in the control group. If the study is large enough, the finding might reach statistical significance. However, it likely has no clinical significance.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>The smaller the p-value, the more meaningful the finding is. This claim is similar to the previous misconception, and it is similarly incorrect. The p-value says nothing about the clinical importance of the finding or magnitude of the effect. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Lack of statistical significance (eg, p-value &gt;0.05) means that there is no difference or no effect. This is a very common misinterpretation of p-values and statistical significance. Failure to detect a difference is <strong>not</strong> the same as demonstrating no difference. In fact, it is very difficult for a study to confidently demonstrate that there is no difference. Consider a trial investigating the effect of beta blockers on mortality in patients with heart failure. If the relative risk (RR) were 0.75 with 95% CI 0.6-1.01 and p-value 0.06, it would not be appropriate to conclude that beta blockers have no effect on mortality. In fact, based on these data, it seems plausible that beta blockers may have an effect, and if the trial had been larger, it may have detected a statistically significant difference (see <a class="local">'Power'</a> below). On the other hand, if the RR were 0.99 with 95% CI 0.97-1.02 and p-value 0.8, it might be reasonable to conclude from the study that there is little to no effect, though this conclusion should ideally be based upon consideration of the totality of evidence, not just a single trial.</p><p></p><p class="headingAnchor" id="H10"><span class="h2">Power</span><span class="headingEndMark"> — </span>Power is the statistical probability of avoiding a type 2 error in a study. That is, it is the probability that a study will not mistakenly accept the null hypothesis and conclude that there was no effect or difference when there really was one. (See  <a class="medical medical_review" href="/z/d/html/2759.html" rel="external">"Glossary of common biostatistical and epidemiological terms", section on 'Errors'</a>.) </p><p>If a study fails to detect a statistically significant difference, it is reasonable to ask whether there was "adequate power." In other words, one possible explanation for the result is that a small sample size and/or random chance may have led to a failure to detect a difference that really existed. This issue is particularly pressing when the effect estimate in the study appears clinically important. In the above hypothetical study, a relative risk for mortality of 0.75 with a 95% CI of 0.50-1.12 would not be statistically significant; however, the point estimate of a 25 percent reduction in mortality would clearly be clinically meaningful if true.</p><p>It is possible to calculate the power a study has to find a given result (for instance, a 25 percent reduction in mortality) given a particular sample size (and also given the underlying variation in the population). Power calculations are useful in the design of studies to decide whether a study is large enough to have a reasonable chance of finding a positive result or to calculate the number of patients required to achieve a certain power.</p><p>However, when studies try to address the issue of whether there was "adequate power" after a negative study result by performing a power calculation using the effect estimate found in the study, the result is meaningless. The power in such a calculation will <strong>always</strong> be less than 50 percent [<a href="#rid7">7</a>]. Instead, as discussed above, the way to decide after the fact whether a nonsignificant finding had sufficient power is to look at the 95% CI and see whether clinically important values exist within the range of the statistically likely values represented by the CI. (See <a class="local">'Confidence intervals'</a> above.)</p><p class="headingAnchor" id="H11"><span class="h1">SUMMARY</span></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Proof</strong> – Proof is a human concept and never comes from a single piece of evidence or a statistical test. (See <a class="local">'Proof'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Statistical testing</strong> – In comparative studies that involve hypothesis testing, three key pieces of information are provided by statistical testing:</p><p></p><p class="bulletIndent2"><span class="glyph">•</span><strong>The effect estimate</strong> – Effect estimates measure the magnitude of the difference between outcomes for two groups (eg, patients who received the treatment of interest versus the control group). This can be expressed as a relative difference (eg, relative risk [RR], odds ratio [OR], hazard ratio [HR]) or absolute difference. (See <a class="local">'Effect estimates'</a> above and  <a class="medical medical_review" href="/z/d/html/2759.html" rel="external">"Glossary of common biostatistical and epidemiological terms", section on 'Terms used to describe the magnitude of an effect'</a>.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span><strong>Confidence interval</strong> – The confidence interval (CI) conveys the range of values that could be considered reasonably likely based upon statistical testing. (See <a class="local">'Confidence intervals'</a> above.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span><strong>The p-value</strong> – The p-value conveys how likely it would be to observe the result (or a more extreme result) if there truly were no difference. It is <strong>not</strong> the probability that the result of the study is true or false. (See <a class="local">'P-values'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Possible explanations for study findings</strong> – Possible explanations for the observed result in a study are (see <a class="local">'Explanation for the results of a study'</a> above): </p><p></p><p class="bulletIndent2"><span class="glyph">•</span>Truth</p><p class="bulletIndent2"><span class="glyph">•</span>Bias</p><p class="bulletIndent2"><span class="glyph">•</span>Confounding</p><p class="bulletIndent2"><span class="glyph">•</span>Chance</p><p></p><p class="bulletIndent1">Statistical tests that yield p-values and CIs only address the last of these (ie, whether chance could explain the finding). </p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Statistical significance</strong> – The choice of a specific threshold for a p-value or degree of confidence for a CI is arbitrary. In most studies, a threshold of p &lt;0.05 (and the corresponding 95% CI) is chosen as the threshold for claiming a "statistically significant" finding. (See <a class="local">'Statistical significance'</a> above.)</p><p></p><p class="bulletIndent1">A statistically significant result (eg, p-value &lt;0.05) does <strong>not</strong> mean the study's finding is true nor that the finding is clinically meaningful. Similarly, lack of statistical significance (eg, p-value &gt;0.05) does <strong>not</strong> mean that there is no effect. If a study fails to detect a statistically significant difference, one possible explanation is small sample size (inadequate power). The way to determine whether a nonsignificant finding had sufficient power is to look at the 95% CI. (See <a class="local">'Misconceptions about statistical significance'</a> above and <a class="local">'Power'</a> above.)</p><p></p></div><div class="headingAnchor" id="references"><ol id="reference"><li><a class="nounderline abstract_t">Greenland S, Senn SJ, Rothman KJ, et al. Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations. Eur J Epidemiol 2016; 31:337.</a></li><li><a class="nounderline abstract_t">van Zwet E, Gelma A, Greenland S, et al. A New Look at P Values for Randomized Clinical Trials. NEJM Evid 2023; 3:1.</a></li><li><a class="nounderline abstract_t">Wayant C, Scott J, Vassar M. Evaluation of Lowering the P Value Threshold for Statistical Significance From .05 to .005 in Previously Published Randomized Clinical Trials in Major Medical Journals. JAMA 2018; 320:1813.</a></li><li><a class="nounderline abstract_t">Ioannidis JPA. The Proposal to Lower P Value Thresholds to .005. JAMA 2018; 319:1429.</a></li><li><a class="nounderline abstract_t">Benjamin DJ, Berger JO, Johannesson M, et al. Redefine statistical significance. Nat Hum Behav 2018; 2:6.</a></li><li><a class="nounderline abstract_t">Li G, Walter SD, Thabane L. Shifting the focus away from binary thinking of statistical significance and towards education for key stakeholders: revisiting the debate on whether it's time to de-emphasize or get rid of statistical significance. J Clin Epidemiol 2021; 137:104.</a></li><li><a class="nounderline abstract_t">Goodman SN, Berlin JA. The use of predicted confidence intervals when planning experiments and the misuse of power when interpreting results. Ann Intern Med 1994; 121:200.</a></li></ol></div><div id="topicVersionRevision">Topic 2777 Version 20.0</div></div>
-<div class="row">
-<div class="col-12">
-<h4 style="text-align: center;padding: 20px;color: cadetblue;">References</h4>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/27209009" id="rid0" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>1 : Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/" id="rid1" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>2 : A New Look at P Values for Randomized Clinical Trials</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/30398593" id="rid2" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>3 : Evaluation of Lowering the P Value Threshold for Statistical Significance From .05 to .005 in Previously Published Randomized Clinical Trials in Major Medical Journals.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/29566133" id="rid3" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>4 : The Proposal to Lower P Value Thresholds to .005.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/30980045" id="rid4" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>5 : Redefine statistical significance.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/33839240" id="rid5" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>6 : Shifting the focus away from binary thinking of statistical significance and towards education for key stakeholders: revisiting the debate on whether it's time to de-emphasize or get rid of statistical significance.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/8017747" id="rid6" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>7 : The use of predicted confidence intervals when planning experiments and the misuse of power when interpreting results.</p>
-</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-</section>
-<!-- End Main Menu Area -->
-<!-- Start Search Popup Area -->
-<!-- End Footer Area -->
-<!-- Back to top -->
-<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
-<!-- End Back to top -->
-<!-- jQuery Min JS -->
-<!-- Prpper JS -->
-<!-- Bootstrap Min JS -->
-<!-- Classy Nav Min Js -->
-<!-- Owl Carousel Min Js -->
-<!-- Magnific Popup JS -->
-<!-- CounterUp JS -->
-<!-- Waypoints JS -->
-<!-- Form Validator Min JS -->
-<!-- Contact Form Min JS -->
-<!-- Main JS -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-</body>
+ <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+ <head>
+  <title>
+   Hypothesis testing in clinical research: Proof, p-values, and confidence intervals
+  </title>
+  <link href="d/css/1.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!-- Start Main Menu Area -->
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="container">
+   <div class="row">
+   </div>
+  </div>
+  <section class="teacher-area ptb-10">
+   <div class="container">
+   </div>
+   <section class="course-details-area ptb-60">
+    <div class="container">
+     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+      <h1 style="text-align:center">
+       Hypothesis testing in clinical research: Proof, p-values, and confidence intervals
+      </h1>
+      <div class="utdArticleSection utdStyle" id="topicContent">
+       <div id="topicTitle">
+        Hypothesis testing in clinical research: Proof, p-values, and confidence intervals
+       </div>
+       <div class="authorSectionElem">
+        <div class="authorsElementsLeft">
+         <dl id="topicContributors">
+          <dt>
+           <span>
+           </span>
+           Author:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            David M Rind, MD
+           </a>
+          </dd>
+          <dt>
+           <span>
+           </span>
+           Section Editor:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Joann G Elmore, MD, MPH
+           </a>
+          </dd>
+          <dt>
+           <span>
+           </span>
+           Deputy Editor:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Carrie Armsby, MD, MPH
+           </a>
+          </dd>
+         </dl>
+        </div>
+        <div class="authorsElementsRight">
+         <div id="literatureReviewDate">
+          <div class="litReviewSingleLine">
+           <bdi>
+            <span class="emphasis">
+             Literature review current through:
+            </span>
+            Jan 2024.
+           </bdi>
+          </div>
+          <div class="litReviewSingleLine">
+           <bdi>
+            <span class="emphasis">
+             This topic last updated:
+            </span>
+            Jan 23, 2024.
+           </bdi>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div id="topicWhatsNewContainer">
+       </div>
+       <div id="topicText">
+        <p class="headingAnchor" id="H1">
+         <span class="h1">
+          INTRODUCTION
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Biostatistical concepts can be confusing to clinicians. The meaning of a p-value in particular is commonly misunderstood and yet is central to the way most clinicians interpret the results of scientific studies [
+         <a href="#rid1">
+          1
+         </a>
+         ].
+        </p>
+        <p>
+         This topic will review the interpretation of p-values and confidence intervals, the idea of proof, and the concept of statistical power.
+        </p>
+        <p>
+         A glossary of these and other biostatistical and epidemiological terms is provided separately. (See
+         <a class="medical medical_review" href="/z/d/html/2759.html" rel="external">
+          "Glossary of common biostatistical and epidemiological terms"
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H2">
+         <span class="h1">
+          PROOF
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         A common question to be addressed in clinical research, and in scientific research in general, is "what constitutes proof?" How do we decide when the evidence for or against a hypothesis is adequate to consider the matter proven?
+        </p>
+        <p>
+         Certain clinical research methodologies are considered "higher quality" than other methodologies. For instance, randomized clinical trials are generally considered better evidence than case-control studies. (See
+         <a class="medical medical_review" href="/z/d/html/2763.html" rel="external">
+          "Evidence-based medicine", section on 'Categories of evidence'
+         </a>
+         .)
+        </p>
+        <p>
+         Proof, however, never exists in a single trial result or a single piece of evidence. Proof is a human concept having to do with the rational thought process. Information may be sufficient to allow one person to consider something proven, whereas another may not.
+        </p>
+        <p>
+         As an example, there are no clinical trials demonstrating that cigarette smoking causes lung cancer in humans. However, evidence from epidemiologic studies overwhelmingly shows a relationship between smoking and lung cancer. A dose-response relationship in these studies and evidence from animal studies provide strong support for a causal relationship (ie, smoking is not just associated with lung cancer but it causes lung cancer). Most people consider it proven that smoking causes lung cancer despite the absence of clinical trials in humans.
+        </p>
+        <p>
+         In contrast, there are claims of certain homeopathic preparations (essentially extremely diluted preparations that on average will have very little of the original "therapeutic" substance remaining) having "proven" efficacy because a randomized clinical trial achieved a p-value of &lt;0.05 (see
+         <a class="local">
+          'P-values'
+         </a>
+         below). However, a much higher statistical standard of proof may be appropriate for such claims given the implausibility of the underlying hypothesis.
+        </p>
+        <p>
+         Thus, when discussing whether an issue in medicine has been proven, disproven, or remains uncertain, it is important to remember that no single statistic or value will provide the answer.
+        </p>
+        <p>
+         In the practice of evidence-based medicine, assessing the certainty or validity of a body of evidence also involves addressing questions about the internal validity (Could the study's findings be biased or confounded?) and external validity (Do the results apply to my patients?). This is discussed separately. (See
+         <a class="medical medical_review" href="/z/d/html/2763.html" rel="external">
+          "Evidence-based medicine", section on 'Assessing the validity of the evidence'
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H3">
+         <span class="h1">
+          STATISTICAL TESTS AND THE NULL HYPOTHESIS
+         </span>
+        </p>
+        <p class="headingAnchor" id="H4">
+         <span class="h2">
+          Samples
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Statistical testing is performed to assess how likely it is that the findings in the study are different from what would be expected by chance or random variation in sampling. Because of random variation, a sample is likely to differ in various ways from the population from which it was selected. Statistical testing is used to estimate the effects of random variation in samples and to predict how likely it is that the results in the sample accurately reflect what would be seen in the entire population. In general, the size of the sample, but not the size of the population, matters when considering random variation.
+        </p>
+        <p>
+         As an example, if three people are randomly selected from a population of 1000 and given a drug for high blood pressure, the results in those three people are unlikely to accurately reflect what would be seen in the entire population. By contrast, if 500 people were randomly selected, the results would be expected to more accurately reflect the underlying population.
+        </p>
+        <p class="headingAnchor" id="H5">
+         <span class="h2">
+          Null hypothesis
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The null hypothesis proposes that there is no association between the exposure or intervention that is being studied and the outcome of interest. When statistical tests are used in research, it is generally to decide whether to reject the null hypothesis. Thus, if a certain level of statistical significance is reached, the null hypothesis will be rejected (ie, the study will conclude that there is an association). Otherwise, the null hypothesis will not be rejected. (See
+         <a class="local">
+          'P-values'
+         </a>
+         below and
+         <a class="local">
+          'Statistical significance'
+         </a>
+         below.)
+        </p>
+        <p>
+         As an example, consider a clinical trial studying the effect of beta blockade on mortality in patients with heart failure. The null hypothesis would be that the effect of beta blockade is not different from placebo. Even if beta blockers really have no effect on mortality, the mortality rates in patients receiving beta blockers will likely not be exactly the same as in patients receiving placebo due to random variation in the study population. Thus, some method is needed to decide how different is "different enough" to reject this null hypothesis and conclude that beta blockade has an effect. Statistical tests are used for this purpose.
+        </p>
+        <p class="headingAnchor" id="H2749915738">
+         <span class="h1">
+          INFORMATION PROVIDED BY STATISTICAL TESTS
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Once data are gathered from a study, statistical tests are performed on the results. Statistical tests pool the data and assess the probability that the findings would have occurred given some assumptions about the underlying population being studied.
+        </p>
+        <p>
+         Statistical tests calculate many different values that are used for interpreting the data. Some of these statistics are purely descriptive (eg, mean age of the cohort). However, hypothesis testing requires making comparisons (eg, was the mortality rate in treated patients different from that of the control group?).
+        </p>
+        <p>
+         For comparative data, three key pieces of information provided by statistical tests include:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         The effect estimate (see
+         <a class="local">
+          'Effect estimates'
+         </a>
+         below)
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         The confidence interval (see
+         <a class="local">
+          'Confidence intervals'
+         </a>
+         below)
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         The p-value (see
+         <a class="local">
+          'P-values'
+         </a>
+         below)
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H3495737760">
+         <span class="h2">
+          Effect estimates
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The effect estimate conveys the magnitude of the association between the exposure (or treatment) and the outcome of interest. In studies investigating treatments, this is often referred to as the treatment effect or treatment effect size. Effect estimates measure the magnitude of the difference in outcomes between two groups (eg, patient who received the treatment versus the control group). This can be expressed as a relative difference (eg, relative risk [RR], odds ratio [OR], hazard ratio [HR]) or absolute difference. These terms are discussed in greater detail separately. (See
+         <a class="medical medical_review" href="/z/d/html/2759.html" rel="external">
+          "Glossary of common biostatistical and epidemiological terms", section on 'Terms used to describe the magnitude of an effect'
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H8">
+         <span class="h2">
+          Confidence intervals
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Confidence intervals (CIs) convey the range of values that could be considered reasonably likely based upon statistical testing.
+        </p>
+        <p>
+         The most commonly reported interval is the 95% CI. The CI and the p-value are related; the narrower the CI, the smaller the p-value. A finding is generally considered statistically significant if the 95% CI excludes the null value (ie, for RR, if the 95% CI does not include 1.0; for absolute risk difference, if the 95% CI does not include 0). However, the threshold used to determine statistical significance is somewhat arbitrary, as discussed below. (See
+         <a class="local">
+          'Thresholds for statistical significance'
+         </a>
+         below.)
+        </p>
+        <p>
+         Despite its name, the CI cannot be used to directly infer how confident one should be in the result. Consider a clinical trial that finds lower mortality in patients treated with beta blockers compared with placebo, with a RR of 0.75 and 95% CI 0.7-0.8. This does
+         <strong>
+          not
+         </strong>
+         mean that there is only a 5 percent chance that the real RR is below 0.7 or above 0.8. Instead, it means that in correctly performed studies, we would expect the CI to surround the true value for the RR 95 percent of the time. The difference between these two views is that the actual likelihood that the RR is between 0.7 and 0.8 depends upon the prior likelihood (before the study was performed) that the RR was in that range. If it were very unlikely prior to the study, then the likelihood after the study would not be 95 percent despite the apparent meaning of the term "confidence interval."
+        </p>
+        <p>
+         However, because it may be very difficult to know the prior probability, CIs are often interpreted as representing a range of believable values. This is particularly useful in deciding whether a study had an adequate number of patients (ie, whether there was adequate power). (See
+         <a class="local">
+          'Power'
+         </a>
+         below.)
+        </p>
+        <p>
+         Using the same example as above, if the trial found that the RR was 0.75 with 95% CI 0.5-1.12, the study might have been reported as "negative," when in reality, the study was simply too small to answer the clinical question. A 50 percent relative reduction in mortality would clearly be clinically meaningful, and a 12 percent relative increase in mortality would likely also be meaningful. If, instead, the trial found a RR of 0.99 with 95% CI 0.97-1.01, it would be appropriate to conclude that there was little to no effect on mortality.
+        </p>
+        <p>
+         The interpretation of confidence intervals, like the interpretation of p-values, should ideally consider the totality of evidence for or against a hypothesis.
+        </p>
+        <p class="headingAnchor" id="H3635044518">
+         <span class="h2">
+          P-values
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         A simplistic view of the p-value is to think of it as the probability that the observed result could have occurred by chance alone (ie, due to random variation in the sample). More accurately, it is the probability that if the null hypothesis were true (see
+         <a class="local">
+          'Null hypothesis'
+         </a>
+         above), and assuming the results were not affected by bias or confounding, that a result as extreme or more extreme than the one seen in the study would have been observed. The p-value is
+         <strong>
+          not
+         </strong>
+         the probability that the result of the study is true or false.
+        </p>
+        <p>
+         In most studies, a threshold of p &lt;0.05 is chosen as the threshold for claiming a "statistically significant" finding. However, the threshold is somewhat arbitrary, as discussed below. (See
+         <a class="local">
+          'Statistical significance'
+         </a>
+         below.)
+        </p>
+        <p>
+         As an example, consider a hypothetical clinical trial comparing beta blockers to placebo in patients with heart failure. If the trial is methodologically high-quality (ie, low risk of bias and confounding) and finds that mortality is lower in the beta blocker group with a RR of 0.75 and p-value of 0.03, this means that if beta blockers truly had no effect, we would have expected to see a RR ≤0.75 only 3 percent of the time.
+        </p>
+        <p>
+         Importantly, the p-value says nothing directly about the probabilities that we are most interested in: The probability that beta blockers actually work or the probability that the RR is truly 0.75. These probabilities are not knowable from a single study. If the prior probability (the probability before the study was performed) that beta blockers affect mortality was very low, then even after the study was performed and resulted in a p-value of 0.03, the likelihood that beta blockers affect mortality would be much lower than 97 percent. In contrast, if the prior probability was very high (eg, because of evidence from other studies), then the probability that beta blockers affect mortality after the above study was performed would be higher than 97 percent.
+        </p>
+        <p>
+         It is sometimes assumed that if the p-value is very low (&lt;0.005), there is a high likelihood that the finding would be confirmed subsequent studies (ie, that there is a high "replication probability"). However, this may not be the case. In an analysis of &gt;23,000 clinical trials in the Cochrane Database of Systematic Reviews, trials with an initial p-value between 0.001 and 0.005 had only a 60 percent chance of yielding a subsequent p-value &lt;0.05 upon attempted replication [
+         <a href="#rid2">
+          2
+         </a>
+         ].
+        </p>
+        <p class="headingAnchor" id="H2762468329">
+         <span class="h1">
+          INTERPRETATION
+         </span>
+        </p>
+        <p class="headingAnchor" id="H3473084854">
+         <span class="h2">
+          Explanation for the results of a study
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         There are four possible explanations for findings in clinical research (regardless of whether the study has a positive or negative result):
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Truth – The findings in the study may accurately reflect the answer to the underlying question that was being asked.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Bias – There may be one or more errors in the way the study was performed that distort the results and affect the findings.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Confounding – There may be one or more variables that are associated both with the exposure being studied and also with the outcome of interest that affect the results of the study.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Chance – Random variations that occurred within the sample of the population being studied may lead to erroneous conclusions. If random chance leads to a mistaken conclusion that there was an effect, the mistake is called a type 1 error (alpha error); if random chance leads to a mistaken conclusion that there was no effect, the mistake is called a type 2 error (beta error). (See
+         <a class="medical medical_review" href="/z/d/html/2759.html" rel="external">
+          "Glossary of common biostatistical and epidemiological terms", section on 'Errors'
+         </a>
+         .)
+        </p>
+        <p>
+        </p>
+        <p>
+         Of these four explanations, statistical tests that yield p-values and confidence intervals (CIs) only address the final one (ie, whether chance could explain the findings). P-values and CIs do
+         <strong>
+          not
+         </strong>
+         help in determining whether the study's finding represent the truth nor whether the study has problematic bias or confounding.
+        </p>
+        <p class="headingAnchor" id="H9">
+         <span class="h2">
+          Statistical significance
+         </span>
+        </p>
+        <p class="headingAnchor" id="H2438625033">
+         <span class="h3">
+          Thresholds for statistical significance
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The choice of a specific threshold for a p-value or degree of confidence for a confidence interval is arbitrary. In most studies, a threshold of p &lt;0.05 (and the corresponding 95% CI) is chosen as the threshold for claiming a "statistically significant" finding. But there is no particular reason why a p-value of 0.02 (and a corresponding 98% CI) isn't the standard for calling a result "statistically significant."
+        </p>
+        <p>
+         There is debate as to what the most appropriate threshold is for defining statistical significance in clinical research [
+         <a href="#rid3">
+          3-6
+         </a>
+         ]. Some experts favor a more restrictive threshold (eg, p &lt;0.005), whereas other experts advocate for de-emphasizing or abandoning the p-value altogether.
+        </p>
+        <p>
+         Although the choice of the threshold is arbitrary, it is important to set a threshold of statistical significance when testing hypotheses. This allows us to know what percentage of "statistically significant" findings are likely false-positives (ie, type I error or alpha error). Since the usual threshold for statistical significance is a p-value of &lt;0.05, this means that approximately 5 percent of all "statistically significant" findings could have resulted from chance alone. (See
+         <a class="medical medical_review" href="/z/d/html/2759.html" rel="external">
+          "Glossary of common biostatistical and epidemiological terms", section on 'Errors'
+         </a>
+         .)
+        </p>
+        <p>
+         A result with a p-value of 0.001 is less likely to be due to chance (all other things being equal) than one with a p-value of 0.05, and a result with a p-value of 0.06 is only slightly more likely to be due to chance than one with a p-value of 0.05. However, we generally do not interpret p-values on a scale. If we try to use these values in any way other than as falling on one side or the other of a threshold (arbitrarily p = 0.05), we will no longer be able to say with certainty what percentage of "statistically significant" results were really the result of type 1 error.
+        </p>
+        <p class="headingAnchor" id="H977882525">
+         <span class="h3">
+          Misconceptions about statistical significance
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Common misconceptions about statistical significance include:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         A statistically significant result (eg, p-value &lt;0.05) means the study's finding is true. As discussed above, p-values cannot answer the question of whether a finding is true or false. Rather, they assess how likely it would be to observe the result (or a more extreme result) if there truly were no difference. (See
+         <a class="local">
+          'P-values'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         A statistically significant result (eg, p-value &lt;0.05) means the study's finding is clinically important or meaningful. This is not true. There are many examples of reports of statistically significant findings that are of questionable clinical significance. For example, a trial may find that systolic blood pressure in treated patients was on average 1 mmHg lower than in the control group. If the study is large enough, the finding might reach statistical significance. However, it likely has no clinical significance.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         The smaller the p-value, the more meaningful the finding is. This claim is similar to the previous misconception, and it is similarly incorrect. The p-value says nothing about the clinical importance of the finding or magnitude of the effect.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Lack of statistical significance (eg, p-value &gt;0.05) means that there is no difference or no effect. This is a very common misinterpretation of p-values and statistical significance. Failure to detect a difference is
+         <strong>
+          not
+         </strong>
+         the same as demonstrating no difference. In fact, it is very difficult for a study to confidently demonstrate that there is no difference. Consider a trial investigating the effect of beta blockers on mortality in patients with heart failure. If the relative risk (RR) were 0.75 with 95% CI 0.6-1.01 and p-value 0.06, it would not be appropriate to conclude that beta blockers have no effect on mortality. In fact, based on these data, it seems plausible that beta blockers may have an effect, and if the trial had been larger, it may have detected a statistically significant difference (see
+         <a class="local">
+          'Power'
+         </a>
+         below). On the other hand, if the RR were 0.99 with 95% CI 0.97-1.02 and p-value 0.8, it might be reasonable to conclude from the study that there is little to no effect, though this conclusion should ideally be based upon consideration of the totality of evidence, not just a single trial.
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H10">
+         <span class="h2">
+          Power
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Power is the statistical probability of avoiding a type 2 error in a study. That is, it is the probability that a study will not mistakenly accept the null hypothesis and conclude that there was no effect or difference when there really was one. (See
+         <a class="medical medical_review" href="/z/d/html/2759.html" rel="external">
+          "Glossary of common biostatistical and epidemiological terms", section on 'Errors'
+         </a>
+         .)
+        </p>
+        <p>
+         If a study fails to detect a statistically significant difference, it is reasonable to ask whether there was "adequate power." In other words, one possible explanation for the result is that a small sample size and/or random chance may have led to a failure to detect a difference that really existed. This issue is particularly pressing when the effect estimate in the study appears clinically important. In the above hypothetical study, a relative risk for mortality of 0.75 with a 95% CI of 0.50-1.12 would not be statistically significant; however, the point estimate of a 25 percent reduction in mortality would clearly be clinically meaningful if true.
+        </p>
+        <p>
+         It is possible to calculate the power a study has to find a given result (for instance, a 25 percent reduction in mortality) given a particular sample size (and also given the underlying variation in the population). Power calculations are useful in the design of studies to decide whether a study is large enough to have a reasonable chance of finding a positive result or to calculate the number of patients required to achieve a certain power.
+        </p>
+        <p>
+         However, when studies try to address the issue of whether there was "adequate power" after a negative study result by performing a power calculation using the effect estimate found in the study, the result is meaningless. The power in such a calculation will
+         <strong>
+          always
+         </strong>
+         be less than 50 percent [
+         <a href="#rid7">
+          7
+         </a>
+         ]. Instead, as discussed above, the way to decide after the fact whether a nonsignificant finding had sufficient power is to look at the 95% CI and see whether clinically important values exist within the range of the statistically likely values represented by the CI. (See
+         <a class="local">
+          'Confidence intervals'
+         </a>
+         above.)
+        </p>
+        <p class="headingAnchor" id="H11">
+         <span class="h1">
+          SUMMARY
+         </span>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Proof
+         </strong>
+         – Proof is a human concept and never comes from a single piece of evidence or a statistical test. (See
+         <a class="local">
+          'Proof'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Statistical testing
+         </strong>
+         – In comparative studies that involve hypothesis testing, three key pieces of information are provided by statistical testing:
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         <strong>
+          The effect estimate
+         </strong>
+         – Effect estimates measure the magnitude of the difference between outcomes for two groups (eg, patients who received the treatment of interest versus the control group). This can be expressed as a relative difference (eg, relative risk [RR], odds ratio [OR], hazard ratio [HR]) or absolute difference. (See
+         <a class="local">
+          'Effect estimates'
+         </a>
+         above and
+         <a class="medical medical_review" href="/z/d/html/2759.html" rel="external">
+          "Glossary of common biostatistical and epidemiological terms", section on 'Terms used to describe the magnitude of an effect'
+         </a>
+         .)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         <strong>
+          Confidence interval
+         </strong>
+         – The confidence interval (CI) conveys the range of values that could be considered reasonably likely based upon statistical testing. (See
+         <a class="local">
+          'Confidence intervals'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         <strong>
+          The p-value
+         </strong>
+         – The p-value conveys how likely it would be to observe the result (or a more extreme result) if there truly were no difference. It is
+         <strong>
+          not
+         </strong>
+         the probability that the result of the study is true or false. (See
+         <a class="local">
+          'P-values'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Possible explanations for study findings
+         </strong>
+         – Possible explanations for the observed result in a study are (see
+         <a class="local">
+          'Explanation for the results of a study'
+         </a>
+         above):
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Truth
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Bias
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Confounding
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Chance
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         Statistical tests that yield p-values and CIs only address the last of these (ie, whether chance could explain the finding).
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Statistical significance
+         </strong>
+         – The choice of a specific threshold for a p-value or degree of confidence for a CI is arbitrary. In most studies, a threshold of p &lt;0.05 (and the corresponding 95% CI) is chosen as the threshold for claiming a "statistically significant" finding. (See
+         <a class="local">
+          'Statistical significance'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         A statistically significant result (eg, p-value &lt;0.05) does
+         <strong>
+          not
+         </strong>
+         mean the study's finding is true nor that the finding is clinically meaningful. Similarly, lack of statistical significance (eg, p-value &gt;0.05) does
+         <strong>
+          not
+         </strong>
+         mean that there is no effect. If a study fails to detect a statistically significant difference, one possible explanation is small sample size (inadequate power). The way to determine whether a nonsignificant finding had sufficient power is to look at the 95% CI. (See
+         <a class="local">
+          'Misconceptions about statistical significance'
+         </a>
+         above and
+         <a class="local">
+          'Power'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+       </div>
+       <div class="headingAnchor" id="references">
+        <ol id="reference">
+         <li>
+          <a class="nounderline abstract_t">
+           Greenland S, Senn SJ, Rothman KJ, et al. Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations. Eur J Epidemiol 2016; 31:337.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           van Zwet E, Gelma A, Greenland S, et al. A New Look at P Values for Randomized Clinical Trials. NEJM Evid 2023; 3:1.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Wayant C, Scott J, Vassar M. Evaluation of Lowering the P Value Threshold for Statistical Significance From .05 to .005 in Previously Published Randomized Clinical Trials in Major Medical Journals. JAMA 2018; 320:1813.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Ioannidis JPA. The Proposal to Lower P Value Thresholds to .005. JAMA 2018; 319:1429.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Benjamin DJ, Berger JO, Johannesson M, et al. Redefine statistical significance. Nat Hum Behav 2018; 2:6.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Li G, Walter SD, Thabane L. Shifting the focus away from binary thinking of statistical significance and towards education for key stakeholders: revisiting the debate on whether it's time to de-emphasize or get rid of statistical significance. J Clin Epidemiol 2021; 137:104.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Goodman SN, Berlin JA. The use of predicted confidence intervals when planning experiments and the misuse of power when interpreting results. Ann Intern Med 1994; 121:200.
+          </a>
+         </li>
+        </ol>
+       </div>
+       <div id="topicVersionRevision">
+        Topic 2777 Version 20.0
+       </div>
+      </div>
+      <div class="row">
+       <div class="col-12">
+        <h4 style="text-align: center;padding: 20px;color: cadetblue;">
+         References
+        </h4>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/27209009" id="rid0" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          1 : Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/" id="rid1" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          2 : A New Look at P Values for Randomized Clinical Trials
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/30398593" id="rid2" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          3 : Evaluation of Lowering the P Value Threshold for Statistical Significance From .05 to .005 in Previously Published Randomized Clinical Trials in Major Medical Journals.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/29566133" id="rid3" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          4 : The Proposal to Lower P Value Thresholds to .005.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/30980045" id="rid4" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          5 : Redefine statistical significance.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/33839240" id="rid5" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          6 : Shifting the focus away from binary thinking of statistical significance and towards education for key stakeholders: revisiting the debate on whether it's time to de-emphasize or get rid of statistical significance.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/8017747" id="rid6" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          7 : The use of predicted confidence intervals when planning experiments and the misuse of power when interpreting results.
+         </p>
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </section>
+  <!-- End Main Menu Area -->
+  <!-- Start Search Popup Area -->
+  <!-- End Footer Area -->
+  <!-- Back to top -->
+  <a class="scrolltop" href="#top">
+   <i class="icofont-hand-drawn-up">
+   </i>
+  </a>
+  <!-- End Back to top -->
+  <!-- jQuery Min JS -->
+  <!-- Prpper JS -->
+  <!-- Bootstrap Min JS -->
+  <!-- Classy Nav Min Js -->
+  <!-- Owl Carousel Min Js -->
+  <!-- Magnific Popup JS -->
+  <!-- CounterUp JS -->
+  <!-- Waypoints JS -->
+  <!-- Form Validator Min JS -->
+  <!-- Contact Form Min JS -->
+  <!-- Main JS -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+ </body>
 </html>

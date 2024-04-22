@@ -1,369 +1,1691 @@
 <!DOCTYPE html>
-
 <html lang="fa">
-<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
-<head><title>Ring entrapment and removal</title><link href="/z/d/css/bootstrap.min.css" rel="stylesheet"/><link href="/z/d/css/icofont.min.css" rel="stylesheet"/><link href="/z/d/css/classy-nav.min.css" rel="stylesheet"/><link href="/z/d/css/animate.css" rel="stylesheet"/><link href="/z/d/css/owl.carousel.css" rel="stylesheet"/><link href="/z/d/css/magnific-popup.css" rel="stylesheet"/><link href="/z/d/css/owl.theme.default.min.css" rel="stylesheet"/><link href="/z/d/css/style.css" rel="stylesheet"/><link href="/z/d/css/rtl_edited.css" rel="stylesheet"/><link href="/z/d/css/responsive.css" rel="stylesheet"/><link href="https:///uptodate_assets/main.css" rel="stylesheet"/>
-<style>
-
-#myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 16px;
-  color: black;
-  display: block
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee;
-}
-
-#searchResult {
-
-  list-style-type: none;
-  padding: 0;
-  padding-right: 20px;
-}
-
-#searchResult li a {
-  border: .5px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #79bc21;
-  padding: 7px;
-  text-decoration: none;
-  font-size: 14px;
-  color: white;
-  display: block
-}
-
-#searchResult li a:hover:not(.header) {
-  background-color: #222;
-}
-
-
-#txtHint   {
-  position: absolute;
-  text-shadow: none;
-  width: 100%;
-  margin-top: -15px;
-  padding-right: 10px;
-
-  filter: alpha(opacity=95);
-  -moz-opacity: 0.95;
-  opacity: 1;
-  z-index: 200;
-}
-.countBubl {
-  background:#eb0029;
-  color:#fff;
-  padding:5px;
-  margin-top: 50%;
-
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(2) {
- width: 55%;
- padding-left: 20px;
-}
-.uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > img:nth-child(3) {
- width: 20%;
-}
- #Uptodate_image {
-      width: 50%;
-  }#uptodate-area {
-      /*z-index: 99;*/
-  }
-#uptodate-area > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
- margin-left: 10px;
- margin-bottom: 6%;
-}
-@media (max-width: @screen-xs) {
-    .countBubl {
-        font-size: 4px ;
-    }
-    #uptodate_version {
-        font-size: 4px ;
-    }
-}
-
-@media (max-width: @screen-sm) {
-    .countBubl {
-        font-size: 14px ;
-    }
-}
-@media  all and(max-width: 820) {
-    #Uptodate_image {
-        width: 80% ;
-    }#uptodate-area {
-        z-index: 99;
-    }
-}@media  all and (min-width: 820) and(max-width: 88820){
-    #Uptodate_image {
-        width: 100% !important;
-    }
-    .countBubl {
-        font-size: 4px ;
-    }
-}
-div.col-md-3:nth-child(3) {
- margin-top: 6%;
-}
-
-div.col-md-3:nth-child(3) > img:nth-child(1) {
- width: 100%;
- margin-left: 11px;
-}
-
-</style>
-<style media="screen" type="text/css">
-  .goback {
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    position: fixed;
-    display: none;
-    font-size: 15px;
-    background: #71c0fa;
-    z-index: 1000;
-    text-align: center;
-    color: #ffffff;
-    -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
-    border-radius: 50px;
-    bottom: 3.8%;
-    right: 2%;
-}
-  .buyPackage {
-  width: 100px;
-  height: 100px;
-  line-height: 40px;
-  position: fixed;
-  display: none;
-  font-size: 10px;
-  background: #fa759e;
-  z-index: 1000;
-  text-align: center;
-  color: #ffffff;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  border-radius: 10px;
-  top: 150px;
-  right: 2%;
-  text-align: center;
-}
-.uptodate-area {
-  /*background-image: url(../../assets/img/news-letter-bg.jpg);*/
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-    background-attachment: fixed;
-  position: relative;
-}
-.uptodate-area::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  padding-top: 100px;
-  width: 100%;
-}
-#references{
-  display: none;
-}
-</style>
-<style>
-section.sticky {
-  position: sticky;
-  top: 0;
-  background-color: #fff !important;
-  /*z-index: 100;*/
-  /*padding-top: 80px;*/
-
-}
-.m4inb{
-    border: solid !important;
-  }
-
-  .newsletter-area::before {
-       background: unset !important;
-  }
-p {
-    color: #555;
-}
-</style>
-<meta content="" name="description"/>
-<link href="/z/d/img/favicon.png" rel="icon" type="image/png">
-</link></head>
-<body>
-<!-- Start Main Menu Area -->
-<br/>
-<br/>
-<br/>
-<br/>
-<div class="container">
-<div class="row">
-</div>
-</div>
-<section class="teacher-area ptb-10">
-<div class="container">
-</div>
-<section class="course-details-area ptb-60">
-<div class="container">
-<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-<h1 style="text-align:center">Ring entrapment and removal</h1>
-<div class="utdArticleSection utdStyle" id="topicContent"><div id="topicTitle">Ring entrapment and removal</div> <div class="authorSectionElem"><div class="authorsElementsLeft"><dl id="topicContributors"><dt><span> </span>Author:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Joan Bothner, MD</a></dd><dt><span> </span>Section Editors:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Anne M Stack, MD</a></dd><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Allan B Wolfson, MD</a></dd><dt><span> </span>Deputy Editor:</dt><dd><a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">Michael Ganetsky, MD</a></dd></dl></div><div class="authorsElementsRight"><div id="literatureReviewDate"><div class="litReviewSingleLine"><bdi><span class="emphasis">Literature review current through:</span> Jan 2024.</bdi></div><div class="litReviewSingleLine"><bdi><span class="emphasis">This topic last updated:</span> Nov 13, 2023.</bdi></div></div></div></div><div id="topicWhatsNewContainer"></div><div id="topicText"><p class="headingAnchor" id="H1"><span class="h1">INTRODUCTION</span><span class="headingEndMark"> — </span>Techniques for removing an entrapped ring from a finger, toe, or penis are reviewed here. The clinical manifestations, diagnosis, and management of hair tourniquets with strangulation of digits or external genitalia is discussed separately. (See  <a class="medical medical_review" href="/z/d/html/6318.html" rel="external">"Hair tourniquet and other narrow constricting bands: Clinical manifestations, diagnosis, and treatment"</a>.)</p><p class="headingAnchor" id="H3886736128"><span class="h1">PATHOPHYSIOLOGY</span><span class="headingEndMark"> — </span>Ring entrapment of the digit or external genitalia decreases lymphatic and venous drainage, which results in pain, swelling, and edema. Swelling and edema further tightens the constricting ring. If not promptly removed, then ischemia with permanent tissue necrosis can develop.</p><p class="headingAnchor" id="H3876487557"><span class="h1">EPIDEMIOLOGY</span><span class="headingEndMark"> — </span>Patients commonly present to emergency departments with rings that they are unable to remove from their fingers; often they have tried multiple removal techniques before presenting for care. Although less common, toe rings may also become constricting. In addition to rings, children may put metal washers or nuts over their fingers or toes. Although rare, penile entrapment in teenage or adult males has been described after patients place various constriction devices around their penis or scrotum to maintain or enhance an erection [<a href="#rid1">1,2</a>].</p><p class="headingAnchor" id="H3252604274"><span class="h1">CLINICAL PRESENTATION</span><span class="headingEndMark"> — </span>Based upon anecdotal experience, ring entrapment may present in the following ways:</p><p class="bulletIndent1"><span class="glyph">●</span>A correctly sized ring becomes tight when the finger or, less commonly, the toe swells due to dependent extremity positioning (often while sleeping), local trauma, infection, allergic angioedema, excessive salt intake, or any other condition that causes swollen fingers or toes.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>A young child puts a tight ring, metal nut, or metal washer on to the finger or toe as part of normal exploratory behavior.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>An adolescent or adult male puts a constricting ring around the penis and/or scrotum to enhance an erection, and excessive swelling prevents subsequent removal.</p><p></p><p class="headingAnchor" id="H56282111"><span class="h1">EVALUATION</span></p><p class="headingAnchor" id="H1898083628"><span class="h2">History</span><span class="headingEndMark"> — </span>The clinician should determine how long the ring has been on the digit or external genitalia, the composition of the ring, and removal methods already attempted.</p><p>If trauma is the cause of entrapment, the mechanism and timing of the injury should be assessed. A history of trauma increases the likelihood of an associated fracture, dislocation, or laceration.</p><p>Patients with symptoms of infection (eg, redness, pain, and fever) or allergic angioedema (eg, exposure to a known or suspected allergen with rapid onset of rash, difficulty breathing, or other signs of allergic reaction) warrant timely treatment of the underlying cause in addition to ring removal. (See  <a class="medical medical_review" href="/z/d/html/110530.html" rel="external">"Acute cellulitis and erysipelas in adults: Treatment"</a> and  <a class="medical medical_review" href="/z/d/html/6027.html" rel="external">"Skin and soft tissue infections in children &gt;28 days: Evaluation and management"</a> and  <a class="medical medical_review" href="/z/d/html/392.html" rel="external">"Anaphylaxis: Emergency treatment"</a>.)</p><p>The clinician should determine the tetanus immunization status for patients with open wounds.</p><p class="headingAnchor" id="H878135518"><span class="h2">Physical examination</span><span class="headingEndMark"> — </span>Physical examination demonstrates a tight, constricting ring with distal swelling. For digits, the typical ring location is between the metacarpal or metatarsal and proximal interphalangeal joints. Entrapped rings on the penis may be proximal or distal to the scrotum.</p><p>Pertinent physical findings that are indications for emergency ring removal include:</p><p class="bulletIndent1"><span class="glyph">●</span>Signs of ischemia:</p><p></p><p class="bulletIndent2"><span class="glyph">•</span>Mottling</p><p class="bulletIndent2"><span class="glyph">•</span>Blue-gray or white color of the distal digit or penis</p><p class="bulletIndent2"><span class="glyph">•</span>Very prolonged or absent capillary refill</p><p class="bulletIndent2"><span class="glyph">•</span>No distal pulse by pulse oximetry</p><p class="bulletIndent2"><span class="glyph">•</span>Severe pain</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Open wound and/or deformity suggesting fracture or dislocation in the affected digit</p><p></p><p class="headingAnchor" id="H3019722316"><span class="h1">DIAGNOSIS</span><span class="headingEndMark"> — </span>Ring entrapment is a clinical diagnosis that is made when a ring cannot be manually removed from the digit or penis without special techniques or equipment. Patients with ring entrapment typically have marked distal swelling, which may be complicated by ischemia or, for digits, local trauma with an associated fracture, dislocation, and/or laceration.</p><p class="headingAnchor" id="H631379627"><span class="h1">DIFFERENTIAL DIAGNOSIS</span><span class="headingEndMark"> — </span>Because of its obvious presentation, ring entrapment is not likely to be confused with other diseases.</p><p>However, ring entrapment may coexist with other conditions that warrant further management as follows:</p><p class="bulletIndent1"><span class="glyph">●</span>Fracture or dislocation suggested by the presence of a deformity or point tenderness; after ring removal, these patients should undergo plain radiographs. Management of digital fractures and dislocations are discussed separately. (See  <a class="medical medical_review" href="/z/d/html/15114.html" rel="external">"Overview of finger, hand, and wrist fractures"</a> and  <a class="medical medical_review" href="/z/d/html/6314.html" rel="external">"Digit dislocation reduction"</a> and  <a class="medical medical_review" href="/z/d/html/222.html" rel="external">"Toe fractures in adults"</a>.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Cellulitis indicated by redness, swelling, warmth, and/or fever; in addition to ring removal, these patients warrant antibiotics and, depending upon the degree of illness, may warrant laboratory testing. (See  <a class="medical medical_review" href="/z/d/html/110530.html" rel="external">"Acute cellulitis and erysipelas in adults: Treatment"</a> and  <a class="medical medical_review" href="/z/d/html/6027.html" rel="external">"Skin and soft tissue infections in children &gt;28 days: Evaluation and management"</a>.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Allergic reaction with angioedema; these patients require stabilization of anaphylaxis, if present, and management of the allergic reaction. (See  <a class="medical medical_review" href="/z/d/html/392.html" rel="external">"Anaphylaxis: Emergency treatment"</a>.)</p><p></p><p class="headingAnchor" id="H1674295275"><span class="h1">RING REMOVAL</span></p><p class="headingAnchor" id="H972797085"><span class="h2">Approach</span><span class="headingEndMark"> — </span>The approach to ring removal varies depending upon the degree of neurovascular compromise; the presence of local trauma with an associated deep wound, fracture, or dislocation; the ring's composition; and the availability of dedicated ring removal devices (eg, compression device, electric ring cutter). The approach presented in this topic has been developed based upon clinical experience and small observational studies [<a href="#rid3">3</a>].</p><p class="headingAnchor" id="H976577581"><span class="h3">Digital entrapment</span><span class="headingEndMark"> — </span>The approach to ring removal from the finger or toe is provided in the algorithm  (<a class="graphic graphic_algorithm graphicRef116572" href="/z/d/graphic/116572.html" rel="external">algorithm 1</a>) and summarized below:</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Ischemia, nerve injury, or local trauma</strong> – Patients with signs of neurovascular compromise (eg, mottling, very delayed or absent capillary refill, blue-gray or white color, or digital nerve injury with loss of sensation) or local trauma with a deep wound, suspected fracture, or dislocation should undergo emergency ring removal by cutting or breaking the ring. If available, a dedicated electric ring cutter that cuts through most metals can be used [<a href="#rid4">4,5</a>]. It is important to verify which metals the electric ring cutter blade will cut through as the ring composition (when known) should determine the proper tool necessary for removal. These patients also frequently warrant emergency consultation with a hand, plastics, or orthopedic surgeon. (See <a class="local">'Cut or break the ring'</a> below.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>No ischemia, nerve injury, or local trauma</strong> – Inexpensive, thin, soft metal or plastic rings should be cut off with a hand-operated (or electric, if available) ring cutter. Otherwise, the clinician may attempt one of the methods to remove an intact ring. (See <a class="local">'Remove the ring intact'</a> below.)</p><p></p><p class="headingAnchor" id="H3867697135"><span class="h3">Penile entrapment</span><span class="headingEndMark"> — </span>Penile ring entrapment should be considered a potential urologic emergency. Penile rings in adult males are most often placed to maintain an erection and typically encircle the penis or, rarely, are placed around the penis and scrotum [<a href="#rid1">1,6,7</a>]. Other strangulation devices can include nonmetallic rings, bottles, and elastic bands. Patient embarrassment may result in delayed presentation with varying degrees of penile injury due to progressive venous, lymphatic, and arterial obstruction. Urethral injury or penile necrosis is associated with rings in place for longer than 72 hours [<a href="#rid1">1</a>].</p><p>Evaluation of the entrapped genitalia should include assessment of color, sensation, ability to void, presence of lacerations, and evidence of deeper injury including urethral fistula or ischemic injury. Most patients present with low grade injuries, such as penile edema and skin ulceration, with minimal distal sensation loss, and prompt removal can usually be performed. Penile blocks can be used for pain control, if necessary. (See  <a class="medical medical_review" href="/z/d/html/6326.html" rel="external">"Management of zipper entrapment injuries", section on 'Dorsal penile block'</a>.)</p><p>Successful methods of removal in the urologic literature include those that leave the ring intact or, more commonly, cutting or breaking the ring. The method of removal will depend on the composition and size of the ring or constriction device, the incarceration time, and the degree of penile injury at the time of presentation [<a href="#rid1">1,6,8</a>]. Rings at the base of the scrotum are approached in the same way as those encircling the penis.</p><p>Males with penile constriction devices and signs of penile ischemia or urethral injury warrant emergency consultation with a urologist and removal by cutting or breaking the ring [<a href="#rid1">1,9,10</a>]. (See <a class="local">'Cut or break the ring'</a> below.)</p><p>Patients with preserved penile perfusion may undergo removal of an intact ring or have the ring cut off. In difficult cases, multiple penile needle pricks with manual compression to reduce edema or penile aspiration by a urologist or other physician with expertise with these procedures may facilitate removal of an intact ring that cannot be easily cut [<a href="#rid1">1,6</a>]. (See <a class="local">'Remove the ring intact'</a> below.)</p><p>After ring removal, the penis should be examined thoroughly to assess vascular status. Most patients have minor penile edema with or without minor skin ulceration and can be discharged once they demonstrate that they are able to void normally. The clinician should advise the patient that penile constriction devices be avoided but, if used, should remain in place for no longer than 30 minutes. Furthermore, if the patient plans to persist in using such devices, a medically approved hinged device with a release mechanism is strongly recommended [<a href="#rid1">1</a>].</p><p>More severe injuries warrant further evaluation as follows [<a href="#rid1">1</a>]:</p><p class="bulletIndent1"><span class="glyph">●</span>Color Doppler sonography is indicated if penile perfusion does not rapidly recover after ring removal.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>If there is significant skin ulceration to the level of the urethra or suspicion of cutaneous urethral fistula formation, then evaluation of urethral integrity should be performed by cystoscopy or contrast urethrography.</p><p></p><p class="headingAnchor" id="H3190318891"><span class="h2">Techniques</span></p><p class="headingAnchor" id="H4"><span class="h3">Preparation</span><span class="headingEndMark"> — </span>Key interventions prior to ring removal include:</p><p class="bulletIndent1"><span class="glyph">●</span><strong>Control pain </strong>– With careful explanation of the procedure, the clinician often can cut off or break a ring without anesthesia. This approach allows the patient to give feedback regarding overheating of the ring during cutting.</p><p></p><p class="bulletIndent1">When removing an intact ring, pain control is usually necessary. Regional infiltrative anesthesia by digital block or dorsal penile block  (<a class="graphic graphic_figure graphicRef69794" href="/z/d/graphic/69794.html" rel="external">figure 1</a>) suffices for most cooperative adolescents and adults. (See  <a class="medical medical_review" href="/z/d/html/262.html" rel="external">"Digital nerve block"</a> and  <a class="medical medical_review" href="/z/d/html/6326.html" rel="external">"Management of zipper entrapment injuries", section on 'Dorsal penile block'</a>.)</p><p></p><p class="bulletIndent1">Young children are frequently uncooperative and may require procedural sedation. (See  <a class="medical medical_review" href="/z/d/html/6330.html" rel="external">"Procedural sedation in children: Approach"</a>.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Prepare the wound</strong> – Before the ring is removed, clean the surrounding skin with <a class="drug drug_general" data-topicid="9801" href="/z/d/drug information/9801.html" rel="external">povidone iodine</a> or similar antiseptic solution [<a href="#rid11">11</a>].</p><p></p><p class="headingAnchor" id="H834260608"><span class="h3">Cut or break the ring</span><span class="headingEndMark"> — </span>Ring entrapment with ischemia, nerve deficit, deep open wound, fracture, or dislocation warrants emergency removal by cutting or breaking the ring  (<a class="graphic graphic_algorithm graphicRef116572" href="/z/d/graphic/116572.html" rel="external">algorithm 1</a>).</p><p class="headingAnchor" id="H3886659505"><span class="h4">Soft metal or plastic rings</span><span class="headingEndMark"> — </span>Soft metal (eg, gold, silver, copper, or tin) or plastic rings may be cut with a hand-operated or electric ring cutter. Hand-operated ring cutters are usually not effective for removing hard metal (eg, steel or titanium), tungsten carbide, or ceramic rings. Before each use, check the saw blade of the ring cutter to ensure that is it sharp and clean. Show the patient how the guard prevents cutting of the finger.</p><p>If using a hand-operated ring cutter, the procedural steps are as follows:</p><p class="bulletIndent1"><span class="glyph">●</span>Prior to use, cover any open wounds to prevent metal filings from entering and causing foreign body reactions and chronic synovitis [<a href="#rid12">12</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Place the guard of the ring cutter under the ring on the palmar aspect of the hand or the plantar aspect of the foot.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>If possible, rotate the ring so that the thinnest part of the band is located under the saw blade.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Apply the saw blade wheel to the ring and turn it  (<a class="graphic graphic_figure graphicRef53966" href="/z/d/graphic/53966.html" rel="external">figure 2</a>).</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>If the friction of the ring cutting process generates heat, interrupt the procedure periodically to allow the ring to cool. If necessary, drip ice water onto the ring to hasten the cooling process.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>When the ring is fully cut, use hemostats to grab the two edges and pry open the ring.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Alternatively, cut the ring in two places to permit removal. When making the second cut, protect the skin under the first cut from sharp edges by placing gauze under the cut ring. Once the ring is cut, remove it from the finger by pulling it apart with hemostats.</p><p></p><p>If using an electric ring cutter, the process is similar, but be sure to follow the manufacturer’s operating instructions.</p><p>Rings that have been removed with a ring cutter usually can be repaired by a jeweler.</p><p class="headingAnchor" id="H2713454419"><span class="h4">Hard metal (eg, steel or titanium) rings</span><span class="headingEndMark"> — </span>Hard metal rings may be removed with an electric ring cutter with a diamond or carbide blade or various power tools, including dental drills, diamond drills, Dremel saws, and air-driven grinders  (<a class="graphic graphic_figure graphicRef116627" href="/z/d/graphic/116627.html" rel="external">figure 3</a>) [<a href="#rid1">1,3</a>]. Dentists, firefighters, machinists, or other aid personnel may have greater proficiency with the safe use of these power tools and may be the best primary operators. Do not attempt to break a steel or titanium ring as that may crush it into the finger, causing more damage.</p><p>Take the following precautions during cutting to avoid patient and operator injury:</p><p class="bulletIndent1"><span class="glyph">●</span>Provide industrial eye protection for the patient, the provider, and all other people present for the procedure.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Cover the patient's exposed skin and any open wounds with damp gauze to protect from sparks and metal filings.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Insert a metal barrier between the metal ring and the digit or penis (eg, laryngoscope blade or malleable retractor). Electric ring cutters will have a guard.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Cool the ring and the drill (or saw) with ice prior to the procedure and continue dripping ice water over the cutting site during the procedure. Interrupt frequently to assess for overheating of the ring. If using an electric ring cutter, follow the manufacturer’s instructions regarding cooling or lubricating the device while cutting the ring. </p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Make two cuts through the ring, 120 to 180 degrees apart on the dorsal and volar surface.</p><p></p><p class="headingAnchor" id="H1994364187"><span class="h4">Tungsten carbide or ceramic rings</span><span class="headingEndMark"> — </span>Tungsten carbide and ceramic rings contain hard but brittle materials that cannot be easily cut but can be broken using pliers, a ring vise, or vise grips [<a href="#rid3">3</a>]. An electric ring cutter with a specialized blade (the device/blade will say which metal it can cut) may be preferable to breaking the ring, if available. Most blades will not cut through tungsten, and tungsten rings will most likely need to be broken. Prior to attempting to break a ring, ensure that the patient is confident of the ring’s composition since many metals look indistinguishable, and attempting to break a steel or titanium ring may cause more finger injury.</p><p>During the breaking procedure, ensure industrial eye protection for the patient, provider, and any other personnel in the room as ring shards can be expelled at high speeds. Cover the patient's exposed skin and any open wounds with damp gauze to protect from ring shards. Dentists, firemen, machinists, or other aid personnel may have greater proficiency with the safe use of these devices and may be the best primary operators of these tools. </p><p class="bulletIndent1"><span class="glyph">●</span>Locking pliers – Size the pliers by placing them tightly around the ring  (<a class="graphic graphic_figure graphicRef116631" href="/z/d/graphic/116631.html" rel="external">figure 4</a>). Adjust the pliers to one turn smaller than the ring. Apply the pliers circumferentially around the ring and close them steadily until the ring shatters. The locking pliers may have to be opened, adjusted, and then closed around the ring several times before pressure sufficient to shatter the ring is generated.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Ring vise – Apply the vise per manufacturer’s instructions so that it encircles the ring. Turn the knob until the ring breaks  (<a class="graphic graphic_figure graphicRef116632" href="/z/d/graphic/116632.html" rel="external">figure 5</a>).</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Groove joint or other non-locking pliers – Because of less chance for injury to the finger, locking pliers or a ring vise is preferred. Adjust so that the jaws of the non-locking pliers close opposite of each other when applied to the ring. Apply the pliers circumferentially and close them steadily and under control. Stop applying pressure as soon as the ring breaks to avoid pinching the finger.</p><p></p><p>Occasionally, tungsten carbide or ceramic rings are lined with a metal band that is then removed using a ring cutter. (See <a class="local">'Soft metal or plastic rings'</a> above.)</p><p class="headingAnchor" id="H1524059079"><span class="h4">Unknown composition</span><span class="headingEndMark"> — </span>When the composition of the ring is not known by history or apparent upon examination and cutting the ring is indicated, the clinician should first use a hand-operated or, if available, an electric ring cutter with a standard blade. If the ring cutter is ineffective, then the ring is likely made of hard metal, tungsten carbide, ceramic, or stone and will require cutting with an electric ring cutter with a diamond or carbide blade (if available), a power tool (hard metal), or breaking using a ring vise or locking pliers (tungsten carbide, ceramic, or stone ring). However, if there is a possibility that the ring is steel or titanium (many metals look indistinguishable), do not attempt breaking it since that may crush the ring onto the finger, causing further injury. (See <a class="local">'Hard metal (eg, steel or titanium) rings'</a> above.)</p><p class="headingAnchor" id="H2081325082"><span class="h3">Remove the ring intact</span><span class="headingEndMark"> — </span>For valuable rings, removal of an intact ring is an acceptable approach when there is no ischemia or neurologic deficit, no deep wound, and no evidence of a fracture or dislocation  (<a class="graphic graphic_algorithm graphicRef116572" href="/z/d/graphic/116572.html" rel="external">algorithm 1</a>). In general, inexpensive soft metal or plastic rings should be cut off because this procedure can be accomplished quickly without regional anesthesia or sedation.</p><p>Several techniques may be used to remove a ring without cutting it [<a href="#rid3">3,11,13-17</a>]. When attempting removal of an intact ring, apply ice and, for digital rings, elevate the extremity to decrease swelling prior to the procedure. Apply soap or water-soluble lubricant liberally to the entrapped digit or penis. With the exception of the compression device described below, these techniques are painful, and use of regional anesthesia or, in uncooperative patients, procedural sedation is typically necessary [<a href="#rid17">17</a>]. (See <a class="local">'Preparation'</a> above.)</p><p>Several techniques have been reported to successfully remove intact rings. No studies have compared the efficacy of the techniques. Thus, the provider should use the one with which they are most familiar.</p><p class="headingAnchor" id="H1281383335"><span class="h4">Manual removal</span><span class="headingEndMark"> — </span>Two methods have been described that markedly reduce digital swelling and permit manual removal. These techniques may also permit use of the string pull or string wrap method described below if swelling prevents passage of a string or other ligature beneath the ring.</p><p class="bulletIndent1"><span class="glyph">●</span>Double Penrose drain method – To perform this procedure, wrap one Penrose drain just distal to the proximal interphalangeal (PIP) joint. Tightly wrap a second Penrose drain, starting at the first one and extending back to the incarcerated ring. Repeat as necessary until the edema is sufficiently reduced to remove the ring. Once the ring passes the PIP joint, remove the first Penrose drain. In a case series of 12 patients, the double Penrose drain technique led to successful manual ring removal in all patients, including those with digital trauma [<a href="#rid13">13</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Elastic tape method – Apply a blood pressure cuff to the affected extremity and inflate it to the patient's systolic blood pressure plus 100 mmHg. Then tightly wrap a Penrose drain or 1 inch elastic band (intravenous tourniquet) from the tip of the digit proximally and elevate the extremity above the heart for 10 to 15 minutes  (<a class="graphic graphic_figure graphicRef56186" href="/z/d/graphic/56186.html" rel="external">figure 6</a>). Assess for reduction of edema and reapply the elastic wrap, if necessary. Keep the blood pressure cuff inflated while attempting manual removal, but remember that total tourniquet time should not exceed two hours [<a href="#rid14">14</a>].</p><p></p><p class="headingAnchor" id="H1851222306"><span class="h4">String pull technique</span><span class="headingEndMark"> — </span>The steps for the string pull method are as follows:</p><p class="bulletIndent1"><span class="glyph">●</span>Lubricate the digit or penis with water-soluble lubricant.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Pass one end of a 20-inch length of 2.0 or 3.0 silk, umbilical tape, or elastic band (eg, phlebotomy tourniquet, Penrose drain, or rubber band) under the ring and pull the two ends until they are of equal length. Grasp the string from underneath the proximal edge of the ring with a hemostat to pull it through.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Grasp the string or band 5 to 10 cm from the ring and pull distally in a circular fashion  (<a class="graphic graphic_picture graphicRef68736" href="/z/d/graphic/68736.html" rel="external">picture 1</a>) [<a href="#rid11">11</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Move the string or elastic band to different areas of the ring and pull it along the axis of the finger or penis, permitting the ring to be gradually removed [<a href="#rid15">15-17</a>].</p><p></p><p>The string pull technique can be modified by the addition of one or more strings or elastic bands to prevent the ring from sliding back while it is being pulled [<a href="#rid18">18</a>].</p><p class="headingAnchor" id="H2486197358"><span class="h4">String wrap technique</span><span class="headingEndMark"> — </span>The success of this technique depends upon tight, close wrapping of the finger or penis [<a href="#rid16">16,17</a>]:</p><p class="bulletIndent1"><span class="glyph">●</span>Place one end of 2.0 or 3.0 suture, Penrose drain, or umbilical tape 20 to 25 inches (0.5 to 0.6 m) in length under the ring from the proximal to the distal side with 5 inches (12.5 cm) of material remaining proximally [<a href="#rid16">16,17,19</a>].</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Wrap the suture material tightly around the digit or penis beginning at the distal aspect of the ring. Overlap the wrappings so that no tissue is visible  (<a class="graphic graphic_figure graphicRef53497" href="/z/d/graphic/53497.html" rel="external">figure 7</a> and <a class="graphic graphic_figure graphicRef69794" href="/z/d/graphic/69794.html" rel="external">figure 1</a>).</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Continue wrapping beyond the PIP joint of the digit or beyond the coronal sulcus of the penis  (<a class="graphic graphic_figure graphicRef76391" href="/z/d/graphic/76391.html" rel="external">figure 8</a>).</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Once the wrapping is complete, unwrap the proximal end which will gradually remove the ring from the finger or penis. For the finger, getting the ring over the PIP joint is typically most difficult. In some patients, rewrapping may be necessary  (<a class="graphic graphic_figure graphicRef53497" href="/z/d/graphic/53497.html" rel="external">figure 7</a> and <a class="graphic graphic_figure graphicRef69794" href="/z/d/graphic/69794.html" rel="external">figure 1</a>).</p><p></p><p>A modification of the string wrap technique in fingers is to use 1-inch self-adherent wrap (eg, Coban or Dynarex) [<a href="#rid20">20</a>]. The finger is wrapped tightly, beginning at the fingertip and wrapped towards the knuckle until the ring is reached. Using forceps, pass the end of the Coban under the ring. After two to three minutes, lubricate the finger with lubricant gel or soap and pull the end of the Coban distally to remove the ring. Coban is naturally elastic and self-adhesive, which enhances compression of the finger and prevents skin herniating between wraps. It also has high tensile strength, which prevents breaking while unwinding.</p><p class="headingAnchor" id="H945427413"><span class="h4">Surgical glove technique</span><span class="headingEndMark"> — </span>This technique is an adaptation of the wrap and pull techniques above and can be used in patients with superficial wounds [<a href="#rid21">21</a>].</p><p class="bulletIndent1"><span class="glyph">●</span>Cut one finger from a surgical glove to form a cylindrical sleeve.</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Place this sleeve on the involved digit and slip the proximal end circumferentially under the ring using a hemostat  (<a class="graphic graphic_figure graphicRef62819" href="/z/d/graphic/62819.html" rel="external">figure 9</a>).</p><p></p><p class="bulletIndent1"><span class="glyph">●</span>Once in place, pull the proximal end back over the ring and toward the tip of the digit in a twisting motion, advancing the ring distally. Avoid pulling so hard that the glove rips or pulls out from under the ring.</p><p></p><p class="headingAnchor" id="H1914046705"><span class="h4">Compression device</span><span class="headingEndMark"> — </span>A compression device has been designed for the removal of smooth rings from adults and cooperative children over eight years of age with ring entrapment  (<a class="graphic graphic_picture graphicRef140098" href="/z/d/graphic/140098.html" rel="external">picture 2</a>) [<a href="#rid22">22</a>]. The device provides circumferential compression just distal to the entrapped ring, which, combined with elevation of the extremity and lubrication, can permit ring removal. It is not recommended for use when the ring is bulky, irregular, fragile, or sharp edged. Furthermore, the manufacturer does not recommend its use for patients with finger fractures, ligament or tendon disruption, or neurovascular injury. In a small case series of adults, pain of removal using this device was minimal [<a href="#rid23">23,24</a>]. The device is not recommended for removal of penile rings.</p><p class="headingAnchor" id="H12"><span class="h2">Post-procedural care</span><span class="headingEndMark"> — </span>Removal of a ring can cause soft tissue trauma, including bruising or small cuts. After the ring is removed, clean the digit or penis and dress it with antibiotic ointment if necessary. Reevaluate neurovascular status. If there is clinical suspicion for digital fracture (eg, focal bony tenderness), then obtain plain radiographs. For digital swelling, instruct the patient to keep the affected limb elevated. Advise the patient that pain and swelling should be completely resolved before they return to wearing rings on the affected finger. Verify tetanus status and give prophylaxis when indicated  (<a class="graphic graphic_table graphicRef61087" href="/z/d/graphic/61087.html" rel="external">table 1</a>) (see  <a class="medical medical_review" href="/z/d/html/5525.html" rel="external">"Tetanus"</a>). Patients with penile rings should be able to void normally before discharge.</p><p class="headingAnchor" id="H922693115"><span class="h1">INDICATIONS FOR SPECIALTY CONSULTATION</span><span class="headingEndMark"> — </span>After ring removal from a finger or toe, consultation with a hand, plastics, or orthopedic surgeon is warranted for the following findings:</p><p class="bulletIndent1"><span class="glyph">●</span>Persistent signs of ischemia</p><p class="bulletIndent1"><span class="glyph">●</span>Open fracture</p><p class="bulletIndent1"><span class="glyph">●</span>Open joint dislocation</p><p class="bulletIndent1"><span class="glyph">●</span>Fracture with dislocation</p><p class="bulletIndent1"><span class="glyph">●</span>Unstable fracture</p><p class="bulletIndent1"><span class="glyph">●</span>Tendon injury (unable to flex or extend the digit</p><p class="bulletIndent1"><span class="glyph">●</span>Digital nerve injury (loss of distal sensation)</p><p></p><p>Emergency urology consultation is indicated for patients with penile ring entrapment and signs of penile ischemia or necrosis or, after ring removal, for those who have persistent ischemia, difficulty voiding, or deep ulceration with potential involvement of the urethra or cutaneous urethral fistula.</p><p class="headingAnchor" id="H13"><span class="h1">SUMMARY AND RECOMMENDATIONS</span></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Diagnosis</strong> – Ring entrapment is a clinical diagnosis that is made when a ring cannot be manually removed from the digit or penis without special techniques or equipment. Patients with ring entrapment typically have marked distal swelling which may be complicated by ischemia or, for digits, local trauma with an associated fracture, dislocation, and/or laceration. (See <a class="local">'Evaluation'</a> above and <a class="local">'Diagnosis'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Finger or toe ring removal</strong> – An approach to ring removal from the finger or toe based upon clinical experience is provided in the algorithm  (<a class="graphic graphic_algorithm graphicRef116572" href="/z/d/graphic/116572.html" rel="external">algorithm 1</a>) (see <a class="local">'Digital entrapment'</a> above):</p><p></p><p class="bulletIndent2"><span class="glyph">•</span><strong>Concern for ischemia, nerve, or deep tissue injury</strong> – Patients with signs of ischemia, nerve injury or local trauma with a deep wound, suspected fracture, or dislocation should undergo emergency ring removed by cutting or breaking the ring. When known, the ring composition determines the proper tool necessary for removal (see <a class="local">'Cut or break the ring'</a> above):</p><p></p><p class="bulletIndent3"><span class="glyph">-</span>Soft metal (eg, gold, silver, or copper) or plastic – Hand-operated or electric ring cutter. (See <a class="local">'Soft metal or plastic rings'</a> above.)</p><p></p><p class="bulletIndent3"><span class="glyph">-</span>Hard metal (eg, steel or titanium) – Electric ring cutter with a diamond or carbide blade (if available) or electric power tool (eg, dental drill, Dremel saw, or air driven grinder). (See <a class="local">'Hard metal (eg, steel or titanium) rings'</a> above.)</p><p></p><p class="bulletIndent3"><span class="glyph">-</span>Tungsten carbide or ceramic – Electric ring cutter with a diamond or carbide blade that can cut through the material of the ring (if available) or locking pliers, ring vise, or vise grips to break the ring. (See <a class="local">'Tungsten carbide or ceramic rings'</a> above.)</p><p></p><p class="bulletIndent3"><span class="glyph">-</span>Unknown composition – When the composition of the ring is not known by history or apparent upon examination and cutting the ring is indicated, the clinician should first use a hand-operated or electric ring cutter. If the ring cutter is ineffective, then the ring is likely made of hard metal, tungsten carbide, ceramic, or stone and will require cutting with an electric ring cutter with a diamond or carbide blade that is able to cut through the material of the ring or a power tool (hard metal) or breaking using a ring vise or locking pliers (tungsten carbide, ceramic, or stone ring). However, if there is a possibility that the ring is steel or titanium, do not attempt breaking it since that may crush the ring onto the finger, causing further injury. (See <a class="local">'Unknown composition'</a> above.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span><strong>No ischemia, nerve, or deep tissue injury</strong> – For patients without ischemia, nerve injury, or local trauma, the approach is as follows:</p><p></p><p class="bulletIndent3"><span class="glyph">-</span>Inexpensive thin soft metal or plastic rings should be cut off with a hand-operated ring cutter  (<a class="graphic graphic_figure graphicRef53966" href="/z/d/graphic/53966.html" rel="external">figure 2</a>). (See <a class="local">'Soft metal or plastic rings'</a> above.)</p><p></p><p class="bulletIndent3"><span class="glyph">-</span>Valuable rings may be removed intact. Removal of an intact ring is often painful and use of regional anesthesia in adolescents and adults and procedural sedation in children is typically necessary. Before performing the procedure, prepare the wound, reduce swelling, and lubricate the digit or penis. Manual removal may be attempted after using compression, elastic tape, or double Penrose wrapping to reduce swelling. Alternatively, the string or elastic pull technique or string wrap technique may be employed  (<a class="graphic graphic_figure graphicRef69794" href="/z/d/graphic/69794.html" rel="external">figure 1</a> and <a class="graphic graphic_picture graphicRef68736" href="/z/d/graphic/68736.html" rel="external">picture 1</a> and <a class="graphic graphic_figure graphicRef53497" href="/z/d/graphic/53497.html" rel="external">figure 7</a> and <a class="graphic graphic_figure graphicRef53966" href="/z/d/graphic/53966.html" rel="external">figure 2</a>). (See <a class="local">'Preparation'</a> above and <a class="local">'Remove the ring intact'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Penile ring removal</strong> – Many of the techniques described for removal of an intact digital ring also work for the removal of penile constriction devices. In difficult cases, multiple superficial penile needle pricks followed by manual compression to relieve edema or penile aspiration by a urologist or other physician with expertise with these procedures may facilitate removal of an intact ring. (See <a class="local">'Penile entrapment'</a> above.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span><strong>Concern for ischemia</strong> – Males with penile constriction devices and signs of penile ischemia or necrosis warrant emergency consultation with a urologist and emergency removal by cutting or breaking the ring. (See <a class="local">'Cut or break the ring'</a> above.)</p><p></p><p class="bulletIndent2"><span class="glyph">•</span><strong>No ischemia</strong> – Patients with preserved penile perfusion may undergo removal of an intact ring or have the ring cut off. (See <a class="local">'Remove the ring intact'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Post-procedure care</strong> – After ring removal, the digit or penis should be cleaned, any open wounds dressed with antibiotic ointment, and tetanus status assessed with prophylaxis given as needed  (<a class="graphic graphic_table graphicRef61087" href="/z/d/graphic/61087.html" rel="external">table 1</a>). (See <a class="local">'Post-procedural care'</a> above.)</p><p></p><p class="bulletIndent1"><span class="glyph">●</span><strong>Indications for consultation</strong> – The following are indications for consultation after the ring has been removed (see <a class="local">'Indications for specialty consultation'</a> above): </p><p></p><p class="bulletIndent2"><span class="glyph">•</span><strong>Finger or toe</strong> – Consultation with a hand, plastics, or orthopedic surgeon is indicated for patients with persistent ischemia, digital nerve injury, tendon injury, open fracture or dislocation, or an unstable fracture.</p><p></p><p class="bulletIndent2"><span class="glyph">•</span><strong>Penis</strong> – Emergency urology consultation is indicated for patients with penile ring entrapment and persistent signs of penile ischemia, difficulty voiding, significant skin ulceration to the level of the urethra or suspicion of cutaneous urethral fistula formation.</p></div><div class="headingAnchor" id="references"><ol id="reference"><li><a class="nounderline abstract_t">Silberstein J, Grabowski J, Lakin C, Goldstein I. Penile constriction devices: case report, review of the literature, and recommendations for extrication. J Sex Med 2008; 5:1747.</a></li><li><a class="nounderline abstract_t">Wu X, Batra R, Al-Akraa M, Seneviratne LN. Penoscrotal entrapment: a safe, innovative technique for removing metal constricting devices. BMJ Case Rep 2012; 2012.</a></li><li><a class="nounderline abstract_t">Kalkan A, Kose O, Tas M, Meric G. Review of techniques for the removal of trapped rings on fingers with a proposed new algorithm. Am J Emerg Med 2013; 31:1605.</a></li><li><a class="nounderline abstract_t">Walter J, DeBoer M, Koops J, et al. Quick cuts: A comparative study of two tools for ring tourniquet removal. Am J Emerg Med 2021; 46:238.</a></li><li class="breakAll">Emesih J, Staple L. A Novel Cutting Device for Ring Removal: Case Study. Journal of Emergency Medical Services. Sept, 14, 2023. https://www.jems.com/equipment-gear/a-novel-cutting-device-for-ring-removal-case-study/ (Accessed on November 13, 2023).</li><li><a class="nounderline abstract_t">Singh I, Joshi MK, Jaura MS. Strangulation of penis by a ball bearing device. J Sex Med 2010; 7:3793.</a></li><li><a class="nounderline abstract_t">Ivanovski O, Stankov O, Kuzmanoski M, et al. Penile strangulation: two case reports and review of the literature. J Sex Med 2007; 4:1775.</a></li><li><a class="nounderline abstract_t">Agu TC, Obiechina N. Post coital penile ring entrapment: A report of a non-surgical extrication method. Int J Surg Case Rep 2016; 18:15.</a></li><li><a class="nounderline abstract_t">Greenspan L. Tourniquet syndrome caused by metallic bands: a new tool for removal. Ann Emerg Med 1982; 11:375.</a></li><li><a class="nounderline abstract_t">Schuster G, Stockmal P. Genital incarceration with metal rings: their safe removal. Tech Urol 1999; 5:116.</a></li><li class="breakAll">Mittage, Ruddy RM. Illustrated techniques of pediatric emergency procedures. In: Textbook of Pediatric Emergency Medicine, 7th ed, Fleisher GR, Ludwig S, Henretig FM (Eds), Wolters Kluwer, Philadelphia 2016. p.47e.</li><li><a class="nounderline abstract_t">Fasano FJ Jr, Hansen RH. Foreign body granuloma and synovitis of the finger: a hazard of ring removal by the sawing technique. J Hand Surg Am 1987; 12:621.</a></li><li><a class="nounderline abstract_t">Chiu TF, Chu SJ, Chen SG, et al. Use of a Penrose drain to remove an entrapped ring from a finger under emergent conditions. Am J Emerg Med 2007; 25:722.</a></li><li><a class="nounderline abstract_t">Cresap CR. Removal of a hardened steel ring from an extremely swollen finger. Am J Emerg Med 1995; 13:318.</a></li><li><a class="nounderline abstract_t">McElfresh EC, Peterson-Elijah RC. Removal of a tight ring by the rubber band. J Hand Surg Br 1991; 16:225.</a></li><li class="breakAll">Fuchs SM. Ring removal. In: Textbook of Pediatric Emergency Procedures, 2nd ed, Henretig FM, King C (Eds), Lippincott, Williams, &amp; Wilkins, Philadelphia 2008. p.1107.</li><li class="breakAll">Stone DB, Scordino DJ. Foreign body removal. In: Roberts and Hedges Clinical Procedures in Emergency Medicine, 6th ed, Roberts JR, Custalow CB, Thomsen TW (Eds), Elsevier Saunders, Philadelphia 2014. p.708.</li><li><a class="nounderline abstract_t">Boe C, Kakar S. A Modified String Technique for Atraumatic Ring Removal. J Emerg Med 2018; 55:240.</a></li><li><a class="nounderline abstract_t">Belliappa PP. A technique for removal of a tight ring. J Hand Surg Br 1989; 14:127.</a></li><li><a class="nounderline abstract_t">Tan V. Coban Method for Removing a Constricting Ring. Hand (N Y) 2019; 14:133.</a></li><li><a class="nounderline abstract_t">Inoue S, Akazawa S, Fukuda H, Shimizu R. Another simple method for ring removal. Anesthesiology 1995; 83:1133.</a></li><li class="breakAll">RingRescue. User instruction manual. https://static1.squarespace.com/static/5aa86460aa49a1758e33c36d/t/5d5eb88d3291d00001a1d1d8/1566488728735/User+Manual+V16.pdf (Accessed on August 25, 2020).</li><li class="breakAll">Staple L, LeBlanc C. A novel approach to ring removal: compression device. Journal of Emergency Medical Services 2020. https://www.jems.com/2020/06/16/a-novel-approach-to-ring-removal/.</li><li><a class="nounderline abstract_t">Sayler L, LeBlanc C. Compression Devices as an Alternative Approach After Unsuccessful Ring Removal Attempts. Cureus 2022; 14:e22068.</a></li></ol></div><div id="topicVersionRevision">Topic 6332 Version 22.0</div></div>
-<div class="row">
-<div class="col-12">
-<h4 style="text-align: center;padding: 20px;color: cadetblue;">References</h4>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/18507720" id="rid0" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>1 : Penile constriction devices: case report, review of the literature, and recommendations for extrication.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/23010460" id="rid1" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>2 : Penoscrotal entrapment: a safe, innovative technique for removing metal constricting devices.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/24070977" id="rid2" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>3 : Review of techniques for the removal of trapped rings on fingers with a proposed new algorithm.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/33046320" id="rid3" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>4 : Quick cuts: A comparative study of two tools for ring tourniquet removal.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/33046320" id="rid4" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>5 : Quick cuts: A comparative study of two tools for ring tourniquet removal.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/20646187" id="rid5" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>6 : Strangulation of penis by a ball bearing device.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/17888068" id="rid6" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>7 : Penile strangulation: two case reports and review of the literature.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/26670412" id="rid7" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>8 : Post coital penile ring entrapment: A report of a non-surgical extrication method.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/7091800" id="rid8" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>9 : Tourniquet syndrome caused by metallic bands: a new tool for removal.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/10458669" id="rid9" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>10 : Genital incarceration with metal rings: their safe removal.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/10458669" id="rid10" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>11 : Genital incarceration with metal rings: their safe removal.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/3301999" id="rid11" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>12 : Foreign body granuloma and synovitis of the finger: a hazard of ring removal by the sawing technique.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/17606098" id="rid12" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>13 : Use of a Penrose drain to remove an entrapped ring from a finger under emergent conditions.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/7755828" id="rid13" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>14 : Removal of a hardened steel ring from an extremely swollen finger.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/2061673" id="rid14" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>15 : Removal of a tight ring by the rubber band.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/2061673" id="rid15" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>16 : Removal of a tight ring by the rubber band.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/2061673" id="rid16" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>17 : Removal of a tight ring by the rubber band.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/29934038" id="rid17" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>18 : A Modified String Technique for Atraumatic Ring Removal.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/2926210" id="rid18" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>19 : A technique for removal of a tight ring.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/30188186" id="rid19" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>20 : Coban Method for Removing a Constricting Ring.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/7486173" id="rid20" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>21 : Another simple method for ring removal.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/7486173" id="rid21" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>22 : Another simple method for ring removal.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/7486173" id="rid22" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>23 : Another simple method for ring removal.</p>
-</a>
-</div>
-<div class="col-12" style="text-align: left;direction: ltr">
-<a href="https://pubmed.ncbi.nlm.nih.gov/35295361" id="rid23" target="_blank">
-<p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>24 : Compression Devices as an Alternative Approach After Unsuccessful Ring Removal Attempts.</p>
-</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-</section>
-<!-- End Main Menu Area -->
-<!-- Start Search Popup Area -->
-<!-- End Footer Area -->
-<!-- Back to top -->
-<a class="scrolltop" href="#top"><i class="icofont-hand-drawn-up"></i></a>
-<!-- End Back to top -->
-<!-- jQuery Min JS -->
-<!-- Prpper JS -->
-<!-- Bootstrap Min JS -->
-<!-- Classy Nav Min Js -->
-<!-- Owl Carousel Min Js -->
-<!-- Magnific Popup JS -->
-<!-- CounterUp JS -->
-<!-- Waypoints JS -->
-<!-- Form Validator Min JS -->
-<!-- Contact Form Min JS -->
-<!-- Main JS -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-</body>
+ <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+ <head>
+  <title>
+   Ring entrapment and removal
+  </title>
+  <link href="d/css/1.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!-- Start Main Menu Area -->
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="container">
+   <div class="row">
+   </div>
+  </div>
+  <section class="teacher-area ptb-10">
+   <div class="container">
+   </div>
+   <section class="course-details-area ptb-60">
+    <div class="container">
+     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+      <h1 style="text-align:center">
+       Ring entrapment and removal
+      </h1>
+      <div class="utdArticleSection utdStyle" id="topicContent">
+       <div id="topicTitle">
+        Ring entrapment and removal
+       </div>
+       <div class="authorSectionElem">
+        <div class="authorsElementsLeft">
+         <dl id="topicContributors">
+          <dt>
+           <span>
+           </span>
+           Author:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Joan Bothner, MD
+           </a>
+          </dd>
+          <dt>
+           <span>
+           </span>
+           Section Editors:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Anne M Stack, MD
+           </a>
+          </dd>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Allan B Wolfson, MD
+           </a>
+          </dd>
+          <dt>
+           <span>
+           </span>
+           Deputy Editor:
+          </dt>
+          <dd>
+           <a class="contributor contributor_credentials" rel="noopener noreferrer" target="_blank">
+            Michael Ganetsky, MD
+           </a>
+          </dd>
+         </dl>
+        </div>
+        <div class="authorsElementsRight">
+         <div id="literatureReviewDate">
+          <div class="litReviewSingleLine">
+           <bdi>
+            <span class="emphasis">
+             Literature review current through:
+            </span>
+            Jan 2024.
+           </bdi>
+          </div>
+          <div class="litReviewSingleLine">
+           <bdi>
+            <span class="emphasis">
+             This topic last updated:
+            </span>
+            Nov 13, 2023.
+           </bdi>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div id="topicWhatsNewContainer">
+       </div>
+       <div id="topicText">
+        <p class="headingAnchor" id="H1">
+         <span class="h1">
+          INTRODUCTION
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Techniques for removing an entrapped ring from a finger, toe, or penis are reviewed here. The clinical manifestations, diagnosis, and management of hair tourniquets with strangulation of digits or external genitalia is discussed separately. (See
+         <a class="medical medical_review" href="/z/d/html/6318.html" rel="external">
+          "Hair tourniquet and other narrow constricting bands: Clinical manifestations, diagnosis, and treatment"
+         </a>
+         .)
+        </p>
+        <p class="headingAnchor" id="H3886736128">
+         <span class="h1">
+          PATHOPHYSIOLOGY
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Ring entrapment of the digit or external genitalia decreases lymphatic and venous drainage, which results in pain, swelling, and edema. Swelling and edema further tightens the constricting ring. If not promptly removed, then ischemia with permanent tissue necrosis can develop.
+        </p>
+        <p class="headingAnchor" id="H3876487557">
+         <span class="h1">
+          EPIDEMIOLOGY
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Patients commonly present to emergency departments with rings that they are unable to remove from their fingers; often they have tried multiple removal techniques before presenting for care. Although less common, toe rings may also become constricting. In addition to rings, children may put metal washers or nuts over their fingers or toes. Although rare, penile entrapment in teenage or adult males has been described after patients place various constriction devices around their penis or scrotum to maintain or enhance an erection [
+         <a href="#rid1">
+          1,2
+         </a>
+         ].
+        </p>
+        <p class="headingAnchor" id="H3252604274">
+         <span class="h1">
+          CLINICAL PRESENTATION
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Based upon anecdotal experience, ring entrapment may present in the following ways:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         A correctly sized ring becomes tight when the finger or, less commonly, the toe swells due to dependent extremity positioning (often while sleeping), local trauma, infection, allergic angioedema, excessive salt intake, or any other condition that causes swollen fingers or toes.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         A young child puts a tight ring, metal nut, or metal washer on to the finger or toe as part of normal exploratory behavior.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         An adolescent or adult male puts a constricting ring around the penis and/or scrotum to enhance an erection, and excessive swelling prevents subsequent removal.
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H56282111">
+         <span class="h1">
+          EVALUATION
+         </span>
+        </p>
+        <p class="headingAnchor" id="H1898083628">
+         <span class="h2">
+          History
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The clinician should determine how long the ring has been on the digit or external genitalia, the composition of the ring, and removal methods already attempted.
+        </p>
+        <p>
+         If trauma is the cause of entrapment, the mechanism and timing of the injury should be assessed. A history of trauma increases the likelihood of an associated fracture, dislocation, or laceration.
+        </p>
+        <p>
+         Patients with symptoms of infection (eg, redness, pain, and fever) or allergic angioedema (eg, exposure to a known or suspected allergen with rapid onset of rash, difficulty breathing, or other signs of allergic reaction) warrant timely treatment of the underlying cause in addition to ring removal. (See
+         <a class="medical medical_review" href="/z/d/html/110530.html" rel="external">
+          "Acute cellulitis and erysipelas in adults: Treatment"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/6027.html" rel="external">
+          "Skin and soft tissue infections in children &gt;28 days: Evaluation and management"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/392.html" rel="external">
+          "Anaphylaxis: Emergency treatment"
+         </a>
+         .)
+        </p>
+        <p>
+         The clinician should determine the tetanus immunization status for patients with open wounds.
+        </p>
+        <p class="headingAnchor" id="H878135518">
+         <span class="h2">
+          Physical examination
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Physical examination demonstrates a tight, constricting ring with distal swelling. For digits, the typical ring location is between the metacarpal or metatarsal and proximal interphalangeal joints. Entrapped rings on the penis may be proximal or distal to the scrotum.
+        </p>
+        <p>
+         Pertinent physical findings that are indications for emergency ring removal include:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Signs of ischemia:
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Mottling
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Blue-gray or white color of the distal digit or penis
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Very prolonged or absent capillary refill
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         No distal pulse by pulse oximetry
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         Severe pain
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Open wound and/or deformity suggesting fracture or dislocation in the affected digit
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H3019722316">
+         <span class="h1">
+          DIAGNOSIS
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Ring entrapment is a clinical diagnosis that is made when a ring cannot be manually removed from the digit or penis without special techniques or equipment. Patients with ring entrapment typically have marked distal swelling, which may be complicated by ischemia or, for digits, local trauma with an associated fracture, dislocation, and/or laceration.
+        </p>
+        <p class="headingAnchor" id="H631379627">
+         <span class="h1">
+          DIFFERENTIAL DIAGNOSIS
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Because of its obvious presentation, ring entrapment is not likely to be confused with other diseases.
+        </p>
+        <p>
+         However, ring entrapment may coexist with other conditions that warrant further management as follows:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Fracture or dislocation suggested by the presence of a deformity or point tenderness; after ring removal, these patients should undergo plain radiographs. Management of digital fractures and dislocations are discussed separately. (See
+         <a class="medical medical_review" href="/z/d/html/15114.html" rel="external">
+          "Overview of finger, hand, and wrist fractures"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/6314.html" rel="external">
+          "Digit dislocation reduction"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/222.html" rel="external">
+          "Toe fractures in adults"
+         </a>
+         .)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Cellulitis indicated by redness, swelling, warmth, and/or fever; in addition to ring removal, these patients warrant antibiotics and, depending upon the degree of illness, may warrant laboratory testing. (See
+         <a class="medical medical_review" href="/z/d/html/110530.html" rel="external">
+          "Acute cellulitis and erysipelas in adults: Treatment"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/6027.html" rel="external">
+          "Skin and soft tissue infections in children &gt;28 days: Evaluation and management"
+         </a>
+         .)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Allergic reaction with angioedema; these patients require stabilization of anaphylaxis, if present, and management of the allergic reaction. (See
+         <a class="medical medical_review" href="/z/d/html/392.html" rel="external">
+          "Anaphylaxis: Emergency treatment"
+         </a>
+         .)
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H1674295275">
+         <span class="h1">
+          RING REMOVAL
+         </span>
+        </p>
+        <p class="headingAnchor" id="H972797085">
+         <span class="h2">
+          Approach
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The approach to ring removal varies depending upon the degree of neurovascular compromise; the presence of local trauma with an associated deep wound, fracture, or dislocation; the ring's composition; and the availability of dedicated ring removal devices (eg, compression device, electric ring cutter). The approach presented in this topic has been developed based upon clinical experience and small observational studies [
+         <a href="#rid3">
+          3
+         </a>
+         ].
+        </p>
+        <p class="headingAnchor" id="H976577581">
+         <span class="h3">
+          Digital entrapment
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The approach to ring removal from the finger or toe is provided in the algorithm  (
+         <a class="graphic graphic_algorithm graphicRef116572" href="/z/d/graphic/116572.html" rel="external">
+          algorithm 1
+         </a>
+         ) and summarized below:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Ischemia, nerve injury, or local trauma
+         </strong>
+         – Patients with signs of neurovascular compromise (eg, mottling, very delayed or absent capillary refill, blue-gray or white color, or digital nerve injury with loss of sensation) or local trauma with a deep wound, suspected fracture, or dislocation should undergo emergency ring removal by cutting or breaking the ring. If available, a dedicated electric ring cutter that cuts through most metals can be used [
+         <a href="#rid4">
+          4,5
+         </a>
+         ]. It is important to verify which metals the electric ring cutter blade will cut through as the ring composition (when known) should determine the proper tool necessary for removal. These patients also frequently warrant emergency consultation with a hand, plastics, or orthopedic surgeon. (See
+         <a class="local">
+          'Cut or break the ring'
+         </a>
+         below.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          No ischemia, nerve injury, or local trauma
+         </strong>
+         – Inexpensive, thin, soft metal or plastic rings should be cut off with a hand-operated (or electric, if available) ring cutter. Otherwise, the clinician may attempt one of the methods to remove an intact ring. (See
+         <a class="local">
+          'Remove the ring intact'
+         </a>
+         below.)
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H3867697135">
+         <span class="h3">
+          Penile entrapment
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Penile ring entrapment should be considered a potential urologic emergency. Penile rings in adult males are most often placed to maintain an erection and typically encircle the penis or, rarely, are placed around the penis and scrotum [
+         <a href="#rid1">
+          1,6,7
+         </a>
+         ]. Other strangulation devices can include nonmetallic rings, bottles, and elastic bands. Patient embarrassment may result in delayed presentation with varying degrees of penile injury due to progressive venous, lymphatic, and arterial obstruction. Urethral injury or penile necrosis is associated with rings in place for longer than 72 hours [
+         <a href="#rid1">
+          1
+         </a>
+         ].
+        </p>
+        <p>
+         Evaluation of the entrapped genitalia should include assessment of color, sensation, ability to void, presence of lacerations, and evidence of deeper injury including urethral fistula or ischemic injury. Most patients present with low grade injuries, such as penile edema and skin ulceration, with minimal distal sensation loss, and prompt removal can usually be performed. Penile blocks can be used for pain control, if necessary. (See
+         <a class="medical medical_review" href="/z/d/html/6326.html" rel="external">
+          "Management of zipper entrapment injuries", section on 'Dorsal penile block'
+         </a>
+         .)
+        </p>
+        <p>
+         Successful methods of removal in the urologic literature include those that leave the ring intact or, more commonly, cutting or breaking the ring. The method of removal will depend on the composition and size of the ring or constriction device, the incarceration time, and the degree of penile injury at the time of presentation [
+         <a href="#rid1">
+          1,6,8
+         </a>
+         ]. Rings at the base of the scrotum are approached in the same way as those encircling the penis.
+        </p>
+        <p>
+         Males with penile constriction devices and signs of penile ischemia or urethral injury warrant emergency consultation with a urologist and removal by cutting or breaking the ring [
+         <a href="#rid1">
+          1,9,10
+         </a>
+         ]. (See
+         <a class="local">
+          'Cut or break the ring'
+         </a>
+         below.)
+        </p>
+        <p>
+         Patients with preserved penile perfusion may undergo removal of an intact ring or have the ring cut off. In difficult cases, multiple penile needle pricks with manual compression to reduce edema or penile aspiration by a urologist or other physician with expertise with these procedures may facilitate removal of an intact ring that cannot be easily cut [
+         <a href="#rid1">
+          1,6
+         </a>
+         ]. (See
+         <a class="local">
+          'Remove the ring intact'
+         </a>
+         below.)
+        </p>
+        <p>
+         After ring removal, the penis should be examined thoroughly to assess vascular status. Most patients have minor penile edema with or without minor skin ulceration and can be discharged once they demonstrate that they are able to void normally. The clinician should advise the patient that penile constriction devices be avoided but, if used, should remain in place for no longer than 30 minutes. Furthermore, if the patient plans to persist in using such devices, a medically approved hinged device with a release mechanism is strongly recommended [
+         <a href="#rid1">
+          1
+         </a>
+         ].
+        </p>
+        <p>
+         More severe injuries warrant further evaluation as follows [
+         <a href="#rid1">
+          1
+         </a>
+         ]:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Color Doppler sonography is indicated if penile perfusion does not rapidly recover after ring removal.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         If there is significant skin ulceration to the level of the urethra or suspicion of cutaneous urethral fistula formation, then evaluation of urethral integrity should be performed by cystoscopy or contrast urethrography.
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H3190318891">
+         <span class="h2">
+          Techniques
+         </span>
+        </p>
+        <p class="headingAnchor" id="H4">
+         <span class="h3">
+          Preparation
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Key interventions prior to ring removal include:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Control pain
+         </strong>
+         – With careful explanation of the procedure, the clinician often can cut off or break a ring without anesthesia. This approach allows the patient to give feedback regarding overheating of the ring during cutting.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         When removing an intact ring, pain control is usually necessary. Regional infiltrative anesthesia by digital block or dorsal penile block  (
+         <a class="graphic graphic_figure graphicRef69794" href="/z/d/graphic/69794.html" rel="external">
+          figure 1
+         </a>
+         ) suffices for most cooperative adolescents and adults. (See
+         <a class="medical medical_review" href="/z/d/html/262.html" rel="external">
+          "Digital nerve block"
+         </a>
+         and
+         <a class="medical medical_review" href="/z/d/html/6326.html" rel="external">
+          "Management of zipper entrapment injuries", section on 'Dorsal penile block'
+         </a>
+         .)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         Young children are frequently uncooperative and may require procedural sedation. (See
+         <a class="medical medical_review" href="/z/d/html/6330.html" rel="external">
+          "Procedural sedation in children: Approach"
+         </a>
+         .)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Prepare the wound
+         </strong>
+         – Before the ring is removed, clean the surrounding skin with
+         <a class="drug drug_general" data-topicid="9801" href="/z/d/drug information/9801.html" rel="external">
+          povidone iodine
+         </a>
+         or similar antiseptic solution [
+         <a href="#rid11">
+          11
+         </a>
+         ].
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H834260608">
+         <span class="h3">
+          Cut or break the ring
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Ring entrapment with ischemia, nerve deficit, deep open wound, fracture, or dislocation warrants emergency removal by cutting or breaking the ring  (
+         <a class="graphic graphic_algorithm graphicRef116572" href="/z/d/graphic/116572.html" rel="external">
+          algorithm 1
+         </a>
+         ).
+        </p>
+        <p class="headingAnchor" id="H3886659505">
+         <span class="h4">
+          Soft metal or plastic rings
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Soft metal (eg, gold, silver, copper, or tin) or plastic rings may be cut with a hand-operated or electric ring cutter. Hand-operated ring cutters are usually not effective for removing hard metal (eg, steel or titanium), tungsten carbide, or ceramic rings. Before each use, check the saw blade of the ring cutter to ensure that is it sharp and clean. Show the patient how the guard prevents cutting of the finger.
+        </p>
+        <p>
+         If using a hand-operated ring cutter, the procedural steps are as follows:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Prior to use, cover any open wounds to prevent metal filings from entering and causing foreign body reactions and chronic synovitis [
+         <a href="#rid12">
+          12
+         </a>
+         ].
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Place the guard of the ring cutter under the ring on the palmar aspect of the hand or the plantar aspect of the foot.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         If possible, rotate the ring so that the thinnest part of the band is located under the saw blade.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Apply the saw blade wheel to the ring and turn it  (
+         <a class="graphic graphic_figure graphicRef53966" href="/z/d/graphic/53966.html" rel="external">
+          figure 2
+         </a>
+         ).
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         If the friction of the ring cutting process generates heat, interrupt the procedure periodically to allow the ring to cool. If necessary, drip ice water onto the ring to hasten the cooling process.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         When the ring is fully cut, use hemostats to grab the two edges and pry open the ring.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Alternatively, cut the ring in two places to permit removal. When making the second cut, protect the skin under the first cut from sharp edges by placing gauze under the cut ring. Once the ring is cut, remove it from the finger by pulling it apart with hemostats.
+        </p>
+        <p>
+        </p>
+        <p>
+         If using an electric ring cutter, the process is similar, but be sure to follow the manufacturer’s operating instructions.
+        </p>
+        <p>
+         Rings that have been removed with a ring cutter usually can be repaired by a jeweler.
+        </p>
+        <p class="headingAnchor" id="H2713454419">
+         <span class="h4">
+          Hard metal (eg, steel or titanium) rings
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Hard metal rings may be removed with an electric ring cutter with a diamond or carbide blade or various power tools, including dental drills, diamond drills, Dremel saws, and air-driven grinders  (
+         <a class="graphic graphic_figure graphicRef116627" href="/z/d/graphic/116627.html" rel="external">
+          figure 3
+         </a>
+         ) [
+         <a href="#rid1">
+          1,3
+         </a>
+         ]. Dentists, firefighters, machinists, or other aid personnel may have greater proficiency with the safe use of these power tools and may be the best primary operators. Do not attempt to break a steel or titanium ring as that may crush it into the finger, causing more damage.
+        </p>
+        <p>
+         Take the following precautions during cutting to avoid patient and operator injury:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Provide industrial eye protection for the patient, the provider, and all other people present for the procedure.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Cover the patient's exposed skin and any open wounds with damp gauze to protect from sparks and metal filings.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Insert a metal barrier between the metal ring and the digit or penis (eg, laryngoscope blade or malleable retractor). Electric ring cutters will have a guard.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Cool the ring and the drill (or saw) with ice prior to the procedure and continue dripping ice water over the cutting site during the procedure. Interrupt frequently to assess for overheating of the ring. If using an electric ring cutter, follow the manufacturer’s instructions regarding cooling or lubricating the device while cutting the ring.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Make two cuts through the ring, 120 to 180 degrees apart on the dorsal and volar surface.
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H1994364187">
+         <span class="h4">
+          Tungsten carbide or ceramic rings
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Tungsten carbide and ceramic rings contain hard but brittle materials that cannot be easily cut but can be broken using pliers, a ring vise, or vise grips [
+         <a href="#rid3">
+          3
+         </a>
+         ]. An electric ring cutter with a specialized blade (the device/blade will say which metal it can cut) may be preferable to breaking the ring, if available. Most blades will not cut through tungsten, and tungsten rings will most likely need to be broken. Prior to attempting to break a ring, ensure that the patient is confident of the ring’s composition since many metals look indistinguishable, and attempting to break a steel or titanium ring may cause more finger injury.
+        </p>
+        <p>
+         During the breaking procedure, ensure industrial eye protection for the patient, provider, and any other personnel in the room as ring shards can be expelled at high speeds. Cover the patient's exposed skin and any open wounds with damp gauze to protect from ring shards. Dentists, firemen, machinists, or other aid personnel may have greater proficiency with the safe use of these devices and may be the best primary operators of these tools.
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Locking pliers – Size the pliers by placing them tightly around the ring  (
+         <a class="graphic graphic_figure graphicRef116631" href="/z/d/graphic/116631.html" rel="external">
+          figure 4
+         </a>
+         ). Adjust the pliers to one turn smaller than the ring. Apply the pliers circumferentially around the ring and close them steadily until the ring shatters. The locking pliers may have to be opened, adjusted, and then closed around the ring several times before pressure sufficient to shatter the ring is generated.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Ring vise – Apply the vise per manufacturer’s instructions so that it encircles the ring. Turn the knob until the ring breaks  (
+         <a class="graphic graphic_figure graphicRef116632" href="/z/d/graphic/116632.html" rel="external">
+          figure 5
+         </a>
+         ).
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Groove joint or other non-locking pliers – Because of less chance for injury to the finger, locking pliers or a ring vise is preferred. Adjust so that the jaws of the non-locking pliers close opposite of each other when applied to the ring. Apply the pliers circumferentially and close them steadily and under control. Stop applying pressure as soon as the ring breaks to avoid pinching the finger.
+        </p>
+        <p>
+        </p>
+        <p>
+         Occasionally, tungsten carbide or ceramic rings are lined with a metal band that is then removed using a ring cutter. (See
+         <a class="local">
+          'Soft metal or plastic rings'
+         </a>
+         above.)
+        </p>
+        <p class="headingAnchor" id="H1524059079">
+         <span class="h4">
+          Unknown composition
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         When the composition of the ring is not known by history or apparent upon examination and cutting the ring is indicated, the clinician should first use a hand-operated or, if available, an electric ring cutter with a standard blade. If the ring cutter is ineffective, then the ring is likely made of hard metal, tungsten carbide, ceramic, or stone and will require cutting with an electric ring cutter with a diamond or carbide blade (if available), a power tool (hard metal), or breaking using a ring vise or locking pliers (tungsten carbide, ceramic, or stone ring). However, if there is a possibility that the ring is steel or titanium (many metals look indistinguishable), do not attempt breaking it since that may crush the ring onto the finger, causing further injury. (See
+         <a class="local">
+          'Hard metal (eg, steel or titanium) rings'
+         </a>
+         above.)
+        </p>
+        <p class="headingAnchor" id="H2081325082">
+         <span class="h3">
+          Remove the ring intact
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         For valuable rings, removal of an intact ring is an acceptable approach when there is no ischemia or neurologic deficit, no deep wound, and no evidence of a fracture or dislocation  (
+         <a class="graphic graphic_algorithm graphicRef116572" href="/z/d/graphic/116572.html" rel="external">
+          algorithm 1
+         </a>
+         ). In general, inexpensive soft metal or plastic rings should be cut off because this procedure can be accomplished quickly without regional anesthesia or sedation.
+        </p>
+        <p>
+         Several techniques may be used to remove a ring without cutting it [
+         <a href="#rid3">
+          3,11,13-17
+         </a>
+         ]. When attempting removal of an intact ring, apply ice and, for digital rings, elevate the extremity to decrease swelling prior to the procedure. Apply soap or water-soluble lubricant liberally to the entrapped digit or penis. With the exception of the compression device described below, these techniques are painful, and use of regional anesthesia or, in uncooperative patients, procedural sedation is typically necessary [
+         <a href="#rid17">
+          17
+         </a>
+         ]. (See
+         <a class="local">
+          'Preparation'
+         </a>
+         above.)
+        </p>
+        <p>
+         Several techniques have been reported to successfully remove intact rings. No studies have compared the efficacy of the techniques. Thus, the provider should use the one with which they are most familiar.
+        </p>
+        <p class="headingAnchor" id="H1281383335">
+         <span class="h4">
+          Manual removal
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Two methods have been described that markedly reduce digital swelling and permit manual removal. These techniques may also permit use of the string pull or string wrap method described below if swelling prevents passage of a string or other ligature beneath the ring.
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Double Penrose drain method – To perform this procedure, wrap one Penrose drain just distal to the proximal interphalangeal (PIP) joint. Tightly wrap a second Penrose drain, starting at the first one and extending back to the incarcerated ring. Repeat as necessary until the edema is sufficiently reduced to remove the ring. Once the ring passes the PIP joint, remove the first Penrose drain. In a case series of 12 patients, the double Penrose drain technique led to successful manual ring removal in all patients, including those with digital trauma [
+         <a href="#rid13">
+          13
+         </a>
+         ].
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Elastic tape method – Apply a blood pressure cuff to the affected extremity and inflate it to the patient's systolic blood pressure plus 100 mmHg. Then tightly wrap a Penrose drain or 1 inch elastic band (intravenous tourniquet) from the tip of the digit proximally and elevate the extremity above the heart for 10 to 15 minutes  (
+         <a class="graphic graphic_figure graphicRef56186" href="/z/d/graphic/56186.html" rel="external">
+          figure 6
+         </a>
+         ). Assess for reduction of edema and reapply the elastic wrap, if necessary. Keep the blood pressure cuff inflated while attempting manual removal, but remember that total tourniquet time should not exceed two hours [
+         <a href="#rid14">
+          14
+         </a>
+         ].
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H1851222306">
+         <span class="h4">
+          String pull technique
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The steps for the string pull method are as follows:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Lubricate the digit or penis with water-soluble lubricant.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Pass one end of a 20-inch length of 2.0 or 3.0 silk, umbilical tape, or elastic band (eg, phlebotomy tourniquet, Penrose drain, or rubber band) under the ring and pull the two ends until they are of equal length. Grasp the string from underneath the proximal edge of the ring with a hemostat to pull it through.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Grasp the string or band 5 to 10 cm from the ring and pull distally in a circular fashion  (
+         <a class="graphic graphic_picture graphicRef68736" href="/z/d/graphic/68736.html" rel="external">
+          picture 1
+         </a>
+         ) [
+         <a href="#rid11">
+          11
+         </a>
+         ].
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Move the string or elastic band to different areas of the ring and pull it along the axis of the finger or penis, permitting the ring to be gradually removed [
+         <a href="#rid15">
+          15-17
+         </a>
+         ].
+        </p>
+        <p>
+        </p>
+        <p>
+         The string pull technique can be modified by the addition of one or more strings or elastic bands to prevent the ring from sliding back while it is being pulled [
+         <a href="#rid18">
+          18
+         </a>
+         ].
+        </p>
+        <p class="headingAnchor" id="H2486197358">
+         <span class="h4">
+          String wrap technique
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         The success of this technique depends upon tight, close wrapping of the finger or penis [
+         <a href="#rid16">
+          16,17
+         </a>
+         ]:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Place one end of 2.0 or 3.0 suture, Penrose drain, or umbilical tape 20 to 25 inches (0.5 to 0.6 m) in length under the ring from the proximal to the distal side with 5 inches (12.5 cm) of material remaining proximally [
+         <a href="#rid16">
+          16,17,19
+         </a>
+         ].
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Wrap the suture material tightly around the digit or penis beginning at the distal aspect of the ring. Overlap the wrappings so that no tissue is visible  (
+         <a class="graphic graphic_figure graphicRef53497" href="/z/d/graphic/53497.html" rel="external">
+          figure 7
+         </a>
+         and
+         <a class="graphic graphic_figure graphicRef69794" href="/z/d/graphic/69794.html" rel="external">
+          figure 1
+         </a>
+         ).
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Continue wrapping beyond the PIP joint of the digit or beyond the coronal sulcus of the penis  (
+         <a class="graphic graphic_figure graphicRef76391" href="/z/d/graphic/76391.html" rel="external">
+          figure 8
+         </a>
+         ).
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Once the wrapping is complete, unwrap the proximal end which will gradually remove the ring from the finger or penis. For the finger, getting the ring over the PIP joint is typically most difficult. In some patients, rewrapping may be necessary  (
+         <a class="graphic graphic_figure graphicRef53497" href="/z/d/graphic/53497.html" rel="external">
+          figure 7
+         </a>
+         and
+         <a class="graphic graphic_figure graphicRef69794" href="/z/d/graphic/69794.html" rel="external">
+          figure 1
+         </a>
+         ).
+        </p>
+        <p>
+        </p>
+        <p>
+         A modification of the string wrap technique in fingers is to use 1-inch self-adherent wrap (eg, Coban or Dynarex) [
+         <a href="#rid20">
+          20
+         </a>
+         ]. The finger is wrapped tightly, beginning at the fingertip and wrapped towards the knuckle until the ring is reached. Using forceps, pass the end of the Coban under the ring. After two to three minutes, lubricate the finger with lubricant gel or soap and pull the end of the Coban distally to remove the ring. Coban is naturally elastic and self-adhesive, which enhances compression of the finger and prevents skin herniating between wraps. It also has high tensile strength, which prevents breaking while unwinding.
+        </p>
+        <p class="headingAnchor" id="H945427413">
+         <span class="h4">
+          Surgical glove technique
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         This technique is an adaptation of the wrap and pull techniques above and can be used in patients with superficial wounds [
+         <a href="#rid21">
+          21
+         </a>
+         ].
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Cut one finger from a surgical glove to form a cylindrical sleeve.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Place this sleeve on the involved digit and slip the proximal end circumferentially under the ring using a hemostat  (
+         <a class="graphic graphic_figure graphicRef62819" href="/z/d/graphic/62819.html" rel="external">
+          figure 9
+         </a>
+         ).
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Once in place, pull the proximal end back over the ring and toward the tip of the digit in a twisting motion, advancing the ring distally. Avoid pulling so hard that the glove rips or pulls out from under the ring.
+        </p>
+        <p>
+        </p>
+        <p class="headingAnchor" id="H1914046705">
+         <span class="h4">
+          Compression device
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         A compression device has been designed for the removal of smooth rings from adults and cooperative children over eight years of age with ring entrapment  (
+         <a class="graphic graphic_picture graphicRef140098" href="/z/d/graphic/140098.html" rel="external">
+          picture 2
+         </a>
+         ) [
+         <a href="#rid22">
+          22
+         </a>
+         ]. The device provides circumferential compression just distal to the entrapped ring, which, combined with elevation of the extremity and lubrication, can permit ring removal. It is not recommended for use when the ring is bulky, irregular, fragile, or sharp edged. Furthermore, the manufacturer does not recommend its use for patients with finger fractures, ligament or tendon disruption, or neurovascular injury. In a small case series of adults, pain of removal using this device was minimal [
+         <a href="#rid23">
+          23,24
+         </a>
+         ]. The device is not recommended for removal of penile rings.
+        </p>
+        <p class="headingAnchor" id="H12">
+         <span class="h2">
+          Post-procedural care
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         Removal of a ring can cause soft tissue trauma, including bruising or small cuts. After the ring is removed, clean the digit or penis and dress it with antibiotic ointment if necessary. Reevaluate neurovascular status. If there is clinical suspicion for digital fracture (eg, focal bony tenderness), then obtain plain radiographs. For digital swelling, instruct the patient to keep the affected limb elevated. Advise the patient that pain and swelling should be completely resolved before they return to wearing rings on the affected finger. Verify tetanus status and give prophylaxis when indicated  (
+         <a class="graphic graphic_table graphicRef61087" href="/z/d/graphic/61087.html" rel="external">
+          table 1
+         </a>
+         ) (see
+         <a class="medical medical_review" href="/z/d/html/5525.html" rel="external">
+          "Tetanus"
+         </a>
+         ). Patients with penile rings should be able to void normally before discharge.
+        </p>
+        <p class="headingAnchor" id="H922693115">
+         <span class="h1">
+          INDICATIONS FOR SPECIALTY CONSULTATION
+         </span>
+         <span class="headingEndMark">
+          —
+         </span>
+         After ring removal from a finger or toe, consultation with a hand, plastics, or orthopedic surgeon is warranted for the following findings:
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Persistent signs of ischemia
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Open fracture
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Open joint dislocation
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Fracture with dislocation
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Unstable fracture
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Tendon injury (unable to flex or extend the digit
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         Digital nerve injury (loss of distal sensation)
+        </p>
+        <p>
+        </p>
+        <p>
+         Emergency urology consultation is indicated for patients with penile ring entrapment and signs of penile ischemia or necrosis or, after ring removal, for those who have persistent ischemia, difficulty voiding, or deep ulceration with potential involvement of the urethra or cutaneous urethral fistula.
+        </p>
+        <p class="headingAnchor" id="H13">
+         <span class="h1">
+          SUMMARY AND RECOMMENDATIONS
+         </span>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Diagnosis
+         </strong>
+         – Ring entrapment is a clinical diagnosis that is made when a ring cannot be manually removed from the digit or penis without special techniques or equipment. Patients with ring entrapment typically have marked distal swelling which may be complicated by ischemia or, for digits, local trauma with an associated fracture, dislocation, and/or laceration. (See
+         <a class="local">
+          'Evaluation'
+         </a>
+         above and
+         <a class="local">
+          'Diagnosis'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Finger or toe ring removal
+         </strong>
+         – An approach to ring removal from the finger or toe based upon clinical experience is provided in the algorithm  (
+         <a class="graphic graphic_algorithm graphicRef116572" href="/z/d/graphic/116572.html" rel="external">
+          algorithm 1
+         </a>
+         ) (see
+         <a class="local">
+          'Digital entrapment'
+         </a>
+         above):
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         <strong>
+          Concern for ischemia, nerve, or deep tissue injury
+         </strong>
+         – Patients with signs of ischemia, nerve injury or local trauma with a deep wound, suspected fracture, or dislocation should undergo emergency ring removed by cutting or breaking the ring. When known, the ring composition determines the proper tool necessary for removal (see
+         <a class="local">
+          'Cut or break the ring'
+         </a>
+         above):
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent3">
+         <span class="glyph">
+          -
+         </span>
+         Soft metal (eg, gold, silver, or copper) or plastic – Hand-operated or electric ring cutter. (See
+         <a class="local">
+          'Soft metal or plastic rings'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent3">
+         <span class="glyph">
+          -
+         </span>
+         Hard metal (eg, steel or titanium) – Electric ring cutter with a diamond or carbide blade (if available) or electric power tool (eg, dental drill, Dremel saw, or air driven grinder). (See
+         <a class="local">
+          'Hard metal (eg, steel or titanium) rings'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent3">
+         <span class="glyph">
+          -
+         </span>
+         Tungsten carbide or ceramic – Electric ring cutter with a diamond or carbide blade that can cut through the material of the ring (if available) or locking pliers, ring vise, or vise grips to break the ring. (See
+         <a class="local">
+          'Tungsten carbide or ceramic rings'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent3">
+         <span class="glyph">
+          -
+         </span>
+         Unknown composition – When the composition of the ring is not known by history or apparent upon examination and cutting the ring is indicated, the clinician should first use a hand-operated or electric ring cutter. If the ring cutter is ineffective, then the ring is likely made of hard metal, tungsten carbide, ceramic, or stone and will require cutting with an electric ring cutter with a diamond or carbide blade that is able to cut through the material of the ring or a power tool (hard metal) or breaking using a ring vise or locking pliers (tungsten carbide, ceramic, or stone ring). However, if there is a possibility that the ring is steel or titanium, do not attempt breaking it since that may crush the ring onto the finger, causing further injury. (See
+         <a class="local">
+          'Unknown composition'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         <strong>
+          No ischemia, nerve, or deep tissue injury
+         </strong>
+         – For patients without ischemia, nerve injury, or local trauma, the approach is as follows:
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent3">
+         <span class="glyph">
+          -
+         </span>
+         Inexpensive thin soft metal or plastic rings should be cut off with a hand-operated ring cutter  (
+         <a class="graphic graphic_figure graphicRef53966" href="/z/d/graphic/53966.html" rel="external">
+          figure 2
+         </a>
+         ). (See
+         <a class="local">
+          'Soft metal or plastic rings'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent3">
+         <span class="glyph">
+          -
+         </span>
+         Valuable rings may be removed intact. Removal of an intact ring is often painful and use of regional anesthesia in adolescents and adults and procedural sedation in children is typically necessary. Before performing the procedure, prepare the wound, reduce swelling, and lubricate the digit or penis. Manual removal may be attempted after using compression, elastic tape, or double Penrose wrapping to reduce swelling. Alternatively, the string or elastic pull technique or string wrap technique may be employed  (
+         <a class="graphic graphic_figure graphicRef69794" href="/z/d/graphic/69794.html" rel="external">
+          figure 1
+         </a>
+         and
+         <a class="graphic graphic_picture graphicRef68736" href="/z/d/graphic/68736.html" rel="external">
+          picture 1
+         </a>
+         and
+         <a class="graphic graphic_figure graphicRef53497" href="/z/d/graphic/53497.html" rel="external">
+          figure 7
+         </a>
+         and
+         <a class="graphic graphic_figure graphicRef53966" href="/z/d/graphic/53966.html" rel="external">
+          figure 2
+         </a>
+         ). (See
+         <a class="local">
+          'Preparation'
+         </a>
+         above and
+         <a class="local">
+          'Remove the ring intact'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Penile ring removal
+         </strong>
+         – Many of the techniques described for removal of an intact digital ring also work for the removal of penile constriction devices. In difficult cases, multiple superficial penile needle pricks followed by manual compression to relieve edema or penile aspiration by a urologist or other physician with expertise with these procedures may facilitate removal of an intact ring. (See
+         <a class="local">
+          'Penile entrapment'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         <strong>
+          Concern for ischemia
+         </strong>
+         – Males with penile constriction devices and signs of penile ischemia or necrosis warrant emergency consultation with a urologist and emergency removal by cutting or breaking the ring. (See
+         <a class="local">
+          'Cut or break the ring'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         <strong>
+          No ischemia
+         </strong>
+         – Patients with preserved penile perfusion may undergo removal of an intact ring or have the ring cut off. (See
+         <a class="local">
+          'Remove the ring intact'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Post-procedure care
+         </strong>
+         – After ring removal, the digit or penis should be cleaned, any open wounds dressed with antibiotic ointment, and tetanus status assessed with prophylaxis given as needed  (
+         <a class="graphic graphic_table graphicRef61087" href="/z/d/graphic/61087.html" rel="external">
+          table 1
+         </a>
+         ). (See
+         <a class="local">
+          'Post-procedural care'
+         </a>
+         above.)
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent1">
+         <span class="glyph">
+          ●
+         </span>
+         <strong>
+          Indications for consultation
+         </strong>
+         – The following are indications for consultation after the ring has been removed (see
+         <a class="local">
+          'Indications for specialty consultation'
+         </a>
+         above):
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         <strong>
+          Finger or toe
+         </strong>
+         – Consultation with a hand, plastics, or orthopedic surgeon is indicated for patients with persistent ischemia, digital nerve injury, tendon injury, open fracture or dislocation, or an unstable fracture.
+        </p>
+        <p>
+        </p>
+        <p class="bulletIndent2">
+         <span class="glyph">
+          •
+         </span>
+         <strong>
+          Penis
+         </strong>
+         – Emergency urology consultation is indicated for patients with penile ring entrapment and persistent signs of penile ischemia, difficulty voiding, significant skin ulceration to the level of the urethra or suspicion of cutaneous urethral fistula formation.
+        </p>
+       </div>
+       <div class="headingAnchor" id="references">
+        <ol id="reference">
+         <li>
+          <a class="nounderline abstract_t">
+           Silberstein J, Grabowski J, Lakin C, Goldstein I. Penile constriction devices: case report, review of the literature, and recommendations for extrication. J Sex Med 2008; 5:1747.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Wu X, Batra R, Al-Akraa M, Seneviratne LN. Penoscrotal entrapment: a safe, innovative technique for removing metal constricting devices. BMJ Case Rep 2012; 2012.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Kalkan A, Kose O, Tas M, Meric G. Review of techniques for the removal of trapped rings on fingers with a proposed new algorithm. Am J Emerg Med 2013; 31:1605.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Walter J, DeBoer M, Koops J, et al. Quick cuts: A comparative study of two tools for ring tourniquet removal. Am J Emerg Med 2021; 46:238.
+          </a>
+         </li>
+         <li class="breakAll">
+          Emesih J, Staple L. A Novel Cutting Device for Ring Removal: Case Study. Journal of Emergency Medical Services. Sept, 14, 2023. https://www.jems.com/equipment-gear/a-novel-cutting-device-for-ring-removal-case-study/ (Accessed on November 13, 2023).
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Singh I, Joshi MK, Jaura MS. Strangulation of penis by a ball bearing device. J Sex Med 2010; 7:3793.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Ivanovski O, Stankov O, Kuzmanoski M, et al. Penile strangulation: two case reports and review of the literature. J Sex Med 2007; 4:1775.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Agu TC, Obiechina N. Post coital penile ring entrapment: A report of a non-surgical extrication method. Int J Surg Case Rep 2016; 18:15.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Greenspan L. Tourniquet syndrome caused by metallic bands: a new tool for removal. Ann Emerg Med 1982; 11:375.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Schuster G, Stockmal P. Genital incarceration with metal rings: their safe removal. Tech Urol 1999; 5:116.
+          </a>
+         </li>
+         <li class="breakAll">
+          Mittage, Ruddy RM. Illustrated techniques of pediatric emergency procedures. In: Textbook of Pediatric Emergency Medicine, 7th ed, Fleisher GR, Ludwig S, Henretig FM (Eds), Wolters Kluwer, Philadelphia 2016. p.47e.
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Fasano FJ Jr, Hansen RH. Foreign body granuloma and synovitis of the finger: a hazard of ring removal by the sawing technique. J Hand Surg Am 1987; 12:621.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Chiu TF, Chu SJ, Chen SG, et al. Use of a Penrose drain to remove an entrapped ring from a finger under emergent conditions. Am J Emerg Med 2007; 25:722.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Cresap CR. Removal of a hardened steel ring from an extremely swollen finger. Am J Emerg Med 1995; 13:318.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           McElfresh EC, Peterson-Elijah RC. Removal of a tight ring by the rubber band. J Hand Surg Br 1991; 16:225.
+          </a>
+         </li>
+         <li class="breakAll">
+          Fuchs SM. Ring removal. In: Textbook of Pediatric Emergency Procedures, 2nd ed, Henretig FM, King C (Eds), Lippincott, Williams, &amp; Wilkins, Philadelphia 2008. p.1107.
+         </li>
+         <li class="breakAll">
+          Stone DB, Scordino DJ. Foreign body removal. In: Roberts and Hedges Clinical Procedures in Emergency Medicine, 6th ed, Roberts JR, Custalow CB, Thomsen TW (Eds), Elsevier Saunders, Philadelphia 2014. p.708.
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Boe C, Kakar S. A Modified String Technique for Atraumatic Ring Removal. J Emerg Med 2018; 55:240.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Belliappa PP. A technique for removal of a tight ring. J Hand Surg Br 1989; 14:127.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Tan V. Coban Method for Removing a Constricting Ring. Hand (N Y) 2019; 14:133.
+          </a>
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Inoue S, Akazawa S, Fukuda H, Shimizu R. Another simple method for ring removal. Anesthesiology 1995; 83:1133.
+          </a>
+         </li>
+         <li class="breakAll">
+          RingRescue. User instruction manual. https://static1.squarespace.com/static/5aa86460aa49a1758e33c36d/t/5d5eb88d3291d00001a1d1d8/1566488728735/User+Manual+V16.pdf (Accessed on August 25, 2020).
+         </li>
+         <li class="breakAll">
+          Staple L, LeBlanc C. A novel approach to ring removal: compression device. Journal of Emergency Medical Services 2020. https://www.jems.com/2020/06/16/a-novel-approach-to-ring-removal/.
+         </li>
+         <li>
+          <a class="nounderline abstract_t">
+           Sayler L, LeBlanc C. Compression Devices as an Alternative Approach After Unsuccessful Ring Removal Attempts. Cureus 2022; 14:e22068.
+          </a>
+         </li>
+        </ol>
+       </div>
+       <div id="topicVersionRevision">
+        Topic 6332 Version 22.0
+       </div>
+      </div>
+      <div class="row">
+       <div class="col-12">
+        <h4 style="text-align: center;padding: 20px;color: cadetblue;">
+         References
+        </h4>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/18507720" id="rid0" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          1 : Penile constriction devices: case report, review of the literature, and recommendations for extrication.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/23010460" id="rid1" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          2 : Penoscrotal entrapment: a safe, innovative technique for removing metal constricting devices.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/24070977" id="rid2" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          3 : Review of techniques for the removal of trapped rings on fingers with a proposed new algorithm.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/33046320" id="rid3" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          4 : Quick cuts: A comparative study of two tools for ring tourniquet removal.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/33046320" id="rid4" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          5 : Quick cuts: A comparative study of two tools for ring tourniquet removal.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/20646187" id="rid5" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          6 : Strangulation of penis by a ball bearing device.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/17888068" id="rid6" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          7 : Penile strangulation: two case reports and review of the literature.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/26670412" id="rid7" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          8 : Post coital penile ring entrapment: A report of a non-surgical extrication method.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/7091800" id="rid8" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          9 : Tourniquet syndrome caused by metallic bands: a new tool for removal.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/10458669" id="rid9" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          10 : Genital incarceration with metal rings: their safe removal.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/10458669" id="rid10" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          11 : Genital incarceration with metal rings: their safe removal.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/3301999" id="rid11" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          12 : Foreign body granuloma and synovitis of the finger: a hazard of ring removal by the sawing technique.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/17606098" id="rid12" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          13 : Use of a Penrose drain to remove an entrapped ring from a finger under emergent conditions.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/7755828" id="rid13" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          14 : Removal of a hardened steel ring from an extremely swollen finger.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/2061673" id="rid14" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          15 : Removal of a tight ring by the rubber band.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/2061673" id="rid15" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          16 : Removal of a tight ring by the rubber band.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/2061673" id="rid16" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          17 : Removal of a tight ring by the rubber band.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/29934038" id="rid17" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          18 : A Modified String Technique for Atraumatic Ring Removal.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/2926210" id="rid18" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          19 : A technique for removal of a tight ring.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/30188186" id="rid19" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          20 : Coban Method for Removing a Constricting Ring.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/7486173" id="rid20" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          21 : Another simple method for ring removal.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/7486173" id="rid21" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          22 : Another simple method for ring removal.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/7486173" id="rid22" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          23 : Another simple method for ring removal.
+         </p>
+        </a>
+       </div>
+       <div class="col-12" style="text-align: left;direction: ltr">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/35295361" id="rid23" target="_blank">
+         <p class="btn-info round" style='width: 100%;margin-bottom: 5px !important;padding: 10px;border-radius: 12px;;font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;'>
+          24 : Compression Devices as an Alternative Approach After Unsuccessful Ring Removal Attempts.
+         </p>
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </section>
+  <!-- End Main Menu Area -->
+  <!-- Start Search Popup Area -->
+  <!-- End Footer Area -->
+  <!-- Back to top -->
+  <a class="scrolltop" href="#top">
+   <i class="icofont-hand-drawn-up">
+   </i>
+  </a>
+  <!-- End Back to top -->
+  <!-- jQuery Min JS -->
+  <!-- Prpper JS -->
+  <!-- Bootstrap Min JS -->
+  <!-- Classy Nav Min Js -->
+  <!-- Owl Carousel Min Js -->
+  <!-- Magnific Popup JS -->
+  <!-- CounterUp JS -->
+  <!-- Waypoints JS -->
+  <!-- Form Validator Min JS -->
+  <!-- Contact Form Min JS -->
+  <!-- Main JS -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+ </body>
 </html>
