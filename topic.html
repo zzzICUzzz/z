@@ -119,26 +119,27 @@ function jaroWinkler(a, b) {
 function findRelatedFiles(event) {
   event.preventDefault();
   var input = document.getElementById('inputSearch').value;
-  // Chuyển inputSearch thành chữ thường và loại bỏ các ký tự không phải là chữ cái
-  input = input.toLowerCase().replace(/[^a-z]/g, '');
+    // Chuyển inputSearch thành chữ thường và loại bỏ các ký tự không phải là chữ cái
+    input = input.toLowerCase().replace(/[^a-z]/g, '');
 
+  // Tách các từ và xáo trộn chúng
+  var inputWords = input.split(' ').sort(() => Math.random() - 0.5);
 
   fetch('d/trans.json')
       .then(response => response.json())
       .then(jsonData => {
-          var inputWords = input.split(' ');
-
           var relatedFiles = Object.keys(jsonData)
               .map(function(fileName) {
                   var titleWords = jsonData[fileName].split(' ');
                   var commonWordsCount = titleWords.filter(word => inputWords.includes(word)).length;
-                  var similarity = jaroWinkler(jsonData[fileName], input);
+                  var similarity = jaroWinkler(jsonData[fileName], inputWords.join(' '));
                   return { fileName, score: commonWordsCount + similarity };
               })
               .filter(file => file.score > 0)
               .sort((a, b) => b.score - a.score)
-              .slice(0, 35)  // Giới hạn kết quả chỉ cần trả về 25 câu trả lời tương đồng nhất
+              .slice(0, 35)  // Giới hạn kết quả chỉ cần trả về 3 câu trả lời tương đồng nhất
               .map(file => file.fileName);
+
           // Tạo và hiển thị danh sách các div
           var resultsDiv = document.getElementById('results');
           resultsDiv.innerHTML = '';
@@ -157,10 +158,8 @@ function findRelatedFiles(event) {
 document.getElementById('inputSearch').addEventListener('keypress', function(event) {
   if (event.key === 'Enter') {
     findRelatedFiles(event);
-    
   }
 });
 </script>
-
 </body>
 </html>
