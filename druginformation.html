@@ -6,7 +6,7 @@
 <head>
   <title> UpToDate-2024 by Z</title>
   <link href="d/css/2.css" rel="stylesheet"/>
-
+  <script src="https://cdn.jsdelivr.net/npm/fuzzysort@2.0.4/fuzzysort.min.js"></script>
 </head>
 <body>
   <footer class="uptodate" id="uptodate-area" >
@@ -43,117 +43,33 @@
 </div>
 <div  id="results"></div>
 <script type="text/javascript">
-
-  // Hàm Jaro-Winkler
-function jaroWinkler(a, b) {
-  var m = 0;
-
-  // Exit early if either are empty.
-  if (a.length === 0 || b.length === 0) {
-    return 0;
-  }
-
-  // Exit early if they're an exact match.
-  if (a === b) {
-    return 1;
-  }
-
-  var range = (Math.floor(Math.max(a.length, b.length) / 2)) - 1,
-      aMatches = new Array(a.length),
-      bMatches = new Array(b.length);
-
-  for (var i = 0; i < a.length; i++) {
-    var low = (i >= range) ? i - range : 0,
-        high = (i + range <= (b.length - 1)) ? (i + range) : (b.length - 1);
-
-    for (var j = low; j <= high; j++) {
-      if (aMatches[i] !== true && bMatches[j] !== true && a[i] === b[j]) {
-        ++m;
-        aMatches[i] = bMatches[j] = true;
-        break;
-      }
-    }
-  }
-
-  // Exit early if no matches were found.
-  if (m === 0) {
-    return 0;
-  }
-
-  // Count the transpositions.
-  var k = n_trans = 0;
-
-  for (var i = 0; i < a.length; i++) {
-    if (aMatches[i] === true) {
-      for (var j = k; j < b.length; j++) {
-        if (bMatches[j] === true) {
-          k = j + 1;
-          break;
-        }
-      }
-
-      if (a[i] !== b[j]) {
-        ++n_trans;
-      }
-    }
-  }
-
-  var weight = (m / a.length + m / b.length + (m - (n_trans / 2)) / m) / 3,
-      
-      p = 0.5;
-      l = 0;
-
-  if (weight > 0.7) {
-    while (a[l] === b[l] && l < 5) {
-      ++l;
-    }
-
-    weight = weight + l * p * (1 - weight);
-  }
-
-  return weight;
-}
-
 // Hàm này sẽ được gọi khi người dùng nhập tiêu đề và nhấn enter
 function findRelatedFiles(event) {
   event.preventDefault();
   var input = document.getElementById('inputSearch').value;
-  // Chuyển inputSearch thành chữ thường và loại bỏ các ký tự không phải là chữ cái
-      input = input.toLowerCase().replace(/[^a-z]/g, '');
-
-  // Tách các từ và xáo trộn chúng
-  var inputWords = input.split(' ').sort(() => Math.random() - 0.5);
+  input = input.toLowerCase().replace(/[^a-z]/g, '');
 
   fetch('d/drug.json')
-      .then(response => response.json())
-      .then(jsonData => {
-          var relatedFiles = Object.keys(jsonData)
-              .map(function(fileName) {
-                  var titleWords = jsonData[fileName].split(' ');
-                  var commonWordsCount = titleWords.filter(word => inputWords.includes(word)).length;
-                  var similarity = jaroWinkler(jsonData[fileName], inputWords.join(' '));
-                  return { fileName, score: commonWordsCount + similarity };
-              })
-              .filter(file => file.score > 0)
-              .sort((a, b) => b.score - a.score)
-              .slice(0, 5)  // Giới hạn kết quả chỉ cần trả về 3 câu trả lời tương đồng nhất
-              .map(file => file.fileName);
+    .then(response => response.json())
+    .then(jsonData => {
+      var targets = Object.keys(jsonData).map(key => ({file: jsonData[key], fileName: key}));
+      var results = fuzzysort.go(input, targets, {key: 'file'});
 
-          // Tạo và hiển thị danh sách các div
-          var resultsDiv = document.getElementById('results');
-          resultsDiv.innerHTML = '';
-          relatedFiles.forEach(function(fileName) {
-              var div = document.createElement('div');
-              div.classList.add('selections'); // Thêm class CSS vào đây
-              var link = document.createElement('a');
-              link.href = '/z/d/drug information/' + fileName;
-              link.textContent = jsonData[fileName];
-              div.appendChild(link);
-              resultsDiv.appendChild(div);
-          });
-      })
-      .catch(error => console.error('Có lỗi xảy ra:', error));
+      var resultsDiv = document.getElementById('results');
+      resultsDiv.innerHTML = '';
+      results.forEach(result => {
+        var div = document.createElement('div');
+        div.classList.add('selections');
+        var link = document.createElement('a');
+        link.href = '/z/d/html/' + result.obj.fileName;
+        link.textContent = result.obj.file; // Đã loại bỏ fuzzysort.highlight
+        div.appendChild(link);
+        resultsDiv.appendChild(div);
+      });
+    })
+    .catch(error => console.error('Có lỗi xảy ra:', error));
 }
+
 document.getElementById('inputSearch').addEventListener('keypress', function(event) {
   if (event.key === 'Enter') {
     findRelatedFiles(event);
