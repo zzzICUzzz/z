@@ -1,35 +1,58 @@
-body{
 
-  background: -webkit-linear-gradient(left, #d2f2d5, #cce3cb);
+
+body {
+  background-image: url('/z/imgs/bg.jpg');
+  background-size: cover;
   font-family: 'Nunito', sans-serif;
   justify-content: center;
   align-items: center;
 }
-.topic{
-    flex: 0 0 40%;  
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-    font-weight: 700;
-    padding: 17px 15px;
-    font-size: 30px;
-    color: #fff;
-    background-color:transparent;
-    border-color: #e60c3d;
-    border-radius: 5px;
+
+body::after {
+  content: "";
+  background: url('/z/imgs/bg.jpg');
+  background-size: cover;
+  opacity: 0.7; /* Điều chỉnh độ mờ ở đây, giữa 0 (hoàn toàn trong suốt) và 1 (hoàn toàn không trong suốt) */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
 }
-#search{
+/* CSS cho máy tính để bàn */
+body {
+  padding: 15px;
+}
+
+/* CSS cho tablet */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+}
+
+/* CSS cho điện thoại */
+@media (max-width: 480px) {
+  body {
+    padding: 5px;
+  }
+}
+
+
+
+#search {
   position: relative;
   padding: 20px 30px;
   overflow: hidden;
   width: 900px;
   background: #fff;
-  width: 500px;
   height: 200px;
   background: #141414;
   margin: 50px auto;
   display: flex;
 }
+
 .drug a{
     text-decoration: none
 }
@@ -69,8 +92,7 @@ body{
 .row2{
   width: 70%;
   height: 50%;
-  background:   #ffffff;
-  background-size: cover;
+
   margin: auto;
 }
 .row3{
@@ -122,6 +144,7 @@ body{
     margin-bottom: 6%;
     margin-left: 0;
     margin-top: 5%;
+    color: #e60c3d;
 
   }
   .blank{
@@ -181,7 +204,7 @@ body{
 
 
   }
-  .buttonsearch{
+  .buttonsearch {
     font-weight: 700;
     padding: 17px 15px;
     font-size: 16px;
@@ -189,8 +212,19 @@ body{
     background-color: #e60c3d;
     border-color: #e60c3d;
     border-radius: 5px;
+    transition: transform 0.3s ease;
   }
+  
+  .buttonsearch:hover {
+    transform: scale(1.1);
+  }
+  
+  .buttonsearch:active {
+    transform: scale(0.9);
+  }
+  
 .selections {
+
     text-align: center;
     box-sizing: content-box !important;
     border: 1px  black ;
@@ -203,3 +237,18 @@ body{
     padding-right: 15px !important;
   }
   .selections a{text-decoration: none}
+  @keyframes slideIn {
+    0% {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .selections {
+    animation: slideIn 0.5s ease;
+  }
+
