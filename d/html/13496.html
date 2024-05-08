@@ -1,475 +1,691 @@
 <!DOCTYPE html>
+
 <html lang="fa">
- <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
- <head>
-  <title>
-   Calculator: Creatinine clearance estimate by Cockcroft-Gault equation in adults and older adolescents (age ≥16 years) (conventional units)*
-  </title>
-  <link href="d/css/1.css" rel="stylesheet"/>
- </head>
- <body>
-  <!-- Start Main Menu Area -->
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <div class="container">
-   <div class="row">
-   </div>
-  </div>
-  <section class="teacher-area ptb-10">
-   <div class="container">
-   </div>
-   <section class="course-details-area ptb-60">
-    <div class="container">
-     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-      <h1 style="text-align:center">
-       Calculator: Creatinine clearance estimate by Cockcroft-Gault equation in adults and older adolescents (age ≥16 years) (conventional units)*
-      </h1>
-      <div class="utdArticleSection" id="topicContentCalculator">
-       <div id="topicText">
-        <div id="mc3k">
-         <form action="" id="CreatinineCl_CG_form" name="CreatinineCl_CG_form" onkeydown="formKeyDown(event);" onkeypress="resetInTime(); return validNumberField(event);" onkeyup="CreatinineCl_CG_fx();" onreset="document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
-          <table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
-           <tbody>
-            <tr>
-             <td bgcolor="#eeeeee" width="1%">
-              <br/>
-             </td>
-             <td align="left" bgcolor="#eeeeee">
-              <span class="medCalcFontTitleBox">
-               Calculator: Creatinine clearance estimate by Cockcroft-Gault equation in adults and older adolescents (age ≥16 years) (conventional units)
-               <sup>
-                *
-               </sup>
-              </span>
-             </td>
-            </tr>
-           </tbody>
-          </table>
-          <br/>
-          <br/>
-          <div id="calc_main">
-           <center>
-            <span class="medCalcFontIO">
-             Input
-            </span>
-            <br/>
-            <br/>
-            <table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
-             <tbody>
-              <tr>
-               <td align="right" valign="top">
-                <span class="medCalcFontOneBold">
-                 Sex
-                </span>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Sex. The variable option is Male. The value for this variable is 1" id="togel1" name="Sex_radio" onclick="CreatinineCl_CG_fx();" type="radio" value="Male|1"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel1');">
-                 Male (1)
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="left">
-                <br/>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Sex. The variable option is Female. The value for this variable is 0.85" id="togel2" name="Sex_radio" onclick="CreatinineCl_CG_fx();" type="radio" value="Female|0.85"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel2');">
-                 Female (0.85)
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 Age
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value Age" name="Age_param" onblur="CreatinineCl_CG_fx(); minMaxCheck();" onchange="CreatinineCl_CG_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <select aria-label="Use this pulldown selector to set the unit of measure for the value Age" class="medCalcFontSelect" name="Age_unit" onchange="CreatinineCl_CG_fx(); minMaxCheck();" style="width:115px;">
-                 <option value="0.0833333333333333|0|mo">
-                  mo
-                 </option>
-                 <option selected="selected" value="1|0|yr">
-                  yr
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 Serum creatinine
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value Serum creatinine" name="Serum_creatinine_param" onblur="CreatinineCl_CG_fx(); minMaxCheck();" onchange="CreatinineCl_CG_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <select aria-label="Use this pulldown selector to set the unit of measure for the value Serum creatinine" class="medCalcFontSelect" name="Serum_creatinine_unit" onchange="CreatinineCl_CG_fx(); minMaxCheck();" style="width:115px;">
-                 <option value="100|0|g/L">
-                  g/L
-                 </option>
-                 <option value="1000|0|g/dL">
-                  g/dL
-                 </option>
-                 <option value="1|0|mg%">
-                  mg%
-                 </option>
-                 <option selected="selected" value="1|0|mg/dL">
-                  mg/dL
-                 </option>
-                 <option value="100|0|mg/mL">
-                  mg/mL
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 Weight
-                 <sup>
-                  †
-                 </sup>
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value Weight&lt;sup&gt;†&lt;/sup&gt;" name="Weight_param" onblur="CreatinineCl_CG_fx(); minMaxCheck();" onchange="CreatinineCl_CG_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <select aria-label="Use this pulldown selector to set the unit of measure for the value Weight&lt;sup&gt;†&lt;/sup&gt;" class="medCalcFontSelect" name="Weight_unit" onchange="CreatinineCl_CG_fx(); minMaxCheck();" style="width:115px;">
-                 <option selected="selected" value="1|0|kg">
-                  kg
-                 </option>
-                 <option value="0.45359237|0|lb">
-                  lb
-                 </option>
-                </select>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-           </center>
-           <br/>
-           <br/>
-           <center>
-            <span class="medCalcFontIO">
-             Result
-             <span class="medCalcFontOne" id="inputchk">
-              <br/>
-              <br/>
-              <b>
-               Important:
-              </b>
-              Inputs must be complete to perform calculation.
-              <br/>
-             </span>
-            </span>
-            <br/>
-            <br/>
-            <table cellpadding="4" class="medCalcResultBox" summary="EBMcalc Table">
-             <tbody>
-              <tr>
-               <td colspan="3">
-                <br/>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontResultParam">
-                 Estimated creatinine clearance
-                </span>
-               </td>
-               <td nowrap="nowrap" valign="top">
-                <input aria-label="This output box will display the calculated value Estimated creatinine clearance" aria-readonly="true" name="Estimated_creatinine_clearance_param" size="6" type="text"/>
-               </td>
-               <td align="left" valign="top">
-                <span class="medCalcFontResultParam">
-                 <select aria-label="Use this pulldown selector to set the unit of measure for the result value Estimated creatinine clearance" class="medCalcFontSelect" name="Estimated_creatinine_clearance_unit" onchange="CreatinineCl_CG_fx();" style="width:115px;">
-                  <option value="16.666666667|0|L/hr">
-                   L/hr
-                  </option>
-                  <option value="0.01666666667|0|mL/hr">
-                   mL/hr
-                  </option>
-                  <option selected="selected" value="1|0|mL/min">
-                   mL/min
-                  </option>
-                 </select>
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td colspan="3">
-                <br/>
-               </td>
-              </tr>
-              <tr>
-               <td align="center" colspan="3">
-                <span class="medCalcFontResultParam">
-                 Decimal precision
-                </span>
-                <select aria-label="Use this pulldown selector to set the decimal precision of calculations" class="medCalcFontSelect" name="decpts" onchange="CreatinineCl_CG_fx();">
-                 <option>
-                  0
-                 </option>
-                 <option>
-                  1
-                 </option>
-                 <option selected="selected">
-                  2
-                 </option>
-                 <option>
-                  3
-                 </option>
-                </select>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-           </center>
-           <br/>
-           <br/>
-           <div id="calc_buttons">
-            <center>
-             <span class="medCalcFontOne">
-              <input name="resetbutton" type="reset" value="Reset form"/>
-             </span>
-            </center>
-           </div>
-          </div>
-          <div id="pretextrefs">
-          </div>
-          <div id="calc_tables_above_notes">
-          </div>
-          <br/>
-          <br/>
-          <div id="calc_notes">
-           <span class="medCalcFontOneBold">
-            Notes
-           </span>
-           <ul class="medCalcFontOne">
-            <li>
-             The Cockcroft-Gault equation was developed prior to the use of standardized creatinine assays and has not been updated for use with creatinine values reported with contemporary assay methods.
-             <sup>
-              [1]
-             </sup>
-             Thus, use of the Cockcroft-Gault equation with creatinine values measured by most laboratories in the United States today will result in a 10 to 40 percent overestimate of creatinine clearance.
-             <sup>
-              [2,3]
-             </sup>
-            </li>
-            <li>
-             For drug dose adjustments in kidney impairment, the Cockcroft-Gault equation remains in use according to some published sources (eg, drug product labeling) and institutional protocols. However, many experts recommend using the most accurate method for estimating kidney function (eg, CKD-EPI equation or MDRD study equation) for drug dosing rather than the Cockcroft-Gault equation.
-             <sup>
-              [2,3]
-             </sup>
-            </li>
-            <li>
-             <b>
-              Before using Cockcroft-Gault equation or another estimation of kidney function for drug dose adjustment, consult appropriate sources, including clinical drug reference(s), manufacturer’s labeling, and institutional protocols to avoid risk of overdosing, particularly for narrow therapeutic index drugs (eg, chemotherapeutic agents).
-             </b>
-            </li>
-            <li>
-             Kidney function must be stable to estimate creatinine clearance using this equation; Cockcroft-Gault equation does not provide accurate estimates when serum creatinine is rapidly changing (eg, hospitalized patients with acute kidney injury).
-            </li>
-            <li>
-             For patients at extremes of muscle mass (eg, those with amputation or muscle wasting), with unusual diets, or with conditions associated with changes in creatinine production or secretion, estimation equations that use serum creatinine have limited utility. The use of an alternative method of assessing kidney function may be necessary.
-            </li>
-            <li>
-             Refer to UpToDate topic reviews of assessment of kidney function for discussion of the accuracy of creatinine clearance as an estimate of true GFR and the use and limitations of Cockcroft-Gault and other GFR-estimating equations.
-            </li>
-            <li>
-             <b>
-              CKD-EPI
-             </b>
-             : Chronic Kidney Disease Epidemiology Collaboration;
-             <b>
-              MDRD
-             </b>
-             : Modification of Diet in Renal Disease;
-             <b>
-              GFR
-             </b>
-             : glomerular filtration rate;
-             <b>
-              BMI
-             </b>
-             : body mass index.
-            </li>
-            <li style="list-style-type: none;">
-             † Weight - Modifications of actual (total) body weight (eg,  adjusted body weight, ideal body weight, or lean body weight) have been proposed to better quantify creatinine-producing muscle mass in patients with a high BMI. However, the use of body weight adjustment(s) is not standardized or universally accepted.
-             <sup>
-              [4]
-             </sup>
-             For guidance on whether to use an adjustment to the Weight input, refer to a clinical drug reference, manufacturer’s labeling, and institutional protocols. Separate calculators to estimate adjusted body weight, ideal body weight, and lean body weight for adult patients are available in UpToDate.
-            </li>
-            <li style="list-style-type: none;">
-             <font size="+1">
-              *
-             </font>
-             This calculator uses conventional units (also known as US units 
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Calculator: Creatinine clearance estimate by Cockcroft-Gault equation in adults and older adolescents (age ≥16 years) (conventional units)*</title></head>
+<body><section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Calculator: Creatinine clearance estimate by Cockcroft-Gault equation in adults and older adolescents (age ≥16 years) (conventional units)*</h1>
+<div class="utdArticleSection" id="topicContentCalculator"><div id="topicText">
+<div id="mc3k">
+<form action="" id="CreatinineCl_CG_form" name="CreatinineCl_CG_form" onkeydown="formKeyDown(event);" onkeypress="resetInTime(); return validNumberField(event);" onkeyup="CreatinineCl_CG_fx();" onreset="document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
+<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
+<td align="left" bgcolor="#eeeeee">
+<span class="medCalcFontTitleBox">
+
+ 
+Calculator: Creatinine clearance estimate by Cockcroft-Gault equation in adults and older adolescents (age ≥16 years) (conventional units)<sup>*</sup>
+</span></td></tr></tbody></table><br/> <br/>
+<div id="calc_main">
+<center>
+<span class="medCalcFontIO">
+Input
+</span>
+<br/> <br/>
+<table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
+<tbody><tr><td align="right" valign="top"><span class="medCalcFontOneBold">Sex</span></td>
+<td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Sex. The variable option is Male. The value for this variable is 1" id="togel1" name="Sex_radio" onclick="CreatinineCl_CG_fx();" type="radio" value="Male|1"/><span class="medCalcFontOneClick" onclick="setRB('togel1');"> Male (1)</span></td></tr>
+<tr><td align="left"><br/></td><td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Sex. The variable option is Female. The value for this variable is 0.85" id="togel2" name="Sex_radio" onclick="CreatinineCl_CG_fx();" type="radio" value="Female|0.85"/><span class="medCalcFontOneClick" onclick="setRB('togel2');"> Female (0.85)</span></td></tr>
+<tr><td align="right" width="42%"><span class="medCalcFontOneBold">Age</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value Age" name="Age_param" onblur="CreatinineCl_CG_fx(); minMaxCheck();" onchange="CreatinineCl_CG_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value Age" class="medCalcFontSelect" name="Age_unit" onchange="CreatinineCl_CG_fx(); minMaxCheck();" style="width:115px;">
+<option value="0.0833333333333333|0|mo">mo</option>
+<option selected="selected" value="1|0|yr">yr</option>
+</select></td></tr>
+<tr><td align="right" width="42%"><span class="medCalcFontOneBold">Serum creatinine</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value Serum creatinine" name="Serum_creatinine_param" onblur="CreatinineCl_CG_fx(); minMaxCheck();" onchange="CreatinineCl_CG_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value Serum creatinine" class="medCalcFontSelect" name="Serum_creatinine_unit" onchange="CreatinineCl_CG_fx(); minMaxCheck();" style="width:115px;">
+<option value="100|0|g/L">g/L</option>
+<option value="1000|0|g/dL">g/dL</option>
+<option value="1|0|mg%">mg%</option>
+<option selected="selected" value="1|0|mg/dL">mg/dL</option>
+<option value="100|0|mg/mL">mg/mL</option>
+</select></td></tr>
+<tr><td align="right" width="42%"><span class="medCalcFontOneBold">Weight<sup>†</sup></span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value Weight&lt;sup&gt;†&lt;/sup&gt;" name="Weight_param" onblur="CreatinineCl_CG_fx(); minMaxCheck();" onchange="CreatinineCl_CG_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value Weight&lt;sup&gt;†&lt;/sup&gt;" class="medCalcFontSelect" name="Weight_unit" onchange="CreatinineCl_CG_fx(); minMaxCheck();" style="width:115px;">
+<option selected="selected" value="1|0|kg">kg</option>
+<option value="0.45359237|0|lb">lb</option>
+</select></td></tr>
+</tbody></table>
+</center>
+<br/> <br/><center><span class="medCalcFontIO">Result<span class="medCalcFontOne" id="inputchk"><br/> <br/><b>Important:</b> Inputs must be complete to perform calculation. <br/></span></span>
+<br/> <br/>
+<table cellpadding="4" class="medCalcResultBox" summary="EBMcalc Table">
+<tbody><tr><td colspan="3"> <br/></td></tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">Estimated creatinine clearance</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value Estimated creatinine clearance" aria-readonly="true" name="Estimated_creatinine_clearance_param" size="6" type="text"/></td>
+<td align="left" valign="top"><span class="medCalcFontResultParam">
+<select aria-label="Use this pulldown selector to set the unit of measure for the result value Estimated creatinine clearance" class="medCalcFontSelect" name="Estimated_creatinine_clearance_unit" onchange="CreatinineCl_CG_fx();" style="width:115px;">
+<option value="16.666666667|0|L/hr">L/hr</option>
+<option value="0.01666666667|0|mL/hr">mL/hr</option>
+<option selected="selected" value="1|0|mL/min">mL/min</option>
+</select>
+</span></td>
+</tr>
+<tr><td colspan="3"> <br/></td></tr>
+<tr><td align="center" colspan="3"><span class="medCalcFontResultParam">Decimal precision  </span>
+<select aria-label="Use this pulldown selector to set the decimal precision of calculations" class="medCalcFontSelect" name="decpts" onchange="CreatinineCl_CG_fx();">
+<option>0</option>
+<option>1</option>
+<option selected="selected">2</option>
+<option>3</option>
+</select></td></tr>
+</tbody></table>
+</center><br/> <br/>
+<div id="calc_buttons">
+<center>
+<span class="medCalcFontOne">
+<input name="resetbutton" type="reset" value="Reset form"/>
+</span>
+</center>
+</div>
+</div><div id="pretextrefs">
+ 
+</div>
+<div id="calc_tables_above_notes">
+</div>
+<br/> <br/>
+<div id="calc_notes">
+<span class="medCalcFontOneBold">Notes</span>
+<ul class="medCalcFontOne">
+<li>The Cockcroft-Gault equation was developed prior to the use of standardized creatinine assays and has not been updated for use with creatinine values reported with contemporary assay methods.<sup>[1]</sup> Thus, use of the Cockcroft-Gault equation with creatinine values measured by most laboratories in the United States today will result in a 10 to 40 percent overestimate of creatinine clearance.<sup>[2,3]</sup></li>
+<li>For drug dose adjustments in kidney impairment, the Cockcroft-Gault equation remains in use according to some published sources (eg, drug product labeling) and institutional protocols. However, many experts recommend using the most accurate method for estimating kidney function (eg, CKD-EPI equation or MDRD study equation) for drug dosing rather than the Cockcroft-Gault equation.<sup>[2,3]</sup></li>
+<li><b>Before using Cockcroft-Gault equation or another estimation of kidney function for drug dose adjustment, consult appropriate sources, including clinical drug reference(s), manufacturer’s labeling, and institutional protocols to avoid risk of overdosing, particularly for narrow therapeutic index drugs (eg, chemotherapeutic agents).</b></li>
+<li>Kidney function must be stable to estimate creatinine clearance using this equation; Cockcroft-Gault equation does not provide accurate estimates when serum creatinine is rapidly changing (eg, hospitalized patients with acute kidney injury).</li>
+<li>For patients at extremes of muscle mass (eg, those with amputation or muscle wasting), with unusual diets, or with conditions associated with changes in creatinine production or secretion, estimation equations that use serum creatinine have limited utility. The use of an alternative method of assessing kidney function may be necessary.</li>
+<li>Refer to UpToDate topic reviews of assessment of kidney function for discussion of the accuracy of creatinine clearance as an estimate of true GFR and the use and limitations of Cockcroft-Gault and other GFR-estimating equations.</li>
+<li><b>CKD-EPI</b>: Chronic Kidney Disease Epidemiology Collaboration; <b>MDRD</b>: Modification of Diet in Renal Disease; <b>GFR</b>: glomerular filtration rate; <b>BMI</b>: body mass index.</li>
+<li style="list-style-type: none;">† Weight - Modifications of actual (total) body weight (eg,  adjusted body weight, ideal body weight, or lean body weight) have been proposed to better quantify creatinine-producing muscle mass in patients with a high BMI. However, the use of body weight adjustment(s) is not standardized or universally accepted.<sup>[4]</sup> For guidance on whether to use an adjustment to the Weight input, refer to a clinical drug reference, manufacturer’s labeling, and institutional protocols. Separate calculators to estimate adjusted body weight, ideal body weight, and lean body weight for adult patients are available in UpToDate.</li>
+<li style="list-style-type: none;"><font size="+1">*</font> This calculator uses conventional units (also known as US units 
 and gravimetric units) as the default for inputs. Do not use this calculator if 
 you are using SI units (Système international d'unités); please refer 
-instead to the SI units version of this calculator.
-            </li>
-           </ul>
-          </div>
-          <br/>
-          <br/>
-          <span class="medCalcFontRef">
-           <b>
-            Equations used
-           </b>
-          </span>
-          <br/>
-          <br/>
-          <center>
-           <div id="calc_equation">
-            <table cellpadding="10" cellspacing="0" summary="EBMcalc Table">
-             <tbody>
-              <tr>
-               <td class="medCalcFormuliBox">
-                <span class="medCalcFontFormuli">
-                 Estimated_creatinine_clearance = Sex * ((140 - Age) / (Serum_creatinine)) * (Weight
-                 <sup>
-                  †
-                 </sup>
-                 / 72)
-                </span>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-            <br/>
-            <br/>
-           </div>
-          </center>
-          <div id="calc_tables">
-          </div>
-          <br/>
-          <br/>
-          <span class="medCalcFontOne">
-           Equation parameters, such as
-           <b>
-            Sex
-           </b>
-           , have 2 or more discrete values that may be used in the calculation. The numbers in the parentheses, eg,  (1), represent the values that will be used.
-          </span>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-          <div id="calc_refs">
-           <span class="medCalcFontRef">
-            <b>
-             References
-            </b>
-           </span>
-           <ol>
-            <li>
-             <span class="medCalcFontRef">
-              <a href="https://www.ncbi.nlm.nih.gov/pubmed/1244564" style="color: green; text-decoration: none;" target="_blank">
-               Cockcroft DW, Gault MH. Prediction of creatinine clearance from serum creatinine. Nephron 1976; 16:31.
-              </a>
-             </span>
-            </li>
-            <li>
-             <span class="medCalcFontRef">
-              <a href="https://www.ncbi.nlm.nih.gov/pubmed/21918498" style="color: green; text-decoration: none;" target="_blank">
-               Matzke GR, Aronoff GR, Atkinson AJ Jr, et al. Drug dosing consideration in patients with acute and chronic kidney disease-a clinical update from Kidney Disease: Improving Global Outcomes (KDIGO). Kidney Int 2011; 80:1122.
-              </a>
-             </span>
-            </li>
-            <li>
-             <span class="medCalcFontRef">
-              National Kidney Foundation Inc. Cockcroft-Gault formula. Available at:
-              <a href="https://www.kidney.org/professionals/kdoqi/gfr_calculatorcoc" style="color: green; text-decoration: none;" target="_blank">
-               https://www.kidney.org/professionals/kdoqi/gfr_calculatorcoc
-              </a>
-              (Accessed on December 15, 2021).
-             </span>
-            </li>
-            <li>
-             <span class="medCalcFontRef">
-              National Institute of Diabetes and Digestive and Kidney Diseases. CKD &amp; drug dosing: Information for providers - estimation of kidney function for prescription medication  dosage in adults. Available at
-              <a href="https://www.niddk.nih.gov/research-funding/research-programs/kidney-clinical-research-epidemiology/laboratory/ckd-drug-dosing-providers#limitations" style="color: green; text-decoration: none;" target="_blank">
-               https://www.niddk.nih.gov/research-funding/research-programs/kidney-clinical-research-epidemiology/laboratory/ckd-drug-dosing-providers#limitations
-              </a>
-              (Accessed on December 15, 2021).
-             </span>
-            </li>
-           </ol>
-          </div>
-         </form>
-        </div>
-        <span class="calculatorVendorId" id="T1678215864">
-        </span>
-       </div>
-       <div id="printDisclaimer">
-        <b>
-         Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.
-        </b>
-        <p>
-         Information on this page may not appear correctly if printed.
-        </p>
-       </div>
-       <div id="disclaimerCalculator">
-        <div class="medCalcFontTwo">
-         <p class="header">
-          Legal Notices and Disclaimer
-         </p>
-         <p>
-          All information contained in and produced by the EBMcalc system is provided
+instead to the SI units version of this calculator.</li>
+</ul>
+</div>
+<br/> <br/>
+<span class="medCalcFontRef"><b>Equations used</b></span>
+<br/> <br/>
+<center>
+<div id="calc_equation">
+<table cellpadding="10" cellspacing="0" summary="EBMcalc Table"><tbody><tr><td class="medCalcFormuliBox"><span class="medCalcFontFormuli">Estimated_creatinine_clearance = Sex * ((140 - Age) / (Serum_creatinine)) * (Weight<sup>†</sup> / 72)</span></td></tr></tbody></table><br/> <br/>
+</div> </center>
+<div id="calc_tables">
+</div>
+<br/> <br/>
+<span class="medCalcFontOne">
+Equation parameters, such as <b>Sex</b>, have 2 or more discrete values that may be used in the calculation. The numbers in the parentheses, eg,  (1), represent the values that will be used.
+</span>
+<br/> <br/>
+<br/> <br/>
+<div id="calc_refs">
+<span class="medCalcFontRef"><b>References</b></span>
+<ol>
+<li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/1244564" style="color: green; text-decoration: none;" target="_blank">Cockcroft DW, Gault MH. Prediction of creatinine clearance from serum creatinine. Nephron 1976; 16:31.</a></span></li>
+<li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/21918498" style="color: green; text-decoration: none;" target="_blank">Matzke GR, Aronoff GR, Atkinson AJ Jr, et al. Drug dosing consideration in patients with acute and chronic kidney disease-a clinical update from Kidney Disease: Improving Global Outcomes (KDIGO). Kidney Int 2011; 80:1122.</a></span></li>
+<li><span class="medCalcFontRef">National Kidney Foundation Inc. Cockcroft-Gault formula. Available at: <a href="https://www.kidney.org/professionals/kdoqi/gfr_calculatorcoc" style="color: green; text-decoration: none;" target="_blank">https://www.kidney.org/professionals/kdoqi/gfr_calculatorcoc</a> (Accessed on December 15, 2021).</span></li>
+<li><span class="medCalcFontRef">National Institute of Diabetes and Digestive and Kidney Diseases. CKD &amp; drug dosing: Information for providers - estimation of kidney function for prescription medication  dosage in adults. Available at <a href="https://www.niddk.nih.gov/research-funding/research-programs/kidney-clinical-research-epidemiology/laboratory/ckd-drug-dosing-providers#limitations" style="color: green; text-decoration: none;" target="_blank"> https://www.niddk.nih.gov/research-funding/research-programs/kidney-clinical-research-epidemiology/laboratory/ckd-drug-dosing-providers#limitations</a> (Accessed on December 15, 2021).</span></li>
+</ol>
+</div>
+</form>
+</div>
+<span class="calculatorVendorId" id="T1678215864">
+</span></div><div id="printDisclaimer">
+<b>Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.</b>
+<p>
+	Information on this page may not appear correctly if printed. </p>
+</div>
+<div id="disclaimerCalculator">
+<div class="medCalcFontTwo">
+<p class="header">Legal Notices and Disclaimer</p>
+<p>
+			All information contained in and produced by the EBMcalc system is provided
 			for educational purposes only. This information should not be used for the diagnosis or treatment
-			of any health problem or disease.
-          <b>
-           THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.
-          </b>
-          <a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">
-           Click here for full notice and disclaimer.
-          </a>
-         </p>
-         <p class="copy">
-          EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC
-         </p>
-        </div>
-       </div>
-       <div id="topicVersionRevision">
-        Topic 13496 Version 23.0
-       </div>
-      </div>
-     </div>
-    </div>
-   </section>
-  </section>
-  <!-- End Main Menu Area -->
-  <!-- Start Search Popup Area -->
-  <!-- End Footer Area -->
-  <!-- Back to top -->
-  <a class="scrolltop" href="#top">
-   <i class="icofont-hand-drawn-up">
-   </i>
-  </a>
-  <!-- End Back to top -->
-  <!-- jQuery Min JS -->
-  <!-- Prpper JS -->
-  <!-- Bootstrap Min JS -->
-  <!-- Classy Nav Min Js -->
-  <!-- Owl Carousel Min Js -->
-  <!-- Magnific Popup JS -->
-  <!-- CounterUp JS -->
-  <!-- Waypoints JS -->
-  <!-- Form Validator Min JS -->
-  <!-- Contact Form Min JS -->
-  <!-- Main JS -->
-  <!-- Global site tag (gtag.js) - Google Analytics -->
- </body>
+			of any health problem or disease. 
+			<b>THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.</b>
+<a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">Click here for full notice and disclaimer.</a>
+</p>
+<p class="copy">EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC</p>
+</div>
+</div><div id="topicVersionRevision">Topic 13496 Version 23.0</div></div>
+</div>
+</div>
+</section><script>
+/* <![CDATA[ */
+
+var lastChar = '';
+
+function log(i){
+return Math.log(i) * Math.LOG10E;
+}
+
+function ln(i){
+return Math.log(i);
+}
+
+function sq(i){
+return i * i;
+}
+
+function sqr(i){
+return Math.sqrt(i);
+}
+
+
+function power(x,y){
+return Math.pow(x,y);
+}
+
+function eTo(x){
+return Math.exp(x);
+}
+
+
+function fixDP(r, dps) {
+if (isNaN(r)) return "NaN";
+var msign = '';
+if (r < 0) msign = '-';
+x = Math.abs(r);
+if (x > Math.pow(10, 21)) return msign + x.toString();
+var m = Math.round(x * Math.pow(10, dps)).toString();
+if (dps == 0) return msign + m;
+while (m.length <= dps) m = "0" + m;
+return msign + m.substring(0, m.length - dps) + "." + m.substring(m.length - dps);
+}
+
+
+function alertNaN(){
+alert('This field is improperly formatted. You may only input the digits 0-9 and a decimal point.');
+doCalc = false;
+clrResults();
+}
+
+function validNumberField(event) {
+var field = event.target;
+
+if(field && field != 'undefined' && field.attributes.type.nodeValue && (field.attributes.type.nodeValue == 'number')) {
+var val = field.value;
+var charCode = event.charCode;
+var key = String.fromCharCode(charCode);
+
+if(charCode == 0 || charCode == 13) {
+  return true;
+}
+
+if(key == ' ') {
+alert('Numeric field cannot contain spaces.');
+  return false;
+}
+
+if(key == '.') { return validDecimalPoint(val, key); }
+if(key == '-') { return validMinus(val, key); }
+
+if(isNaN(parseInt(key))) {
+alertNaN();
+return false;
+}
+
+return validFloat(val, key);
+}
+return true;
+}
+
+function validDecimalPoint(val, key) {
+if(val.length == 0 && lastChar != '.') {
+  lastChar = '.';
+  return true;
+}
+if(val.indexOf('.') >= 0 || lastChar == '.') {
+ alertNaN();
+ return false;
+}
+if(validFloat(val, key)) {
+ lastChar = key;
+ return true;
+}
+lastChar = '';
+return false;
+}
+
+function validMinus(val, key) {
+if(val.length == 0) {
+  return true;
+}
+if(val.length > 1) {
+ alertNaN();
+ return false;
+}
+return validFloat(val, key);
+}
+
+
+function validFloat(val, key) {
+var currentVal = parseFloat(val + key);
+if(isNaN(val + key) || isNaN(currentVal)) {
+alertNaN();
+return false;
+}
+return true;
+}
+
+function formKeyDown(event) {
+var field = event.target;
+
+resetInTime();
+
+if(field && field != 'undefined' && field.attributes.type && field.attributes.type.nodeValue && (field.attributes.type.nodeValue == 'number')) {
+  var val = field.value;
+  var keyCode = event.keyCode;
+  if(keyCode == 8 || keyCode == 127) {
+    // backspace or delete
+    if(lastChar == '.') {
+      lastChar = '';
+    }
+    if(field.value.length == 3 && field.value[0] == '0' && field.value[1] == '.') {
+      // this handles a backspace on an input like ".5", which is saved internally as "0.5"
+      //   otherwise, if you leave the field after the backspace, it retains "0.5" as the value, most likely an iOS bug
+      field.value = ''; 
+    }
+  }
+}
+clrResults();
+}
+
+function clrValue(field) {
+ field.value = '';
+ lastChar = '';
+}
+
+var currenttimeout;
+
+function resetInTime(){
+if (currenttimeout) clearTimeout(currenttimeout);
+currenttimeout = setTimeout('minMaxCheck();', 2000);
+}
+
+
+
+var curelement;
+
+function togCB(thisid){
+thischeckbox = document.getElementById(thisid);
+if (thischeckbox.checked){ thischeckbox.checked = false; }
+else { thischeckbox.checked = true; }
+CreatinineCl_CG_fx();
+}
+
+function setRB(thisid){
+document.getElementById(thisid).checked = true;
+CreatinineCl_CG_fx();
+}
+
+
+var calctxt = ''; 
+var xmltxt = ''; 
+var xmlresult = '';
+var htmtxt = ''; 
+var postNow = false;
+var printing = false;
+var interptxt = '';
+var interphtm = '';
+var interpxml = '';
+var rbchk = false;
+var inputchktxt = '<br />&nbsp;<br /><b>Important:</b> Inputs must be complete to perform calculation. <br />'
+
+
+function aDelay(atxt, ffield){
+with (document.CreatinineCl_CG_form){
+clrResults();
+ffield.value = '';
+doCalc = false;
+setTimeout(function(){ alert(atxt); }, 100);
+document.getElementById('inputchk').innerHTML = inputchktxt;
+
+}}
+
+
+function CreatinineCl_CG_fx() {
+
+with(document.CreatinineCl_CG_form){
+
+
+doCalc = true;
+rbchk = false;
+if (Sex_radio[0].checked){ rbchk = true; Sex = 1;  }
+if (Sex_radio[1].checked){ rbchk = true; Sex = 0.85;  }
+if (!rbchk) doCalc = false;
+param_value = parseFloat(Age_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = Age_unit.options[Age_unit.selectedIndex].value.split('|');
+Age = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+param_value = parseFloat(Serum_creatinine_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = Serum_creatinine_unit.options[Serum_creatinine_unit.selectedIndex].value.split('|');
+Serum_creatinine = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+param_value = parseFloat(Weight_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = Weight_unit.options[Weight_unit.selectedIndex].value.split('|');
+Weight = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+dp = decpts.options[decpts.selectedIndex].text;
+Estimated_creatinine_clearance =  Sex * ((140 - Age) / (Serum_creatinine)) * (Weight / 72);
+
+unit_parts = Estimated_creatinine_clearance_unit.options[Estimated_creatinine_clearance_unit.selectedIndex].value.split('|');
+if (doCalc) Estimated_creatinine_clearance_param.value = fixDP((Estimated_creatinine_clearance - parseFloat(unit_parts[1])) / parseFloat(unit_parts[0]), dp);
+
+
+
+
+
+}
+
+
+if (doCalc) document.getElementById('inputchk').innerHTML = '';
+else document.getElementById('inputchk').innerHTML = inputchktxt;
+
+
+}
+
+function minMaxCheck(){
+if (printing) return;
+
+
+
+with(document.CreatinineCl_CG_form){
+
+if (Age_param.value && isNaN(Age_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', Age_param); }
+if (Age_param.value && (Age < (16 - 0.00001))) {
+Age = 0;
+ aDelay("The minimum value for Age is 16 yr.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Age_param);
+}
+
+if (Age_param.value && Age > 120) {
+Age = 0;
+ aDelay("The maximum value for Age is 120 yr.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Age_param);
+}
+
+if (Serum_creatinine_param.value && isNaN(Serum_creatinine_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', Serum_creatinine_param); }
+if (Serum_creatinine_param.value && (Serum_creatinine < (0.3 - 0.00001))) {
+Serum_creatinine = 0;
+ aDelay("The minimum value for Serum creatinine is 0.3 mg/dL.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Serum_creatinine_param);
+}
+
+if (Serum_creatinine_param.value && Serum_creatinine > 10) {
+Serum_creatinine = 0;
+ aDelay("The maximum value for Serum creatinine is 10 mg/dL.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Serum_creatinine_param);
+}
+
+if (Weight_param.value && isNaN(Weight_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', Weight_param); }
+if (Weight_param.value && (Weight < (25 - 0.00001))) {
+Weight = 0;
+ aDelay("The minimum value for Weight is 25 kg.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Weight_param);
+}
+
+if (Weight_param.value && Weight > 250) {
+Weight = 0;
+ aDelay("The maximum value for Weight is 250 kg.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Weight_param);
+}
+
+
+
+}
+
+}
+
+function clrResults(){
+
+
+with(document.CreatinineCl_CG_form){
+
+Estimated_creatinine_clearance_param.value = '';
+
+
+}
+
+}
+
+var Sex = null,
+Age = null,
+Serum_creatinine = null,
+Weight = null,
+Estimated_creatinine_clearance = null,
+param_value = null;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ]]> */
+</script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://medilib.ir/assets/js/jquery.min.js"></script><script src="https://medilib.ir/assets/js/popper.min.js"></script><script src="https://medilib.ir/assets/js/bootstrap.min.js"></script><script src="https://medilib.ir/assets/js/classy-nav.min.js"></script><script src="https://medilib.ir/assets/js/owl.carousel.min.js"></script><script src="https://medilib.ir/assets/js/jquery.magnific-popup.min.js"></script><script src="https://medilib.ir/assets/js/jquery.counterup.min.js"></script><script src="https://medilib.ir/assets/js/waypoints.min.js"></script><script src="https://medilib.ir/assets/js/form-validator.min.js"></script><script src="https://medilib.ir/assets/js/contact-form-script.js"></script><script src="https://medilib.ir/assets/js/main.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WFDJ5JLM3Q"></script><script>
+    window.addEventListener("load", () => {
+
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function (registrations) {
+                //returns installed service workers
+                if (registrations.length) {
+                    for (let registration of registrations) {
+                        if (
+                            registration.active.scriptURL.startsWith("/serviceWorker.js") &&
+                            !registration.active.scriptURL.endsWith("/serviceWorker.js?v=18")
+                        ) {
+                            registration.unregister();
+                        }
+                    }
+                }
+            });
+            navigator.serviceWorker.register('/serviceWorker.js?v=18', {
+                scope: '/'
+            })
+                .then(function (registration) {
+                    console.log('Registration successful, scope is:', registration.scope);
+                })
+                .catch(function (error) {
+                    console.log('Service worker registration failed, error:', error);
+                });
+        }
+    });
+    const promptElement = document.querySelector('.pwaprompt');
+    const footerPromptElement = document.querySelector('#footerPromptElement');
+    const scrollTopElement = document.querySelector('.scrolltop');
+    // const installButton = promptElement.querySelector('.prompt__install');
+    const closeButton = promptElement.querySelector('.prompt__close');
+    let installEvent;
+
+    function setWithExpiry(key, value, seconds) {
+        const now = new Date()
+
+        // `item` is an object which contains the original value
+        // as well as the time when it's supposed to expire
+        const item = {
+            value: value,
+            expiry: now.getTime() + (seconds * 1000),
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+    }
+
+    function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+        // if the item doesn't exist, return null
+        if (!itemStr) {
+            return null
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+        // compare the expiry time of the item with the current time
+        if (now.getTime() > item.expiry) {
+            // If the item is expired, delete the item from storage
+            // and return null
+            localStorage.removeItem(key)
+            return null
+        }
+        return item.value
+    }
+
+    // checks if the localStorage item has been set
+    function getVisited() {
+        return getWithExpiry('install-prompt')
+        // return localStorage.getItem('install-prompt');
+    }
+
+    // sets the localStorage item
+    function setVisited() {
+        fiveDay = 5 * (24 * (60 * 60))
+        setWithExpiry('install-prompt', true, fiveDay)
+        // localStorage.setItem('install-prompt', true);
+    }
+
+    closeButton.addEventListener('click', () => {
+        // set localStorage to true
+        setVisited();
+
+        // hide the prompt banner
+        promptElement.style.display = 'none';
+        scrollTopElement.style.bottom = '30px';
+
+        // installEvent = null;
+    });
+    // Detects if device is on iOS
+    const isIos = () => {
+        const userAgent = window.navigator.userAgent.toLowerCase();
+        return /iphone|ipad|ipod/.test(userAgent);
+    }
+    // Detects if device is in standalone mode
+    const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+
+    // Checks if should display install popup notification:
+    if (isIos() && !isInStandaloneMode()) {
+        if (!getVisited()) {
+            promptElement.style.display = 'block';
+            scrollTopElement.style.bottom = '80px';
+        }
+        footerPromptElement.style.display = 'block';
+    }
+
+
+    // this event will only fire if the user does not have the pwa installed
+    window.addEventListener('beforeinstallprompt', (event) => {
+        event.preventDefault();
+        // if no localStorage is set, first time visitor
+        if (!getVisited()) {
+            // show the prompt banner
+            promptElement.style.display = 'block';
+            scrollTopElement.style.bottom = '80px';
+
+            // store the event for later use
+
+        }
+        footerPromptElement.style.display = 'block';
+        installEvent = event;
+
+    });
+    $(document).on('click', '.prompt__install', function () {
+        promptElement.style.display = 'none';
+        scrollTopElement.style.bottom = '30px';
+
+        if (isIos() && !isInStandaloneMode()) {
+            setVisited();
+            $('#iphoneAddToHomeScreen').modal()
+        } else {
+
+            // trigger the prompt to show to the user
+            installEvent.prompt();
+            // check what choice the user made
+            installEvent.userChoice.then((choice) => {
+                // if the user declined, we don't want to show the button again
+                // set localStorage to true
+                if (choice.outcome !== 'accepted') {
+                    setVisited();
+                }
+
+                installEvent = null;
+            });
+        }
+
+    });
+</script><script>
+
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-WFDJ5JLM3Q');
+</script><script>
+      var topicReferences=[];
+
+      function refrence(id) {
+          var myReference=Object.values(topicReferences)[id];
+          console.log(myReference);
+          $("#pmid").attr("href",myReference['pmid']);
+          if (typeof myReference['description'] !== 'undefined' && myReference['description']!="") {
+            $("#myModalLabel34").html('Description : <p>' + myReference['description'] + "</p>");
+          }
+          if (typeof myReference['authors'] !== 'undefined' && myReference['authors']!="") {
+            $("#referenceAuthors").html('Authors : <p>' + myReference['authors'] + "</p>");
+          }
+          if (typeof myReference['source'] !== 'undefined' && myReference['source']!="") {
+            $("#referenceSource").html('Source : <p>' + myReference['source'] + "</p>");
+          }
+          if (typeof myReference['title'] !== 'undefined' && myReference['title']!="") {
+            $("#referenceTitle").html('Title : <p>' + myReference['title'] + "</p>");
+          }
+          if (typeof myReference['affiliation'] !== 'undefined' && myReference['affiliation']!="") {
+            $("#referenceAffiliation").html('Affiliation : <p>' + myReference['affiliation'] + "</p>");
+          }
+      }
+  </script><script>
+
+      var screenHeight = screen.height;
+
+      if (screenHeight > 700) {
+        // $document.getElementById("Uptodate_image").style.width = "100% !important;";
+        // $('.Uptodate_image').css('width', '100% !important;');
+        console.log("more");
+      }else{
+        console.log(screenHeight);
+      }
+    $(document).scroll(function()  {
+      var y = $(this).scrollTop();
+      if (y > 100) {
+        $('.goback').fadeIn();
+        $('.buyPackage').fadeIn();
+        // alert(document.getElementById('main_menu').style.zIndex);
+        document.getElementById("uptodate-area").style.padding = "0px 0 0 0";
+        document.getElementById('main_menu').style.zIndex=1;
+         document.getElementById('main_menu').style.display="none";
+        document.getElementById('navbar_menu').style.marginTop="70px"
+        document.getElementById('uptodate-area').style.marginTop="0px"
+        document.getElementById('uptodate-area').style.zIndex=999;
+        console.log('down');
+      } else {
+        $('.goback').fadeOut();
+        $('.buyPackage').fadeOut();
+        document.getElementById("uptodate-area").style.padding = "0px 0 0 0";
+        document.getElementById('navbar_menu').style.marginTop="0px"
+        document.getElementById('main_menu').style.display="";
+        document.getElementById('uptodate-area').style.zIndex=0;
+        console.log('up');
+      }
+    });
+    function goBack() {
+      window.history.back();
+    }
+    function buyPackage() {
+      window.open("https://medilib.ir/userPanel/package/uptodate/index",'_blank');
+    }
+  </script></body>
 </html>

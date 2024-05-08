@@ -1,464 +1,536 @@
 <!DOCTYPE html>
+
 <html lang="fa">
- <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
- <head>
-  <title>
-   Calculator: Length unit conversions
-  </title>
-  <link href="d/css/1.css" rel="stylesheet"/>
- </head>
- <body>
-  <!-- Start Main Menu Area -->
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <div class="container">
-   <div class="row">
-   </div>
-  </div>
-  <section class="teacher-area ptb-10">
-   <div class="container">
-   </div>
-   <section class="course-details-area ptb-60">
-    <div class="container">
-     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-      <h1 style="text-align:center">
-       Calculator: Length unit conversions
-      </h1>
-      <div class="utdArticleSection" id="topicContentCalculator">
-       <div id="topicText">
-        <div id="mc3k">
-         <form action="" id="Length_form" name="Length_form" onkeydown="to_param.value='';" onkeypress="resetInTime(); return validNumberField(event);" onkeyup="unitConvert();" onsubmit="return false;">
-          <table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
-           <tbody>
-            <tr>
-             <td bgcolor="#eeeeee" width="1%">
-              <br/>
-             </td>
-             <td align="left" bgcolor="#eeeeee">
-              <span class="medCalcFontTitleBox">
-               Calculator: Length unit conversions
-              </span>
-             </td>
-            </tr>
-           </tbody>
-          </table>
-          <br/>
-          <br/>
-          <center>
-           <div id="calc_main">
-            <div id="calc_input">
-             <table summary="EBMcalc Table">
-              <tbody>
-               <tr>
-                <td colspan="2">
-                 <span class="medCalcFontZeroBold">
-                  FROM:
-                 </span>
-                </td>
-               </tr>
-               <tr>
-                <td align="left">
-                 <b>
-                  <input aria-label="Use this input box to enter from-value" name="from_param" onchange="unitConvert();" size="7" type="text"/>
-                 </b>
-                </td>
-                <td align="left">
-                 <b>
-                  <select aria-label="Use this pulldown selector to set the from-value unit of measure" class="medCalcFontSelect" name="from_unit" onchange="unitConvert();" style="width:140px;">
-                   <option selected="selected" value="Pull down|0|1|0">
-                    Pull down
-                   </option>
-                   <option value="Centimeters|0.01|0">
-                    Centimeters
-                   </option>
-                   <option value="Feet|0.3048|0">
-                    Feet
-                   </option>
-                   <option value="Inches|0.0254|0">
-                    Inches
-                   </option>
-                   <option value="Meters|1|0">
-                    Meters
-                   </option>
-                   <option value="Microns|0.000001|0">
-                    Microns
-                   </option>
-                   <option value="Millimeters|0.001|0">
-                    Millimeters
-                   </option>
-                  </select>
-                 </b>
-                </td>
-               </tr>
-               <tr>
-                <td colspan="2">
-                 <span class="medCalcFontZeroBold">
-                  TO:
-                 </span>
-                </td>
-               </tr>
-               <tr>
-                <td align="left">
-                 <input aria-label="The calculated to-value will display here" aria-readonly="true" name="to_param" size="7" type="text"/>
-                </td>
-                <td align="left">
-                 <b>
-                  <select aria-label="Use this pulldown selector to set the to-value unit of measure" class="medCalcFontSelect" name="to_unit" onchange="unitConvert();" style="width:140px;">
-                   <option selected="selected" value="Pull down|0|1|0">
-                    Pull down
-                   </option>
-                   <option value="Centimeters|0.01|0">
-                    Centimeters
-                   </option>
-                   <option value="Feet|0.3048|0">
-                    Feet
-                   </option>
-                   <option value="Inches|0.0254|0">
-                    Inches
-                   </option>
-                   <option value="Meters|1|0">
-                    Meters
-                   </option>
-                   <option value="Microns|0.000001|0">
-                    Microns
-                   </option>
-                   <option value="Millimeters|0.001|0">
-                    Millimeters
-                   </option>
-                  </select>
-                 </b>
-                </td>
-               </tr>
-              </tbody>
-             </table>
-             <br/>
-             <br/>
-             <span class="medCalcFontOneBold">
-              Set maximal display precision in decimal points:
-             </span>
-             <select aria-label="" class="medCalcFontSelect" name="decpts" onchange="setDecPts();">
-              <option>
-               0
-              </option>
-              <option selected="selected">
-               1
-              </option>
-              <option>
-               2
-              </option>
-              <option>
-               3
-              </option>
-             </select>
-             <br/>
-             <br/>
-             <input name="resetbutton" type="reset" value="Reset form"/>
-            </div>
-           </div>
-          </center>
-         </form>
-         <br/>
-         <br/>
-         <div id="calc_notes">
-          <span class="medCalcFontOneBold">
-           Notes
-          </span>
-          <ul class="medCalcFontOne">
-           <li>
-            Type in a starting value in the
-            <b>
-             FROM
-            </b>
-            box and select the starting units with the pull-down 
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Calculator: Length unit conversions</title></head>
+<body><section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Calculator: Length unit conversions</h1>
+<div class="utdArticleSection" id="topicContentCalculator"><div id="topicText">
+<div id="mc3k">
+<form action="" id="Length_form" name="Length_form" onkeydown="to_param.value='';" onkeypress="resetInTime(); return validNumberField(event);" onkeyup="unitConvert();" onsubmit="return false;">
+<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
+<td align="left" bgcolor="#eeeeee">
+<span class="medCalcFontTitleBox">
+
+Calculator: Length unit conversions
+</span></td></tr></tbody></table><br/> <br/>
+<center>
+<div id="calc_main">
+<div id="calc_input">
+<table summary="EBMcalc Table">
+<tbody><tr><td colspan="2"><span class="medCalcFontZeroBold">FROM:</span></td></tr>
+<tr><td align="left"><b><input aria-label="Use this input box to enter from-value" name="from_param" onchange="unitConvert();" size="7" type="text"/></b></td>
+<td align="left"><b><select aria-label="Use this pulldown selector to set the from-value unit of measure" class="medCalcFontSelect" name="from_unit" onchange="unitConvert();" style="width:140px;">
+<option selected="selected" value="Pull down|0|1|0">Pull down</option>
+<option value="Centimeters|0.01|0">Centimeters</option>
+<option value="Feet|0.3048|0">Feet</option>
+<option value="Inches|0.0254|0">Inches</option>
+<option value="Meters|1|0">Meters</option>
+<option value="Microns|0.000001|0">Microns</option>
+<option value="Millimeters|0.001|0">Millimeters</option>
+</select></b></td></tr>
+<tr><td colspan="2"><span class="medCalcFontZeroBold">TO:</span></td></tr>
+<tr><td align="left"><input aria-label="The calculated to-value will display here" aria-readonly="true" name="to_param" size="7" type="text"/></td>
+<td align="left"><b><select aria-label="Use this pulldown selector to set the to-value unit of measure" class="medCalcFontSelect" name="to_unit" onchange="unitConvert();" style="width:140px;">
+<option selected="selected" value="Pull down|0|1|0">Pull down</option>
+<option value="Centimeters|0.01|0">Centimeters</option>
+<option value="Feet|0.3048|0">Feet</option>
+<option value="Inches|0.0254|0">Inches</option>
+<option value="Meters|1|0">Meters</option>
+<option value="Microns|0.000001|0">Microns</option>
+<option value="Millimeters|0.001|0">Millimeters</option>
+</select></b></td></tr></tbody></table>
+<br/> <br/>
+<span class="medCalcFontOneBold">
+Set maximal display precision in decimal points:
+</span>
+<select aria-label="" class="medCalcFontSelect" name="decpts" onchange="setDecPts();">
+<option>0</option>
+<option selected="selected">1</option>
+<option>2</option>
+<option>3</option>
+</select>
+<br/> <br/>
+<input name="resetbutton" type="reset" value="Reset form"/>
+</div>
+</div>
+</center>
+</form>
+<br/> <br/>
+<div id="calc_notes">
+<span class="medCalcFontOneBold">Notes</span>
+<ul class="medCalcFontOne">
+<li>Type in a starting value in the <b>FROM</b> box and select the starting units with the pull-down 
 selector. Choose the new unit in the lower pull-down selector and the converted value will appear
-immediately in the
-            <b>
-             TO
-            </b>
-            box.
-           </li>
-           <li>
-            Conversion factors used to convert units of length are shown in the table below. To convert length from one unit to another, multiply input length value by the appropriate conversion factor. The appropriate conversion factor is located in the box where the row for input unit of length (From: unit) intersects with the column for desired unit of length (To: unit).
-           </li>
-          </ul>
-         </div>
-         <div id="calc_hints">
-          <br/>
-          <br/>
-          <table border="1" cellpadding="4" cellspacing="0" class="medCalcFontOne" summary="EBMcalc Table">
-           <tbody>
-            <tr>
-             <td>
-             </td>
-             <td align="left">
-              <b>
-               To:
-               <br/>
-               unit
-              </b>
-             </td>
-             <td align="left">
-              Inches
-             </td>
-             <td align="left">
-              Feet
-             </td>
-             <td align="left">
-              Meters
-             </td>
-             <td align="left">
-              Centimeters
-             </td>
-             <td align="left">
-              Millimeters
-             </td>
-             <td align="left">
-              Microns
-              <br/>
-              (Micrometers)
-             </td>
-            </tr>
-            <tr>
-             <td align="left">
-              <b>
-               From:
-               <br/>
-               unit
-              </b>
-             </td>
-             <td>
-             </td>
-             <td>
-             </td>
-             <td>
-             </td>
-             <td>
-             </td>
-             <td>
-             </td>
-             <td>
-             </td>
-             <td>
-             </td>
-            </tr>
-            <tr>
-             <td align="left">
-              Inches
-             </td>
-             <td>
-             </td>
-             <td align="left">
-              1
-             </td>
-             <td align="left">
-              0.08333
-             </td>
-             <td align="left">
-              0.0254
-             </td>
-             <td align="left">
-              2.54
-             </td>
-             <td align="left">
-              25.40
-             </td>
-             <td align="left">
-              25400
-             </td>
-            </tr>
-            <tr>
-             <td align="left">
-              Feet
-             </td>
-             <td>
-             </td>
-             <td align="left">
-              12.0
-             </td>
-             <td align="left">
-              1
-             </td>
-             <td align="left">
-              0.3048
-             </td>
-             <td align="left">
-              30.48
-             </td>
-             <td align="left">
-              304.8
-             </td>
-             <td align="left">
-              304800
-             </td>
-            </tr>
-            <tr>
-             <td align="left">
-              Meters
-             </td>
-             <td>
-             </td>
-             <td align="left">
-              39.4
-             </td>
-             <td align="left">
-              3.281
-             </td>
-             <td align="left">
-              1
-             </td>
-             <td align="left">
-              100
-             </td>
-             <td align="left">
-              1000
-             </td>
-             <td align="left">
-              1000000
-             </td>
-            </tr>
-            <tr>
-             <td align="left">
-              Centimeters
-             </td>
-             <td>
-             </td>
-             <td align="left">
-              0.394
-             </td>
-             <td align="left">
-              0.0328
-             </td>
-             <td align="left">
-              0.010
-             </td>
-             <td align="left">
-              1
-             </td>
-             <td align="left">
-              10
-             </td>
-             <td align="left">
-              10000
-             </td>
-            </tr>
-            <tr>
-             <td align="left">
-              Millimeters
-             </td>
-             <td>
-             </td>
-             <td align="left">
-              0.0394
-             </td>
-             <td align="left">
-              0.003281
-             </td>
-             <td align="left">
-              0.001
-             </td>
-             <td align="left">
-              0.1
-             </td>
-             <td align="left">
-              1
-             </td>
-             <td align="left">
-              1000
-             </td>
-            </tr>
-            <tr>
-             <td align="left">
-              Microns
-              <br/>
-              (Micrometers)
-             </td>
-             <td>
-             </td>
-             <td align="left">
-              0.0000394
-             </td>
-             <td align="left">
-              0.000003281
-             </td>
-             <td align="left">
-              0.0000001
-             </td>
-             <td align="left">
-              0.00001
-             </td>
-             <td align="left">
-              0.001
-             </td>
-             <td align="left">
-              1
-             </td>
-            </tr>
-           </tbody>
-          </table>
-         </div>
-        </div>
-        <span class="calculatorVendorId" id="T1678215875">
-        </span>
-       </div>
-       <div id="printDisclaimer">
-        <b>
-         Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.
-        </b>
-        <p>
-         Information on this page may not appear correctly if printed.
-        </p>
-       </div>
-       <div id="disclaimerCalculator">
-        <div class="medCalcFontTwo">
-         <p class="header">
-          Legal Notices and Disclaimer
-         </p>
-         <p>
-          All information contained in and produced by the EBMcalc system is provided
+immediately in the <b>TO</b> box.
+</li>
+<li>Conversion factors used to convert units of length are shown in the table below. To convert length from one unit to another, multiply input length value by the appropriate conversion factor. The appropriate conversion factor is located in the box where the row for input unit of length (From: unit) intersects with the column for desired unit of length (To: unit).</li>
+</ul>
+</div>
+<div id="calc_hints">
+<br/> <br/><table border="1" cellpadding="4" cellspacing="0" class="medCalcFontOne" summary="EBMcalc Table"><tbody><tr><td> </td><td align="left"><b>To:<br/>unit</b></td><td align="left">Inches</td><td align="left">Feet</td><td align="left">Meters</td><td align="left">Centimeters</td><td align="left">Millimeters</td><td align="left">Microns<br/>(Micrometers)</td></tr><tr><td align="left"><b>From:<br/>unit</b></td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td></tr><tr><td align="left">Inches</td><td> </td><td align="left">1</td><td align="left">0.08333</td><td align="left">0.0254</td><td align="left">2.54</td><td align="left">25.40</td><td align="left">25400</td></tr><tr><td align="left">Feet</td><td> </td><td align="left">12.0</td><td align="left">1</td><td align="left">0.3048</td><td align="left">30.48</td><td align="left">304.8</td><td align="left">304800</td></tr><tr><td align="left">Meters</td><td> </td><td align="left">39.4</td><td align="left">3.281</td><td align="left">1</td><td align="left">100</td><td align="left">1000</td><td align="left">1000000</td></tr><tr><td align="left">Centimeters</td><td> </td><td align="left">0.394</td><td align="left">0.0328</td><td align="left">0.010</td><td align="left">1</td><td align="left">10</td><td align="left">10000</td></tr><tr><td align="left">Millimeters</td><td> </td><td align="left">0.0394</td><td align="left">0.003281</td><td align="left">0.001</td><td align="left">0.1</td><td align="left">1</td><td align="left">1000</td></tr><tr><td align="left">Microns<br/>(Micrometers)</td><td> </td><td align="left">0.0000394</td><td align="left">0.000003281</td><td align="left">0.0000001</td><td align="left">0.00001</td><td align="left">0.001</td><td align="left">1</td></tr></tbody></table>
+</div>
+</div>
+<span class="calculatorVendorId" id="T1678215875">
+</span></div><div id="printDisclaimer">
+<b>Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.</b>
+<p>
+	Information on this page may not appear correctly if printed. </p>
+</div>
+<div id="disclaimerCalculator">
+<div class="medCalcFontTwo">
+<p class="header">Legal Notices and Disclaimer</p>
+<p>
+			All information contained in and produced by the EBMcalc system is provided
 			for educational purposes only. This information should not be used for the diagnosis or treatment
-			of any health problem or disease.
-          <b>
-           THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.
-          </b>
-          <a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">
-           Click here for full notice and disclaimer.
-          </a>
-         </p>
-         <p class="copy">
-          EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC
-         </p>
-        </div>
-       </div>
-       <div id="topicVersionRevision">
-        Topic 121492 Version 6.0
-       </div>
-      </div>
-     </div>
-    </div>
-   </section>
-  </section>
-  <!-- End Main Menu Area -->
-  <!-- Start Search Popup Area -->
-  <!-- End Footer Area -->
-  <!-- Back to top -->
-  <a class="scrolltop" href="#top">
-   <i class="icofont-hand-drawn-up">
-   </i>
-  </a>
-  <!-- End Back to top -->
-  <!-- jQuery Min JS -->
-  <!-- Prpper JS -->
-  <!-- Bootstrap Min JS -->
-  <!-- Classy Nav Min Js -->
-  <!-- Owl Carousel Min Js -->
-  <!-- Magnific Popup JS -->
-  <!-- CounterUp JS -->
-  <!-- Waypoints JS -->
-  <!-- Form Validator Min JS -->
-  <!-- Contact Form Min JS -->
-  <!-- Main JS -->
-  <!-- Global site tag (gtag.js) - Google Analytics -->
- </body>
+			of any health problem or disease. 
+			<b>THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.</b>
+<a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">Click here for full notice and disclaimer.</a>
+</p>
+<p class="copy">EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC</p>
+</div>
+</div><div id="topicVersionRevision">Topic 121492 Version 6.0</div></div>
+</div>
+</div>
+</section><script>
+/* <![CDATA[ */
+
+
+
+
+
+
+
+var lastChar = '';
+
+function log(i){
+return Math.log(i) * Math.LOG10E;
+}
+
+function ln(i){
+return Math.log(i);
+}
+
+function sq(i){
+return i * i;
+}
+
+function sqr(i){
+return Math.sqrt(i);
+}
+
+
+function power(x,y){
+return Math.pow(x,y);
+}
+
+function eTo(x){
+return Math.exp(x);
+}
+
+
+function fixDP(r, dps) {
+if (isNaN(r)) return "NaN";
+var msign = '';
+if (r < 0) msign = '-';
+x = Math.abs(r);
+if (x > Math.pow(10, 21)) return msign + x.toString();
+var m = Math.round(x * Math.pow(10, dps)).toString();
+if (dps == 0) return msign + m;
+while (m.length <= dps) m = "0" + m;
+return msign + m.substring(0, m.length - dps) + "." + m.substring(m.length - dps);
+}
+
+
+function alertNaN(){
+alert('This field is improperly formatted. You may only input the digits 0-9 and a decimal point.');
+doCalc = false;
+clrResults();
+}
+
+function validNumberField(event) {
+var field = event.target;
+
+if(field && field != 'undefined' && field.attributes.type.nodeValue && (field.attributes.type.nodeValue == 'number')) {
+var val = field.value;
+var charCode = event.charCode;
+var key = String.fromCharCode(charCode);
+
+if(charCode == 0 || charCode == 13) {
+  return true;
+}
+
+if(key == ' ') {
+alert('Numeric field cannot contain spaces.');
+  return false;
+}
+
+if(key == '.') { return validDecimalPoint(val, key); }
+if(key == '-') { return validMinus(val, key); }
+
+if(isNaN(parseInt(key))) {
+alertNaN();
+return false;
+}
+
+return validFloat(val, key);
+}
+return true;
+}
+
+function validDecimalPoint(val, key) {
+if(val.length == 0 && lastChar != '.') {
+  lastChar = '.';
+  return true;
+}
+if(val.indexOf('.') >= 0 || lastChar == '.') {
+ alertNaN();
+ return false;
+}
+if(validFloat(val, key)) {
+ lastChar = key;
+ return true;
+}
+lastChar = '';
+return false;
+}
+
+function validMinus(val, key) {
+if(val.length == 0) {
+  return true;
+}
+if(val.length > 1) {
+ alertNaN();
+ return false;
+}
+return validFloat(val, key);
+}
+
+
+function validFloat(val, key) {
+var currentVal = parseFloat(val + key);
+if(isNaN(val + key) || isNaN(currentVal)) {
+alertNaN();
+return false;
+}
+return true;
+}
+
+function formKeyDown(event) {
+var field = event.target;
+
+resetInTime();
+
+if(field && field != 'undefined' && field.attributes.type && field.attributes.type.nodeValue && (field.attributes.type.nodeValue == 'number')) {
+  var val = field.value;
+  var keyCode = event.keyCode;
+  if(keyCode == 8 || keyCode == 127) {
+    // backspace or delete
+    if(lastChar == '.') {
+      lastChar = '';
+    }
+    if(field.value.length == 3 && field.value[0] == '0' && field.value[1] == '.') {
+      // this handles a backspace on an input like ".5", which is saved internally as "0.5"
+      //   otherwise, if you leave the field after the backspace, it retains "0.5" as the value, most likely an iOS bug
+      field.value = ''; 
+    }
+  }
+}
+clrResults();
+}
+
+function clrValue(field) {
+ field.value = '';
+ lastChar = '';
+}
+
+var currenttimeout;
+
+function resetInTime(){
+if (currenttimeout) clearTimeout(currenttimeout);
+currenttimeout = setTimeout('minMaxCheck();', 2000);
+}
+
+
+
+
+codes = new Array();
+codeparts = new Array();
+var dp = 1;
+var tovalue;
+var to_selected = 0;
+
+function showToValue(){
+with (document.Length_form){
+to_param.value = fixDP(tovalue, dp);
+}}
+
+function setDecPts(){
+with (document.Length_form){
+dp = decpts.options[decpts.selectedIndex].text;
+unitConvert();
+}}
+
+function minMaxCheck(){}
+
+function unitConvert(){
+with (document.Length_form){
+
+if ((to_unit.selectedIndex == 0) || (from_unit.selectedIndex == 0)){ to_param.value = ''; return; }
+
+if (from_param.value && isNaN(from_param.value)){ clrValue(from_param); alertNaN(); return;}
+if (from_param.value && (parseFloat(from_param.value) < 0)){ clrValue(from_param); alert('Negative values are not allowed'); return;}
+
+if (from_param.value > ''){
+unitcode = from_unit.options[from_unit.selectedIndex].value;
+codeparts = unitcode.split('|');
+frommult = parseFloat(codeparts[1]);
+fromadd = parseFloat(codeparts[2]);
+
+unitcode = to_unit.options[to_unit.selectedIndex].value;
+codeparts = unitcode.split('|');
+tomult = parseFloat(codeparts[1]);
+toadd = parseFloat(codeparts[2]);
+
+fromvalue = parseFloat(from_param.value);
+tovalue = ((fromvalue * frommult + fromadd) - toadd) / tomult;
+showToValue();
+}}}
+
+function clrResults(){
+with (document.Length_form){
+from_param.value = '';
+to_param.value = '';
+}}
+
+function loadQueryParams(thisqs){
+if (thisqs) alert('Data panel values cannot be transferred to this calculator.');
+return;
+}
+
+/* ]]> */
+</script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://medilib.ir/assets/js/jquery.min.js"></script><script src="https://medilib.ir/assets/js/popper.min.js"></script><script src="https://medilib.ir/assets/js/bootstrap.min.js"></script><script src="https://medilib.ir/assets/js/classy-nav.min.js"></script><script src="https://medilib.ir/assets/js/owl.carousel.min.js"></script><script src="https://medilib.ir/assets/js/jquery.magnific-popup.min.js"></script><script src="https://medilib.ir/assets/js/jquery.counterup.min.js"></script><script src="https://medilib.ir/assets/js/waypoints.min.js"></script><script src="https://medilib.ir/assets/js/form-validator.min.js"></script><script src="https://medilib.ir/assets/js/contact-form-script.js"></script><script src="https://medilib.ir/assets/js/main.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WFDJ5JLM3Q"></script><script>
+    window.addEventListener("load", () => {
+
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function (registrations) {
+                //returns installed service workers
+                if (registrations.length) {
+                    for (let registration of registrations) {
+                        if (
+                            registration.active.scriptURL.startsWith("/serviceWorker.js") &&
+                            !registration.active.scriptURL.endsWith("/serviceWorker.js?v=18")
+                        ) {
+                            registration.unregister();
+                        }
+                    }
+                }
+            });
+            navigator.serviceWorker.register('/serviceWorker.js?v=18', {
+                scope: '/'
+            })
+                .then(function (registration) {
+                    console.log('Registration successful, scope is:', registration.scope);
+                })
+                .catch(function (error) {
+                    console.log('Service worker registration failed, error:', error);
+                });
+        }
+    });
+    const promptElement = document.querySelector('.pwaprompt');
+    const footerPromptElement = document.querySelector('#footerPromptElement');
+    const scrollTopElement = document.querySelector('.scrolltop');
+    // const installButton = promptElement.querySelector('.prompt__install');
+    const closeButton = promptElement.querySelector('.prompt__close');
+    let installEvent;
+
+    function setWithExpiry(key, value, seconds) {
+        const now = new Date()
+
+        // `item` is an object which contains the original value
+        // as well as the time when it's supposed to expire
+        const item = {
+            value: value,
+            expiry: now.getTime() + (seconds * 1000),
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+    }
+
+    function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+        // if the item doesn't exist, return null
+        if (!itemStr) {
+            return null
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+        // compare the expiry time of the item with the current time
+        if (now.getTime() > item.expiry) {
+            // If the item is expired, delete the item from storage
+            // and return null
+            localStorage.removeItem(key)
+            return null
+        }
+        return item.value
+    }
+
+    // checks if the localStorage item has been set
+    function getVisited() {
+        return getWithExpiry('install-prompt')
+        // return localStorage.getItem('install-prompt');
+    }
+
+    // sets the localStorage item
+    function setVisited() {
+        fiveDay = 5 * (24 * (60 * 60))
+        setWithExpiry('install-prompt', true, fiveDay)
+        // localStorage.setItem('install-prompt', true);
+    }
+
+    closeButton.addEventListener('click', () => {
+        // set localStorage to true
+        setVisited();
+
+        // hide the prompt banner
+        promptElement.style.display = 'none';
+        scrollTopElement.style.bottom = '30px';
+
+        // installEvent = null;
+    });
+    // Detects if device is on iOS
+    const isIos = () => {
+        const userAgent = window.navigator.userAgent.toLowerCase();
+        return /iphone|ipad|ipod/.test(userAgent);
+    }
+    // Detects if device is in standalone mode
+    const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+
+    // Checks if should display install popup notification:
+    if (isIos() && !isInStandaloneMode()) {
+        if (!getVisited()) {
+            promptElement.style.display = 'block';
+            scrollTopElement.style.bottom = '80px';
+        }
+        footerPromptElement.style.display = 'block';
+    }
+
+
+    // this event will only fire if the user does not have the pwa installed
+    window.addEventListener('beforeinstallprompt', (event) => {
+        event.preventDefault();
+        // if no localStorage is set, first time visitor
+        if (!getVisited()) {
+            // show the prompt banner
+            promptElement.style.display = 'block';
+            scrollTopElement.style.bottom = '80px';
+
+            // store the event for later use
+
+        }
+        footerPromptElement.style.display = 'block';
+        installEvent = event;
+
+    });
+    $(document).on('click', '.prompt__install', function () {
+        promptElement.style.display = 'none';
+        scrollTopElement.style.bottom = '30px';
+
+        if (isIos() && !isInStandaloneMode()) {
+            setVisited();
+            $('#iphoneAddToHomeScreen').modal()
+        } else {
+
+            // trigger the prompt to show to the user
+            installEvent.prompt();
+            // check what choice the user made
+            installEvent.userChoice.then((choice) => {
+                // if the user declined, we don't want to show the button again
+                // set localStorage to true
+                if (choice.outcome !== 'accepted') {
+                    setVisited();
+                }
+
+                installEvent = null;
+            });
+        }
+
+    });
+</script><script>
+
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-WFDJ5JLM3Q');
+</script><script>
+      var topicReferences=[];
+
+      function refrence(id) {
+          var myReference=Object.values(topicReferences)[id];
+          console.log(myReference);
+          $("#pmid").attr("href",myReference['pmid']);
+          if (typeof myReference['description'] !== 'undefined' && myReference['description']!="") {
+            $("#myModalLabel34").html('Description : <p>' + myReference['description'] + "</p>");
+          }
+          if (typeof myReference['authors'] !== 'undefined' && myReference['authors']!="") {
+            $("#referenceAuthors").html('Authors : <p>' + myReference['authors'] + "</p>");
+          }
+          if (typeof myReference['source'] !== 'undefined' && myReference['source']!="") {
+            $("#referenceSource").html('Source : <p>' + myReference['source'] + "</p>");
+          }
+          if (typeof myReference['title'] !== 'undefined' && myReference['title']!="") {
+            $("#referenceTitle").html('Title : <p>' + myReference['title'] + "</p>");
+          }
+          if (typeof myReference['affiliation'] !== 'undefined' && myReference['affiliation']!="") {
+            $("#referenceAffiliation").html('Affiliation : <p>' + myReference['affiliation'] + "</p>");
+          }
+      }
+  </script><script>
+
+      var screenHeight = screen.height;
+
+      if (screenHeight > 700) {
+        // $document.getElementById("Uptodate_image").style.width = "100% !important;";
+        // $('.Uptodate_image').css('width', '100% !important;');
+        console.log("more");
+      }else{
+        console.log(screenHeight);
+      }
+    $(document).scroll(function()  {
+      var y = $(this).scrollTop();
+      if (y > 100) {
+        $('.goback').fadeIn();
+        $('.buyPackage').fadeIn();
+        // alert(document.getElementById('main_menu').style.zIndex);
+        document.getElementById("uptodate-area").style.padding = "0px 0 0 0";
+        document.getElementById('main_menu').style.zIndex=1;
+         document.getElementById('main_menu').style.display="none";
+        document.getElementById('navbar_menu').style.marginTop="70px"
+        document.getElementById('uptodate-area').style.marginTop="0px"
+        document.getElementById('uptodate-area').style.zIndex=999;
+        console.log('down');
+      } else {
+        $('.goback').fadeOut();
+        $('.buyPackage').fadeOut();
+        document.getElementById("uptodate-area").style.padding = "0px 0 0 0";
+        document.getElementById('navbar_menu').style.marginTop="0px"
+        document.getElementById('main_menu').style.display="";
+        document.getElementById('uptodate-area').style.zIndex=0;
+        console.log('up');
+      }
+    });
+    function goBack() {
+      window.history.back();
+    }
+    function buyPackage() {
+      window.open("https://medilib.ir/userPanel/package/uptodate/index",'_blank');
+    }
+  </script></body>
 </html>

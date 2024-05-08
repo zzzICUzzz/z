@@ -1,269 +1,585 @@
 <!DOCTYPE html>
+
 <html lang="fa">
- <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
- <head>
-  <title>
-   Calculator: Modified Medical Research Council (mMRC) scale for dyspnea
-  </title>
-  <link href="d/css/1.css" rel="stylesheet"/>
- </head>
- <body>
-  <!-- Start Main Menu Area -->
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <div class="container">
-   <div class="row">
-   </div>
-  </div>
-  <section class="teacher-area ptb-10">
-   <div class="container">
-   </div>
-   <section class="course-details-area ptb-60">
-    <div class="container">
-     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-      <h1 style="text-align:center">
-       Calculator: Modified Medical Research Council (mMRC) scale for dyspnea
-      </h1>
-      <div class="utdArticleSection" id="topicContentCalculator">
-       <div id="topicText">
-        <div id="mc3k">
-         <form action="" id="MMRC_form" name="MMRC_form" onkeydown="formKeyDown(event);" onkeypress="resetInTime(); return validNumberField(event);" onkeyup="MMRC_fx();" onreset="document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
-          <table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
-           <tbody>
-            <tr>
-             <td bgcolor="#eeeeee" width="1%">
-              <br/>
-             </td>
-             <td align="left" bgcolor="#eeeeee">
-              <span class="medCalcFontTitleBox">
-               Calculator: Modified Medical Research Council (mMRC) scale for dyspnea
-              </span>
-             </td>
-            </tr>
-           </tbody>
-          </table>
-          <br/>
-          <br/>
-          <div id="calc_main">
-           <center>
-            <span class="medCalcFontIO">
-             Input
-            </span>
-            <br/>
-            <br/>
-            <table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
-             <tbody>
-              <tr>
-               <td align="right" valign="top">
-                <span class="medCalcFontOneBold">
-                 Dyspnea scale
-                </span>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Dyspnea scale. The variable option is mMRC 0: Dyspneic on strenuous exercise." id="togel1" name="Dyspnea_scale_radio" onclick="MMRC_fx();" type="radio" value="mMRC 0: Dyspneic on strenuous exercise|0"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel1');">
-                 mMRC 0: Dyspneic on strenuous exercise
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="left">
-                <br/>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Dyspnea scale. The variable option is mMRC 1: Dyspneic on walking up a slight hill." id="togel2" name="Dyspnea_scale_radio" onclick="MMRC_fx();" type="radio" value="mMRC 1: Dyspneic on walking up a slight hill|1"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel2');">
-                 mMRC 1: Dyspneic on walking up a slight hill
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="left">
-                <br/>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Dyspnea scale. The variable option is  mMRC 2: Dyspneic on walking level ground; must stop occasionally due to breathlessness." id="togel3" name="Dyspnea_scale_radio" onclick="MMRC_fx();" type="radio" value=" mMRC 2: Dyspneic on walking level ground; must stop occasionally due to breathlessness|2"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel3');">
-                 mMRC 2: Dyspneic on walking level ground; must stop occasionally due to breathlessness
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="left">
-                <br/>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Dyspnea scale. The variable option is  mMRC 3: Must stop for breathlessness after walking 100 yards [91 meters] or after a few minutes." id="togel4" name="Dyspnea_scale_radio" onclick="MMRC_fx();" type="radio" value=" mMRC 3: Must stop for breathlessness after walking 100 yards [91 meters] or after a few minutes|3"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel4');">
-                 mMRC 3: Must stop for breathlessness after walking 100 yards [91 meters] or after a few minutes
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="left">
-                <br/>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Dyspnea scale. The variable option is  mMRC 4: Cannot leave house; breathless on dressing/undressing." id="togel5" name="Dyspnea_scale_radio" onclick="MMRC_fx();" type="radio" value=" mMRC 4: Cannot leave house; breathless on dressing/undressing|4"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel5');">
-                 mMRC 4: Cannot leave house; breathless on dressing/undressing
-                </span>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-           </center>
-           <br/>
-           <br/>
-           <center>
-            <span class="medCalcFontIO">
-             Result
-             <span class="medCalcFontOne" id="inputchk">
-              <br/>
-              <br/>
-              <b>
-               Important:
-              </b>
-              Inputs must be complete to perform calculation.
-              <br/>
-             </span>
-            </span>
-            <br/>
-            <br/>
-            <table cellpadding="4" class="medCalcResultBox" summary="EBMcalc Table">
-             <tbody>
-              <tr>
-               <td colspan="3">
-                <br/>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontResultParam">
-                 mMRC
-                </span>
-               </td>
-               <td nowrap="nowrap" valign="top">
-                <input aria-label="This output box will display the calculated value mMRC" aria-readonly="true" name="mMRC_param" size="6" type="text"/>
-               </td>
-               <td align="left" valign="top">
-                <span class="medCalcFontResultParam">
-                 <span style="white-space: nowrap;">
-                  <span class="medCalcFontResultParam">
-                   points
-                  </span>
-                 </span>
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td colspan="3">
-                <br/>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-           </center>
-           <br/>
-           <br/>
-           <div id="calc_buttons">
-            <center>
-             <span class="medCalcFontOne">
-              <input name="resetbutton" type="reset" value="Reset form"/>
-             </span>
-            </center>
-           </div>
-          </div>
-          <div id="pretextrefs">
-          </div>
-          <div id="calc_tables_above_notes">
-          </div>
-          <br/>
-          <br/>
-          <div id="calc_tables">
-          </div>
-          <br/>
-          <br/>
-          <div id="calc_refs">
-           <span class="medCalcFontRef">
-            <b>
-             References
-            </b>
-           </span>
-           <ol>
-            <li>
-             <span class="medCalcFontRef">
-              <a href="https://www.ncbi.nlm.nih.gov/pubmed/3342669" rel="nofollow noopener noreferrer" style="color: green; text-decoration: none;" target="_blank">
-               Mahler DA, Wells CK. Evaluation of clinical methods for rating dyspnea. Chest 1988; 93:580.
-              </a>
-             </span>
-            </li>
-           </ol>
-          </div>
-         </form>
-        </div>
-        <span class="calculatorVendorId" id="T1697147133">
-        </span>
-       </div>
-       <div id="printDisclaimer">
-        <b>
-         Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.
-        </b>
-        <p>
-         Information on this page may not appear correctly if printed.
-        </p>
-       </div>
-       <div id="disclaimerCalculator">
-        <div class="medCalcFontTwo">
-         <p class="header">
-          Legal Notices and Disclaimer
-         </p>
-         <p>
-          All information contained in and produced by the EBMcalc system is provided
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Calculator: Modified Medical Research Council (mMRC) scale for dyspnea</title></head>
+<body><section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Calculator: Modified Medical Research Council (mMRC) scale for dyspnea</h1>
+<div class="utdArticleSection" id="topicContentCalculator"><div id="topicText">
+<div id="mc3k">
+<form action="" id="MMRC_form" name="MMRC_form" onkeydown="formKeyDown(event);" onkeypress="resetInTime(); return validNumberField(event);" onkeyup="MMRC_fx();" onreset="document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
+<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
+<td align="left" bgcolor="#eeeeee">
+<span class="medCalcFontTitleBox">
+
+ 
+Calculator: Modified Medical Research Council (mMRC) scale for dyspnea
+</span></td></tr></tbody></table><br/> <br/>
+<div id="calc_main">
+<center>
+<span class="medCalcFontIO">
+Input
+</span>
+<br/> <br/>
+<table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
+<tbody><tr><td align="right" valign="top"><span class="medCalcFontOneBold">Dyspnea scale</span></td>
+<td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Dyspnea scale. The variable option is mMRC 0: Dyspneic on strenuous exercise." id="togel1" name="Dyspnea_scale_radio" onclick="MMRC_fx();" type="radio" value="mMRC 0: Dyspneic on strenuous exercise|0"/><span class="medCalcFontOneClick" onclick="setRB('togel1');"> mMRC 0: Dyspneic on strenuous exercise</span></td></tr>
+<tr><td align="left"><br/></td><td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Dyspnea scale. The variable option is mMRC 1: Dyspneic on walking up a slight hill." id="togel2" name="Dyspnea_scale_radio" onclick="MMRC_fx();" type="radio" value="mMRC 1: Dyspneic on walking up a slight hill|1"/><span class="medCalcFontOneClick" onclick="setRB('togel2');"> mMRC 1: Dyspneic on walking up a slight hill</span></td></tr>
+<tr><td align="left"><br/></td><td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Dyspnea scale. The variable option is  mMRC 2: Dyspneic on walking level ground; must stop occasionally due to breathlessness." id="togel3" name="Dyspnea_scale_radio" onclick="MMRC_fx();" type="radio" value=" mMRC 2: Dyspneic on walking level ground; must stop occasionally due to breathlessness|2"/><span class="medCalcFontOneClick" onclick="setRB('togel3');">  mMRC 2: Dyspneic on walking level ground; must stop occasionally due to breathlessness</span></td></tr>
+<tr><td align="left"><br/></td><td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Dyspnea scale. The variable option is  mMRC 3: Must stop for breathlessness after walking 100 yards [91 meters] or after a few minutes." id="togel4" name="Dyspnea_scale_radio" onclick="MMRC_fx();" type="radio" value=" mMRC 3: Must stop for breathlessness after walking 100 yards [91 meters] or after a few minutes|3"/><span class="medCalcFontOneClick" onclick="setRB('togel4');">  mMRC 3: Must stop for breathlessness after walking 100 yards [91 meters] or after a few minutes</span></td></tr>
+<tr><td align="left"><br/></td><td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Dyspnea scale. The variable option is  mMRC 4: Cannot leave house; breathless on dressing/undressing." id="togel5" name="Dyspnea_scale_radio" onclick="MMRC_fx();" type="radio" value=" mMRC 4: Cannot leave house; breathless on dressing/undressing|4"/><span class="medCalcFontOneClick" onclick="setRB('togel5');">  mMRC 4: Cannot leave house; breathless on dressing/undressing</span></td></tr>
+</tbody></table>
+</center>
+<br/> <br/><center><span class="medCalcFontIO">Result<span class="medCalcFontOne" id="inputchk"><br/> <br/><b>Important:</b> Inputs must be complete to perform calculation. <br/></span></span>
+<br/> <br/>
+<table cellpadding="4" class="medCalcResultBox" summary="EBMcalc Table">
+<tbody><tr><td colspan="3"> <br/></td></tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">mMRC</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value mMRC" aria-readonly="true" name="mMRC_param" size="6" type="text"/></td>
+<td align="left" valign="top"><span class="medCalcFontResultParam">
+<span style="white-space: nowrap;"><span class="medCalcFontResultParam"> points</span>
+</span>
+</span></td>
+</tr>
+<tr><td colspan="3"> <br/></td></tr>
+</tbody></table>
+</center><br/> <br/>
+<div id="calc_buttons">
+<center>
+<span class="medCalcFontOne">
+<input name="resetbutton" type="reset" value="Reset form"/>
+</span>
+</center>
+</div>
+</div><div id="pretextrefs">
+ 
+</div>
+<div id="calc_tables_above_notes">
+</div>
+<br/> <br/>
+<div id="calc_tables">
+</div>
+<br/> <br/>
+<div id="calc_refs">
+<span class="medCalcFontRef"><b>References</b></span>
+<ol>
+<li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/3342669" rel="nofollow noopener noreferrer" style="color: green; text-decoration: none;" target="_blank">Mahler DA, Wells CK. Evaluation of clinical methods for rating dyspnea. Chest 1988; 93:580.</a></span></li>
+</ol>
+</div>
+</form>
+</div>
+<span class="calculatorVendorId" id="T1697147133">
+</span></div><div id="printDisclaimer">
+<b>Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.</b>
+<p>
+	Information on this page may not appear correctly if printed. </p>
+</div>
+<div id="disclaimerCalculator">
+<div class="medCalcFontTwo">
+<p class="header">Legal Notices and Disclaimer</p>
+<p>
+			All information contained in and produced by the EBMcalc system is provided
 			for educational purposes only. This information should not be used for the diagnosis or treatment
-			of any health problem or disease.
-          <b>
-           THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.
-          </b>
-          <a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">
-           Click here for full notice and disclaimer.
-          </a>
-         </p>
-         <p class="copy">
-          EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC
-         </p>
-        </div>
-       </div>
-       <div id="topicVersionRevision">
-        Topic 142813 Version 1.0
-       </div>
-      </div>
-     </div>
-    </div>
-   </section>
-  </section>
-  <!-- End Main Menu Area -->
-  <!-- Start Search Popup Area -->
-  <!-- End Footer Area -->
-  <!-- Back to top -->
-  <a class="scrolltop" href="#top">
-   <i class="icofont-hand-drawn-up">
-   </i>
-  </a>
-  <!-- End Back to top -->
-  <!-- jQuery Min JS -->
-  <!-- Prpper JS -->
-  <!-- Bootstrap Min JS -->
-  <!-- Classy Nav Min Js -->
-  <!-- Owl Carousel Min Js -->
-  <!-- Magnific Popup JS -->
-  <!-- CounterUp JS -->
-  <!-- Waypoints JS -->
-  <!-- Form Validator Min JS -->
-  <!-- Contact Form Min JS -->
-  <!-- Main JS -->
-  <!-- Global site tag (gtag.js) - Google Analytics -->
- </body>
+			of any health problem or disease. 
+			<b>THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.</b>
+<a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">Click here for full notice and disclaimer.</a>
+</p>
+<p class="copy">EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC</p>
+</div>
+</div><div id="topicVersionRevision">Topic 142813 Version 1.0</div></div>
+</div>
+</div>
+</section><script>
+/* <![CDATA[ */
+
+var lastChar = '';
+
+function log(i){
+return Math.log(i) * Math.LOG10E;
+}
+
+function ln(i){
+return Math.log(i);
+}
+
+function sq(i){
+return i * i;
+}
+
+function sqr(i){
+return Math.sqrt(i);
+}
+
+
+function power(x,y){
+return Math.pow(x,y);
+}
+
+function eTo(x){
+return Math.exp(x);
+}
+
+
+function fixDP(r, dps) {
+if (isNaN(r)) return "NaN";
+var msign = '';
+if (r < 0) msign = '-';
+x = Math.abs(r);
+if (x > Math.pow(10, 21)) return msign + x.toString();
+var m = Math.round(x * Math.pow(10, dps)).toString();
+if (dps == 0) return msign + m;
+while (m.length <= dps) m = "0" + m;
+return msign + m.substring(0, m.length - dps) + "." + m.substring(m.length - dps);
+}
+
+
+function alertNaN(){
+alert('This field is improperly formatted. You may only input the digits 0-9 and a decimal point.');
+doCalc = false;
+clrResults();
+}
+
+function validNumberField(event) {
+var field = event.target;
+
+if(field && field != 'undefined' && field.attributes.type.nodeValue && (field.attributes.type.nodeValue == 'number')) {
+var val = field.value;
+var charCode = event.charCode;
+var key = String.fromCharCode(charCode);
+
+if(charCode == 0 || charCode == 13) {
+  return true;
+}
+
+if(key == ' ') {
+alert('Numeric field cannot contain spaces.');
+  return false;
+}
+
+if(key == '.') { return validDecimalPoint(val, key); }
+if(key == '-') { return validMinus(val, key); }
+
+if(isNaN(parseInt(key))) {
+alertNaN();
+return false;
+}
+
+return validFloat(val, key);
+}
+return true;
+}
+
+function validDecimalPoint(val, key) {
+if(val.length == 0 && lastChar != '.') {
+  lastChar = '.';
+  return true;
+}
+if(val.indexOf('.') >= 0 || lastChar == '.') {
+ alertNaN();
+ return false;
+}
+if(validFloat(val, key)) {
+ lastChar = key;
+ return true;
+}
+lastChar = '';
+return false;
+}
+
+function validMinus(val, key) {
+if(val.length == 0) {
+  return true;
+}
+if(val.length > 1) {
+ alertNaN();
+ return false;
+}
+return validFloat(val, key);
+}
+
+
+function validFloat(val, key) {
+var currentVal = parseFloat(val + key);
+if(isNaN(val + key) || isNaN(currentVal)) {
+alertNaN();
+return false;
+}
+return true;
+}
+
+function formKeyDown(event) {
+var field = event.target;
+
+resetInTime();
+
+if(field && field != 'undefined' && field.attributes.type && field.attributes.type.nodeValue && (field.attributes.type.nodeValue == 'number')) {
+  var val = field.value;
+  var keyCode = event.keyCode;
+  if(keyCode == 8 || keyCode == 127) {
+    // backspace or delete
+    if(lastChar == '.') {
+      lastChar = '';
+    }
+    if(field.value.length == 3 && field.value[0] == '0' && field.value[1] == '.') {
+      // this handles a backspace on an input like ".5", which is saved internally as "0.5"
+      //   otherwise, if you leave the field after the backspace, it retains "0.5" as the value, most likely an iOS bug
+      field.value = ''; 
+    }
+  }
+}
+clrResults();
+}
+
+function clrValue(field) {
+ field.value = '';
+ lastChar = '';
+}
+
+var currenttimeout;
+
+function resetInTime(){
+if (currenttimeout) clearTimeout(currenttimeout);
+currenttimeout = setTimeout('minMaxCheck();', 2000);
+}
+
+
+
+var curelement;
+
+function togCB(thisid){
+thischeckbox = document.getElementById(thisid);
+if (thischeckbox.checked){ thischeckbox.checked = false; }
+else { thischeckbox.checked = true; }
+MMRC_fx();
+}
+
+function setRB(thisid){
+document.getElementById(thisid).checked = true;
+MMRC_fx();
+}
+
+
+var calctxt = ''; 
+var xmltxt = ''; 
+var xmlresult = '';
+var htmtxt = ''; 
+var postNow = false;
+var printing = false;
+var interptxt = '';
+var interphtm = '';
+var interpxml = '';
+var rbchk = false;
+var inputchktxt = '<br />&nbsp;<br /><b>Important:</b> Inputs must be complete to perform calculation. <br />'
+
+
+function aDelay(atxt, ffield){
+with (document.MMRC_form){
+clrResults();
+ffield.value = '';
+doCalc = false;
+setTimeout(function(){ alert(atxt); }, 100);
+document.getElementById('inputchk').innerHTML = inputchktxt;
+
+}}
+
+
+function MMRC_fx() {
+
+with(document.MMRC_form){
+
+
+doCalc = true;
+rbchk = false;
+if (Dyspnea_scale_radio[0].checked){ rbchk = true; Dyspnea_scale = 0;  }
+if (Dyspnea_scale_radio[1].checked){ rbchk = true; Dyspnea_scale = 1;  }
+if (Dyspnea_scale_radio[2].checked){ rbchk = true; Dyspnea_scale = 2;  }
+if (Dyspnea_scale_radio[3].checked){ rbchk = true; Dyspnea_scale = 3;  }
+if (Dyspnea_scale_radio[4].checked){ rbchk = true; Dyspnea_scale = 4;  }
+if (!rbchk) doCalc = false;
+dp = 0;
+mMRC =  Dyspnea_scale;
+
+if (doCalc) mMRC_param.value = fixDP(mMRC, dp);
+
+
+
+
+
+}
+
+
+if (doCalc) document.getElementById('inputchk').innerHTML = '';
+else document.getElementById('inputchk').innerHTML = inputchktxt;
+
+
+}
+
+function minMaxCheck(){
+if (printing) return;
+
+
+
+with(document.MMRC_form){
+
+
+
+}
+
+}
+
+function clrResults(){
+
+
+with(document.MMRC_form){
+
+mMRC_param.value = '';
+
+
+}
+
+}
+
+var Dyspnea_scale = null,
+mMRC = null,
+param_value = null;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ]]> */
+</script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://medilib.ir/assets/js/jquery.min.js"></script><script src="https://medilib.ir/assets/js/popper.min.js"></script><script src="https://medilib.ir/assets/js/bootstrap.min.js"></script><script src="https://medilib.ir/assets/js/classy-nav.min.js"></script><script src="https://medilib.ir/assets/js/owl.carousel.min.js"></script><script src="https://medilib.ir/assets/js/jquery.magnific-popup.min.js"></script><script src="https://medilib.ir/assets/js/jquery.counterup.min.js"></script><script src="https://medilib.ir/assets/js/waypoints.min.js"></script><script src="https://medilib.ir/assets/js/form-validator.min.js"></script><script src="https://medilib.ir/assets/js/contact-form-script.js"></script><script src="https://medilib.ir/assets/js/main.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WFDJ5JLM3Q"></script><script>
+    window.addEventListener("load", () => {
+
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function (registrations) {
+                //returns installed service workers
+                if (registrations.length) {
+                    for (let registration of registrations) {
+                        if (
+                            registration.active.scriptURL.startsWith("/serviceWorker.js") &&
+                            !registration.active.scriptURL.endsWith("/serviceWorker.js?v=18")
+                        ) {
+                            registration.unregister();
+                        }
+                    }
+                }
+            });
+            navigator.serviceWorker.register('/serviceWorker.js?v=18', {
+                scope: '/'
+            })
+                .then(function (registration) {
+                    console.log('Registration successful, scope is:', registration.scope);
+                })
+                .catch(function (error) {
+                    console.log('Service worker registration failed, error:', error);
+                });
+        }
+    });
+    const promptElement = document.querySelector('.pwaprompt');
+    const footerPromptElement = document.querySelector('#footerPromptElement');
+    const scrollTopElement = document.querySelector('.scrolltop');
+    // const installButton = promptElement.querySelector('.prompt__install');
+    const closeButton = promptElement.querySelector('.prompt__close');
+    let installEvent;
+
+    function setWithExpiry(key, value, seconds) {
+        const now = new Date()
+
+        // `item` is an object which contains the original value
+        // as well as the time when it's supposed to expire
+        const item = {
+            value: value,
+            expiry: now.getTime() + (seconds * 1000),
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+    }
+
+    function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+        // if the item doesn't exist, return null
+        if (!itemStr) {
+            return null
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+        // compare the expiry time of the item with the current time
+        if (now.getTime() > item.expiry) {
+            // If the item is expired, delete the item from storage
+            // and return null
+            localStorage.removeItem(key)
+            return null
+        }
+        return item.value
+    }
+
+    // checks if the localStorage item has been set
+    function getVisited() {
+        return getWithExpiry('install-prompt')
+        // return localStorage.getItem('install-prompt');
+    }
+
+    // sets the localStorage item
+    function setVisited() {
+        fiveDay = 5 * (24 * (60 * 60))
+        setWithExpiry('install-prompt', true, fiveDay)
+        // localStorage.setItem('install-prompt', true);
+    }
+
+    closeButton.addEventListener('click', () => {
+        // set localStorage to true
+        setVisited();
+
+        // hide the prompt banner
+        promptElement.style.display = 'none';
+        scrollTopElement.style.bottom = '30px';
+
+        // installEvent = null;
+    });
+    // Detects if device is on iOS
+    const isIos = () => {
+        const userAgent = window.navigator.userAgent.toLowerCase();
+        return /iphone|ipad|ipod/.test(userAgent);
+    }
+    // Detects if device is in standalone mode
+    const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+
+    // Checks if should display install popup notification:
+    if (isIos() && !isInStandaloneMode()) {
+        if (!getVisited()) {
+            promptElement.style.display = 'block';
+            scrollTopElement.style.bottom = '80px';
+        }
+        footerPromptElement.style.display = 'block';
+    }
+
+
+    // this event will only fire if the user does not have the pwa installed
+    window.addEventListener('beforeinstallprompt', (event) => {
+        event.preventDefault();
+        // if no localStorage is set, first time visitor
+        if (!getVisited()) {
+            // show the prompt banner
+            promptElement.style.display = 'block';
+            scrollTopElement.style.bottom = '80px';
+
+            // store the event for later use
+
+        }
+        footerPromptElement.style.display = 'block';
+        installEvent = event;
+
+    });
+    $(document).on('click', '.prompt__install', function () {
+        promptElement.style.display = 'none';
+        scrollTopElement.style.bottom = '30px';
+
+        if (isIos() && !isInStandaloneMode()) {
+            setVisited();
+            $('#iphoneAddToHomeScreen').modal()
+        } else {
+
+            // trigger the prompt to show to the user
+            installEvent.prompt();
+            // check what choice the user made
+            installEvent.userChoice.then((choice) => {
+                // if the user declined, we don't want to show the button again
+                // set localStorage to true
+                if (choice.outcome !== 'accepted') {
+                    setVisited();
+                }
+
+                installEvent = null;
+            });
+        }
+
+    });
+</script><script>
+
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-WFDJ5JLM3Q');
+</script><script>
+      var topicReferences=[];
+
+      function refrence(id) {
+          var myReference=Object.values(topicReferences)[id];
+          console.log(myReference);
+          $("#pmid").attr("href",myReference['pmid']);
+          if (typeof myReference['description'] !== 'undefined' && myReference['description']!="") {
+            $("#myModalLabel34").html('Description : <p>' + myReference['description'] + "</p>");
+          }
+          if (typeof myReference['authors'] !== 'undefined' && myReference['authors']!="") {
+            $("#referenceAuthors").html('Authors : <p>' + myReference['authors'] + "</p>");
+          }
+          if (typeof myReference['source'] !== 'undefined' && myReference['source']!="") {
+            $("#referenceSource").html('Source : <p>' + myReference['source'] + "</p>");
+          }
+          if (typeof myReference['title'] !== 'undefined' && myReference['title']!="") {
+            $("#referenceTitle").html('Title : <p>' + myReference['title'] + "</p>");
+          }
+          if (typeof myReference['affiliation'] !== 'undefined' && myReference['affiliation']!="") {
+            $("#referenceAffiliation").html('Affiliation : <p>' + myReference['affiliation'] + "</p>");
+          }
+      }
+  </script><script>
+
+      var screenHeight = screen.height;
+
+      if (screenHeight > 700) {
+        // $document.getElementById("Uptodate_image").style.width = "100% !important;";
+        // $('.Uptodate_image').css('width', '100% !important;');
+        console.log("more");
+      }else{
+        console.log(screenHeight);
+      }
+    $(document).scroll(function()  {
+      var y = $(this).scrollTop();
+      if (y > 100) {
+        $('.goback').fadeIn();
+        $('.buyPackage').fadeIn();
+        // alert(document.getElementById('main_menu').style.zIndex);
+        document.getElementById("uptodate-area").style.padding = "0px 0 0 0";
+        document.getElementById('main_menu').style.zIndex=1;
+         document.getElementById('main_menu').style.display="none";
+        document.getElementById('navbar_menu').style.marginTop="70px"
+        document.getElementById('uptodate-area').style.marginTop="0px"
+        document.getElementById('uptodate-area').style.zIndex=999;
+        console.log('down');
+      } else {
+        $('.goback').fadeOut();
+        $('.buyPackage').fadeOut();
+        document.getElementById("uptodate-area").style.padding = "0px 0 0 0";
+        document.getElementById('navbar_menu').style.marginTop="0px"
+        document.getElementById('main_menu').style.display="";
+        document.getElementById('uptodate-area').style.zIndex=0;
+        console.log('up');
+      }
+    });
+    function goBack() {
+      window.history.back();
+    }
+    function buyPackage() {
+      window.open("https://medilib.ir/userPanel/package/uptodate/index",'_blank');
+    }
+  </script></body>
 </html>

@@ -1,583 +1,797 @@
 <!DOCTYPE html>
+
 <html lang="fa">
- <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
- <head>
-  <title>
-   Calculator: MELD 3.0 score EXCLUDING serum albumin (for patients 12 years and older)
-  </title>
-  <link href="d/css/1.css" rel="stylesheet"/>
- </head>
- <body>
-  <!-- Start Main Menu Area -->
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <div class="container">
-   <div class="row">
-   </div>
-  </div>
-  <section class="teacher-area ptb-10">
-   <div class="container">
-   </div>
-   <section class="course-details-area ptb-60">
-    <div class="container">
-     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-      <h1 style="text-align:center">
-       Calculator: MELD 3.0 score EXCLUDING serum albumin (for patients 12 years and older)
-      </h1>
-      <div class="utdArticleSection" id="topicContentCalculator">
-       <div id="topicText">
-        <div id="mc3k">
-         <form action="" id="MELD3xAlb_form" name="MELD3xAlb_form" onkeydown="formKeyDown(event);" onkeypress="resetInTime(); return validNumberField(event);" onkeyup="MELD3xAlb_fx();" onreset="document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
-          <table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
-           <tbody>
-            <tr>
-             <td bgcolor="#eeeeee" width="1%">
-              <br/>
-             </td>
-             <td align="left" bgcolor="#eeeeee">
-              <span class="medCalcFontTitleBox">
-               Calculator: MELD 3.0 score EXCLUDING serum albumin (for patients 12 years and older)
-              </span>
-             </td>
-            </tr>
-           </tbody>
-          </table>
-          <br/>
-          <br/>
-          <div id="calc_main">
-           <center>
-            <span class="medCalcFontIO">
-             Input
-            </span>
-            <br/>
-            <br/>
-            <table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
-             <tbody>
-              <tr>
-               <td align="right" valign="top">
-                <span class="medCalcFontOneBold">
-                 Sex
-                </span>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Sex. The variable option is Female. The value for this variable is 1.4" id="togel1" name="Sex_radio" onclick="MELD3xAlb_fx();" type="radio" value="Female|1.4"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel1');">
-                 Female (1.4)
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="left">
-                <br/>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Sex. The variable option is Male. The value for this variable is 0" id="togel2" name="Sex_radio" onclick="MELD3xAlb_fx();" type="radio" value="Male|0"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel2');">
-                 Male (0)
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 Total bilirubin
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value Total bilirubin" name="TBili_param" onblur="MELD3xAlb_fx(); minMaxCheck();" onchange="MELD3xAlb_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <select aria-label="Use this pulldown selector to set the unit of measure for the value Total bilirubin" class="medCalcFontSelect" name="TBili_unit" onchange="MELD3xAlb_fx(); minMaxCheck();" style="width:115px;">
-                 <option value="0.0584795321637427|0|mcmol/L_Bili">
-                  mcmol/L
-                 </option>
-                 <option value="1|0|mg%_Bili">
-                  mg%
-                 </option>
-                 <option selected="selected" value="1|0|mg/dL_Bili">
-                  mg/dL
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 Serum creatinine
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value Serum creatinine" name="Creat_param" onblur="MELD3xAlb_fx(); minMaxCheck();" onchange="MELD3xAlb_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <select aria-label="Use this pulldown selector to set the unit of measure for the value Serum creatinine" class="medCalcFontSelect" name="Creat_unit" onchange="MELD3xAlb_fx(); minMaxCheck();" style="width:115px;">
-                 <option value="0.0113122171945701|0|mcmol/L_Cr">
-                  mcmol/L
-                 </option>
-                 <option value="1|0|mg%_Cr">
-                  mg%
-                 </option>
-                 <option selected="selected" value="1|0|mg/dL_Cr">
-                  mg/dL
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 INR
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value INR" name="INR_param" onblur="MELD3xAlb_fx(); minMaxCheck();" onchange="MELD3xAlb_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <select aria-label="Use this pulldown selector to set the unit of measure for the value INR" class="medCalcFontSelect" name="INR_unit" onchange="MELD3xAlb_fx(); minMaxCheck();" style="width:115px;">
-                 <option value="0.01|0|%">
-                  %
-                 </option>
-                 <option value="1|0|fraction">
-                  fraction
-                 </option>
-                 <option selected="selected" value="1|0|ratio">
-                  ratio
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 Serum sodium
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value Serum sodium" name="Na_param" onblur="MELD3xAlb_fx(); minMaxCheck();" onchange="MELD3xAlb_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <select aria-label="Use this pulldown selector to set the unit of measure for the value Serum sodium" class="medCalcFontSelect" name="Na_unit" onchange="MELD3xAlb_fx(); minMaxCheck();" style="width:115px;">
-                 <option selected="selected" value="1|0|mEq/L_Na">
-                  mEq/L
-                 </option>
-                 <option value="1|0|mmol/L_Na">
-                  mmol/L
-                 </option>
-                </select>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-           </center>
-           <br/>
-           <br/>
-           <center>
-            <span class="medCalcFontIO">
-             Results
-             <span class="medCalcFontOne" id="inputchk">
-              <br/>
-              <br/>
-              <b>
-               Important:
-              </b>
-              Inputs must be complete to perform calculation.
-              <br/>
-             </span>
-            </span>
-            <br/>
-            <br/>
-            <table cellpadding="4" class="medCalcResultBox" summary="EBMcalc Table">
-             <tbody>
-              <tr>
-               <td colspan="3">
-                <br/>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontResultParam">
-                 MELD 3.0 score excluding albumin
-                </span>
-               </td>
-               <td nowrap="nowrap" valign="top">
-                <input aria-label="This output box will display the calculated value MELD 3.0 score excluding albumin" aria-readonly="true" name="MELD3_param" size="6" type="text"/>
-               </td>
-               <td align="left" valign="top">
-                <span class="medCalcFontResultParam">
-                 <select aria-label="Use this pulldown selector to set the unit of measure for the result value MELD 3.0 score excluding albumin" class="medCalcFontSelect" name="MELD3_unit" onchange="MELD3xAlb_fx();" style="width:115px;">
-                  <option value="1|0|#">
-                   #
-                  </option>
-                  <option value="1|0|index">
-                   index
-                  </option>
-                  <option value="1|0|none">
-                   none
-                  </option>
-                  <option value="1|0|number">
-                   number
-                  </option>
-                  <option selected="selected" value="1|0|points">
-                   points
-                  </option>
-                  <option value="1|0|score">
-                   score
-                  </option>
-                 </select>
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontResultParam">
-                 90-day survival estimation
-                </span>
-               </td>
-               <td nowrap="nowrap" valign="top">
-                <input aria-label="This output box will display the calculated value 90-day survival estimation" aria-readonly="true" name="S90_param" size="6" type="text"/>
-               </td>
-               <td align="left" valign="top">
-                <span class="medCalcFontResultParam">
-                 <select aria-label="Use this pulldown selector to set the unit of measure for the result value 90-day survival estimation" class="medCalcFontSelect" name="S90_unit" onchange="MELD3xAlb_fx();" style="width:115px;">
-                  <option selected="selected" value="1|0|%">
-                   %
-                  </option>
-                  <option value="100|0|fraction">
-                   fraction
-                  </option>
-                  <option value="100|0|ratio">
-                   ratio
-                  </option>
-                 </select>
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontResultParam">
-                 60-day survival estimation
-                </span>
-               </td>
-               <td nowrap="nowrap" valign="top">
-                <input aria-label="This output box will display the calculated value 60-day survival estimation" aria-readonly="true" name="S60_param" size="6" type="text"/>
-               </td>
-               <td align="left" valign="top">
-                <span class="medCalcFontResultParam">
-                 <select aria-label="Use this pulldown selector to set the unit of measure for the result value 60-day survival estimation" class="medCalcFontSelect" name="S60_unit" onchange="MELD3xAlb_fx();" style="width:115px;">
-                  <option selected="selected" value="1|0|%">
-                   %
-                  </option>
-                  <option value="100|0|fraction">
-                   fraction
-                  </option>
-                  <option value="100|0|ratio">
-                   ratio
-                  </option>
-                 </select>
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontResultParam">
-                 30-day survival estimation
-                </span>
-               </td>
-               <td nowrap="nowrap" valign="top">
-                <input aria-label="This output box will display the calculated value 30-day survival estimation" aria-readonly="true" name="S30_param" size="6" type="text"/>
-               </td>
-               <td align="left" valign="top">
-                <span class="medCalcFontResultParam">
-                 <select aria-label="Use this pulldown selector to set the unit of measure for the result value 30-day survival estimation" class="medCalcFontSelect" name="S30_unit" onchange="MELD3xAlb_fx();" style="width:115px;">
-                  <option selected="selected" value="1|0|%">
-                   %
-                  </option>
-                  <option value="100|0|fraction">
-                   fraction
-                  </option>
-                  <option value="100|0|ratio">
-                   ratio
-                  </option>
-                 </select>
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td colspan="3">
-                <br/>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-           </center>
-           <br/>
-           <br/>
-           <div id="calc_buttons">
-            <center>
-             <span class="medCalcFontOne">
-              <input name="resetbutton" type="reset" value="Reset form"/>
-             </span>
-            </center>
-           </div>
-          </div>
-          <div id="pretextrefs">
-          </div>
-          <br/>
-          <br/>
-          <div id="calc_hints">
-           <span class="medCalcFontOne">
-           </span>
-          </div>
-          <div id="calc_tables_above_notes">
-          </div>
-          <br/>
-          <br/>
-          <div id="calc_notes">
-           <span class="medCalcFontRef">
-            <b>
-             Notes
-            </b>
-           </span>
-           <ul class="medCalcFontOne">
-            <li>
-             The
-             <b>
-              MELD 3.0 score
-             </b>
-             accounts for intrinsic differences in
-             <b>
-              Serum creatinine
-             </b>
-             between females and males.
-            </li>
-            <li>
-             In previous iterations of MELD, these differences might bias the calculation and interpretation  by resulting in lower MELD scores in females than males with otherwise identical risk factors.
-            </li>
-            <li>
-             If a patient has not received intravenous albumin infusions, consider using the
-             <b>
-              MELD 3.0 score
-             </b>
-             including serum albumin calculator.
-            </li>
-            <li>
-             For more information on the use of the
-             <b>
-              MELD 3.0
-             </b>
-             score in organ allocation, please refer to UpToDate topics that discuss the management of liver failure.
-            </li>
-            <li>
-             <b>
-              MELD
-             </b>
-             : Model for End-Stage Liver Disease.
-            </li>
-           </ul>
-          </div>
-          <br/>
-          <br/>
-          <span class="medCalcFontRef">
-           <b>
-            Equations used
-           </b>
-          </span>
-          <br/>
-          <br/>
-          <center>
-           <div id="calc_equation">
-            <table cellpadding="10" cellspacing="0" summary="EBMcalc Table">
-             <tbody>
-              <tr>
-               <td class="medCalcFormuliBox">
-                <span class="medCalcFontFormuli">
-                 MELD 3.0 score excluding albumin = (Round the following expression to the nearest integer)(Sex + (4.85 * ln(Total bilirubin)) + (0.88 * (137 - Serum sodium)) - (0.25 * (137 - Serum sodium) * ln(Total bilirubin)) + (9.66 * ln(INR)) + (10.47 * ln(Serum creatinine)) + 6)
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td class="medCalcFormuliBox">
-                <span class="medCalcFontFormuli">
-                 90-day survival estimation = 100 * 0.946
-                 <sup>
-                  e
-                  <sup>
-                   (0.17698*MELD 3.0 score excluding albumin-3.56)
-                  </sup>
-                 </sup>
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td class="medCalcFormuliBox">
-                <span class="medCalcFontFormuli">
-                 60-day survival estimation = 100 * 0.963
-                 <sup>
-                  e
-                  <sup>
-                   (0.17698*MELD 3.0 score excluding albumin-3.56)
-                  </sup>
-                 </sup>
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td class="medCalcFormuliBox">
-                <span class="medCalcFontFormuli">
-                 30-day survival estimation = 100 * 0.981
-                 <sup>
-                  e
-                  <sup>
-                   (0.17698*MELD 3.0 score excluding albumin-3.56)
-                  </sup>
-                 </sup>
-                </span>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-            <br/>
-            <br/>
-           </div>
-          </center>
-          <br/>
-          <br/>
-          <div id="calc_details_and_variables">
-           <span class="medCalcFontRef">
-            <b>
-             Calculation details and variables
-            </b>
-           </span>
-           <ul class="medCalcFontOne">
-            <li>
-             <b>
-              Total bilirubin
-             </b>
-             ,
-             <b>
-              Serum creatinine
-             </b>
-             , and
-             <b>
-              INR
-             </b>
-             values are set to 1 if measured values are less than 1.
-            </li>
-            <li>
-             <b>
-              Serum creatinine
-             </b>
-             is set to 3 mg/dL for all measured values &gt;3 mg/dL.
-            </li>
-            <li>
-             <b>
-              Serum sodium
-             </b>
-             is similarly bound 125-137 mEq/L.
-            </li>
-            <li>
-             <b>
-              Serum albumin
-             </b>
-             is similarly bound 1.5-3.5 g/dL.
-            </li>
-           </ul>
-          </div>
-          <div id="calc_tables">
-          </div>
-          <br/>
-          <br/>
-          <span class="medCalcFontOne">
-           Equation parameters, such as
-           <b>
-            Sex
-           </b>
-           , have 2 or more discrete values that may be used in the calculation. The numbers in the parentheses, eg,  (1.4), represent the values that will be used.
-          </span>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-          <div id="calc_refs">
-           <span class="medCalcFontRef">
-            <b>
-             References
-            </b>
-           </span>
-           <ol>
-            <li>
-             <span class="medCalcFontRef">
-              <a href="https://www.ncbi.nlm.nih.gov/pubmed/34481845" rel="nofollow noopener noreferrer" style="color: green; text-decoration: none;" target="_blank">
-               Kim WR, Mannalithara A, Heimbach JK, et al. MELD 3.0: The Model for End-Stage Liver Disease  Updated for the Modern Era. Gastroenterology 2021; 161:1887.
-              </a>
-             </span>
-            </li>
-           </ol>
-          </div>
-         </form>
-        </div>
-        <span class="calculatorVendorId" id="T1702435389">
-        </span>
-       </div>
-       <div id="printDisclaimer">
-        <b>
-         Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.
-        </b>
-        <p>
-         Information on this page may not appear correctly if printed.
-        </p>
-       </div>
-       <div id="disclaimerCalculator">
-        <div class="medCalcFontTwo">
-         <p class="header">
-          Legal Notices and Disclaimer
-         </p>
-         <p>
-          All information contained in and produced by the EBMcalc system is provided
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Calculator: MELD 3.0 score EXCLUDING serum albumin (for patients 12 years and older)</title></head>
+<body><section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Calculator: MELD 3.0 score EXCLUDING serum albumin (for patients 12 years and older)</h1>
+<div class="utdArticleSection" id="topicContentCalculator"><div id="topicText">
+<div id="mc3k">
+<form action="" id="MELD3xAlb_form" name="MELD3xAlb_form" onkeydown="formKeyDown(event);" onkeypress="resetInTime(); return validNumberField(event);" onkeyup="MELD3xAlb_fx();" onreset="document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
+<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
+<td align="left" bgcolor="#eeeeee">
+<span class="medCalcFontTitleBox">
+
+ 
+Calculator: MELD 3.0 score EXCLUDING serum albumin (for patients 12 years and older)
+</span></td></tr></tbody></table><br/> <br/>
+<div id="calc_main">
+<center>
+<span class="medCalcFontIO">
+Input
+</span>
+<br/> <br/>
+<table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
+<tbody><tr><td align="right" valign="top"><span class="medCalcFontOneBold">Sex</span></td>
+<td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Sex. The variable option is Female. The value for this variable is 1.4" id="togel1" name="Sex_radio" onclick="MELD3xAlb_fx();" type="radio" value="Female|1.4"/><span class="medCalcFontOneClick" onclick="setRB('togel1');"> Female (1.4)</span></td></tr>
+<tr><td align="left"><br/></td><td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Sex. The variable option is Male. The value for this variable is 0" id="togel2" name="Sex_radio" onclick="MELD3xAlb_fx();" type="radio" value="Male|0"/><span class="medCalcFontOneClick" onclick="setRB('togel2');"> Male (0)</span></td></tr>
+<tr><td align="right" width="42%"><span class="medCalcFontOneBold">Total bilirubin</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value Total bilirubin" name="TBili_param" onblur="MELD3xAlb_fx(); minMaxCheck();" onchange="MELD3xAlb_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value Total bilirubin" class="medCalcFontSelect" name="TBili_unit" onchange="MELD3xAlb_fx(); minMaxCheck();" style="width:115px;">
+<option value="0.0584795321637427|0|mcmol/L_Bili">mcmol/L</option>
+<option value="1|0|mg%_Bili">mg%</option>
+<option selected="selected" value="1|0|mg/dL_Bili">mg/dL</option>
+</select></td></tr>
+<tr><td align="right" width="42%"><span class="medCalcFontOneBold">Serum creatinine</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value Serum creatinine" name="Creat_param" onblur="MELD3xAlb_fx(); minMaxCheck();" onchange="MELD3xAlb_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value Serum creatinine" class="medCalcFontSelect" name="Creat_unit" onchange="MELD3xAlb_fx(); minMaxCheck();" style="width:115px;">
+<option value="0.0113122171945701|0|mcmol/L_Cr">mcmol/L</option>
+<option value="1|0|mg%_Cr">mg%</option>
+<option selected="selected" value="1|0|mg/dL_Cr">mg/dL</option>
+</select></td></tr>
+<tr><td align="right" width="42%"><span class="medCalcFontOneBold">INR</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value INR" name="INR_param" onblur="MELD3xAlb_fx(); minMaxCheck();" onchange="MELD3xAlb_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value INR" class="medCalcFontSelect" name="INR_unit" onchange="MELD3xAlb_fx(); minMaxCheck();" style="width:115px;">
+<option value="0.01|0|%">%</option>
+<option value="1|0|fraction">fraction</option>
+<option selected="selected" value="1|0|ratio">ratio</option>
+</select></td></tr>
+<tr><td align="right" width="42%"><span class="medCalcFontOneBold">Serum sodium</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value Serum sodium" name="Na_param" onblur="MELD3xAlb_fx(); minMaxCheck();" onchange="MELD3xAlb_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value Serum sodium" class="medCalcFontSelect" name="Na_unit" onchange="MELD3xAlb_fx(); minMaxCheck();" style="width:115px;">
+<option selected="selected" value="1|0|mEq/L_Na">mEq/L</option>
+<option value="1|0|mmol/L_Na">mmol/L</option>
+</select></td></tr>
+</tbody></table>
+</center>
+<br/> <br/><center><span class="medCalcFontIO">Results<span class="medCalcFontOne" id="inputchk"><br/> <br/><b>Important:</b> Inputs must be complete to perform calculation. <br/></span></span>
+<br/> <br/>
+<table cellpadding="4" class="medCalcResultBox" summary="EBMcalc Table">
+<tbody><tr><td colspan="3"> <br/></td></tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">MELD 3.0 score excluding albumin</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value MELD 3.0 score excluding albumin" aria-readonly="true" name="MELD3_param" size="6" type="text"/></td>
+<td align="left" valign="top"><span class="medCalcFontResultParam">
+<select aria-label="Use this pulldown selector to set the unit of measure for the result value MELD 3.0 score excluding albumin" class="medCalcFontSelect" name="MELD3_unit" onchange="MELD3xAlb_fx();" style="width:115px;">
+<option value="1|0|#">#</option>
+<option value="1|0|index">index</option>
+<option value="1|0|none">none</option>
+<option value="1|0|number">number</option>
+<option selected="selected" value="1|0|points">points</option>
+<option value="1|0|score">score</option>
+</select>
+</span></td>
+</tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">90-day survival estimation</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value 90-day survival estimation" aria-readonly="true" name="S90_param" size="6" type="text"/></td>
+<td align="left" valign="top"><span class="medCalcFontResultParam">
+<select aria-label="Use this pulldown selector to set the unit of measure for the result value 90-day survival estimation" class="medCalcFontSelect" name="S90_unit" onchange="MELD3xAlb_fx();" style="width:115px;">
+<option selected="selected" value="1|0|%">%</option>
+<option value="100|0|fraction">fraction</option>
+<option value="100|0|ratio">ratio</option>
+</select>
+</span></td>
+</tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">60-day survival estimation</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value 60-day survival estimation" aria-readonly="true" name="S60_param" size="6" type="text"/></td>
+<td align="left" valign="top"><span class="medCalcFontResultParam">
+<select aria-label="Use this pulldown selector to set the unit of measure for the result value 60-day survival estimation" class="medCalcFontSelect" name="S60_unit" onchange="MELD3xAlb_fx();" style="width:115px;">
+<option selected="selected" value="1|0|%">%</option>
+<option value="100|0|fraction">fraction</option>
+<option value="100|0|ratio">ratio</option>
+</select>
+</span></td>
+</tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">30-day survival estimation</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value 30-day survival estimation" aria-readonly="true" name="S30_param" size="6" type="text"/></td>
+<td align="left" valign="top"><span class="medCalcFontResultParam">
+<select aria-label="Use this pulldown selector to set the unit of measure for the result value 30-day survival estimation" class="medCalcFontSelect" name="S30_unit" onchange="MELD3xAlb_fx();" style="width:115px;">
+<option selected="selected" value="1|0|%">%</option>
+<option value="100|0|fraction">fraction</option>
+<option value="100|0|ratio">ratio</option>
+</select>
+</span></td>
+</tr>
+<tr><td colspan="3"> <br/></td></tr>
+</tbody></table>
+</center><br/> <br/>
+<div id="calc_buttons">
+<center>
+<span class="medCalcFontOne">
+<input name="resetbutton" type="reset" value="Reset form"/>
+</span>
+</center>
+</div>
+</div><div id="pretextrefs">
+ 
+</div>
+<br/> <br/>
+<div id="calc_hints">
+<span class="medCalcFontOne">
+</span>
+</div>
+<div id="calc_tables_above_notes">
+</div>
+<br/> <br/>
+<div id="calc_notes">
+<span class="medCalcFontRef"><b>Notes</b></span>
+<ul class="medCalcFontOne">
+<li>The <b>MELD 3.0 score</b> accounts for intrinsic differences in <b>Serum creatinine</b> between females and males.</li>
+<li>In previous iterations of MELD, these differences might bias the calculation and interpretation  by resulting in lower MELD scores in females than males with otherwise identical risk factors.</li>
+<li>If a patient has not received intravenous albumin infusions, consider using the <b>MELD 3.0 score</b> including serum albumin calculator.</li>
+<li>For more information on the use of the <b>MELD 3.0</b> score in organ allocation, please refer to UpToDate topics that discuss the management of liver failure.</li>
+<li><b>MELD</b>: Model for End-Stage Liver Disease.</li>
+</ul>
+</div>
+<br/> <br/>
+<span class="medCalcFontRef"><b>Equations used</b></span>
+<br/> <br/>
+<center>
+<div id="calc_equation">
+<table cellpadding="10" cellspacing="0" summary="EBMcalc Table"><tbody><tr><td class="medCalcFormuliBox"><span class="medCalcFontFormuli">MELD 3.0 score excluding albumin = (Round the following expression to the nearest integer)(Sex + (4.85 * ln(Total bilirubin)) + (0.88 * (137 - Serum sodium)) - (0.25 * (137 - Serum sodium) * ln(Total bilirubin)) + (9.66 * ln(INR)) + (10.47 * ln(Serum creatinine)) + 6)</span></td></tr><tr><td class="medCalcFormuliBox"><span class="medCalcFontFormuli">90-day survival estimation = 100 * 0.946<sup>e<sup>(0.17698*MELD 3.0 score excluding albumin-3.56)</sup></sup></span></td></tr><tr><td class="medCalcFormuliBox"><span class="medCalcFontFormuli">60-day survival estimation = 100 * 0.963<sup>e<sup>(0.17698*MELD 3.0 score excluding albumin-3.56)</sup></sup></span></td></tr><tr><td class="medCalcFormuliBox"><span class="medCalcFontFormuli">30-day survival estimation = 100 * 0.981<sup>e<sup>(0.17698*MELD 3.0 score excluding albumin-3.56)</sup></sup></span></td></tr></tbody></table><br/> <br/>
+</div> </center>
+<br/> <br/>
+<div id="calc_details_and_variables">
+<span class="medCalcFontRef"><b>Calculation details and variables</b></span>
+<ul class="medCalcFontOne">
+<li><b>Total bilirubin</b>, <b>Serum creatinine</b>, and <b>INR</b> values are set to 1 if measured values are less than 1.</li>
+<li><b>Serum creatinine</b> is set to 3 mg/dL for all measured values &gt;3 mg/dL.</li>
+<li><b>Serum sodium</b> is similarly bound 125-137 mEq/L.</li>
+<li><b>Serum albumin</b> is similarly bound 1.5-3.5 g/dL.</li>
+</ul>
+</div>
+<div id="calc_tables">
+</div>
+<br/> <br/>
+<span class="medCalcFontOne">
+Equation parameters, such as <b>Sex</b>, have 2 or more discrete values that may be used in the calculation. The numbers in the parentheses, eg,  (1.4), represent the values that will be used.
+</span>
+<br/> <br/>
+<br/> <br/>
+<div id="calc_refs">
+<span class="medCalcFontRef"><b>References</b></span>
+<ol>
+<li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/34481845" rel="nofollow noopener noreferrer" style="color: green; text-decoration: none;" target="_blank">Kim WR, Mannalithara A, Heimbach JK, et al. MELD 3.0: The Model for End-Stage Liver Disease  Updated for the Modern Era. Gastroenterology 2021; 161:1887.</a></span></li>
+</ol>
+</div>
+</form>
+</div>
+<span class="calculatorVendorId" id="T1702435389">
+</span></div><div id="printDisclaimer">
+<b>Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.</b>
+<p>
+	Information on this page may not appear correctly if printed. </p>
+</div>
+<div id="disclaimerCalculator">
+<div class="medCalcFontTwo">
+<p class="header">Legal Notices and Disclaimer</p>
+<p>
+			All information contained in and produced by the EBMcalc system is provided
 			for educational purposes only. This information should not be used for the diagnosis or treatment
-			of any health problem or disease.
-          <b>
-           THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.
-          </b>
-          <a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">
-           Click here for full notice and disclaimer.
-          </a>
-         </p>
-         <p class="copy">
-          EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC
-         </p>
-        </div>
-       </div>
-       <div id="topicVersionRevision">
-        Topic 143811 Version 1.0
-       </div>
-      </div>
-     </div>
-    </div>
-   </section>
-  </section>
-  <!-- End Main Menu Area -->
-  <!-- Start Search Popup Area -->
-  <!-- End Footer Area -->
-  <!-- Back to top -->
-  <a class="scrolltop" href="#top">
-   <i class="icofont-hand-drawn-up">
-   </i>
-  </a>
-  <!-- End Back to top -->
-  <!-- jQuery Min JS -->
-  <!-- Prpper JS -->
-  <!-- Bootstrap Min JS -->
-  <!-- Classy Nav Min Js -->
-  <!-- Owl Carousel Min Js -->
-  <!-- Magnific Popup JS -->
-  <!-- CounterUp JS -->
-  <!-- Waypoints JS -->
-  <!-- Form Validator Min JS -->
-  <!-- Contact Form Min JS -->
-  <!-- Main JS -->
-  <!-- Global site tag (gtag.js) - Google Analytics -->
- </body>
+			of any health problem or disease. 
+			<b>THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.</b>
+<a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">Click here for full notice and disclaimer.</a>
+</p>
+<p class="copy">EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC</p>
+</div>
+</div><div id="topicVersionRevision">Topic 143811 Version 1.0</div></div>
+</div>
+</div>
+</section><script>
+/* <![CDATA[ */
+
+var lastChar = '';
+
+function log(i){
+return Math.log(i) * Math.LOG10E;
+}
+
+function ln(i){
+return Math.log(i);
+}
+
+function sq(i){
+return i * i;
+}
+
+function sqr(i){
+return Math.sqrt(i);
+}
+
+
+function power(x,y){
+return Math.pow(x,y);
+}
+
+function eTo(x){
+return Math.exp(x);
+}
+
+function fixDP(r, dps) {
+if (isNaN(r)) return "NaN";
+var msign = '';
+var mfin = '';
+if (r < 0) msign = '-';
+x = Math.abs(r);
+if (x > Math.pow(10, 21)) return msign + x.toString();
+var m = Math.round(x * Math.pow(10, dps)).toString();
+if (dps == 0) return msign + m;
+while (m.length <= dps) m = "0" + m;
+mfin = msign + m.substring(0, m.length - dps) + "." + m.substring(m.length - dps);
+if (dps == 1) return mfin.replace('.0', '');
+if (dps == 2) return mfin.replace('.00', '');
+if (dps == 3) return mfin.replace('.000', '');
+if (dps == 4) return mfin.replace('.0000', '');
+return mfin;
+}
+
+function alertNaN(){
+alert('This field is improperly formatted. You may only input the digits 0-9 and a decimal point.');
+doCalc = false;
+clrResults();
+}
+
+function validNumberField(event) {
+var field = event.target;
+
+if(field && field != 'undefined' && field.attributes.type.nodeValue && (field.attributes.type.nodeValue == 'number')) {
+var val = field.value;
+var charCode = event.charCode;
+var key = String.fromCharCode(charCode);
+
+if(charCode == 0 || charCode == 13) {
+  return true;
+}
+
+if(key == ' ') {
+alert('Numeric field cannot contain spaces.');
+  return false;
+}
+
+if(key == '.') { return validDecimalPoint(val, key); }
+if(key == '-') { return validMinus(val, key); }
+
+if(isNaN(parseInt(key))) {
+alertNaN();
+return false;
+}
+
+return validFloat(val, key);
+}
+return true;
+}
+
+function validDecimalPoint(val, key) {
+if(val.length == 0 && lastChar != '.') {
+  lastChar = '.';
+  return true;
+}
+if(val.indexOf('.') >= 0 || lastChar == '.') {
+ alertNaN();
+ return false;
+}
+if(validFloat(val, key)) {
+ lastChar = key;
+ return true;
+}
+lastChar = '';
+return false;
+}
+
+function validMinus(val, key) {
+if(val.length == 0) {
+  return true;
+}
+if(val.length > 1) {
+ alertNaN();
+ return false;
+}
+return validFloat(val, key);
+}
+
+
+function validFloat(val, key) {
+var currentVal = parseFloat(val + key);
+if(isNaN(val + key) || isNaN(currentVal)) {
+alertNaN();
+return false;
+}
+return true;
+}
+
+function formKeyDown(event) {
+var field = event.target;
+
+resetInTime();
+
+if(field && field != 'undefined' && field.attributes.type && field.attributes.type.nodeValue && (field.attributes.type.nodeValue == 'number')) {
+  var val = field.value;
+  var keyCode = event.keyCode;
+  if(keyCode == 8 || keyCode == 127) {
+    // backspace or delete
+    if(lastChar == '.') {
+      lastChar = '';
+    }
+    if(field.value.length == 3 && field.value[0] == '0' && field.value[1] == '.') {
+      // this handles a backspace on an input like ".5", which is saved internally as "0.5"
+      //   otherwise, if you leave the field after the backspace, it retains "0.5" as the value, most likely an iOS bug
+      field.value = ''; 
+    }
+  }
+}
+clrResults();
+}
+
+function clrValue(field) {
+ field.value = '';
+ lastChar = '';
+}
+
+var currenttimeout;
+
+function resetInTime(){
+if (currenttimeout) clearTimeout(currenttimeout);
+currenttimeout = setTimeout('minMaxCheck();', 2000);
+}
+
+
+
+var curelement;
+
+function togCB(thisid){
+thischeckbox = document.getElementById(thisid);
+if (thischeckbox.checked){ thischeckbox.checked = false; }
+else { thischeckbox.checked = true; }
+MELD3xAlb_fx();
+}
+
+function setRB(thisid){
+document.getElementById(thisid).checked = true;
+MELD3xAlb_fx();
+}
+
+
+var calctxt = ''; 
+var xmltxt = ''; 
+var xmlresult = '';
+var htmtxt = ''; 
+var postNow = false;
+var printing = false;
+var interptxt = '';
+var interphtm = '';
+var interpxml = '';
+var rbchk = false;
+var inputchktxt = '<br />&nbsp;<br /><b>Important:</b> Inputs must be complete to perform calculation. <br />'
+
+
+function aDelay(atxt, ffield){
+with (document.MELD3xAlb_form){
+clrResults();
+ffield.value = '';
+doCalc = false;
+setTimeout(function(){ alert(atxt); }, 100);
+document.getElementById('inputchk').innerHTML = inputchktxt;
+
+}}
+
+
+function MELD3xAlb_fx() {
+
+with(document.MELD3xAlb_form){
+
+
+doCalc = true;
+rbchk = false;
+if (Sex_radio[0].checked){ rbchk = true; Sex = 1.4;  }
+if (Sex_radio[1].checked){ rbchk = true; Sex = 0;  }
+if (!rbchk) doCalc = false;
+param_value = parseFloat(TBili_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = TBili_unit.options[TBili_unit.selectedIndex].value.split('|');
+TBili = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+param_value = parseFloat(Creat_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = Creat_unit.options[Creat_unit.selectedIndex].value.split('|');
+Creat = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+param_value = parseFloat(INR_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = INR_unit.options[INR_unit.selectedIndex].value.split('|');
+INR = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+param_value = parseFloat(Na_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = Na_unit.options[Na_unit.selectedIndex].value.split('|');
+Na = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+dp = 1;
+TBili_U = TBili;
+if (TBili < 1) TBili_U = 1;
+Creat_U = Creat;
+if (Creat < 1) Creat_U = 1;
+if (Creat > 3) Creat_U = 3;
+INR_U = INR;
+if (INR < 1) INR_U = 1;
+Na_U = Na;
+if (Na < 125) Na_U = 125;
+if (Na > 137) Na_U = 137;
+MELD3 =  Math.round(Sex + (4.85 * ln(TBili_U)) + (0.88 * (137 - Na_U)) - (0.25 * (137 - Na_U) * ln(TBili_U)) +  (9.66 * ln(INR_U)) + (10.47 * ln(Creat_U)) + 6);
+
+unit_parts = MELD3_unit.options[MELD3_unit.selectedIndex].value.split('|');
+if (doCalc) MELD3_param.value = fixDP((MELD3 - parseFloat(unit_parts[1])) / parseFloat(unit_parts[0]), dp);
+
+
+
+S90 =  100 * power(0.946,eTo(0.17698 * MELD3 - 3.56));
+
+unit_parts = S90_unit.options[S90_unit.selectedIndex].value.split('|');
+if (doCalc) S90_param.value = fixDP((S90 - parseFloat(unit_parts[1])) / parseFloat(unit_parts[0]), dp);
+
+
+
+S60 =  100 * power(0.963,eTo(0.17698 * MELD3 - 3.56));
+
+unit_parts = S60_unit.options[S60_unit.selectedIndex].value.split('|');
+if (doCalc) S60_param.value = fixDP((S60 - parseFloat(unit_parts[1])) / parseFloat(unit_parts[0]), dp);
+
+
+
+S30 =  100 * power(0.981,eTo(0.17698 * MELD3 - 3.56));
+
+unit_parts = S30_unit.options[S30_unit.selectedIndex].value.split('|');
+if (doCalc) S30_param.value = fixDP((S30 - parseFloat(unit_parts[1])) / parseFloat(unit_parts[0]), dp);
+
+
+
+
+
+}
+
+
+if (doCalc) document.getElementById('inputchk').innerHTML = '';
+else document.getElementById('inputchk').innerHTML = inputchktxt;
+
+
+}
+
+function minMaxCheck(){
+if (printing) return;
+
+
+
+with(document.MELD3xAlb_form){
+
+if (TBili_param.value && isNaN(TBili_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', TBili_param); }
+if (TBili_param.value && (TBili < (1 - 0.00001))) {
+TBili = 0;
+ aDelay("The minimum value for Total bilirubin is 1 mg/dL.\n\nIf you are specifying a value with a different unit, change the unit selector first.", TBili_param);
+}
+
+if (TBili_param.value && TBili > 200) {
+TBili = 0;
+ aDelay("The maximum value for Total bilirubin is 200 mg/dL.\n\nIf you are specifying a value with a different unit, change the unit selector first.", TBili_param);
+}
+
+if (Creat_param.value && isNaN(Creat_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', Creat_param); }
+if (Creat_param.value && (Creat < (0.6 - 0.00001))) {
+Creat = 0;
+ aDelay("The minimum value for Serum creatinine is 0.6 mg/dL.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Creat_param);
+}
+
+if (Creat_param.value && Creat > 4) {
+Creat = 0;
+ aDelay("The maximum value for Serum creatinine is 4 mg/dL.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Creat_param);
+}
+
+if (INR_param.value && isNaN(INR_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', INR_param); }
+if (INR_param.value && (INR < (1 - 0.00001))) {
+INR = 0;
+ aDelay("The minimum value for INR is 1 ratio.\n\nIf you are specifying a value with a different unit, change the unit selector first.", INR_param);
+}
+
+if (INR_param.value && INR > 100) {
+INR = 0;
+ aDelay("The maximum value for INR is 100 ratio.\n\nIf you are specifying a value with a different unit, change the unit selector first.", INR_param);
+}
+
+if (Na_param.value && isNaN(Na_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', Na_param); }
+if (Na_param.value && (Na < (120 - 0.00001))) {
+Na = 0;
+ aDelay("The minimum value for Serum sodium is 120 mEq/L.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Na_param);
+}
+
+if (Na_param.value && Na > 150) {
+Na = 0;
+ aDelay("The maximum value for Serum sodium is 150 mEq/L.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Na_param);
+}
+
+
+
+}
+
+}
+
+function clrResults(){
+
+
+with(document.MELD3xAlb_form){
+
+MELD3_param.value = '';
+S90_param.value = '';
+S60_param.value = '';
+S30_param.value = '';
+
+
+}
+
+}
+
+var Sex = null,
+TBili = null,
+Creat = null,
+INR = null,
+Na = null,
+MELD3 = null,
+S90 = null,
+S60 = null,
+S30 = null,
+param_value = null;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ]]> */
+
+/* <![CDATA[ */
+
+with(document.MELD3xAlb_form){
+
+var TBili_U, Creat_U, INR_U, Na_U, Alb_U;
+
+}
+/* ]]> */
+</script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://medilib.ir/assets/js/jquery.min.js"></script><script src="https://medilib.ir/assets/js/popper.min.js"></script><script src="https://medilib.ir/assets/js/bootstrap.min.js"></script><script src="https://medilib.ir/assets/js/classy-nav.min.js"></script><script src="https://medilib.ir/assets/js/owl.carousel.min.js"></script><script src="https://medilib.ir/assets/js/jquery.magnific-popup.min.js"></script><script src="https://medilib.ir/assets/js/jquery.counterup.min.js"></script><script src="https://medilib.ir/assets/js/waypoints.min.js"></script><script src="https://medilib.ir/assets/js/form-validator.min.js"></script><script src="https://medilib.ir/assets/js/contact-form-script.js"></script><script src="https://medilib.ir/assets/js/main.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WFDJ5JLM3Q"></script><script>
+    window.addEventListener("load", () => {
+
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function (registrations) {
+                //returns installed service workers
+                if (registrations.length) {
+                    for (let registration of registrations) {
+                        if (
+                            registration.active.scriptURL.startsWith("/serviceWorker.js") &&
+                            !registration.active.scriptURL.endsWith("/serviceWorker.js?v=18")
+                        ) {
+                            registration.unregister();
+                        }
+                    }
+                }
+            });
+            navigator.serviceWorker.register('/serviceWorker.js?v=18', {
+                scope: '/'
+            })
+                .then(function (registration) {
+                    console.log('Registration successful, scope is:', registration.scope);
+                })
+                .catch(function (error) {
+                    console.log('Service worker registration failed, error:', error);
+                });
+        }
+    });
+    const promptElement = document.querySelector('.pwaprompt');
+    const footerPromptElement = document.querySelector('#footerPromptElement');
+    const scrollTopElement = document.querySelector('.scrolltop');
+    // const installButton = promptElement.querySelector('.prompt__install');
+    const closeButton = promptElement.querySelector('.prompt__close');
+    let installEvent;
+
+    function setWithExpiry(key, value, seconds) {
+        const now = new Date()
+
+        // `item` is an object which contains the original value
+        // as well as the time when it's supposed to expire
+        const item = {
+            value: value,
+            expiry: now.getTime() + (seconds * 1000),
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+    }
+
+    function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+        // if the item doesn't exist, return null
+        if (!itemStr) {
+            return null
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+        // compare the expiry time of the item with the current time
+        if (now.getTime() > item.expiry) {
+            // If the item is expired, delete the item from storage
+            // and return null
+            localStorage.removeItem(key)
+            return null
+        }
+        return item.value
+    }
+
+    // checks if the localStorage item has been set
+    function getVisited() {
+        return getWithExpiry('install-prompt')
+        // return localStorage.getItem('install-prompt');
+    }
+
+    // sets the localStorage item
+    function setVisited() {
+        fiveDay = 5 * (24 * (60 * 60))
+        setWithExpiry('install-prompt', true, fiveDay)
+        // localStorage.setItem('install-prompt', true);
+    }
+
+    closeButton.addEventListener('click', () => {
+        // set localStorage to true
+        setVisited();
+
+        // hide the prompt banner
+        promptElement.style.display = 'none';
+        scrollTopElement.style.bottom = '30px';
+
+        // installEvent = null;
+    });
+    // Detects if device is on iOS
+    const isIos = () => {
+        const userAgent = window.navigator.userAgent.toLowerCase();
+        return /iphone|ipad|ipod/.test(userAgent);
+    }
+    // Detects if device is in standalone mode
+    const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+
+    // Checks if should display install popup notification:
+    if (isIos() && !isInStandaloneMode()) {
+        if (!getVisited()) {
+            promptElement.style.display = 'block';
+            scrollTopElement.style.bottom = '80px';
+        }
+        footerPromptElement.style.display = 'block';
+    }
+
+
+    // this event will only fire if the user does not have the pwa installed
+    window.addEventListener('beforeinstallprompt', (event) => {
+        event.preventDefault();
+        // if no localStorage is set, first time visitor
+        if (!getVisited()) {
+            // show the prompt banner
+            promptElement.style.display = 'block';
+            scrollTopElement.style.bottom = '80px';
+
+            // store the event for later use
+
+        }
+        footerPromptElement.style.display = 'block';
+        installEvent = event;
+
+    });
+    $(document).on('click', '.prompt__install', function () {
+        promptElement.style.display = 'none';
+        scrollTopElement.style.bottom = '30px';
+
+        if (isIos() && !isInStandaloneMode()) {
+            setVisited();
+            $('#iphoneAddToHomeScreen').modal()
+        } else {
+
+            // trigger the prompt to show to the user
+            installEvent.prompt();
+            // check what choice the user made
+            installEvent.userChoice.then((choice) => {
+                // if the user declined, we don't want to show the button again
+                // set localStorage to true
+                if (choice.outcome !== 'accepted') {
+                    setVisited();
+                }
+
+                installEvent = null;
+            });
+        }
+
+    });
+</script><script>
+
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-WFDJ5JLM3Q');
+</script><script>
+      var topicReferences=[];
+
+      function refrence(id) {
+          var myReference=Object.values(topicReferences)[id];
+          console.log(myReference);
+          $("#pmid").attr("href",myReference['pmid']);
+          if (typeof myReference['description'] !== 'undefined' && myReference['description']!="") {
+            $("#myModalLabel34").html('Description : <p>' + myReference['description'] + "</p>");
+          }
+          if (typeof myReference['authors'] !== 'undefined' && myReference['authors']!="") {
+            $("#referenceAuthors").html('Authors : <p>' + myReference['authors'] + "</p>");
+          }
+          if (typeof myReference['source'] !== 'undefined' && myReference['source']!="") {
+            $("#referenceSource").html('Source : <p>' + myReference['source'] + "</p>");
+          }
+          if (typeof myReference['title'] !== 'undefined' && myReference['title']!="") {
+            $("#referenceTitle").html('Title : <p>' + myReference['title'] + "</p>");
+          }
+          if (typeof myReference['affiliation'] !== 'undefined' && myReference['affiliation']!="") {
+            $("#referenceAffiliation").html('Affiliation : <p>' + myReference['affiliation'] + "</p>");
+          }
+      }
+  </script><script>
+
+      var screenHeight = screen.height;
+
+      if (screenHeight > 700) {
+        // $document.getElementById("Uptodate_image").style.width = "100% !important;";
+        // $('.Uptodate_image').css('width', '100% !important;');
+        console.log("more");
+      }else{
+        console.log(screenHeight);
+      }
+    $(document).scroll(function()  {
+      var y = $(this).scrollTop();
+      if (y > 100) {
+        $('.goback').fadeIn();
+        $('.buyPackage').fadeIn();
+        // alert(document.getElementById('main_menu').style.zIndex);
+        document.getElementById("uptodate-area").style.padding = "0px 0 0 0";
+        document.getElementById('main_menu').style.zIndex=1;
+         document.getElementById('main_menu').style.display="none";
+        document.getElementById('navbar_menu').style.marginTop="70px"
+        document.getElementById('uptodate-area').style.marginTop="0px"
+        document.getElementById('uptodate-area').style.zIndex=999;
+        console.log('down');
+      } else {
+        $('.goback').fadeOut();
+        $('.buyPackage').fadeOut();
+        document.getElementById("uptodate-area").style.padding = "0px 0 0 0";
+        document.getElementById('navbar_menu').style.marginTop="0px"
+        document.getElementById('main_menu').style.display="";
+        document.getElementById('uptodate-area').style.zIndex=0;
+        console.log('up');
+      }
+    });
+    function goBack() {
+      window.history.back();
+    }
+    function buyPackage() {
+      window.open("https://medilib.ir/userPanel/package/uptodate/index",'_blank');
+    }
+  </script></body>
 </html>

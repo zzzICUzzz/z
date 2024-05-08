@@ -1,431 +1,648 @@
 <!DOCTYPE html>
+
 <html lang="fa">
- <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
- <head>
-  <title>
-   Calculator: Enhanced STOP-Bang screening questionnaire for obstructive sleep apnea (OSA) in adults
-  </title>
-  <link href="d/css/1.css" rel="stylesheet"/>
- </head>
- <body>
-  <!-- Start Main Menu Area -->
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <div class="container">
-   <div class="row">
-   </div>
-  </div>
-  <section class="teacher-area ptb-10">
-   <div class="container">
-   </div>
-   <section class="course-details-area ptb-60">
-    <div class="container">
-     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-      <h1 style="text-align:center">
-       Calculator: Enhanced STOP-Bang screening questionnaire for obstructive sleep apnea (OSA) in adults
-      </h1>
-      <div class="utdArticleSection" id="topicContentCalculator">
-       <div id="topicText">
-        <div id="mc3k">
-         <table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
-          <tbody>
-           <tr>
-            <td bgcolor="#eeeeee" width="1%">
-             <br/>
-            </td>
-            <td align="left" bgcolor="#eeeeee">
-             <span class="medCalcFontTitleBox">
-              Calculator: Enhanced STOP-Bang screening questionnaire for obstructive sleep apnea (OSA) in adults
-             </span>
-            </td>
-           </tr>
-          </tbody>
-         </table>
-         <br/>
-         <br/>
-         <form action="" id="STOP_Bang_form" name="STOP_Bang_form" onkeydown="clrResults(); resetInTime();" onkeyup="STOP_Bang_fx();" onreset="rrclr(); document.getElementById('inputchk').innerHTML=inputchktxt;" onsubmit="return false;">
-          <div class="medCalcFontOne" id="calc_main" style="margin-left: 20px;">
-           <b>
-            S
-           </b>
-           noring?   Do you snore loudly (loud enough to be heard through closed doors or that your bed partner elbows you for snoring at night)?
-           <br/>
-           <br/>
-           <input name="Snore_radio" onclick="STOP_Bang_fx();" type="radio" value="Yes|1"/>
-           Yes
-           <input name="Snore_radio" onclick="STOP_Bang_fx();" type="radio" value="No|0"/>
-           No
-           <br/>
-           <br/>
-           <b>
-            T
-           </b>
-           ired?   Do you often feel tired, fatigued, or sleepy during the daytime (such as falling asleep during driving or talking to someone)?
-           <br/>
-           <br/>
-           <input name="Tired_radio" onclick="STOP_Bang_fx();" type="radio" value="Yes|1"/>
-           Yes
-           <input name="Tired_radio" onclick="STOP_Bang_fx();" type="radio" value="No|0"/>
-           No
-           <br/>
-           <br/>
-           <b>
-            O
-           </b>
-           bserved?   Has anyone observed you stop breathing or choking/gasping during your sleep?
-           <br/>
-           <br/>
-           <input name="Observed_radio" onclick="STOP_Bang_fx();" type="radio" value="Yes|1"/>
-           Yes
-           <input name="Observed_radio" onclick="STOP_Bang_fx();" type="radio" value="No|0"/>
-           No
-           <br/>
-           <br/>
-           <b>
-            P
-           </b>
-           ressure?   Do you have or are you being treated for high blood pressure?
-           <br/>
-           <br/>
-           <input name="Pressure_radio" onclick="STOP_Bang_fx();" type="radio" value="Yes|1"/>
-           Yes
-           <input name="Pressure_radio" onclick="STOP_Bang_fx();" type="radio" value="No|0"/>
-           No
-           <br/>
-           <br/>
-           <b>
-            B
-           </b>
-           ody mass index (BMI) more than 35 kg/m
-           <sup>
-            2
-           </sup>
-           ?  BMI is calculated after all questions are answered using this equation: BMI = Weight(kg) / (Height(cm) / 100)
-           <sup>
-            2
-           </sup>
-           <br/>
-           <br/>
-           <table cellpadding="3" cellspacing="0" summary="EBMcalc Table" width="20%">
-            <tbody>
-             <tr>
-              <td align="right" width="42%">
-               <span class="medCalcFontOneBold">
-                Weight
-               </span>
-              </td>
-              <td align="left" nowrap="nowrap" valign="top" width="5%">
-               <input name="Weight_param" onblur="minMaxCheck(); STOP_Bang_fx();" onchange="STOP_Bang_fx();" onfocus="clrValue(this); clrResults();" size="6" type="text" value=""/>
-              </td>
-              <td align="left" valign="top">
-               <select class="medCalcFontSelect" name="Weight_unit" onchange="STOP_Bang_fx();" style="width:115px;">
-                <option selected="selected" value="1|0|kg">
-                 kg
-                </option>
-                <option value="0.45359237|0|lb">
-                 lb
-                </option>
-               </select>
-              </td>
-             </tr>
-             <tr>
-              <td align="right" width="42%">
-               <span class="medCalcFontOneBold">
-                Height
-               </span>
-              </td>
-              <td align="left" nowrap="nowrap" valign="top" width="5%">
-               <input name="Height_param" onblur="minMaxCheck(); STOP_Bang_fx();" onchange="STOP_Bang_fx();" onfocus="clrValue(this); clrResults();" size="6" type="text" value=""/>
-              </td>
-              <td align="left" valign="top">
-               <select class="medCalcFontSelect" name="Height_unit" onchange="STOP_Bang_fx();" style="width:115px;">
-                <option selected="selected" value="1|0|cm">
-                 cm
-                </option>
-                <option value="2.54|0|in">
-                 in
-                </option>
-               </select>
-              </td>
-             </tr>
-             <tr>
-              <td align="right">
-               <span class="medCalcFontOneBold">
-                BMI
-               </span>
-              </td>
-              <td nowrap="nowrap" valign="top">
-               <input name="BMI_param" onfocus="blur();" size="6" type="text"/>
-              </td>
-              <td align="left" valign="top">
-               <span class="medCalcFontOneBold">
-                kg/m
-                <sup>
-                 2
-                </sup>
-               </span>
-              </td>
-             </tr>
-            </tbody>
-           </table>
-           <br/>
-           <br/>
-           <b>
-            A
-           </b>
-           ge older than 50?
-           <br/>
-           <br/>
-           <input name="Age_radio" onclick="STOP_Bang_fx();" type="radio" value="Yes|1"/>
-           Yes
-           <input name="Age_radio" onclick="STOP_Bang_fx();" type="radio" value="No|0"/>
-           No
-           <br/>
-           <br/>
-           <b>
-            N
-           </b>
-           eck size large (measured around Adam's apple)? Is your shirt collar 16 inches (40 cm) or larger?
-           <br/>
-           <br/>
-           <input name="Neck_radio" onclick="STOP_Bang_fx();" type="radio" value="Yes|1"/>
-           Yes
-           <input name="Neck_radio" onclick="STOP_Bang_fx();" type="radio" value="No|0"/>
-           No
-           <br/>
-           <br/>
-           <b>
-            G
-           </b>
-           ender (biologic sex): male?
-           <br/>
-           <br/>
-           <input name="Gender_radio" onclick="STOP_Bang_fx();" type="radio" value="Yes|1"/>
-           Yes
-           <input name="Gender_radio" onclick="STOP_Bang_fx();" type="radio" value="No|0"/>
-           No
-           <br/>
-           <br/>
-           <center>
-            <input name="reset" type="reset" value="Reset form"/>
-           </center>
-           <br/>
-           <br/>
-           <center>
-            <span class="medCalcFontIO">
-             Results
-             <span class="medCalcFontOne" id="inputchk">
-              <br/>
-              <br/>
-              <b>
-               Important:
-              </b>
-              Inputs must be complete to perform calculation.
-              <br/>
-             </span>
-            </span>
-            <br/>
-            <br/>
-            <table cellpadding="6" cellspacing="0" summary="EBMcalc Table" width="100%">
-             <tbody>
-              <tr>
-               <td bgcolor="#eeeeee" class="medCalcTitleBox">
-                <span class="medCalcFontTitleBox">
-                 STOP-Bang interpretation
-                </span>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-            <br/>
-            <br/>
-            <center>
-             <table border="1" cellpadding="4" cellspacing="0" summary="RRTable">
-              <tbody>
-               <tr bgcolor="#eeeeee">
-                <td align="left">
-                 <span class="medCalcFontOneBold">
-                  Risk factors (criteria met are
-                  <span style="background-color: #8ab2be;">
-                   highlighted
-                  </span>
-                 </span>
-                </td>
-               </tr>
-               <tr id="rr1_1">
-                <td align="left">
-                 <span class="medCalcFontOne">
-                  Yes to 0 to 2 of the questions
-                 </span>
-                </td>
-               </tr>
-               <tr id="rr1_2">
-                <td align="left">
-                 <span class="medCalcFontOne">
-                  Yes to 3 to 4 questions
-                 </span>
-                </td>
-               </tr>
-               <tr id="rr1_3">
-                <td align="left">
-                 <span class="medCalcFontOne">
-                  Yes to 5 to 8 questions
-                 </span>
-                </td>
-               </tr>
-               <tr id="rr1_4">
-                <td align="left">
-                 <span class="medCalcFontOne">
-                  Yes to 2 or more of 4 STOP questions and BMI &gt;35 kg/m
-                  <sup>
-                   2
-                  </sup>
-                 </span>
-                </td>
-               </tr>
-               <tr id="rr1_5">
-                <td align="left">
-                 <span class="medCalcFontOne">
-                  Yes to 2 or more of 4 STOP questions and neck circumference ≥16 inches (≥40 cm)
-                 </span>
-                </td>
-               </tr>
-               <tr id="rr1_6">
-                <td align="left">
-                 <span class="medCalcFontOne">
-                  Yes to 2 or more of 4 STOP questions and male gender (biologic sex)
-                 </span>
-                </td>
-               </tr>
-               <tr bgcolor="#eeeeee">
-                <td align="left">
-                 <span class="medCalcFontOneBold">
-                  Classification
-                 </span>
-                </td>
-               </tr>
-               <tr id="rr1_7">
-                <td align="left">
-                 <span class="medCalcFontOne">
-                  Low risk
-                 </span>
-                </td>
-               </tr>
-               <tr id="rr1_8">
-                <td align="left">
-                 <span class="medCalcFontOne">
-                  Intermediate risk
-                 </span>
-                </td>
-               </tr>
-               <tr id="rr1_9">
-                <td align="left">
-                 <span class="medCalcFontOne">
-                  High risk
-                 </span>
-                </td>
-               </tr>
-              </tbody>
-             </table>
-            </center>
-           </center>
-          </div>
-         </form>
-         <br/>
-         <br/>
-         <div id="calc_refs">
-          <span class="medCalcFontRef">
-           <b>
-            References
-           </b>
-          </span>
-          <ol>
-           <li>
-            <span class="medCalcFontRef">
-             <a href="https://www.ncbi.nlm.nih.gov/pubmed/18431116" style="color: green; text-decoration: none;" target="_blank">
-              Chung F, Yegneswaran B, Liao P, et al. STOP questionnaire: a tool to screen patients for obstructive sleep  apnea. Anesthesiology 2008; 108:812.
-             </a>
-            </span>
-           </li>
-           <li>
-            <span class="medCalcFontRef">
-             <a href="https://www.ncbi.nlm.nih.gov/pubmed/22401881" style="color: green; text-decoration: none;" target="_blank">
-              Chung F, Subramanyam R, Liao P, et al. High STOP-Bang score indicates a high probability of  obstructive sleep apnoea. Br J Anaesth 2012; 108:768.
-             </a>
-            </span>
-           </li>
-           <li>
-            <span class="medCalcFontRef">
-             <a href="https://www.ncbi.nlm.nih.gov/pubmed/25142767" style="color: green; text-decoration: none;" target="_blank">
-              Chung F, Yang Y, Brown R, Liao P. Alternative scoring models of STOP-Bang questionnaire improve  specificity to detect undiagnosed obstructive sleep apnea. J Clin Sleep Med 2014; 10:951.
-             </a>
-            </span>
-           </li>
-          </ol>
-         </div>
-        </div>
-        <span class="calculatorVendorId" id="T1678215893">
-        </span>
-       </div>
-       <div id="printDisclaimer">
-        <b>
-         Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.
-        </b>
-        <p>
-         Information on this page may not appear correctly if printed.
-        </p>
-       </div>
-       <div id="disclaimerCalculator">
-        <div class="medCalcFontTwo">
-         <p class="header">
-          Legal Notices and Disclaimer
-         </p>
-         <p>
-          All information contained in and produced by the EBMcalc system is provided
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Calculator: Enhanced STOP-Bang screening questionnaire for obstructive sleep apnea (OSA) in adults</title></head>
+<body><section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Calculator: Enhanced STOP-Bang screening questionnaire for obstructive sleep apnea (OSA) in adults</h1>
+<div class="utdArticleSection" id="topicContentCalculator"><div id="topicText">
+<div id="mc3k">
+<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
+<td align="left" bgcolor="#eeeeee">
+<span class="medCalcFontTitleBox">
+
+Calculator: Enhanced STOP-Bang screening questionnaire for obstructive sleep apnea (OSA) in adults
+</span></td></tr></tbody></table><br/> <br/>
+<form action="" id="STOP_Bang_form" name="STOP_Bang_form" onkeydown="clrResults(); resetInTime();" onkeyup="STOP_Bang_fx();" onreset="rrclr(); document.getElementById('inputchk').innerHTML=inputchktxt;" onsubmit="return false;">
+<div class="medCalcFontOne" id="calc_main" style="margin-left: 20px;">
+<b>S</b>noring?   Do you snore loudly (loud enough to be heard through closed doors or that your bed partner elbows you for snoring at night)?
+<br/> <br/>
+        
+<input name="Snore_radio" onclick="STOP_Bang_fx();" type="radio" value="Yes|1"/> Yes
+  
+<input name="Snore_radio" onclick="STOP_Bang_fx();" type="radio" value="No|0"/> No
+<br/> <br/>
+<b>T</b>ired?   Do you often feel tired, fatigued, or sleepy during the daytime (such as falling asleep during driving or talking to someone)?
+<br/> <br/>
+        
+<input name="Tired_radio" onclick="STOP_Bang_fx();" type="radio" value="Yes|1"/> Yes
+  
+<input name="Tired_radio" onclick="STOP_Bang_fx();" type="radio" value="No|0"/> No
+<br/> <br/>
+<b>O</b>bserved?   Has anyone observed you stop breathing or choking/gasping during your sleep?
+<br/> <br/>
+        
+<input name="Observed_radio" onclick="STOP_Bang_fx();" type="radio" value="Yes|1"/> Yes
+  
+<input name="Observed_radio" onclick="STOP_Bang_fx();" type="radio" value="No|0"/> No
+<br/> <br/>
+<b>P</b>ressure?   Do you have or are you being treated for high blood pressure?
+<br/> <br/>
+        
+<input name="Pressure_radio" onclick="STOP_Bang_fx();" type="radio" value="Yes|1"/> Yes
+  
+<input name="Pressure_radio" onclick="STOP_Bang_fx();" type="radio" value="No|0"/> No
+
+<br/> <br/>
+<b>B</b>ody mass index (BMI) more than 35 kg/m<sup>2</sup>?  BMI is calculated after all questions are answered using this equation: BMI = Weight(kg) / (Height(cm) / 100)<sup>2</sup>
+<br/> <br/>
+<table cellpadding="3" cellspacing="0" summary="EBMcalc Table" width="20%">
+<tbody><tr><td align="right" width="42%"><span class="medCalcFontOneBold">        Weight</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input name="Weight_param" onblur="minMaxCheck(); STOP_Bang_fx();" onchange="STOP_Bang_fx();" onfocus="clrValue(this); clrResults();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select class="medCalcFontSelect" name="Weight_unit" onchange="STOP_Bang_fx();" style="width:115px;">
+<option selected="selected" value="1|0|kg">kg</option>
+<option value="0.45359237|0|lb">lb</option>
+</select></td></tr>
+<tr><td align="right" width="42%"><span class="medCalcFontOneBold">Height</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input name="Height_param" onblur="minMaxCheck(); STOP_Bang_fx();" onchange="STOP_Bang_fx();" onfocus="clrValue(this); clrResults();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select class="medCalcFontSelect" name="Height_unit" onchange="STOP_Bang_fx();" style="width:115px;">
+<option selected="selected" value="1|0|cm">cm</option>
+<option value="2.54|0|in">in</option>
+</select></td></tr>
+<tr><td align="right"><span class="medCalcFontOneBold">BMI</span></td>
+<td nowrap="nowrap" valign="top">  <input name="BMI_param" onfocus="blur();" size="6" type="text"/></td>
+<td align="left" valign="top"><span class="medCalcFontOneBold">kg/m<sup>2</sup></span></td></tr>
+</tbody></table>
+<br/> <br/>
+<b>A</b>ge older than 50?
+<br/> <br/>
+
+        
+<input name="Age_radio" onclick="STOP_Bang_fx();" type="radio" value="Yes|1"/> Yes
+  
+<input name="Age_radio" onclick="STOP_Bang_fx();" type="radio" value="No|0"/> No
+<br/> <br/>
+<b>N</b>eck size large (measured around Adam's apple)? Is your shirt collar 16 inches (40 cm) or larger?
+<br/> <br/>
+        
+<input name="Neck_radio" onclick="STOP_Bang_fx();" type="radio" value="Yes|1"/> Yes
+  
+<input name="Neck_radio" onclick="STOP_Bang_fx();" type="radio" value="No|0"/> No
+<br/> <br/>
+<b>G</b>ender (biologic sex): male?
+<br/> <br/>
+        
+<input name="Gender_radio" onclick="STOP_Bang_fx();" type="radio" value="Yes|1"/> Yes
+  
+<input name="Gender_radio" onclick="STOP_Bang_fx();" type="radio" value="No|0"/> No
+
+<br/> <br/>
+<center><input name="reset" type="reset" value="Reset form"/></center>
+<br/> <br/><center><span class="medCalcFontIO">Results<span class="medCalcFontOne" id="inputchk"><br/> <br/><b>Important:</b> Inputs must be complete to perform calculation. <br/></span></span>
+<br/> <br/>
+<table cellpadding="6" cellspacing="0" summary="EBMcalc Table" width="100%">
+<tbody><tr><td bgcolor="#eeeeee" class="medCalcTitleBox">
+<span class="medCalcFontTitleBox">   STOP-Bang interpretation</span></td></tr></tbody></table>
+<br/> <br/>
+<center>
+<table border="1" cellpadding="4" cellspacing="0" summary="RRTable">
+<tbody><tr bgcolor="#eeeeee">
+<td align="left"><span class="medCalcFontOneBold">Risk factors (criteria met are <span style="background-color: #8ab2be;"> highlighted </span></span></td>
+</tr>
+<tr id="rr1_1">
+<td align="left"><span class="medCalcFontOne">Yes to 0 to 2 of the questions</span></td>
+</tr>
+<tr id="rr1_2">
+<td align="left"><span class="medCalcFontOne">Yes to 3 to 4 questions</span></td>
+</tr>
+<tr id="rr1_3">
+<td align="left"><span class="medCalcFontOne">Yes to 5 to 8 questions</span></td>
+</tr>
+<tr id="rr1_4">
+<td align="left"><span class="medCalcFontOne">Yes to 2 or more of 4 STOP questions and BMI &gt;35 kg/m<sup>2</sup></span></td>
+</tr>
+<tr id="rr1_5">
+<td align="left"><span class="medCalcFontOne">Yes to 2 or more of 4 STOP questions and neck circumference ≥16 inches (≥40 cm)</span></td>
+</tr>
+<tr id="rr1_6">
+<td align="left"><span class="medCalcFontOne">Yes to 2 or more of 4 STOP questions and male gender (biologic sex)</span></td>
+</tr>
+<tr bgcolor="#eeeeee">
+<td align="left"><span class="medCalcFontOneBold">Classification</span></td>
+</tr>
+<tr id="rr1_7">
+<td align="left"><span class="medCalcFontOne">Low risk</span></td>
+</tr>
+<tr id="rr1_8">
+<td align="left"><span class="medCalcFontOne">Intermediate risk</span></td>
+</tr>
+<tr id="rr1_9">
+<td align="left"><span class="medCalcFontOne">High risk</span></td>
+</tr>
+</tbody></table>
+</center>
+</center></div>
+</form>
+<br/> <br/>
+<div id="calc_refs">
+<span class="medCalcFontRef"><b>References</b></span>
+<ol>
+<li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/18431116" style="color: green; text-decoration: none;" target="_blank">Chung F, Yegneswaran B, Liao P, et al. STOP questionnaire: a tool to screen patients for obstructive sleep  apnea. Anesthesiology 2008; 108:812.</a></span></li>
+<li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/22401881" style="color: green; text-decoration: none;" target="_blank">Chung F, Subramanyam R, Liao P, et al. High STOP-Bang score indicates a high probability of  obstructive sleep apnoea. Br J Anaesth 2012; 108:768.</a></span></li>
+<li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/25142767" style="color: green; text-decoration: none;" target="_blank">Chung F, Yang Y, Brown R, Liao P. Alternative scoring models of STOP-Bang questionnaire improve  specificity to detect undiagnosed obstructive sleep apnea. J Clin Sleep Med 2014; 10:951.</a></span></li>
+</ol>
+</div>
+</div>
+<span class="calculatorVendorId" id="T1678215893">
+</span></div><div id="printDisclaimer">
+<b>Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.</b>
+<p>
+	Information on this page may not appear correctly if printed. </p>
+</div>
+<div id="disclaimerCalculator">
+<div class="medCalcFontTwo">
+<p class="header">Legal Notices and Disclaimer</p>
+<p>
+			All information contained in and produced by the EBMcalc system is provided
 			for educational purposes only. This information should not be used for the diagnosis or treatment
-			of any health problem or disease.
-          <b>
-           THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.
-          </b>
-          <a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">
-           Click here for full notice and disclaimer.
-          </a>
-         </p>
-         <p class="copy">
-          EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC
-         </p>
-        </div>
-       </div>
-       <div id="topicVersionRevision">
-        Topic 118122 Version 8.0
-       </div>
-      </div>
-     </div>
-    </div>
-   </section>
-  </section>
-  <!-- End Main Menu Area -->
-  <!-- Start Search Popup Area -->
-  <!-- End Footer Area -->
-  <!-- Back to top -->
-  <a class="scrolltop" href="#top">
-   <i class="icofont-hand-drawn-up">
-   </i>
-  </a>
-  <!-- End Back to top -->
-  <!-- jQuery Min JS -->
-  <!-- Prpper JS -->
-  <!-- Bootstrap Min JS -->
-  <!-- Classy Nav Min Js -->
-  <!-- Owl Carousel Min Js -->
-  <!-- Magnific Popup JS -->
-  <!-- CounterUp JS -->
-  <!-- Waypoints JS -->
-  <!-- Form Validator Min JS -->
-  <!-- Contact Form Min JS -->
-  <!-- Main JS -->
-  <!-- Global site tag (gtag.js) - Google Analytics -->
- </body>
+			of any health problem or disease. 
+			<b>THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.</b>
+<a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">Click here for full notice and disclaimer.</a>
+</p>
+<p class="copy">EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC</p>
+</div>
+</div><div id="topicVersionRevision">Topic 118122 Version 8.0</div></div>
+</div>
+</div>
+</section><script>
+/* <![CDATA[ */
+
+
+
+function power(x,y){
+return Math.pow(x,y);
+}
+
+
+function fixDP(r, dps) {
+if (isNaN(r)) return "NaN";
+var msign = '';
+if (r < 0) msign = '-';
+x = Math.abs(r);
+if (x > Math.pow(10, 21)) return msign + x.toString();
+var m = Math.round(x * Math.pow(10, dps)).toString();
+if (dps == 0) return msign + m;
+while (m.length <= dps) m = "0" + m;
+return msign + m.substring(0, m.length - dps) + "." + m.substring(m.length - dps);
+}
+
+function alertNaN(thisparam){
+alert(thisparam + ' is improperly formatted. You may only input the digits 0-9 and a decimal point.');
+doCalc = false;
+clrResults();
+}
+
+function clrValue(field) {
+field.value = '';
+}
+
+var currenttimeout;
+
+var calctxt = ''; 
+var xmltxt = ''; 
+var xmlresult = '';
+var htmtxt = ''; 
+var postNow = false;
+var printing = false;
+
+var lowrisk = 0;
+var highrisk = 0;
+
+var Snore_point = 0;
+var Tired_point = 0;
+var Observed_point = 0;
+var Pressure_point = 0;
+var BMI_point = 0;
+var Age_point = 0;
+var Neck_point = 0;
+var Gender_point = 0;
+var inputchktxt = '<br />&nbsp;<br /><b>Important:</b> Inputs must be complete to perform calculation. <br />'
+
+function STOP_Bang_fx() {
+
+with(document.STOP_Bang_form){
+
+doCalc = true;
+
+rbchk = false;
+
+if (Snore_radio[0].checked){ rbchk = true; Snore_point = 1; }
+if (Snore_radio[1].checked){ rbchk = true; Snore_point = 0; }
+if (!rbchk) doCalc = false;
+
+rbchk = false;
+if (Tired_radio[0].checked){ rbchk = true; Tired_point = 1; }
+if (Tired_radio[1].checked){ rbchk = true; Tired_point = 0; }
+if (!rbchk) doCalc = false;
+
+rbchk = false;
+if (Observed_radio[0].checked){ rbchk = true; Observed_point = 1; }
+if (Observed_radio[1].checked){ rbchk = true; Observed_point = 0; }
+if (!rbchk) doCalc = false;
+
+rbchk = false;
+if (Pressure_radio[0].checked){ rbchk = true; Pressure_point = 1; }
+if (Pressure_radio[1].checked){ rbchk = true; Pressure_point = 0; }
+if (!rbchk) doCalc = false;
+
+param_value = parseFloat(Weight_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = Weight_unit.options[Weight_unit.selectedIndex].value.split('|');
+Weight = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+param_value = parseFloat(Height_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = Height_unit.options[Height_unit.selectedIndex].value.split('|');
+Height = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+
+rbchk = false;
+if (Age_radio[0].checked){ rbchk = true; Age_point = 1; }
+if (Age_radio[1].checked){ rbchk = true; Age_point = 0; }
+if (!rbchk) doCalc = false;
+
+rbchk = false;
+if (Neck_radio[0].checked){ rbchk = true; Neck_point = 1; }
+if (Neck_radio[1].checked){ rbchk = true; Neck_point = 0; }
+if (!rbchk) doCalc = false;
+
+rbchk = false;
+if (Gender_radio[0].checked){ rbchk = true; Gender_point = 1; }
+if (Gender_radio[1].checked){ rbchk = true; Gender_point = 0; }
+if (!rbchk) doCalc = false;
+
+BMI =  Weight / power((Height/100), 2);
+BMI_point = 0;
+if (BMI > 35) BMI_point = 1; 
+if (doCalc) BMI_param.value = fixDP(BMI, 1);
+
+Stop_points = Snore_point + Tired_point + Observed_point + Pressure_point;
+Points =  Stop_points + BMI_point + Age_point + Neck_point + Gender_point;
+
+if (doCalc) document.getElementById('inputchk').innerHTML = '';
+else document.getElementById('inputchk').innerHTML = inputchktxt;
+
+
+if (doCalc){
+rrclr();
+
+lowrisk = 0;
+highrisk = 0;
+
+if (Points <= 2){
+document.getElementById('rr1_1').bgColor = '#8ab2be';
+document.getElementById('rr1_7').bgColor = '#8ab2be';
+lowrisk = 1;
+}
+
+if (!lowrisk){
+
+if (Points >= 5){
+document.getElementById('rr1_3').bgColor = '#8ab2be';
+highrisk = 1;
+}
+
+if ((Stop_points >=2) && (BMI_point == 1)){
+document.getElementById('rr1_4').bgColor = '#8ab2be';
+document.getElementById('rr1_9').bgColor = '#8ab2be';
+highrisk = 1;
+} 
+
+if ((Stop_points >=2) && (Neck_point == 1)){
+document.getElementById('rr1_5').bgColor = '#8ab2be';
+document.getElementById('rr1_9').bgColor = '#8ab2be';
+highrisk = 1;
+} 
+
+if ((Stop_points >=2) && (Gender_point == 1)){
+document.getElementById('rr1_6').bgColor = '#8ab2be';
+document.getElementById('rr1_9').bgColor = '#8ab2be';
+highrisk = 1;
+} 
+}
+
+if (!highrisk && !lowrisk){
+document.getElementById('rr1_2').bgColor = '#8ab2be';
+document.getElementById('rr1_8').bgColor = '#8ab2be';
+}
+
+}}}
+
+
+function minMaxCheck(){
+
+with(document.STOP_Bang_form){
+
+if (Weight_param.value && isNaN(Weight_param.value)){ clrValue(Weight_param); alertNaN('Weight'); }
+if (Weight_param.value && (Weight < (30 - 0.00001))) {
+Weight = 0;
+clrValue(Weight_param);
+clrResults();
+doCalc = false;
+alert("The minimum value for Weight is 30 kg.\nIf you are specifying a value with a different unit,\nchange the unit selector first.");
+}
+
+if (Weight_param.value && Weight > 272) {
+clrValue(Weight_param);
+clrResults();
+Weight = 0;
+doCalc = false;
+alert("The maximum value for Weight is 272 kg.\nIf you are specifying a value with a different unit,\nchange the unit selector first.");
+}
+
+if (Height_param.value && isNaN(Height_param.value)){ clrValue(Height_param); alertNaN('Height'); }
+if (Height_param.value && (Height < (101.6 - 0.00001))) {
+Height = 0;
+clrValue(Height_param);
+clrResults();
+doCalc = false;
+alert("The minimum value for Height is 101.6 cm.\nIf you are specifying a value with a different unit,\nchange the unit selector first.");
+}
+
+if (Height_param.value && Height > 243.84) {
+clrValue(Height_param);
+clrResults();
+Height = 0;
+doCalc = false;
+alert("The maximum value for Height is 243.84 cm.\nIf you are specifying a value with a different unit,\nchange the unit selector first.");
+}
+
+}}
+
+
+
+function stripNbsp(spctxt){
+while (spctxt.charCodeAt(0) > 127){ spctxt = spctxt.substring(1);};
+return spctxt;
+}
+
+
+function clrResults(){
+with(document.STOP_Bang_form){
+BMI_param.value = '';
+rrclr();
+}}
+
+
+function resetInTime(){
+if (currenttimeout) clearTimeout(currenttimeout);
+currenttimeout = setTimeout('minMaxCheck();', 3000);
+}
+
+var Snore = null,
+Tired = null,
+Observed = null,
+Pressure = null,
+Weight = null,
+Height = null,
+Age = null,
+Neck = null,
+Gender = null,
+BMI = null,
+Points = null,
+param_value = null;
+
+
+function rrclr(){
+document.getElementById('rr1_1').bgColor = '';
+document.getElementById('rr1_2').bgColor = '';
+document.getElementById('rr1_3').bgColor = '';
+document.getElementById('rr1_4').bgColor = '';
+document.getElementById('rr1_5').bgColor = '';
+document.getElementById('rr1_6').bgColor = '';
+document.getElementById('rr1_7').bgColor = '';
+document.getElementById('rr1_8').bgColor = '';
+document.getElementById('rr1_9').bgColor = '';
+}
+
+
+
+/* ]]> */
+
+/* <![CDATA[ */
+
+
+/* ]]> */
+</script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://medilib.ir/assets/js/jquery.min.js"></script><script src="https://medilib.ir/assets/js/popper.min.js"></script><script src="https://medilib.ir/assets/js/bootstrap.min.js"></script><script src="https://medilib.ir/assets/js/classy-nav.min.js"></script><script src="https://medilib.ir/assets/js/owl.carousel.min.js"></script><script src="https://medilib.ir/assets/js/jquery.magnific-popup.min.js"></script><script src="https://medilib.ir/assets/js/jquery.counterup.min.js"></script><script src="https://medilib.ir/assets/js/waypoints.min.js"></script><script src="https://medilib.ir/assets/js/form-validator.min.js"></script><script src="https://medilib.ir/assets/js/contact-form-script.js"></script><script src="https://medilib.ir/assets/js/main.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WFDJ5JLM3Q"></script><script>
+    window.addEventListener("load", () => {
+
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function (registrations) {
+                //returns installed service workers
+                if (registrations.length) {
+                    for (let registration of registrations) {
+                        if (
+                            registration.active.scriptURL.startsWith("/serviceWorker.js") &&
+                            !registration.active.scriptURL.endsWith("/serviceWorker.js?v=18")
+                        ) {
+                            registration.unregister();
+                        }
+                    }
+                }
+            });
+            navigator.serviceWorker.register('/serviceWorker.js?v=18', {
+                scope: '/'
+            })
+                .then(function (registration) {
+                    console.log('Registration successful, scope is:', registration.scope);
+                })
+                .catch(function (error) {
+                    console.log('Service worker registration failed, error:', error);
+                });
+        }
+    });
+    const promptElement = document.querySelector('.pwaprompt');
+    const footerPromptElement = document.querySelector('#footerPromptElement');
+    const scrollTopElement = document.querySelector('.scrolltop');
+    // const installButton = promptElement.querySelector('.prompt__install');
+    const closeButton = promptElement.querySelector('.prompt__close');
+    let installEvent;
+
+    function setWithExpiry(key, value, seconds) {
+        const now = new Date()
+
+        // `item` is an object which contains the original value
+        // as well as the time when it's supposed to expire
+        const item = {
+            value: value,
+            expiry: now.getTime() + (seconds * 1000),
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+    }
+
+    function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+        // if the item doesn't exist, return null
+        if (!itemStr) {
+            return null
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+        // compare the expiry time of the item with the current time
+        if (now.getTime() > item.expiry) {
+            // If the item is expired, delete the item from storage
+            // and return null
+            localStorage.removeItem(key)
+            return null
+        }
+        return item.value
+    }
+
+    // checks if the localStorage item has been set
+    function getVisited() {
+        return getWithExpiry('install-prompt')
+        // return localStorage.getItem('install-prompt');
+    }
+
+    // sets the localStorage item
+    function setVisited() {
+        fiveDay = 5 * (24 * (60 * 60))
+        setWithExpiry('install-prompt', true, fiveDay)
+        // localStorage.setItem('install-prompt', true);
+    }
+
+    closeButton.addEventListener('click', () => {
+        // set localStorage to true
+        setVisited();
+
+        // hide the prompt banner
+        promptElement.style.display = 'none';
+        scrollTopElement.style.bottom = '30px';
+
+        // installEvent = null;
+    });
+    // Detects if device is on iOS
+    const isIos = () => {
+        const userAgent = window.navigator.userAgent.toLowerCase();
+        return /iphone|ipad|ipod/.test(userAgent);
+    }
+    // Detects if device is in standalone mode
+    const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+
+    // Checks if should display install popup notification:
+    if (isIos() && !isInStandaloneMode()) {
+        if (!getVisited()) {
+            promptElement.style.display = 'block';
+            scrollTopElement.style.bottom = '80px';
+        }
+        footerPromptElement.style.display = 'block';
+    }
+
+
+    // this event will only fire if the user does not have the pwa installed
+    window.addEventListener('beforeinstallprompt', (event) => {
+        event.preventDefault();
+        // if no localStorage is set, first time visitor
+        if (!getVisited()) {
+            // show the prompt banner
+            promptElement.style.display = 'block';
+            scrollTopElement.style.bottom = '80px';
+
+            // store the event for later use
+
+        }
+        footerPromptElement.style.display = 'block';
+        installEvent = event;
+
+    });
+    $(document).on('click', '.prompt__install', function () {
+        promptElement.style.display = 'none';
+        scrollTopElement.style.bottom = '30px';
+
+        if (isIos() && !isInStandaloneMode()) {
+            setVisited();
+            $('#iphoneAddToHomeScreen').modal()
+        } else {
+
+            // trigger the prompt to show to the user
+            installEvent.prompt();
+            // check what choice the user made
+            installEvent.userChoice.then((choice) => {
+                // if the user declined, we don't want to show the button again
+                // set localStorage to true
+                if (choice.outcome !== 'accepted') {
+                    setVisited();
+                }
+
+                installEvent = null;
+            });
+        }
+
+    });
+</script><script>
+
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-WFDJ5JLM3Q');
+</script><script>
+      var topicReferences=[];
+
+      function refrence(id) {
+          var myReference=Object.values(topicReferences)[id];
+          console.log(myReference);
+          $("#pmid").attr("href",myReference['pmid']);
+          if (typeof myReference['description'] !== 'undefined' && myReference['description']!="") {
+            $("#myModalLabel34").html('Description : <p>' + myReference['description'] + "</p>");
+          }
+          if (typeof myReference['authors'] !== 'undefined' && myReference['authors']!="") {
+            $("#referenceAuthors").html('Authors : <p>' + myReference['authors'] + "</p>");
+          }
+          if (typeof myReference['source'] !== 'undefined' && myReference['source']!="") {
+            $("#referenceSource").html('Source : <p>' + myReference['source'] + "</p>");
+          }
+          if (typeof myReference['title'] !== 'undefined' && myReference['title']!="") {
+            $("#referenceTitle").html('Title : <p>' + myReference['title'] + "</p>");
+          }
+          if (typeof myReference['affiliation'] !== 'undefined' && myReference['affiliation']!="") {
+            $("#referenceAffiliation").html('Affiliation : <p>' + myReference['affiliation'] + "</p>");
+          }
+      }
+  </script><script>
+
+      var screenHeight = screen.height;
+
+      if (screenHeight > 700) {
+        // $document.getElementById("Uptodate_image").style.width = "100% !important;";
+        // $('.Uptodate_image').css('width', '100% !important;');
+        console.log("more");
+      }else{
+        console.log(screenHeight);
+      }
+    $(document).scroll(function()  {
+      var y = $(this).scrollTop();
+      if (y > 100) {
+        $('.goback').fadeIn();
+        $('.buyPackage').fadeIn();
+        // alert(document.getElementById('main_menu').style.zIndex);
+        document.getElementById("uptodate-area").style.padding = "0px 0 0 0";
+        document.getElementById('main_menu').style.zIndex=1;
+         document.getElementById('main_menu').style.display="none";
+        document.getElementById('navbar_menu').style.marginTop="70px"
+        document.getElementById('uptodate-area').style.marginTop="0px"
+        document.getElementById('uptodate-area').style.zIndex=999;
+        console.log('down');
+      } else {
+        $('.goback').fadeOut();
+        $('.buyPackage').fadeOut();
+        document.getElementById("uptodate-area").style.padding = "0px 0 0 0";
+        document.getElementById('navbar_menu').style.marginTop="0px"
+        document.getElementById('main_menu').style.display="";
+        document.getElementById('uptodate-area').style.zIndex=0;
+        console.log('up');
+      }
+    });
+    function goBack() {
+      window.history.back();
+    }
+    function buyPackage() {
+      window.open("https://medilib.ir/userPanel/package/uptodate/index",'_blank');
+    }
+  </script></body>
 </html>

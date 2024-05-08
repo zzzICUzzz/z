@@ -1,457 +1,714 @@
 <!DOCTYPE html>
+
 <html lang="fa">
- <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
- <head>
-  <title>
-   Calculator: Fractional excretion of magnesium (conventional units)*
-  </title>
-  <link href="d/css/1.css" rel="stylesheet"/>
- </head>
- <body>
-  <!-- Start Main Menu Area -->
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <div class="container">
-   <div class="row">
-   </div>
-  </div>
-  <section class="teacher-area ptb-10">
-   <div class="container">
-   </div>
-   <section class="course-details-area ptb-60">
-    <div class="container">
-     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-      <h1 style="text-align:center">
-       Calculator: Fractional excretion of magnesium (conventional units)*
-      </h1>
-      <div class="utdArticleSection" id="topicContentCalculator">
-       <div id="topicText">
-        <div id="mc3k">
-         <form action="" id="FractExcMg_form" name="FractExcMg_form" onkeydown="formKeyDown(event);" onkeypress="resetInTime(); return validNumberField(event);" onkeyup="FractExcMg_fx();" onreset="document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
-          <table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
-           <tbody>
-            <tr>
-             <td bgcolor="#eeeeee" width="1%">
-              <br/>
-             </td>
-             <td align="left" bgcolor="#eeeeee">
-              <span class="medCalcFontTitleBox">
-               Calculator: Fractional excretion of magnesium (conventional units)
-               <sup>
-                *
-               </sup>
-              </span>
-             </td>
-            </tr>
-           </tbody>
-          </table>
-          <br/>
-          <br/>
-          <div id="calc_main">
-           <center>
-            <span class="medCalcFontIO">
-             Input
-            </span>
-            <br/>
-            <br/>
-            <table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
-             <tbody>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 Urine Mg
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value Urine Mg" name="Urine_Mg_param" onblur="FractExcMg_fx(); minMaxCheck();" onchange="FractExcMg_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <select aria-label="Use this pulldown selector to set the unit of measure for the value Urine Mg" class="medCalcFontSelect" name="Urine_Mg_unit" onchange="FractExcMg_fx(); minMaxCheck();" style="width:115px;">
-                 <option value="100|0|g/L">
-                  g/L
-                 </option>
-                 <option value="1000|0|g/dL">
-                  g/dL
-                 </option>
-                 <option value="0.001|0|mcg/dL">
-                  mcg/dL
-                 </option>
-                 <option value="0.1|0|mcg/mL">
-                  mcg/mL
-                 </option>
-                 <option value="1|0|mg%">
-                  mg%
-                 </option>
-                 <option selected="selected" value="1|0|mg/dL">
-                  mg/dL
-                 </option>
-                 <option value="100|0|mg/mL">
-                  mg/mL
-                 </option>
-                 <option value="0.0001|0|ng/mL">
-                  ng/mL
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 Plasma Mg
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value Plasma Mg" name="Plasma_Mg_param" onblur="FractExcMg_fx(); minMaxCheck();" onchange="FractExcMg_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <select aria-label="Use this pulldown selector to set the unit of measure for the value Plasma Mg" class="medCalcFontSelect" name="Plasma_Mg_unit" onchange="FractExcMg_fx(); minMaxCheck();" style="width:115px;">
-                 <option value="100|0|g/L">
-                  g/L
-                 </option>
-                 <option value="1000|0|g/dL">
-                  g/dL
-                 </option>
-                 <option value="0.001|0|mcg/dL">
-                  mcg/dL
-                 </option>
-                 <option value="0.1|0|mcg/mL">
-                  mcg/mL
-                 </option>
-                 <option value="1|0|mg%">
-                  mg%
-                 </option>
-                 <option selected="selected" value="1|0|mg/dL">
-                  mg/dL
-                 </option>
-                 <option value="100|0|mg/mL">
-                  mg/mL
-                 </option>
-                 <option value="0.0001|0|ng/mL">
-                  ng/mL
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 Urine Cr
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value Urine Cr" name="Urine_Cr_param" onblur="FractExcMg_fx(); minMaxCheck();" onchange="FractExcMg_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <select aria-label="Use this pulldown selector to set the unit of measure for the value Urine Cr" class="medCalcFontSelect" name="Urine_Cr_unit" onchange="FractExcMg_fx(); minMaxCheck();" style="width:115px;">
-                 <option value="100|0|g/L">
-                  g/L
-                 </option>
-                 <option value="1000|0|g/dL">
-                  g/dL
-                 </option>
-                 <option value="0.001|0|mcg/dL">
-                  mcg/dL
-                 </option>
-                 <option value="0.1|0|mcg/mL">
-                  mcg/mL
-                 </option>
-                 <option value="1|0|mg%">
-                  mg%
-                 </option>
-                 <option selected="selected" value="1|0|mg/dL">
-                  mg/dL
-                 </option>
-                 <option value="100|0|mg/mL">
-                  mg/mL
-                 </option>
-                 <option value="0.0001|0|ng/mL">
-                  ng/mL
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 Plasma Cr
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value Plasma Cr" name="Plasma_Cr_param" onblur="FractExcMg_fx(); minMaxCheck();" onchange="FractExcMg_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <select aria-label="Use this pulldown selector to set the unit of measure for the value Plasma Cr" class="medCalcFontSelect" name="Plasma_Cr_unit" onchange="FractExcMg_fx(); minMaxCheck();" style="width:115px;">
-                 <option value="100|0|g/L">
-                  g/L
-                 </option>
-                 <option value="1000|0|g/dL">
-                  g/dL
-                 </option>
-                 <option value="0.001|0|mcg/dL">
-                  mcg/dL
-                 </option>
-                 <option value="0.1|0|mcg/mL">
-                  mcg/mL
-                 </option>
-                 <option value="1|0|mg%">
-                  mg%
-                 </option>
-                 <option selected="selected" value="1|0|mg/dL">
-                  mg/dL
-                 </option>
-                 <option value="100|0|mg/mL">
-                  mg/mL
-                 </option>
-                 <option value="0.0001|0|ng/mL">
-                  ng/mL
-                 </option>
-                </select>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-           </center>
-           <br/>
-           <br/>
-           <center>
-            <span class="medCalcFontIO">
-             Result
-             <span class="medCalcFontOne" id="inputchk">
-              <br/>
-              <br/>
-              <b>
-               Important:
-              </b>
-              Inputs must be complete to perform calculation.
-              <br/>
-             </span>
-            </span>
-            <br/>
-            <br/>
-            <table cellpadding="4" class="medCalcResultBox" summary="EBMcalc Table">
-             <tbody>
-              <tr>
-               <td colspan="3">
-                <br/>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontResultParam">
-                 FEMg
-                </span>
-               </td>
-               <td nowrap="nowrap" valign="top">
-                <input aria-label="This output box will display the calculated value FEMg" aria-readonly="true" name="FEMg_param" size="6" type="text"/>
-               </td>
-               <td align="left" valign="top">
-                <span class="medCalcFontResultParam">
-                 <select aria-label="Use this pulldown selector to set the unit of measure for the result value FEMg" class="medCalcFontSelect" name="FEMg_unit" onchange="FractExcMg_fx();" style="width:115px;">
-                  <option selected="selected" value="1|0|%">
-                   %
-                  </option>
-                  <option value="100|0|fraction">
-                   fraction
-                  </option>
-                  <option value="100|0|ratio">
-                   ratio
-                  </option>
-                 </select>
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td colspan="3">
-                <br/>
-               </td>
-              </tr>
-              <tr>
-               <td align="center" colspan="3">
-                <span class="medCalcFontResultParam">
-                 Decimal precision
-                </span>
-                <select aria-label="Use this pulldown selector to set the decimal precision of calculations" class="medCalcFontSelect" name="decpts" onchange="FractExcMg_fx();">
-                 <option selected="selected">
-                  0
-                 </option>
-                 <option>
-                  1
-                 </option>
-                 <option>
-                  2
-                 </option>
-                 <option>
-                  3
-                 </option>
-                </select>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-           </center>
-           <br/>
-           <br/>
-           <div id="calc_buttons">
-            <center>
-             <span class="medCalcFontOne">
-              <input name="resetbutton" type="reset" value="Reset form"/>
-             </span>
-            </center>
-           </div>
-          </div>
-          <div id="pretextrefs">
-          </div>
-          <div id="calc_tables_above_notes">
-          </div>
-          <br/>
-          <br/>
-          <div id="calc_notes">
-           <span class="medCalcFontOneBold">
-            Notes
-           </span>
-           <ul class="medCalcFontOne">
-            <li>
-             The fractional excretion of magnesium (
-             <b>
-              FEMg
-             </b>
-             ) can be calculated by entering the values from simultaneously obtained urine and blood samples.
-            </li>
-            <li>
-             Please refer to UpToDate topic review of hypomagnesemia for a discussion of the interpretation of the fractional excretion of magnesium.
-            </li>
-            <li>
-             <b>
-              Cr
-             </b>
-             : creatinine.
-            </li>
-            <li>
-             <font color="#aa0000">
-              In this calculator, mcg is the abbreviation for micrograms.
-             </font>
-            </li>
-            <li style="list-style-type: none;">
-             <font size="+1">
-              *
-             </font>
-             This calculator uses conventional units (also known as US units 
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Calculator: Fractional excretion of magnesium (conventional units)*</title></head>
+<body><section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Calculator: Fractional excretion of magnesium (conventional units)*</h1>
+<div class="utdArticleSection" id="topicContentCalculator"><div id="topicText">
+<div id="mc3k">
+<form action="" id="FractExcMg_form" name="FractExcMg_form" onkeydown="formKeyDown(event);" onkeypress="resetInTime(); return validNumberField(event);" onkeyup="FractExcMg_fx();" onreset="document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
+<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
+<td align="left" bgcolor="#eeeeee">
+<span class="medCalcFontTitleBox">
+
+ 
+Calculator: Fractional excretion of magnesium (conventional units)<sup>*</sup>
+</span></td></tr></tbody></table><br/> <br/>
+<div id="calc_main">
+<center>
+<span class="medCalcFontIO">
+Input
+</span>
+<br/> <br/>
+<table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
+<tbody><tr><td align="right" width="42%"><span class="medCalcFontOneBold">Urine Mg</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value Urine Mg" name="Urine_Mg_param" onblur="FractExcMg_fx(); minMaxCheck();" onchange="FractExcMg_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value Urine Mg" class="medCalcFontSelect" name="Urine_Mg_unit" onchange="FractExcMg_fx(); minMaxCheck();" style="width:115px;">
+<option value="100|0|g/L">g/L</option>
+<option value="1000|0|g/dL">g/dL</option>
+<option value="0.001|0|mcg/dL">mcg/dL</option>
+<option value="0.1|0|mcg/mL">mcg/mL</option>
+<option value="1|0|mg%">mg%</option>
+<option selected="selected" value="1|0|mg/dL">mg/dL</option>
+<option value="100|0|mg/mL">mg/mL</option>
+<option value="0.0001|0|ng/mL">ng/mL</option>
+</select></td></tr>
+<tr><td align="right" width="42%"><span class="medCalcFontOneBold">Plasma Mg</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value Plasma Mg" name="Plasma_Mg_param" onblur="FractExcMg_fx(); minMaxCheck();" onchange="FractExcMg_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value Plasma Mg" class="medCalcFontSelect" name="Plasma_Mg_unit" onchange="FractExcMg_fx(); minMaxCheck();" style="width:115px;">
+<option value="100|0|g/L">g/L</option>
+<option value="1000|0|g/dL">g/dL</option>
+<option value="0.001|0|mcg/dL">mcg/dL</option>
+<option value="0.1|0|mcg/mL">mcg/mL</option>
+<option value="1|0|mg%">mg%</option>
+<option selected="selected" value="1|0|mg/dL">mg/dL</option>
+<option value="100|0|mg/mL">mg/mL</option>
+<option value="0.0001|0|ng/mL">ng/mL</option>
+</select></td></tr>
+<tr><td align="right" width="42%"><span class="medCalcFontOneBold">Urine Cr</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value Urine Cr" name="Urine_Cr_param" onblur="FractExcMg_fx(); minMaxCheck();" onchange="FractExcMg_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value Urine Cr" class="medCalcFontSelect" name="Urine_Cr_unit" onchange="FractExcMg_fx(); minMaxCheck();" style="width:115px;">
+<option value="100|0|g/L">g/L</option>
+<option value="1000|0|g/dL">g/dL</option>
+<option value="0.001|0|mcg/dL">mcg/dL</option>
+<option value="0.1|0|mcg/mL">mcg/mL</option>
+<option value="1|0|mg%">mg%</option>
+<option selected="selected" value="1|0|mg/dL">mg/dL</option>
+<option value="100|0|mg/mL">mg/mL</option>
+<option value="0.0001|0|ng/mL">ng/mL</option>
+</select></td></tr>
+<tr><td align="right" width="42%"><span class="medCalcFontOneBold">Plasma Cr</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value Plasma Cr" name="Plasma_Cr_param" onblur="FractExcMg_fx(); minMaxCheck();" onchange="FractExcMg_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value Plasma Cr" class="medCalcFontSelect" name="Plasma_Cr_unit" onchange="FractExcMg_fx(); minMaxCheck();" style="width:115px;">
+<option value="100|0|g/L">g/L</option>
+<option value="1000|0|g/dL">g/dL</option>
+<option value="0.001|0|mcg/dL">mcg/dL</option>
+<option value="0.1|0|mcg/mL">mcg/mL</option>
+<option value="1|0|mg%">mg%</option>
+<option selected="selected" value="1|0|mg/dL">mg/dL</option>
+<option value="100|0|mg/mL">mg/mL</option>
+<option value="0.0001|0|ng/mL">ng/mL</option>
+</select></td></tr>
+</tbody></table>
+</center>
+<br/> <br/><center><span class="medCalcFontIO">Result<span class="medCalcFontOne" id="inputchk"><br/> <br/><b>Important:</b> Inputs must be complete to perform calculation. <br/></span></span>
+<br/> <br/>
+<table cellpadding="4" class="medCalcResultBox" summary="EBMcalc Table">
+<tbody><tr><td colspan="3"> <br/></td></tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">FEMg</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value FEMg" aria-readonly="true" name="FEMg_param" size="6" type="text"/></td>
+<td align="left" valign="top"><span class="medCalcFontResultParam">
+<select aria-label="Use this pulldown selector to set the unit of measure for the result value FEMg" class="medCalcFontSelect" name="FEMg_unit" onchange="FractExcMg_fx();" style="width:115px;">
+<option selected="selected" value="1|0|%">%</option>
+<option value="100|0|fraction">fraction</option>
+<option value="100|0|ratio">ratio</option>
+</select>
+</span></td>
+</tr>
+<tr><td colspan="3"> <br/></td></tr>
+<tr><td align="center" colspan="3"><span class="medCalcFontResultParam">Decimal precision  </span>
+<select aria-label="Use this pulldown selector to set the decimal precision of calculations" class="medCalcFontSelect" name="decpts" onchange="FractExcMg_fx();">
+<option selected="selected">0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select></td></tr>
+</tbody></table>
+</center><br/> <br/>
+<div id="calc_buttons">
+<center>
+<span class="medCalcFontOne">
+<input name="resetbutton" type="reset" value="Reset form"/>
+</span>
+</center>
+</div>
+</div><div id="pretextrefs">
+ 
+</div>
+<div id="calc_tables_above_notes">
+</div>
+<br/> <br/>
+<div id="calc_notes">
+<span class="medCalcFontOneBold">Notes</span>
+<ul class="medCalcFontOne">
+<li>The fractional excretion of magnesium (<b>FEMg</b>) can be calculated by entering the values from simultaneously obtained urine and blood samples.</li>
+<li>Please refer to UpToDate topic review of hypomagnesemia for a discussion of the interpretation of the fractional excretion of magnesium.</li>
+<li><b>Cr</b>: creatinine.</li>
+<li><font color="#aa0000">In this calculator, mcg is the abbreviation for micrograms.</font></li>
+<li style="list-style-type: none;"><font size="+1">*</font> This calculator uses conventional units (also known as US units 
 and gravimetric units) as the default for inputs. Do not use this calculator if 
 you are using SI units (Système international d'unités); please refer 
-instead to the SI units version of this calculator.
-            </li>
-           </ul>
-          </div>
-          <br/>
-          <br/>
-          <span class="medCalcFontRef">
-           <b>
-            Equations used
-           </b>
-          </span>
-          <br/>
-          <br/>
-          <center>
-           <div id="calc_equation">
-            <table cellpadding="10" cellspacing="0" summary="EBMcalc Table">
-             <tbody>
-              <tr>
-               <td class="medCalcFormuliBox">
-                <span class="medCalcFontFormuli">
-                 FEMg = 100 * (Urine_Mg * Plasma_Cr) / (0.7 * Plasma_Mg * Urine_Cr)
-                </span>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-            <br/>
-            <br/>
-           </div>
-          </center>
-          <div id="calc_tables">
-          </div>
-          <br/>
-          <br/>
-          <div id="calc_refs">
-           <span class="medCalcFontRef">
-            <b>
-             References
-            </b>
-           </span>
-           <ol>
-            <li>
-             <span class="medCalcFontRef">
-              <a href="https://www.ncbi.nlm.nih.gov/pubmed/10668849" style="color: green; text-decoration: none;" target="_blank">
-               Elliott C, Newman N, Madan A. Gentamicin effects on urinary electrolyte  excretion in healthy subjects. Clin Pharmacol Ther 2000; 67:16.
-              </a>
-             </span>
-            </li>
-           </ol>
-          </div>
-         </form>
-        </div>
-        <span class="calculatorVendorId" id="T1678215867">
-        </span>
-       </div>
-       <div id="printDisclaimer">
-        <b>
-         Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.
-        </b>
-        <p>
-         Information on this page may not appear correctly if printed.
-        </p>
-       </div>
-       <div id="disclaimerCalculator">
-        <div class="medCalcFontTwo">
-         <p class="header">
-          Legal Notices and Disclaimer
-         </p>
-         <p>
-          All information contained in and produced by the EBMcalc system is provided
+instead to the SI units version of this calculator.</li>
+</ul>
+</div>
+<br/> <br/>
+<span class="medCalcFontRef"><b>Equations used</b></span>
+<br/> <br/>
+<center>
+<div id="calc_equation">
+<table cellpadding="10" cellspacing="0" summary="EBMcalc Table"><tbody><tr><td class="medCalcFormuliBox"><span class="medCalcFontFormuli">FEMg = 100 * (Urine_Mg * Plasma_Cr) / (0.7 * Plasma_Mg * Urine_Cr)</span></td></tr></tbody></table><br/> <br/>
+</div> </center>
+<div id="calc_tables">
+</div>
+<br/> <br/>
+<div id="calc_refs">
+<span class="medCalcFontRef"><b>References</b></span>
+<ol>
+<li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/10668849" style="color: green; text-decoration: none;" target="_blank">Elliott C, Newman N, Madan A. Gentamicin effects on urinary electrolyte  excretion in healthy subjects. Clin Pharmacol Ther 2000; 67:16.</a></span></li>
+</ol>
+</div>
+</form>
+</div>
+<span class="calculatorVendorId" id="T1678215867">
+</span></div><div id="printDisclaimer">
+<b>Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.</b>
+<p>
+	Information on this page may not appear correctly if printed. </p>
+</div>
+<div id="disclaimerCalculator">
+<div class="medCalcFontTwo">
+<p class="header">Legal Notices and Disclaimer</p>
+<p>
+			All information contained in and produced by the EBMcalc system is provided
 			for educational purposes only. This information should not be used for the diagnosis or treatment
-			of any health problem or disease.
-          <b>
-           THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.
-          </b>
-          <a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">
-           Click here for full notice and disclaimer.
-          </a>
-         </p>
-         <p class="copy">
-          EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC
-         </p>
-        </div>
-       </div>
-       <div id="topicVersionRevision">
-        Topic 16744 Version 11.0
-       </div>
-      </div>
-     </div>
-    </div>
-   </section>
-  </section>
-  <!-- End Main Menu Area -->
-  <!-- Start Search Popup Area -->
-  <!-- End Footer Area -->
-  <!-- Back to top -->
-  <a class="scrolltop" href="#top">
-   <i class="icofont-hand-drawn-up">
-   </i>
-  </a>
-  <!-- End Back to top -->
-  <!-- jQuery Min JS -->
-  <!-- Prpper JS -->
-  <!-- Bootstrap Min JS -->
-  <!-- Classy Nav Min Js -->
-  <!-- Owl Carousel Min Js -->
-  <!-- Magnific Popup JS -->
-  <!-- CounterUp JS -->
-  <!-- Waypoints JS -->
-  <!-- Form Validator Min JS -->
-  <!-- Contact Form Min JS -->
-  <!-- Main JS -->
-  <!-- Global site tag (gtag.js) - Google Analytics -->
- </body>
+			of any health problem or disease. 
+			<b>THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.</b>
+<a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">Click here for full notice and disclaimer.</a>
+</p>
+<p class="copy">EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC</p>
+</div>
+</div><div id="topicVersionRevision">Topic 16744 Version 11.0</div></div>
+</div>
+</div>
+</section><script>
+/* <![CDATA[ */
+
+var lastChar = '';
+
+function log(i){
+return Math.log(i) * Math.LOG10E;
+}
+
+function ln(i){
+return Math.log(i);
+}
+
+function sq(i){
+return i * i;
+}
+
+function sqr(i){
+return Math.sqrt(i);
+}
+
+
+function power(x,y){
+return Math.pow(x,y);
+}
+
+function eTo(x){
+return Math.exp(x);
+}
+
+
+function fixDP(r, dps) {
+if (isNaN(r)) return "NaN";
+var msign = '';
+if (r < 0) msign = '-';
+x = Math.abs(r);
+if (x > Math.pow(10, 21)) return msign + x.toString();
+var m = Math.round(x * Math.pow(10, dps)).toString();
+if (dps == 0) return msign + m;
+while (m.length <= dps) m = "0" + m;
+return msign + m.substring(0, m.length - dps) + "." + m.substring(m.length - dps);
+}
+
+
+function alertNaN(){
+alert('This field is improperly formatted. You may only input the digits 0-9 and a decimal point.');
+doCalc = false;
+clrResults();
+}
+
+function validNumberField(event) {
+var field = event.target;
+
+if(field && field != 'undefined' && field.attributes.type.nodeValue && (field.attributes.type.nodeValue == 'number')) {
+var val = field.value;
+var charCode = event.charCode;
+var key = String.fromCharCode(charCode);
+
+if(charCode == 0 || charCode == 13) {
+  return true;
+}
+
+if(key == ' ') {
+alert('Numeric field cannot contain spaces.');
+  return false;
+}
+
+if(key == '.') { return validDecimalPoint(val, key); }
+if(key == '-') { return validMinus(val, key); }
+
+if(isNaN(parseInt(key))) {
+alertNaN();
+return false;
+}
+
+return validFloat(val, key);
+}
+return true;
+}
+
+function validDecimalPoint(val, key) {
+if(val.length == 0 && lastChar != '.') {
+  lastChar = '.';
+  return true;
+}
+if(val.indexOf('.') >= 0 || lastChar == '.') {
+ alertNaN();
+ return false;
+}
+if(validFloat(val, key)) {
+ lastChar = key;
+ return true;
+}
+lastChar = '';
+return false;
+}
+
+function validMinus(val, key) {
+if(val.length == 0) {
+  return true;
+}
+if(val.length > 1) {
+ alertNaN();
+ return false;
+}
+return validFloat(val, key);
+}
+
+
+function validFloat(val, key) {
+var currentVal = parseFloat(val + key);
+if(isNaN(val + key) || isNaN(currentVal)) {
+alertNaN();
+return false;
+}
+return true;
+}
+
+function formKeyDown(event) {
+var field = event.target;
+
+resetInTime();
+
+if(field && field != 'undefined' && field.attributes.type && field.attributes.type.nodeValue && (field.attributes.type.nodeValue == 'number')) {
+  var val = field.value;
+  var keyCode = event.keyCode;
+  if(keyCode == 8 || keyCode == 127) {
+    // backspace or delete
+    if(lastChar == '.') {
+      lastChar = '';
+    }
+    if(field.value.length == 3 && field.value[0] == '0' && field.value[1] == '.') {
+      // this handles a backspace on an input like ".5", which is saved internally as "0.5"
+      //   otherwise, if you leave the field after the backspace, it retains "0.5" as the value, most likely an iOS bug
+      field.value = ''; 
+    }
+  }
+}
+clrResults();
+}
+
+function clrValue(field) {
+ field.value = '';
+ lastChar = '';
+}
+
+var currenttimeout;
+
+function resetInTime(){
+if (currenttimeout) clearTimeout(currenttimeout);
+currenttimeout = setTimeout('minMaxCheck();', 2000);
+}
+
+
+
+var curelement;
+
+function togCB(thisid){
+thischeckbox = document.getElementById(thisid);
+if (thischeckbox.checked){ thischeckbox.checked = false; }
+else { thischeckbox.checked = true; }
+FractExcMg_fx();
+}
+
+function setRB(thisid){
+document.getElementById(thisid).checked = true;
+FractExcMg_fx();
+}
+
+
+var calctxt = ''; 
+var xmltxt = ''; 
+var xmlresult = '';
+var htmtxt = ''; 
+var postNow = false;
+var printing = false;
+var interptxt = '';
+var interphtm = '';
+var interpxml = '';
+var rbchk = false;
+var inputchktxt = '<br />&nbsp;<br /><b>Important:</b> Inputs must be complete to perform calculation. <br />'
+
+
+function aDelay(atxt, ffield){
+with (document.FractExcMg_form){
+clrResults();
+ffield.value = '';
+doCalc = false;
+setTimeout(function(){ alert(atxt); }, 100);
+document.getElementById('inputchk').innerHTML = inputchktxt;
+
+}}
+
+
+function FractExcMg_fx() {
+
+with(document.FractExcMg_form){
+
+
+doCalc = true;
+param_value = parseFloat(Urine_Mg_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = Urine_Mg_unit.options[Urine_Mg_unit.selectedIndex].value.split('|');
+Urine_Mg = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+param_value = parseFloat(Plasma_Mg_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = Plasma_Mg_unit.options[Plasma_Mg_unit.selectedIndex].value.split('|');
+Plasma_Mg = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+param_value = parseFloat(Urine_Cr_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = Urine_Cr_unit.options[Urine_Cr_unit.selectedIndex].value.split('|');
+Urine_Cr = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+param_value = parseFloat(Plasma_Cr_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = Plasma_Cr_unit.options[Plasma_Cr_unit.selectedIndex].value.split('|');
+Plasma_Cr = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+dp = decpts.options[decpts.selectedIndex].text;
+FEMg =  100 * (Urine_Mg * Plasma_Cr) / (0.7 * Plasma_Mg * Urine_Cr);
+
+unit_parts = FEMg_unit.options[FEMg_unit.selectedIndex].value.split('|');
+if (doCalc) FEMg_param.value = fixDP((FEMg - parseFloat(unit_parts[1])) / parseFloat(unit_parts[0]), dp);
+
+
+
+
+
+}
+
+
+if (doCalc) document.getElementById('inputchk').innerHTML = '';
+else document.getElementById('inputchk').innerHTML = inputchktxt;
+
+
+}
+
+function minMaxCheck(){
+if (printing) return;
+
+
+
+with(document.FractExcMg_form){
+
+if (Urine_Mg_param.value && isNaN(Urine_Mg_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', Urine_Mg_param); }
+if (Urine_Mg_param.value && (Urine_Mg < (0 - 0.00001))) {
+Urine_Mg = 0;
+ aDelay("The minimum value for Urine Mg is 0 mg/dL.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Urine_Mg_param);
+}
+
+if (Urine_Mg_param.value && Urine_Mg > 250) {
+Urine_Mg = 0;
+ aDelay("The maximum value for Urine Mg is 250 mg/dL.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Urine_Mg_param);
+}
+
+if (Plasma_Mg_param.value && isNaN(Plasma_Mg_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', Plasma_Mg_param); }
+if (Plasma_Mg_param.value && (Plasma_Mg < (0 - 0.00001))) {
+Plasma_Mg = 0;
+ aDelay("The minimum value for Plasma Mg is 0 mg/dL.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Plasma_Mg_param);
+}
+
+if (Plasma_Mg_param.value && Plasma_Mg > 60) {
+Plasma_Mg = 0;
+ aDelay("The maximum value for Plasma Mg is 60 mg/dL.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Plasma_Mg_param);
+}
+
+if (Urine_Cr_param.value && isNaN(Urine_Cr_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', Urine_Cr_param); }
+if (Urine_Cr_param.value && (Urine_Cr < (0 - 0.00001))) {
+Urine_Cr = 0;
+ aDelay("The minimum value for Urine Cr is 0 mg/dL.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Urine_Cr_param);
+}
+
+if (Urine_Cr_param.value && Urine_Cr > 2000) {
+Urine_Cr = 0;
+ aDelay("The maximum value for Urine Cr is 2000 mg/dL.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Urine_Cr_param);
+}
+
+if (Plasma_Cr_param.value && isNaN(Plasma_Cr_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', Plasma_Cr_param); }
+if (Plasma_Cr_param.value && (Plasma_Cr < (0 - 0.00001))) {
+Plasma_Cr = 0;
+ aDelay("The minimum value for Plasma Cr is 0 mg/dL.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Plasma_Cr_param);
+}
+
+if (Plasma_Cr_param.value && Plasma_Cr > 20) {
+Plasma_Cr = 0;
+ aDelay("The maximum value for Plasma Cr is 20 mg/dL.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Plasma_Cr_param);
+}
+
+
+
+}
+
+}
+
+function clrResults(){
+
+
+with(document.FractExcMg_form){
+
+FEMg_param.value = '';
+
+
+}
+
+}
+
+var Urine_Mg = null,
+Plasma_Mg = null,
+Urine_Cr = null,
+Plasma_Cr = null,
+FEMg = null,
+param_value = null;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ]]> */
+</script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://medilib.ir/assets/js/jquery.min.js"></script><script src="https://medilib.ir/assets/js/popper.min.js"></script><script src="https://medilib.ir/assets/js/bootstrap.min.js"></script><script src="https://medilib.ir/assets/js/classy-nav.min.js"></script><script src="https://medilib.ir/assets/js/owl.carousel.min.js"></script><script src="https://medilib.ir/assets/js/jquery.magnific-popup.min.js"></script><script src="https://medilib.ir/assets/js/jquery.counterup.min.js"></script><script src="https://medilib.ir/assets/js/waypoints.min.js"></script><script src="https://medilib.ir/assets/js/form-validator.min.js"></script><script src="https://medilib.ir/assets/js/contact-form-script.js"></script><script src="https://medilib.ir/assets/js/main.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WFDJ5JLM3Q"></script><script>
+    window.addEventListener("load", () => {
+
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function (registrations) {
+                //returns installed service workers
+                if (registrations.length) {
+                    for (let registration of registrations) {
+                        if (
+                            registration.active.scriptURL.startsWith("/serviceWorker.js") &&
+                            !registration.active.scriptURL.endsWith("/serviceWorker.js?v=18")
+                        ) {
+                            registration.unregister();
+                        }
+                    }
+                }
+            });
+            navigator.serviceWorker.register('/serviceWorker.js?v=18', {
+                scope: '/'
+            })
+                .then(function (registration) {
+                    console.log('Registration successful, scope is:', registration.scope);
+                })
+                .catch(function (error) {
+                    console.log('Service worker registration failed, error:', error);
+                });
+        }
+    });
+    const promptElement = document.querySelector('.pwaprompt');
+    const footerPromptElement = document.querySelector('#footerPromptElement');
+    const scrollTopElement = document.querySelector('.scrolltop');
+    // const installButton = promptElement.querySelector('.prompt__install');
+    const closeButton = promptElement.querySelector('.prompt__close');
+    let installEvent;
+
+    function setWithExpiry(key, value, seconds) {
+        const now = new Date()
+
+        // `item` is an object which contains the original value
+        // as well as the time when it's supposed to expire
+        const item = {
+            value: value,
+            expiry: now.getTime() + (seconds * 1000),
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+    }
+
+    function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+        // if the item doesn't exist, return null
+        if (!itemStr) {
+            return null
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+        // compare the expiry time of the item with the current time
+        if (now.getTime() > item.expiry) {
+            // If the item is expired, delete the item from storage
+            // and return null
+            localStorage.removeItem(key)
+            return null
+        }
+        return item.value
+    }
+
+    // checks if the localStorage item has been set
+    function getVisited() {
+        return getWithExpiry('install-prompt')
+        // return localStorage.getItem('install-prompt');
+    }
+
+    // sets the localStorage item
+    function setVisited() {
+        fiveDay = 5 * (24 * (60 * 60))
+        setWithExpiry('install-prompt', true, fiveDay)
+        // localStorage.setItem('install-prompt', true);
+    }
+
+    closeButton.addEventListener('click', () => {
+        // set localStorage to true
+        setVisited();
+
+        // hide the prompt banner
+        promptElement.style.display = 'none';
+        scrollTopElement.style.bottom = '30px';
+
+        // installEvent = null;
+    });
+    // Detects if device is on iOS
+    const isIos = () => {
+        const userAgent = window.navigator.userAgent.toLowerCase();
+        return /iphone|ipad|ipod/.test(userAgent);
+    }
+    // Detects if device is in standalone mode
+    const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+
+    // Checks if should display install popup notification:
+    if (isIos() && !isInStandaloneMode()) {
+        if (!getVisited()) {
+            promptElement.style.display = 'block';
+            scrollTopElement.style.bottom = '80px';
+        }
+        footerPromptElement.style.display = 'block';
+    }
+
+
+    // this event will only fire if the user does not have the pwa installed
+    window.addEventListener('beforeinstallprompt', (event) => {
+        event.preventDefault();
+        // if no localStorage is set, first time visitor
+        if (!getVisited()) {
+            // show the prompt banner
+            promptElement.style.display = 'block';
+            scrollTopElement.style.bottom = '80px';
+
+            // store the event for later use
+
+        }
+        footerPromptElement.style.display = 'block';
+        installEvent = event;
+
+    });
+    $(document).on('click', '.prompt__install', function () {
+        promptElement.style.display = 'none';
+        scrollTopElement.style.bottom = '30px';
+
+        if (isIos() && !isInStandaloneMode()) {
+            setVisited();
+            $('#iphoneAddToHomeScreen').modal()
+        } else {
+
+            // trigger the prompt to show to the user
+            installEvent.prompt();
+            // check what choice the user made
+            installEvent.userChoice.then((choice) => {
+                // if the user declined, we don't want to show the button again
+                // set localStorage to true
+                if (choice.outcome !== 'accepted') {
+                    setVisited();
+                }
+
+                installEvent = null;
+            });
+        }
+
+    });
+</script><script>
+
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-WFDJ5JLM3Q');
+</script><script>
+      var topicReferences=[];
+
+      function refrence(id) {
+          var myReference=Object.values(topicReferences)[id];
+          console.log(myReference);
+          $("#pmid").attr("href",myReference['pmid']);
+          if (typeof myReference['description'] !== 'undefined' && myReference['description']!="") {
+            $("#myModalLabel34").html('Description : <p>' + myReference['description'] + "</p>");
+          }
+          if (typeof myReference['authors'] !== 'undefined' && myReference['authors']!="") {
+            $("#referenceAuthors").html('Authors : <p>' + myReference['authors'] + "</p>");
+          }
+          if (typeof myReference['source'] !== 'undefined' && myReference['source']!="") {
+            $("#referenceSource").html('Source : <p>' + myReference['source'] + "</p>");
+          }
+          if (typeof myReference['title'] !== 'undefined' && myReference['title']!="") {
+            $("#referenceTitle").html('Title : <p>' + myReference['title'] + "</p>");
+          }
+          if (typeof myReference['affiliation'] !== 'undefined' && myReference['affiliation']!="") {
+            $("#referenceAffiliation").html('Affiliation : <p>' + myReference['affiliation'] + "</p>");
+          }
+      }
+  </script><script>
+
+      var screenHeight = screen.height;
+
+      if (screenHeight > 700) {
+        // $document.getElementById("Uptodate_image").style.width = "100% !important;";
+        // $('.Uptodate_image').css('width', '100% !important;');
+        console.log("more");
+      }else{
+        console.log(screenHeight);
+      }
+    $(document).scroll(function()  {
+      var y = $(this).scrollTop();
+      if (y > 100) {
+        $('.goback').fadeIn();
+        $('.buyPackage').fadeIn();
+        // alert(document.getElementById('main_menu').style.zIndex);
+        document.getElementById("uptodate-area").style.padding = "0px 0 0 0";
+        document.getElementById('main_menu').style.zIndex=1;
+         document.getElementById('main_menu').style.display="none";
+        document.getElementById('navbar_menu').style.marginTop="70px"
+        document.getElementById('uptodate-area').style.marginTop="0px"
+        document.getElementById('uptodate-area').style.zIndex=999;
+        console.log('down');
+      } else {
+        $('.goback').fadeOut();
+        $('.buyPackage').fadeOut();
+        document.getElementById("uptodate-area").style.padding = "0px 0 0 0";
+        document.getElementById('navbar_menu').style.marginTop="0px"
+        document.getElementById('main_menu').style.display="";
+        document.getElementById('uptodate-area').style.zIndex=0;
+        console.log('up');
+      }
+    });
+    function goBack() {
+      window.history.back();
+    }
+    function buyPackage() {
+      window.open("https://medilib.ir/userPanel/package/uptodate/index",'_blank');
+    }
+  </script></body>
 </html>

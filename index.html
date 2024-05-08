@@ -8,6 +8,7 @@
   <title> UpToDate-2024 by Z</title>
   <link href="d/css/2.css" rel="stylesheet"/>
   <script src="https://cdn.jsdelivr.net/npm/fuzzysort@2.0.4/fuzzysort.min.js"></script>
+  <script src="/d/js/search.js"></script>
 </head>
 <body>
   <footer class="uptodate" id="uptodate-area" >
@@ -24,7 +25,7 @@
                           </a>
                     </div>        
                       <div class="uptodate3" >
-                        <p> May 2024 by Z</p> 
+                        <p> May 2024</p> 
                       </div>  
 
               </div>   
@@ -42,41 +43,6 @@
                   <div class = "search" id="results"></div>
   </div>
 </div>
-<script type="text/javascript">
-  function findRelatedFiles(event) {
-    event.preventDefault();
-    var input = document.getElementById('inputSearch').value;
-    input = input.toLowerCase().replace(/[^a-z]/g, '');
-  
-    fetch('d/trans.json')
-      .then(response => response.json())
-      .then(jsonData => {
-        var targets = Object.keys(jsonData).map(key => ({file: jsonData[key], fileName: key}));
-        var results = fuzzysort.go(input, targets, {key: 'file'});
-  
-        var resultsDiv = document.getElementById('results');
-        resultsDiv.innerHTML = '';
-        results.slice(0, 15).forEach((result, index) => { // Chỉ lấy 15 kết quả đầu tiên
-          var div = document.createElement('div');
-          div.classList.add('selections');
-          div.style.animationDelay = `${index * 0.1}s`;
-          var link = document.createElement('a');
-          link.href = '/z/d/html/' + result.obj.fileName;
-          link.textContent = result.obj.file;
-          div.appendChild(link);
-          resultsDiv.appendChild(div);
-        });
-      })
-      .catch(error => console.error('Có lỗi xảy ra:', error));
-  }
-  
-  document.getElementById('inputSearch').addEventListener('keypress', function(event) {
-    if (event.key === 'Enter') {
-      findRelatedFiles(event);
-    }
-  });
-  
-
-</script>
+<script src="/z/d/js/search.js"></script>
 </body>
 </html>

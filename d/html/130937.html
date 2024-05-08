@@ -1,685 +1,743 @@
 <!DOCTYPE html>
+
 <html lang="fa">
- <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
- <head>
-  <title>
-   Calculator: Estimated energy requirement (EER) for males, birth to 18 years (revised 2023)
-  </title>
-  <link href="d/css/1.css" rel="stylesheet"/>
- </head>
- <body>
-  <!-- Start Main Menu Area -->
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <div class="container">
-   <div class="row">
-   </div>
-  </div>
-  <section class="teacher-area ptb-10">
-   <div class="container">
-   </div>
-   <section class="course-details-area ptb-60">
-    <div class="container">
-     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-      <h1 style="text-align:center">
-       Calculator: Estimated energy requirement (EER) for males, birth to 18 years (revised 2023)
-      </h1>
-      <div class="utdArticleSection" id="topicContentCalculator">
-       <div id="topicText">
-        <div id="mc3k">
-         <form action="" id="EER_Males_2023_form" name="EER_Males_2023_form" onkeydown="formKeyDown(event);" onkeypress="resetInTime(); return validNumberField(event);" onkeyup="EER_Males_2023_fx();" onreset="document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
-          <table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
-           <tbody>
-            <tr>
-             <td bgcolor="#eeeeee" width="1%">
-              <br/>
-             </td>
-             <td align="left" bgcolor="#eeeeee">
-              <span class="medCalcFontTitleBox">
-               Calculator: Estimated energy requirement (EER) for males, birth to 18 years (revised 2023)
-              </span>
-             </td>
-            </tr>
-           </tbody>
-          </table>
-          <br/>
-          <br/>
-          <div id="calc_main">
-           <center>
-            <span class="medCalcFontIO">
-             Input
-            </span>
-            <br/>
-            <br/>
-            <table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
-             <tbody>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 Age
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value Age" name="Age_param" onblur="EER_Males_2023_fx(); minMaxCheck();" onchange="EER_Males_2023_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <select aria-label="Use this pulldown selector to set the unit of measure for the value Age" class="medCalcFontSelect" name="Age_unit" onchange="EER_Males_2023_fx(); minMaxCheck();" style="width:115px;">
-                 <option value="0.0833333333333333|0|mo">
-                  mo
-                 </option>
-                 <option selected="selected" value="1|0|yr">
-                  yr
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 Weight
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value Weight" name="Weight_param" onblur="EER_Males_2023_fx(); minMaxCheck();" onchange="EER_Males_2023_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <select aria-label="Use this pulldown selector to set the unit of measure for the value Weight" class="medCalcFontSelect" name="Weight_unit" onchange="EER_Males_2023_fx(); minMaxCheck();" style="width:115px;">
-                 <option selected="selected" value="1|0|kg">
-                  kg
-                 </option>
-                 <option value="0.45359237|0|lb">
-                  lb
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 Height
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value Height" name="Height_param" onblur="EER_Males_2023_fx(); minMaxCheck();" onchange="EER_Males_2023_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <select aria-label="Use this pulldown selector to set the unit of measure for the value Height" class="medCalcFontSelect" name="Height_unit" onchange="EER_Males_2023_fx(); minMaxCheck();" style="width:115px;">
-                 <option selected="selected" value="1|0|cm">
-                  cm
-                 </option>
-                 <option value="2.54|0|in">
-                  in
-                 </option>
-                 <option value="100|0|m">
-                  m
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" valign="top">
-                <span class="medCalcFontOneBold">
-                 Physical activity level*
-                </span>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Physical activity level*. The variable option is Not applicable (if patient is under 3 years of age)." id="togel1" name="PA_radio" onclick="EER_Males_2023_fx();" type="radio" value="Not applicable (if patient is under 3 years of age)|0"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel1');">
-                 Not applicable (if patient is under 3 years of age)
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="left">
-                <br/>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Physical activity level*. The variable option is Inactive." id="togel2" name="PA_radio" onclick="EER_Males_2023_fx();" type="radio" value="Inactive|1"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel2');">
-                 Inactive
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="left">
-                <br/>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Physical activity level*. The variable option is Low active." id="togel3" name="PA_radio" onclick="EER_Males_2023_fx();" type="radio" value="Low active|2"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel3');">
-                 Low active
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="left">
-                <br/>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Physical activity level*. The variable option is Active." id="togel4" name="PA_radio" onclick="EER_Males_2023_fx();" type="radio" value="Active|3"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel4');">
-                 Active
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="left">
-                <br/>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Physical activity level*. The variable option is Very active." id="togel5" name="PA_radio" onclick="EER_Males_2023_fx();" type="radio" value="Very active|4"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel5');">
-                 Very active
-                </span>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-           </center>
-           <br/>
-           <br/>
-           <center>
-            <span class="medCalcFontIO">
-             Results
-             <span class="medCalcFontOne" id="inputchk">
-              <br/>
-              <br/>
-              <b>
-               Important:
-              </b>
-              Inputs must be complete to perform calculation.
-              <br/>
-             </span>
-            </span>
-            <br/>
-            <br/>
-            <table cellpadding="4" class="medCalcResultBox" summary="EBMcalc Table">
-             <tbody>
-              <tr>
-               <td colspan="3">
-                <br/>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontResultParam">
-                 Estimated energy requirement (EER)
-                </span>
-               </td>
-               <td nowrap="nowrap" valign="top">
-                <input aria-label="This output box will display the calculated value Estimated energy requirement (EER)" aria-readonly="true" name="ptEER_param" size="6" type="text"/>
-               </td>
-               <td align="left" valign="top">
-                <span class="medCalcFontResultParam">
-                 <span style="white-space: nowrap;">
-                  <span class="medCalcFontResultParam">
-                   kcal/day
-                  </span>
-                 </span>
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td colspan="3">
-                <br/>
-               </td>
-              </tr>
-              <tr>
-               <td align="center" colspan="3">
-                <span class="medCalcFontResultParam">
-                 Decimal precision
-                </span>
-                <select aria-label="Use this pulldown selector to set the decimal precision of calculations" class="medCalcFontSelect" name="decpts" onchange="EER_Males_2023_fx();">
-                 <option>
-                  0
-                 </option>
-                 <option selected="selected">
-                  1
-                 </option>
-                 <option>
-                  2
-                 </option>
-                 <option>
-                  3
-                 </option>
-                </select>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-           </center>
-           <br/>
-           <br/>
-           <div id="calc_buttons">
-            <center>
-             <span class="medCalcFontOne">
-              <input name="resetbutton" type="reset" value="Reset form"/>
-             </span>
-            </center>
-           </div>
-          </div>
-          <div id="pretextrefs">
-          </div>
-          <br/>
-          <br/>
-          <div id="calc_hints">
-           <span class="medCalcFontOne">
-           </span>
-          </div>
-          <div id="calc_tables_above_notes">
-          </div>
-          <br/>
-          <br/>
-          <div id="calc_notes">
-           <span class="medCalcFontRef">
-            <b>
-             Notes
-            </b>
-           </span>
-           <ul class="medCalcFontOne">
-            <li class="parentNote">
-             *Physical activity (PA) level descriptions:
-             <ul class="childNoteList">
-              <li class="childNote">
-               <b>
-                Inactive
-               </b>
-               – This category reflects a level of total energy expenditure (TEE) covering basal metabolism, the thermic effect of food, and a minimal level of physical activity required for independent living.
-              </li>
-              <li class="childNote">
-               <b>
-                Low active
-               </b>
-               – This category corresponds to a level of physical activity beyond the minimal, involving more ambulation and some occupational and recreational activities.
-              </li>
-              <li class="childNote">
-               <b>
-                Active
-               </b>
-               – This category involves even more ambulation and occupational or recreational activities. For a five-year-old child, this category would be reached by walking at 2.5 miles/hour for approximately 90 minutes daily. For a 16-year-old, this category would be reached by walking for approximately 120 minutes daily.
-              </li>
-              <li class="childNote">
-               <b>
-                Very active
-               </b>
-               – This category reflects not only the demands of daily living but also vigorous exertion in occupational or recreational activities. For a five-year-old child, this category would be reached by walking for approximately 150 minutes daily. For a 16-year-old, this category would be reached by walking for approximately 210 minutes daily.
-              </li>
-              <li class="childNote">
-               Rather than prolonged walking, the active or very active categories are usually reached by participation in moderate-to-vigorous activities (sports or very active play for younger children), in addition to moderate time spent walking and running throughout the day.
-              </li>
-             </ul>
-            </li>
-            <li>
-             The
-             <b>
-              EER
-             </b>
-             equation was developed by the National Academy of Medicine and is based on measurements by the doubly labeled water method.
-             <sup>
-              [1]
-             </sup>
-            </li>
-            <li>
-             The accuracy of these calculations can be assessed by viewing the National Academy of Medicine resource.
-             <sup>
-              [1]
-             </sup>
-            </li>
-            <li>
-             This calculation includes a factor for the energy cost of growth (
-             <b>
-              ECG
-             </b>
-             ). The main component of
-             <b>
-              ECG
-             </b>
-             is the energy deposited in newly synthesized tissues and is highest in infancy and adolescence, as noted under
-             <b>
-              Calculation details and variables
-             </b>
-             below.
-            </li>
-            <li>
-             <b>
-              TEE
-             </b>
-             (total energy expenditure) is equal to the
-             <b>
-              EER
-             </b>
-             minus the energy deposited in newly synthesized tissues.
-            </li>
-           </ul>
-          </div>
-          <br/>
-          <br/>
-          <span class="medCalcFontRef">
-           <b>
-            Equations used
-           </b>
-          </span>
-          <br/>
-          <br/>
-          <center>
-           <div id="calc_equation">
-            <table cellpadding="10" cellspacing="0" summary="EBMcalc Table">
-             <tbody>
-              <tr>
-               <td class="medCalcFormuliBox">
-                <span class="medCalcFontFormuli">
-                 0 to 2.99 years:
-                 <b>
-                  EER
-                 </b>
-                 = -716.45 -
-                 <b>
-                  Age
-                 </b>
-                 + (17.82 *
-                 <b>
-                  Height
-                 </b>
-                 ) + (15.06 *
-                 <b>
-                  Weight
-                 </b>
-                 ) +
-                 <b>
-                  ECG
-                 </b>
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td class="medCalcFormuliBox">
-                <span class="medCalcFontFormuli">
-                 3 to 18.99 years, inactive:
-                 <b>
-                  EER
-                 </b>
-                 = -447.51 + (3.68 *
-                 <b>
-                  Age
-                 </b>
-                 ) + (13.01 *
-                 <b>
-                  Height
-                 </b>
-                 ) + (13.15 *
-                 <b>
-                  Weight
-                 </b>
-                 ) +
-                 <b>
-                  ECG
-                 </b>
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td class="medCalcFormuliBox">
-                <span class="medCalcFontFormuli">
-                 3 to 18.99 years, low active:
-                 <b>
-                  EER
-                 </b>
-                 = 19.12 + (3.68 *
-                 <b>
-                  Age
-                 </b>
-                 ) + (8.62 *
-                 <b>
-                  Height
-                 </b>
-                 ) + (20.28 *
-                 <b>
-                  Weight
-                 </b>
-                 ) +
-                 <b>
-                  ECG
-                 </b>
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td class="medCalcFormuliBox">
-                <span class="medCalcFontFormuli">
-                 3 to 18.99 years, active:
-                 <b>
-                  EER
-                 </b>
-                 = -388.19 + (3.68 *
-                 <b>
-                  Age
-                 </b>
-                 ) + (12.66 *
-                 <b>
-                  Height
-                 </b>
-                 ) + (20.46 *
-                 <b>
-                  Weight
-                 </b>
-                 ) +
-                 <b>
-                  ECG
-                 </b>
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td class="medCalcFormuliBox">
-                <span class="medCalcFontFormuli">
-                 3 to 18.99 years, very active:
-                 <b>
-                  EER
-                 </b>
-                 = -671.75 + (3.68 *
-                 <b>
-                  Age
-                 </b>
-                 ) + (15.38 *
-                 <b>
-                  Height
-                 </b>
-                 ) + (23.25 *
-                 <b>
-                  Weight
-                 </b>
-                 ) +
-                 <b>
-                  ECG
-                 </b>
-                </span>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-            <br/>
-            <br/>
-           </div>
-          </center>
-          <br/>
-          <br/>
-          <div id="calc_details_and_variables">
-           <span class="medCalcFontRef">
-            <b>
-             Calculation details and variables
-            </b>
-           </span>
-           <ul class="medCalcFontOne">
-            <li>
-             <b>
-              ECG
-             </b>
-             is assigned values by this ordered logic:
-             <ul>
-              <li>
-               <span style="white-space: nowrap;">
-                If
-                <b>
-                 Age
-                </b>
-                &lt;0.25 yr,
-                <b>
-                 ECG
-                </b>
-                = 200
-               </span>
-              </li>
-              <li>
-               <span style="white-space: nowrap;">
-                Else if
-                <b>
-                 Age
-                </b>
-                &lt;0.5 yr,
-                <b>
-                 ECG
-                </b>
-                = 50
-               </span>
-              </li>
-              <li>
-               <span style="white-space: nowrap;">
-                Else if
-                <b>
-                 Age
-                </b>
-                &lt;4 yr,
-                <b>
-                 ECG
-                </b>
-                = 20
-               </span>
-              </li>
-              <li>
-               <span style="white-space: nowrap;">
-                Else if
-                <b>
-                 Age
-                </b>
-                &lt;9 yr,
-                <b>
-                 ECG
-                </b>
-                = 15
-               </span>
-              </li>
-              <li>
-               <span style="white-space: nowrap;">
-                Else if
-                <b>
-                 Age
-                </b>
-                &lt;14 yr,
-                <b>
-                 ECG
-                </b>
-                = 25
-               </span>
-              </li>
-              <li>
-               <span style="white-space: nowrap;">
-                Else
-                <b>
-                 ECG
-                </b>
-                = 20.
-               </span>
-              </li>
-             </ul>
-            </li>
-           </ul>
-          </div>
-          <div id="calc_tables">
-          </div>
-          <br/>
-          <br/>
-          <div id="calc_refs">
-           <span class="medCalcFontRef">
-            <b>
-             References
-            </b>
-           </span>
-           <ol>
-            <li>
-             <span class="medCalcFontRef">
-              National Academies of Sciences, Engineering, and Medicine. 2023. Dietary Reference Intakes for Energy. Washington, DC:  The National Academies Press,
-              <a href="https://nap.nationalacademies.org/catalog/26818/dietary-reference-intakes-for-energy" style="color: green; text-decoration: none;" target="_blank">
-               https://nap.nationalacademies.org/catalog/26818/dietary-reference-intakes-for-energy
-              </a>
-              (Accessed on October 25, 2023).
-             </span>
-            </li>
-           </ol>
-          </div>
-         </form>
-        </div>
-        <span class="calculatorVendorId" id="T1701893785">
-        </span>
-       </div>
-       <div id="printDisclaimer">
-        <b>
-         Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.
-        </b>
-        <p>
-         Information on this page may not appear correctly if printed.
-        </p>
-       </div>
-       <div id="disclaimerCalculator">
-        <div class="medCalcFontTwo">
-         <p class="header">
-          Legal Notices and Disclaimer
-         </p>
-         <p>
-          All information contained in and produced by the EBMcalc system is provided
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Calculator: Estimated energy requirement (EER) for males, birth to 18 years (revised 2023)</title></head>
+<body><section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Calculator: Estimated energy requirement (EER) for males, birth to 18 years (revised 2023)</h1>
+<div class="utdArticleSection" id="topicContentCalculator"><div id="topicText">
+<div id="mc3k">
+<form action="" id="EER_Males_2023_form" name="EER_Males_2023_form" onkeydown="formKeyDown(event);" onkeypress="resetInTime(); return validNumberField(event);" onkeyup="EER_Males_2023_fx();" onreset="document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
+<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
+<td align="left" bgcolor="#eeeeee">
+<span class="medCalcFontTitleBox">
+
+ 
+Calculator: Estimated energy requirement (EER) for males, birth to 18 years (revised 2023)
+</span></td></tr></tbody></table><br/> <br/>
+<div id="calc_main">
+<center>
+<span class="medCalcFontIO">
+Input
+</span>
+<br/> <br/>
+<table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
+<tbody><tr><td align="right" width="42%"><span class="medCalcFontOneBold">Age</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value Age" name="Age_param" onblur="EER_Males_2023_fx(); minMaxCheck();" onchange="EER_Males_2023_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value Age" class="medCalcFontSelect" name="Age_unit" onchange="EER_Males_2023_fx(); minMaxCheck();" style="width:115px;">
+<option value="0.0833333333333333|0|mo">mo</option>
+<option selected="selected" value="1|0|yr">yr</option>
+</select></td></tr>
+<tr><td align="right" width="42%"><span class="medCalcFontOneBold">Weight</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value Weight" name="Weight_param" onblur="EER_Males_2023_fx(); minMaxCheck();" onchange="EER_Males_2023_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value Weight" class="medCalcFontSelect" name="Weight_unit" onchange="EER_Males_2023_fx(); minMaxCheck();" style="width:115px;">
+<option selected="selected" value="1|0|kg">kg</option>
+<option value="0.45359237|0|lb">lb</option>
+</select></td></tr>
+<tr><td align="right" width="42%"><span class="medCalcFontOneBold">Height</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value Height" name="Height_param" onblur="EER_Males_2023_fx(); minMaxCheck();" onchange="EER_Males_2023_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value Height" class="medCalcFontSelect" name="Height_unit" onchange="EER_Males_2023_fx(); minMaxCheck();" style="width:115px;">
+<option selected="selected" value="1|0|cm">cm</option>
+<option value="2.54|0|in">in</option>
+<option value="100|0|m">m</option>
+</select></td></tr>
+<tr><td align="right" valign="top"><span class="medCalcFontOneBold">Physical activity level*</span></td>
+<td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Physical activity level*. The variable option is Not applicable (if patient is under 3 years of age)." id="togel1" name="PA_radio" onclick="EER_Males_2023_fx();" type="radio" value="Not applicable (if patient is under 3 years of age)|0"/><span class="medCalcFontOneClick" onclick="setRB('togel1');"> Not applicable (if patient is under 3 years of age)</span></td></tr>
+<tr><td align="left"><br/></td><td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Physical activity level*. The variable option is Inactive." id="togel2" name="PA_radio" onclick="EER_Males_2023_fx();" type="radio" value="Inactive|1"/><span class="medCalcFontOneClick" onclick="setRB('togel2');"> Inactive</span></td></tr>
+<tr><td align="left"><br/></td><td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Physical activity level*. The variable option is Low active." id="togel3" name="PA_radio" onclick="EER_Males_2023_fx();" type="radio" value="Low active|2"/><span class="medCalcFontOneClick" onclick="setRB('togel3');"> Low active</span></td></tr>
+<tr><td align="left"><br/></td><td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Physical activity level*. The variable option is Active." id="togel4" name="PA_radio" onclick="EER_Males_2023_fx();" type="radio" value="Active|3"/><span class="medCalcFontOneClick" onclick="setRB('togel4');"> Active</span></td></tr>
+<tr><td align="left"><br/></td><td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Physical activity level*. The variable option is Very active." id="togel5" name="PA_radio" onclick="EER_Males_2023_fx();" type="radio" value="Very active|4"/><span class="medCalcFontOneClick" onclick="setRB('togel5');"> Very active</span></td></tr>
+</tbody></table>
+</center>
+<br/> <br/><center><span class="medCalcFontIO">Results<span class="medCalcFontOne" id="inputchk"><br/> <br/><b>Important:</b> Inputs must be complete to perform calculation. <br/></span></span>
+<br/> <br/>
+<table cellpadding="4" class="medCalcResultBox" summary="EBMcalc Table">
+<tbody><tr><td colspan="3"> <br/></td></tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">Estimated energy requirement (EER)</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value Estimated energy requirement (EER)" aria-readonly="true" name="ptEER_param" size="6" type="text"/></td>
+<td align="left" valign="top"><span class="medCalcFontResultParam">
+<span style="white-space: nowrap;"><span class="medCalcFontResultParam"> kcal/day</span>
+</span>
+</span></td>
+</tr>
+<tr><td colspan="3"> <br/></td></tr>
+<tr><td align="center" colspan="3"><span class="medCalcFontResultParam">Decimal precision  </span>
+<select aria-label="Use this pulldown selector to set the decimal precision of calculations" class="medCalcFontSelect" name="decpts" onchange="EER_Males_2023_fx();">
+<option>0</option>
+<option selected="selected">1</option>
+<option>2</option>
+<option>3</option>
+</select></td></tr>
+</tbody></table>
+</center><br/> <br/>
+<div id="calc_buttons">
+<center>
+<span class="medCalcFontOne">
+<input name="resetbutton" type="reset" value="Reset form"/>
+</span>
+</center>
+</div>
+</div><div id="pretextrefs">
+ 
+</div>
+<br/> <br/>
+<div id="calc_hints">
+<span class="medCalcFontOne">
+</span>
+</div>
+<div id="calc_tables_above_notes">
+</div>
+<br/> <br/>
+<div id="calc_notes">
+<span class="medCalcFontRef"><b>Notes</b></span>
+<ul class="medCalcFontOne">
+<li class="parentNote">*Physical activity (PA) level descriptions:
+<ul class="childNoteList">
+<li class="childNote"> <b>Inactive</b> – This category reflects a level of total energy expenditure (TEE) covering basal metabolism, the thermic effect of food, and a minimal level of physical activity required for independent living.</li>
+<li class="childNote"> <b>Low active</b> – This category corresponds to a level of physical activity beyond the minimal, involving more ambulation and some occupational and recreational activities.</li>
+<li class="childNote"> <b>Active</b> – This category involves even more ambulation and occupational or recreational activities. For a five-year-old child, this category would be reached by walking at 2.5 miles/hour for approximately 90 minutes daily. For a 16-year-old, this category would be reached by walking for approximately 120 minutes daily.</li>
+<li class="childNote"> <b>Very active</b> – This category reflects not only the demands of daily living but also vigorous exertion in occupational or recreational activities. For a five-year-old child, this category would be reached by walking for approximately 150 minutes daily. For a 16-year-old, this category would be reached by walking for approximately 210 minutes daily.</li>
+<li class="childNote"> Rather than prolonged walking, the active or very active categories are usually reached by participation in moderate-to-vigorous activities (sports or very active play for younger children), in addition to moderate time spent walking and running throughout the day.</li>
+</ul></li>
+<li>The <b>EER</b> equation was developed by the National Academy of Medicine and is based on measurements by the doubly labeled water method.<sup>[1]</sup></li>
+<li>The accuracy of these calculations can be assessed by viewing the National Academy of Medicine resource.<sup>[1]</sup></li>
+<li>This calculation includes a factor for the energy cost of growth (<b>ECG</b>). The main component of <b>ECG</b> is the energy deposited in newly synthesized tissues and is highest in infancy and adolescence, as noted under <b>Calculation details and variables</b> below.</li>
+<li><b>TEE</b> (total energy expenditure) is equal to the <b>EER</b> minus the energy deposited in newly synthesized tissues.</li>
+</ul>
+</div>
+<br/> <br/>
+<span class="medCalcFontRef"><b>Equations used</b></span>
+<br/> <br/>
+<center>
+<div id="calc_equation">
+<table cellpadding="10" cellspacing="0" summary="EBMcalc Table"><tbody><tr><td class="medCalcFormuliBox"><span class="medCalcFontFormuli">0 to 2.99 years: <b>EER</b> = -716.45 - <b>Age</b> + (17.82 * <b>Height</b>) + (15.06 * <b>Weight</b>) + <b>ECG</b></span></td></tr><tr><td class="medCalcFormuliBox"><span class="medCalcFontFormuli">3 to 18.99 years, inactive:  <b>EER</b> = -447.51 + (3.68 * <b>Age</b>) + (13.01 * <b>Height</b>) + (13.15 * <b>Weight</b>) + <b>ECG</b></span></td></tr><tr><td class="medCalcFormuliBox"><span class="medCalcFontFormuli">3 to 18.99 years, low active: <b>EER</b> = 19.12 + (3.68 * <b>Age</b>) + (8.62 * <b>Height</b>) + (20.28 * <b>Weight</b>) + <b>ECG</b></span></td></tr><tr><td class="medCalcFormuliBox"><span class="medCalcFontFormuli">3 to 18.99 years, active:  <b>EER</b> = -388.19 + (3.68 * <b>Age</b>) + (12.66 * <b>Height</b>) + (20.46 * <b>Weight</b>) + <b>ECG</b></span></td></tr><tr><td class="medCalcFormuliBox"><span class="medCalcFontFormuli">3 to 18.99 years, very active: <b>EER</b> = -671.75 + (3.68 * <b>Age</b>) + (15.38 * <b>Height</b>) + (23.25 * <b>Weight</b>) + <b>ECG</b></span></td></tr></tbody></table><br/> <br/>
+</div> </center>
+<br/> <br/>
+<div id="calc_details_and_variables">
+<span class="medCalcFontRef"><b>Calculation details and variables</b></span>
+<ul class="medCalcFontOne">
+<li><b>ECG</b> is assigned values by this ordered logic: <ul><li><span style="white-space: nowrap;">If <b>Age</b> &lt;0.25 yr, <b>ECG</b> = 200</span></li><li><span style="white-space: nowrap;">Else if <b>Age</b> &lt;0.5 yr, <b>ECG</b> = 50</span></li><li><span style="white-space: nowrap;">Else if <b>Age</b> &lt;4 yr, <b>ECG</b> = 20</span></li><li><span style="white-space: nowrap;">Else if <b>Age</b> &lt;9 yr, <b>ECG</b> = 15</span></li><li><span style="white-space: nowrap;">Else if <b>Age</b> &lt;14 yr, <b>ECG</b> = 25</span></li><li><span style="white-space: nowrap;">Else <b>ECG</b> = 20.</span></li></ul></li>
+</ul>
+</div>
+<div id="calc_tables">
+</div>
+<br/> <br/>
+<div id="calc_refs">
+<span class="medCalcFontRef"><b>References</b></span>
+<ol>
+<li><span class="medCalcFontRef">National Academies of Sciences, Engineering, and Medicine. 2023. Dietary Reference Intakes for Energy. Washington, DC:  The National Academies Press, <a href="https://nap.nationalacademies.org/catalog/26818/dietary-reference-intakes-for-energy" style="color: green; text-decoration: none;" target="_blank"> https://nap.nationalacademies.org/catalog/26818/dietary-reference-intakes-for-energy</a> (Accessed on October 25, 2023).</span></li>
+</ol>
+</div>
+</form>
+</div>
+<span class="calculatorVendorId" id="T1701893785">
+</span></div><div id="printDisclaimer">
+<b>Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.</b>
+<p>
+	Information on this page may not appear correctly if printed. </p>
+</div>
+<div id="disclaimerCalculator">
+<div class="medCalcFontTwo">
+<p class="header">Legal Notices and Disclaimer</p>
+<p>
+			All information contained in and produced by the EBMcalc system is provided
 			for educational purposes only. This information should not be used for the diagnosis or treatment
-			of any health problem or disease.
-          <b>
-           THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.
-          </b>
-          <a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">
-           Click here for full notice and disclaimer.
-          </a>
-         </p>
-         <p class="copy">
-          EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC
-         </p>
-        </div>
-       </div>
-       <div id="topicVersionRevision">
-        Topic 130937 Version 8.0
-       </div>
-      </div>
-     </div>
-    </div>
-   </section>
-  </section>
-  <!-- End Main Menu Area -->
-  <!-- Start Search Popup Area -->
-  <!-- End Footer Area -->
-  <!-- Back to top -->
-  <a class="scrolltop" href="#top">
-   <i class="icofont-hand-drawn-up">
-   </i>
-  </a>
-  <!-- End Back to top -->
-  <!-- jQuery Min JS -->
-  <!-- Prpper JS -->
-  <!-- Bootstrap Min JS -->
-  <!-- Classy Nav Min Js -->
-  <!-- Owl Carousel Min Js -->
-  <!-- Magnific Popup JS -->
-  <!-- CounterUp JS -->
-  <!-- Waypoints JS -->
-  <!-- Form Validator Min JS -->
-  <!-- Contact Form Min JS -->
-  <!-- Main JS -->
-  <!-- Global site tag (gtag.js) - Google Analytics -->
- </body>
+			of any health problem or disease. 
+			<b>THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.</b>
+<a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">Click here for full notice and disclaimer.</a>
+</p>
+<p class="copy">EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC</p>
+</div>
+</div><div id="topicVersionRevision">Topic 130937 Version 8.0</div></div>
+</div>
+</div>
+</section><script>
+/* <![CDATA[ */
+
+var lastChar = '';
+
+function log(i){
+return Math.log(i) * Math.LOG10E;
+}
+
+function ln(i){
+return Math.log(i);
+}
+
+function sq(i){
+return i * i;
+}
+
+function sqr(i){
+return Math.sqrt(i);
+}
+
+
+function power(x,y){
+return Math.pow(x,y);
+}
+
+function eTo(x){
+return Math.exp(x);
+}
+
+function fixDP(r, dps) {
+if (isNaN(r)) return "NaN";
+var msign = '';
+var mfin = '';
+if (r < 0) msign = '-';
+x = Math.abs(r);
+if (x > Math.pow(10, 21)) return msign + x.toString();
+var m = Math.round(x * Math.pow(10, dps)).toString();
+if (dps == 0) return msign + m;
+while (m.length <= dps) m = "0" + m;
+mfin = msign + m.substring(0, m.length - dps) + "." + m.substring(m.length - dps);
+if (dps == 1) return mfin.replace('.0', '');
+if (dps == 2) return mfin.replace('.00', '');
+if (dps == 3) return mfin.replace('.000', '');
+if (dps == 4) return mfin.replace('.0000', '');
+return mfin;
+}
+
+function alertNaN(){
+alert('This field is improperly formatted. You may only input the digits 0-9 and a decimal point.');
+doCalc = false;
+clrResults();
+}
+
+function validNumberField(event) {
+var field = event.target;
+
+if(field && field != 'undefined' && field.attributes.type.nodeValue && (field.attributes.type.nodeValue == 'number')) {
+var val = field.value;
+var charCode = event.charCode;
+var key = String.fromCharCode(charCode);
+
+if(charCode == 0 || charCode == 13) {
+  return true;
+}
+
+if(key == ' ') {
+alert('Numeric field cannot contain spaces.');
+  return false;
+}
+
+if(key == '.') { return validDecimalPoint(val, key); }
+if(key == '-') { return validMinus(val, key); }
+
+if(isNaN(parseInt(key))) {
+alertNaN();
+return false;
+}
+
+return validFloat(val, key);
+}
+return true;
+}
+
+function validDecimalPoint(val, key) {
+if(val.length == 0 && lastChar != '.') {
+  lastChar = '.';
+  return true;
+}
+if(val.indexOf('.') >= 0 || lastChar == '.') {
+ alertNaN();
+ return false;
+}
+if(validFloat(val, key)) {
+ lastChar = key;
+ return true;
+}
+lastChar = '';
+return false;
+}
+
+function validMinus(val, key) {
+if(val.length == 0) {
+  return true;
+}
+if(val.length > 1) {
+ alertNaN();
+ return false;
+}
+return validFloat(val, key);
+}
+
+
+function validFloat(val, key) {
+var currentVal = parseFloat(val + key);
+if(isNaN(val + key) || isNaN(currentVal)) {
+alertNaN();
+return false;
+}
+return true;
+}
+
+function formKeyDown(event) {
+var field = event.target;
+
+resetInTime();
+
+if(field && field != 'undefined' && field.attributes.type && field.attributes.type.nodeValue && (field.attributes.type.nodeValue == 'number')) {
+  var val = field.value;
+  var keyCode = event.keyCode;
+  if(keyCode == 8 || keyCode == 127) {
+    // backspace or delete
+    if(lastChar == '.') {
+      lastChar = '';
+    }
+    if(field.value.length == 3 && field.value[0] == '0' && field.value[1] == '.') {
+      // this handles a backspace on an input like ".5", which is saved internally as "0.5"
+      //   otherwise, if you leave the field after the backspace, it retains "0.5" as the value, most likely an iOS bug
+      field.value = ''; 
+    }
+  }
+}
+clrResults();
+}
+
+function clrValue(field) {
+ field.value = '';
+ lastChar = '';
+}
+
+var currenttimeout;
+
+function resetInTime(){
+if (currenttimeout) clearTimeout(currenttimeout);
+currenttimeout = setTimeout('minMaxCheck();', 2000);
+}
+
+
+
+var curelement;
+
+function togCB(thisid){
+thischeckbox = document.getElementById(thisid);
+if (thischeckbox.checked){ thischeckbox.checked = false; }
+else { thischeckbox.checked = true; }
+EER_Males_2023_fx();
+}
+
+function setRB(thisid){
+document.getElementById(thisid).checked = true;
+EER_Males_2023_fx();
+}
+
+
+var calctxt = ''; 
+var xmltxt = ''; 
+var xmlresult = '';
+var htmtxt = ''; 
+var postNow = false;
+var printing = false;
+var interptxt = '';
+var interphtm = '';
+var interpxml = '';
+var rbchk = false;
+var inputchktxt = '<br />&nbsp;<br /><b>Important:</b> Inputs must be complete to perform calculation. <br />'
+
+
+function aDelay(atxt, ffield){
+with (document.EER_Males_2023_form){
+clrResults();
+ffield.value = '';
+doCalc = false;
+setTimeout(function(){ alert(atxt); }, 100);
+document.getElementById('inputchk').innerHTML = inputchktxt;
+
+}}
+
+
+function EER_Males_2023_fx() {
+
+with(document.EER_Males_2023_form){
+
+
+doCalc = true;
+param_value = parseFloat(Age_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = Age_unit.options[Age_unit.selectedIndex].value.split('|');
+Age = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+param_value = parseFloat(Weight_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = Weight_unit.options[Weight_unit.selectedIndex].value.split('|');
+Weight = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+param_value = parseFloat(Height_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = Height_unit.options[Height_unit.selectedIndex].value.split('|');
+Height = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+rbchk = false;
+if (PA_radio[0].checked){ rbchk = true; PA = 0;  }
+if (PA_radio[1].checked){ rbchk = true; PA = 1;  }
+if (PA_radio[2].checked){ rbchk = true; PA = 2;  }
+if (PA_radio[3].checked){ rbchk = true; PA = 3;  }
+if (PA_radio[4].checked){ rbchk = true; PA = 4;  }
+if (!rbchk) doCalc = false;
+dp = decpts.options[decpts.selectedIndex].text;
+
+if (fixDP(Age, 3)<0.25){
+ECG = 200;
+}
+else 
+if (fixDP(Age, 3)<0.5){
+ECG = 50;
+}
+else 
+if (fixDP(Age, 3)<4){
+ECG = 20;
+}
+else 
+if (fixDP(Age, 3)<9){
+ECG = 15;
+}
+else 
+if (fixDP(Age, 3)<14){
+ECG = 25;
+}
+else{
+ECG = 20;
+}
+if ((fixDP(Age,3) >= 3) && (PA_radio[0].checked)){ PA_radio[0].checked = false; clrResults(); doCalc = false }
+if (fixDP(Age,3) < 3){
+PA_radio[0].checked = true;
+EER = -716.45 - Age + (17.82 * Height) + (15.06 * Weight) + ECG;
+}
+else{
+if (PA == 1) EER = -447.51 + (3.68 * Age) + (13.01 * Height) + (13.15 * Weight) + ECG;
+else if (PA == 2) EER = 19.12 + (3.68 * Age) + (8.62 * Height) + (20.28 * Weight) + ECG;
+else if (PA == 3) EER = -388.19 + (3.68 * Age) + (12.66 * Height) + (20.46 * Weight) + ECG;
+else if (PA == 4) EER = -671.75 + (3.68 * Age) + (15.38 * Height) + (23.25 * Weight) + ECG;
+}
+ptEER =  EER;
+
+if (doCalc) ptEER_param.value = fixDP(ptEER, dp);
+
+
+
+
+
+}
+
+
+if (doCalc) document.getElementById('inputchk').innerHTML = '';
+else document.getElementById('inputchk').innerHTML = inputchktxt;
+
+
+}
+
+function minMaxCheck(){
+if (printing) return;
+
+
+
+with(document.EER_Males_2023_form){
+
+if (Age_param.value && isNaN(Age_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', Age_param); }
+if (Age_param.value && (Age < (0 - 0.00001))) {
+Age = 0;
+ aDelay("The minimum value for Age is 0 yr.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Age_param);
+}
+
+if (Age_param.value && Age > 18.99) {
+Age = 0;
+ aDelay("The maximum value for Age is 18.99 yr.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Age_param);
+}
+
+if (Weight_param.value && isNaN(Weight_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', Weight_param); }
+if (Weight_param.value && (Weight < (.5 - 0.00001))) {
+Weight = 0;
+ aDelay("The minimum value for Weight is .5 kg.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Weight_param);
+}
+
+if (Weight_param.value && Weight > 140) {
+Weight = 0;
+ aDelay("The maximum value for Weight is 140 kg.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Weight_param);
+}
+
+if (Height_param.value && isNaN(Height_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', Height_param); }
+if (Height_param.value && (Height < (30 - 0.00001))) {
+Height = 0;
+ aDelay("The minimum value for Height is 30 cm.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Height_param);
+}
+
+if (Height_param.value && Height > 200) {
+Height = 0;
+ aDelay("The maximum value for Height is 200 cm.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Height_param);
+}
+
+
+
+}
+
+}
+
+function clrResults(){
+
+
+with(document.EER_Males_2023_form){
+
+ptEER_param.value = '';
+
+
+}
+
+}
+
+var Age = null,
+Weight = null,
+Height = null,
+PA = null,
+ptEER = null,
+param_value = null;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ]]> */
+
+/* <![CDATA[ */
+
+with(document.EER_Males_2023_form){
+
+var EER;
+var ECG = 0;
+
+}
+/* ]]> */
+</script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://medilib.ir/assets/js/jquery.min.js"></script><script src="https://medilib.ir/assets/js/popper.min.js"></script><script src="https://medilib.ir/assets/js/bootstrap.min.js"></script><script src="https://medilib.ir/assets/js/classy-nav.min.js"></script><script src="https://medilib.ir/assets/js/owl.carousel.min.js"></script><script src="https://medilib.ir/assets/js/jquery.magnific-popup.min.js"></script><script src="https://medilib.ir/assets/js/jquery.counterup.min.js"></script><script src="https://medilib.ir/assets/js/waypoints.min.js"></script><script src="https://medilib.ir/assets/js/form-validator.min.js"></script><script src="https://medilib.ir/assets/js/contact-form-script.js"></script><script src="https://medilib.ir/assets/js/main.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WFDJ5JLM3Q"></script><script>
+    window.addEventListener("load", () => {
+
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function (registrations) {
+                //returns installed service workers
+                if (registrations.length) {
+                    for (let registration of registrations) {
+                        if (
+                            registration.active.scriptURL.startsWith("/serviceWorker.js") &&
+                            !registration.active.scriptURL.endsWith("/serviceWorker.js?v=18")
+                        ) {
+                            registration.unregister();
+                        }
+                    }
+                }
+            });
+            navigator.serviceWorker.register('/serviceWorker.js?v=18', {
+                scope: '/'
+            })
+                .then(function (registration) {
+                    console.log('Registration successful, scope is:', registration.scope);
+                })
+                .catch(function (error) {
+                    console.log('Service worker registration failed, error:', error);
+                });
+        }
+    });
+    const promptElement = document.querySelector('.pwaprompt');
+    const footerPromptElement = document.querySelector('#footerPromptElement');
+    const scrollTopElement = document.querySelector('.scrolltop');
+    // const installButton = promptElement.querySelector('.prompt__install');
+    const closeButton = promptElement.querySelector('.prompt__close');
+    let installEvent;
+
+    function setWithExpiry(key, value, seconds) {
+        const now = new Date()
+
+        // `item` is an object which contains the original value
+        // as well as the time when it's supposed to expire
+        const item = {
+            value: value,
+            expiry: now.getTime() + (seconds * 1000),
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+    }
+
+    function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+        // if the item doesn't exist, return null
+        if (!itemStr) {
+            return null
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+        // compare the expiry time of the item with the current time
+        if (now.getTime() > item.expiry) {
+            // If the item is expired, delete the item from storage
+            // and return null
+            localStorage.removeItem(key)
+            return null
+        }
+        return item.value
+    }
+
+    // checks if the localStorage item has been set
+    function getVisited() {
+        return getWithExpiry('install-prompt')
+        // return localStorage.getItem('install-prompt');
+    }
+
+    // sets the localStorage item
+    function setVisited() {
+        fiveDay = 5 * (24 * (60 * 60))
+        setWithExpiry('install-prompt', true, fiveDay)
+        // localStorage.setItem('install-prompt', true);
+    }
+
+    closeButton.addEventListener('click', () => {
+        // set localStorage to true
+        setVisited();
+
+        // hide the prompt banner
+        promptElement.style.display = 'none';
+        scrollTopElement.style.bottom = '30px';
+
+        // installEvent = null;
+    });
+    // Detects if device is on iOS
+    const isIos = () => {
+        const userAgent = window.navigator.userAgent.toLowerCase();
+        return /iphone|ipad|ipod/.test(userAgent);
+    }
+    // Detects if device is in standalone mode
+    const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+
+    // Checks if should display install popup notification:
+    if (isIos() && !isInStandaloneMode()) {
+        if (!getVisited()) {
+            promptElement.style.display = 'block';
+            scrollTopElement.style.bottom = '80px';
+        }
+        footerPromptElement.style.display = 'block';
+    }
+
+
+    // this event will only fire if the user does not have the pwa installed
+    window.addEventListener('beforeinstallprompt', (event) => {
+        event.preventDefault();
+        // if no localStorage is set, first time visitor
+        if (!getVisited()) {
+            // show the prompt banner
+            promptElement.style.display = 'block';
+            scrollTopElement.style.bottom = '80px';
+
+            // store the event for later use
+
+        }
+        footerPromptElement.style.display = 'block';
+        installEvent = event;
+
+    });
+    $(document).on('click', '.prompt__install', function () {
+        promptElement.style.display = 'none';
+        scrollTopElement.style.bottom = '30px';
+
+        if (isIos() && !isInStandaloneMode()) {
+            setVisited();
+            $('#iphoneAddToHomeScreen').modal()
+        } else {
+
+            // trigger the prompt to show to the user
+            installEvent.prompt();
+            // check what choice the user made
+            installEvent.userChoice.then((choice) => {
+                // if the user declined, we don't want to show the button again
+                // set localStorage to true
+                if (choice.outcome !== 'accepted') {
+                    setVisited();
+                }
+
+                installEvent = null;
+            });
+        }
+
+    });
+</script><script>
+
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-WFDJ5JLM3Q');
+</script><script>
+      var topicReferences=[];
+
+      function refrence(id) {
+          var myReference=Object.values(topicReferences)[id];
+          console.log(myReference);
+          $("#pmid").attr("href",myReference['pmid']);
+          if (typeof myReference['description'] !== 'undefined' && myReference['description']!="") {
+            $("#myModalLabel34").html('Description : <p>' + myReference['description'] + "</p>");
+          }
+          if (typeof myReference['authors'] !== 'undefined' && myReference['authors']!="") {
+            $("#referenceAuthors").html('Authors : <p>' + myReference['authors'] + "</p>");
+          }
+          if (typeof myReference['source'] !== 'undefined' && myReference['source']!="") {
+            $("#referenceSource").html('Source : <p>' + myReference['source'] + "</p>");
+          }
+          if (typeof myReference['title'] !== 'undefined' && myReference['title']!="") {
+            $("#referenceTitle").html('Title : <p>' + myReference['title'] + "</p>");
+          }
+          if (typeof myReference['affiliation'] !== 'undefined' && myReference['affiliation']!="") {
+            $("#referenceAffiliation").html('Affiliation : <p>' + myReference['affiliation'] + "</p>");
+          }
+      }
+  </script><script>
+
+      var screenHeight = screen.height;
+
+      if (screenHeight > 700) {
+        // $document.getElementById("Uptodate_image").style.width = "100% !important;";
+        // $('.Uptodate_image').css('width', '100% !important;');
+        console.log("more");
+      }else{
+        console.log(screenHeight);
+      }
+    $(document).scroll(function()  {
+      var y = $(this).scrollTop();
+      if (y > 100) {
+        $('.goback').fadeIn();
+        $('.buyPackage').fadeIn();
+        // alert(document.getElementById('main_menu').style.zIndex);
+        document.getElementById("uptodate-area").style.padding = "0px 0 0 0";
+        document.getElementById('main_menu').style.zIndex=1;
+         document.getElementById('main_menu').style.display="none";
+        document.getElementById('navbar_menu').style.marginTop="70px"
+        document.getElementById('uptodate-area').style.marginTop="0px"
+        document.getElementById('uptodate-area').style.zIndex=999;
+        console.log('down');
+      } else {
+        $('.goback').fadeOut();
+        $('.buyPackage').fadeOut();
+        document.getElementById("uptodate-area").style.padding = "0px 0 0 0";
+        document.getElementById('navbar_menu').style.marginTop="0px"
+        document.getElementById('main_menu').style.display="";
+        document.getElementById('uptodate-area').style.zIndex=0;
+        console.log('up');
+      }
+    });
+    function goBack() {
+      window.history.back();
+    }
+    function buyPackage() {
+      window.open("https://medilib.ir/userPanel/package/uptodate/index",'_blank');
+    }
+  </script></body>
 </html>

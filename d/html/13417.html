@@ -1,3938 +1,2369 @@
 <!DOCTYPE html>
+
 <html lang="fa">
- <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
- <head>
-  <title>
-   Calculator: Head circumference-for-age percentiles and Z-scores, 0 to 36 months (CDC)
-  </title>
-  <link href="d/css/1.css" rel="stylesheet"/>
- </head>
- <body>
-  <!-- Start Main Menu Area -->
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <div class="container">
-   <div class="row">
-   </div>
-  </div>
-  <section class="teacher-area ptb-10">
-   <div class="container">
-   </div>
-   <section class="course-details-area ptb-60">
-    <div class="container">
-     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-      <h1 style="text-align:center">
-       Calculator: Head circumference-for-age percentiles and Z-scores, 0 to 36 months (CDC)
-      </h1>
-      <div class="utdArticleSection" id="topicContentCalculator">
-       <div id="topicText">
-        <div id="mc3k">
-         <form action="" id="CDCInfantHeadCircForAge_form" name="CDCInfantHeadCircForAge_form" onkeydown="formKeyDown(event);" onkeypress="resetInTime(); return validNumberField(event);" onkeyup="CDCInfantHeadCircForAge_fx();" onreset="rrclr(); document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
-          <table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
-           <tbody>
-            <tr>
-             <td bgcolor="#eeeeee" width="1%">
-              <br/>
-             </td>
-             <td align="left" bgcolor="#eeeeee">
-              <span class="medCalcFontTitleBox">
-               Calculator: Head circumference-for-age percentiles and Z-scores, 0 to 36 months (CDC)
-              </span>
-             </td>
-            </tr>
-           </tbody>
-          </table>
-          <br/>
-          <br/>
-          <div id="calc_main">
-           <center>
-            <span class="medCalcFontIO">
-             Input
-            </span>
-            <br/>
-            <br/>
-            <table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
-             <tbody>
-              <tr>
-               <td align="right" valign="top">
-                <span class="medCalcFontOneBold">
-                 Sex
-                </span>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Sex. The variable option is Female." id="togel1" name="Sex_radio" onclick="CDCInfantHeadCircForAge_fx();" type="radio" value="Female|1"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel1');">
-                 Female
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="left">
-                <br/>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Sex. The variable option is Male." id="togel2" name="Sex_radio" onclick="CDCInfantHeadCircForAge_fx();" type="radio" value="Male|2"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel2');">
-                 Male
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 Age
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value Age" name="Age_param" onblur="CDCInfantHeadCircForAge_fx(); minMaxCheck();" onchange="CDCInfantHeadCircForAge_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <select aria-label="Use this pulldown selector to set the unit of measure for the value Age" class="medCalcFontSelect" name="Age_unit" onchange="CDCInfantHeadCircForAge_fx(); minMaxCheck();" style="width:115px;">
-                 <option selected="selected" value="1|0|mo">
-                  mo
-                 </option>
-                 <option value="12|0|yr">
-                  yr
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 Head circumference
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value Head circumference" name="Head_Circumference_param" onblur="CDCInfantHeadCircForAge_fx(); minMaxCheck();" onchange="CDCInfantHeadCircForAge_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <select aria-label="Use this pulldown selector to set the unit of measure for the value Head circumference" class="medCalcFontSelect" name="Head_Circumference_unit" onchange="CDCInfantHeadCircForAge_fx(); minMaxCheck();" style="width:115px;">
-                 <option selected="selected" value="1|0|cm">
-                  cm
-                 </option>
-                 <option value="2.54|0|in">
-                  in
-                 </option>
-                 <option value="100|0|m">
-                  m
-                 </option>
-                </select>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-           </center>
-           <br/>
-           <br/>
-           <center>
-            <span class="medCalcFontIO">
-             Results
-             <span class="medCalcFontOne" id="inputchk">
-              <br/>
-              <br/>
-              <b>
-               Important:
-              </b>
-              Inputs must be complete to perform calculation.
-              <br/>
-             </span>
-            </span>
-            <br/>
-            <br/>
-            <table cellpadding="4" class="medCalcResultBox" summary="EBMcalc Table">
-             <tbody>
-              <tr>
-               <td colspan="3">
-                <br/>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontResultParam">
-                 Z-score
-                </span>
-               </td>
-               <td nowrap="nowrap" valign="top">
-                <input aria-label="This output box will display the calculated value Z-score" aria-readonly="true" name="Z_Score_param" size="6" type="text"/>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontResultParam">
-                 Percentile
-                </span>
-               </td>
-               <td nowrap="nowrap" valign="top">
-                <input aria-label="This output box will display the calculated value Percentile" aria-readonly="true" name="Percentile_param" size="6" type="text"/>
-               </td>
-              </tr>
-              <tr>
-               <td colspan="3">
-                <br/>
-               </td>
-              </tr>
-              <tr>
-               <td align="center" colspan="3">
-                <span class="medCalcFontResultParam">
-                 Decimal precision
-                </span>
-                <select aria-label="Use this pulldown selector to set the decimal precision of calculations" class="medCalcFontSelect" name="decpts" onchange="CDCInfantHeadCircForAge_fx();">
-                 <option>
-                  0
-                 </option>
-                 <option selected="selected">
-                  1
-                 </option>
-                 <option>
-                  2
-                 </option>
-                 <option>
-                  3
-                 </option>
-                </select>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-           </center>
-           <br/>
-           <br/>
-           <div id="calc_buttons">
-            <center>
-             <span class="medCalcFontOne">
-              <input name="resetbutton" type="reset" value="Reset form"/>
-             </span>
-            </center>
-           </div>
-           <br/>
-           <br/>
-           <div aria-label="This table highlights the result Head circumference-for-age percentile interpretation. No result is highlighted" id="rr1_tag" tabindex="0">
-            <table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
-             <tbody>
-              <tr>
-               <td bgcolor="#eeeeee" width="1%">
-                <br/>
-               </td>
-               <td align="left" bgcolor="#eeeeee">
-                <span class="medCalcFontTitleBox">
-                 Head circumference-for-age percentile interpretation
-                </span>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-            <br/>
-            <br/>
-           </div>
-           <center>
-            <table border="1" cellpadding="4" cellspacing="0" summary="RRTable">
-             <tbody>
-              <tr id="rr1_1">
-               <td align="right" nowrap="nowrap" style="border-right: 0px;">
-                <span class="medCalcFontOneBold">
-                 Percentile &lt;3:
-                </span>
-               </td>
-               <td align="left" style="border-left: 0px;">
-                <span class="medCalcFontOne">
-                 Microcephaly
-                </span>
-               </td>
-              </tr>
-              <tr id="rr1_2">
-               <td align="right" nowrap="nowrap" style="border-right: 0px;">
-                <span class="medCalcFontOneBold">
-                 Percentile ≥3 and &lt;97:
-                </span>
-               </td>
-               <td align="left" style="border-left: 0px;">
-                <span class="medCalcFontOne">
-                 Normal head circumference
-                </span>
-               </td>
-              </tr>
-              <tr id="rr1_3">
-               <td align="right" nowrap="nowrap" style="border-right: 0px;">
-                <span class="medCalcFontOneBold">
-                 Percentile ≥97:
-                </span>
-               </td>
-               <td align="left" style="border-left: 0px;">
-                <span class="medCalcFontOne">
-                 Macrocephaly
-                </span>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-           </center>
-           <br/>
-           <br/>
-          </div>
-          <div id="pretextrefs">
-          </div>
-          <div id="calc_tables_above_notes">
-          </div>
-          <br/>
-          <br/>
-          <div id="calc_notes">
-           <span class="medCalcFontRef">
-            <b>
-             Notes
-            </b>
-           </span>
-           <ul class="medCalcFontOne">
-            <li>
-             This calculator is based on the United States Centers for Disease Control and Prevention (CDC) growth reference.
-            </li>
-            <li>
-             Microcephaly is a
-             <b>
-              Head circumference
-             </b>
-             greater than 2 standard deviations below the mean.
-            </li>
-            <li>
-             Macrocephaly is a
-             <b>
-              Head circumference
-             </b>
-             greater than 2 standard deviations above the mean.
-            </li>
-            <li>
-             At the extremes (&gt;97
-             <sup>
-              th
-             </sup>
-             percentile or &lt;3
-             <sup>
-              rd
-             </sup>
-             percentile), small differences
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Calculator: Head circumference-for-age percentiles and Z-scores, 0 to 36 months (CDC)</title></head>
+<body><section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Calculator: Head circumference-for-age percentiles and Z-scores, 0 to 36 months (CDC)</h1>
+<div class="utdArticleSection" id="topicContentCalculator"><div id="topicText">
+<div id="mc3k">
+<form action="" id="CDCInfantHeadCircForAge_form" name="CDCInfantHeadCircForAge_form" onkeydown="formKeyDown(event);" onkeypress="resetInTime(); return validNumberField(event);" onkeyup="CDCInfantHeadCircForAge_fx();" onreset="rrclr(); document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
+<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
+<td align="left" bgcolor="#eeeeee">
+<span class="medCalcFontTitleBox">
+
+ 
+Calculator: Head circumference-for-age percentiles and Z-scores, 0 to 36 months (CDC)
+</span></td></tr></tbody></table><br/> <br/>
+<div id="calc_main">
+<center>
+<span class="medCalcFontIO">
+Input
+</span>
+<br/> <br/>
+<table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
+<tbody><tr><td align="right" valign="top"><span class="medCalcFontOneBold">Sex</span></td>
+<td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Sex. The variable option is Female." id="togel1" name="Sex_radio" onclick="CDCInfantHeadCircForAge_fx();" type="radio" value="Female|1"/><span class="medCalcFontOneClick" onclick="setRB('togel1');"> Female</span></td></tr>
+<tr><td align="left"><br/></td><td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Sex. The variable option is Male." id="togel2" name="Sex_radio" onclick="CDCInfantHeadCircForAge_fx();" type="radio" value="Male|2"/><span class="medCalcFontOneClick" onclick="setRB('togel2');"> Male</span></td></tr>
+<tr><td align="right" width="42%"><span class="medCalcFontOneBold">Age</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value Age" name="Age_param" onblur="CDCInfantHeadCircForAge_fx(); minMaxCheck();" onchange="CDCInfantHeadCircForAge_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value Age" class="medCalcFontSelect" name="Age_unit" onchange="CDCInfantHeadCircForAge_fx(); minMaxCheck();" style="width:115px;">
+<option selected="selected" value="1|0|mo">mo</option>
+<option value="12|0|yr">yr</option>
+</select></td></tr>
+<tr><td align="right" width="42%"><span class="medCalcFontOneBold">Head circumference</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value Head circumference" name="Head_Circumference_param" onblur="CDCInfantHeadCircForAge_fx(); minMaxCheck();" onchange="CDCInfantHeadCircForAge_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value Head circumference" class="medCalcFontSelect" name="Head_Circumference_unit" onchange="CDCInfantHeadCircForAge_fx(); minMaxCheck();" style="width:115px;">
+<option selected="selected" value="1|0|cm">cm</option>
+<option value="2.54|0|in">in</option>
+<option value="100|0|m">m</option>
+</select></td></tr>
+</tbody></table>
+</center>
+<br/> <br/><center><span class="medCalcFontIO">Results<span class="medCalcFontOne" id="inputchk"><br/> <br/><b>Important:</b> Inputs must be complete to perform calculation. <br/></span></span>
+<br/> <br/>
+<table cellpadding="4" class="medCalcResultBox" summary="EBMcalc Table">
+<tbody><tr><td colspan="3"> <br/></td></tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">Z-score</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value Z-score" aria-readonly="true" name="Z_Score_param" size="6" type="text"/></td>
+</tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">Percentile</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value Percentile" aria-readonly="true" name="Percentile_param" size="6" type="text"/></td>
+</tr>
+<tr><td colspan="3"> <br/></td></tr>
+<tr><td align="center" colspan="3"><span class="medCalcFontResultParam">Decimal precision  </span>
+<select aria-label="Use this pulldown selector to set the decimal precision of calculations" class="medCalcFontSelect" name="decpts" onchange="CDCInfantHeadCircForAge_fx();">
+<option>0</option>
+<option selected="selected">1</option>
+<option>2</option>
+<option>3</option>
+</select></td></tr>
+</tbody></table>
+</center><br/> <br/>
+<div id="calc_buttons">
+<center>
+<span class="medCalcFontOne">
+<input name="resetbutton" type="reset" value="Reset form"/>
+</span>
+</center>
+</div>
+<br/> <br/>
+<div aria-label="This table highlights the result Head circumference-for-age percentile interpretation. No result is highlighted" id="rr1_tag" tabindex="0">
+<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
+<td align="left" bgcolor="#eeeeee">
+<span class="medCalcFontTitleBox">
+
+
+Head circumference-for-age percentile interpretation
+</span></td></tr></tbody></table><br/> <br/>
+</div>
+<center>
+<table border="1" cellpadding="4" cellspacing="0" summary="RRTable">
+<tbody><tr id="rr1_1"><td align="right" nowrap="nowrap" style="border-right: 0px;"><span class="medCalcFontOneBold">Percentile &lt;3:</span></td>
+<td align="left" style="border-left: 0px;"><span class="medCalcFontOne">Microcephaly</span></td></tr>
+<tr id="rr1_2"><td align="right" nowrap="nowrap" style="border-right: 0px;"><span class="medCalcFontOneBold">Percentile ≥3 and &lt;97:</span></td>
+<td align="left" style="border-left: 0px;"><span class="medCalcFontOne">Normal head circumference</span></td></tr>
+<tr id="rr1_3"><td align="right" nowrap="nowrap" style="border-right: 0px;"><span class="medCalcFontOneBold">Percentile ≥97:</span></td>
+<td align="left" style="border-left: 0px;"><span class="medCalcFontOne">Macrocephaly</span></td></tr>
+</tbody></table>
+</center>
+<br/> <br/>
+</div><div id="pretextrefs">
+ 
+</div>
+<div id="calc_tables_above_notes">
+</div>
+<br/> <br/>
+<div id="calc_notes">
+<span class="medCalcFontRef"><b>Notes</b></span>
+<ul class="medCalcFontOne">
+<li>This calculator is based on the United States Centers for Disease Control and Prevention (CDC) growth reference.</li><li>Microcephaly is a <b>Head circumference</b> greater than 2 standard deviations below the mean.</li>
+<li>Macrocephaly is a <b>Head circumference</b> greater than 2 standard deviations above the mean.</li>
+<li>At the extremes (&gt;97<sup>th</sup> percentile or &lt;3<sup>rd</sup> percentile), small differences
 in percentiles represent clinically important differences. At these extremes, the Z-score is a more precise 
 reflection of how far the measurement deviates from the mean and is a useful tool for tracking changes.
-            </li>
-            <li>
-             For all LMS tables, the row in the table corresponding to the patient-specific value is found in the first
+</li>
+<li>For all LMS tables, the row in the table corresponding to the patient-specific value is found in the first
 column of the table; values to be used for L (the Box-Cox power), M (the median), and S (the generalized
 coefficient of variation) in the equation for Z-score are retrieved.
-            </li>
-            <li>
-             The accuracy of the calculation can be assessed by viewing the graph of head circumference-for-age percentiles for this sex and age group in UpToDate.
-            </li>
-            <li>
-             Z-scores may be used to do a table lookup for the corresponding percentile in the Normal table percentiles
+</li>
+<li>The accuracy of the calculation can be assessed by viewing the graph of head circumference-for-age percentiles for this sex and age group in UpToDate.</li>
+<li>Z-scores may be used to do a table lookup for the corresponding percentile in the Normal table percentiles
 for Z-score table (below). Numbers along the left side (Y-axis) of the table represent the first number and first decimal
 place of the Z-score, while the numbers along the top (X-axis) of the table represent the second decimal position of the Z-score.
-            </li>
-           </ul>
-          </div>
-          <br/>
-          <br/>
-          <span class="medCalcFontRef">
-           <b>
-            Equations used
-           </b>
-          </span>
-          <br/>
-          <br/>
-          <center>
-           <div id="calc_equation">
-            <table cellpadding="10" cellspacing="0" summary="EBMcalc Table">
-             <tbody>
-              <tr>
-               <td class="medCalcFormuliBox">
-                <span class="medCalcFontFormuli">
-                 Z-score = ((Head_Circumference/M)
-                 <sup>
-                  L
-                 </sup>
-                 - 1) / (L * S)
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td class="medCalcFormuliBox">
-                <span class="medCalcFontFormuli">
-                 Percentile = ZtoPercentile(Z-score)
-                </span>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-            <br/>
-            <br/>
-           </div>
-          </center>
-          <div id="calc_tables">
-           <br/>
-           <br/>
-           <span class="medCalcFontRef">
-            <b>
-             Examples
-            </b>
-           </span>
-           <br/>
-           <br/>
-           <center>
-            <table border="1" cellpadding="5" cellspacing="0" class="medCalcFontOne" summary="EBMcalc Table" width="40%">
-             <tbody>
-              <tr bgcolor="#cccccc" id="T1HR">
-               <td align="center" id="T1HR_C1">
-                <b>
-                 Z-score
-                </b>
-               </td>
-               <td align="center" id="T1HR_C2">
-                <b>
-                 Percentile equivalent
-                </b>
-               </td>
-              </tr>
-              <tr>
-               <td align="center" id="T1CellR1C1">
-                <div id="T1R1C1">
-                 - 3.0
-                </div>
-               </td>
-               <td align="center" id="T1CellR1C2">
-                <div id="T1R1C2">
-                 0.3
-                </div>
-               </td>
-              </tr>
-              <tr>
-               <td align="center" id="T1CellR2C1">
-                <div id="T1R2C1">
-                 - 2.0
-                </div>
-               </td>
-               <td align="center" id="T1CellR2C2">
-                <div id="T1R2C2">
-                 2.5
-                </div>
-               </td>
-              </tr>
-              <tr>
-               <td align="center" id="T1CellR3C1">
-                <div id="T1R3C1">
-                 + 2.0
-                </div>
-               </td>
-               <td align="center" id="T1CellR3C2">
-                <div id="T1R3C2">
-                 97.5
-                </div>
-               </td>
-              </tr>
-              <tr>
-               <td align="center" id="T1CellR4C1">
-                <div id="T1R4C1">
-                 + 3.0
-                </div>
-               </td>
-               <td align="center" id="T1CellR4C2">
-                <div id="T1R4C2">
-                 99.7
-                </div>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-           </center>
-          </div>
-          <br/>
-          <br/>
-          <div id="calc_refs">
-           <span class="medCalcFontRef">
-            <b>
-             References
-            </b>
-           </span>
-           <ol>
-            <li>
-             Centers for Disease Control and Prevention, National Center for Health Statistics. Clinical growth charts.
-             <a href="https://www.cdc.gov/growthcharts/clinical_charts.htm" style="color: green; text-decoration: none;" target="_blank">
-              https://www.cdc.gov/growthcharts/clinical_charts.htm
-             </a>
-             (Accessed on June 26, 2023).
-            </li>
-           </ol>
-          </div>
-         </form>
-         <div class="calc_tables_supp">
-          <br/>
-          <br/>
-          <table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
-           <tbody>
-            <tr>
-             <td bgcolor="#eeeeee" width="1%">
-              <br/>
-             </td>
-             <td align="left" bgcolor="#eeeeee">
-              <span class="medCalcFontTitleBox">
-               LMS table: Head circumference-for-age percentiles, females 0 to 36 months, CDC growth reference (United States)
-              </span>
-             </td>
-            </tr>
-           </tbody>
-          </table>
-          <br/>
-          <br/>
-          <center>
-           <table border="1" cellpadding="4" cellspacing="0" class="medCalcFontOne" summary="EBMcalc Table" width="60%">
-            <tbody>
-             <tr>
-              <td align="center" bgcolor="#eeeeee">
-               <span class="medCalcFontOneBold">
-                Age [months]
-               </span>
-              </td>
-              <td align="center" bgcolor="#eeeeee">
-               <span class="medCalcFontOneBold">
-                Power [L]
-               </span>
-              </td>
-              <td align="center" bgcolor="#eeeeee">
-               <span class="medCalcFontOneBold">
-                Median [M]
-               </span>
-              </td>
-              <td align="center" bgcolor="#eeeeee">
-               <span class="medCalcFontOneBold">
-                Variation [S]
-               </span>
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               0
-              </td>
-              <td align="left">
-               -1.298749689
-              </td>
-              <td align="left">
-               34.7115617
-              </td>
-              <td align="left">
-               0.046905108
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               0.5
-              </td>
-              <td align="left">
-               -1.440271514
-              </td>
-              <td align="left">
-               36.03453876
-              </td>
-              <td align="left">
-               0.042999604
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               1.5
-              </td>
-              <td align="left">
-               -1.581016348
-              </td>
-              <td align="left">
-               37.97671987
-              </td>
-              <td align="left">
-               0.038067862
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               2.5
-              </td>
-              <td align="left">
-               -1.593136386
-              </td>
-              <td align="left">
-               39.3801263
-              </td>
-              <td align="left">
-               0.035079612
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               3.5
-              </td>
-              <td align="left">
-               -1.521492427
-              </td>
-              <td align="left">
-               40.46773733
-              </td>
-              <td align="left">
-               0.033096443
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               4.5
-              </td>
-              <td align="left">
-               -1.394565915
-              </td>
-              <td align="left">
-               41.34841008
-              </td>
-              <td align="left">
-               0.03170963
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               5.5
-              </td>
-              <td align="left">
-               -1.231713389
-              </td>
-              <td align="left">
-               42.0833507
-              </td>
-              <td align="left">
-               0.030709039
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               6.5
-              </td>
-              <td align="left">
-               -1.046582628
-              </td>
-              <td align="left">
-               42.71033603
-              </td>
-              <td align="left">
-               0.029974303
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               7.5
-              </td>
-              <td align="left">
-               -0.848932692
-              </td>
-              <td align="left">
-               43.25428882
-              </td>
-              <td align="left">
-               0.029430992
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               8.5
-              </td>
-              <td align="left">
-               -0.645779124
-              </td>
-              <td align="left">
-               43.73249646
-              </td>
-              <td align="left">
-               0.029030379
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               9.5
-              </td>
-              <td align="left">
-               -0.442165412
-              </td>
-              <td align="left">
-               44.15742837
-              </td>
-              <td align="left">
-               0.028739112
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               10.5
-              </td>
-              <td align="left">
-               -0.24163206
-              </td>
-              <td align="left">
-               44.53836794
-              </td>
-              <td align="left">
-               0.028533537
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               11.5
-              </td>
-              <td align="left">
-               -0.046673786
-              </td>
-              <td align="left">
-               44.88240562
-              </td>
-              <td align="left">
-               0.028396382
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               12.5
-              </td>
-              <td align="left">
-               0.141031094
-              </td>
-              <td align="left">
-               45.19507651
-              </td>
-              <td align="left">
-               0.028314722
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               13.5
-              </td>
-              <td align="left">
-               0.320403169
-              </td>
-              <td align="left">
-               45.48078147
-              </td>
-              <td align="left">
-               0.028278682
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               14.5
-              </td>
-              <td align="left">
-               0.490807133
-              </td>
-              <td align="left">
-               45.74307527
-              </td>
-              <td align="left">
-               0.028280585
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               15.5
-              </td>
-              <td align="left">
-               0.65193505
-              </td>
-              <td align="left">
-               45.98486901
-              </td>
-              <td align="left">
-               0.028314363
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               16.5
-              </td>
-              <td align="left">
-               0.803718086
-              </td>
-              <td align="left">
-               46.20857558
-              </td>
-              <td align="left">
-               0.028375159
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               17.5
-              </td>
-              <td align="left">
-               0.946259679
-              </td>
-              <td align="left">
-               46.41621635
-              </td>
-              <td align="left">
-               0.028459033
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               18.5
-              </td>
-              <td align="left">
-               1.079784984
-              </td>
-              <td align="left">
-               46.60950084
-              </td>
-              <td align="left">
-               0.028562759
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               19.5
-              </td>
-              <td align="left">
-               1.204602687
-              </td>
-              <td align="left">
-               46.78988722
-              </td>
-              <td align="left">
-               0.028683666
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               20.5
-              </td>
-              <td align="left">
-               1.321076285
-              </td>
-              <td align="left">
-               46.95862881
-              </td>
-              <td align="left">
-               0.028819525
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               21.5
-              </td>
-              <td align="left">
-               1.429602576
-              </td>
-              <td align="left">
-               47.11681039
-              </td>
-              <td align="left">
-               0.028968459
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               22.5
-              </td>
-              <td align="left">
-               1.530595677
-              </td>
-              <td align="left">
-               47.26537682
-              </td>
-              <td align="left">
-               0.029128879
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               23.5
-              </td>
-              <td align="left">
-               1.624475262
-              </td>
-              <td align="left">
-               47.40515585
-              </td>
-              <td align="left">
-               0.029299426
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               24.5
-              </td>
-              <td align="left">
-               1.71165803
-              </td>
-              <td align="left">
-               47.53687649
-              </td>
-              <td align="left">
-               0.029478937
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               25.5
-              </td>
-              <td align="left">
-               1.792551616
-              </td>
-              <td align="left">
-               47.66118396
-              </td>
-              <td align="left">
-               0.029666406
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               26.5
-              </td>
-              <td align="left">
-               1.867550375
-              </td>
-              <td align="left">
-               47.77865186
-              </td>
-              <td align="left">
-               0.02986096
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               27.5
-              </td>
-              <td align="left">
-               1.93703258
-              </td>
-              <td align="left">
-               47.8897923
-              </td>
-              <td align="left">
-               0.030061839
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               28.5
-              </td>
-              <td align="left">
-               2.001358669
-              </td>
-              <td align="left">
-               47.99506422
-              </td>
-              <td align="left">
-               0.030268375
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               29.5
-              </td>
-              <td align="left">
-               2.060870301
-              </td>
-              <td align="left">
-               48.09488048
-              </td>
-              <td align="left">
-               0.030479985
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               30.5
-              </td>
-              <td align="left">
-               2.115889982
-              </td>
-              <td align="left">
-               48.18961365
-              </td>
-              <td align="left">
-               0.03069615
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               31.5
-              </td>
-              <td align="left">
-               2.16672113
-              </td>
-              <td align="left">
-               48.2796011
-              </td>
-              <td align="left">
-               0.030916413
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               32.5
-              </td>
-              <td align="left">
-               2.21364844
-              </td>
-              <td align="left">
-               48.36514917
-              </td>
-              <td align="left">
-               0.031140368
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               33.5
-              </td>
-              <td align="left">
-               2.256943216
-              </td>
-              <td align="left">
-               48.44653703
-              </td>
-              <td align="left">
-               0.031367651
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               34.5
-              </td>
-              <td align="left">
-               2.296844024
-              </td>
-              <td align="left">
-               48.52401894
-              </td>
-              <td align="left">
-               0.031597939
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               35.5
-              </td>
-              <td align="left">
-               2.333589434
-              </td>
-              <td align="left">
-               48.59782828
-              </td>
-              <td align="left">
-               0.031830942
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               36
-              </td>
-              <td align="left">
-               2.350847202
-              </td>
-              <td align="left">
-               48.63342328
-              </td>
-              <td align="left">
-               0.031948378
-              </td>
-             </tr>
-            </tbody>
-           </table>
-          </center>
-          <br/>
-          <br/>
-          <table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
-           <tbody>
-            <tr>
-             <td bgcolor="#eeeeee" width="1%">
-              <br/>
-             </td>
-             <td align="left" bgcolor="#eeeeee">
-              <span class="medCalcFontTitleBox">
-               LMS table: Head circumference-for-age percentiles, males 0 to 36 months, CDC growth reference (United States)
-              </span>
-             </td>
-            </tr>
-           </tbody>
-          </table>
-          <br/>
-          <br/>
-          <center>
-           <table border="1" cellpadding="4" cellspacing="0" class="medCalcFontOne" summary="EBMcalc Table" width="60%">
-            <tbody>
-             <tr>
-              <td align="center" bgcolor="#eeeeee">
-               <span class="medCalcFontOneBold">
-                Age [months]
-               </span>
-              </td>
-              <td align="center" bgcolor="#eeeeee">
-               <span class="medCalcFontOneBold">
-                Power [L]
-               </span>
-              </td>
-              <td align="center" bgcolor="#eeeeee">
-               <span class="medCalcFontOneBold">
-                Median [M]
-               </span>
-              </td>
-              <td align="center" bgcolor="#eeeeee">
-               <span class="medCalcFontOneBold">
-                Variation [S]
-               </span>
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               0
-              </td>
-              <td align="left">
-               4.427825037
-              </td>
-              <td align="left">
-               35.81366835
-              </td>
-              <td align="left">
-               0.052172542
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               0.5
-              </td>
-              <td align="left">
-               4.310927464
-              </td>
-              <td align="left">
-               37.19361054
-              </td>
-              <td align="left">
-               0.047259148
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               1.5
-              </td>
-              <td align="left">
-               3.869576802
-              </td>
-              <td align="left">
-               39.20742929
-              </td>
-              <td align="left">
-               0.040947903
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               2.5
-              </td>
-              <td align="left">
-               3.305593039
-              </td>
-              <td align="left">
-               40.65233195
-              </td>
-              <td align="left">
-               0.037027722
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               3.5
-              </td>
-              <td align="left">
-               2.720590297
-              </td>
-              <td align="left">
-               41.76516959
-              </td>
-              <td align="left">
-               0.034364245
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               4.5
-              </td>
-              <td align="left">
-               2.16804824
-              </td>
-              <td align="left">
-               42.66116148
-              </td>
-              <td align="left">
-               0.032462175
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               5.5
-              </td>
-              <td align="left">
-               1.675465689
-              </td>
-              <td align="left">
-               43.40488731
-              </td>
-              <td align="left">
-               0.031064702
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               6.5
-              </td>
-              <td align="left">
-               1.255160322
-              </td>
-              <td align="left">
-               44.03609923
-              </td>
-              <td align="left">
-               0.03002267
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               7.5
-              </td>
-              <td align="left">
-               0.91054114
-              </td>
-              <td align="left">
-               44.58096912
-              </td>
-              <td align="left">
-               0.029242173
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               8.5
-              </td>
-              <td align="left">
-               0.639510474
-              </td>
-              <td align="left">
-               45.05761215
-              </td>
-              <td align="left">
-               0.028660454
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               9.5
-              </td>
-              <td align="left">
-               0.436978864
-              </td>
-              <td align="left">
-               45.4790756
-              </td>
-              <td align="left">
-               0.0282336
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               10.5
-              </td>
-              <td align="left">
-               0.296275856
-              </td>
-              <td align="left">
-               45.85505706
-              </td>
-              <td align="left">
-               0.027929764
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               11.5
-              </td>
-              <td align="left">
-               0.210107251
-              </td>
-              <td align="left">
-               46.19295427
-              </td>
-              <td align="left">
-               0.027725179
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               12.5
-              </td>
-              <td align="left">
-               0.171147024
-              </td>
-              <td align="left">
-               46.49853438
-              </td>
-              <td align="left">
-               0.027601686
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               13.5
-              </td>
-              <td align="left">
-               0.172393886
-              </td>
-              <td align="left">
-               46.77637684
-              </td>
-              <td align="left">
-               0.027545148
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               14.5
-              </td>
-              <td align="left">
-               0.207371541
-              </td>
-              <td align="left">
-               47.03017599
-              </td>
-              <td align="left">
-               0.027544382
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               15.5
-              </td>
-              <td align="left">
-               0.270226126
-              </td>
-              <td align="left">
-               47.2629533
-              </td>
-              <td align="left">
-               0.027590417
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               16.5
-              </td>
-              <td align="left">
-               0.355757274
-              </td>
-              <td align="left">
-               47.47720989
-              </td>
-              <td align="left">
-               0.02767598
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               17.5
-              </td>
-              <td align="left">
-               0.459407627
-              </td>
-              <td align="left">
-               47.67503833
-              </td>
-              <td align="left">
-               0.027795115
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               18.5
-              </td>
-              <td align="left">
-               0.577227615
-              </td>
-              <td align="left">
-               47.85820606
-              </td>
-              <td align="left">
-               0.0279429
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               19.5
-              </td>
-              <td align="left">
-               0.705826778
-              </td>
-              <td align="left">
-               48.02821867
-              </td>
-              <td align="left">
-               0.028115241
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               20.5
-              </td>
-              <td align="left">
-               0.842319055
-              </td>
-              <td align="left">
-               48.18636864
-              </td>
-              <td align="left">
-               0.028308707
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               21.5
-              </td>
-              <td align="left">
-               0.984266833
-              </td>
-              <td align="left">
-               48.3337732
-              </td>
-              <td align="left">
-               0.028520407
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               22.5
-              </td>
-              <td align="left">
-               1.129626698
-              </td>
-              <td align="left">
-               48.47140432
-              </td>
-              <td align="left">
-               0.028747896
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               23.5
-              </td>
-              <td align="left">
-               1.276691223
-              </td>
-              <td align="left">
-               48.60011223
-              </td>
-              <td align="left">
-               0.028989089
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               24.5
-              </td>
-              <td align="left">
-               1.424084853
-              </td>
-              <td align="left">
-               48.72064621
-              </td>
-              <td align="left">
-               0.029242207
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               25.5
-              </td>
-              <td align="left">
-               1.570621291
-              </td>
-              <td align="left">
-               48.83366629
-              </td>
-              <td align="left">
-               0.029505723
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               26.5
-              </td>
-              <td align="left">
-               1.715393998
-              </td>
-              <td align="left">
-               48.93976089
-              </td>
-              <td align="left">
-               0.029778323
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               27.5
-              </td>
-              <td align="left">
-               1.857652984
-              </td>
-              <td align="left">
-               49.03945383
-              </td>
-              <td align="left">
-               0.030058871
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               28.5
-              </td>
-              <td align="left">
-               1.996810563
-              </td>
-              <td align="left">
-               49.13321432
-              </td>
-              <td align="left">
-               0.030346384
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               29.5
-              </td>
-              <td align="left">
-               2.132411346
-              </td>
-              <td align="left">
-               49.22146409
-              </td>
-              <td align="left">
-               0.030640006
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               30.5
-              </td>
-              <td align="left">
-               2.264111009
-              </td>
-              <td align="left">
-               49.30458348
-              </td>
-              <td align="left">
-               0.030938992
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               31.5
-              </td>
-              <td align="left">
-               2.391658052
-              </td>
-              <td align="left">
-               49.38291658
-              </td>
-              <td align="left">
-               0.031242693
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               32.5
-              </td>
-              <td align="left">
-               2.514878222
-              </td>
-              <td align="left">
-               49.45677569
-              </td>
-              <td align="left">
-               0.031550537
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               33.5
-              </td>
-              <td align="left">
-               2.633661226
-              </td>
-              <td align="left">
-               49.526445
-              </td>
-              <td align="left">
-               0.031862026
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               34.5
-              </td>
-              <td align="left">
-               2.747949445
-              </td>
-              <td align="left">
-               49.59218385
-              </td>
-              <td align="left">
-               0.03217672
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               35.5
-              </td>
-              <td align="left">
-               2.857728375
-              </td>
-              <td align="left">
-               49.65422952
-              </td>
-              <td align="left">
-               0.032494231
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               36
-              </td>
-              <td align="left">
-               2.910932095
-              </td>
-              <td align="left">
-               49.68393611
-              </td>
-              <td align="left">
-               0.032653934
-              </td>
-             </tr>
-            </tbody>
-           </table>
-          </center>
-          <br/>
-          <br/>
-          <table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
-           <tbody>
-            <tr>
-             <td bgcolor="#eeeeee" width="1%">
-              <br/>
-             </td>
-             <td align="left" bgcolor="#eeeeee">
-              <span class="medCalcFontTitleBox">
-               LMS table: Normal table percentiles for Z-score
-              </span>
-             </td>
-            </tr>
-           </tbody>
-          </table>
-          <br/>
-          <br/>
-          <center>
-           <table border="1" cellpadding="4" cellspacing="0" class="medCalcFontOne" summary="EBMcalc Table" width="60%">
-            <tbody>
-             <tr>
-              <td align="center" bgcolor="#eeeeee">
-               <span class="medCalcFontOneBold">
-                Z
-               </span>
-              </td>
-              <td align="center" bgcolor="#eeeeee">
-               <span class="medCalcFontOneBold">
-                0
-               </span>
-              </td>
-              <td align="center" bgcolor="#eeeeee">
-               <span class="medCalcFontOneBold">
-                1
-               </span>
-              </td>
-              <td align="center" bgcolor="#eeeeee">
-               <span class="medCalcFontOneBold">
-                2
-               </span>
-              </td>
-              <td align="center" bgcolor="#eeeeee">
-               <span class="medCalcFontOneBold">
-                3
-               </span>
-              </td>
-              <td align="center" bgcolor="#eeeeee">
-               <span class="medCalcFontOneBold">
-                4
-               </span>
-              </td>
-              <td align="center" bgcolor="#eeeeee">
-               <span class="medCalcFontOneBold">
-                5
-               </span>
-              </td>
-              <td align="center" bgcolor="#eeeeee">
-               <span class="medCalcFontOneBold">
-                6
-               </span>
-              </td>
-              <td align="center" bgcolor="#eeeeee">
-               <span class="medCalcFontOneBold">
-                7
-               </span>
-              </td>
-              <td align="center" bgcolor="#eeeeee">
-               <span class="medCalcFontOneBold">
-                8
-               </span>
-              </td>
-              <td align="center" bgcolor="#eeeeee">
-               <span class="medCalcFontOneBold">
-                9
-               </span>
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -3.0
-              </td>
-              <td align="left">
-               0.13%
-              </td>
-              <td align="left">
-               0.13%
-              </td>
-              <td align="left">
-               0.13%
-              </td>
-              <td align="left">
-               0.12%
-              </td>
-              <td align="left">
-               0.12%
-              </td>
-              <td align="left">
-               0.11%
-              </td>
-              <td align="left">
-               0.11%
-              </td>
-              <td align="left">
-               0.11%
-              </td>
-              <td align="left">
-               0.10%
-              </td>
-              <td align="left">
-               0.10%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -2.9
-              </td>
-              <td align="left">
-               0.19%
-              </td>
-              <td align="left">
-               0.18%
-              </td>
-              <td align="left">
-               0.18%
-              </td>
-              <td align="left">
-               0.17%
-              </td>
-              <td align="left">
-               0.16%
-              </td>
-              <td align="left">
-               0.16%
-              </td>
-              <td align="left">
-               0.15%
-              </td>
-              <td align="left">
-               0.15%
-              </td>
-              <td align="left">
-               0.14%
-              </td>
-              <td align="left">
-               0.14%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -2.8
-              </td>
-              <td align="left">
-               0.26%
-              </td>
-              <td align="left">
-               0.25%
-              </td>
-              <td align="left">
-               0.24%
-              </td>
-              <td align="left">
-               0.23%
-              </td>
-              <td align="left">
-               0.23%
-              </td>
-              <td align="left">
-               0.22%
-              </td>
-              <td align="left">
-               0.21%
-              </td>
-              <td align="left">
-               0.21%
-              </td>
-              <td align="left">
-               0.20%
-              </td>
-              <td align="left">
-               0.19%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -2.7
-              </td>
-              <td align="left">
-               0.35%
-              </td>
-              <td align="left">
-               0.34%
-              </td>
-              <td align="left">
-               0.33%
-              </td>
-              <td align="left">
-               0.32%
-              </td>
-              <td align="left">
-               0.31%
-              </td>
-              <td align="left">
-               0.30%
-              </td>
-              <td align="left">
-               0.29%
-              </td>
-              <td align="left">
-               0.28%
-              </td>
-              <td align="left">
-               0.27%
-              </td>
-              <td align="left">
-               0.26%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -2.6
-              </td>
-              <td align="left">
-               0.47%
-              </td>
-              <td align="left">
-               0.45%
-              </td>
-              <td align="left">
-               0.44%
-              </td>
-              <td align="left">
-               0.43%
-              </td>
-              <td align="left">
-               0.41%
-              </td>
-              <td align="left">
-               0.40%
-              </td>
-              <td align="left">
-               0.39%
-              </td>
-              <td align="left">
-               0.38%
-              </td>
-              <td align="left">
-               0.37%
-              </td>
-              <td align="left">
-               0.36%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -2.5
-              </td>
-              <td align="left">
-               0.62%
-              </td>
-              <td align="left">
-               0.60%
-              </td>
-              <td align="left">
-               0.59%
-              </td>
-              <td align="left">
-               0.57%
-              </td>
-              <td align="left">
-               0.55%
-              </td>
-              <td align="left">
-               0.54%
-              </td>
-              <td align="left">
-               0.52%
-              </td>
-              <td align="left">
-               0.51%
-              </td>
-              <td align="left">
-               0.49%
-              </td>
-              <td align="left">
-               0.48%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -2.4
-              </td>
-              <td align="left">
-               0.82%
-              </td>
-              <td align="left">
-               0.80%
-              </td>
-              <td align="left">
-               0.78%
-              </td>
-              <td align="left">
-               0.75%
-              </td>
-              <td align="left">
-               0.73%
-              </td>
-              <td align="left">
-               0.71%
-              </td>
-              <td align="left">
-               0.70%
-              </td>
-              <td align="left">
-               0.68%
-              </td>
-              <td align="left">
-               0.66%
-              </td>
-              <td align="left">
-               0.64%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -2.3
-              </td>
-              <td align="left">
-               1.07%
-              </td>
-              <td align="left">
-               1.04%
-              </td>
-              <td align="left">
-               1.02%
-              </td>
-              <td align="left">
-               0.99%
-              </td>
-              <td align="left">
-               0.96%
-              </td>
-              <td align="left">
-               0.94%
-              </td>
-              <td align="left">
-               0.91%
-              </td>
-              <td align="left">
-               0.89%
-              </td>
-              <td align="left">
-               0.87%
-              </td>
-              <td align="left">
-               0.84%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -2.2
-              </td>
-              <td align="left">
-               1.39%
-              </td>
-              <td align="left">
-               1.36%
-              </td>
-              <td align="left">
-               1.32%
-              </td>
-              <td align="left">
-               1.29%
-              </td>
-              <td align="left">
-               1.26%
-              </td>
-              <td align="left">
-               1.22%
-              </td>
-              <td align="left">
-               1.19%
-              </td>
-              <td align="left">
-               1.16%
-              </td>
-              <td align="left">
-               1.13%
-              </td>
-              <td align="left">
-               1.10%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -2.1
-              </td>
-              <td align="left">
-               1.79%
-              </td>
-              <td align="left">
-               1.74%
-              </td>
-              <td align="left">
-               1.70%
-              </td>
-              <td align="left">
-               1.66%
-              </td>
-              <td align="left">
-               1.62%
-              </td>
-              <td align="left">
-               1.58%
-              </td>
-              <td align="left">
-               1.54%
-              </td>
-              <td align="left">
-               1.50%
-              </td>
-              <td align="left">
-               1.46%
-              </td>
-              <td align="left">
-               1.43%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -2.0
-              </td>
-              <td align="left">
-               2.28%
-              </td>
-              <td align="left">
-               2.22%
-              </td>
-              <td align="left">
-               2.17%
-              </td>
-              <td align="left">
-               2.12%
-              </td>
-              <td align="left">
-               2.07%
-              </td>
-              <td align="left">
-               2.02%
-              </td>
-              <td align="left">
-               1.97%
-              </td>
-              <td align="left">
-               1.92%
-              </td>
-              <td align="left">
-               1.88%
-              </td>
-              <td align="left">
-               1.83%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -1.9
-              </td>
-              <td align="left">
-               2.87%
-              </td>
-              <td align="left">
-               2.81%
-              </td>
-              <td align="left">
-               2.74%
-              </td>
-              <td align="left">
-               2.68%
-              </td>
-              <td align="left">
-               2.62%
-              </td>
-              <td align="left">
-               2.56%
-              </td>
-              <td align="left">
-               2.50%
-              </td>
-              <td align="left">
-               2.44%
-              </td>
-              <td align="left">
-               2.39%
-              </td>
-              <td align="left">
-               2.33%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -1.8
-              </td>
-              <td align="left">
-               3.59%
-              </td>
-              <td align="left">
-               3.52%
-              </td>
-              <td align="left">
-               3.44%
-              </td>
-              <td align="left">
-               3.36%
-              </td>
-              <td align="left">
-               3.29%
-              </td>
-              <td align="left">
-               3.22%
-              </td>
-              <td align="left">
-               3.14%
-              </td>
-              <td align="left">
-               3.07%
-              </td>
-              <td align="left">
-               3.01%
-              </td>
-              <td align="left">
-               2.94%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -1.7
-              </td>
-              <td align="left">
-               4.46%
-              </td>
-              <td align="left">
-               4.36%
-              </td>
-              <td align="left">
-               4.27%
-              </td>
-              <td align="left">
-               4.18%
-              </td>
-              <td align="left">
-               4.09%
-              </td>
-              <td align="left">
-               4.01%
-              </td>
-              <td align="left">
-               3.92%
-              </td>
-              <td align="left">
-               3.84%
-              </td>
-              <td align="left">
-               3.75%
-              </td>
-              <td align="left">
-               3.67%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -1.6
-              </td>
-              <td align="left">
-               5.48%
-              </td>
-              <td align="left">
-               5.37%
-              </td>
-              <td align="left">
-               5.26%
-              </td>
-              <td align="left">
-               5.16%
-              </td>
-              <td align="left">
-               5.05%
-              </td>
-              <td align="left">
-               4.95%
-              </td>
-              <td align="left">
-               4.85%
-              </td>
-              <td align="left">
-               4.75%
-              </td>
-              <td align="left">
-               4.65%
-              </td>
-              <td align="left">
-               4.55%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -1.5
-              </td>
-              <td align="left">
-               6.68%
-              </td>
-              <td align="left">
-               6.55%
-              </td>
-              <td align="left">
-               6.43%
-              </td>
-              <td align="left">
-               6.30%
-              </td>
-              <td align="left">
-               6.18%
-              </td>
-              <td align="left">
-               6.06%
-              </td>
-              <td align="left">
-               5.94%
-              </td>
-              <td align="left">
-               5.82%
-              </td>
-              <td align="left">
-               5.71%
-              </td>
-              <td align="left">
-               5.59%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -1.4
-              </td>
-              <td align="left">
-               8.08%
-              </td>
-              <td align="left">
-               7.93%
-              </td>
-              <td align="left">
-               7.78%
-              </td>
-              <td align="left">
-               7.64%
-              </td>
-              <td align="left">
-               7.49%
-              </td>
-              <td align="left">
-               7.35%
-              </td>
-              <td align="left">
-               7.22%
-              </td>
-              <td align="left">
-               7.08%
-              </td>
-              <td align="left">
-               6.94%
-              </td>
-              <td align="left">
-               6.81%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -1.3
-              </td>
-              <td align="left">
-               9.68%
-              </td>
-              <td align="left">
-               9.51%
-              </td>
-              <td align="left">
-               9.34%
-              </td>
-              <td align="left">
-               9.18%
-              </td>
-              <td align="left">
-               9.01%
-              </td>
-              <td align="left">
-               8.85%
-              </td>
-              <td align="left">
-               8.69%
-              </td>
-              <td align="left">
-               8.53%
-              </td>
-              <td align="left">
-               8.38%
-              </td>
-              <td align="left">
-               8.23%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -1.2
-              </td>
-              <td align="left">
-               11.51%
-              </td>
-              <td align="left">
-               11.31%
-              </td>
-              <td align="left">
-               11.12%
-              </td>
-              <td align="left">
-               10.94%
-              </td>
-              <td align="left">
-               10.75%
-              </td>
-              <td align="left">
-               10.57%
-              </td>
-              <td align="left">
-               10.38%
-              </td>
-              <td align="left">
-               10.20%
-              </td>
-              <td align="left">
-               10.03%
-              </td>
-              <td align="left">
-               9.85%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -1.1
-              </td>
-              <td align="left">
-               13.57%
-              </td>
-              <td align="left">
-               13.35%
-              </td>
-              <td align="left">
-               13.14%
-              </td>
-              <td align="left">
-               12.92%
-              </td>
-              <td align="left">
-               12.71%
-              </td>
-              <td align="left">
-               12.51%
-              </td>
-              <td align="left">
-               12.30%
-              </td>
-              <td align="left">
-               12.10%
-              </td>
-              <td align="left">
-               11.90%
-              </td>
-              <td align="left">
-               11.70%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -1.0
-              </td>
-              <td align="left">
-               15.87%
-              </td>
-              <td align="left">
-               15.63%
-              </td>
-              <td align="left">
-               15.39%
-              </td>
-              <td align="left">
-               15.15%
-              </td>
-              <td align="left">
-               14.92%
-              </td>
-              <td align="left">
-               14.69%
-              </td>
-              <td align="left">
-               14.46%
-              </td>
-              <td align="left">
-               14.23%
-              </td>
-              <td align="left">
-               14.01%
-              </td>
-              <td align="left">
-               13.79%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -0.9
-              </td>
-              <td align="left">
-               18.41%
-              </td>
-              <td align="left">
-               18.14%
-              </td>
-              <td align="left">
-               17.88%
-              </td>
-              <td align="left">
-               17.62%
-              </td>
-              <td align="left">
-               17.36%
-              </td>
-              <td align="left">
-               17.11%
-              </td>
-              <td align="left">
-               16.85%
-              </td>
-              <td align="left">
-               16.60%
-              </td>
-              <td align="left">
-               16.35%
-              </td>
-              <td align="left">
-               16.11%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -0.8
-              </td>
-              <td align="left">
-               21.19%
-              </td>
-              <td align="left">
-               20.90%
-              </td>
-              <td align="left">
-               20.61%
-              </td>
-              <td align="left">
-               20.33%
-              </td>
-              <td align="left">
-               20.05%
-              </td>
-              <td align="left">
-               19.77%
-              </td>
-              <td align="left">
-               19.49%
-              </td>
-              <td align="left">
-               19.22%
-              </td>
-              <td align="left">
-               18.94%
-              </td>
-              <td align="left">
-               18.67%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -0.7
-              </td>
-              <td align="left">
-               24.20%
-              </td>
-              <td align="left">
-               23.89%
-              </td>
-              <td align="left">
-               23.58%
-              </td>
-              <td align="left">
-               23.27%
-              </td>
-              <td align="left">
-               22.97%
-              </td>
-              <td align="left">
-               22.66%
-              </td>
-              <td align="left">
-               22.36%
-              </td>
-              <td align="left">
-               22.07%
-              </td>
-              <td align="left">
-               21.77%
-              </td>
-              <td align="left">
-               21.48%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -0.6
-              </td>
-              <td align="left">
-               27.43%
-              </td>
-              <td align="left">
-               27.09%
-              </td>
-              <td align="left">
-               26.76%
-              </td>
-              <td align="left">
-               26.44%
-              </td>
-              <td align="left">
-               26.11%
-              </td>
-              <td align="left">
-               25.79%
-              </td>
-              <td align="left">
-               25.46%
-              </td>
-              <td align="left">
-               25.14%
-              </td>
-              <td align="left">
-               24.83%
-              </td>
-              <td align="left">
-               24.51%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -0.5
-              </td>
-              <td align="left">
-               30.85%
-              </td>
-              <td align="left">
-               30.50%
-              </td>
-              <td align="left">
-               30.15%
-              </td>
-              <td align="left">
-               29.81%
-              </td>
-              <td align="left">
-               29.46%
-              </td>
-              <td align="left">
-               29.12%
-              </td>
-              <td align="left">
-               28.77%
-              </td>
-              <td align="left">
-               28.43%
-              </td>
-              <td align="left">
-               28.10%
-              </td>
-              <td align="left">
-               27.76%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -0.4
-              </td>
-              <td align="left">
-               34.46%
-              </td>
-              <td align="left">
-               34.09%
-              </td>
-              <td align="left">
-               33.72%
-              </td>
-              <td align="left">
-               33.36%
-              </td>
-              <td align="left">
-               33.00%
-              </td>
-              <td align="left">
-               32.64%
-              </td>
-              <td align="left">
-               32.28%
-              </td>
-              <td align="left">
-               31.92%
-              </td>
-              <td align="left">
-               31.56%
-              </td>
-              <td align="left">
-               31.21%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -0.3
-              </td>
-              <td align="left">
-               38.21%
-              </td>
-              <td align="left">
-               37.83%
-              </td>
-              <td align="left">
-               37.45%
-              </td>
-              <td align="left">
-               37.07%
-              </td>
-              <td align="left">
-               36.69%
-              </td>
-              <td align="left">
-               36.32%
-              </td>
-              <td align="left">
-               35.94%
-              </td>
-              <td align="left">
-               35.57%
-              </td>
-              <td align="left">
-               35.20%
-              </td>
-              <td align="left">
-               34.83%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -0.2
-              </td>
-              <td align="left">
-               42.07%
-              </td>
-              <td align="left">
-               41.68%
-              </td>
-              <td align="left">
-               41.29%
-              </td>
-              <td align="left">
-               40.91%
-              </td>
-              <td align="left">
-               40.52%
-              </td>
-              <td align="left">
-               40.13%
-              </td>
-              <td align="left">
-               39.74%
-              </td>
-              <td align="left">
-               39.36%
-              </td>
-              <td align="left">
-               38.97%
-              </td>
-              <td align="left">
-               38.59%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -0.1
-              </td>
-              <td align="left">
-               46.02%
-              </td>
-              <td align="left">
-               45.62%
-              </td>
-              <td align="left">
-               45.22%
-              </td>
-              <td align="left">
-               44.83%
-              </td>
-              <td align="left">
-               44.43%
-              </td>
-              <td align="left">
-               44.04%
-              </td>
-              <td align="left">
-               43.64%
-              </td>
-              <td align="left">
-               43.25%
-              </td>
-              <td align="left">
-               42.86%
-              </td>
-              <td align="left">
-               42.47%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               -0.0
-              </td>
-              <td align="left">
-               50.00%
-              </td>
-              <td align="left">
-               49.60%
-              </td>
-              <td align="left">
-               49.20%
-              </td>
-              <td align="left">
-               48.80%
-              </td>
-              <td align="left">
-               48.40%
-              </td>
-              <td align="left">
-               48.01%
-              </td>
-              <td align="left">
-               47.61%
-              </td>
-              <td align="left">
-               47.21%
-              </td>
-              <td align="left">
-               46.81%
-              </td>
-              <td align="left">
-               46.41%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               0.0
-              </td>
-              <td align="left">
-               50.00%
-              </td>
-              <td align="left">
-               50.40%
-              </td>
-              <td align="left">
-               50.80%
-              </td>
-              <td align="left">
-               51.20%
-              </td>
-              <td align="left">
-               51.60%
-              </td>
-              <td align="left">
-               51.99%
-              </td>
-              <td align="left">
-               52.39%
-              </td>
-              <td align="left">
-               52.79%
-              </td>
-              <td align="left">
-               53.19%
-              </td>
-              <td align="left">
-               53.59%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               0.1
-              </td>
-              <td align="left">
-               53.98%
-              </td>
-              <td align="left">
-               54.38%
-              </td>
-              <td align="left">
-               54.78%
-              </td>
-              <td align="left">
-               55.17%
-              </td>
-              <td align="left">
-               55.57%
-              </td>
-              <td align="left">
-               55.96%
-              </td>
-              <td align="left">
-               56.36%
-              </td>
-              <td align="left">
-               56.75%
-              </td>
-              <td align="left">
-               57.14%
-              </td>
-              <td align="left">
-               57.54%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               0.2
-              </td>
-              <td align="left">
-               57.93%
-              </td>
-              <td align="left">
-               58.32%
-              </td>
-              <td align="left">
-               58.71%
-              </td>
-              <td align="left">
-               59.10%
-              </td>
-              <td align="left">
-               59.48%
-              </td>
-              <td align="left">
-               59.87%
-              </td>
-              <td align="left">
-               60.26%
-              </td>
-              <td align="left">
-               60.64%
-              </td>
-              <td align="left">
-               61.03%
-              </td>
-              <td align="left">
-               61.41%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               0.3
-              </td>
-              <td align="left">
-               61.79%
-              </td>
-              <td align="left">
-               62.17%
-              </td>
-              <td align="left">
-               62.55%
-              </td>
-              <td align="left">
-               62.93%
-              </td>
-              <td align="left">
-               63.31%
-              </td>
-              <td align="left">
-               63.68%
-              </td>
-              <td align="left">
-               64.06%
-              </td>
-              <td align="left">
-               64.43%
-              </td>
-              <td align="left">
-               64.80%
-              </td>
-              <td align="left">
-               65.17%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               0.4
-              </td>
-              <td align="left">
-               65.54%
-              </td>
-              <td align="left">
-               65.91%
-              </td>
-              <td align="left">
-               66.28%
-              </td>
-              <td align="left">
-               66.64%
-              </td>
-              <td align="left">
-               67.00%
-              </td>
-              <td align="left">
-               67.36%
-              </td>
-              <td align="left">
-               67.72%
-              </td>
-              <td align="left">
-               68.08%
-              </td>
-              <td align="left">
-               68.44%
-              </td>
-              <td align="left">
-               68.79%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               0.5
-              </td>
-              <td align="left">
-               69.15%
-              </td>
-              <td align="left">
-               69.50%
-              </td>
-              <td align="left">
-               69.85%
-              </td>
-              <td align="left">
-               70.19%
-              </td>
-              <td align="left">
-               70.54%
-              </td>
-              <td align="left">
-               70.88%
-              </td>
-              <td align="left">
-               71.23%
-              </td>
-              <td align="left">
-               71.57%
-              </td>
-              <td align="left">
-               71.90%
-              </td>
-              <td align="left">
-               72.24%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               0.6
-              </td>
-              <td align="left">
-               72.58%
-              </td>
-              <td align="left">
-               72.91%
-              </td>
-              <td align="left">
-               73.24%
-              </td>
-              <td align="left">
-               73.57%
-              </td>
-              <td align="left">
-               73.89%
-              </td>
-              <td align="left">
-               74.22%
-              </td>
-              <td align="left">
-               74.54%
-              </td>
-              <td align="left">
-               74.86%
-              </td>
-              <td align="left">
-               75.18%
-              </td>
-              <td align="left">
-               75.49%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               0.7
-              </td>
-              <td align="left">
-               75.80%
-              </td>
-              <td align="left">
-               76.12%
-              </td>
-              <td align="left">
-               76.42%
-              </td>
-              <td align="left">
-               76.73%
-              </td>
-              <td align="left">
-               77.04%
-              </td>
-              <td align="left">
-               77.34%
-              </td>
-              <td align="left">
-               77.64%
-              </td>
-              <td align="left">
-               77.94%
-              </td>
-              <td align="left">
-               78.23%
-              </td>
-              <td align="left">
-               78.52%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               0.8
-              </td>
-              <td align="left">
-               78.81%
-              </td>
-              <td align="left">
-               79.10%
-              </td>
-              <td align="left">
-               79.39%
-              </td>
-              <td align="left">
-               79.67%
-              </td>
-              <td align="left">
-               79.96%
-              </td>
-              <td align="left">
-               80.23%
-              </td>
-              <td align="left">
-               80.51%
-              </td>
-              <td align="left">
-               80.79%
-              </td>
-              <td align="left">
-               81.06%
-              </td>
-              <td align="left">
-               81.33%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               0.9
-              </td>
-              <td align="left">
-               81.59%
-              </td>
-              <td align="left">
-               81.86%
-              </td>
-              <td align="left">
-               82.12%
-              </td>
-              <td align="left">
-               82.38%
-              </td>
-              <td align="left">
-               82.64%
-              </td>
-              <td align="left">
-               82.89%
-              </td>
-              <td align="left">
-               83.15%
-              </td>
-              <td align="left">
-               83.40%
-              </td>
-              <td align="left">
-               83.65%
-              </td>
-              <td align="left">
-               83.89%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               1.0
-              </td>
-              <td align="left">
-               84.13%
-              </td>
-              <td align="left">
-               84.38%
-              </td>
-              <td align="left">
-               84.61%
-              </td>
-              <td align="left">
-               84.85%
-              </td>
-              <td align="left">
-               85.08%
-              </td>
-              <td align="left">
-               85.31%
-              </td>
-              <td align="left">
-               85.54%
-              </td>
-              <td align="left">
-               85.77%
-              </td>
-              <td align="left">
-               85.99%
-              </td>
-              <td align="left">
-               86.21%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               1.1
-              </td>
-              <td align="left">
-               86.43%
-              </td>
-              <td align="left">
-               86.65%
-              </td>
-              <td align="left">
-               86.86%
-              </td>
-              <td align="left">
-               87.08%
-              </td>
-              <td align="left">
-               87.29%
-              </td>
-              <td align="left">
-               87.49%
-              </td>
-              <td align="left">
-               87.70%
-              </td>
-              <td align="left">
-               87.90%
-              </td>
-              <td align="left">
-               88.10%
-              </td>
-              <td align="left">
-               88.30%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               1.2
-              </td>
-              <td align="left">
-               88.49%
-              </td>
-              <td align="left">
-               88.69%
-              </td>
-              <td align="left">
-               88.88%
-              </td>
-              <td align="left">
-               89.07%
-              </td>
-              <td align="left">
-               89.25%
-              </td>
-              <td align="left">
-               89.44%
-              </td>
-              <td align="left">
-               89.62%
-              </td>
-              <td align="left">
-               89.80%
-              </td>
-              <td align="left">
-               89.97%
-              </td>
-              <td align="left">
-               90.15%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               1.3
-              </td>
-              <td align="left">
-               90.32%
-              </td>
-              <td align="left">
-               90.49%
-              </td>
-              <td align="left">
-               90.66%
-              </td>
-              <td align="left">
-               90.82%
-              </td>
-              <td align="left">
-               90.99%
-              </td>
-              <td align="left">
-               91.15%
-              </td>
-              <td align="left">
-               91.31%
-              </td>
-              <td align="left">
-               91.47%
-              </td>
-              <td align="left">
-               91.62%
-              </td>
-              <td align="left">
-               91.77%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               1.4
-              </td>
-              <td align="left">
-               91.92%
-              </td>
-              <td align="left">
-               92.07%
-              </td>
-              <td align="left">
-               92.22%
-              </td>
-              <td align="left">
-               92.36%
-              </td>
-              <td align="left">
-               92.51%
-              </td>
-              <td align="left">
-               92.65%
-              </td>
-              <td align="left">
-               92.79%
-              </td>
-              <td align="left">
-               92.92%
-              </td>
-              <td align="left">
-               93.06%
-              </td>
-              <td align="left">
-               93.19%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               1.5
-              </td>
-              <td align="left">
-               93.32%
-              </td>
-              <td align="left">
-               93.45%
-              </td>
-              <td align="left">
-               93.57%
-              </td>
-              <td align="left">
-               93.70%
-              </td>
-              <td align="left">
-               93.82%
-              </td>
-              <td align="left">
-               93.94%
-              </td>
-              <td align="left">
-               94.06%
-              </td>
-              <td align="left">
-               94.18%
-              </td>
-              <td align="left">
-               94.30%
-              </td>
-              <td align="left">
-               94.41%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               1.6
-              </td>
-              <td align="left">
-               94.52%
-              </td>
-              <td align="left">
-               94.63%
-              </td>
-              <td align="left">
-               94.74%
-              </td>
-              <td align="left">
-               94.85%
-              </td>
-              <td align="left">
-               94.95%
-              </td>
-              <td align="left">
-               95.05%
-              </td>
-              <td align="left">
-               95.15%
-              </td>
-              <td align="left">
-               95.25%
-              </td>
-              <td align="left">
-               95.35%
-              </td>
-              <td align="left">
-               95.45%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               1.7
-              </td>
-              <td align="left">
-               95.54%
-              </td>
-              <td align="left">
-               95.64%
-              </td>
-              <td align="left">
-               95.73%
-              </td>
-              <td align="left">
-               95.82%
-              </td>
-              <td align="left">
-               95.91%
-              </td>
-              <td align="left">
-               95.99%
-              </td>
-              <td align="left">
-               96.08%
-              </td>
-              <td align="left">
-               96.16%
-              </td>
-              <td align="left">
-               96.25%
-              </td>
-              <td align="left">
-               96.33%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               1.8
-              </td>
-              <td align="left">
-               96.41%
-              </td>
-              <td align="left">
-               96.49%
-              </td>
-              <td align="left">
-               96.56%
-              </td>
-              <td align="left">
-               96.64%
-              </td>
-              <td align="left">
-               96.71%
-              </td>
-              <td align="left">
-               96.78%
-              </td>
-              <td align="left">
-               96.86%
-              </td>
-              <td align="left">
-               96.93%
-              </td>
-              <td align="left">
-               97.00%
-              </td>
-              <td align="left">
-               97.06%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               1.9
-              </td>
-              <td align="left">
-               97.13%
-              </td>
-              <td align="left">
-               97.19%
-              </td>
-              <td align="left">
-               97.26%
-              </td>
-              <td align="left">
-               97.32%
-              </td>
-              <td align="left">
-               97.38%
-              </td>
-              <td align="left">
-               97.44%
-              </td>
-              <td align="left">
-               97.50%
-              </td>
-              <td align="left">
-               97.56%
-              </td>
-              <td align="left">
-               97.62%
-              </td>
-              <td align="left">
-               97.67%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               2.0
-              </td>
-              <td align="left">
-               97.73%
-              </td>
-              <td align="left">
-               97.78%
-              </td>
-              <td align="left">
-               97.83%
-              </td>
-              <td align="left">
-               97.88%
-              </td>
-              <td align="left">
-               97.93%
-              </td>
-              <td align="left">
-               97.98%
-              </td>
-              <td align="left">
-               98.03%
-              </td>
-              <td align="left">
-               98.08%
-              </td>
-              <td align="left">
-               98.12%
-              </td>
-              <td align="left">
-               98.17%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               2.1
-              </td>
-              <td align="left">
-               98.21%
-              </td>
-              <td align="left">
-               98.26%
-              </td>
-              <td align="left">
-               98.30%
-              </td>
-              <td align="left">
-               98.34%
-              </td>
-              <td align="left">
-               98.38%
-              </td>
-              <td align="left">
-               98.42%
-              </td>
-              <td align="left">
-               98.46%
-              </td>
-              <td align="left">
-               98.50%
-              </td>
-              <td align="left">
-               98.54%
-              </td>
-              <td align="left">
-               98.57%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               2.2
-              </td>
-              <td align="left">
-               98.61%
-              </td>
-              <td align="left">
-               98.65%
-              </td>
-              <td align="left">
-               98.68%
-              </td>
-              <td align="left">
-               98.71%
-              </td>
-              <td align="left">
-               98.75%
-              </td>
-              <td align="left">
-               98.78%
-              </td>
-              <td align="left">
-               98.81%
-              </td>
-              <td align="left">
-               98.84%
-              </td>
-              <td align="left">
-               98.87%
-              </td>
-              <td align="left">
-               98.90%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               2.3
-              </td>
-              <td align="left">
-               98.93%
-              </td>
-              <td align="left">
-               98.96%
-              </td>
-              <td align="left">
-               98.98%
-              </td>
-              <td align="left">
-               99.01%
-              </td>
-              <td align="left">
-               99.04%
-              </td>
-              <td align="left">
-               99.06%
-              </td>
-              <td align="left">
-               99.09%
-              </td>
-              <td align="left">
-               99.11%
-              </td>
-              <td align="left">
-               99.13%
-              </td>
-              <td align="left">
-               99.16%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               2.4
-              </td>
-              <td align="left">
-               99.18%
-              </td>
-              <td align="left">
-               99.20%
-              </td>
-              <td align="left">
-               99.22%
-              </td>
-              <td align="left">
-               99.25%
-              </td>
-              <td align="left">
-               99.27%
-              </td>
-              <td align="left">
-               99.29%
-              </td>
-              <td align="left">
-               99.31%
-              </td>
-              <td align="left">
-               99.32%
-              </td>
-              <td align="left">
-               99.34%
-              </td>
-              <td align="left">
-               99.36%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               2.5
-              </td>
-              <td align="left">
-               99.38%
-              </td>
-              <td align="left">
-               99.40%
-              </td>
-              <td align="left">
-               99.41%
-              </td>
-              <td align="left">
-               99.43%
-              </td>
-              <td align="left">
-               99.45%
-              </td>
-              <td align="left">
-               99.46%
-              </td>
-              <td align="left">
-               99.48%
-              </td>
-              <td align="left">
-               99.49%
-              </td>
-              <td align="left">
-               99.51%
-              </td>
-              <td align="left">
-               99.52%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               2.6
-              </td>
-              <td align="left">
-               99.53%
-              </td>
-              <td align="left">
-               99.55%
-              </td>
-              <td align="left">
-               99.56%
-              </td>
-              <td align="left">
-               99.57%
-              </td>
-              <td align="left">
-               99.59%
-              </td>
-              <td align="left">
-               99.60%
-              </td>
-              <td align="left">
-               99.61%
-              </td>
-              <td align="left">
-               99.62%
-              </td>
-              <td align="left">
-               99.63%
-              </td>
-              <td align="left">
-               99.64%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               2.7
-              </td>
-              <td align="left">
-               99.65%
-              </td>
-              <td align="left">
-               99.66%
-              </td>
-              <td align="left">
-               99.67%
-              </td>
-              <td align="left">
-               99.68%
-              </td>
-              <td align="left">
-               99.69%
-              </td>
-              <td align="left">
-               99.70%
-              </td>
-              <td align="left">
-               99.71%
-              </td>
-              <td align="left">
-               99.72%
-              </td>
-              <td align="left">
-               99.73%
-              </td>
-              <td align="left">
-               99.74%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               2.8
-              </td>
-              <td align="left">
-               99.74%
-              </td>
-              <td align="left">
-               99.75%
-              </td>
-              <td align="left">
-               99.76%
-              </td>
-              <td align="left">
-               99.77%
-              </td>
-              <td align="left">
-               99.77%
-              </td>
-              <td align="left">
-               99.78%
-              </td>
-              <td align="left">
-               99.79%
-              </td>
-              <td align="left">
-               99.80%
-              </td>
-              <td align="left">
-               99.80%
-              </td>
-              <td align="left">
-               99.81%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               2.9
-              </td>
-              <td align="left">
-               99.81%
-              </td>
-              <td align="left">
-               99.82%
-              </td>
-              <td align="left">
-               99.83%
-              </td>
-              <td align="left">
-               99.83%
-              </td>
-              <td align="left">
-               99.84%
-              </td>
-              <td align="left">
-               99.84%
-              </td>
-              <td align="left">
-               99.85%
-              </td>
-              <td align="left">
-               99.85%
-              </td>
-              <td align="left">
-               99.86%
-              </td>
-              <td align="left">
-               99.86%
-              </td>
-             </tr>
-             <tr>
-              <td align="left">
-               3.0
-              </td>
-              <td align="left">
-               99.87%
-              </td>
-              <td align="left">
-               99.87%
-              </td>
-              <td align="left">
-               99.87%
-              </td>
-              <td align="left">
-               99.88%
-              </td>
-              <td align="left">
-               99.88%
-              </td>
-              <td align="left">
-               99.89%
-              </td>
-              <td align="left">
-               99.89%
-              </td>
-              <td align="left">
-               99.89%
-              </td>
-              <td align="left">
-               99.90%
-              </td>
-              <td align="left">
-               99.90%
-              </td>
-             </tr>
-            </tbody>
-           </table>
-          </center>
-         </div>
-        </div>
-        <span class="calculatorVendorId" id="T1693329012">
-        </span>
-       </div>
-       <div id="printDisclaimer">
-        <b>
-         Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.
-        </b>
-        <p>
-         Information on this page may not appear correctly if printed.
-        </p>
-       </div>
-       <div id="disclaimerCalculator">
-        <div class="medCalcFontTwo">
-         <p class="header">
-          Legal Notices and Disclaimer
-         </p>
-         <p>
-          All information contained in and produced by the EBMcalc system is provided
+</li>
+</ul>
+</div>
+<br/> <br/>
+<span class="medCalcFontRef"><b>Equations used</b></span>
+<br/> <br/>
+<center>
+<div id="calc_equation">
+<table cellpadding="10" cellspacing="0" summary="EBMcalc Table"><tbody><tr><td class="medCalcFormuliBox"><span class="medCalcFontFormuli">Z-score = ((Head_Circumference/M)<sup>L</sup> - 1) / (L * S)</span></td></tr><tr><td class="medCalcFormuliBox"><span class="medCalcFontFormuli">Percentile = ZtoPercentile(Z-score)</span></td></tr></tbody></table><br/> <br/>
+</div> </center>
+<div id="calc_tables">
+<br/> <br/>
+<span class="medCalcFontRef"><b>Examples</b></span>
+<br/> <br/>
+<center>
+<table border="1" cellpadding="5" cellspacing="0" class="medCalcFontOne" summary="EBMcalc Table" width="40%">
+<tbody><tr bgcolor="#cccccc" id="T1HR">
+<td align="center" id="T1HR_C1"><b>Z-score</b></td><td align="center" id="T1HR_C2"><b>Percentile equivalent</b></td></tr>
+<tr><td align="center" id="T1CellR1C1"><div id="T1R1C1">- 3.0</div></td><td align="center" id="T1CellR1C2"><div id="T1R1C2">0.3</div></td></tr>
+<tr><td align="center" id="T1CellR2C1"><div id="T1R2C1">- 2.0</div></td><td align="center" id="T1CellR2C2"><div id="T1R2C2">2.5</div></td></tr>
+<tr><td align="center" id="T1CellR3C1"><div id="T1R3C1">+ 2.0</div></td><td align="center" id="T1CellR3C2"><div id="T1R3C2">97.5</div></td></tr>
+<tr><td align="center" id="T1CellR4C1"><div id="T1R4C1">+ 3.0</div></td><td align="center" id="T1CellR4C2"><div id="T1R4C2">99.7</div></td></tr>
+</tbody></table></center>
+</div>
+<br/> <br/>
+<div id="calc_refs">
+<span class="medCalcFontRef"><b>References</b></span>
+<ol>
+<li>Centers for Disease Control and Prevention, National Center for Health Statistics. Clinical growth charts.
+<a href="https://www.cdc.gov/growthcharts/clinical_charts.htm" style="color: green; text-decoration: none;" target="_blank">
+https://www.cdc.gov/growthcharts/clinical_charts.htm</a> (Accessed on June 26, 2023). </li>
+</ol>
+</div>
+</form>
+<div class="calc_tables_supp">
+<br/> <br/>
+<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
+<td align="left" bgcolor="#eeeeee">
+<span class="medCalcFontTitleBox">
+
+LMS table: Head circumference-for-age percentiles, females 0 to 36 months, CDC growth reference (United States)
+</span></td></tr></tbody></table><br/> <br/>
+<center>
+<table border="1" cellpadding="4" cellspacing="0" class="medCalcFontOne" summary="EBMcalc Table" width="60%">
+<tbody><tr>
+<td align="center" bgcolor="#eeeeee"><span class="medCalcFontOneBold">Age [months]</span></td>
+<td align="center" bgcolor="#eeeeee"><span class="medCalcFontOneBold">Power [L]</span></td>
+<td align="center" bgcolor="#eeeeee"><span class="medCalcFontOneBold">Median [M]</span></td>
+<td align="center" bgcolor="#eeeeee"><span class="medCalcFontOneBold">Variation [S]</span></td>
+</tr>
+<tr><td align="left">0</td>
+<td align="left">-1.298749689</td>
+<td align="left">34.7115617</td>
+<td align="left">0.046905108</td>
+</tr>
+<tr><td align="left">0.5</td>
+<td align="left">-1.440271514</td>
+<td align="left">36.03453876</td>
+<td align="left">0.042999604</td>
+</tr>
+<tr><td align="left">1.5</td>
+<td align="left">-1.581016348</td>
+<td align="left">37.97671987</td>
+<td align="left">0.038067862</td>
+</tr>
+<tr><td align="left">2.5</td>
+<td align="left">-1.593136386</td>
+<td align="left">39.3801263</td>
+<td align="left">0.035079612</td>
+</tr>
+<tr><td align="left">3.5</td>
+<td align="left">-1.521492427</td>
+<td align="left">40.46773733</td>
+<td align="left">0.033096443</td>
+</tr>
+<tr><td align="left">4.5</td>
+<td align="left">-1.394565915</td>
+<td align="left">41.34841008</td>
+<td align="left">0.03170963</td>
+</tr>
+<tr><td align="left">5.5</td>
+<td align="left">-1.231713389</td>
+<td align="left">42.0833507</td>
+<td align="left">0.030709039</td>
+</tr>
+<tr><td align="left">6.5</td>
+<td align="left">-1.046582628</td>
+<td align="left">42.71033603</td>
+<td align="left">0.029974303</td>
+</tr>
+<tr><td align="left">7.5</td>
+<td align="left">-0.848932692</td>
+<td align="left">43.25428882</td>
+<td align="left">0.029430992</td>
+</tr>
+<tr><td align="left">8.5</td>
+<td align="left">-0.645779124</td>
+<td align="left">43.73249646</td>
+<td align="left">0.029030379</td>
+</tr>
+<tr><td align="left">9.5</td>
+<td align="left">-0.442165412</td>
+<td align="left">44.15742837</td>
+<td align="left">0.028739112</td>
+</tr>
+<tr><td align="left">10.5</td>
+<td align="left">-0.24163206</td>
+<td align="left">44.53836794</td>
+<td align="left">0.028533537</td>
+</tr>
+<tr><td align="left">11.5</td>
+<td align="left">-0.046673786</td>
+<td align="left">44.88240562</td>
+<td align="left">0.028396382</td>
+</tr>
+<tr><td align="left">12.5</td>
+<td align="left">0.141031094</td>
+<td align="left">45.19507651</td>
+<td align="left">0.028314722</td>
+</tr>
+<tr><td align="left">13.5</td>
+<td align="left">0.320403169</td>
+<td align="left">45.48078147</td>
+<td align="left">0.028278682</td>
+</tr>
+<tr><td align="left">14.5</td>
+<td align="left">0.490807133</td>
+<td align="left">45.74307527</td>
+<td align="left">0.028280585</td>
+</tr>
+<tr><td align="left">15.5</td>
+<td align="left">0.65193505</td>
+<td align="left">45.98486901</td>
+<td align="left">0.028314363</td>
+</tr>
+<tr><td align="left">16.5</td>
+<td align="left">0.803718086</td>
+<td align="left">46.20857558</td>
+<td align="left">0.028375159</td>
+</tr>
+<tr><td align="left">17.5</td>
+<td align="left">0.946259679</td>
+<td align="left">46.41621635</td>
+<td align="left">0.028459033</td>
+</tr>
+<tr><td align="left">18.5</td>
+<td align="left">1.079784984</td>
+<td align="left">46.60950084</td>
+<td align="left">0.028562759</td>
+</tr>
+<tr><td align="left">19.5</td>
+<td align="left">1.204602687</td>
+<td align="left">46.78988722</td>
+<td align="left">0.028683666</td>
+</tr>
+<tr><td align="left">20.5</td>
+<td align="left">1.321076285</td>
+<td align="left">46.95862881</td>
+<td align="left">0.028819525</td>
+</tr>
+<tr><td align="left">21.5</td>
+<td align="left">1.429602576</td>
+<td align="left">47.11681039</td>
+<td align="left">0.028968459</td>
+</tr>
+<tr><td align="left">22.5</td>
+<td align="left">1.530595677</td>
+<td align="left">47.26537682</td>
+<td align="left">0.029128879</td>
+</tr>
+<tr><td align="left">23.5</td>
+<td align="left">1.624475262</td>
+<td align="left">47.40515585</td>
+<td align="left">0.029299426</td>
+</tr>
+<tr><td align="left">24.5</td>
+<td align="left">1.71165803</td>
+<td align="left">47.53687649</td>
+<td align="left">0.029478937</td>
+</tr>
+<tr><td align="left">25.5</td>
+<td align="left">1.792551616</td>
+<td align="left">47.66118396</td>
+<td align="left">0.029666406</td>
+</tr>
+<tr><td align="left">26.5</td>
+<td align="left">1.867550375</td>
+<td align="left">47.77865186</td>
+<td align="left">0.02986096</td>
+</tr>
+<tr><td align="left">27.5</td>
+<td align="left">1.93703258</td>
+<td align="left">47.8897923</td>
+<td align="left">0.030061839</td>
+</tr>
+<tr><td align="left">28.5</td>
+<td align="left">2.001358669</td>
+<td align="left">47.99506422</td>
+<td align="left">0.030268375</td>
+</tr>
+<tr><td align="left">29.5</td>
+<td align="left">2.060870301</td>
+<td align="left">48.09488048</td>
+<td align="left">0.030479985</td>
+</tr>
+<tr><td align="left">30.5</td>
+<td align="left">2.115889982</td>
+<td align="left">48.18961365</td>
+<td align="left">0.03069615</td>
+</tr>
+<tr><td align="left">31.5</td>
+<td align="left">2.16672113</td>
+<td align="left">48.2796011</td>
+<td align="left">0.030916413</td>
+</tr>
+<tr><td align="left">32.5</td>
+<td align="left">2.21364844</td>
+<td align="left">48.36514917</td>
+<td align="left">0.031140368</td>
+</tr>
+<tr><td align="left">33.5</td>
+<td align="left">2.256943216</td>
+<td align="left">48.44653703</td>
+<td align="left">0.031367651</td>
+</tr>
+<tr><td align="left">34.5</td>
+<td align="left">2.296844024</td>
+<td align="left">48.52401894</td>
+<td align="left">0.031597939</td>
+</tr>
+<tr><td align="left">35.5</td>
+<td align="left">2.333589434</td>
+<td align="left">48.59782828</td>
+<td align="left">0.031830942</td>
+</tr>
+<tr><td align="left">36</td>
+<td align="left">2.350847202</td>
+<td align="left">48.63342328</td>
+<td align="left">0.031948378</td>
+</tr>
+</tbody></table></center><br/> <br/>
+<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
+<td align="left" bgcolor="#eeeeee">
+<span class="medCalcFontTitleBox">
+
+LMS table: Head circumference-for-age percentiles, males 0 to 36 months, CDC growth reference (United States)
+</span></td></tr></tbody></table><br/> <br/>
+<center>
+<table border="1" cellpadding="4" cellspacing="0" class="medCalcFontOne" summary="EBMcalc Table" width="60%">
+<tbody><tr>
+<td align="center" bgcolor="#eeeeee"><span class="medCalcFontOneBold">Age [months]</span></td>
+<td align="center" bgcolor="#eeeeee"><span class="medCalcFontOneBold">Power [L]</span></td>
+<td align="center" bgcolor="#eeeeee"><span class="medCalcFontOneBold">Median [M]</span></td>
+<td align="center" bgcolor="#eeeeee"><span class="medCalcFontOneBold">Variation [S]</span></td>
+</tr>
+<tr><td align="left">0</td>
+<td align="left">4.427825037</td>
+<td align="left">35.81366835</td>
+<td align="left">0.052172542</td>
+</tr>
+<tr><td align="left">0.5</td>
+<td align="left">4.310927464</td>
+<td align="left">37.19361054</td>
+<td align="left">0.047259148</td>
+</tr>
+<tr><td align="left">1.5</td>
+<td align="left">3.869576802</td>
+<td align="left">39.20742929</td>
+<td align="left">0.040947903</td>
+</tr>
+<tr><td align="left">2.5</td>
+<td align="left">3.305593039</td>
+<td align="left">40.65233195</td>
+<td align="left">0.037027722</td>
+</tr>
+<tr><td align="left">3.5</td>
+<td align="left">2.720590297</td>
+<td align="left">41.76516959</td>
+<td align="left">0.034364245</td>
+</tr>
+<tr><td align="left">4.5</td>
+<td align="left">2.16804824</td>
+<td align="left">42.66116148</td>
+<td align="left">0.032462175</td>
+</tr>
+<tr><td align="left">5.5</td>
+<td align="left">1.675465689</td>
+<td align="left">43.40488731</td>
+<td align="left">0.031064702</td>
+</tr>
+<tr><td align="left">6.5</td>
+<td align="left">1.255160322</td>
+<td align="left">44.03609923</td>
+<td align="left">0.03002267</td>
+</tr>
+<tr><td align="left">7.5</td>
+<td align="left">0.91054114</td>
+<td align="left">44.58096912</td>
+<td align="left">0.029242173</td>
+</tr>
+<tr><td align="left">8.5</td>
+<td align="left">0.639510474</td>
+<td align="left">45.05761215</td>
+<td align="left">0.028660454</td>
+</tr>
+<tr><td align="left">9.5</td>
+<td align="left">0.436978864</td>
+<td align="left">45.4790756</td>
+<td align="left">0.0282336</td>
+</tr>
+<tr><td align="left">10.5</td>
+<td align="left">0.296275856</td>
+<td align="left">45.85505706</td>
+<td align="left">0.027929764</td>
+</tr>
+<tr><td align="left">11.5</td>
+<td align="left">0.210107251</td>
+<td align="left">46.19295427</td>
+<td align="left">0.027725179</td>
+</tr>
+<tr><td align="left">12.5</td>
+<td align="left">0.171147024</td>
+<td align="left">46.49853438</td>
+<td align="left">0.027601686</td>
+</tr>
+<tr><td align="left">13.5</td>
+<td align="left">0.172393886</td>
+<td align="left">46.77637684</td>
+<td align="left">0.027545148</td>
+</tr>
+<tr><td align="left">14.5</td>
+<td align="left">0.207371541</td>
+<td align="left">47.03017599</td>
+<td align="left">0.027544382</td>
+</tr>
+<tr><td align="left">15.5</td>
+<td align="left">0.270226126</td>
+<td align="left">47.2629533</td>
+<td align="left">0.027590417</td>
+</tr>
+<tr><td align="left">16.5</td>
+<td align="left">0.355757274</td>
+<td align="left">47.47720989</td>
+<td align="left">0.02767598</td>
+</tr>
+<tr><td align="left">17.5</td>
+<td align="left">0.459407627</td>
+<td align="left">47.67503833</td>
+<td align="left">0.027795115</td>
+</tr>
+<tr><td align="left">18.5</td>
+<td align="left">0.577227615</td>
+<td align="left">47.85820606</td>
+<td align="left">0.0279429</td>
+</tr>
+<tr><td align="left">19.5</td>
+<td align="left">0.705826778</td>
+<td align="left">48.02821867</td>
+<td align="left">0.028115241</td>
+</tr>
+<tr><td align="left">20.5</td>
+<td align="left">0.842319055</td>
+<td align="left">48.18636864</td>
+<td align="left">0.028308707</td>
+</tr>
+<tr><td align="left">21.5</td>
+<td align="left">0.984266833</td>
+<td align="left">48.3337732</td>
+<td align="left">0.028520407</td>
+</tr>
+<tr><td align="left">22.5</td>
+<td align="left">1.129626698</td>
+<td align="left">48.47140432</td>
+<td align="left">0.028747896</td>
+</tr>
+<tr><td align="left">23.5</td>
+<td align="left">1.276691223</td>
+<td align="left">48.60011223</td>
+<td align="left">0.028989089</td>
+</tr>
+<tr><td align="left">24.5</td>
+<td align="left">1.424084853</td>
+<td align="left">48.72064621</td>
+<td align="left">0.029242207</td>
+</tr>
+<tr><td align="left">25.5</td>
+<td align="left">1.570621291</td>
+<td align="left">48.83366629</td>
+<td align="left">0.029505723</td>
+</tr>
+<tr><td align="left">26.5</td>
+<td align="left">1.715393998</td>
+<td align="left">48.93976089</td>
+<td align="left">0.029778323</td>
+</tr>
+<tr><td align="left">27.5</td>
+<td align="left">1.857652984</td>
+<td align="left">49.03945383</td>
+<td align="left">0.030058871</td>
+</tr>
+<tr><td align="left">28.5</td>
+<td align="left">1.996810563</td>
+<td align="left">49.13321432</td>
+<td align="left">0.030346384</td>
+</tr>
+<tr><td align="left">29.5</td>
+<td align="left">2.132411346</td>
+<td align="left">49.22146409</td>
+<td align="left">0.030640006</td>
+</tr>
+<tr><td align="left">30.5</td>
+<td align="left">2.264111009</td>
+<td align="left">49.30458348</td>
+<td align="left">0.030938992</td>
+</tr>
+<tr><td align="left">31.5</td>
+<td align="left">2.391658052</td>
+<td align="left">49.38291658</td>
+<td align="left">0.031242693</td>
+</tr>
+<tr><td align="left">32.5</td>
+<td align="left">2.514878222</td>
+<td align="left">49.45677569</td>
+<td align="left">0.031550537</td>
+</tr>
+<tr><td align="left">33.5</td>
+<td align="left">2.633661226</td>
+<td align="left">49.526445</td>
+<td align="left">0.031862026</td>
+</tr>
+<tr><td align="left">34.5</td>
+<td align="left">2.747949445</td>
+<td align="left">49.59218385</td>
+<td align="left">0.03217672</td>
+</tr>
+<tr><td align="left">35.5</td>
+<td align="left">2.857728375</td>
+<td align="left">49.65422952</td>
+<td align="left">0.032494231</td>
+</tr>
+<tr><td align="left">36</td>
+<td align="left">2.910932095</td>
+<td align="left">49.68393611</td>
+<td align="left">0.032653934</td>
+</tr>
+</tbody></table></center>
+<br/> <br/>
+<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
+<td align="left" bgcolor="#eeeeee">
+<span class="medCalcFontTitleBox">
+
+LMS table: Normal table percentiles for Z-score
+</span></td></tr></tbody></table><br/> <br/>
+<center>
+<table border="1" cellpadding="4" cellspacing="0" class="medCalcFontOne" summary="EBMcalc Table" width="60%">
+<tbody><tr>
+<td align="center" bgcolor="#eeeeee"><span class="medCalcFontOneBold">Z</span></td>
+<td align="center" bgcolor="#eeeeee"><span class="medCalcFontOneBold">0</span></td>
+<td align="center" bgcolor="#eeeeee"><span class="medCalcFontOneBold">1</span></td>
+<td align="center" bgcolor="#eeeeee"><span class="medCalcFontOneBold">2</span></td>
+<td align="center" bgcolor="#eeeeee"><span class="medCalcFontOneBold">3</span></td>
+<td align="center" bgcolor="#eeeeee"><span class="medCalcFontOneBold">4</span></td>
+<td align="center" bgcolor="#eeeeee"><span class="medCalcFontOneBold">5</span></td>
+<td align="center" bgcolor="#eeeeee"><span class="medCalcFontOneBold">6</span></td>
+<td align="center" bgcolor="#eeeeee"><span class="medCalcFontOneBold">7</span></td>
+<td align="center" bgcolor="#eeeeee"><span class="medCalcFontOneBold">8</span></td>
+<td align="center" bgcolor="#eeeeee"><span class="medCalcFontOneBold">9</span></td>
+</tr>
+<tr><td align="left">-3.0</td>
+<td align="left">0.13%</td>
+<td align="left">0.13%</td>
+<td align="left">0.13%</td>
+<td align="left">0.12%</td>
+<td align="left">0.12%</td>
+<td align="left">0.11%</td>
+<td align="left">0.11%</td>
+<td align="left">0.11%</td>
+<td align="left">0.10%</td>
+<td align="left">0.10%</td>
+</tr>
+<tr><td align="left">-2.9</td>
+<td align="left">0.19%</td>
+<td align="left">0.18%</td>
+<td align="left">0.18%</td>
+<td align="left">0.17%</td>
+<td align="left">0.16%</td>
+<td align="left">0.16%</td>
+<td align="left">0.15%</td>
+<td align="left">0.15%</td>
+<td align="left">0.14%</td>
+<td align="left">0.14%</td>
+</tr>
+<tr><td align="left">-2.8</td>
+<td align="left">0.26%</td>
+<td align="left">0.25%</td>
+<td align="left">0.24%</td>
+<td align="left">0.23%</td>
+<td align="left">0.23%</td>
+<td align="left">0.22%</td>
+<td align="left">0.21%</td>
+<td align="left">0.21%</td>
+<td align="left">0.20%</td>
+<td align="left">0.19%</td>
+</tr>
+<tr><td align="left">-2.7</td>
+<td align="left">0.35%</td>
+<td align="left">0.34%</td>
+<td align="left">0.33%</td>
+<td align="left">0.32%</td>
+<td align="left">0.31%</td>
+<td align="left">0.30%</td>
+<td align="left">0.29%</td>
+<td align="left">0.28%</td>
+<td align="left">0.27%</td>
+<td align="left">0.26%</td>
+</tr>
+<tr><td align="left">-2.6</td>
+<td align="left">0.47%</td>
+<td align="left">0.45%</td>
+<td align="left">0.44%</td>
+<td align="left">0.43%</td>
+<td align="left">0.41%</td>
+<td align="left">0.40%</td>
+<td align="left">0.39%</td>
+<td align="left">0.38%</td>
+<td align="left">0.37%</td>
+<td align="left">0.36%</td>
+</tr>
+<tr><td align="left">-2.5</td>
+<td align="left">0.62%</td>
+<td align="left">0.60%</td>
+<td align="left">0.59%</td>
+<td align="left">0.57%</td>
+<td align="left">0.55%</td>
+<td align="left">0.54%</td>
+<td align="left">0.52%</td>
+<td align="left">0.51%</td>
+<td align="left">0.49%</td>
+<td align="left">0.48%</td>
+</tr>
+<tr><td align="left">-2.4</td>
+<td align="left">0.82%</td>
+<td align="left">0.80%</td>
+<td align="left">0.78%</td>
+<td align="left">0.75%</td>
+<td align="left">0.73%</td>
+<td align="left">0.71%</td>
+<td align="left">0.70%</td>
+<td align="left">0.68%</td>
+<td align="left">0.66%</td>
+<td align="left">0.64%</td>
+</tr>
+<tr><td align="left">-2.3</td>
+<td align="left">1.07%</td>
+<td align="left">1.04%</td>
+<td align="left">1.02%</td>
+<td align="left">0.99%</td>
+<td align="left">0.96%</td>
+<td align="left">0.94%</td>
+<td align="left">0.91%</td>
+<td align="left">0.89%</td>
+<td align="left">0.87%</td>
+<td align="left">0.84%</td>
+</tr>
+<tr><td align="left">-2.2</td>
+<td align="left">1.39%</td>
+<td align="left">1.36%</td>
+<td align="left">1.32%</td>
+<td align="left">1.29%</td>
+<td align="left">1.26%</td>
+<td align="left">1.22%</td>
+<td align="left">1.19%</td>
+<td align="left">1.16%</td>
+<td align="left">1.13%</td>
+<td align="left">1.10%</td>
+</tr>
+<tr><td align="left">-2.1</td>
+<td align="left">1.79%</td>
+<td align="left">1.74%</td>
+<td align="left">1.70%</td>
+<td align="left">1.66%</td>
+<td align="left">1.62%</td>
+<td align="left">1.58%</td>
+<td align="left">1.54%</td>
+<td align="left">1.50%</td>
+<td align="left">1.46%</td>
+<td align="left">1.43%</td>
+</tr>
+<tr><td align="left">-2.0</td>
+<td align="left">2.28%</td>
+<td align="left">2.22%</td>
+<td align="left">2.17%</td>
+<td align="left">2.12%</td>
+<td align="left">2.07%</td>
+<td align="left">2.02%</td>
+<td align="left">1.97%</td>
+<td align="left">1.92%</td>
+<td align="left">1.88%</td>
+<td align="left">1.83%</td>
+</tr>
+<tr><td align="left">-1.9</td>
+<td align="left">2.87%</td>
+<td align="left">2.81%</td>
+<td align="left">2.74%</td>
+<td align="left">2.68%</td>
+<td align="left">2.62%</td>
+<td align="left">2.56%</td>
+<td align="left">2.50%</td>
+<td align="left">2.44%</td>
+<td align="left">2.39%</td>
+<td align="left">2.33%</td>
+</tr>
+<tr><td align="left">-1.8</td>
+<td align="left">3.59%</td>
+<td align="left">3.52%</td>
+<td align="left">3.44%</td>
+<td align="left">3.36%</td>
+<td align="left">3.29%</td>
+<td align="left">3.22%</td>
+<td align="left">3.14%</td>
+<td align="left">3.07%</td>
+<td align="left">3.01%</td>
+<td align="left">2.94%</td>
+</tr>
+<tr><td align="left">-1.7</td>
+<td align="left">4.46%</td>
+<td align="left">4.36%</td>
+<td align="left">4.27%</td>
+<td align="left">4.18%</td>
+<td align="left">4.09%</td>
+<td align="left">4.01%</td>
+<td align="left">3.92%</td>
+<td align="left">3.84%</td>
+<td align="left">3.75%</td>
+<td align="left">3.67%</td>
+</tr>
+<tr><td align="left">-1.6</td>
+<td align="left">5.48%</td>
+<td align="left">5.37%</td>
+<td align="left">5.26%</td>
+<td align="left">5.16%</td>
+<td align="left">5.05%</td>
+<td align="left">4.95%</td>
+<td align="left">4.85%</td>
+<td align="left">4.75%</td>
+<td align="left">4.65%</td>
+<td align="left">4.55%</td>
+</tr>
+<tr><td align="left">-1.5</td>
+<td align="left">6.68%</td>
+<td align="left">6.55%</td>
+<td align="left">6.43%</td>
+<td align="left">6.30%</td>
+<td align="left">6.18%</td>
+<td align="left">6.06%</td>
+<td align="left">5.94%</td>
+<td align="left">5.82%</td>
+<td align="left">5.71%</td>
+<td align="left">5.59%</td>
+</tr>
+<tr><td align="left">-1.4</td>
+<td align="left">8.08%</td>
+<td align="left">7.93%</td>
+<td align="left">7.78%</td>
+<td align="left">7.64%</td>
+<td align="left">7.49%</td>
+<td align="left">7.35%</td>
+<td align="left">7.22%</td>
+<td align="left">7.08%</td>
+<td align="left">6.94%</td>
+<td align="left">6.81%</td>
+</tr>
+<tr><td align="left">-1.3</td>
+<td align="left">9.68%</td>
+<td align="left">9.51%</td>
+<td align="left">9.34%</td>
+<td align="left">9.18%</td>
+<td align="left">9.01%</td>
+<td align="left">8.85%</td>
+<td align="left">8.69%</td>
+<td align="left">8.53%</td>
+<td align="left">8.38%</td>
+<td align="left">8.23%</td>
+</tr>
+<tr><td align="left">-1.2</td>
+<td align="left">11.51%</td>
+<td align="left">11.31%</td>
+<td align="left">11.12%</td>
+<td align="left">10.94%</td>
+<td align="left">10.75%</td>
+<td align="left">10.57%</td>
+<td align="left">10.38%</td>
+<td align="left">10.20%</td>
+<td align="left">10.03%</td>
+<td align="left">9.85%</td>
+</tr>
+<tr><td align="left">-1.1</td>
+<td align="left">13.57%</td>
+<td align="left">13.35%</td>
+<td align="left">13.14%</td>
+<td align="left">12.92%</td>
+<td align="left">12.71%</td>
+<td align="left">12.51%</td>
+<td align="left">12.30%</td>
+<td align="left">12.10%</td>
+<td align="left">11.90%</td>
+<td align="left">11.70%</td>
+</tr>
+<tr><td align="left">-1.0</td>
+<td align="left">15.87%</td>
+<td align="left">15.63%</td>
+<td align="left">15.39%</td>
+<td align="left">15.15%</td>
+<td align="left">14.92%</td>
+<td align="left">14.69%</td>
+<td align="left">14.46%</td>
+<td align="left">14.23%</td>
+<td align="left">14.01%</td>
+<td align="left">13.79%</td>
+</tr>
+<tr><td align="left">-0.9</td>
+<td align="left">18.41%</td>
+<td align="left">18.14%</td>
+<td align="left">17.88%</td>
+<td align="left">17.62%</td>
+<td align="left">17.36%</td>
+<td align="left">17.11%</td>
+<td align="left">16.85%</td>
+<td align="left">16.60%</td>
+<td align="left">16.35%</td>
+<td align="left">16.11%</td>
+</tr>
+<tr><td align="left">-0.8</td>
+<td align="left">21.19%</td>
+<td align="left">20.90%</td>
+<td align="left">20.61%</td>
+<td align="left">20.33%</td>
+<td align="left">20.05%</td>
+<td align="left">19.77%</td>
+<td align="left">19.49%</td>
+<td align="left">19.22%</td>
+<td align="left">18.94%</td>
+<td align="left">18.67%</td>
+</tr>
+<tr><td align="left">-0.7</td>
+<td align="left">24.20%</td>
+<td align="left">23.89%</td>
+<td align="left">23.58%</td>
+<td align="left">23.27%</td>
+<td align="left">22.97%</td>
+<td align="left">22.66%</td>
+<td align="left">22.36%</td>
+<td align="left">22.07%</td>
+<td align="left">21.77%</td>
+<td align="left">21.48%</td>
+</tr>
+<tr><td align="left">-0.6</td>
+<td align="left">27.43%</td>
+<td align="left">27.09%</td>
+<td align="left">26.76%</td>
+<td align="left">26.44%</td>
+<td align="left">26.11%</td>
+<td align="left">25.79%</td>
+<td align="left">25.46%</td>
+<td align="left">25.14%</td>
+<td align="left">24.83%</td>
+<td align="left">24.51%</td>
+</tr>
+<tr><td align="left">-0.5</td>
+<td align="left">30.85%</td>
+<td align="left">30.50%</td>
+<td align="left">30.15%</td>
+<td align="left">29.81%</td>
+<td align="left">29.46%</td>
+<td align="left">29.12%</td>
+<td align="left">28.77%</td>
+<td align="left">28.43%</td>
+<td align="left">28.10%</td>
+<td align="left">27.76%</td>
+</tr>
+<tr><td align="left">-0.4</td>
+<td align="left">34.46%</td>
+<td align="left">34.09%</td>
+<td align="left">33.72%</td>
+<td align="left">33.36%</td>
+<td align="left">33.00%</td>
+<td align="left">32.64%</td>
+<td align="left">32.28%</td>
+<td align="left">31.92%</td>
+<td align="left">31.56%</td>
+<td align="left">31.21%</td>
+</tr>
+<tr><td align="left">-0.3</td>
+<td align="left">38.21%</td>
+<td align="left">37.83%</td>
+<td align="left">37.45%</td>
+<td align="left">37.07%</td>
+<td align="left">36.69%</td>
+<td align="left">36.32%</td>
+<td align="left">35.94%</td>
+<td align="left">35.57%</td>
+<td align="left">35.20%</td>
+<td align="left">34.83%</td>
+</tr>
+<tr><td align="left">-0.2</td>
+<td align="left">42.07%</td>
+<td align="left">41.68%</td>
+<td align="left">41.29%</td>
+<td align="left">40.91%</td>
+<td align="left">40.52%</td>
+<td align="left">40.13%</td>
+<td align="left">39.74%</td>
+<td align="left">39.36%</td>
+<td align="left">38.97%</td>
+<td align="left">38.59%</td>
+</tr>
+<tr><td align="left">-0.1</td>
+<td align="left">46.02%</td>
+<td align="left">45.62%</td>
+<td align="left">45.22%</td>
+<td align="left">44.83%</td>
+<td align="left">44.43%</td>
+<td align="left">44.04%</td>
+<td align="left">43.64%</td>
+<td align="left">43.25%</td>
+<td align="left">42.86%</td>
+<td align="left">42.47%</td>
+</tr>
+<tr><td align="left">-0.0</td>
+<td align="left">50.00%</td>
+<td align="left">49.60%</td>
+<td align="left">49.20%</td>
+<td align="left">48.80%</td>
+<td align="left">48.40%</td>
+<td align="left">48.01%</td>
+<td align="left">47.61%</td>
+<td align="left">47.21%</td>
+<td align="left">46.81%</td>
+<td align="left">46.41%</td>
+</tr>
+<tr><td align="left">0.0</td>
+<td align="left">50.00%</td>
+<td align="left">50.40%</td>
+<td align="left">50.80%</td>
+<td align="left">51.20%</td>
+<td align="left">51.60%</td>
+<td align="left">51.99%</td>
+<td align="left">52.39%</td>
+<td align="left">52.79%</td>
+<td align="left">53.19%</td>
+<td align="left">53.59%</td>
+</tr>
+<tr><td align="left">0.1</td>
+<td align="left">53.98%</td>
+<td align="left">54.38%</td>
+<td align="left">54.78%</td>
+<td align="left">55.17%</td>
+<td align="left">55.57%</td>
+<td align="left">55.96%</td>
+<td align="left">56.36%</td>
+<td align="left">56.75%</td>
+<td align="left">57.14%</td>
+<td align="left">57.54%</td>
+</tr>
+<tr><td align="left">0.2</td>
+<td align="left">57.93%</td>
+<td align="left">58.32%</td>
+<td align="left">58.71%</td>
+<td align="left">59.10%</td>
+<td align="left">59.48%</td>
+<td align="left">59.87%</td>
+<td align="left">60.26%</td>
+<td align="left">60.64%</td>
+<td align="left">61.03%</td>
+<td align="left">61.41%</td>
+</tr>
+<tr><td align="left">0.3</td>
+<td align="left">61.79%</td>
+<td align="left">62.17%</td>
+<td align="left">62.55%</td>
+<td align="left">62.93%</td>
+<td align="left">63.31%</td>
+<td align="left">63.68%</td>
+<td align="left">64.06%</td>
+<td align="left">64.43%</td>
+<td align="left">64.80%</td>
+<td align="left">65.17%</td>
+</tr>
+<tr><td align="left">0.4</td>
+<td align="left">65.54%</td>
+<td align="left">65.91%</td>
+<td align="left">66.28%</td>
+<td align="left">66.64%</td>
+<td align="left">67.00%</td>
+<td align="left">67.36%</td>
+<td align="left">67.72%</td>
+<td align="left">68.08%</td>
+<td align="left">68.44%</td>
+<td align="left">68.79%</td>
+</tr>
+<tr><td align="left">0.5</td>
+<td align="left">69.15%</td>
+<td align="left">69.50%</td>
+<td align="left">69.85%</td>
+<td align="left">70.19%</td>
+<td align="left">70.54%</td>
+<td align="left">70.88%</td>
+<td align="left">71.23%</td>
+<td align="left">71.57%</td>
+<td align="left">71.90%</td>
+<td align="left">72.24%</td>
+</tr>
+<tr><td align="left">0.6</td>
+<td align="left">72.58%</td>
+<td align="left">72.91%</td>
+<td align="left">73.24%</td>
+<td align="left">73.57%</td>
+<td align="left">73.89%</td>
+<td align="left">74.22%</td>
+<td align="left">74.54%</td>
+<td align="left">74.86%</td>
+<td align="left">75.18%</td>
+<td align="left">75.49%</td>
+</tr>
+<tr><td align="left">0.7</td>
+<td align="left">75.80%</td>
+<td align="left">76.12%</td>
+<td align="left">76.42%</td>
+<td align="left">76.73%</td>
+<td align="left">77.04%</td>
+<td align="left">77.34%</td>
+<td align="left">77.64%</td>
+<td align="left">77.94%</td>
+<td align="left">78.23%</td>
+<td align="left">78.52%</td>
+</tr>
+<tr><td align="left">0.8</td>
+<td align="left">78.81%</td>
+<td align="left">79.10%</td>
+<td align="left">79.39%</td>
+<td align="left">79.67%</td>
+<td align="left">79.96%</td>
+<td align="left">80.23%</td>
+<td align="left">80.51%</td>
+<td align="left">80.79%</td>
+<td align="left">81.06%</td>
+<td align="left">81.33%</td>
+</tr>
+<tr><td align="left">0.9</td>
+<td align="left">81.59%</td>
+<td align="left">81.86%</td>
+<td align="left">82.12%</td>
+<td align="left">82.38%</td>
+<td align="left">82.64%</td>
+<td align="left">82.89%</td>
+<td align="left">83.15%</td>
+<td align="left">83.40%</td>
+<td align="left">83.65%</td>
+<td align="left">83.89%</td>
+</tr>
+<tr><td align="left">1.0</td>
+<td align="left">84.13%</td>
+<td align="left">84.38%</td>
+<td align="left">84.61%</td>
+<td align="left">84.85%</td>
+<td align="left">85.08%</td>
+<td align="left">85.31%</td>
+<td align="left">85.54%</td>
+<td align="left">85.77%</td>
+<td align="left">85.99%</td>
+<td align="left">86.21%</td>
+</tr>
+<tr><td align="left">1.1</td>
+<td align="left">86.43%</td>
+<td align="left">86.65%</td>
+<td align="left">86.86%</td>
+<td align="left">87.08%</td>
+<td align="left">87.29%</td>
+<td align="left">87.49%</td>
+<td align="left">87.70%</td>
+<td align="left">87.90%</td>
+<td align="left">88.10%</td>
+<td align="left">88.30%</td>
+</tr>
+<tr><td align="left">1.2</td>
+<td align="left">88.49%</td>
+<td align="left">88.69%</td>
+<td align="left">88.88%</td>
+<td align="left">89.07%</td>
+<td align="left">89.25%</td>
+<td align="left">89.44%</td>
+<td align="left">89.62%</td>
+<td align="left">89.80%</td>
+<td align="left">89.97%</td>
+<td align="left">90.15%</td>
+</tr>
+<tr><td align="left">1.3</td>
+<td align="left">90.32%</td>
+<td align="left">90.49%</td>
+<td align="left">90.66%</td>
+<td align="left">90.82%</td>
+<td align="left">90.99%</td>
+<td align="left">91.15%</td>
+<td align="left">91.31%</td>
+<td align="left">91.47%</td>
+<td align="left">91.62%</td>
+<td align="left">91.77%</td>
+</tr>
+<tr><td align="left">1.4</td>
+<td align="left">91.92%</td>
+<td align="left">92.07%</td>
+<td align="left">92.22%</td>
+<td align="left">92.36%</td>
+<td align="left">92.51%</td>
+<td align="left">92.65%</td>
+<td align="left">92.79%</td>
+<td align="left">92.92%</td>
+<td align="left">93.06%</td>
+<td align="left">93.19%</td>
+</tr>
+<tr><td align="left">1.5</td>
+<td align="left">93.32%</td>
+<td align="left">93.45%</td>
+<td align="left">93.57%</td>
+<td align="left">93.70%</td>
+<td align="left">93.82%</td>
+<td align="left">93.94%</td>
+<td align="left">94.06%</td>
+<td align="left">94.18%</td>
+<td align="left">94.30%</td>
+<td align="left">94.41%</td>
+</tr>
+<tr><td align="left">1.6</td>
+<td align="left">94.52%</td>
+<td align="left">94.63%</td>
+<td align="left">94.74%</td>
+<td align="left">94.85%</td>
+<td align="left">94.95%</td>
+<td align="left">95.05%</td>
+<td align="left">95.15%</td>
+<td align="left">95.25%</td>
+<td align="left">95.35%</td>
+<td align="left">95.45%</td>
+</tr>
+<tr><td align="left">1.7</td>
+<td align="left">95.54%</td>
+<td align="left">95.64%</td>
+<td align="left">95.73%</td>
+<td align="left">95.82%</td>
+<td align="left">95.91%</td>
+<td align="left">95.99%</td>
+<td align="left">96.08%</td>
+<td align="left">96.16%</td>
+<td align="left">96.25%</td>
+<td align="left">96.33%</td>
+</tr>
+<tr><td align="left">1.8</td>
+<td align="left">96.41%</td>
+<td align="left">96.49%</td>
+<td align="left">96.56%</td>
+<td align="left">96.64%</td>
+<td align="left">96.71%</td>
+<td align="left">96.78%</td>
+<td align="left">96.86%</td>
+<td align="left">96.93%</td>
+<td align="left">97.00%</td>
+<td align="left">97.06%</td>
+</tr>
+<tr><td align="left">1.9</td>
+<td align="left">97.13%</td>
+<td align="left">97.19%</td>
+<td align="left">97.26%</td>
+<td align="left">97.32%</td>
+<td align="left">97.38%</td>
+<td align="left">97.44%</td>
+<td align="left">97.50%</td>
+<td align="left">97.56%</td>
+<td align="left">97.62%</td>
+<td align="left">97.67%</td>
+</tr>
+<tr><td align="left">2.0</td>
+<td align="left">97.73%</td>
+<td align="left">97.78%</td>
+<td align="left">97.83%</td>
+<td align="left">97.88%</td>
+<td align="left">97.93%</td>
+<td align="left">97.98%</td>
+<td align="left">98.03%</td>
+<td align="left">98.08%</td>
+<td align="left">98.12%</td>
+<td align="left">98.17%</td>
+</tr>
+<tr><td align="left">2.1</td>
+<td align="left">98.21%</td>
+<td align="left">98.26%</td>
+<td align="left">98.30%</td>
+<td align="left">98.34%</td>
+<td align="left">98.38%</td>
+<td align="left">98.42%</td>
+<td align="left">98.46%</td>
+<td align="left">98.50%</td>
+<td align="left">98.54%</td>
+<td align="left">98.57%</td>
+</tr>
+<tr><td align="left">2.2</td>
+<td align="left">98.61%</td>
+<td align="left">98.65%</td>
+<td align="left">98.68%</td>
+<td align="left">98.71%</td>
+<td align="left">98.75%</td>
+<td align="left">98.78%</td>
+<td align="left">98.81%</td>
+<td align="left">98.84%</td>
+<td align="left">98.87%</td>
+<td align="left">98.90%</td>
+</tr>
+<tr><td align="left">2.3</td>
+<td align="left">98.93%</td>
+<td align="left">98.96%</td>
+<td align="left">98.98%</td>
+<td align="left">99.01%</td>
+<td align="left">99.04%</td>
+<td align="left">99.06%</td>
+<td align="left">99.09%</td>
+<td align="left">99.11%</td>
+<td align="left">99.13%</td>
+<td align="left">99.16%</td>
+</tr>
+<tr><td align="left">2.4</td>
+<td align="left">99.18%</td>
+<td align="left">99.20%</td>
+<td align="left">99.22%</td>
+<td align="left">99.25%</td>
+<td align="left">99.27%</td>
+<td align="left">99.29%</td>
+<td align="left">99.31%</td>
+<td align="left">99.32%</td>
+<td align="left">99.34%</td>
+<td align="left">99.36%</td>
+</tr>
+<tr><td align="left">2.5</td>
+<td align="left">99.38%</td>
+<td align="left">99.40%</td>
+<td align="left">99.41%</td>
+<td align="left">99.43%</td>
+<td align="left">99.45%</td>
+<td align="left">99.46%</td>
+<td align="left">99.48%</td>
+<td align="left">99.49%</td>
+<td align="left">99.51%</td>
+<td align="left">99.52%</td>
+</tr>
+<tr><td align="left">2.6</td>
+<td align="left">99.53%</td>
+<td align="left">99.55%</td>
+<td align="left">99.56%</td>
+<td align="left">99.57%</td>
+<td align="left">99.59%</td>
+<td align="left">99.60%</td>
+<td align="left">99.61%</td>
+<td align="left">99.62%</td>
+<td align="left">99.63%</td>
+<td align="left">99.64%</td>
+</tr>
+<tr><td align="left">2.7</td>
+<td align="left">99.65%</td>
+<td align="left">99.66%</td>
+<td align="left">99.67%</td>
+<td align="left">99.68%</td>
+<td align="left">99.69%</td>
+<td align="left">99.70%</td>
+<td align="left">99.71%</td>
+<td align="left">99.72%</td>
+<td align="left">99.73%</td>
+<td align="left">99.74%</td>
+</tr>
+<tr><td align="left">2.8</td>
+<td align="left">99.74%</td>
+<td align="left">99.75%</td>
+<td align="left">99.76%</td>
+<td align="left">99.77%</td>
+<td align="left">99.77%</td>
+<td align="left">99.78%</td>
+<td align="left">99.79%</td>
+<td align="left">99.80%</td>
+<td align="left">99.80%</td>
+<td align="left">99.81%</td>
+</tr>
+<tr><td align="left">2.9</td>
+<td align="left">99.81%</td>
+<td align="left">99.82%</td>
+<td align="left">99.83%</td>
+<td align="left">99.83%</td>
+<td align="left">99.84%</td>
+<td align="left">99.84%</td>
+<td align="left">99.85%</td>
+<td align="left">99.85%</td>
+<td align="left">99.86%</td>
+<td align="left">99.86%</td>
+</tr>
+<tr><td align="left">3.0</td>
+<td align="left">99.87%</td>
+<td align="left">99.87%</td>
+<td align="left">99.87%</td>
+<td align="left">99.88%</td>
+<td align="left">99.88%</td>
+<td align="left">99.89%</td>
+<td align="left">99.89%</td>
+<td align="left">99.89%</td>
+<td align="left">99.90%</td>
+<td align="left">99.90%</td>
+</tr>
+</tbody></table></center>
+</div>
+</div>
+<span class="calculatorVendorId" id="T1693329012">
+</span></div><div id="printDisclaimer">
+<b>Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.</b>
+<p>
+	Information on this page may not appear correctly if printed. </p>
+</div>
+<div id="disclaimerCalculator">
+<div class="medCalcFontTwo">
+<p class="header">Legal Notices and Disclaimer</p>
+<p>
+			All information contained in and produced by the EBMcalc system is provided
 			for educational purposes only. This information should not be used for the diagnosis or treatment
-			of any health problem or disease.
-          <b>
-           THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.
-          </b>
-          <a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">
-           Click here for full notice and disclaimer.
-          </a>
-         </p>
-         <p class="copy">
-          EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC
-         </p>
-        </div>
-       </div>
-       <div id="topicVersionRevision">
-        Topic 13417 Version 21.0
-       </div>
-      </div>
-     </div>
-    </div>
-   </section>
-  </section>
-  <!-- End Main Menu Area -->
-  <!-- Start Search Popup Area -->
-  <!-- End Footer Area -->
-  <!-- Back to top -->
-  <a class="scrolltop" href="#top">
-   <i class="icofont-hand-drawn-up">
-   </i>
-  </a>
-  <!-- End Back to top -->
-  <!-- jQuery Min JS -->
-  <!-- Prpper JS -->
-  <!-- Bootstrap Min JS -->
-  <!-- Classy Nav Min Js -->
-  <!-- Owl Carousel Min Js -->
-  <!-- Magnific Popup JS -->
-  <!-- CounterUp JS -->
-  <!-- Waypoints JS -->
-  <!-- Form Validator Min JS -->
-  <!-- Contact Form Min JS -->
-  <!-- Main JS -->
-  <!-- Global site tag (gtag.js) - Google Analytics -->
- </body>
+			of any health problem or disease. 
+			<b>THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.</b>
+<a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">Click here for full notice and disclaimer.</a>
+</p>
+<p class="copy">EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC</p>
+</div>
+</div><div id="topicVersionRevision">Topic 13417 Version 21.0</div></div>
+</div>
+</div>
+</section><script>
+/* <![CDATA[ */
+
+LMS_F = new Array();
+LMS_F[0] = [0, -1.298749689, 34.7115617, 0.046905108];
+LMS_F[1] = [0.5, -1.440271514, 36.03453876, 0.042999604];
+LMS_F[2] = [1.5, -1.581016348, 37.97671987, 0.038067862];
+LMS_F[3] = [2.5, -1.593136386, 39.3801263, 0.035079612];
+LMS_F[4] = [3.5, -1.521492427, 40.46773733, 0.033096443];
+LMS_F[5] = [4.5, -1.394565915, 41.34841008, 0.03170963];
+LMS_F[6] = [5.5, -1.231713389, 42.0833507, 0.030709039];
+LMS_F[7] = [6.5, -1.046582628, 42.71033603, 0.029974303];
+LMS_F[8] = [7.5, -0.848932692, 43.25428882, 0.029430992];
+LMS_F[9] = [8.5, -0.645779124, 43.73249646, 0.029030379];
+LMS_F[10] = [9.5, -0.442165412, 44.15742837, 0.028739112];
+LMS_F[11] = [10.5, -0.24163206, 44.53836794, 0.028533537];
+LMS_F[12] = [11.5, -0.046673786, 44.88240562, 0.028396382];
+LMS_F[13] = [12.5, 0.141031094, 45.19507651, 0.028314722];
+LMS_F[14] = [13.5, 0.320403169, 45.48078147, 0.028278682];
+LMS_F[15] = [14.5, 0.490807133, 45.74307527, 0.028280585];
+LMS_F[16] = [15.5, 0.65193505, 45.98486901, 0.028314363];
+LMS_F[17] = [16.5, 0.803718086, 46.20857558, 0.028375159];
+LMS_F[18] = [17.5, 0.946259679, 46.41621635, 0.028459033];
+LMS_F[19] = [18.5, 1.079784984, 46.60950084, 0.028562759];
+LMS_F[20] = [19.5, 1.204602687, 46.78988722, 0.028683666];
+LMS_F[21] = [20.5, 1.321076285, 46.95862881, 0.028819525];
+LMS_F[22] = [21.5, 1.429602576, 47.11681039, 0.028968459];
+LMS_F[23] = [22.5, 1.530595677, 47.26537682, 0.029128879];
+LMS_F[24] = [23.5, 1.624475262, 47.40515585, 0.029299426];
+LMS_F[25] = [24.5, 1.71165803, 47.53687649, 0.029478937];
+LMS_F[26] = [25.5, 1.792551616, 47.66118396, 0.029666406];
+LMS_F[27] = [26.5, 1.867550375, 47.77865186, 0.02986096];
+LMS_F[28] = [27.5, 1.93703258, 47.8897923, 0.030061839];
+LMS_F[29] = [28.5, 2.001358669, 47.99506422, 0.030268375];
+LMS_F[30] = [29.5, 2.060870301, 48.09488048, 0.030479985];
+LMS_F[31] = [30.5, 2.115889982, 48.18961365, 0.03069615];
+LMS_F[32] = [31.5, 2.16672113, 48.2796011, 0.030916413];
+LMS_F[33] = [32.5, 2.21364844, 48.36514917, 0.031140368];
+LMS_F[34] = [33.5, 2.256943216, 48.44653703, 0.031367651];
+LMS_F[35] = [34.5, 2.296844024, 48.52401894, 0.031597939];
+LMS_F[36] = [35.5, 2.333589434, 48.59782828, 0.031830942];
+LMS_F[37] = [36, 2.350847202, 48.63342328, 0.031948378];
+
+var ZS1, ZS2;
+var upperindex;
+var I1, I2;
+var L1, L2;
+var M1, M2;
+var S1, S2;
+
+function zScoreInterp(LMSTable, LMSIndex, PtValue){
+
+for (upperindex = 0; upperindex < LMSTable.length - 1; upperindex++){
+if (LMSIndex <= LMSTable[upperindex][0])  break;
+}
+
+I2 = LMSTable[upperindex][0];
+L2 = LMSTable[upperindex][1];
+M2 = LMSTable[upperindex][2];
+S2 = LMSTable[upperindex][3];
+ZS2 = (power(PtValue / M2, L2) - 1) / (L2 * S2);
+
+if (upperindex == 0) return ZS2;
+
+I1 = LMSTable[upperindex - 1][0];
+L1 = LMSTable[upperindex - 1][1];
+M1 = LMSTable[upperindex - 1][2];
+S1 = LMSTable[upperindex - 1][3];
+ZS1 = (power(PtValue / M1, L1) - 1) / (L1 * S1);
+
+return ZS1 + ((ZS2 - ZS1) * (LMSIndex - I1) / (I2 - I1));
+
+}
+
+/* ]]> */
+
+/* <![CDATA[ */
+
+LMS_M = new Array();
+LMS_M[0] = [0, 4.427825037, 35.81366835, 0.052172542];
+LMS_M[1] = [0.5, 4.310927464, 37.19361054, 0.047259148];
+LMS_M[2] = [1.5, 3.869576802, 39.20742929, 0.040947903];
+LMS_M[3] = [2.5, 3.305593039, 40.65233195, 0.037027722];
+LMS_M[4] = [3.5, 2.720590297, 41.76516959, 0.034364245];
+LMS_M[5] = [4.5, 2.16804824, 42.66116148, 0.032462175];
+LMS_M[6] = [5.5, 1.675465689, 43.40488731, 0.031064702];
+LMS_M[7] = [6.5, 1.255160322, 44.03609923, 0.03002267];
+LMS_M[8] = [7.5, 0.91054114, 44.58096912, 0.029242173];
+LMS_M[9] = [8.5, 0.639510474, 45.05761215, 0.028660454];
+LMS_M[10] = [9.5, 0.436978864, 45.4790756, 0.0282336];
+LMS_M[11] = [10.5, 0.296275856, 45.85505706, 0.027929764];
+LMS_M[12] = [11.5, 0.210107251, 46.19295427, 0.027725179];
+LMS_M[13] = [12.5, 0.171147024, 46.49853438, 0.027601686];
+LMS_M[14] = [13.5, 0.172393886, 46.77637684, 0.027545148];
+LMS_M[15] = [14.5, 0.207371541, 47.03017599, 0.027544382];
+LMS_M[16] = [15.5, 0.270226126, 47.2629533, 0.027590417];
+LMS_M[17] = [16.5, 0.355757274, 47.47720989, 0.02767598];
+LMS_M[18] = [17.5, 0.459407627, 47.67503833, 0.027795115];
+LMS_M[19] = [18.5, 0.577227615, 47.85820606, 0.0279429];
+LMS_M[20] = [19.5, 0.705826778, 48.02821867, 0.028115241];
+LMS_M[21] = [20.5, 0.842319055, 48.18636864, 0.028308707];
+LMS_M[22] = [21.5, 0.984266833, 48.3337732, 0.028520407];
+LMS_M[23] = [22.5, 1.129626698, 48.47140432, 0.028747896];
+LMS_M[24] = [23.5, 1.276691223, 48.60011223, 0.028989089];
+LMS_M[25] = [24.5, 1.424084853, 48.72064621, 0.029242207];
+LMS_M[26] = [25.5, 1.570621291, 48.83366629, 0.029505723];
+LMS_M[27] = [26.5, 1.715393998, 48.93976089, 0.029778323];
+LMS_M[28] = [27.5, 1.857652984, 49.03945383, 0.030058871];
+LMS_M[29] = [28.5, 1.996810563, 49.13321432, 0.030346384];
+LMS_M[30] = [29.5, 2.132411346, 49.22146409, 0.030640006];
+LMS_M[31] = [30.5, 2.264111009, 49.30458348, 0.030938992];
+LMS_M[32] = [31.5, 2.391658052, 49.38291658, 0.031242693];
+LMS_M[33] = [32.5, 2.514878222, 49.45677569, 0.031550537];
+LMS_M[34] = [33.5, 2.633661226, 49.526445, 0.031862026];
+LMS_M[35] = [34.5, 2.747949445, 49.59218385, 0.03217672];
+LMS_M[36] = [35.5, 2.857728375, 49.65422952, 0.032494231];
+LMS_M[37] = [36, 2.910932095, 49.68393611, 0.032653934];
+/* ]]> */
+
+/* <![CDATA[ */
+
+var lastChar = '';
+
+function log(i){
+return Math.log(i) * Math.LOG10E;
+}
+
+function ln(i){
+return Math.log(i);
+}
+
+function sq(i){
+return i * i;
+}
+
+function sqr(i){
+return Math.sqrt(i);
+}
+
+
+function power(x,y){
+return Math.pow(x,y);
+}
+
+function eTo(x){
+return Math.exp(x);
+}
+
+
+function fixDP(r, dps) {
+if (isNaN(r)) return "NaN";
+var msign = '';
+if (r < 0) msign = '-';
+x = Math.abs(r);
+if (x > Math.pow(10, 21)) return msign + x.toString();
+var m = Math.round(x * Math.pow(10, dps)).toString();
+if (dps == 0) return msign + m;
+while (m.length <= dps) m = "0" + m;
+return msign + m.substring(0, m.length - dps) + "." + m.substring(m.length - dps);
+}
+
+
+function alertNaN(){
+alert('This field is improperly formatted. You may only input the digits 0-9 and a decimal point.');
+doCalc = false;
+clrResults();
+}
+
+function validNumberField(event) {
+var field = event.target;
+
+if(field && field != 'undefined' && field.attributes.type.nodeValue && (field.attributes.type.nodeValue == 'number')) {
+var val = field.value;
+var charCode = event.charCode;
+var key = String.fromCharCode(charCode);
+
+if(charCode == 0 || charCode == 13) {
+  return true;
+}
+
+if(key == ' ') {
+alert('Numeric field cannot contain spaces.');
+  return false;
+}
+
+if(key == '.') { return validDecimalPoint(val, key); }
+if(key == '-') { return validMinus(val, key); }
+
+if(isNaN(parseInt(key))) {
+alertNaN();
+return false;
+}
+
+return validFloat(val, key);
+}
+return true;
+}
+
+function validDecimalPoint(val, key) {
+if(val.length == 0 && lastChar != '.') {
+  lastChar = '.';
+  return true;
+}
+if(val.indexOf('.') >= 0 || lastChar == '.') {
+ alertNaN();
+ return false;
+}
+if(validFloat(val, key)) {
+ lastChar = key;
+ return true;
+}
+lastChar = '';
+return false;
+}
+
+function validMinus(val, key) {
+if(val.length == 0) {
+  return true;
+}
+if(val.length > 1) {
+ alertNaN();
+ return false;
+}
+return validFloat(val, key);
+}
+
+
+function validFloat(val, key) {
+var currentVal = parseFloat(val + key);
+if(isNaN(val + key) || isNaN(currentVal)) {
+alertNaN();
+return false;
+}
+return true;
+}
+
+function formKeyDown(event) {
+var field = event.target;
+
+resetInTime();
+
+if(field && field != 'undefined' && field.attributes.type && field.attributes.type.nodeValue && (field.attributes.type.nodeValue == 'number')) {
+  var val = field.value;
+  var keyCode = event.keyCode;
+  if(keyCode == 8 || keyCode == 127) {
+    // backspace or delete
+    if(lastChar == '.') {
+      lastChar = '';
+    }
+    if(field.value.length == 3 && field.value[0] == '0' && field.value[1] == '.') {
+      // this handles a backspace on an input like ".5", which is saved internally as "0.5"
+      //   otherwise, if you leave the field after the backspace, it retains "0.5" as the value, most likely an iOS bug
+      field.value = ''; 
+    }
+  }
+}
+clrResults();
+}
+
+function clrValue(field) {
+ field.value = '';
+ lastChar = '';
+}
+
+var currenttimeout;
+
+function resetInTime(){
+if (currenttimeout) clearTimeout(currenttimeout);
+currenttimeout = setTimeout('minMaxCheck();', 2000);
+}
+
+
+
+var curelement;
+
+function togCB(thisid){
+thischeckbox = document.getElementById(thisid);
+if (thischeckbox.checked){ thischeckbox.checked = false; }
+else { thischeckbox.checked = true; }
+CDCInfantHeadCircForAge_fx();
+}
+
+function setRB(thisid){
+document.getElementById(thisid).checked = true;
+CDCInfantHeadCircForAge_fx();
+}
+
+n = new Array();
+var L = 0;
+var M = 0;
+var S = 0;
+
+n[0] = 50;
+n[1] = 50.399;
+n[2] = 50.798;
+n[3] = 51.197;
+n[4] = 51.595;
+n[5] = 51.994;
+n[6] = 52.392;
+n[7] = 52.79;
+n[8] = 53.188;
+n[9] = 53.586;
+n[10] = 53.983;
+n[11] = 54.38;
+n[12] = 54.776;
+n[13] = 55.172;
+n[14] = 55.567;
+n[15] = 55.962;
+n[16] = 56.356;
+n[17] = 56.749;
+n[18] = 57.142;
+n[19] = 57.535;
+n[20] = 57.926;
+n[21] = 58.317;
+n[22] = 58.706;
+n[23] = 59.095;
+n[24] = 59.483;
+n[25] = 59.871;
+n[26] = 60.257;
+n[27] = 60.642;
+n[28] = 61.026;
+n[29] = 61.409;
+n[30] = 61.791;
+n[31] = 62.172;
+n[32] = 62.552;
+n[33] = 62.93;
+n[34] = 63.307;
+n[35] = 63.683;
+n[36] = 64.058;
+n[37] = 64.431;
+n[38] = 64.803;
+n[39] = 65.173;
+n[40] = 65.542;
+n[41] = 65.91;
+n[42] = 66.276;
+n[43] = 66.64;
+n[44] = 67.003;
+n[45] = 67.364;
+n[46] = 67.724;
+n[47] = 68.082;
+n[48] = 68.439;
+n[49] = 68.793;
+n[50] = 69.146;
+n[51] = 69.497;
+n[52] = 69.847;
+n[53] = 70.194;
+n[54] = 70.54;
+n[55] = 70.884;
+n[56] = 71.226;
+n[57] = 71.566;
+n[58] = 71.904;
+n[59] = 72.24;
+n[60] = 72.575;
+n[61] = 72.907;
+n[62] = 73.237;
+n[63] = 73.565;
+n[64] = 73.891;
+n[65] = 74.215;
+n[66] = 74.537;
+n[67] = 74.857;
+n[68] = 75.175;
+n[69] = 75.49;
+n[70] = 75.804;
+n[71] = 76.115;
+n[72] = 76.424;
+n[73] = 76.73;
+n[74] = 77.035;
+n[75] = 77.337;
+n[76] = 77.637;
+n[77] = 77.935;
+n[78] = 78.23;
+n[79] = 78.524;
+n[80] = 78.814;
+n[81] = 79.103;
+n[82] = 79.389;
+n[83] = 79.673;
+n[84] = 79.955;
+n[85] = 80.234;
+n[86] = 80.511;
+n[87] = 80.785;
+n[88] = 81.057;
+n[89] = 81.327;
+n[90] = 81.594;
+n[91] = 81.859;
+n[92] = 82.121;
+n[93] = 82.381;
+n[94] = 82.639;
+n[95] = 82.894;
+n[96] = 83.147;
+n[97] = 83.398;
+n[98] = 83.646;
+n[99] = 83.891;
+n[100] = 84.134;
+n[101] = 84.375;
+n[102] = 84.614;
+n[103] = 84.849;
+n[104] = 85.083;
+n[105] = 85.314;
+n[106] = 85.543;
+n[107] = 85.769;
+n[108] = 85.993;
+n[109] = 86.214;
+n[110] = 86.433;
+n[111] = 86.65;
+n[112] = 86.864;
+n[113] = 87.076;
+n[114] = 87.286;
+n[115] = 87.493;
+n[116] = 87.698;
+n[117] = 87.9;
+n[118] = 88.1;
+n[119] = 88.298;
+n[120] = 88.493;
+n[121] = 88.686;
+n[122] = 88.877;
+n[123] = 89.065;
+n[124] = 89.251;
+n[125] = 89.435;
+n[126] = 89.617;
+n[127] = 89.796;
+n[128] = 89.973;
+n[129] = 90.147;
+n[130] = 90.32;
+n[131] = 90.49;
+n[132] = 90.658;
+n[133] = 90.824;
+n[134] = 90.988;
+n[135] = 91.149;
+n[136] = 91.308;
+n[137] = 91.466;
+n[138] = 91.621;
+n[139] = 91.774;
+n[140] = 91.924;
+n[141] = 92.073;
+n[142] = 92.22;
+n[143] = 92.364;
+n[144] = 92.507;
+n[145] = 92.647;
+n[146] = 92.785;
+n[147] = 92.922;
+n[148] = 93.056;
+n[149] = 93.189;
+n[150] = 93.319;
+n[151] = 93.448;
+n[152] = 93.574;
+n[153] = 93.699;
+n[154] = 93.822;
+n[155] = 93.943;
+n[156] = 94.062;
+n[157] = 94.179;
+n[158] = 94.295;
+n[159] = 94.408;
+n[160] = 94.52;
+n[161] = 94.63;
+n[162] = 94.738;
+n[163] = 94.845;
+n[164] = 94.95;
+n[165] = 95.053;
+n[166] = 95.154;
+n[167] = 95.254;
+n[168] = 95.352;
+n[169] = 95.449;
+n[170] = 95.543;
+n[171] = 95.637;
+n[172] = 95.728;
+n[173] = 95.818;
+n[174] = 95.907;
+n[175] = 95.994;
+n[176] = 96.08;
+n[177] = 96.164;
+n[178] = 96.246;
+n[179] = 96.327;
+n[180] = 96.407;
+n[181] = 96.485;
+n[182] = 96.562;
+n[183] = 96.638;
+n[184] = 96.712;
+n[185] = 96.784;
+n[186] = 96.856;
+n[187] = 96.926;
+n[188] = 96.995;
+n[189] = 97.062;
+n[190] = 97.128;
+n[191] = 97.193;
+n[192] = 97.257;
+n[193] = 97.32;
+n[194] = 97.381;
+n[195] = 97.441;
+n[196] = 97.5;
+n[197] = 97.558;
+n[198] = 97.615;
+n[199] = 97.67;
+n[200] = 97.725;
+n[201] = 97.778;
+n[202] = 97.831;
+n[203] = 97.882;
+n[204] = 97.932;
+n[205] = 97.982;
+n[206] = 98.03;
+n[207] = 98.077;
+n[208] = 98.124;
+n[209] = 98.169;
+n[210] = 98.214;
+n[211] = 98.257;
+n[212] = 98.3;
+n[213] = 98.341;
+n[214] = 98.382;
+n[215] = 98.422;
+n[216] = 98.461;
+n[217] = 98.5;
+n[218] = 98.537;
+n[219] = 98.574;
+n[220] = 98.61;
+n[221] = 98.645;
+n[222] = 98.679;
+n[223] = 98.713;
+n[224] = 98.745;
+n[225] = 98.778;
+n[226] = 98.809;
+n[227] = 98.84;
+n[228] = 98.87;
+n[229] = 98.899;
+n[230] = 98.928;
+n[231] = 98.956;
+n[232] = 98.983;
+n[233] = 99.01;
+n[234] = 99.036;
+n[235] = 99.061;
+n[236] = 99.086;
+n[237] = 99.111;
+n[238] = 99.134;
+n[239] = 99.158;
+n[240] = 99.18;
+n[241] = 99.202;
+n[242] = 99.224;
+n[243] = 99.245;
+n[244] = 99.266;
+n[245] = 99.286;
+n[246] = 99.305;
+n[247] = 99.324;
+n[248] = 99.343;
+n[249] = 99.361;
+n[250] = 99.379;
+n[251] = 99.396;
+n[252] = 99.413;
+n[253] = 99.43;
+n[254] = 99.446;
+n[255] = 99.461;
+n[256] = 99.477;
+n[257] = 99.492;
+n[258] = 99.506;
+n[259] = 99.52;
+n[260] = 99.534;
+n[261] = 99.547;
+n[262] = 99.56;
+n[263] = 99.573;
+n[264] = 99.585;
+n[265] = 99.598;
+n[266] = 99.609;
+n[267] = 99.621;
+n[268] = 99.632;
+n[269] = 99.643;
+n[270] = 99.653;
+n[271] = 99.664;
+n[272] = 99.674;
+n[273] = 99.683;
+n[274] = 99.693;
+n[275] = 99.702;
+n[276] = 99.711;
+n[277] = 99.72;
+n[278] = 99.728;
+n[279] = 99.736;
+n[280] = 99.744;
+n[281] = 99.752;
+n[282] = 99.76;
+n[283] = 99.767;
+n[284] = 99.774;
+n[285] = 99.781;
+n[286] = 99.788;
+n[287] = 99.795;
+n[288] = 99.801;
+n[289] = 99.807;
+n[290] = 99.813;
+n[291] = 99.819;
+n[292] = 99.825;
+n[293] = 99.831;
+n[294] = 99.836;
+n[295] = 99.841;
+n[296] = 99.846;
+n[297] = 99.851;
+n[298] = 99.856;
+n[299] = 99.861;
+n[300] = 99.865;
+n[301] = 99.869;
+n[302] = 99.874;
+n[303] = 99.878;
+n[304] = 99.882;
+n[305] = 99.886;
+n[306] = 99.889;
+n[307] = 99.893;
+n[308] = 99.896;
+n[309] = 99.9;
+
+function ZtoPercentile(z){
+with (document.CDCInfantHeadCircForAge_form){
+az = Math.abs(z);
+if (z < -3.09) return 0.1;
+if (z > 3.09) return 99.9;
+thispercentile = n[Math.round(az * 100)];
+if (z >= 0) { return thispercentile }
+else { return 100 - thispercentile }
+}}
+
+var calctxt = ''; 
+var xmltxt = ''; 
+var xmlresult = '';
+var htmtxt = ''; 
+var postNow = false;
+var printing = false;
+var interptxt = '';
+var interphtm = '';
+var interpxml = '';
+var rbchk = false;
+var inputchktxt = '<br />&nbsp;<br /><b>Important:</b> Inputs must be complete to perform calculation. <br />'
+
+
+function aDelay(atxt, ffield){
+with (document.CDCInfantHeadCircForAge_form){
+clrResults();
+ffield.value = '';
+doCalc = false;
+setTimeout(function(){ alert(atxt); }, 100);
+document.getElementById('inputchk').innerHTML = inputchktxt;
+
+}}
+
+
+function CDCInfantHeadCircForAge_fx() {
+
+with(document.CDCInfantHeadCircForAge_form){
+
+
+doCalc = true;
+rbchk = false;
+if (Sex_radio[0].checked){ rbchk = true; Sex = 1;  }
+if (Sex_radio[1].checked){ rbchk = true; Sex = 2;  }
+if (!rbchk) doCalc = false;
+param_value = parseFloat(Age_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = Age_unit.options[Age_unit.selectedIndex].value.split('|');
+Age = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+param_value = parseFloat(Head_Circumference_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = Head_Circumference_unit.options[Head_Circumference_unit.selectedIndex].value.split('|');
+Head_Circumference = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+dp = decpts.options[decpts.selectedIndex].text;
+if (Sex == 1) ZS = zScoreInterp(LMS_F, Age, Head_Circumference);
+if (Sex == 2) ZS = zScoreInterp(LMS_M, Age, Head_Circumference);
+Z_Score =  ZS;
+
+if (doCalc) Z_Score_param.value = fixDP(Z_Score, dp);
+
+
+
+Percentile =  ZtoPercentile(Z_Score);
+
+if (doCalc) Percentile_param.value = fixDP(Percentile, dp);
+
+
+
+
+if (doCalc){
+rrclr();
+if (Percentile <3){ document.getElementById('rr1_1').bgColor = '#8ab2be';
+interptxt = '\n\nHead circumference-for-age percentile interpretation: <3 Percentile: Microcephaly';
+calctxt += '\n\nHead circumference-for-age percentile interpretation: <3 Percentile: Microcephaly';
+xmltxt += '\n<Result_Interpretation>Head circumference-for-age percentile interpretation: &lt;3 Percentile: Microcephaly<\/Result_Interpretation>\n';
+}
+if ((Percentile >=3) && (Percentile <97)){ document.getElementById('rr1_2').bgColor = '#8ab2be';
+interptxt = '\n\nHead circumference-for-age percentile interpretation: >=3 and <97 Percentile: Normal head circumference';
+calctxt += '\n\nHead circumference-for-age percentile interpretation: >=3 and <97 Percentile: Normal head circumference';
+xmltxt += '\n<Result_Interpretation>Head circumference-for-age percentile interpretation: &ge;3 and &lt;97 Percentile: Normal head circumference<\/Result_Interpretation>\n';
+}
+if (Percentile >=97){ document.getElementById('rr1_3').bgColor = '#8ab2be';
+interptxt = '\n\nHead circumference-for-age percentile interpretation: >=97 Percentile: Macrocephaly';
+calctxt += '\n\nHead circumference-for-age percentile interpretation: >=97 Percentile: Macrocephaly';
+xmltxt += '\n<Result_Interpretation>Head circumference-for-age percentile interpretation: &ge;97 Percentile: Macrocephaly<\/Result_Interpretation>\n';
+}
+document.getElementById('rr1_tag').ariaLabel = interptxt;
+interptxt = '';
+
+
+}
+
+
+}
+
+
+if (doCalc) document.getElementById('inputchk').innerHTML = '';
+else document.getElementById('inputchk').innerHTML = inputchktxt;
+
+
+}
+
+function minMaxCheck(){
+if (printing) return;
+
+
+
+with(document.CDCInfantHeadCircForAge_form){
+
+if (Age_param.value && isNaN(Age_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', Age_param); }
+if (Age_param.value && (Age < (0 - 0.00001))) {
+Age = 0;
+ aDelay("The minimum value for Age is 0 mo.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Age_param);
+}
+
+if (Age_param.value && Age > 36) {
+Age = 0;
+ aDelay("The maximum value for Age is 36 mo.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Age_param);
+}
+
+if (Head_Circumference_param.value && isNaN(Head_Circumference_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', Head_Circumference_param); }
+if (Head_Circumference_param.value && (Head_Circumference < (20 - 0.00001))) {
+Head_Circumference = 0;
+ aDelay("The minimum value for Head circumference is 20 cm.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Head_Circumference_param);
+}
+
+if (Head_Circumference_param.value && Head_Circumference > 200) {
+Head_Circumference = 0;
+ aDelay("The maximum value for Head circumference is 200 cm.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Head_Circumference_param);
+}
+
+
+
+}
+
+}
+
+function clrResults(){
+
+
+with(document.CDCInfantHeadCircForAge_form){
+
+Z_Score_param.value = '';
+Percentile_param.value = '';
+
+rrclr();
+
+}
+
+}
+
+var Sex = null,
+Age = null,
+Head_Circumference = null,
+Z_Score = null,
+Percentile = null,
+param_value = null;
+
+
+
+
+
+
+
+
+
+
+function rrclr(){
+document.getElementById('rr1_1').bgColor = '';
+document.getElementById('rr1_2').bgColor = '';
+document.getElementById('rr1_3').bgColor = '';
+document.getElementById('rr1_tag').ariaLabel = "This table highlights the result Head circumference-for-age percentile interpretation. No result is highlighted"; interptxt = '';
+}
+
+
+
+
+/* ]]> */
+
+/* <![CDATA[ */
+
+with(document.CDCInfantHeadCircForAge_form){
+
+var ZS;
+
+}
+/* ]]> */
+</script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://medilib.ir/assets/js/jquery.min.js"></script><script src="https://medilib.ir/assets/js/popper.min.js"></script><script src="https://medilib.ir/assets/js/bootstrap.min.js"></script><script src="https://medilib.ir/assets/js/classy-nav.min.js"></script><script src="https://medilib.ir/assets/js/owl.carousel.min.js"></script><script src="https://medilib.ir/assets/js/jquery.magnific-popup.min.js"></script><script src="https://medilib.ir/assets/js/jquery.counterup.min.js"></script><script src="https://medilib.ir/assets/js/waypoints.min.js"></script><script src="https://medilib.ir/assets/js/form-validator.min.js"></script><script src="https://medilib.ir/assets/js/contact-form-script.js"></script><script src="https://medilib.ir/assets/js/main.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WFDJ5JLM3Q"></script><script>
+    window.addEventListener("load", () => {
+
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function (registrations) {
+                //returns installed service workers
+                if (registrations.length) {
+                    for (let registration of registrations) {
+                        if (
+                            registration.active.scriptURL.startsWith("/serviceWorker.js") &&
+                            !registration.active.scriptURL.endsWith("/serviceWorker.js?v=18")
+                        ) {
+                            registration.unregister();
+                        }
+                    }
+                }
+            });
+            navigator.serviceWorker.register('/serviceWorker.js?v=18', {
+                scope: '/'
+            })
+                .then(function (registration) {
+                    console.log('Registration successful, scope is:', registration.scope);
+                })
+                .catch(function (error) {
+                    console.log('Service worker registration failed, error:', error);
+                });
+        }
+    });
+    const promptElement = document.querySelector('.pwaprompt');
+    const footerPromptElement = document.querySelector('#footerPromptElement');
+    const scrollTopElement = document.querySelector('.scrolltop');
+    // const installButton = promptElement.querySelector('.prompt__install');
+    const closeButton = promptElement.querySelector('.prompt__close');
+    let installEvent;
+
+    function setWithExpiry(key, value, seconds) {
+        const now = new Date()
+
+        // `item` is an object which contains the original value
+        // as well as the time when it's supposed to expire
+        const item = {
+            value: value,
+            expiry: now.getTime() + (seconds * 1000),
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+    }
+
+    function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+        // if the item doesn't exist, return null
+        if (!itemStr) {
+            return null
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+        // compare the expiry time of the item with the current time
+        if (now.getTime() > item.expiry) {
+            // If the item is expired, delete the item from storage
+            // and return null
+            localStorage.removeItem(key)
+            return null
+        }
+        return item.value
+    }
+
+    // checks if the localStorage item has been set
+    function getVisited() {
+        return getWithExpiry('install-prompt')
+        // return localStorage.getItem('install-prompt');
+    }
+
+    // sets the localStorage item
+    function setVisited() {
+        fiveDay = 5 * (24 * (60 * 60))
+        setWithExpiry('install-prompt', true, fiveDay)
+        // localStorage.setItem('install-prompt', true);
+    }
+
+    closeButton.addEventListener('click', () => {
+        // set localStorage to true
+        setVisited();
+
+        // hide the prompt banner
+        promptElement.style.display = 'none';
+        scrollTopElement.style.bottom = '30px';
+
+        // installEvent = null;
+    });
+    // Detects if device is on iOS
+    const isIos = () => {
+        const userAgent = window.navigator.userAgent.toLowerCase();
+        return /iphone|ipad|ipod/.test(userAgent);
+    }
+    // Detects if device is in standalone mode
+    const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+
+    // Checks if should display install popup notification:
+    if (isIos() && !isInStandaloneMode()) {
+        if (!getVisited()) {
+            promptElement.style.display = 'block';
+            scrollTopElement.style.bottom = '80px';
+        }
+        footerPromptElement.style.display = 'block';
+    }
+
+
+    // this event will only fire if the user does not have the pwa installed
+    window.addEventListener('beforeinstallprompt', (event) => {
+        event.preventDefault();
+        // if no localStorage is set, first time visitor
+        if (!getVisited()) {
+            // show the prompt banner
+            promptElement.style.display = 'block';
+            scrollTopElement.style.bottom = '80px';
+
+            // store the event for later use
+
+        }
+        footerPromptElement.style.display = 'block';
+        installEvent = event;
+
+    });
+    $(document).on('click', '.prompt__install', function () {
+        promptElement.style.display = 'none';
+        scrollTopElement.style.bottom = '30px';
+
+        if (isIos() && !isInStandaloneMode()) {
+            setVisited();
+            $('#iphoneAddToHomeScreen').modal()
+        } else {
+
+            // trigger the prompt to show to the user
+            installEvent.prompt();
+            // check what choice the user made
+            installEvent.userChoice.then((choice) => {
+                // if the user declined, we don't want to show the button again
+                // set localStorage to true
+                if (choice.outcome !== 'accepted') {
+                    setVisited();
+                }
+
+                installEvent = null;
+            });
+        }
+
+    });
+</script><script>
+
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-WFDJ5JLM3Q');
+</script><script>
+      var topicReferences=[];
+
+      function refrence(id) {
+          var myReference=Object.values(topicReferences)[id];
+          console.log(myReference);
+          $("#pmid").attr("href",myReference['pmid']);
+          if (typeof myReference['description'] !== 'undefined' && myReference['description']!="") {
+            $("#myModalLabel34").html('Description : <p>' + myReference['description'] + "</p>");
+          }
+          if (typeof myReference['authors'] !== 'undefined' && myReference['authors']!="") {
+            $("#referenceAuthors").html('Authors : <p>' + myReference['authors'] + "</p>");
+          }
+          if (typeof myReference['source'] !== 'undefined' && myReference['source']!="") {
+            $("#referenceSource").html('Source : <p>' + myReference['source'] + "</p>");
+          }
+          if (typeof myReference['title'] !== 'undefined' && myReference['title']!="") {
+            $("#referenceTitle").html('Title : <p>' + myReference['title'] + "</p>");
+          }
+          if (typeof myReference['affiliation'] !== 'undefined' && myReference['affiliation']!="") {
+            $("#referenceAffiliation").html('Affiliation : <p>' + myReference['affiliation'] + "</p>");
+          }
+      }
+  </script><script>
+
+      var screenHeight = screen.height;
+
+      if (screenHeight > 700) {
+        // $document.getElementById("Uptodate_image").style.width = "100% !important;";
+        // $('.Uptodate_image').css('width', '100% !important;');
+        console.log("more");
+      }else{
+        console.log(screenHeight);
+      }
+    $(document).scroll(function()  {
+      var y = $(this).scrollTop();
+      if (y > 100) {
+        $('.goback').fadeIn();
+        $('.buyPackage').fadeIn();
+        // alert(document.getElementById('main_menu').style.zIndex);
+        document.getElementById("uptodate-area").style.padding = "0px 0 0 0";
+        document.getElementById('main_menu').style.zIndex=1;
+         document.getElementById('main_menu').style.display="none";
+        document.getElementById('navbar_menu').style.marginTop="70px"
+        document.getElementById('uptodate-area').style.marginTop="0px"
+        document.getElementById('uptodate-area').style.zIndex=999;
+        console.log('down');
+      } else {
+        $('.goback').fadeOut();
+        $('.buyPackage').fadeOut();
+        document.getElementById("uptodate-area").style.padding = "0px 0 0 0";
+        document.getElementById('navbar_menu').style.marginTop="0px"
+        document.getElementById('main_menu').style.display="";
+        document.getElementById('uptodate-area').style.zIndex=0;
+        console.log('up');
+      }
+    });
+    function goBack() {
+      window.history.back();
+    }
+    function buyPackage() {
+      window.open("https://medilib.ir/userPanel/package/uptodate/index",'_blank');
+    }
+  </script></body>
 </html>

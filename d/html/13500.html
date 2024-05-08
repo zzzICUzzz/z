@@ -1,534 +1,730 @@
 <!DOCTYPE html>
+
 <html lang="fa">
- <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
- <head>
-  <title>
-   Calculator: Stroke risk in male patients (55 to 84 years) (Framingham data)
-  </title>
-  <link href="d/css/1.css" rel="stylesheet"/>
- </head>
- <body>
-  <!-- Start Main Menu Area -->
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <div class="container">
-   <div class="row">
-   </div>
-  </div>
-  <section class="teacher-area ptb-10">
-   <div class="container">
-   </div>
-   <section class="course-details-area ptb-60">
-    <div class="container">
-     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-      <h1 style="text-align:center">
-       Calculator: Stroke risk in male patients (55 to 84 years) (Framingham data)
-      </h1>
-      <div class="utdArticleSection" id="topicContentCalculator">
-       <div id="topicText">
-        <div id="mc3k">
-         <form action="" id="StrokeRiskFramingham_M_form" name="StrokeRiskFramingham_M_form" onkeydown="formKeyDown(event);" onkeypress="resetInTime(); return validNumberField(event);" onkeyup="StrokeRiskFramingham_M_fx();" onreset="document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
-          <table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
-           <tbody>
-            <tr>
-             <td bgcolor="#eeeeee" width="1%">
-              <br/>
-             </td>
-             <td align="left" bgcolor="#eeeeee">
-              <span class="medCalcFontTitleBox">
-               Calculator: Stroke risk in male patients (55 to 84 years) (Framingham data)
-              </span>
-             </td>
-            </tr>
-           </tbody>
-          </table>
-          <br/>
-          <br/>
-          <div id="calc_main">
-           <center>
-            <span class="medCalcFontIO">
-             Input
-            </span>
-            <br/>
-            <br/>
-            <table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
-             <tbody>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 Age
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value Age" name="Age_param" onblur="StrokeRiskFramingham_M_fx(); minMaxCheck();" onchange="StrokeRiskFramingham_M_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <select aria-label="Use this pulldown selector to set the unit of measure for the value Age" class="medCalcFontSelect" name="Age_unit" onchange="StrokeRiskFramingham_M_fx(); minMaxCheck();" style="width:115px;">
-                 <option value="0.0833333333333333|0|mo">
-                  mo
-                 </option>
-                 <option selected="selected" value="1|0|yr">
-                  yr
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 Systolic BP
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value Systolic BP" name="Systolic_BP_param" onblur="StrokeRiskFramingham_M_fx(); minMaxCheck();" onchange="StrokeRiskFramingham_M_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <select aria-label="Use this pulldown selector to set the unit of measure for the value Systolic BP" class="medCalcFontSelect" name="Systolic_BP_unit" onchange="StrokeRiskFramingham_M_fx(); minMaxCheck();" style="width:115px;">
-                 <option value="0.00750063755419211|0|Pascal">
-                  Pascal
-                 </option>
-                 <option value="760.002100178515|0|atm">
-                  atm
-                 </option>
-                 <option value="750.063755419211|0|bar">
-                  bar
-                 </option>
-                 <option value="0.735561538478802|0|cmH2O">
-                  cmH2O
-                 </option>
-                 <option value="10|0|cmHg">
-                  cmHg
-                 </option>
-                 <option value="22.4199156928339|0|ftH2O">
-                  ftH2O
-                 </option>
-                 <option value="0.735561538478802|0|g/sqcm">
-                  g/sqcm
-                 </option>
-                 <option value="1.86832630773616|0|inH2O">
-                  inH2O
-                 </option>
-                 <option value="25.4000840071406|0|inHg">
-                  inHg
-                 </option>
-                 <option value="7.50063755419211|0|kPa">
-                  kPa
-                 </option>
-                 <option value="0.750063755419211|0|mbar">
-                  mbar
-                 </option>
-                 <option selected="selected" value="1|0|mmHg">
-                  mmHg
-                 </option>
-                 <option value="51.7150957831416|0|psi">
-                  psi
-                 </option>
-                 <option value="1|0|torr">
-                  torr
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontOneBold">
-                 On BP medication
-                </span>
-               </td>
-               <td align="left" colspan="2">
-                <select class="medCalcFontSelect" name="HTN_Med_pulldown" onchange="StrokeRiskFramingham_M_fx();" style="width:170px;">
-                 <option value="0">
-                  No (0)
-                 </option>
-                 <option value="0.3263">
-                  Yes (0.3263)
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontOneBold">
-                 Diabetes present
-                </span>
-               </td>
-               <td align="left" colspan="2">
-                <select class="medCalcFontSelect" name="DM_pulldown" onchange="StrokeRiskFramingham_M_fx();" style="width:170px;">
-                 <option value="0">
-                  No (0)
-                 </option>
-                 <option value="0.3384">
-                  Yes (0.3384)
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontOneBold">
-                 Cigarette smoker
-                </span>
-               </td>
-               <td align="left" colspan="2">
-                <select class="medCalcFontSelect" name="Cig_pulldown" onchange="StrokeRiskFramingham_M_fx();" style="width:170px;">
-                 <option value="0">
-                  No (0)
-                 </option>
-                 <option value="0.5147">
-                  Yes (0.5147)
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontOneBold">
-                 Cardiovascular diagnosis
-                </span>
-               </td>
-               <td align="left" colspan="2">
-                <select class="medCalcFontSelect" name="CVD_pulldown" onchange="StrokeRiskFramingham_M_fx();" style="width:170px;">
-                 <option value="0">
-                  No (0)
-                 </option>
-                 <option value="0.5195">
-                  Yes (0.5195)
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontOneBold">
-                 Atrial fibrillation
-                </span>
-               </td>
-               <td align="left" colspan="2">
-                <select class="medCalcFontSelect" name="AFib_pulldown" onchange="StrokeRiskFramingham_M_fx();" style="width:170px;">
-                 <option value="0">
-                  No (0)
-                 </option>
-                 <option value="0.6061">
-                  Yes (0.6061)
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontOneBold">
-                 LV hypertrophy
-                </span>
-               </td>
-               <td align="left" colspan="2">
-                <select class="medCalcFontSelect" name="LVH_pulldown" onchange="StrokeRiskFramingham_M_fx();" style="width:170px;">
-                 <option value="0">
-                  No (0)
-                 </option>
-                 <option value="0.8415">
-                  Yes (0.8415)
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontOneBold">
-                 Risk period
-                </span>
-               </td>
-               <td align="left" colspan="2">
-                <select class="medCalcFontSelect" name="Risk_period_factor_pulldown" onchange="StrokeRiskFramingham_M_fx();" style="width:170px;">
-                 <option value="0.9948">
-                  1 year (0.9948)
-                 </option>
-                 <option value="0.9889">
-                  2 years (0.9889)
-                 </option>
-                 <option value="0.9826">
-                  3 years (0.9826)
-                 </option>
-                 <option value="0.9740">
-                  4 years (0.9740)
-                 </option>
-                 <option value="0.9642">
-                  5 years (0.9642)
-                 </option>
-                 <option value="0.9551">
-                  6 years (0.9551)
-                 </option>
-                 <option value="0.9422">
-                  7 years (0.9422)
-                 </option>
-                 <option value="0.9270">
-                  8 years (0.9270)
-                 </option>
-                 <option value="0.9144">
-                  9 years (0.9144)
-                 </option>
-                 <option selected="selected" value="0.9044">
-                  10 years (0.9044)
-                 </option>
-                </select>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-           </center>
-           <br/>
-           <br/>
-           <center>
-            <span class="medCalcFontIO">
-             Results
-             <span class="medCalcFontOne" id="inputchk">
-              <br/>
-              <br/>
-              <b>
-               Important:
-              </b>
-              Inputs must be complete to perform calculation.
-              <br/>
-             </span>
-            </span>
-            <br/>
-            <br/>
-            <table cellpadding="4" class="medCalcResultBox" summary="EBMcalc Table">
-             <tbody>
-              <tr>
-               <td colspan="3">
-                <br/>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontResultParam">
-                 Risk factor diff
-                </span>
-               </td>
-               <td nowrap="nowrap" valign="top">
-                <input aria-label="This output box will display the calculated value Risk factor diff" aria-readonly="true" name="Risk_factor_diff_param" size="6" type="text"/>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontResultParam">
-                 Risk during period
-                </span>
-               </td>
-               <td nowrap="nowrap" valign="top">
-                <input aria-label="This output box will display the calculated value Risk during period" aria-readonly="true" name="Risk_during_period_param" size="6" type="text"/>
-               </td>
-               <td align="left" valign="top">
-                <span class="medCalcFontResultParam">
-                 <select aria-label="Use this pulldown selector to set the unit of measure for the result value Risk during period" class="medCalcFontSelect" name="Risk_during_period_unit" onchange="StrokeRiskFramingham_M_fx();" style="width:115px;">
-                  <option selected="selected" value="1|0|%">
-                   %
-                  </option>
-                  <option value="100|0|fraction">
-                   fraction
-                  </option>
-                  <option value="100|0|ratio">
-                   ratio
-                  </option>
-                 </select>
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td colspan="3">
-                <br/>
-               </td>
-              </tr>
-              <tr>
-               <td align="center" colspan="3">
-                <span class="medCalcFontResultParam">
-                 Decimal precision
-                </span>
-                <select aria-label="Use this pulldown selector to set the decimal precision of calculations" class="medCalcFontSelect" name="decpts" onchange="StrokeRiskFramingham_M_fx();">
-                 <option>
-                  0
-                 </option>
-                 <option>
-                  1
-                 </option>
-                 <option selected="selected">
-                  2
-                 </option>
-                 <option>
-                  3
-                 </option>
-                </select>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-           </center>
-           <br/>
-           <br/>
-           <div id="calc_buttons">
-            <center>
-             <span class="medCalcFontOne">
-              <input name="resetbutton" type="reset" value="Reset form"/>
-             </span>
-            </center>
-           </div>
-          </div>
-          <div id="pretextrefs">
-          </div>
-          <div id="calc_tables_above_notes">
-          </div>
-          <br/>
-          <br/>
-          <div id="calc_notes">
-           <span class="medCalcFontOneBold">
-            Notes
-           </span>
-           <ul class="medCalcFontOne">
-            <li>
-             This risk assessment tool is based on the Cox regression model of proportional hazards.
-            </li>
-            <li>
-             It may be applied to men between the ages of 55 and 84 who have had no prior history of stroke.
-            </li>
-            <li>
-             Cardiovascular disease includes coronary disease, heart failure, or claudication.
-            </li>
-            <li>
-             <b>
-              BP
-             </b>
-             : blood pressure;
-             <b>
-              LV
-             </b>
-             : left ventricular.
-            </li>
-           </ul>
-          </div>
-          <br/>
-          <br/>
-          <span class="medCalcFontRef">
-           <b>
-            Equations used
-           </b>
-          </span>
-          <br/>
-          <br/>
-          <center>
-           <div id="calc_equation">
-            <table cellpadding="10" cellspacing="0" summary="EBMcalc Table">
-             <tbody>
-              <tr>
-               <td class="medCalcFormuliBox">
-                <span class="medCalcFontFormuli">
-                 Risk_factor_diff = (Age * 0.0505) + (Systolic_BP * 0.014) + HTN_Med + DM + Cig + CVD + AFib + LVH - 5.677
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td class="medCalcFormuliBox">
-                <span class="medCalcFontFormuli">
-                 Risk_during_period = 100 * (1 - Risk_period_factor
-                 <sup>
-                  e
-                  <sup>
-                   (Risk_factor_diff)
-                  </sup>
-                 </sup>
-                 )
-                </span>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-            <br/>
-            <br/>
-           </div>
-          </center>
-          <div id="calc_tables">
-          </div>
-          <br/>
-          <br/>
-          <div id="calc_refs">
-           <span class="medCalcFontRef">
-            <b>
-             References
-            </b>
-           </span>
-           <ol>
-            <li>
-             <span class="medCalcFontRef">
-              <a href="https://www.ncbi.nlm.nih.gov/pubmed/2003301" style="color: green; text-decoration: none;" target="_blank">
-               Wolf PA, D'Agostino RB, Belanger AJ, Kannel WB. Probability of stroke: a risk profile from the Framingham Study. Stroke 1991; 22:312.
-              </a>
-             </span>
-            </li>
-           </ol>
-          </div>
-         </form>
-        </div>
-        <span class="calculatorVendorId" id="T1678215894">
-        </span>
-       </div>
-       <div id="printDisclaimer">
-        <b>
-         Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.
-        </b>
-        <p>
-         Information on this page may not appear correctly if printed.
-        </p>
-       </div>
-       <div id="disclaimerCalculator">
-        <div class="medCalcFontTwo">
-         <p class="header">
-          Legal Notices and Disclaimer
-         </p>
-         <p>
-          All information contained in and produced by the EBMcalc system is provided
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Calculator: Stroke risk in male patients (55 to 84 years) (Framingham data)</title></head>
+<body><section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Calculator: Stroke risk in male patients (55 to 84 years) (Framingham data)</h1>
+<div class="utdArticleSection" id="topicContentCalculator"><div id="topicText">
+<div id="mc3k">
+<form action="" id="StrokeRiskFramingham_M_form" name="StrokeRiskFramingham_M_form" onkeydown="formKeyDown(event);" onkeypress="resetInTime(); return validNumberField(event);" onkeyup="StrokeRiskFramingham_M_fx();" onreset="document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
+<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
+<td align="left" bgcolor="#eeeeee">
+<span class="medCalcFontTitleBox">
+
+ 
+Calculator: Stroke risk in male patients (55 to 84 years) (Framingham data)
+</span></td></tr></tbody></table><br/> <br/>
+<div id="calc_main">
+<center>
+<span class="medCalcFontIO">
+Input
+</span>
+<br/> <br/>
+<table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
+<tbody><tr><td align="right" width="42%"><span class="medCalcFontOneBold">Age</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value Age" name="Age_param" onblur="StrokeRiskFramingham_M_fx(); minMaxCheck();" onchange="StrokeRiskFramingham_M_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value Age" class="medCalcFontSelect" name="Age_unit" onchange="StrokeRiskFramingham_M_fx(); minMaxCheck();" style="width:115px;">
+<option value="0.0833333333333333|0|mo">mo</option>
+<option selected="selected" value="1|0|yr">yr</option>
+</select></td></tr>
+<tr><td align="right" width="42%"><span class="medCalcFontOneBold">Systolic BP</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value Systolic BP" name="Systolic_BP_param" onblur="StrokeRiskFramingham_M_fx(); minMaxCheck();" onchange="StrokeRiskFramingham_M_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value Systolic BP" class="medCalcFontSelect" name="Systolic_BP_unit" onchange="StrokeRiskFramingham_M_fx(); minMaxCheck();" style="width:115px;">
+<option value="0.00750063755419211|0|Pascal">Pascal</option>
+<option value="760.002100178515|0|atm">atm</option>
+<option value="750.063755419211|0|bar">bar</option>
+<option value="0.735561538478802|0|cmH2O">cmH2O</option>
+<option value="10|0|cmHg">cmHg</option>
+<option value="22.4199156928339|0|ftH2O">ftH2O</option>
+<option value="0.735561538478802|0|g/sqcm">g/sqcm</option>
+<option value="1.86832630773616|0|inH2O">inH2O</option>
+<option value="25.4000840071406|0|inHg">inHg</option>
+<option value="7.50063755419211|0|kPa">kPa</option>
+<option value="0.750063755419211|0|mbar">mbar</option>
+<option selected="selected" value="1|0|mmHg">mmHg</option>
+<option value="51.7150957831416|0|psi">psi</option>
+<option value="1|0|torr">torr</option>
+</select></td></tr>
+<tr><td align="right"><span class="medCalcFontOneBold">On BP medication</span></td>
+<td align="left" colspan="2">  <select class="medCalcFontSelect" name="HTN_Med_pulldown" onchange="StrokeRiskFramingham_M_fx();" style="width:170px;">
+<option value="0">No (0)</option>
+<option value="0.3263">Yes (0.3263)</option>
+</select>
+</td></tr>
+<tr><td align="right"><span class="medCalcFontOneBold">Diabetes present</span></td>
+<td align="left" colspan="2">  <select class="medCalcFontSelect" name="DM_pulldown" onchange="StrokeRiskFramingham_M_fx();" style="width:170px;">
+<option value="0">No (0)</option>
+<option value="0.3384">Yes (0.3384)</option>
+</select>
+</td></tr>
+<tr><td align="right"><span class="medCalcFontOneBold">Cigarette smoker</span></td>
+<td align="left" colspan="2">  <select class="medCalcFontSelect" name="Cig_pulldown" onchange="StrokeRiskFramingham_M_fx();" style="width:170px;">
+<option value="0">No (0)</option>
+<option value="0.5147">Yes (0.5147)</option>
+</select>
+</td></tr>
+<tr><td align="right"><span class="medCalcFontOneBold">Cardiovascular diagnosis</span></td>
+<td align="left" colspan="2">  <select class="medCalcFontSelect" name="CVD_pulldown" onchange="StrokeRiskFramingham_M_fx();" style="width:170px;">
+<option value="0">No (0)</option>
+<option value="0.5195">Yes (0.5195)</option>
+</select>
+</td></tr>
+<tr><td align="right"><span class="medCalcFontOneBold">Atrial fibrillation</span></td>
+<td align="left" colspan="2">  <select class="medCalcFontSelect" name="AFib_pulldown" onchange="StrokeRiskFramingham_M_fx();" style="width:170px;">
+<option value="0">No (0)</option>
+<option value="0.6061">Yes (0.6061)</option>
+</select>
+</td></tr>
+<tr><td align="right"><span class="medCalcFontOneBold">LV hypertrophy</span></td>
+<td align="left" colspan="2">  <select class="medCalcFontSelect" name="LVH_pulldown" onchange="StrokeRiskFramingham_M_fx();" style="width:170px;">
+<option value="0">No (0)</option>
+<option value="0.8415">Yes (0.8415)</option>
+</select>
+</td></tr>
+<tr><td align="right"><span class="medCalcFontOneBold">Risk period</span></td>
+<td align="left" colspan="2">  <select class="medCalcFontSelect" name="Risk_period_factor_pulldown" onchange="StrokeRiskFramingham_M_fx();" style="width:170px;">
+<option value="0.9948">1 year (0.9948)</option>
+<option value="0.9889">2 years (0.9889)</option>
+<option value="0.9826">3 years (0.9826)</option>
+<option value="0.9740">4 years (0.9740)</option>
+<option value="0.9642">5 years (0.9642)</option>
+<option value="0.9551">6 years (0.9551)</option>
+<option value="0.9422">7 years (0.9422)</option>
+<option value="0.9270">8 years (0.9270)</option>
+<option value="0.9144">9 years (0.9144)</option>
+<option selected="selected" value="0.9044">10 years (0.9044)</option>
+</select>
+</td></tr>
+</tbody></table>
+</center>
+<br/> <br/><center><span class="medCalcFontIO">Results<span class="medCalcFontOne" id="inputchk"><br/> <br/><b>Important:</b> Inputs must be complete to perform calculation. <br/></span></span>
+<br/> <br/>
+<table cellpadding="4" class="medCalcResultBox" summary="EBMcalc Table">
+<tbody><tr><td colspan="3"> <br/></td></tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">Risk factor diff</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value Risk factor diff" aria-readonly="true" name="Risk_factor_diff_param" size="6" type="text"/></td>
+</tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">Risk during period</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value Risk during period" aria-readonly="true" name="Risk_during_period_param" size="6" type="text"/></td>
+<td align="left" valign="top"><span class="medCalcFontResultParam">
+<select aria-label="Use this pulldown selector to set the unit of measure for the result value Risk during period" class="medCalcFontSelect" name="Risk_during_period_unit" onchange="StrokeRiskFramingham_M_fx();" style="width:115px;">
+<option selected="selected" value="1|0|%">%</option>
+<option value="100|0|fraction">fraction</option>
+<option value="100|0|ratio">ratio</option>
+</select>
+</span></td>
+</tr>
+<tr><td colspan="3"> <br/></td></tr>
+<tr><td align="center" colspan="3"><span class="medCalcFontResultParam">Decimal precision  </span>
+<select aria-label="Use this pulldown selector to set the decimal precision of calculations" class="medCalcFontSelect" name="decpts" onchange="StrokeRiskFramingham_M_fx();">
+<option>0</option>
+<option>1</option>
+<option selected="selected">2</option>
+<option>3</option>
+</select></td></tr>
+</tbody></table>
+</center><br/> <br/>
+<div id="calc_buttons">
+<center>
+<span class="medCalcFontOne">
+<input name="resetbutton" type="reset" value="Reset form"/>
+</span>
+</center>
+</div>
+</div><div id="pretextrefs">
+ 
+</div>
+<div id="calc_tables_above_notes">
+</div>
+<br/> <br/>
+<div id="calc_notes">
+<span class="medCalcFontOneBold">Notes</span>
+<ul class="medCalcFontOne">
+<li>This risk assessment tool is based on the Cox regression model of proportional hazards.</li>
+<li>It may be applied to men between the ages of 55 and 84 who have had no prior history of stroke.</li>
+<li>Cardiovascular disease includes coronary disease, heart failure, or claudication.</li>
+<li><b>BP</b>: blood pressure; <b>LV</b>: left ventricular.</li>
+</ul>
+</div>
+<br/> <br/>
+<span class="medCalcFontRef"><b>Equations used</b></span>
+<br/> <br/>
+<center>
+<div id="calc_equation">
+<table cellpadding="10" cellspacing="0" summary="EBMcalc Table"><tbody><tr><td class="medCalcFormuliBox"><span class="medCalcFontFormuli">Risk_factor_diff = (Age * 0.0505) + (Systolic_BP * 0.014) + HTN_Med + DM + Cig + CVD + AFib + LVH - 5.677</span></td></tr><tr><td class="medCalcFormuliBox"><span class="medCalcFontFormuli">Risk_during_period = 100 * (1 - Risk_period_factor<sup>e<sup>(Risk_factor_diff)</sup></sup>)</span></td></tr></tbody></table><br/> <br/>
+</div> </center>
+<div id="calc_tables">
+</div>
+<br/> <br/>
+<div id="calc_refs">
+<span class="medCalcFontRef"><b>References</b></span>
+<ol>
+<li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/2003301" style="color: green; text-decoration: none;" target="_blank">Wolf PA, D'Agostino RB, Belanger AJ, Kannel WB. Probability of stroke: a risk profile from the Framingham Study. Stroke 1991; 22:312.</a></span></li>
+</ol>
+</div>
+</form>
+</div>
+<span class="calculatorVendorId" id="T1678215894">
+</span></div><div id="printDisclaimer">
+<b>Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.</b>
+<p>
+	Information on this page may not appear correctly if printed. </p>
+</div>
+<div id="disclaimerCalculator">
+<div class="medCalcFontTwo">
+<p class="header">Legal Notices and Disclaimer</p>
+<p>
+			All information contained in and produced by the EBMcalc system is provided
 			for educational purposes only. This information should not be used for the diagnosis or treatment
-			of any health problem or disease.
-          <b>
-           THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.
-          </b>
-          <a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">
-           Click here for full notice and disclaimer.
-          </a>
-         </p>
-         <p class="copy">
-          EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC
-         </p>
-        </div>
-       </div>
-       <div id="topicVersionRevision">
-        Topic 13500 Version 8.0
-       </div>
-      </div>
-     </div>
-    </div>
-   </section>
-  </section>
-  <!-- End Main Menu Area -->
-  <!-- Start Search Popup Area -->
-  <!-- End Footer Area -->
-  <!-- Back to top -->
-  <a class="scrolltop" href="#top">
-   <i class="icofont-hand-drawn-up">
-   </i>
-  </a>
-  <!-- End Back to top -->
-  <!-- jQuery Min JS -->
-  <!-- Prpper JS -->
-  <!-- Bootstrap Min JS -->
-  <!-- Classy Nav Min Js -->
-  <!-- Owl Carousel Min Js -->
-  <!-- Magnific Popup JS -->
-  <!-- CounterUp JS -->
-  <!-- Waypoints JS -->
-  <!-- Form Validator Min JS -->
-  <!-- Contact Form Min JS -->
-  <!-- Main JS -->
-  <!-- Global site tag (gtag.js) - Google Analytics -->
- </body>
+			of any health problem or disease. 
+			<b>THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.</b>
+<a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">Click here for full notice and disclaimer.</a>
+</p>
+<p class="copy">EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC</p>
+</div>
+</div><div id="topicVersionRevision">Topic 13500 Version 8.0</div></div>
+</div>
+</div>
+</section><script>
+/* <![CDATA[ */
+
+var lastChar = '';
+
+function log(i){
+return Math.log(i) * Math.LOG10E;
+}
+
+function ln(i){
+return Math.log(i);
+}
+
+function sq(i){
+return i * i;
+}
+
+function sqr(i){
+return Math.sqrt(i);
+}
+
+
+function power(x,y){
+return Math.pow(x,y);
+}
+
+function eTo(x){
+return Math.exp(x);
+}
+
+
+function fixDP(r, dps) {
+if (isNaN(r)) return "NaN";
+var msign = '';
+if (r < 0) msign = '-';
+x = Math.abs(r);
+if (x > Math.pow(10, 21)) return msign + x.toString();
+var m = Math.round(x * Math.pow(10, dps)).toString();
+if (dps == 0) return msign + m;
+while (m.length <= dps) m = "0" + m;
+return msign + m.substring(0, m.length - dps) + "." + m.substring(m.length - dps);
+}
+
+
+function alertNaN(){
+alert('This field is improperly formatted. You may only input the digits 0-9 and a decimal point.');
+doCalc = false;
+clrResults();
+}
+
+function validNumberField(event) {
+var field = event.target;
+
+if(field && field != 'undefined' && field.attributes.type.nodeValue && (field.attributes.type.nodeValue == 'number')) {
+var val = field.value;
+var charCode = event.charCode;
+var key = String.fromCharCode(charCode);
+
+if(charCode == 0 || charCode == 13) {
+  return true;
+}
+
+if(key == ' ') {
+alert('Numeric field cannot contain spaces.');
+  return false;
+}
+
+if(key == '.') { return validDecimalPoint(val, key); }
+if(key == '-') { return validMinus(val, key); }
+
+if(isNaN(parseInt(key))) {
+alertNaN();
+return false;
+}
+
+return validFloat(val, key);
+}
+return true;
+}
+
+function validDecimalPoint(val, key) {
+if(val.length == 0 && lastChar != '.') {
+  lastChar = '.';
+  return true;
+}
+if(val.indexOf('.') >= 0 || lastChar == '.') {
+ alertNaN();
+ return false;
+}
+if(validFloat(val, key)) {
+ lastChar = key;
+ return true;
+}
+lastChar = '';
+return false;
+}
+
+function validMinus(val, key) {
+if(val.length == 0) {
+  return true;
+}
+if(val.length > 1) {
+ alertNaN();
+ return false;
+}
+return validFloat(val, key);
+}
+
+
+function validFloat(val, key) {
+var currentVal = parseFloat(val + key);
+if(isNaN(val + key) || isNaN(currentVal)) {
+alertNaN();
+return false;
+}
+return true;
+}
+
+function formKeyDown(event) {
+var field = event.target;
+
+resetInTime();
+
+if(field && field != 'undefined' && field.attributes.type && field.attributes.type.nodeValue && (field.attributes.type.nodeValue == 'number')) {
+  var val = field.value;
+  var keyCode = event.keyCode;
+  if(keyCode == 8 || keyCode == 127) {
+    // backspace or delete
+    if(lastChar == '.') {
+      lastChar = '';
+    }
+    if(field.value.length == 3 && field.value[0] == '0' && field.value[1] == '.') {
+      // this handles a backspace on an input like ".5", which is saved internally as "0.5"
+      //   otherwise, if you leave the field after the backspace, it retains "0.5" as the value, most likely an iOS bug
+      field.value = ''; 
+    }
+  }
+}
+clrResults();
+}
+
+function clrValue(field) {
+ field.value = '';
+ lastChar = '';
+}
+
+var currenttimeout;
+
+function resetInTime(){
+if (currenttimeout) clearTimeout(currenttimeout);
+currenttimeout = setTimeout('minMaxCheck();', 2000);
+}
+
+
+
+var curelement;
+
+function togCB(thisid){
+thischeckbox = document.getElementById(thisid);
+if (thischeckbox.checked){ thischeckbox.checked = false; }
+else { thischeckbox.checked = true; }
+StrokeRiskFramingham_M_fx();
+}
+
+function setRB(thisid){
+document.getElementById(thisid).checked = true;
+StrokeRiskFramingham_M_fx();
+}
+
+
+var calctxt = ''; 
+var xmltxt = ''; 
+var xmlresult = '';
+var htmtxt = ''; 
+var postNow = false;
+var printing = false;
+var interptxt = '';
+var interphtm = '';
+var interpxml = '';
+var rbchk = false;
+var inputchktxt = '<br />&nbsp;<br /><b>Important:</b> Inputs must be complete to perform calculation. <br />'
+
+
+function aDelay(atxt, ffield){
+with (document.StrokeRiskFramingham_M_form){
+clrResults();
+ffield.value = '';
+doCalc = false;
+setTimeout(function(){ alert(atxt); }, 100);
+document.getElementById('inputchk').innerHTML = inputchktxt;
+
+}}
+
+
+function StrokeRiskFramingham_M_fx() {
+
+with(document.StrokeRiskFramingham_M_form){
+
+
+doCalc = true;
+param_value = parseFloat(Age_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = Age_unit.options[Age_unit.selectedIndex].value.split('|');
+Age = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+param_value = parseFloat(Systolic_BP_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = Systolic_BP_unit.options[Systolic_BP_unit.selectedIndex].value.split('|');
+Systolic_BP = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+HTN_Med = parseFloat(HTN_Med_pulldown.options[HTN_Med_pulldown.selectedIndex].value);
+DM = parseFloat(DM_pulldown.options[DM_pulldown.selectedIndex].value);
+Cig = parseFloat(Cig_pulldown.options[Cig_pulldown.selectedIndex].value);
+CVD = parseFloat(CVD_pulldown.options[CVD_pulldown.selectedIndex].value);
+AFib = parseFloat(AFib_pulldown.options[AFib_pulldown.selectedIndex].value);
+LVH = parseFloat(LVH_pulldown.options[LVH_pulldown.selectedIndex].value);
+Risk_period_factor = parseFloat(Risk_period_factor_pulldown.options[Risk_period_factor_pulldown.selectedIndex].value);
+dp = decpts.options[decpts.selectedIndex].text;
+Risk_factor_diff =  (Age * 0.0505) + (Systolic_BP * 0.014) + HTN_Med + DM + Cig + CVD + AFib + LVH - 5.677;
+
+if (doCalc) Risk_factor_diff_param.value = fixDP(Risk_factor_diff, dp);
+
+
+
+Risk_during_period =  100 * (1 - power(Risk_period_factor, eTo(Risk_factor_diff)));
+
+unit_parts = Risk_during_period_unit.options[Risk_during_period_unit.selectedIndex].value.split('|');
+if (doCalc) Risk_during_period_param.value = fixDP((Risk_during_period - parseFloat(unit_parts[1])) / parseFloat(unit_parts[0]), dp);
+
+
+
+
+
+}
+
+
+if (doCalc) document.getElementById('inputchk').innerHTML = '';
+else document.getElementById('inputchk').innerHTML = inputchktxt;
+
+
+}
+
+function minMaxCheck(){
+if (printing) return;
+
+
+
+with(document.StrokeRiskFramingham_M_form){
+
+if (Age_param.value && isNaN(Age_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', Age_param); }
+if (Age_param.value && (Age < (55 - 0.00001))) {
+Age = 0;
+ aDelay("The minimum value for Age is 55 yr.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Age_param);
+}
+
+if (Age_param.value && Age > 84) {
+Age = 0;
+ aDelay("The maximum value for Age is 84 yr.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Age_param);
+}
+
+if (Systolic_BP_param.value && isNaN(Systolic_BP_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', Systolic_BP_param); }
+if (Systolic_BP_param.value && (Systolic_BP < (80 - 0.00001))) {
+Systolic_BP = 0;
+ aDelay("The minimum value for Systolic BP is 80 mmHg.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Systolic_BP_param);
+}
+
+if (Systolic_BP_param.value && Systolic_BP > 400) {
+Systolic_BP = 0;
+ aDelay("The maximum value for Systolic BP is 400 mmHg.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Systolic_BP_param);
+}
+
+
+
+}
+
+}
+
+function clrResults(){
+
+
+with(document.StrokeRiskFramingham_M_form){
+
+Risk_factor_diff_param.value = '';
+Risk_during_period_param.value = '';
+
+
+}
+
+}
+
+var Age = null,
+Systolic_BP = null,
+HTN_Med = null,
+DM = null,
+Cig = null,
+CVD = null,
+AFib = null,
+LVH = null,
+Risk_period_factor = null,
+Risk_factor_diff = null,
+Risk_during_period = null,
+param_value = null;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ]]> */
+</script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://medilib.ir/assets/js/jquery.min.js"></script><script src="https://medilib.ir/assets/js/popper.min.js"></script><script src="https://medilib.ir/assets/js/bootstrap.min.js"></script><script src="https://medilib.ir/assets/js/classy-nav.min.js"></script><script src="https://medilib.ir/assets/js/owl.carousel.min.js"></script><script src="https://medilib.ir/assets/js/jquery.magnific-popup.min.js"></script><script src="https://medilib.ir/assets/js/jquery.counterup.min.js"></script><script src="https://medilib.ir/assets/js/waypoints.min.js"></script><script src="https://medilib.ir/assets/js/form-validator.min.js"></script><script src="https://medilib.ir/assets/js/contact-form-script.js"></script><script src="https://medilib.ir/assets/js/main.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WFDJ5JLM3Q"></script><script>
+    window.addEventListener("load", () => {
+
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function (registrations) {
+                //returns installed service workers
+                if (registrations.length) {
+                    for (let registration of registrations) {
+                        if (
+                            registration.active.scriptURL.startsWith("/serviceWorker.js") &&
+                            !registration.active.scriptURL.endsWith("/serviceWorker.js?v=18")
+                        ) {
+                            registration.unregister();
+                        }
+                    }
+                }
+            });
+            navigator.serviceWorker.register('/serviceWorker.js?v=18', {
+                scope: '/'
+            })
+                .then(function (registration) {
+                    console.log('Registration successful, scope is:', registration.scope);
+                })
+                .catch(function (error) {
+                    console.log('Service worker registration failed, error:', error);
+                });
+        }
+    });
+    const promptElement = document.querySelector('.pwaprompt');
+    const footerPromptElement = document.querySelector('#footerPromptElement');
+    const scrollTopElement = document.querySelector('.scrolltop');
+    // const installButton = promptElement.querySelector('.prompt__install');
+    const closeButton = promptElement.querySelector('.prompt__close');
+    let installEvent;
+
+    function setWithExpiry(key, value, seconds) {
+        const now = new Date()
+
+        // `item` is an object which contains the original value
+        // as well as the time when it's supposed to expire
+        const item = {
+            value: value,
+            expiry: now.getTime() + (seconds * 1000),
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+    }
+
+    function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+        // if the item doesn't exist, return null
+        if (!itemStr) {
+            return null
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+        // compare the expiry time of the item with the current time
+        if (now.getTime() > item.expiry) {
+            // If the item is expired, delete the item from storage
+            // and return null
+            localStorage.removeItem(key)
+            return null
+        }
+        return item.value
+    }
+
+    // checks if the localStorage item has been set
+    function getVisited() {
+        return getWithExpiry('install-prompt')
+        // return localStorage.getItem('install-prompt');
+    }
+
+    // sets the localStorage item
+    function setVisited() {
+        fiveDay = 5 * (24 * (60 * 60))
+        setWithExpiry('install-prompt', true, fiveDay)
+        // localStorage.setItem('install-prompt', true);
+    }
+
+    closeButton.addEventListener('click', () => {
+        // set localStorage to true
+        setVisited();
+
+        // hide the prompt banner
+        promptElement.style.display = 'none';
+        scrollTopElement.style.bottom = '30px';
+
+        // installEvent = null;
+    });
+    // Detects if device is on iOS
+    const isIos = () => {
+        const userAgent = window.navigator.userAgent.toLowerCase();
+        return /iphone|ipad|ipod/.test(userAgent);
+    }
+    // Detects if device is in standalone mode
+    const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+
+    // Checks if should display install popup notification:
+    if (isIos() && !isInStandaloneMode()) {
+        if (!getVisited()) {
+            promptElement.style.display = 'block';
+            scrollTopElement.style.bottom = '80px';
+        }
+        footerPromptElement.style.display = 'block';
+    }
+
+
+    // this event will only fire if the user does not have the pwa installed
+    window.addEventListener('beforeinstallprompt', (event) => {
+        event.preventDefault();
+        // if no localStorage is set, first time visitor
+        if (!getVisited()) {
+            // show the prompt banner
+            promptElement.style.display = 'block';
+            scrollTopElement.style.bottom = '80px';
+
+            // store the event for later use
+
+        }
+        footerPromptElement.style.display = 'block';
+        installEvent = event;
+
+    });
+    $(document).on('click', '.prompt__install', function () {
+        promptElement.style.display = 'none';
+        scrollTopElement.style.bottom = '30px';
+
+        if (isIos() && !isInStandaloneMode()) {
+            setVisited();
+            $('#iphoneAddToHomeScreen').modal()
+        } else {
+
+            // trigger the prompt to show to the user
+            installEvent.prompt();
+            // check what choice the user made
+            installEvent.userChoice.then((choice) => {
+                // if the user declined, we don't want to show the button again
+                // set localStorage to true
+                if (choice.outcome !== 'accepted') {
+                    setVisited();
+                }
+
+                installEvent = null;
+            });
+        }
+
+    });
+</script><script>
+
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-WFDJ5JLM3Q');
+</script><script>
+      var topicReferences=[];
+
+      function refrence(id) {
+          var myReference=Object.values(topicReferences)[id];
+          console.log(myReference);
+          $("#pmid").attr("href",myReference['pmid']);
+          if (typeof myReference['description'] !== 'undefined' && myReference['description']!="") {
+            $("#myModalLabel34").html('Description : <p>' + myReference['description'] + "</p>");
+          }
+          if (typeof myReference['authors'] !== 'undefined' && myReference['authors']!="") {
+            $("#referenceAuthors").html('Authors : <p>' + myReference['authors'] + "</p>");
+          }
+          if (typeof myReference['source'] !== 'undefined' && myReference['source']!="") {
+            $("#referenceSource").html('Source : <p>' + myReference['source'] + "</p>");
+          }
+          if (typeof myReference['title'] !== 'undefined' && myReference['title']!="") {
+            $("#referenceTitle").html('Title : <p>' + myReference['title'] + "</p>");
+          }
+          if (typeof myReference['affiliation'] !== 'undefined' && myReference['affiliation']!="") {
+            $("#referenceAffiliation").html('Affiliation : <p>' + myReference['affiliation'] + "</p>");
+          }
+      }
+  </script><script>
+
+      var screenHeight = screen.height;
+
+      if (screenHeight > 700) {
+        // $document.getElementById("Uptodate_image").style.width = "100% !important;";
+        // $('.Uptodate_image').css('width', '100% !important;');
+        console.log("more");
+      }else{
+        console.log(screenHeight);
+      }
+    $(document).scroll(function()  {
+      var y = $(this).scrollTop();
+      if (y > 100) {
+        $('.goback').fadeIn();
+        $('.buyPackage').fadeIn();
+        // alert(document.getElementById('main_menu').style.zIndex);
+        document.getElementById("uptodate-area").style.padding = "0px 0 0 0";
+        document.getElementById('main_menu').style.zIndex=1;
+         document.getElementById('main_menu').style.display="none";
+        document.getElementById('navbar_menu').style.marginTop="70px"
+        document.getElementById('uptodate-area').style.marginTop="0px"
+        document.getElementById('uptodate-area').style.zIndex=999;
+        console.log('down');
+      } else {
+        $('.goback').fadeOut();
+        $('.buyPackage').fadeOut();
+        document.getElementById("uptodate-area").style.padding = "0px 0 0 0";
+        document.getElementById('navbar_menu').style.marginTop="0px"
+        document.getElementById('main_menu').style.display="";
+        document.getElementById('uptodate-area').style.zIndex=0;
+        console.log('up');
+      }
+    });
+    function goBack() {
+      window.history.back();
+    }
+    function buyPackage() {
+      window.open("https://medilib.ir/userPanel/package/uptodate/index",'_blank');
+    }
+  </script></body>
 </html>

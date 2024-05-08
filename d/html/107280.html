@@ -1,735 +1,820 @@
 <!DOCTYPE html>
+
 <html lang="fa">
- <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
- <head>
-  <title>
-   Calculator: Cardiovascular risk assessment in adults (10-year, MESA 2015, with or without CAC score) (conventional and SI units)
-  </title>
-  <link href="d/css/1.css" rel="stylesheet"/>
- </head>
- <body>
-  <!-- Start Main Menu Area -->
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <div class="container">
-   <div class="row">
-   </div>
-  </div>
-  <section class="teacher-area ptb-10">
-   <div class="container">
-   </div>
-   <section class="course-details-area ptb-60">
-    <div class="container">
-     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-      <h1 style="text-align:center">
-       Calculator: Cardiovascular risk assessment in adults (10-year, MESA 2015, with or without CAC score) (conventional and SI units)
-      </h1>
-      <div class="utdArticleSection" id="topicContentCalculator">
-       <div id="topicText">
-        <div id="mc3k">
-         <form action="" id="MESA_form" name="MESA_form" onkeydown="formKeyDown(event);" onkeypress="resetInTime(); return validNumberField(event);" onkeyup="MESA_fx();" onreset="document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
-          <table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
-           <tbody>
-            <tr>
-             <td bgcolor="#eeeeee" width="1%">
-              <br/>
-             </td>
-             <td align="left" bgcolor="#eeeeee">
-              <span class="medCalcFontTitleBox">
-               Calculator: Cardiovascular risk assessment in adults (10-year, MESA 2015, with or without CAC score) (conventional and SI units)
-              </span>
-             </td>
-            </tr>
-           </tbody>
-          </table>
-          <br/>
-          <br/>
-          <div id="calc_main">
-           <center>
-            <span class="medCalcFontIO">
-             Input
-            </span>
-            <br/>
-            <br/>
-            <table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
-             <tbody>
-              <tr>
-               <td align="right" valign="top">
-                <span class="medCalcFontOneBold">
-                 Race
-                </span>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Race. The variable option is African American." id="togel1" name="Race_radio" onclick="MESA_fx();" type="radio" value="African American|1"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel1');">
-                 African American
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="left">
-                <br/>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Race. The variable option is Chinese American." id="togel2" name="Race_radio" onclick="MESA_fx();" type="radio" value="Chinese American|2"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel2');">
-                 Chinese American
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="left">
-                <br/>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Race. The variable option is Hispanic." id="togel3" name="Race_radio" onclick="MESA_fx();" type="radio" value="Hispanic|3"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel3');">
-                 Hispanic
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="left">
-                <br/>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Race. The variable option is Non-Hispanic white." id="togel4" name="Race_radio" onclick="MESA_fx();" type="radio" value="Non-Hispanic white|4"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel4');">
-                 Non-Hispanic white
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" valign="top">
-                <span class="medCalcFontOneBold">
-                 Sex
-                </span>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Sex. The variable option is Female." id="togel5" name="Sex_radio" onclick="MESA_fx();" type="radio" value="Female|0"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel5');">
-                 Female
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="left">
-                <br/>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Sex. The variable option is Male." id="togel6" name="Sex_radio" onclick="MESA_fx();" type="radio" value="Male|1"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel6');">
-                 Male
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 Age
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value Age" name="Age_param" onblur="MESA_fx(); minMaxCheck();" onchange="MESA_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <select aria-label="Use this pulldown selector to set the unit of measure for the value Age" class="medCalcFontSelect" name="Age_unit" onchange="MESA_fx(); minMaxCheck();" style="width:115px;">
-                 <option value="0.0833333333333333|0|mo">
-                  mo
-                 </option>
-                 <option selected="selected" value="1|0|yr">
-                  yr
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 Total cholesterol
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value Total cholesterol" name="Total_Cholesterol_param" onblur="MESA_fx(); minMaxCheck();" onchange="MESA_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <select aria-label="Use this pulldown selector to set the unit of measure for the value Total cholesterol" class="medCalcFontSelect" name="Total_Cholesterol_unit" onchange="MESA_fx(); minMaxCheck();" style="width:115px;">
-                 <option selected="selected" value="1|0|mg/dL_Chol">
-                  mg/dL
-                 </option>
-                 <option value="38.6697602474865|0|mmol/L_Chol">
-                  mmol/L
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 HDL cholesterol
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value HDL cholesterol" name="HDL_Cholesterol_param" onblur="MESA_fx(); minMaxCheck();" onchange="MESA_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <select aria-label="Use this pulldown selector to set the unit of measure for the value HDL cholesterol" class="medCalcFontSelect" name="HDL_Cholesterol_unit" onchange="MESA_fx(); minMaxCheck();" style="width:115px;">
-                 <option selected="selected" value="1|0|mg/dL_Chol">
-                  mg/dL
-                 </option>
-                 <option value="38.6697602474865|0|mmol/L_Chol">
-                  mmol/L
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 Systolic blood pressure
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value Systolic blood pressure" name="Systolic_Blood_Pressure_param" onblur="MESA_fx(); minMaxCheck();" onchange="MESA_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <select aria-label="Use this pulldown selector to set the unit of measure for the value Systolic blood pressure" class="medCalcFontSelect" name="Systolic_Blood_Pressure_unit" onchange="MESA_fx(); minMaxCheck();" style="width:115px;">
-                 <option value="0.00750063755419211|0|Pascal">
-                  Pascal
-                 </option>
-                 <option value="760.002100178515|0|atm">
-                  atm
-                 </option>
-                 <option value="750.063755419211|0|bar">
-                  bar
-                 </option>
-                 <option value="0.735561538478802|0|cmH2O">
-                  cmH2O
-                 </option>
-                 <option value="10|0|cmHg">
-                  cmHg
-                 </option>
-                 <option value="22.4199156928339|0|ftH2O">
-                  ftH2O
-                 </option>
-                 <option value="0.735561538478802|0|g/sqcm">
-                  g/sqcm
-                 </option>
-                 <option value="1.86832630773616|0|inH2O">
-                  inH2O
-                 </option>
-                 <option value="25.4000840071406|0|inHg">
-                  inHg
-                 </option>
-                 <option value="7.50063755419211|0|kPa">
-                  kPa
-                 </option>
-                 <option value="0.750063755419211|0|mbar">
-                  mbar
-                 </option>
-                 <option selected="selected" value="1|0|mmHg">
-                  mmHg
-                 </option>
-                 <option value="51.7150957831416|0|psi">
-                  psi
-                 </option>
-                 <option value="1|0|torr">
-                  torr
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" valign="top">
-                <span class="medCalcFontOneBold">
-                 On hypertension medication
-                </span>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: On hypertension medication. The variable option is No." id="togel7" name="On_Hypertension_Med_radio" onclick="MESA_fx();" type="radio" value="No|0"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel7');">
-                 No
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="left">
-                <br/>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: On hypertension medication. The variable option is Yes." id="togel8" name="On_Hypertension_Med_radio" onclick="MESA_fx();" type="radio" value="Yes|1"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel8');">
-                 Yes
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" valign="top">
-                <span class="medCalcFontOneBold">
-                 On lipid-lowering medication
-                </span>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: On lipid-lowering medication. The variable option is No." id="togel9" name="On_Lipid_Lowering_Med_radio" onclick="MESA_fx();" type="radio" value="No|0"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel9');">
-                 No
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="left">
-                <br/>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: On lipid-lowering medication. The variable option is Yes." id="togel10" name="On_Lipid_Lowering_Med_radio" onclick="MESA_fx();" type="radio" value="Yes|1"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel10');">
-                 Yes
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" valign="top">
-                <span class="medCalcFontOneBold">
-                 Diabetes
-                </span>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Diabetes. The variable option is No." id="togel11" name="Diabetes_radio" onclick="MESA_fx();" type="radio" value="No|0"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel11');">
-                 No
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="left">
-                <br/>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Diabetes. The variable option is Yes." id="togel12" name="Diabetes_radio" onclick="MESA_fx();" type="radio" value="Yes|1"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel12');">
-                 Yes
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" valign="top">
-                <span class="medCalcFontOneBold">
-                 Smoker
-                </span>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Smoker. The variable option is No." id="togel13" name="Smoker_radio" onclick="MESA_fx();" type="radio" value="No|0"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel13');">
-                 No
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="left">
-                <br/>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Smoker. The variable option is Yes." id="togel14" name="Smoker_radio" onclick="MESA_fx();" type="radio" value="Yes|1"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel14');">
-                 Yes
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" valign="top">
-                <span class="medCalcFontOneBold">
-                 Family history of MI
-                </span>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Family history of MI. The variable option is No." id="togel15" name="Family_History_MI_radio" onclick="MESA_fx();" type="radio" value="No|0"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel15');">
-                 No
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="left">
-                <br/>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Family history of MI. The variable option is Yes." id="togel16" name="Family_History_MI_radio" onclick="MESA_fx();" type="radio" value="Yes|1"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel16');">
-                 Yes
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 CAC
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value CAC" name="CAC_param" onblur="MESA_fx(); minMaxCheck();" onchange="MESA_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <span style="white-space: nowrap;">
-                 <span class="medCalcFontOneBold">
-                  Agatston units
-                 </span>
-                </span>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-           </center>
-           <br/>
-           <br/>
-           <center>
-            <span class="medCalcFontIO">
-             Results
-             <span class="medCalcFontOne" id="inputchk">
-              <br/>
-              <br/>
-              <b>
-               Important:
-              </b>
-              Inputs must be complete to perform calculation.
-              <br/>
-             </span>
-            </span>
-            <br/>
-            <br/>
-            <table cellpadding="4" class="medCalcResultBox" summary="EBMcalc Table">
-             <tbody>
-              <tr>
-               <td colspan="3">
-                <br/>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontResultParam">
-                 Terms
-                </span>
-               </td>
-               <td nowrap="nowrap" valign="top">
-                <input aria-label="This output box will display the calculated value Terms" aria-readonly="true" name="Terms_param" size="6" type="text"/>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontResultParam">
-                 10-year risk
-                </span>
-               </td>
-               <td nowrap="nowrap" valign="top">
-                <input aria-label="This output box will display the calculated value 10-year risk" aria-readonly="true" name="Ten_Year_Risk_param" size="6" type="text"/>
-               </td>
-               <td align="left" valign="top">
-                <span class="medCalcFontResultParam">
-                 <select aria-label="Use this pulldown selector to set the unit of measure for the result value 10-year risk" class="medCalcFontSelect" name="Ten_Year_Risk_unit" onchange="MESA_fx();" style="width:115px;">
-                  <option selected="selected" value="1|0|%">
-                   %
-                  </option>
-                  <option value="100|0|fraction">
-                   fraction
-                  </option>
-                  <option value="100|0|ratio">
-                   ratio
-                  </option>
-                 </select>
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontResultParam">
-                 Terms CAC
-                </span>
-               </td>
-               <td nowrap="nowrap" valign="top">
-                <input aria-label="This output box will display the calculated value Terms CAC" aria-readonly="true" name="Terms_CAC_param" size="6" type="text"/>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontResultParam">
-                 10-year risk CAC
-                </span>
-               </td>
-               <td nowrap="nowrap" valign="top">
-                <input aria-label="This output box will display the calculated value 10-year risk CAC" aria-readonly="true" name="Ten_Year_Risk_CAC_param" size="6" type="text"/>
-               </td>
-               <td align="left" valign="top">
-                <span class="medCalcFontResultParam">
-                 <select aria-label="Use this pulldown selector to set the unit of measure for the result value 10-year risk CAC" class="medCalcFontSelect" name="Ten_Year_Risk_CAC_unit" onchange="MESA_fx();" style="width:115px;">
-                  <option selected="selected" value="1|0|%">
-                   %
-                  </option>
-                  <option value="100|0|fraction">
-                   fraction
-                  </option>
-                  <option value="100|0|ratio">
-                   ratio
-                  </option>
-                 </select>
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td colspan="3">
-                <br/>
-               </td>
-              </tr>
-              <tr>
-               <td align="center" colspan="3">
-                <span class="medCalcFontResultParam">
-                 Decimal precision
-                </span>
-                <select aria-label="Use this pulldown selector to set the decimal precision of calculations" class="medCalcFontSelect" name="decpts" onchange="MESA_fx();">
-                 <option>
-                  0
-                 </option>
-                 <option>
-                  1
-                 </option>
-                 <option selected="selected">
-                  2
-                 </option>
-                 <option>
-                  3
-                 </option>
-                </select>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-           </center>
-           <br/>
-           <br/>
-           <div id="calc_buttons">
-            <center>
-             <span class="medCalcFontOne">
-              <input name="resetbutton" type="reset" value="Reset form"/>
-             </span>
-            </center>
-           </div>
-          </div>
-          <div id="pretextrefs">
-          </div>
-          <br/>
-          <br/>
-          <div id="calc_hints">
-           <span class="medCalcFontOne">
-           </span>
-          </div>
-          <div id="calc_tables_above_notes">
-          </div>
-          <br/>
-          <br/>
-          <div id="calc_notes">
-           <span class="medCalcFontOneBold">
-            Notes
-           </span>
-           <ul class="medCalcFontOne">
-            <li class="parentNote">
-             This calculator helps predict the 10-year risk of the following ASCVD events:
-             <ul class="childNoteList">
-              <li class="childNote">
-               CHD death
-              </li>
-              <li class="childNote">
-               Nonfatal MI
-              </li>
-              <li class="childNote">
-               Resuscitated cardiac arrest
-              </li>
-              <li class="childNote">
-               Coronary revascularization in patient with angina
-              </li>
-             </ul>
-            </li>
-            <li>
-             When a
-             <b>
-              CAC
-             </b>
-             score is known, a second 10-year risk calculation is done using independent hazard ratios associated with
-             <b>
-              CAC
-             </b>
-             scores.
-            </li>
-            <li>
-             <b>
-              MESA
-             </b>
-             : Multi-Ethnic Study of Atherosclerosis;
-             <b>
-              CAC
-             </b>
-             : coronary artery calcification;
-             <b>
-              HDL
-             </b>
-             : high-density lipoprotein;
-             <b>
-              MI
-             </b>
-             : myocardial infarction;
-             <b>
-              ASCVD
-             </b>
-             : atherosclerotic cardiovascular disease;
-             <b>
-              CHD
-             </b>
-             : coronary heart disease.
-            </li>
-           </ul>
-          </div>
-          <br/>
-          <br/>
-          <span class="medCalcFontRef">
-           <b>
-            Equations used
-           </b>
-          </span>
-          <br/>
-          <br/>
-          <center>
-           <div id="calc_equation">
-            <table cellpadding="10" cellspacing="0" summary="EBMcalc Table">
-             <tbody>
-              <tr>
-               <td class="medCalcFormuliBox">
-                <span class="medCalcFontFormuli">
-                 Terms = (Age * 0.0455) + (Sex * 0.7496) +  ((Race == 1?1:0) * -0.2111) + ((Race == 2?1:0) * -0.5055) + ((Race == 3?1:0) * -0.19) + (Diabetes * 0.5168) + (Smoker * 0.4732) + (Total_cholesterol * 0.0053) - (HDL_cholesterol * 0.0140) + (On lipid-lowering medication * 0.2473) + (Systolic blood pressure * 0.0085) + (On hypertension medication * 0.3381) + (Family history of MI * 0.4522)
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td class="medCalcFormuliBox">
-                <span class="medCalcFontFormuli">
-                 10-year risk = 100 * (1 - 0.99963
-                 <sup>
-                  e
-                  <sup>
-                   (Terms)
-                  </sup>
-                 </sup>
-                 )
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td class="medCalcFormuliBox">
-                <span class="medCalcFontFormuli">
-                 Terms CAC = (Age * 0.0172) + (Sex * 0.4079) +  ((Race == 1?1:0) * 0.0353) + ((Race == 2?1:0) * -0.3475) + ((Race == 3?1:0) * -0.0222) + (Diabetes * 0.3892) + (Smoker * 0.3717) + (Total_cholesterol * 0.0043) - (HDL_cholesterol * 0.0114) + (On lipid-lowering medication * 0.1206) + (Systolic blood pressure * 0.0066) + (On hypertension medication * 0.2278) + (Family history of MI * 0.3239) + (ln(CAC + 1) * 0.2743)
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td class="medCalcFormuliBox">
-                <span class="medCalcFontFormuli">
-                 10-year risk CAC = 100 * (1 - 0.99833
-                 <sup>
-                  e
-                  <sup>
-                   (Terms CAC)
-                  </sup>
-                 </sup>
-                 )
-                </span>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-            <br/>
-            <br/>
-           </div>
-          </center>
-          <div id="calc_tables">
-          </div>
-          <br/>
-          <br/>
-          <div id="calc_refs">
-           <span class="medCalcFontRef">
-            <b>
-             References
-            </b>
-           </span>
-           <ol>
-            <li>
-             <span class="medCalcFontRef">
-              <a href="https://www.ncbi.nlm.nih.gov/pubmed/26449133" style="color: green; text-decoration: none;" target="_blank">
-               McClelland RL, Jorgensen NW, Budoff M, et al. 10-Year Coronary Heart Disease Risk Prediction Using Coronary  Artery Calcium and Traditional Risk Factors: Derivation in the MESA (Multi-Ethnic Study of Atherosclerosis) With Validation in  the HNR (Heinz Nixdorf Recall) Study and the DHS (Dallas Heart Study). J Am Coll Cardiol 2015; 66:1643.
-              </a>
-             </span>
-            </li>
-           </ol>
-          </div>
-         </form>
-        </div>
-        <span class="calculatorVendorId" id="T1678215877">
-        </span>
-       </div>
-       <div id="printDisclaimer">
-        <b>
-         Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.
-        </b>
-        <p>
-         Information on this page may not appear correctly if printed.
-        </p>
-       </div>
-       <div id="disclaimerCalculator">
-        <div class="medCalcFontTwo">
-         <p class="header">
-          Legal Notices and Disclaimer
-         </p>
-         <p>
-          All information contained in and produced by the EBMcalc system is provided
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Calculator: Cardiovascular risk assessment in adults (10-year, MESA 2015, with or without CAC score) (conventional and SI units)</title></head>
+<body><section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Calculator: Cardiovascular risk assessment in adults (10-year, MESA 2015, with or without CAC score) (conventional and SI units)</h1>
+<div class="utdArticleSection" id="topicContentCalculator"><div id="topicText">
+<div id="mc3k">
+<form action="" id="MESA_form" name="MESA_form" onkeydown="formKeyDown(event);" onkeypress="resetInTime(); return validNumberField(event);" onkeyup="MESA_fx();" onreset="document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
+<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
+<td align="left" bgcolor="#eeeeee">
+<span class="medCalcFontTitleBox">
+
+ 
+Calculator: Cardiovascular risk assessment in adults (10-year, MESA 2015, with or without CAC score) (conventional and SI units)
+</span></td></tr></tbody></table><br/> <br/>
+<div id="calc_main">
+<center>
+<span class="medCalcFontIO">
+Input
+</span>
+<br/> <br/>
+<table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
+<tbody><tr><td align="right" valign="top"><span class="medCalcFontOneBold">Race</span></td>
+<td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Race. The variable option is African American." id="togel1" name="Race_radio" onclick="MESA_fx();" type="radio" value="African American|1"/><span class="medCalcFontOneClick" onclick="setRB('togel1');"> African American</span></td></tr>
+<tr><td align="left"><br/></td><td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Race. The variable option is Chinese American." id="togel2" name="Race_radio" onclick="MESA_fx();" type="radio" value="Chinese American|2"/><span class="medCalcFontOneClick" onclick="setRB('togel2');"> Chinese American</span></td></tr>
+<tr><td align="left"><br/></td><td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Race. The variable option is Hispanic." id="togel3" name="Race_radio" onclick="MESA_fx();" type="radio" value="Hispanic|3"/><span class="medCalcFontOneClick" onclick="setRB('togel3');"> Hispanic</span></td></tr>
+<tr><td align="left"><br/></td><td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Race. The variable option is Non-Hispanic white." id="togel4" name="Race_radio" onclick="MESA_fx();" type="radio" value="Non-Hispanic white|4"/><span class="medCalcFontOneClick" onclick="setRB('togel4');"> Non-Hispanic white</span></td></tr>
+<tr><td align="right" valign="top"><span class="medCalcFontOneBold">Sex</span></td>
+<td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Sex. The variable option is Female." id="togel5" name="Sex_radio" onclick="MESA_fx();" type="radio" value="Female|0"/><span class="medCalcFontOneClick" onclick="setRB('togel5');"> Female</span></td></tr>
+<tr><td align="left"><br/></td><td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Sex. The variable option is Male." id="togel6" name="Sex_radio" onclick="MESA_fx();" type="radio" value="Male|1"/><span class="medCalcFontOneClick" onclick="setRB('togel6');"> Male</span></td></tr>
+<tr><td align="right" width="42%"><span class="medCalcFontOneBold">Age</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value Age" name="Age_param" onblur="MESA_fx(); minMaxCheck();" onchange="MESA_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value Age" class="medCalcFontSelect" name="Age_unit" onchange="MESA_fx(); minMaxCheck();" style="width:115px;">
+<option value="0.0833333333333333|0|mo">mo</option>
+<option selected="selected" value="1|0|yr">yr</option>
+</select></td></tr>
+<tr><td align="right" width="42%"><span class="medCalcFontOneBold">Total cholesterol</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value Total cholesterol" name="Total_Cholesterol_param" onblur="MESA_fx(); minMaxCheck();" onchange="MESA_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value Total cholesterol" class="medCalcFontSelect" name="Total_Cholesterol_unit" onchange="MESA_fx(); minMaxCheck();" style="width:115px;">
+<option selected="selected" value="1|0|mg/dL_Chol">mg/dL</option>
+<option value="38.6697602474865|0|mmol/L_Chol">mmol/L</option>
+</select></td></tr>
+<tr><td align="right" width="42%"><span class="medCalcFontOneBold">HDL cholesterol</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value HDL cholesterol" name="HDL_Cholesterol_param" onblur="MESA_fx(); minMaxCheck();" onchange="MESA_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value HDL cholesterol" class="medCalcFontSelect" name="HDL_Cholesterol_unit" onchange="MESA_fx(); minMaxCheck();" style="width:115px;">
+<option selected="selected" value="1|0|mg/dL_Chol">mg/dL</option>
+<option value="38.6697602474865|0|mmol/L_Chol">mmol/L</option>
+</select></td></tr>
+<tr><td align="right" width="42%"><span class="medCalcFontOneBold">Systolic blood pressure</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value Systolic blood pressure" name="Systolic_Blood_Pressure_param" onblur="MESA_fx(); minMaxCheck();" onchange="MESA_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value Systolic blood pressure" class="medCalcFontSelect" name="Systolic_Blood_Pressure_unit" onchange="MESA_fx(); minMaxCheck();" style="width:115px;">
+<option value="0.00750063755419211|0|Pascal">Pascal</option>
+<option value="760.002100178515|0|atm">atm</option>
+<option value="750.063755419211|0|bar">bar</option>
+<option value="0.735561538478802|0|cmH2O">cmH2O</option>
+<option value="10|0|cmHg">cmHg</option>
+<option value="22.4199156928339|0|ftH2O">ftH2O</option>
+<option value="0.735561538478802|0|g/sqcm">g/sqcm</option>
+<option value="1.86832630773616|0|inH2O">inH2O</option>
+<option value="25.4000840071406|0|inHg">inHg</option>
+<option value="7.50063755419211|0|kPa">kPa</option>
+<option value="0.750063755419211|0|mbar">mbar</option>
+<option selected="selected" value="1|0|mmHg">mmHg</option>
+<option value="51.7150957831416|0|psi">psi</option>
+<option value="1|0|torr">torr</option>
+</select></td></tr>
+<tr><td align="right" valign="top"><span class="medCalcFontOneBold">On hypertension medication</span></td>
+<td align="left" colspan="2"><input aria-label="This button selects an option for the variable: On hypertension medication. The variable option is No." id="togel7" name="On_Hypertension_Med_radio" onclick="MESA_fx();" type="radio" value="No|0"/><span class="medCalcFontOneClick" onclick="setRB('togel7');"> No</span></td></tr>
+<tr><td align="left"><br/></td><td align="left" colspan="2"><input aria-label="This button selects an option for the variable: On hypertension medication. The variable option is Yes." id="togel8" name="On_Hypertension_Med_radio" onclick="MESA_fx();" type="radio" value="Yes|1"/><span class="medCalcFontOneClick" onclick="setRB('togel8');"> Yes</span></td></tr>
+<tr><td align="right" valign="top"><span class="medCalcFontOneBold">On lipid-lowering medication</span></td>
+<td align="left" colspan="2"><input aria-label="This button selects an option for the variable: On lipid-lowering medication. The variable option is No." id="togel9" name="On_Lipid_Lowering_Med_radio" onclick="MESA_fx();" type="radio" value="No|0"/><span class="medCalcFontOneClick" onclick="setRB('togel9');"> No</span></td></tr>
+<tr><td align="left"><br/></td><td align="left" colspan="2"><input aria-label="This button selects an option for the variable: On lipid-lowering medication. The variable option is Yes." id="togel10" name="On_Lipid_Lowering_Med_radio" onclick="MESA_fx();" type="radio" value="Yes|1"/><span class="medCalcFontOneClick" onclick="setRB('togel10');"> Yes</span></td></tr>
+<tr><td align="right" valign="top"><span class="medCalcFontOneBold">Diabetes</span></td>
+<td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Diabetes. The variable option is No." id="togel11" name="Diabetes_radio" onclick="MESA_fx();" type="radio" value="No|0"/><span class="medCalcFontOneClick" onclick="setRB('togel11');"> No</span></td></tr>
+<tr><td align="left"><br/></td><td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Diabetes. The variable option is Yes." id="togel12" name="Diabetes_radio" onclick="MESA_fx();" type="radio" value="Yes|1"/><span class="medCalcFontOneClick" onclick="setRB('togel12');"> Yes</span></td></tr>
+<tr><td align="right" valign="top"><span class="medCalcFontOneBold">Smoker</span></td>
+<td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Smoker. The variable option is No." id="togel13" name="Smoker_radio" onclick="MESA_fx();" type="radio" value="No|0"/><span class="medCalcFontOneClick" onclick="setRB('togel13');"> No</span></td></tr>
+<tr><td align="left"><br/></td><td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Smoker. The variable option is Yes." id="togel14" name="Smoker_radio" onclick="MESA_fx();" type="radio" value="Yes|1"/><span class="medCalcFontOneClick" onclick="setRB('togel14');"> Yes</span></td></tr>
+<tr><td align="right" valign="top"><span class="medCalcFontOneBold">Family history of MI</span></td>
+<td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Family history of MI. The variable option is No." id="togel15" name="Family_History_MI_radio" onclick="MESA_fx();" type="radio" value="No|0"/><span class="medCalcFontOneClick" onclick="setRB('togel15');"> No</span></td></tr>
+<tr><td align="left"><br/></td><td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Family history of MI. The variable option is Yes." id="togel16" name="Family_History_MI_radio" onclick="MESA_fx();" type="radio" value="Yes|1"/><span class="medCalcFontOneClick" onclick="setRB('togel16');"> Yes</span></td></tr>
+<tr><td align="right" width="42%"><span class="medCalcFontOneBold">CAC</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value CAC" name="CAC_param" onblur="MESA_fx(); minMaxCheck();" onchange="MESA_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <span style="white-space: nowrap;"><span class="medCalcFontOneBold">Agatston units</span>
+</span></td></tr>
+</tbody></table>
+</center>
+<br/> <br/><center><span class="medCalcFontIO">Results<span class="medCalcFontOne" id="inputchk"><br/> <br/><b>Important:</b> Inputs must be complete to perform calculation. <br/></span></span>
+<br/> <br/>
+<table cellpadding="4" class="medCalcResultBox" summary="EBMcalc Table">
+<tbody><tr><td colspan="3"> <br/></td></tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">Terms</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value Terms" aria-readonly="true" name="Terms_param" size="6" type="text"/></td>
+</tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">10-year risk</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value 10-year risk" aria-readonly="true" name="Ten_Year_Risk_param" size="6" type="text"/></td>
+<td align="left" valign="top"><span class="medCalcFontResultParam">
+<select aria-label="Use this pulldown selector to set the unit of measure for the result value 10-year risk" class="medCalcFontSelect" name="Ten_Year_Risk_unit" onchange="MESA_fx();" style="width:115px;">
+<option selected="selected" value="1|0|%">%</option>
+<option value="100|0|fraction">fraction</option>
+<option value="100|0|ratio">ratio</option>
+</select>
+</span></td>
+</tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">Terms CAC</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value Terms CAC" aria-readonly="true" name="Terms_CAC_param" size="6" type="text"/></td>
+</tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">10-year risk CAC</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value 10-year risk CAC" aria-readonly="true" name="Ten_Year_Risk_CAC_param" size="6" type="text"/></td>
+<td align="left" valign="top"><span class="medCalcFontResultParam">
+<select aria-label="Use this pulldown selector to set the unit of measure for the result value 10-year risk CAC" class="medCalcFontSelect" name="Ten_Year_Risk_CAC_unit" onchange="MESA_fx();" style="width:115px;">
+<option selected="selected" value="1|0|%">%</option>
+<option value="100|0|fraction">fraction</option>
+<option value="100|0|ratio">ratio</option>
+</select>
+</span></td>
+</tr>
+<tr><td colspan="3"> <br/></td></tr>
+<tr><td align="center" colspan="3"><span class="medCalcFontResultParam">Decimal precision  </span>
+<select aria-label="Use this pulldown selector to set the decimal precision of calculations" class="medCalcFontSelect" name="decpts" onchange="MESA_fx();">
+<option>0</option>
+<option>1</option>
+<option selected="selected">2</option>
+<option>3</option>
+</select></td></tr>
+</tbody></table>
+</center><br/> <br/>
+<div id="calc_buttons">
+<center>
+<span class="medCalcFontOne">
+<input name="resetbutton" type="reset" value="Reset form"/>
+</span>
+</center>
+</div>
+</div><div id="pretextrefs">
+ 
+</div>
+<br/> <br/>
+<div id="calc_hints">
+<span class="medCalcFontOne">
+</span>
+</div>
+<div id="calc_tables_above_notes">
+</div>
+<br/> <br/>
+<div id="calc_notes">
+<span class="medCalcFontOneBold">Notes</span>
+<ul class="medCalcFontOne">
+<li class="parentNote">This calculator helps predict the 10-year risk of the following ASCVD events:
+<ul class="childNoteList">
+<li class="childNote">CHD death</li>
+<li class="childNote">Nonfatal MI</li>
+<li class="childNote">Resuscitated cardiac arrest</li>
+<li class="childNote">Coronary revascularization in patient with angina</li>
+</ul></li>
+<li>When a <b>CAC</b> score is known, a second 10-year risk calculation is done using independent hazard ratios associated with <b>CAC</b> scores.</li>
+<li><b>MESA</b>: Multi-Ethnic Study of Atherosclerosis; <b>CAC</b>: coronary artery calcification; <b>HDL</b>: high-density lipoprotein; <b>MI</b>: myocardial infarction; <b>ASCVD</b>: atherosclerotic cardiovascular disease; <b>CHD</b>: coronary heart disease.</li>
+</ul>
+</div>
+<br/> <br/>
+<span class="medCalcFontRef"><b>Equations used</b></span>
+<br/> <br/>
+<center>
+<div id="calc_equation">
+<table cellpadding="10" cellspacing="0" summary="EBMcalc Table"><tbody><tr><td class="medCalcFormuliBox"><span class="medCalcFontFormuli">Terms = (Age * 0.0455) + (Sex * 0.7496) +  ((Race == 1?1:0) * -0.2111) + ((Race == 2?1:0) * -0.5055) + ((Race == 3?1:0) * -0.19) + (Diabetes * 0.5168) + (Smoker * 0.4732) + (Total_cholesterol * 0.0053) - (HDL_cholesterol * 0.0140) + (On lipid-lowering medication * 0.2473) + (Systolic blood pressure * 0.0085) + (On hypertension medication * 0.3381) + (Family history of MI * 0.4522)</span></td></tr><tr><td class="medCalcFormuliBox"><span class="medCalcFontFormuli">10-year risk = 100 * (1 - 0.99963<sup>e<sup>(Terms)</sup></sup>)</span></td></tr><tr><td class="medCalcFormuliBox"><span class="medCalcFontFormuli">Terms CAC = (Age * 0.0172) + (Sex * 0.4079) +  ((Race == 1?1:0) * 0.0353) + ((Race == 2?1:0) * -0.3475) + ((Race == 3?1:0) * -0.0222) + (Diabetes * 0.3892) + (Smoker * 0.3717) + (Total_cholesterol * 0.0043) - (HDL_cholesterol * 0.0114) + (On lipid-lowering medication * 0.1206) + (Systolic blood pressure * 0.0066) + (On hypertension medication * 0.2278) + (Family history of MI * 0.3239) + (ln(CAC + 1) * 0.2743)</span></td></tr><tr><td class="medCalcFormuliBox"><span class="medCalcFontFormuli">10-year risk CAC = 100 * (1 - 0.99833<sup>e<sup>(Terms CAC)</sup></sup>)</span></td></tr></tbody></table><br/> <br/>
+</div> </center>
+<div id="calc_tables">
+</div>
+<br/> <br/>
+<div id="calc_refs">
+<span class="medCalcFontRef"><b>References</b></span>
+<ol>
+<li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/26449133" style="color: green; text-decoration: none;" target="_blank">McClelland RL, Jorgensen NW, Budoff M, et al. 10-Year Coronary Heart Disease Risk Prediction Using Coronary  Artery Calcium and Traditional Risk Factors: Derivation in the MESA (Multi-Ethnic Study of Atherosclerosis) With Validation in  the HNR (Heinz Nixdorf Recall) Study and the DHS (Dallas Heart Study). J Am Coll Cardiol 2015; 66:1643.</a></span></li>
+</ol>
+</div>
+</form>
+</div>
+<span class="calculatorVendorId" id="T1678215877">
+</span></div><div id="printDisclaimer">
+<b>Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.</b>
+<p>
+	Information on this page may not appear correctly if printed. </p>
+</div>
+<div id="disclaimerCalculator">
+<div class="medCalcFontTwo">
+<p class="header">Legal Notices and Disclaimer</p>
+<p>
+			All information contained in and produced by the EBMcalc system is provided
 			for educational purposes only. This information should not be used for the diagnosis or treatment
-			of any health problem or disease.
-          <b>
-           THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.
-          </b>
-          <a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">
-           Click here for full notice and disclaimer.
-          </a>
-         </p>
-         <p class="copy">
-          EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC
-         </p>
-        </div>
-       </div>
-       <div id="topicVersionRevision">
-        Topic 107280 Version 7.0
-       </div>
-      </div>
-     </div>
-    </div>
-   </section>
-  </section>
-  <!-- End Main Menu Area -->
-  <!-- Start Search Popup Area -->
-  <!-- End Footer Area -->
-  <!-- Back to top -->
-  <a class="scrolltop" href="#top">
-   <i class="icofont-hand-drawn-up">
-   </i>
-  </a>
-  <!-- End Back to top -->
-  <!-- jQuery Min JS -->
-  <!-- Prpper JS -->
-  <!-- Bootstrap Min JS -->
-  <!-- Classy Nav Min Js -->
-  <!-- Owl Carousel Min Js -->
-  <!-- Magnific Popup JS -->
-  <!-- CounterUp JS -->
-  <!-- Waypoints JS -->
-  <!-- Form Validator Min JS -->
-  <!-- Contact Form Min JS -->
-  <!-- Main JS -->
-  <!-- Global site tag (gtag.js) - Google Analytics -->
- </body>
+			of any health problem or disease. 
+			<b>THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.</b>
+<a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">Click here for full notice and disclaimer.</a>
+</p>
+<p class="copy">EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC</p>
+</div>
+</div><div id="topicVersionRevision">Topic 107280 Version 7.0</div></div>
+</div>
+</div>
+</section><script>
+/* <![CDATA[ */
+
+var lastChar = '';
+
+function log(i){
+return Math.log(i) * Math.LOG10E;
+}
+
+function ln(i){
+return Math.log(i);
+}
+
+function sq(i){
+return i * i;
+}
+
+function sqr(i){
+return Math.sqrt(i);
+}
+
+
+function power(x,y){
+return Math.pow(x,y);
+}
+
+function eTo(x){
+return Math.exp(x);
+}
+
+
+function fixDP(r, dps) {
+if (isNaN(r)) return "NaN";
+var msign = '';
+if (r < 0) msign = '-';
+x = Math.abs(r);
+if (x > Math.pow(10, 21)) return msign + x.toString();
+var m = Math.round(x * Math.pow(10, dps)).toString();
+if (dps == 0) return msign + m;
+while (m.length <= dps) m = "0" + m;
+return msign + m.substring(0, m.length - dps) + "." + m.substring(m.length - dps);
+}
+
+
+function alertNaN(){
+alert('This field is improperly formatted. You may only input the digits 0-9 and a decimal point.');
+doCalc = false;
+clrResults();
+}
+
+function validNumberField(event) {
+var field = event.target;
+
+if(field && field != 'undefined' && field.attributes.type.nodeValue && (field.attributes.type.nodeValue == 'number')) {
+var val = field.value;
+var charCode = event.charCode;
+var key = String.fromCharCode(charCode);
+
+if(charCode == 0 || charCode == 13) {
+  return true;
+}
+
+if(key == ' ') {
+alert('Numeric field cannot contain spaces.');
+  return false;
+}
+
+if(key == '.') { return validDecimalPoint(val, key); }
+if(key == '-') { return validMinus(val, key); }
+
+if(isNaN(parseInt(key))) {
+alertNaN();
+return false;
+}
+
+return validFloat(val, key);
+}
+return true;
+}
+
+function validDecimalPoint(val, key) {
+if(val.length == 0 && lastChar != '.') {
+  lastChar = '.';
+  return true;
+}
+if(val.indexOf('.') >= 0 || lastChar == '.') {
+ alertNaN();
+ return false;
+}
+if(validFloat(val, key)) {
+ lastChar = key;
+ return true;
+}
+lastChar = '';
+return false;
+}
+
+function validMinus(val, key) {
+if(val.length == 0) {
+  return true;
+}
+if(val.length > 1) {
+ alertNaN();
+ return false;
+}
+return validFloat(val, key);
+}
+
+
+function validFloat(val, key) {
+var currentVal = parseFloat(val + key);
+if(isNaN(val + key) || isNaN(currentVal)) {
+alertNaN();
+return false;
+}
+return true;
+}
+
+function formKeyDown(event) {
+var field = event.target;
+
+resetInTime();
+
+if(field && field != 'undefined' && field.attributes.type && field.attributes.type.nodeValue && (field.attributes.type.nodeValue == 'number')) {
+  var val = field.value;
+  var keyCode = event.keyCode;
+  if(keyCode == 8 || keyCode == 127) {
+    // backspace or delete
+    if(lastChar == '.') {
+      lastChar = '';
+    }
+    if(field.value.length == 3 && field.value[0] == '0' && field.value[1] == '.') {
+      // this handles a backspace on an input like ".5", which is saved internally as "0.5"
+      //   otherwise, if you leave the field after the backspace, it retains "0.5" as the value, most likely an iOS bug
+      field.value = ''; 
+    }
+  }
+}
+clrResults();
+}
+
+function clrValue(field) {
+ field.value = '';
+ lastChar = '';
+}
+
+var currenttimeout;
+
+function resetInTime(){
+if (currenttimeout) clearTimeout(currenttimeout);
+currenttimeout = setTimeout('minMaxCheck();', 2000);
+}
+
+
+
+var curelement;
+
+function togCB(thisid){
+thischeckbox = document.getElementById(thisid);
+if (thischeckbox.checked){ thischeckbox.checked = false; }
+else { thischeckbox.checked = true; }
+MESA_fx();
+}
+
+function setRB(thisid){
+document.getElementById(thisid).checked = true;
+MESA_fx();
+}
+
+
+var calctxt = ''; 
+var xmltxt = ''; 
+var xmlresult = '';
+var htmtxt = ''; 
+var postNow = false;
+var printing = false;
+var interptxt = '';
+var interphtm = '';
+var interpxml = '';
+var rbchk = false;
+var inputchktxt = '<br />&nbsp;<br /><b>Important:</b> Inputs must be complete to perform calculation. <br />'
+
+
+function aDelay(atxt, ffield){
+with (document.MESA_form){
+clrResults();
+ffield.value = '';
+doCalc = false;
+setTimeout(function(){ alert(atxt); }, 100);
+document.getElementById('inputchk').innerHTML = inputchktxt;
+
+}}
+
+
+function MESA_fx() {
+
+with(document.MESA_form){
+
+
+doCalc = true;
+rbchk = false;
+if (Race_radio[0].checked){ rbchk = true; Race = 1;  }
+if (Race_radio[1].checked){ rbchk = true; Race = 2;  }
+if (Race_radio[2].checked){ rbchk = true; Race = 3;  }
+if (Race_radio[3].checked){ rbchk = true; Race = 4;  }
+if (!rbchk) doCalc = false;
+rbchk = false;
+if (Sex_radio[0].checked){ rbchk = true; Sex = 0;  }
+if (Sex_radio[1].checked){ rbchk = true; Sex = 1;  }
+if (!rbchk) doCalc = false;
+param_value = parseFloat(Age_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = Age_unit.options[Age_unit.selectedIndex].value.split('|');
+Age = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+param_value = parseFloat(Total_Cholesterol_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = Total_Cholesterol_unit.options[Total_Cholesterol_unit.selectedIndex].value.split('|');
+Total_Cholesterol = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+param_value = parseFloat(HDL_Cholesterol_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = HDL_Cholesterol_unit.options[HDL_Cholesterol_unit.selectedIndex].value.split('|');
+HDL_Cholesterol = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+param_value = parseFloat(Systolic_Blood_Pressure_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = Systolic_Blood_Pressure_unit.options[Systolic_Blood_Pressure_unit.selectedIndex].value.split('|');
+Systolic_Blood_Pressure = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+rbchk = false;
+if (On_Hypertension_Med_radio[0].checked){ rbchk = true; On_Hypertension_Med = 0;  }
+if (On_Hypertension_Med_radio[1].checked){ rbchk = true; On_Hypertension_Med = 1;  }
+if (!rbchk) doCalc = false;
+rbchk = false;
+if (On_Lipid_Lowering_Med_radio[0].checked){ rbchk = true; On_Lipid_Lowering_Med = 0;  }
+if (On_Lipid_Lowering_Med_radio[1].checked){ rbchk = true; On_Lipid_Lowering_Med = 1;  }
+if (!rbchk) doCalc = false;
+rbchk = false;
+if (Diabetes_radio[0].checked){ rbchk = true; Diabetes = 0;  }
+if (Diabetes_radio[1].checked){ rbchk = true; Diabetes = 1;  }
+if (!rbchk) doCalc = false;
+rbchk = false;
+if (Smoker_radio[0].checked){ rbchk = true; Smoker = 0;  }
+if (Smoker_radio[1].checked){ rbchk = true; Smoker = 1;  }
+if (!rbchk) doCalc = false;
+rbchk = false;
+if (Family_History_MI_radio[0].checked){ rbchk = true; Family_History_MI = 0;  }
+if (Family_History_MI_radio[1].checked){ rbchk = true; Family_History_MI = 1;  }
+if (!rbchk) doCalc = false;
+param_value = parseFloat(CAC_param.value);
+CAC = param_value;
+dp = decpts.options[decpts.selectedIndex].text;
+Terms =  (Age * 0.0455) + (Sex * 0.7496) +  ((Race == 1?1:0) * -0.2111) + ((Race == 2?1:0) * -0.5055) + ((Race == 3?1:0) * -0.19) + (Diabetes * 0.5168) + (Smoker * 0.4732) + (Total_Cholesterol * 0.0053) - (HDL_Cholesterol * 0.0140) + (On_Lipid_Lowering_Med * 0.2473) + (Systolic_Blood_Pressure * 0.0085) + (On_Hypertension_Med * 0.3381) + (Family_History_MI * 0.4522);
+
+if (doCalc) Terms_param.value = fixDP(Terms, dp);
+
+
+
+Ten_Year_Risk =  100 * (1 - power(0.99963, eTo(Terms)));
+
+unit_parts = Ten_Year_Risk_unit.options[Ten_Year_Risk_unit.selectedIndex].value.split('|');
+if (doCalc) Ten_Year_Risk_param.value = fixDP((Ten_Year_Risk - parseFloat(unit_parts[1])) / parseFloat(unit_parts[0]), dp);
+
+
+
+Terms_CAC =  (Age * 0.0172) + (Sex * 0.4079) +  ((Race == 1?1:0) * 0.0353) + ((Race == 2?1:0) * -0.3475) + ((Race == 3?1:0) * -0.0222) + (Diabetes * 0.3892) + (Smoker * 0.3717) + (Total_Cholesterol * 0.0043) - (HDL_Cholesterol * 0.0114) + (On_Lipid_Lowering_Med * 0.1206) + (Systolic_Blood_Pressure * 0.0066) + (On_Hypertension_Med * 0.2278) + (Family_History_MI * 0.3239) + (ln(CAC + 1) * 0.2743);
+
+if (doCalc) Terms_CAC_param.value = fixDP(Terms_CAC, dp);
+
+if (isNaN(Terms_CAC_param.value)) Terms_CAC_param.value = '';
+
+Ten_Year_Risk_CAC =  100 * (1 - power(0.99833, eTo(Terms_CAC)));
+
+unit_parts = Ten_Year_Risk_CAC_unit.options[Ten_Year_Risk_CAC_unit.selectedIndex].value.split('|');
+if (doCalc) Ten_Year_Risk_CAC_param.value = fixDP((Ten_Year_Risk_CAC - parseFloat(unit_parts[1])) / parseFloat(unit_parts[0]), dp);
+
+if (isNaN(Ten_Year_Risk_CAC_param.value)) Ten_Year_Risk_CAC_param.value = '';
+
+
+
+}
+
+
+if (doCalc) document.getElementById('inputchk').innerHTML = '';
+else document.getElementById('inputchk').innerHTML = inputchktxt;
+
+
+}
+
+function minMaxCheck(){
+if (printing) return;
+
+
+
+with(document.MESA_form){
+
+if (Age_param.value && isNaN(Age_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', Age_param); }
+if (Age_param.value && (Age < (45 - 0.00001))) {
+Age = 0;
+ aDelay("The minimum value for Age is 45 yr.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Age_param);
+}
+
+if (Age_param.value && Age > 85) {
+Age = 0;
+ aDelay("The maximum value for Age is 85 yr.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Age_param);
+}
+
+if (Total_Cholesterol_param.value && isNaN(Total_Cholesterol_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', Total_Cholesterol_param); }
+if (Total_Cholesterol_param.value && (Total_Cholesterol < (100 - 0.00001))) {
+Total_Cholesterol = 0;
+ aDelay("The minimum value for Total cholesterol is 100 mg/dL.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Total_Cholesterol_param);
+}
+
+if (Total_Cholesterol_param.value && Total_Cholesterol > 500) {
+Total_Cholesterol = 0;
+ aDelay("The maximum value for Total cholesterol is 500 mg/dL.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Total_Cholesterol_param);
+}
+
+if (HDL_Cholesterol_param.value && isNaN(HDL_Cholesterol_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', HDL_Cholesterol_param); }
+if (HDL_Cholesterol_param.value && (HDL_Cholesterol < (10 - 0.00001))) {
+HDL_Cholesterol = 0;
+ aDelay("The minimum value for HDL cholesterol is 10 mg/dL.\n\nIf you are specifying a value with a different unit, change the unit selector first.", HDL_Cholesterol_param);
+}
+
+if (HDL_Cholesterol_param.value && HDL_Cholesterol > 200) {
+HDL_Cholesterol = 0;
+ aDelay("The maximum value for HDL cholesterol is 200 mg/dL.\n\nIf you are specifying a value with a different unit, change the unit selector first.", HDL_Cholesterol_param);
+}
+
+if (Systolic_Blood_Pressure_param.value && isNaN(Systolic_Blood_Pressure_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', Systolic_Blood_Pressure_param); }
+if (Systolic_Blood_Pressure_param.value && (Systolic_Blood_Pressure < (95 - 0.00001))) {
+Systolic_Blood_Pressure = 0;
+ aDelay("The minimum value for Systolic blood pressure is 95 mmHg.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Systolic_Blood_Pressure_param);
+}
+
+if (Systolic_Blood_Pressure_param.value && Systolic_Blood_Pressure > 300) {
+Systolic_Blood_Pressure = 0;
+ aDelay("The maximum value for Systolic blood pressure is 300 mmHg.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Systolic_Blood_Pressure_param);
+}
+
+if (CAC_param.value && isNaN(CAC_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', CAC_param); }
+
+
+}
+
+}
+
+function clrResults(){
+
+
+with(document.MESA_form){
+
+Terms_param.value = '';
+Ten_Year_Risk_param.value = '';
+Terms_CAC_param.value = '';
+Ten_Year_Risk_CAC_param.value = '';
+
+
+}
+
+}
+
+var Race = null,
+Sex = null,
+Age = null,
+Total_Cholesterol = null,
+HDL_Cholesterol = null,
+Systolic_Blood_Pressure = null,
+On_Hypertension_Med = null,
+On_Lipid_Lowering_Med = null,
+Diabetes = null,
+Smoker = null,
+Family_History_MI = null,
+CAC = null,
+Terms = null,
+Ten_Year_Risk = null,
+Terms_CAC = null,
+Ten_Year_Risk_CAC = null,
+param_value = null;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ]]> */
+</script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://medilib.ir/assets/js/jquery.min.js"></script><script src="https://medilib.ir/assets/js/popper.min.js"></script><script src="https://medilib.ir/assets/js/bootstrap.min.js"></script><script src="https://medilib.ir/assets/js/classy-nav.min.js"></script><script src="https://medilib.ir/assets/js/owl.carousel.min.js"></script><script src="https://medilib.ir/assets/js/jquery.magnific-popup.min.js"></script><script src="https://medilib.ir/assets/js/jquery.counterup.min.js"></script><script src="https://medilib.ir/assets/js/waypoints.min.js"></script><script src="https://medilib.ir/assets/js/form-validator.min.js"></script><script src="https://medilib.ir/assets/js/contact-form-script.js"></script><script src="https://medilib.ir/assets/js/main.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WFDJ5JLM3Q"></script><script>
+    window.addEventListener("load", () => {
+
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function (registrations) {
+                //returns installed service workers
+                if (registrations.length) {
+                    for (let registration of registrations) {
+                        if (
+                            registration.active.scriptURL.startsWith("/serviceWorker.js") &&
+                            !registration.active.scriptURL.endsWith("/serviceWorker.js?v=18")
+                        ) {
+                            registration.unregister();
+                        }
+                    }
+                }
+            });
+            navigator.serviceWorker.register('/serviceWorker.js?v=18', {
+                scope: '/'
+            })
+                .then(function (registration) {
+                    console.log('Registration successful, scope is:', registration.scope);
+                })
+                .catch(function (error) {
+                    console.log('Service worker registration failed, error:', error);
+                });
+        }
+    });
+    const promptElement = document.querySelector('.pwaprompt');
+    const footerPromptElement = document.querySelector('#footerPromptElement');
+    const scrollTopElement = document.querySelector('.scrolltop');
+    // const installButton = promptElement.querySelector('.prompt__install');
+    const closeButton = promptElement.querySelector('.prompt__close');
+    let installEvent;
+
+    function setWithExpiry(key, value, seconds) {
+        const now = new Date()
+
+        // `item` is an object which contains the original value
+        // as well as the time when it's supposed to expire
+        const item = {
+            value: value,
+            expiry: now.getTime() + (seconds * 1000),
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+    }
+
+    function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+        // if the item doesn't exist, return null
+        if (!itemStr) {
+            return null
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+        // compare the expiry time of the item with the current time
+        if (now.getTime() > item.expiry) {
+            // If the item is expired, delete the item from storage
+            // and return null
+            localStorage.removeItem(key)
+            return null
+        }
+        return item.value
+    }
+
+    // checks if the localStorage item has been set
+    function getVisited() {
+        return getWithExpiry('install-prompt')
+        // return localStorage.getItem('install-prompt');
+    }
+
+    // sets the localStorage item
+    function setVisited() {
+        fiveDay = 5 * (24 * (60 * 60))
+        setWithExpiry('install-prompt', true, fiveDay)
+        // localStorage.setItem('install-prompt', true);
+    }
+
+    closeButton.addEventListener('click', () => {
+        // set localStorage to true
+        setVisited();
+
+        // hide the prompt banner
+        promptElement.style.display = 'none';
+        scrollTopElement.style.bottom = '30px';
+
+        // installEvent = null;
+    });
+    // Detects if device is on iOS
+    const isIos = () => {
+        const userAgent = window.navigator.userAgent.toLowerCase();
+        return /iphone|ipad|ipod/.test(userAgent);
+    }
+    // Detects if device is in standalone mode
+    const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+
+    // Checks if should display install popup notification:
+    if (isIos() && !isInStandaloneMode()) {
+        if (!getVisited()) {
+            promptElement.style.display = 'block';
+            scrollTopElement.style.bottom = '80px';
+        }
+        footerPromptElement.style.display = 'block';
+    }
+
+
+    // this event will only fire if the user does not have the pwa installed
+    window.addEventListener('beforeinstallprompt', (event) => {
+        event.preventDefault();
+        // if no localStorage is set, first time visitor
+        if (!getVisited()) {
+            // show the prompt banner
+            promptElement.style.display = 'block';
+            scrollTopElement.style.bottom = '80px';
+
+            // store the event for later use
+
+        }
+        footerPromptElement.style.display = 'block';
+        installEvent = event;
+
+    });
+    $(document).on('click', '.prompt__install', function () {
+        promptElement.style.display = 'none';
+        scrollTopElement.style.bottom = '30px';
+
+        if (isIos() && !isInStandaloneMode()) {
+            setVisited();
+            $('#iphoneAddToHomeScreen').modal()
+        } else {
+
+            // trigger the prompt to show to the user
+            installEvent.prompt();
+            // check what choice the user made
+            installEvent.userChoice.then((choice) => {
+                // if the user declined, we don't want to show the button again
+                // set localStorage to true
+                if (choice.outcome !== 'accepted') {
+                    setVisited();
+                }
+
+                installEvent = null;
+            });
+        }
+
+    });
+</script><script>
+
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-WFDJ5JLM3Q');
+</script><script>
+      var topicReferences=[];
+
+      function refrence(id) {
+          var myReference=Object.values(topicReferences)[id];
+          console.log(myReference);
+          $("#pmid").attr("href",myReference['pmid']);
+          if (typeof myReference['description'] !== 'undefined' && myReference['description']!="") {
+            $("#myModalLabel34").html('Description : <p>' + myReference['description'] + "</p>");
+          }
+          if (typeof myReference['authors'] !== 'undefined' && myReference['authors']!="") {
+            $("#referenceAuthors").html('Authors : <p>' + myReference['authors'] + "</p>");
+          }
+          if (typeof myReference['source'] !== 'undefined' && myReference['source']!="") {
+            $("#referenceSource").html('Source : <p>' + myReference['source'] + "</p>");
+          }
+          if (typeof myReference['title'] !== 'undefined' && myReference['title']!="") {
+            $("#referenceTitle").html('Title : <p>' + myReference['title'] + "</p>");
+          }
+          if (typeof myReference['affiliation'] !== 'undefined' && myReference['affiliation']!="") {
+            $("#referenceAffiliation").html('Affiliation : <p>' + myReference['affiliation'] + "</p>");
+          }
+      }
+  </script><script>
+
+      var screenHeight = screen.height;
+
+      if (screenHeight > 700) {
+        // $document.getElementById("Uptodate_image").style.width = "100% !important;";
+        // $('.Uptodate_image').css('width', '100% !important;');
+        console.log("more");
+      }else{
+        console.log(screenHeight);
+      }
+    $(document).scroll(function()  {
+      var y = $(this).scrollTop();
+      if (y > 100) {
+        $('.goback').fadeIn();
+        $('.buyPackage').fadeIn();
+        // alert(document.getElementById('main_menu').style.zIndex);
+        document.getElementById("uptodate-area").style.padding = "0px 0 0 0";
+        document.getElementById('main_menu').style.zIndex=1;
+         document.getElementById('main_menu').style.display="none";
+        document.getElementById('navbar_menu').style.marginTop="70px"
+        document.getElementById('uptodate-area').style.marginTop="0px"
+        document.getElementById('uptodate-area').style.zIndex=999;
+        console.log('down');
+      } else {
+        $('.goback').fadeOut();
+        $('.buyPackage').fadeOut();
+        document.getElementById("uptodate-area").style.padding = "0px 0 0 0";
+        document.getElementById('navbar_menu').style.marginTop="0px"
+        document.getElementById('main_menu').style.display="";
+        document.getElementById('uptodate-area').style.zIndex=0;
+        console.log('up');
+      }
+    });
+    function goBack() {
+      window.history.back();
+    }
+    function buyPackage() {
+      window.open("https://medilib.ir/userPanel/package/uptodate/index",'_blank');
+    }
+  </script></body>
 </html>

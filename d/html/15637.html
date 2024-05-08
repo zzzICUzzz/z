@@ -1,449 +1,703 @@
 <!DOCTYPE html>
+
 <html lang="fa">
- <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
- <head>
-  <title>
-   Calculator: MELD/MELDNa scores (for liver transplantation listing purposes, not appropriate for patient under age 12 years) (conventional units)*
-  </title>
-  <link href="d/css/1.css" rel="stylesheet"/>
- </head>
- <body>
-  <!-- Start Main Menu Area -->
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <div class="container">
-   <div class="row">
-   </div>
-  </div>
-  <section class="teacher-area ptb-10">
-   <div class="container">
-   </div>
-   <section class="course-details-area ptb-60">
-    <div class="container">
-     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-      <h1 style="text-align:center">
-       Calculator: MELD/MELDNa scores (for liver transplantation listing purposes, not appropriate for patient under age 12 years) (conventional units)*
-      </h1>
-      <div class="utdArticleSection" id="topicContentCalculator">
-       <div id="topicText">
-        <div id="mc3k">
-         <form action="" id="MELDNa_form" name="MELDNa_form" onkeydown="formKeyDown(event);" onkeypress="resetInTime(); return validNumberField(event);" onkeyup="MELDNa_fx();" onreset="document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
-          <table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
-           <tbody>
-            <tr>
-             <td bgcolor="#eeeeee" width="1%">
-              <br/>
-             </td>
-             <td align="left" bgcolor="#eeeeee">
-              <span class="medCalcFontTitleBox">
-               Calculator: MELD/MELDNa scores (for liver transplantation listing purposes, not appropriate for patient under age 12 years) (conventional units)
-               <sup>
-                *
-               </sup>
-              </span>
-             </td>
-            </tr>
-           </tbody>
-          </table>
-          <br/>
-          <br/>
-          <div id="calc_main">
-           <center>
-            <span class="medCalcFontIO">
-             Input
-            </span>
-            <br/>
-            <br/>
-            <table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
-             <tbody>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 Creatinine
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value Creatinine" name="Creatinine_param" onblur="MELDNa_fx(); minMaxCheck();" onchange="MELDNa_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <select aria-label="Use this pulldown selector to set the unit of measure for the value Creatinine" class="medCalcFontSelect" name="Creatinine_unit" onchange="MELDNa_fx(); minMaxCheck();" style="width:115px;">
-                 <option value="100|0|g/L">
-                  g/L
-                 </option>
-                 <option value="1000|0|g/dL">
-                  g/dL
-                 </option>
-                 <option value="1|0|mg%">
-                  mg%
-                 </option>
-                 <option selected="selected" value="1|0|mg/dL">
-                  mg/dL
-                 </option>
-                 <option value="100|0|mg/mL">
-                  mg/mL
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 Serum Na
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value Serum Na" name="Serum_Na_param" onblur="MELDNa_fx(); minMaxCheck();" onchange="MELDNa_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <select aria-label="Use this pulldown selector to set the unit of measure for the value Serum Na" class="medCalcFontSelect" name="Serum_Na_unit" onchange="MELDNa_fx(); minMaxCheck();" style="width:115px;">
-                 <option selected="selected" value="1|0|mEq/L">
-                  mEq/L
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 Bilirubin
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value Bilirubin" name="Bilirubin_param" onblur="MELDNa_fx(); minMaxCheck();" onchange="MELDNa_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <select aria-label="Use this pulldown selector to set the unit of measure for the value Bilirubin" class="medCalcFontSelect" name="Bilirubin_unit" onchange="MELDNa_fx(); minMaxCheck();" style="width:115px;">
-                 <option value="100|0|g/L">
-                  g/L
-                 </option>
-                 <option value="1000|0|g/dL">
-                  g/dL
-                 </option>
-                 <option value="1|0|mg%">
-                  mg%
-                 </option>
-                 <option selected="selected" value="1|0|mg/dL">
-                  mg/dL
-                 </option>
-                 <option value="100|0|mg/mL">
-                  mg/mL
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 INR
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value INR" name="INR_param" onblur="MELDNa_fx(); minMaxCheck();" onchange="MELDNa_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left">
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontOneBold">
-                 Hemodialysis twice or ≥24 hours of CVVHD in the past week
-                </span>
-               </td>
-               <td align="left" colspan="3">
-                <input name="HD_radio" onclick="Creatinine_param.value = '4'; Creatinine = 4; MELDNa_fx();" type="radio" value="Yes"/>
-                <span class="medCalcFontOne">
-                 Yes
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="left">
-                <br/>
-               </td>
-               <td align="left" colspan="3">
-                <input checked="checked" name="HD_radio" onclick="Creatinine_param.value = ''; MELD_score_param.value = ''; MELDNa_score_param.value = '';" type="radio" value="No"/>
-                <span class="medCalcFontOne">
-                 No
-                </span>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-           </center>
-           <br/>
-           <br/>
-           <center>
-            <span class="medCalcFontIO">
-             Results
-             <span class="medCalcFontOne" id="inputchk">
-              <br/>
-              <br/>
-              <b>
-               Important:
-              </b>
-              Inputs must be complete to perform calculation.
-              <br/>
-             </span>
-            </span>
-            <br/>
-            <br/>
-            <table cellpadding="4" class="medCalcResultBox" summary="EBMcalc Table">
-             <tbody>
-              <tr>
-               <td colspan="3">
-                <br/>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontResultParam">
-                 MELD score
-                </span>
-               </td>
-               <td nowrap="nowrap" valign="top">
-                <input aria-label="This output box will display the calculated value MELD score" aria-readonly="true" name="MELD_score_param" size="6" type="text"/>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontResultParam">
-                 MELDNa score
-                </span>
-               </td>
-               <td nowrap="nowrap" valign="top">
-                <input aria-label="This output box will display the calculated value MELDNa score" aria-readonly="true" name="MELDNa_score_param" size="6" type="text"/>
-               </td>
-              </tr>
-              <tr>
-               <td colspan="3">
-                <br/>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-           </center>
-           <br/>
-           <br/>
-           <div id="calc_buttons">
-            <center>
-             <span class="medCalcFontOne">
-              <input name="resetbutton" type="reset" value="Reset form"/>
-             </span>
-            </center>
-           </div>
-          </div>
-          <div id="pretextrefs">
-          </div>
-          <div id="calc_tables_above_notes">
-          </div>
-          <br/>
-          <br/>
-          <div id="calc_notes">
-           <span class="medCalcFontOneBold">
-            Notes
-           </span>
-           <ul class="medCalcFontOne">
-            <li>
-             The model for end-stage liver disease (
-             <b>
-              MELD
-             </b>
-             ) score is used to estimate relative disease severity and likely survival of adult patients awaiting liver transplantation.
-            </li>
-            <li>
-             The MELDNa score system adds a
-             <b>
-              Serum Na
-             </b>
-             parameter, so the added risk of significant hyponatremia may be taken into account.
-            </li>
-            <li>
-             Hyponatremia contributes to the
-             <b>
-              MELDNa
-             </b>
-             score only when the initial
-             <b>
-              MELD
-             </b>
-             score is greater than 11.
-            </li>
-            <li>
-             The default setting for the choice "Hemodialysis twice or ≥24 hours of CVVHD in the past week" is "No."
-            </li>
-            <li>
-             If a patient has had 2 or more hemodialysis treatments or ≥24 hours of CVVHD in the week prior to the time of the scoring,
-             <b>
-              Creatinine
-             </b>
-             will be set to 4 mg/dL, which is the maximum creatinine level allowed in the model.
-            </li>
-            <li>
-             For patients with hepatocellular carcinoma, the
-             <b>
-              MELD
-             </b>
-             score is increased according to an algorithm established by the United Network for Organ Sharing (UNOS).
-            </li>
-            <li>
-             When used for liver transplantation listing, UNOS/Organ Procurement and Transplantation Network (OPTN) sets the upper limit for the MELD score at 40.
-            </li>
-            <li>
-             Additional information about the
-             <b>
-              MELD
-             </b>
-             scores is at the UNOS website,
-             <a href="https://optn.transplant.hrsa.gov/professionals/by-organ/liver-intestine/" style="color: green; text-decoration: none;" target="_blank">
-              https://optn.transplant.hrsa.gov/professionals/by-organ/liver-intestine/
-             </a>
-             .
-            </li>
-            <li>
-             <b>
-              INR
-             </b>
-             : international normalized ratio;
-             <b>
-              Serum Na
-             </b>
-             : serum sodium concentration;
-             <b>
-              CVVHD
-             </b>
-             : continuous venovenous hemodialysis.
-            </li>
-            <li>
-             Please refer to appropriate UpToDate topic reviews for further information.
-            </li>
-            <li style="list-style-type: none;">
-             <font size="+1">
-              *
-             </font>
-             This calculator uses conventional units (also known as US units 
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Calculator: MELD/MELDNa scores (for liver transplantation listing purposes, not appropriate for patient under age 12 years) (conventional units)*</title></head>
+<body><section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Calculator: MELD/MELDNa scores (for liver transplantation listing purposes, not appropriate for patient under age 12 years) (conventional units)*</h1>
+<div class="utdArticleSection" id="topicContentCalculator"><div id="topicText">
+<div id="mc3k">
+<form action="" id="MELDNa_form" name="MELDNa_form" onkeydown="formKeyDown(event);" onkeypress="resetInTime(); return validNumberField(event);" onkeyup="MELDNa_fx();" onreset="document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
+<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
+<td align="left" bgcolor="#eeeeee">
+<span class="medCalcFontTitleBox">
+
+ 
+Calculator: MELD/MELDNa scores (for liver transplantation listing purposes, not appropriate for patient under age 12 years) (conventional units)<sup>*</sup>
+</span></td></tr></tbody></table><br/> <br/>
+<div id="calc_main">
+<center>
+<span class="medCalcFontIO">
+Input
+</span>
+<br/> <br/>
+<table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
+<tbody><tr><td align="right" width="42%"><span class="medCalcFontOneBold">Creatinine</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value Creatinine" name="Creatinine_param" onblur="MELDNa_fx(); minMaxCheck();" onchange="MELDNa_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value Creatinine" class="medCalcFontSelect" name="Creatinine_unit" onchange="MELDNa_fx(); minMaxCheck();" style="width:115px;">
+<option value="100|0|g/L">g/L</option>
+<option value="1000|0|g/dL">g/dL</option>
+<option value="1|0|mg%">mg%</option>
+<option selected="selected" value="1|0|mg/dL">mg/dL</option>
+<option value="100|0|mg/mL">mg/mL</option>
+</select></td></tr>
+<tr><td align="right" width="42%"><span class="medCalcFontOneBold">Serum Na</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value Serum Na" name="Serum_Na_param" onblur="MELDNa_fx(); minMaxCheck();" onchange="MELDNa_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value Serum Na" class="medCalcFontSelect" name="Serum_Na_unit" onchange="MELDNa_fx(); minMaxCheck();" style="width:115px;">
+<option selected="selected" value="1|0|mEq/L">mEq/L</option>
+</select></td></tr>
+<tr><td align="right" width="42%"><span class="medCalcFontOneBold">Bilirubin</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value Bilirubin" name="Bilirubin_param" onblur="MELDNa_fx(); minMaxCheck();" onchange="MELDNa_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value Bilirubin" class="medCalcFontSelect" name="Bilirubin_unit" onchange="MELDNa_fx(); minMaxCheck();" style="width:115px;">
+<option value="100|0|g/L">g/L</option>
+<option value="1000|0|g/dL">g/dL</option>
+<option value="1|0|mg%">mg%</option>
+<option selected="selected" value="1|0|mg/dL">mg/dL</option>
+<option value="100|0|mg/mL">mg/mL</option>
+</select></td></tr>
+<tr><td align="right" width="42%"><span class="medCalcFontOneBold">INR</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value INR" name="INR_param" onblur="MELDNa_fx(); minMaxCheck();" onchange="MELDNa_fx();" size="6" type="text" value=""/></td>
+<td align="left"> </td></tr>
+<tr><td align="right"><span class="medCalcFontOneBold">Hemodialysis twice or ≥24 hours of CVVHD in the past week</span></td>
+<td align="left" colspan="3"><input name="HD_radio" onclick="Creatinine_param.value = '4'; Creatinine = 4; MELDNa_fx();" type="radio" value="Yes"/><span class="medCalcFontOne"> Yes</span></td></tr>
+<tr><td align="left"><br/></td>
+<td align="left" colspan="3"><input checked="checked" name="HD_radio" onclick="Creatinine_param.value = ''; MELD_score_param.value = ''; MELDNa_score_param.value = '';" type="radio" value="No"/><span class="medCalcFontOne"> No</span></td></tr>
+</tbody></table>
+</center>
+<br/> <br/><center><span class="medCalcFontIO">Results<span class="medCalcFontOne" id="inputchk"><br/> <br/><b>Important:</b> Inputs must be complete to perform calculation. <br/></span></span>
+<br/> <br/>
+<table cellpadding="4" class="medCalcResultBox" summary="EBMcalc Table">
+<tbody><tr><td colspan="3"> <br/></td></tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">MELD score</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value MELD score" aria-readonly="true" name="MELD_score_param" size="6" type="text"/></td>
+</tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">MELDNa score</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value MELDNa score" aria-readonly="true" name="MELDNa_score_param" size="6" type="text"/></td>
+</tr>
+<tr><td colspan="3"> <br/></td></tr>
+</tbody></table>
+</center><br/> <br/>
+<div id="calc_buttons">
+<center>
+<span class="medCalcFontOne">
+<input name="resetbutton" type="reset" value="Reset form"/>
+</span>
+</center>
+</div>
+</div><div id="pretextrefs">
+ 
+</div>
+<div id="calc_tables_above_notes">
+</div>
+<br/> <br/>
+<div id="calc_notes">
+<span class="medCalcFontOneBold">Notes</span>
+<ul class="medCalcFontOne">
+<li>The model for end-stage liver disease (<b>MELD</b>) score is used to estimate relative disease severity and likely survival of adult patients awaiting liver transplantation.</li>
+<li>The MELDNa score system adds a <b>Serum Na</b> parameter, so the added risk of significant hyponatremia may be taken into account.</li>
+<li>Hyponatremia contributes to the <b>MELDNa</b> score only when the initial <b>MELD</b> score is greater than 11.</li>
+<li>The default setting for the choice "Hemodialysis twice or ≥24 hours of CVVHD in the past week" is "No."</li>
+<li>If a patient has had 2 or more hemodialysis treatments or ≥24 hours of CVVHD in the week prior to the time of the scoring, <b>Creatinine</b> will be set to 4 mg/dL, which is the maximum creatinine level allowed in the model.</li>
+<li>For patients with hepatocellular carcinoma, the <b>MELD</b> score is increased according to an algorithm established by the United Network for Organ Sharing (UNOS).</li>
+<li>When used for liver transplantation listing, UNOS/Organ Procurement and Transplantation Network (OPTN) sets the upper limit for the MELD score at 40.</li>
+<li>Additional information about the <b>MELD</b> scores is at the UNOS website, <a href="https://optn.transplant.hrsa.gov/professionals/by-organ/liver-intestine/" style="color: green; text-decoration: none;" target="_blank">https://optn.transplant.hrsa.gov/professionals/by-organ/liver-intestine/</a>.</li>
+<li><b>INR</b>: international normalized ratio; <b>Serum Na</b>: serum sodium concentration; <b>CVVHD</b>: continuous venovenous hemodialysis.</li>
+<li>Please refer to appropriate UpToDate topic reviews for further information.</li>
+<li style="list-style-type: none;"><font size="+1">*</font> This calculator uses conventional units (also known as US units 
 and gravimetric units) as the default for inputs. Do not use this calculator if 
 you are using SI units (Système international d'unités); please refer 
-instead to the SI units version of this calculator.
-            </li>
-           </ul>
-          </div>
-          <br/>
-          <br/>
-          <span class="medCalcFontRef">
-           <b>
-            Equations used
-           </b>
-          </span>
-          <br/>
-          <br/>
-          <center>
-           <div id="calc_equation">
-            <table cellpadding="10" cellspacing="0" summary="EBMcalc Table">
-             <tbody>
-              <tr>
-               <td class="medCalcFormuliBox">
-                <span class="medCalcFontFormuli">
-                 MELD_score = (Round the following expression to the nearest integer)((9.57 * ln(Creatinine)) + (3.78 * ln(Bilirubin)) + (11.2 * ln(INR)) + 6.43)
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td class="medCalcFormuliBox">
-                <span class="medCalcFontFormuli">
-                 MELDNa_score = MELD_score + ((1 if the following expression is true, 0 if false)(MELD_score &gt; 11)) * ((1.32 * (137 - Serum_Na)) - (0.033 * MELD_score * (137 - Serum_Na)))
-                </span>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-            <br/>
-            <br/>
-           </div>
-          </center>
-          <div id="calc_tables">
-          </div>
-          <br/>
-          <br/>
-          <div id="calc_refs">
-           <span class="medCalcFontRef">
-            <b>
-             References
-            </b>
-           </span>
-           <ol>
-            <li>
-             <span class="medCalcFontRef">
-              <a href="https://www.ncbi.nlm.nih.gov/pubmed/17326206" style="color: green; text-decoration: none;" target="_blank">
-               Kamath PS, Kim WR, Advanced Liver Disease Study Group. The model for end-stage liver disease (MELD). Hepatology 2007; 45:797.
-              </a>
-             </span>
-            </li>
-           </ol>
-          </div>
-         </form>
-        </div>
-        <span class="calculatorVendorId" id="T1678215876">
-        </span>
-       </div>
-       <div id="printDisclaimer">
-        <b>
-         Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.
-        </b>
-        <p>
-         Information on this page may not appear correctly if printed.
-        </p>
-       </div>
-       <div id="disclaimerCalculator">
-        <div class="medCalcFontTwo">
-         <p class="header">
-          Legal Notices and Disclaimer
-         </p>
-         <p>
-          All information contained in and produced by the EBMcalc system is provided
+instead to the SI units version of this calculator.</li>
+</ul>
+</div>
+<br/> <br/>
+<span class="medCalcFontRef"><b>Equations used</b></span>
+<br/> <br/>
+<center>
+<div id="calc_equation">
+<table cellpadding="10" cellspacing="0" summary="EBMcalc Table"><tbody><tr><td class="medCalcFormuliBox"><span class="medCalcFontFormuli">MELD_score = (Round the following expression to the nearest integer)((9.57 * ln(Creatinine)) + (3.78 * ln(Bilirubin)) + (11.2 * ln(INR)) + 6.43)</span></td></tr><tr><td class="medCalcFormuliBox"><span class="medCalcFontFormuli">MELDNa_score = MELD_score + ((1 if the following expression is true, 0 if false)(MELD_score &gt; 11)) * ((1.32 * (137 - Serum_Na)) - (0.033 * MELD_score * (137 - Serum_Na)))</span></td></tr></tbody></table><br/> <br/>
+</div> </center>
+<div id="calc_tables">
+</div>
+<br/> <br/>
+<div id="calc_refs">
+<span class="medCalcFontRef"><b>References</b></span>
+<ol>
+<li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/17326206" style="color: green; text-decoration: none;" target="_blank">Kamath PS, Kim WR, Advanced Liver Disease Study Group. The model for end-stage liver disease (MELD). Hepatology 2007; 45:797.</a></span></li>
+</ol>
+</div>
+</form>
+</div>
+<span class="calculatorVendorId" id="T1678215876">
+</span></div><div id="printDisclaimer">
+<b>Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.</b>
+<p>
+	Information on this page may not appear correctly if printed. </p>
+</div>
+<div id="disclaimerCalculator">
+<div class="medCalcFontTwo">
+<p class="header">Legal Notices and Disclaimer</p>
+<p>
+			All information contained in and produced by the EBMcalc system is provided
 			for educational purposes only. This information should not be used for the diagnosis or treatment
-			of any health problem or disease.
-          <b>
-           THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.
-          </b>
-          <a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">
-           Click here for full notice and disclaimer.
-          </a>
-         </p>
-         <p class="copy">
-          EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC
-         </p>
-        </div>
-       </div>
-       <div id="topicVersionRevision">
-        Topic 15637 Version 19.0
-       </div>
-      </div>
-     </div>
-    </div>
-   </section>
-  </section>
-  <!-- End Main Menu Area -->
-  <!-- Start Search Popup Area -->
-  <!-- End Footer Area -->
-  <!-- Back to top -->
-  <a class="scrolltop" href="#top">
-   <i class="icofont-hand-drawn-up">
-   </i>
-  </a>
-  <!-- End Back to top -->
-  <!-- jQuery Min JS -->
-  <!-- Prpper JS -->
-  <!-- Bootstrap Min JS -->
-  <!-- Classy Nav Min Js -->
-  <!-- Owl Carousel Min Js -->
-  <!-- Magnific Popup JS -->
-  <!-- CounterUp JS -->
-  <!-- Waypoints JS -->
-  <!-- Form Validator Min JS -->
-  <!-- Contact Form Min JS -->
-  <!-- Main JS -->
-  <!-- Global site tag (gtag.js) - Google Analytics -->
- </body>
+			of any health problem or disease. 
+			<b>THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.</b>
+<a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">Click here for full notice and disclaimer.</a>
+</p>
+<p class="copy">EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC</p>
+</div>
+</div><div id="topicVersionRevision">Topic 15637 Version 19.0</div></div>
+</div>
+</div>
+</section><script>
+/* <![CDATA[ */
+
+var lastChar = '';
+
+function log(i){
+return Math.log(i) * Math.LOG10E;
+}
+
+function ln(i){
+return Math.log(i);
+}
+
+function sq(i){
+return i * i;
+}
+
+function sqr(i){
+return Math.sqrt(i);
+}
+
+
+function power(x,y){
+return Math.pow(x,y);
+}
+
+function eTo(x){
+return Math.exp(x);
+}
+
+
+function fixDP(r, dps) {
+if (isNaN(r)) return "NaN";
+var msign = '';
+if (r < 0) msign = '-';
+x = Math.abs(r);
+if (x > Math.pow(10, 21)) return msign + x.toString();
+var m = Math.round(x * Math.pow(10, dps)).toString();
+if (dps == 0) return msign + m;
+while (m.length <= dps) m = "0" + m;
+return msign + m.substring(0, m.length - dps) + "." + m.substring(m.length - dps);
+}
+
+
+function alertNaN(){
+alert('This field is improperly formatted. You may only input the digits 0-9 and a decimal point.');
+doCalc = false;
+clrResults();
+}
+
+function validNumberField(event) {
+var field = event.target;
+
+if(field && field != 'undefined' && field.attributes.type.nodeValue && (field.attributes.type.nodeValue == 'number')) {
+var val = field.value;
+var charCode = event.charCode;
+var key = String.fromCharCode(charCode);
+
+if(charCode == 0 || charCode == 13) {
+  return true;
+}
+
+if(key == ' ') {
+alert('Numeric field cannot contain spaces.');
+  return false;
+}
+
+if(key == '.') { return validDecimalPoint(val, key); }
+if(key == '-') { return validMinus(val, key); }
+
+if(isNaN(parseInt(key))) {
+alertNaN();
+return false;
+}
+
+return validFloat(val, key);
+}
+return true;
+}
+
+function validDecimalPoint(val, key) {
+if(val.length == 0 && lastChar != '.') {
+  lastChar = '.';
+  return true;
+}
+if(val.indexOf('.') >= 0 || lastChar == '.') {
+ alertNaN();
+ return false;
+}
+if(validFloat(val, key)) {
+ lastChar = key;
+ return true;
+}
+lastChar = '';
+return false;
+}
+
+function validMinus(val, key) {
+if(val.length == 0) {
+  return true;
+}
+if(val.length > 1) {
+ alertNaN();
+ return false;
+}
+return validFloat(val, key);
+}
+
+
+function validFloat(val, key) {
+var currentVal = parseFloat(val + key);
+if(isNaN(val + key) || isNaN(currentVal)) {
+alertNaN();
+return false;
+}
+return true;
+}
+
+function formKeyDown(event) {
+var field = event.target;
+
+resetInTime();
+
+if(field && field != 'undefined' && field.attributes.type && field.attributes.type.nodeValue && (field.attributes.type.nodeValue == 'number')) {
+  var val = field.value;
+  var keyCode = event.keyCode;
+  if(keyCode == 8 || keyCode == 127) {
+    // backspace or delete
+    if(lastChar == '.') {
+      lastChar = '';
+    }
+    if(field.value.length == 3 && field.value[0] == '0' && field.value[1] == '.') {
+      // this handles a backspace on an input like ".5", which is saved internally as "0.5"
+      //   otherwise, if you leave the field after the backspace, it retains "0.5" as the value, most likely an iOS bug
+      field.value = ''; 
+    }
+  }
+}
+clrResults();
+}
+
+function clrValue(field) {
+ field.value = '';
+ lastChar = '';
+}
+
+var currenttimeout;
+
+function resetInTime(){
+if (currenttimeout) clearTimeout(currenttimeout);
+currenttimeout = setTimeout('minMaxCheck();', 2000);
+}
+
+
+
+var curelement;
+
+function togCB(thisid){
+thischeckbox = document.getElementById(thisid);
+if (thischeckbox.checked){ thischeckbox.checked = false; }
+else { thischeckbox.checked = true; }
+MELDNa_fx();
+}
+
+function setRB(thisid){
+document.getElementById(thisid).checked = true;
+MELDNa_fx();
+}
+
+
+var calctxt = ''; 
+var xmltxt = ''; 
+var xmlresult = '';
+var htmtxt = ''; 
+var postNow = false;
+var printing = false;
+var interptxt = '';
+var interphtm = '';
+var interpxml = '';
+var rbchk = false;
+var inputchktxt = '<br />&nbsp;<br /><b>Important:</b> Inputs must be complete to perform calculation. <br />'
+
+
+function aDelay(atxt, ffield){
+with (document.MELDNa_form){
+clrResults();
+ffield.value = '';
+doCalc = false;
+setTimeout(function(){ alert(atxt); }, 100);
+document.getElementById('inputchk').innerHTML = inputchktxt;
+
+}}
+
+
+function MELDNa_fx() {
+
+with(document.MELDNa_form){
+
+
+doCalc = true;
+param_value = parseFloat(Creatinine_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = Creatinine_unit.options[Creatinine_unit.selectedIndex].value.split('|');
+Creatinine = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+param_value = parseFloat(Serum_Na_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = Serum_Na_unit.options[Serum_Na_unit.selectedIndex].value.split('|');
+Serum_Na = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+param_value = parseFloat(Bilirubin_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = Bilirubin_unit.options[Bilirubin_unit.selectedIndex].value.split('|');
+Bilirubin = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+param_value = parseFloat(INR_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+INR = param_value;
+dp = 0;
+if (HD_radio[0].checked){
+Creatinine_param.value = '4'; Creatinine = 4;
+for(i = 0; i < Creatinine_unit.options.length; i++){
+if (Creatinine_unit.options[i].value == '1|0|mg/dL') Creatinine_unit.selectedIndex = i;
+}}
+MELD_score =  Math.round((9.57 * ln(Creatinine)) + (3.78 * ln(Bilirubin)) + (11.2 * ln(INR)) + 6.43);
+
+if (doCalc) MELD_score_param.value = fixDP(MELD_score, dp);
+
+
+
+MELDNa_score =  MELD_score + (Math.abs(MELD_score > 11)) * ((1.32 * (137 - Serum_Na)) - (0.033 * MELD_score * (137 - Serum_Na)));
+
+if (doCalc) MELDNa_score_param.value = fixDP(MELDNa_score, dp);
+
+
+
+
+
+}
+
+
+if (doCalc) document.getElementById('inputchk').innerHTML = '';
+else document.getElementById('inputchk').innerHTML = inputchktxt;
+
+
+}
+
+function minMaxCheck(){
+if (printing) return;
+
+
+
+with(document.MELDNa_form){
+
+if (Creatinine_param.value && isNaN(Creatinine_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', Creatinine_param); }
+if (Creatinine_param.value && (Creatinine < (1 - 0.00001))) {
+Creatinine = 0;
+ aDelay("The minimum value for Creatinine is 1 mg/dL.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Creatinine_param);
+}
+
+if (Creatinine_param.value && Creatinine > 4) {
+Creatinine = 0;
+ aDelay("The maximum value for Creatinine is 4 mg/dL.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Creatinine_param);
+}
+
+if (Serum_Na_param.value && isNaN(Serum_Na_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', Serum_Na_param); }
+if (Serum_Na_param.value && (Serum_Na < (125 - 0.00001))) {
+Serum_Na = 0;
+ aDelay("The minimum value for Serum Na is 125 mEq/L.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Serum_Na_param);
+}
+
+if (Serum_Na_param.value && Serum_Na > 137) {
+Serum_Na = 0;
+ aDelay("The maximum value for Serum Na is 137 mEq/L.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Serum_Na_param);
+}
+
+if (Bilirubin_param.value && isNaN(Bilirubin_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', Bilirubin_param); }
+if (Bilirubin_param.value && (Bilirubin < (1 - 0.00001))) {
+Bilirubin = 0;
+ aDelay("The minimum value for Bilirubin is 1 mg/dL.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Bilirubin_param);
+}
+
+if (Bilirubin_param.value && Bilirubin > 200) {
+Bilirubin = 0;
+ aDelay("The maximum value for Bilirubin is 200 mg/dL.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Bilirubin_param);
+}
+
+if (INR_param.value && isNaN(INR_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', INR_param); }
+if (INR_param.value && (INR < (1 - 0.00001))) {
+INR = 0;
+ aDelay("The minimum value for INR is 1.\n\nIf you are specifying a value with a different unit, change the unit selector first.", INR_param);
+}
+
+if (INR_param.value && INR > 100) {
+INR = 0;
+ aDelay("The maximum value for INR is 100.\n\nIf you are specifying a value with a different unit, change the unit selector first.", INR_param);
+}
+
+
+
+}
+
+}
+
+function clrResults(){
+
+
+with(document.MELDNa_form){
+
+MELD_score_param.value = '';
+MELDNa_score_param.value = '';
+
+
+}
+
+}
+
+var Creatinine = null,
+Serum_Na = null,
+Bilirubin = null,
+INR = null,
+MELD_score = null,
+MELDNa_score = null,
+param_value = null;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ]]> */
+</script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://medilib.ir/assets/js/jquery.min.js"></script><script src="https://medilib.ir/assets/js/popper.min.js"></script><script src="https://medilib.ir/assets/js/bootstrap.min.js"></script><script src="https://medilib.ir/assets/js/classy-nav.min.js"></script><script src="https://medilib.ir/assets/js/owl.carousel.min.js"></script><script src="https://medilib.ir/assets/js/jquery.magnific-popup.min.js"></script><script src="https://medilib.ir/assets/js/jquery.counterup.min.js"></script><script src="https://medilib.ir/assets/js/waypoints.min.js"></script><script src="https://medilib.ir/assets/js/form-validator.min.js"></script><script src="https://medilib.ir/assets/js/contact-form-script.js"></script><script src="https://medilib.ir/assets/js/main.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WFDJ5JLM3Q"></script><script>
+    window.addEventListener("load", () => {
+
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function (registrations) {
+                //returns installed service workers
+                if (registrations.length) {
+                    for (let registration of registrations) {
+                        if (
+                            registration.active.scriptURL.startsWith("/serviceWorker.js") &&
+                            !registration.active.scriptURL.endsWith("/serviceWorker.js?v=18")
+                        ) {
+                            registration.unregister();
+                        }
+                    }
+                }
+            });
+            navigator.serviceWorker.register('/serviceWorker.js?v=18', {
+                scope: '/'
+            })
+                .then(function (registration) {
+                    console.log('Registration successful, scope is:', registration.scope);
+                })
+                .catch(function (error) {
+                    console.log('Service worker registration failed, error:', error);
+                });
+        }
+    });
+    const promptElement = document.querySelector('.pwaprompt');
+    const footerPromptElement = document.querySelector('#footerPromptElement');
+    const scrollTopElement = document.querySelector('.scrolltop');
+    // const installButton = promptElement.querySelector('.prompt__install');
+    const closeButton = promptElement.querySelector('.prompt__close');
+    let installEvent;
+
+    function setWithExpiry(key, value, seconds) {
+        const now = new Date()
+
+        // `item` is an object which contains the original value
+        // as well as the time when it's supposed to expire
+        const item = {
+            value: value,
+            expiry: now.getTime() + (seconds * 1000),
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+    }
+
+    function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+        // if the item doesn't exist, return null
+        if (!itemStr) {
+            return null
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+        // compare the expiry time of the item with the current time
+        if (now.getTime() > item.expiry) {
+            // If the item is expired, delete the item from storage
+            // and return null
+            localStorage.removeItem(key)
+            return null
+        }
+        return item.value
+    }
+
+    // checks if the localStorage item has been set
+    function getVisited() {
+        return getWithExpiry('install-prompt')
+        // return localStorage.getItem('install-prompt');
+    }
+
+    // sets the localStorage item
+    function setVisited() {
+        fiveDay = 5 * (24 * (60 * 60))
+        setWithExpiry('install-prompt', true, fiveDay)
+        // localStorage.setItem('install-prompt', true);
+    }
+
+    closeButton.addEventListener('click', () => {
+        // set localStorage to true
+        setVisited();
+
+        // hide the prompt banner
+        promptElement.style.display = 'none';
+        scrollTopElement.style.bottom = '30px';
+
+        // installEvent = null;
+    });
+    // Detects if device is on iOS
+    const isIos = () => {
+        const userAgent = window.navigator.userAgent.toLowerCase();
+        return /iphone|ipad|ipod/.test(userAgent);
+    }
+    // Detects if device is in standalone mode
+    const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+
+    // Checks if should display install popup notification:
+    if (isIos() && !isInStandaloneMode()) {
+        if (!getVisited()) {
+            promptElement.style.display = 'block';
+            scrollTopElement.style.bottom = '80px';
+        }
+        footerPromptElement.style.display = 'block';
+    }
+
+
+    // this event will only fire if the user does not have the pwa installed
+    window.addEventListener('beforeinstallprompt', (event) => {
+        event.preventDefault();
+        // if no localStorage is set, first time visitor
+        if (!getVisited()) {
+            // show the prompt banner
+            promptElement.style.display = 'block';
+            scrollTopElement.style.bottom = '80px';
+
+            // store the event for later use
+
+        }
+        footerPromptElement.style.display = 'block';
+        installEvent = event;
+
+    });
+    $(document).on('click', '.prompt__install', function () {
+        promptElement.style.display = 'none';
+        scrollTopElement.style.bottom = '30px';
+
+        if (isIos() && !isInStandaloneMode()) {
+            setVisited();
+            $('#iphoneAddToHomeScreen').modal()
+        } else {
+
+            // trigger the prompt to show to the user
+            installEvent.prompt();
+            // check what choice the user made
+            installEvent.userChoice.then((choice) => {
+                // if the user declined, we don't want to show the button again
+                // set localStorage to true
+                if (choice.outcome !== 'accepted') {
+                    setVisited();
+                }
+
+                installEvent = null;
+            });
+        }
+
+    });
+</script><script>
+
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-WFDJ5JLM3Q');
+</script><script>
+      var topicReferences=[];
+
+      function refrence(id) {
+          var myReference=Object.values(topicReferences)[id];
+          console.log(myReference);
+          $("#pmid").attr("href",myReference['pmid']);
+          if (typeof myReference['description'] !== 'undefined' && myReference['description']!="") {
+            $("#myModalLabel34").html('Description : <p>' + myReference['description'] + "</p>");
+          }
+          if (typeof myReference['authors'] !== 'undefined' && myReference['authors']!="") {
+            $("#referenceAuthors").html('Authors : <p>' + myReference['authors'] + "</p>");
+          }
+          if (typeof myReference['source'] !== 'undefined' && myReference['source']!="") {
+            $("#referenceSource").html('Source : <p>' + myReference['source'] + "</p>");
+          }
+          if (typeof myReference['title'] !== 'undefined' && myReference['title']!="") {
+            $("#referenceTitle").html('Title : <p>' + myReference['title'] + "</p>");
+          }
+          if (typeof myReference['affiliation'] !== 'undefined' && myReference['affiliation']!="") {
+            $("#referenceAffiliation").html('Affiliation : <p>' + myReference['affiliation'] + "</p>");
+          }
+      }
+  </script><script>
+
+      var screenHeight = screen.height;
+
+      if (screenHeight > 700) {
+        // $document.getElementById("Uptodate_image").style.width = "100% !important;";
+        // $('.Uptodate_image').css('width', '100% !important;');
+        console.log("more");
+      }else{
+        console.log(screenHeight);
+      }
+    $(document).scroll(function()  {
+      var y = $(this).scrollTop();
+      if (y > 100) {
+        $('.goback').fadeIn();
+        $('.buyPackage').fadeIn();
+        // alert(document.getElementById('main_menu').style.zIndex);
+        document.getElementById("uptodate-area").style.padding = "0px 0 0 0";
+        document.getElementById('main_menu').style.zIndex=1;
+         document.getElementById('main_menu').style.display="none";
+        document.getElementById('navbar_menu').style.marginTop="70px"
+        document.getElementById('uptodate-area').style.marginTop="0px"
+        document.getElementById('uptodate-area').style.zIndex=999;
+        console.log('down');
+      } else {
+        $('.goback').fadeOut();
+        $('.buyPackage').fadeOut();
+        document.getElementById("uptodate-area").style.padding = "0px 0 0 0";
+        document.getElementById('navbar_menu').style.marginTop="0px"
+        document.getElementById('main_menu').style.display="";
+        document.getElementById('uptodate-area').style.zIndex=0;
+        console.log('up');
+      }
+    });
+    function goBack() {
+      window.history.back();
+    }
+    function buyPackage() {
+      window.open("https://medilib.ir/userPanel/package/uptodate/index",'_blank');
+    }
+  </script></body>
 </html>

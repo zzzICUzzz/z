@@ -1,855 +1,1010 @@
 <!DOCTYPE html>
+
 <html lang="fa">
- <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
- <head>
-  <title>
-   Calculator: National Early Warning Score (NEWS2) for acute illness in adults
-  </title>
-  <link href="d/css/1.css" rel="stylesheet"/>
- </head>
- <body>
-  <!-- Start Main Menu Area -->
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <div class="container">
-   <div class="row">
-   </div>
-  </div>
-  <section class="teacher-area ptb-10">
-   <div class="container">
-   </div>
-   <section class="course-details-area ptb-60">
-    <div class="container">
-     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-      <h1 style="text-align:center">
-       Calculator: National Early Warning Score (NEWS2) for acute illness in adults
-      </h1>
-      <div class="utdArticleSection" id="topicContentCalculator">
-       <div id="topicText">
-        <div id="mc3k">
-         <form action="" id="NEWS_form" name="NEWS_form" onkeydown="formKeyDown(event);" onkeypress="resetInTime(); return validNumberField(event);" onkeyup="NEWS_fx();" onreset="rrclr(); document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
-          <table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
-           <tbody>
-            <tr>
-             <td bgcolor="#eeeeee" width="1%">
-              <br/>
-             </td>
-             <td align="left" bgcolor="#eeeeee">
-              <span class="medCalcFontTitleBox">
-               Calculator: National Early Warning Score (NEWS2) for acute illness in adults
-              </span>
-             </td>
-            </tr>
-           </tbody>
-          </table>
-          <br/>
-          <br/>
-          <div id="calc_main">
-           <center>
-            <span class="medCalcFontIO">
-             Input
-            </span>
-            <br/>
-            <br/>
-            <table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
-             <tbody>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 Respiratory rate
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value Respiratory rate" name="RR_param" onblur="NEWS_fx(); minMaxCheck();" onchange="NEWS_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <select aria-label="Use this pulldown selector to set the unit of measure for the value Respiratory rate" class="medCalcFontSelect" name="RR_unit" onchange="NEWS_fx(); minMaxCheck();" style="width:115px;">
-                 <option selected="selected" value="1|0|breaths/min">
-                  breaths/min
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" valign="top">
-                <span class="medCalcFontOneBold">
-                 Hypercapneic respiratory failure
-                </span>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Hypercapneic respiratory failure. The variable option is No (Scale 1)." id="togel1" name="RespFailure_radio" onclick="NEWS_fx();" type="radio" value="No (Scale 1)|1"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel1');">
-                 No (Scale 1)
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="left">
-                <br/>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Hypercapneic respiratory failure. The variable option is Yes (Scale 2)." id="togel2" name="RespFailure_radio" onclick="NEWS_fx();" type="radio" value="Yes (Scale 2)|2"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel2');">
-                 Yes (Scale 2)
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" valign="top">
-                <span class="medCalcFontOneBold">
-                 On supplemental O
-                 <sub>
-                  2
-                 </sub>
-                </span>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: On supplemental O2. The variable option is No." id="togel3" name="OnO2_radio" onclick="NEWS_fx();" type="radio" value="No|0"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel3');">
-                 No
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="left">
-                <br/>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: On supplemental O2. The variable option is Yes." id="togel4" name="OnO2_radio" onclick="NEWS_fx();" type="radio" value="Yes|2"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel4');">
-                 Yes
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 O
-                 <sub>
-                  2
-                 </sub>
-                 saturation
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value O2 saturation" name="O2Sat_param" onblur="NEWS_fx(); minMaxCheck();" onchange="NEWS_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <select aria-label="Use this pulldown selector to set the unit of measure for the value O2 saturation" class="medCalcFontSelect" name="O2Sat_unit" onchange="NEWS_fx(); minMaxCheck();" style="width:115px;">
-                 <option selected="selected" value="1|0|%">
-                  %
-                 </option>
-                 <option value="100|0|fraction">
-                  fraction
-                 </option>
-                 <option value="100|0|ratio">
-                  ratio
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 Systolic BP
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value Systolic BP" name="SBP_param" onblur="NEWS_fx(); minMaxCheck();" onchange="NEWS_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <select aria-label="Use this pulldown selector to set the unit of measure for the value Systolic BP" class="medCalcFontSelect" name="SBP_unit" onchange="NEWS_fx(); minMaxCheck();" style="width:115px;">
-                 <option value="0.00750063755419211|0|Pascal">
-                  Pascal
-                 </option>
-                 <option value="760.002100178515|0|atm">
-                  atm
-                 </option>
-                 <option value="750.063755419211|0|bar">
-                  bar
-                 </option>
-                 <option value="0.735561538478802|0|cmH2O">
-                  cmH2O
-                 </option>
-                 <option value="10|0|cmHg">
-                  cmHg
-                 </option>
-                 <option value="22.4199156928339|0|ftH2O">
-                  ftH2O
-                 </option>
-                 <option value="0.735561538478802|0|g/sqcm">
-                  g/sqcm
-                 </option>
-                 <option value="1.86832630773616|0|inH2O">
-                  inH2O
-                 </option>
-                 <option value="25.4000840071406|0|inHg">
-                  inHg
-                 </option>
-                 <option value="7.50063755419211|0|kPa">
-                  kPa
-                 </option>
-                 <option value="0.750063755419211|0|mbar">
-                  mbar
-                 </option>
-                 <option selected="selected" value="1|0|mmHg">
-                  mmHg
-                 </option>
-                 <option value="51.7150957831416|0|psi">
-                  psi
-                 </option>
-                 <option value="1|0|torr">
-                  torr
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 Pulse
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value Pulse" name="HR_param" onblur="NEWS_fx(); minMaxCheck();" onchange="NEWS_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <select aria-label="Use this pulldown selector to set the unit of measure for the value Pulse" class="medCalcFontSelect" name="HR_unit" onchange="NEWS_fx(); minMaxCheck();" style="width:115px;">
-                 <option selected="selected" value="1|0|beats/min">
-                  beats/min
-                 </option>
-                </select>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" valign="top">
-                <span class="medCalcFontOneBold">
-                 Consciousness
-                </span>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Consciousness. The variable option is Alert." id="togel5" name="Consciousness_radio" onclick="NEWS_fx();" type="radio" value="Alert|0"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel5');">
-                 Alert
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="left">
-                <br/>
-               </td>
-               <td align="left" colspan="2">
-                <input aria-label="This button selects an option for the variable: Consciousness. The variable option is CVPU." id="togel6" name="Consciousness_radio" onclick="NEWS_fx();" type="radio" value="CVPU|3"/>
-                <span class="medCalcFontOneClick" onclick="setRB('togel6');">
-                 CVPU
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="right" width="42%">
-                <span class="medCalcFontOneBold">
-                 Temperature
-                </span>
-               </td>
-               <td align="left" nowrap="nowrap" valign="top" width="5%">
-                <input aria-label="Use this input box to enter the value Temperature" name="Temperature_param" onblur="NEWS_fx(); minMaxCheck();" onchange="NEWS_fx();" size="6" type="text" value=""/>
-               </td>
-               <td align="left" valign="top">
-                <select aria-label="Use this pulldown selector to set the unit of measure for the value Temperature" class="medCalcFontSelect" name="Temperature_unit" onchange="NEWS_fx(); minMaxCheck();" style="width:115px;">
-                 <option selected="selected" value="1|0|degC">
-                  degC
-                 </option>
-                 <option value="0.555555555555556|-17.7777777777778|degF">
-                  degF
-                 </option>
-                </select>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-           </center>
-           <br/>
-           <br/>
-           <center>
-            <span class="medCalcFontIO">
-             Results
-             <span class="medCalcFontOne" id="inputchk">
-              <br/>
-              <br/>
-              <b>
-               Important:
-              </b>
-              Inputs must be complete to perform calculation.
-              <br/>
-             </span>
-            </span>
-            <br/>
-            <br/>
-            <table cellpadding="4" class="medCalcResultBox" summary="EBMcalc Table">
-             <tbody>
-              <tr>
-               <td colspan="3">
-                <br/>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontResultParam">
-                 Respiratory rate points
-                </span>
-               </td>
-               <td nowrap="nowrap" valign="top">
-                <input aria-label="This output box will display the calculated value Respiratory rate points" aria-readonly="true" name="Respiratory_rate_points_param" size="6" type="text"/>
-               </td>
-               <td align="left" valign="top">
-                <span class="medCalcFontResultParam">
-                 <select aria-label="Use this pulldown selector to set the unit of measure for the result value Respiratory rate points" class="medCalcFontSelect" name="Respiratory_rate_points_unit" onchange="NEWS_fx();" style="width:115px;">
-                  <option value="1|0|#">
-                   #
-                  </option>
-                  <option value="1|0|index">
-                   index
-                  </option>
-                  <option value="1|0|none">
-                   none
-                  </option>
-                  <option value="1|0|number">
-                   number
-                  </option>
-                  <option selected="selected" value="1|0|points">
-                   points
-                  </option>
-                  <option value="1|0|score">
-                   score
-                  </option>
-                 </select>
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontResultParam">
-                 Oxygen saturation points
-                </span>
-               </td>
-               <td nowrap="nowrap" valign="top">
-                <input aria-label="This output box will display the calculated value Oxygen saturation points" aria-readonly="true" name="Oxygen_saturation_points_param" size="6" type="text"/>
-               </td>
-               <td align="left" valign="top">
-                <span class="medCalcFontResultParam">
-                 <select aria-label="Use this pulldown selector to set the unit of measure for the result value Oxygen saturation points" class="medCalcFontSelect" name="Oxygen_saturation_points_unit" onchange="NEWS_fx();" style="width:115px;">
-                  <option value="1|0|#">
-                   #
-                  </option>
-                  <option value="1|0|index">
-                   index
-                  </option>
-                  <option value="1|0|none">
-                   none
-                  </option>
-                  <option value="1|0|number">
-                   number
-                  </option>
-                  <option selected="selected" value="1|0|points">
-                   points
-                  </option>
-                  <option value="1|0|score">
-                   score
-                  </option>
-                 </select>
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontResultParam">
-                 Oxygen use points
-                </span>
-               </td>
-               <td nowrap="nowrap" valign="top">
-                <input aria-label="This output box will display the calculated value Oxygen use points" aria-readonly="true" name="Oxygen_use_points_param" size="6" type="text"/>
-               </td>
-               <td align="left" valign="top">
-                <span class="medCalcFontResultParam">
-                 <select aria-label="Use this pulldown selector to set the unit of measure for the result value Oxygen use points" class="medCalcFontSelect" name="Oxygen_use_points_unit" onchange="NEWS_fx();" style="width:115px;">
-                  <option value="1|0|#">
-                   #
-                  </option>
-                  <option value="1|0|index">
-                   index
-                  </option>
-                  <option value="1|0|none">
-                   none
-                  </option>
-                  <option value="1|0|number">
-                   number
-                  </option>
-                  <option selected="selected" value="1|0|points">
-                   points
-                  </option>
-                  <option value="1|0|score">
-                   score
-                  </option>
-                 </select>
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontResultParam">
-                 Systolic BP points
-                </span>
-               </td>
-               <td nowrap="nowrap" valign="top">
-                <input aria-label="This output box will display the calculated value Systolic BP points" aria-readonly="true" name="Systolic_BP_points_param" size="6" type="text"/>
-               </td>
-               <td align="left" valign="top">
-                <span class="medCalcFontResultParam">
-                 <select aria-label="Use this pulldown selector to set the unit of measure for the result value Systolic BP points" class="medCalcFontSelect" name="Systolic_BP_points_unit" onchange="NEWS_fx();" style="width:115px;">
-                  <option value="1|0|#">
-                   #
-                  </option>
-                  <option value="1|0|index">
-                   index
-                  </option>
-                  <option value="1|0|none">
-                   none
-                  </option>
-                  <option value="1|0|number">
-                   number
-                  </option>
-                  <option selected="selected" value="1|0|points">
-                   points
-                  </option>
-                  <option value="1|0|score">
-                   score
-                  </option>
-                 </select>
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontResultParam">
-                 Pulse points
-                </span>
-               </td>
-               <td nowrap="nowrap" valign="top">
-                <input aria-label="This output box will display the calculated value Pulse points" aria-readonly="true" name="Pulse_points_param" size="6" type="text"/>
-               </td>
-               <td align="left" valign="top">
-                <span class="medCalcFontResultParam">
-                 <select aria-label="Use this pulldown selector to set the unit of measure for the result value Pulse points" class="medCalcFontSelect" name="Pulse_points_unit" onchange="NEWS_fx();" style="width:115px;">
-                  <option value="1|0|#">
-                   #
-                  </option>
-                  <option value="1|0|index">
-                   index
-                  </option>
-                  <option value="1|0|none">
-                   none
-                  </option>
-                  <option value="1|0|number">
-                   number
-                  </option>
-                  <option selected="selected" value="1|0|points">
-                   points
-                  </option>
-                  <option value="1|0|score">
-                   score
-                  </option>
-                 </select>
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontResultParam">
-                 Consciousness points
-                </span>
-               </td>
-               <td nowrap="nowrap" valign="top">
-                <input aria-label="This output box will display the calculated value Consciousness points" aria-readonly="true" name="Consciousness_points_param" size="6" type="text"/>
-               </td>
-               <td align="left" valign="top">
-                <span class="medCalcFontResultParam">
-                 <select aria-label="Use this pulldown selector to set the unit of measure for the result value Consciousness points" class="medCalcFontSelect" name="Consciousness_points_unit" onchange="NEWS_fx();" style="width:115px;">
-                  <option value="1|0|#">
-                   #
-                  </option>
-                  <option value="1|0|index">
-                   index
-                  </option>
-                  <option value="1|0|none">
-                   none
-                  </option>
-                  <option value="1|0|number">
-                   number
-                  </option>
-                  <option selected="selected" value="1|0|points">
-                   points
-                  </option>
-                  <option value="1|0|score">
-                   score
-                  </option>
-                 </select>
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontResultParam">
-                 Temperature points
-                </span>
-               </td>
-               <td nowrap="nowrap" valign="top">
-                <input aria-label="This output box will display the calculated value Temperature points" aria-readonly="true" name="Temperature_points_param" size="6" type="text"/>
-               </td>
-               <td align="left" valign="top">
-                <span class="medCalcFontResultParam">
-                 <select aria-label="Use this pulldown selector to set the unit of measure for the result value Temperature points" class="medCalcFontSelect" name="Temperature_points_unit" onchange="NEWS_fx();" style="width:115px;">
-                  <option value="1|0|#">
-                   #
-                  </option>
-                  <option value="1|0|index">
-                   index
-                  </option>
-                  <option value="1|0|none">
-                   none
-                  </option>
-                  <option value="1|0|number">
-                   number
-                  </option>
-                  <option selected="selected" value="1|0|points">
-                   points
-                  </option>
-                  <option value="1|0|score">
-                   score
-                  </option>
-                 </select>
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td colspan="2">
-                <br/>
-                <br/>
-               </td>
-              </tr>
-              <tr>
-               <td align="right">
-                <span class="medCalcFontResultParam">
-                 NEWS2
-                </span>
-               </td>
-               <td nowrap="nowrap" valign="top">
-                <input aria-label="This output box will display the calculated value NEWS2" aria-readonly="true" name="NEWS2_param" size="6" type="text"/>
-               </td>
-               <td align="left" valign="top">
-                <span class="medCalcFontResultParam">
-                 <select aria-label="Use this pulldown selector to set the unit of measure for the result value NEWS2" class="medCalcFontSelect" name="NEWS2_unit" onchange="NEWS_fx();" style="width:115px;">
-                  <option value="1|0|#">
-                   #
-                  </option>
-                  <option value="1|0|index">
-                   index
-                  </option>
-                  <option value="1|0|none">
-                   none
-                  </option>
-                  <option value="1|0|number">
-                   number
-                  </option>
-                  <option selected="selected" value="1|0|points">
-                   points
-                  </option>
-                  <option value="1|0|score">
-                   score
-                  </option>
-                 </select>
-                </span>
-               </td>
-              </tr>
-              <tr>
-               <td colspan="3">
-                <br/>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-           </center>
-           <br/>
-           <br/>
-           <div id="calc_buttons">
-            <center>
-             <span class="medCalcFontOne">
-              <input name="resetbutton" type="reset" value="Reset form"/>
-             </span>
-            </center>
-           </div>
-           <br/>
-           <br/>
-           <div aria-label="This table highlights the result NEWS2 interpretation. No result is highlighted" id="rr1_tag" tabindex="0">
-            <table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
-             <tbody>
-              <tr>
-               <td bgcolor="#eeeeee" width="1%">
-                <br/>
-               </td>
-               <td align="left" bgcolor="#eeeeee">
-                <span class="medCalcFontTitleBox">
-                 NEWS2 interpretation
-                </span>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-            <br/>
-            <br/>
-           </div>
-           <center>
-            <table border="1" cellpadding="4" cellspacing="0" summary="RRTable">
-             <tbody>
-              <tr id="rr1_1">
-               <td align="right" nowrap="nowrap" style="border-right: 0px;">
-                <span class="medCalcFontOneBold">
-                 0 to 4 points:
-                </span>
-               </td>
-               <td align="left" style="border-left: 0px;">
-                <span class="medCalcFontOne">
-                 0 to 4 points (but no 3-point risk item): Low clinical risk: Ward-based response
-                </span>
-               </td>
-              </tr>
-              <tr id="rr1_2">
-               <td align="right" nowrap="nowrap" style="border-right: 0px;">
-                <span class="medCalcFontOneBold">
-                </span>
-               </td>
-               <td align="left" style="border-left: 0px;">
-                <span class="medCalcFontOne">
-                 3 or 4 points (including one 3-point risk item): Low-medium clinical risk: Urgent ward-based response
-                </span>
-               </td>
-              </tr>
-              <tr id="rr1_3">
-               <td align="right" nowrap="nowrap" style="border-right: 0px;">
-                <span class="medCalcFontOneBold">
-                 5 to 6 points:
-                </span>
-               </td>
-               <td align="left" style="border-left: 0px;">
-                <span class="medCalcFontOne">
-                 Medium clinical risk: Key threshold for urgent response
-                </span>
-               </td>
-              </tr>
-              <tr id="rr1_4">
-               <td align="right" nowrap="nowrap" style="border-right: 0px;">
-                <span class="medCalcFontOneBold">
-                 7 to 20 points:
-                </span>
-               </td>
-               <td align="left" style="border-left: 0px;">
-                <span class="medCalcFontOne">
-                 High clinical risk: Urgent or emergency response
-                </span>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-           </center>
-           <br/>
-           <br/>
-          </div>
-          <div id="pretextrefs">
-          </div>
-          <br/>
-          <br/>
-          <div id="calc_hints">
-           <span class="medCalcFontOne">
-           </span>
-          </div>
-          <div id="calc_tables_above_notes">
-          </div>
-          <br/>
-          <br/>
-          <div id="calc_notes">
-           <span class="medCalcFontOneBold">
-            Notes
-           </span>
-           <ul class="medCalcFontOne">
-            <li>
-             The
-             <b>
-              NEWS2
-             </b>
-             is based on a simple aggregate scoring system in which a score is allocated to physiological measurements,  already recorded in routine practice, when patients present to or are being monitored in the hospital.
-            </li>
-            <li>
-             For patients with hypercapnic respiratory failure (commonly due to chronic obstructive pulmonary disease),  the point scoring reflects a target range of 88 to 92% oxygen saturation for patients receiving supplemental oxygen.  Points assigned for all the clinical parameters are derived from the NEWS Chart 1: The NEWS scoring system, 2017.
-             <sup>
-              [2]
-             </sup>
-            </li>
-            <li class="parentNote">
-             <b>
-              BP
-             </b>
-             : blood pressure;
-             <b>
-              CVPU
-             </b>
-             : new Confusion, Voice, Pain, Unresponsive.
-             <ul class="childNoteList">
-              <li class="childNote">
-               <b>
-                new Confusion
-               </b>
-               – A patient may be alert but confused or disorientated. It is not always possible to determine whether  the confusion is "new" when a patient presents acutely ill. Such a presentation should always be considered to be "new" until  confirmed to be otherwise. New-onset or worsening confusion, delirium, or any other altered mentation should always prompt  concern about potentially serious underlying causes and warrants urgent clinical evaluation.
-              </li>
-              <li class="childNote">
-               <b>
-                Voice
-               </b>
-               – The patient makes some kind of response when you talk to them, which could be in any of the three  component measures of eyes, voice, or motor, eg, patient's eyes open on being asked "Are you okay?".  The response could be as little as a grunt, moan, or slight movement of a limb when prompted by voice.
-              </li>
-              <li class="childNote">
-               <b>
-                Pain
-               </b>
-               – The patient makes a response to a pain stimulus. A patient who is not alert and who has not responded to voice  (hence having the test performed on them) is likely to exhibit only withdrawal from pain, or even involuntary flexion or  extension of the limbs from the pain stimulus. The person undertaking the assessment should always exercise care and be suitably  trained when using a pain stimulus as a method of assessing levels of consciousness.
-              </li>
-              <li class="childNote">
-               <b>
-                Unresponsive
-               </b>
-               – This is also commonly referred to as "unconscious." This outcome is recorded if the patient  does not give any eye, voice, or motor response to voice or pain.
-              </li>
-             </ul>
-            </li>
-           </ul>
-          </div>
-          <br/>
-          <br/>
-          <span class="medCalcFontRef">
-           <b>
-            Equations used
-           </b>
-          </span>
-          <br/>
-          <br/>
-          <center>
-           <div id="calc_equation">
-            <table cellpadding="10" cellspacing="0" summary="EBMcalc Table">
-             <tbody>
-              <tr>
-               <td class="medCalcFormuliBox">
-                <span class="medCalcFontFormuli">
-                 National Early Warning Score2 = Respiratory_rate_points + Oxygen_saturation_points + Oxygen_use_points + Systolic_BP_points + Pulse_points + Consciousness_points + Temperature_points
-                </span>
-               </td>
-              </tr>
-             </tbody>
-            </table>
-            <br/>
-            <br/>
-           </div>
-          </center>
-          <div id="calc_tables">
-          </div>
-          <br/>
-          <br/>
-          <div id="calc_refs">
-           <span class="medCalcFontRef">
-            <b>
-             References
-            </b>
-           </span>
-           <ol>
-            <li>
-             <span class="medCalcFontRef">
-              <a href="https://www.ncbi.nlm.nih.gov/pubmed/28276182" style="color: green; text-decoration: none;" target="_blank">
-               Spagnolli W, Rigoni M, Torri E, et al. Application of the National Early Warning Score (NEWS) as a  stratification tool on admission in an Italian acute medical ward: A perspective study. Int J Clin Pract 2017; 71(3-4).
-              </a>
-             </span>
-            </li>
-            <li>
-             <span class="medCalcFontRef">
-              Royal College of Physicians. National Early Warning Score (NEWS) 2: Standardising the assessment of  acute-illness severity in the NHS. Updated report of a working party. London: RCP 2017  Available at:
-              <a href="https://www.rcplondon.ac.uk/projects/outputs/national-early-warning-score-news-2" style="text-decoration: none; color: green" target="_blank">
-               https://www.rcplondon.ac.uk/projects/outputs/national-early-warning-score-news-2
-              </a>
-              (Accessed on February 21, 2020).
-             </span>
-            </li>
-           </ol>
-          </div>
-         </form>
-        </div>
-        <span class="calculatorVendorId" id="T1678215879">
-        </span>
-       </div>
-       <div id="printDisclaimer">
-        <b>
-         Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.
-        </b>
-        <p>
-         Information on this page may not appear correctly if printed.
-        </p>
-       </div>
-       <div id="disclaimerCalculator">
-        <div class="medCalcFontTwo">
-         <p class="header">
-          Legal Notices and Disclaimer
-         </p>
-         <p>
-          All information contained in and produced by the EBMcalc system is provided
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Calculator: National Early Warning Score (NEWS2) for acute illness in adults</title></head>
+<body><section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Calculator: National Early Warning Score (NEWS2) for acute illness in adults</h1>
+<div class="utdArticleSection" id="topicContentCalculator"><div id="topicText">
+<div id="mc3k">
+<form action="" id="NEWS_form" name="NEWS_form" onkeydown="formKeyDown(event);" onkeypress="resetInTime(); return validNumberField(event);" onkeyup="NEWS_fx();" onreset="rrclr(); document.getElementById('inputchk').innerHTML=inputchktxt; " onsubmit="return false;">
+<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
+<td align="left" bgcolor="#eeeeee">
+<span class="medCalcFontTitleBox">
+
+ 
+Calculator: National Early Warning Score (NEWS2) for acute illness in adults
+</span></td></tr></tbody></table><br/> <br/>
+<div id="calc_main">
+<center>
+<span class="medCalcFontIO">
+Input
+</span>
+<br/> <br/>
+<table cellpadding="3" cellspacing="0" summary="EBMcalc Table">
+<tbody><tr><td align="right" width="42%"><span class="medCalcFontOneBold">Respiratory rate</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value Respiratory rate" name="RR_param" onblur="NEWS_fx(); minMaxCheck();" onchange="NEWS_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value Respiratory rate" class="medCalcFontSelect" name="RR_unit" onchange="NEWS_fx(); minMaxCheck();" style="width:115px;">
+<option selected="selected" value="1|0|breaths/min">breaths/min</option>
+</select></td></tr>
+<tr><td align="right" valign="top"><span class="medCalcFontOneBold">Hypercapneic respiratory failure</span></td>
+<td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Hypercapneic respiratory failure. The variable option is No (Scale 1)." id="togel1" name="RespFailure_radio" onclick="NEWS_fx();" type="radio" value="No (Scale 1)|1"/><span class="medCalcFontOneClick" onclick="setRB('togel1');"> No (Scale 1)</span></td></tr>
+<tr><td align="left"><br/></td><td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Hypercapneic respiratory failure. The variable option is Yes (Scale 2)." id="togel2" name="RespFailure_radio" onclick="NEWS_fx();" type="radio" value="Yes (Scale 2)|2"/><span class="medCalcFontOneClick" onclick="setRB('togel2');"> Yes (Scale 2)</span></td></tr>
+<tr><td align="right" valign="top"><span class="medCalcFontOneBold">On supplemental O<sub>2</sub></span></td>
+<td align="left" colspan="2"><input aria-label="This button selects an option for the variable: On supplemental O2. The variable option is No." id="togel3" name="OnO2_radio" onclick="NEWS_fx();" type="radio" value="No|0"/><span class="medCalcFontOneClick" onclick="setRB('togel3');"> No</span></td></tr>
+<tr><td align="left"><br/></td><td align="left" colspan="2"><input aria-label="This button selects an option for the variable: On supplemental O2. The variable option is Yes." id="togel4" name="OnO2_radio" onclick="NEWS_fx();" type="radio" value="Yes|2"/><span class="medCalcFontOneClick" onclick="setRB('togel4');"> Yes</span></td></tr>
+<tr><td align="right" width="42%"><span class="medCalcFontOneBold">O<sub>2</sub> saturation</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value O2 saturation" name="O2Sat_param" onblur="NEWS_fx(); minMaxCheck();" onchange="NEWS_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value O2 saturation" class="medCalcFontSelect" name="O2Sat_unit" onchange="NEWS_fx(); minMaxCheck();" style="width:115px;">
+<option selected="selected" value="1|0|%">%</option>
+<option value="100|0|fraction">fraction</option>
+<option value="100|0|ratio">ratio</option>
+</select></td></tr>
+<tr><td align="right" width="42%"><span class="medCalcFontOneBold">Systolic BP</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value Systolic BP" name="SBP_param" onblur="NEWS_fx(); minMaxCheck();" onchange="NEWS_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value Systolic BP" class="medCalcFontSelect" name="SBP_unit" onchange="NEWS_fx(); minMaxCheck();" style="width:115px;">
+<option value="0.00750063755419211|0|Pascal">Pascal</option>
+<option value="760.002100178515|0|atm">atm</option>
+<option value="750.063755419211|0|bar">bar</option>
+<option value="0.735561538478802|0|cmH2O">cmH2O</option>
+<option value="10|0|cmHg">cmHg</option>
+<option value="22.4199156928339|0|ftH2O">ftH2O</option>
+<option value="0.735561538478802|0|g/sqcm">g/sqcm</option>
+<option value="1.86832630773616|0|inH2O">inH2O</option>
+<option value="25.4000840071406|0|inHg">inHg</option>
+<option value="7.50063755419211|0|kPa">kPa</option>
+<option value="0.750063755419211|0|mbar">mbar</option>
+<option selected="selected" value="1|0|mmHg">mmHg</option>
+<option value="51.7150957831416|0|psi">psi</option>
+<option value="1|0|torr">torr</option>
+</select></td></tr>
+<tr><td align="right" width="42%"><span class="medCalcFontOneBold">Pulse</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value Pulse" name="HR_param" onblur="NEWS_fx(); minMaxCheck();" onchange="NEWS_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value Pulse" class="medCalcFontSelect" name="HR_unit" onchange="NEWS_fx(); minMaxCheck();" style="width:115px;">
+<option selected="selected" value="1|0|beats/min">beats/min</option>
+</select></td></tr>
+<tr><td align="right" valign="top"><span class="medCalcFontOneBold">Consciousness</span></td>
+<td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Consciousness. The variable option is Alert." id="togel5" name="Consciousness_radio" onclick="NEWS_fx();" type="radio" value="Alert|0"/><span class="medCalcFontOneClick" onclick="setRB('togel5');"> Alert</span></td></tr>
+<tr><td align="left"><br/></td><td align="left" colspan="2"><input aria-label="This button selects an option for the variable: Consciousness. The variable option is CVPU." id="togel6" name="Consciousness_radio" onclick="NEWS_fx();" type="radio" value="CVPU|3"/><span class="medCalcFontOneClick" onclick="setRB('togel6');"> CVPU</span></td></tr>
+<tr><td align="right" width="42%"><span class="medCalcFontOneBold">Temperature</span> </td>
+<td align="left" nowrap="nowrap" valign="top" width="5%">  <input aria-label="Use this input box to enter the value Temperature" name="Temperature_param" onblur="NEWS_fx(); minMaxCheck();" onchange="NEWS_fx();" size="6" type="text" value=""/></td>
+<td align="left" valign="top"> <select aria-label="Use this pulldown selector to set the unit of measure for the value Temperature" class="medCalcFontSelect" name="Temperature_unit" onchange="NEWS_fx(); minMaxCheck();" style="width:115px;">
+<option selected="selected" value="1|0|degC">degC</option>
+<option value="0.555555555555556|-17.7777777777778|degF">degF</option>
+</select></td></tr>
+</tbody></table>
+</center>
+<br/> <br/><center><span class="medCalcFontIO">Results<span class="medCalcFontOne" id="inputchk"><br/> <br/><b>Important:</b> Inputs must be complete to perform calculation. <br/></span></span>
+<br/> <br/>
+<table cellpadding="4" class="medCalcResultBox" summary="EBMcalc Table">
+<tbody><tr><td colspan="3"> <br/></td></tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">Respiratory rate points</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value Respiratory rate points" aria-readonly="true" name="Respiratory_rate_points_param" size="6" type="text"/></td>
+<td align="left" valign="top"><span class="medCalcFontResultParam">
+<select aria-label="Use this pulldown selector to set the unit of measure for the result value Respiratory rate points" class="medCalcFontSelect" name="Respiratory_rate_points_unit" onchange="NEWS_fx();" style="width:115px;">
+<option value="1|0|#">#</option>
+<option value="1|0|index">index</option>
+<option value="1|0|none">none</option>
+<option value="1|0|number">number</option>
+<option selected="selected" value="1|0|points">points</option>
+<option value="1|0|score">score</option>
+</select>
+</span></td>
+</tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">Oxygen saturation points</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value Oxygen saturation points" aria-readonly="true" name="Oxygen_saturation_points_param" size="6" type="text"/></td>
+<td align="left" valign="top"><span class="medCalcFontResultParam">
+<select aria-label="Use this pulldown selector to set the unit of measure for the result value Oxygen saturation points" class="medCalcFontSelect" name="Oxygen_saturation_points_unit" onchange="NEWS_fx();" style="width:115px;">
+<option value="1|0|#">#</option>
+<option value="1|0|index">index</option>
+<option value="1|0|none">none</option>
+<option value="1|0|number">number</option>
+<option selected="selected" value="1|0|points">points</option>
+<option value="1|0|score">score</option>
+</select>
+</span></td>
+</tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">Oxygen use points</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value Oxygen use points" aria-readonly="true" name="Oxygen_use_points_param" size="6" type="text"/></td>
+<td align="left" valign="top"><span class="medCalcFontResultParam">
+<select aria-label="Use this pulldown selector to set the unit of measure for the result value Oxygen use points" class="medCalcFontSelect" name="Oxygen_use_points_unit" onchange="NEWS_fx();" style="width:115px;">
+<option value="1|0|#">#</option>
+<option value="1|0|index">index</option>
+<option value="1|0|none">none</option>
+<option value="1|0|number">number</option>
+<option selected="selected" value="1|0|points">points</option>
+<option value="1|0|score">score</option>
+</select>
+</span></td>
+</tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">Systolic BP points</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value Systolic BP points" aria-readonly="true" name="Systolic_BP_points_param" size="6" type="text"/></td>
+<td align="left" valign="top"><span class="medCalcFontResultParam">
+<select aria-label="Use this pulldown selector to set the unit of measure for the result value Systolic BP points" class="medCalcFontSelect" name="Systolic_BP_points_unit" onchange="NEWS_fx();" style="width:115px;">
+<option value="1|0|#">#</option>
+<option value="1|0|index">index</option>
+<option value="1|0|none">none</option>
+<option value="1|0|number">number</option>
+<option selected="selected" value="1|0|points">points</option>
+<option value="1|0|score">score</option>
+</select>
+</span></td>
+</tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">Pulse points</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value Pulse points" aria-readonly="true" name="Pulse_points_param" size="6" type="text"/></td>
+<td align="left" valign="top"><span class="medCalcFontResultParam">
+<select aria-label="Use this pulldown selector to set the unit of measure for the result value Pulse points" class="medCalcFontSelect" name="Pulse_points_unit" onchange="NEWS_fx();" style="width:115px;">
+<option value="1|0|#">#</option>
+<option value="1|0|index">index</option>
+<option value="1|0|none">none</option>
+<option value="1|0|number">number</option>
+<option selected="selected" value="1|0|points">points</option>
+<option value="1|0|score">score</option>
+</select>
+</span></td>
+</tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">Consciousness points</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value Consciousness points" aria-readonly="true" name="Consciousness_points_param" size="6" type="text"/></td>
+<td align="left" valign="top"><span class="medCalcFontResultParam">
+<select aria-label="Use this pulldown selector to set the unit of measure for the result value Consciousness points" class="medCalcFontSelect" name="Consciousness_points_unit" onchange="NEWS_fx();" style="width:115px;">
+<option value="1|0|#">#</option>
+<option value="1|0|index">index</option>
+<option value="1|0|none">none</option>
+<option value="1|0|number">number</option>
+<option selected="selected" value="1|0|points">points</option>
+<option value="1|0|score">score</option>
+</select>
+</span></td>
+</tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">Temperature points</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value Temperature points" aria-readonly="true" name="Temperature_points_param" size="6" type="text"/></td>
+<td align="left" valign="top"><span class="medCalcFontResultParam">
+<select aria-label="Use this pulldown selector to set the unit of measure for the result value Temperature points" class="medCalcFontSelect" name="Temperature_points_unit" onchange="NEWS_fx();" style="width:115px;">
+<option value="1|0|#">#</option>
+<option value="1|0|index">index</option>
+<option value="1|0|none">none</option>
+<option value="1|0|number">number</option>
+<option selected="selected" value="1|0|points">points</option>
+<option value="1|0|score">score</option>
+</select>
+</span></td>
+</tr>
+<tr><td colspan="2"><br/> <br/></td></tr>
+<tr>
+<td align="right"><span class="medCalcFontResultParam">NEWS2</span></td>
+<td nowrap="nowrap" valign="top">  <input aria-label="This output box will display the calculated value NEWS2" aria-readonly="true" name="NEWS2_param" size="6" type="text"/></td>
+<td align="left" valign="top"><span class="medCalcFontResultParam">
+<select aria-label="Use this pulldown selector to set the unit of measure for the result value NEWS2" class="medCalcFontSelect" name="NEWS2_unit" onchange="NEWS_fx();" style="width:115px;">
+<option value="1|0|#">#</option>
+<option value="1|0|index">index</option>
+<option value="1|0|none">none</option>
+<option value="1|0|number">number</option>
+<option selected="selected" value="1|0|points">points</option>
+<option value="1|0|score">score</option>
+</select>
+</span></td>
+</tr>
+<tr><td colspan="3"> <br/></td></tr>
+</tbody></table>
+</center><br/> <br/>
+<div id="calc_buttons">
+<center>
+<span class="medCalcFontOne">
+<input name="resetbutton" type="reset" value="Reset form"/>
+</span>
+</center>
+</div>
+<br/> <br/>
+<div aria-label="This table highlights the result NEWS2 interpretation. No result is highlighted" id="rr1_tag" tabindex="0">
+<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
+<td align="left" bgcolor="#eeeeee">
+<span class="medCalcFontTitleBox">
+
+
+NEWS2 interpretation
+</span></td></tr></tbody></table><br/> <br/>
+</div>
+<center>
+<table border="1" cellpadding="4" cellspacing="0" summary="RRTable">
+<tbody><tr id="rr1_1"><td align="right" nowrap="nowrap" style="border-right: 0px;"><span class="medCalcFontOneBold">0 to 4 points:</span></td>
+<td align="left" style="border-left: 0px;"><span class="medCalcFontOne">0 to 4 points (but no 3-point risk item): Low clinical risk: Ward-based response</span></td></tr>
+<tr id="rr1_2"><td align="right" nowrap="nowrap" style="border-right: 0px;"><span class="medCalcFontOneBold"> </span></td>
+<td align="left" style="border-left: 0px;"><span class="medCalcFontOne"> 3 or 4 points (including one 3-point risk item): Low-medium clinical risk: Urgent ward-based response</span></td></tr>
+<tr id="rr1_3"><td align="right" nowrap="nowrap" style="border-right: 0px;"><span class="medCalcFontOneBold">5 to 6 points:</span></td>
+<td align="left" style="border-left: 0px;"><span class="medCalcFontOne"> Medium clinical risk: Key threshold for urgent response</span></td></tr>
+<tr id="rr1_4"><td align="right" nowrap="nowrap" style="border-right: 0px;"><span class="medCalcFontOneBold">7 to 20 points:</span></td>
+<td align="left" style="border-left: 0px;"><span class="medCalcFontOne">High clinical risk: Urgent or emergency response</span></td></tr>
+</tbody></table>
+</center>
+<br/> <br/>
+</div><div id="pretextrefs">
+ 
+</div>
+<br/> <br/>
+<div id="calc_hints">
+<span class="medCalcFontOne">
+</span>
+</div>
+<div id="calc_tables_above_notes">
+</div>
+<br/> <br/>
+<div id="calc_notes">
+<span class="medCalcFontOneBold">Notes</span>
+<ul class="medCalcFontOne">
+<li>The <b>NEWS2</b> is based on a simple aggregate scoring system in which a score is allocated to physiological measurements,  already recorded in routine practice, when patients present to or are being monitored in the hospital.</li>
+<li>For patients with hypercapnic respiratory failure (commonly due to chronic obstructive pulmonary disease),  the point scoring reflects a target range of 88 to 92% oxygen saturation for patients receiving supplemental oxygen.  Points assigned for all the clinical parameters are derived from the NEWS Chart 1: The NEWS scoring system, 2017.<sup>[2]</sup></li>
+<li class="parentNote"><b>BP</b>: blood pressure; <b>CVPU</b>: new Confusion, Voice, Pain, Unresponsive.
+<ul class="childNoteList">
+<li class="childNote"> <b>new Confusion</b> – A patient may be alert but confused or disorientated. It is not always possible to determine whether  the confusion is "new" when a patient presents acutely ill. Such a presentation should always be considered to be "new" until  confirmed to be otherwise. New-onset or worsening confusion, delirium, or any other altered mentation should always prompt  concern about potentially serious underlying causes and warrants urgent clinical evaluation.</li>
+<li class="childNote"> <b>Voice</b> – The patient makes some kind of response when you talk to them, which could be in any of the three  component measures of eyes, voice, or motor, eg, patient's eyes open on being asked "Are you okay?".  The response could be as little as a grunt, moan, or slight movement of a limb when prompted by voice.</li>
+<li class="childNote"> <b>Pain</b> – The patient makes a response to a pain stimulus. A patient who is not alert and who has not responded to voice  (hence having the test performed on them) is likely to exhibit only withdrawal from pain, or even involuntary flexion or  extension of the limbs from the pain stimulus. The person undertaking the assessment should always exercise care and be suitably  trained when using a pain stimulus as a method of assessing levels of consciousness.</li>
+<li class="childNote"> <b>Unresponsive</b> – This is also commonly referred to as "unconscious." This outcome is recorded if the patient  does not give any eye, voice, or motor response to voice or pain.</li>
+</ul></li>
+</ul>
+</div>
+<br/> <br/>
+<span class="medCalcFontRef"><b>Equations used</b></span>
+<br/> <br/>
+<center>
+<div id="calc_equation">
+<table cellpadding="10" cellspacing="0" summary="EBMcalc Table"><tbody><tr><td class="medCalcFormuliBox"><span class="medCalcFontFormuli">National Early Warning Score2 = Respiratory_rate_points + Oxygen_saturation_points + Oxygen_use_points + Systolic_BP_points + Pulse_points + Consciousness_points + Temperature_points</span></td></tr></tbody></table><br/> <br/>
+</div> </center>
+<div id="calc_tables">
+</div>
+<br/> <br/>
+<div id="calc_refs">
+<span class="medCalcFontRef"><b>References</b></span>
+<ol>
+<li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/28276182" style="color: green; text-decoration: none;" target="_blank">Spagnolli W, Rigoni M, Torri E, et al. Application of the National Early Warning Score (NEWS) as a  stratification tool on admission in an Italian acute medical ward: A perspective study. Int J Clin Pract 2017; 71(3-4).</a></span></li>
+<li><span class="medCalcFontRef">Royal College of Physicians. National Early Warning Score (NEWS) 2: Standardising the assessment of  acute-illness severity in the NHS. Updated report of a working party. London: RCP 2017  Available at: <a href="https://www.rcplondon.ac.uk/projects/outputs/national-early-warning-score-news-2" style="text-decoration: none; color: green" target="_blank"> https://www.rcplondon.ac.uk/projects/outputs/national-early-warning-score-news-2</a> (Accessed on February 21, 2020).</span></li>
+</ol>
+</div>
+</form>
+</div>
+<span class="calculatorVendorId" id="T1678215879">
+</span></div><div id="printDisclaimer">
+<b>Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.</b>
+<p>
+	Information on this page may not appear correctly if printed. </p>
+</div>
+<div id="disclaimerCalculator">
+<div class="medCalcFontTwo">
+<p class="header">Legal Notices and Disclaimer</p>
+<p>
+			All information contained in and produced by the EBMcalc system is provided
 			for educational purposes only. This information should not be used for the diagnosis or treatment
-			of any health problem or disease.
-          <b>
-           THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.
-          </b>
-          <a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">
-           Click here for full notice and disclaimer.
-          </a>
-         </p>
-         <p class="copy">
-          EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC
-         </p>
-        </div>
-       </div>
-       <div id="topicVersionRevision">
-        Topic 127260 Version 6.0
-       </div>
-      </div>
-     </div>
-    </div>
-   </section>
-  </section>
-  <!-- End Main Menu Area -->
-  <!-- Start Search Popup Area -->
-  <!-- End Footer Area -->
-  <!-- Back to top -->
-  <a class="scrolltop" href="#top">
-   <i class="icofont-hand-drawn-up">
-   </i>
-  </a>
-  <!-- End Back to top -->
-  <!-- jQuery Min JS -->
-  <!-- Prpper JS -->
-  <!-- Bootstrap Min JS -->
-  <!-- Classy Nav Min Js -->
-  <!-- Owl Carousel Min Js -->
-  <!-- Magnific Popup JS -->
-  <!-- CounterUp JS -->
-  <!-- Waypoints JS -->
-  <!-- Form Validator Min JS -->
-  <!-- Contact Form Min JS -->
-  <!-- Main JS -->
-  <!-- Global site tag (gtag.js) - Google Analytics -->
- </body>
+			of any health problem or disease. 
+			<b>THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.</b>
+<a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">Click here for full notice and disclaimer.</a>
+</p>
+<p class="copy">EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC</p>
+</div>
+</div><div id="topicVersionRevision">Topic 127260 Version 6.0</div></div>
+</div>
+</div>
+</section><script>
+/* <![CDATA[ */
+
+var lastChar = '';
+
+function log(i){
+return Math.log(i) * Math.LOG10E;
+}
+
+function ln(i){
+return Math.log(i);
+}
+
+function sq(i){
+return i * i;
+}
+
+function sqr(i){
+return Math.sqrt(i);
+}
+
+
+function power(x,y){
+return Math.pow(x,y);
+}
+
+function eTo(x){
+return Math.exp(x);
+}
+
+
+function fixDP(r, dps) {
+if (isNaN(r)) return "NaN";
+var msign = '';
+if (r < 0) msign = '-';
+x = Math.abs(r);
+if (x > Math.pow(10, 21)) return msign + x.toString();
+var m = Math.round(x * Math.pow(10, dps)).toString();
+if (dps == 0) return msign + m;
+while (m.length <= dps) m = "0" + m;
+return msign + m.substring(0, m.length - dps) + "." + m.substring(m.length - dps);
+}
+
+
+function alertNaN(){
+alert('This field is improperly formatted. You may only input the digits 0-9 and a decimal point.');
+doCalc = false;
+clrResults();
+}
+
+function validNumberField(event) {
+var field = event.target;
+
+if(field && field != 'undefined' && field.attributes.type.nodeValue && (field.attributes.type.nodeValue == 'number')) {
+var val = field.value;
+var charCode = event.charCode;
+var key = String.fromCharCode(charCode);
+
+if(charCode == 0 || charCode == 13) {
+  return true;
+}
+
+if(key == ' ') {
+alert('Numeric field cannot contain spaces.');
+  return false;
+}
+
+if(key == '.') { return validDecimalPoint(val, key); }
+if(key == '-') { return validMinus(val, key); }
+
+if(isNaN(parseInt(key))) {
+alertNaN();
+return false;
+}
+
+return validFloat(val, key);
+}
+return true;
+}
+
+function validDecimalPoint(val, key) {
+if(val.length == 0 && lastChar != '.') {
+  lastChar = '.';
+  return true;
+}
+if(val.indexOf('.') >= 0 || lastChar == '.') {
+ alertNaN();
+ return false;
+}
+if(validFloat(val, key)) {
+ lastChar = key;
+ return true;
+}
+lastChar = '';
+return false;
+}
+
+function validMinus(val, key) {
+if(val.length == 0) {
+  return true;
+}
+if(val.length > 1) {
+ alertNaN();
+ return false;
+}
+return validFloat(val, key);
+}
+
+
+function validFloat(val, key) {
+var currentVal = parseFloat(val + key);
+if(isNaN(val + key) || isNaN(currentVal)) {
+alertNaN();
+return false;
+}
+return true;
+}
+
+function formKeyDown(event) {
+var field = event.target;
+
+resetInTime();
+
+if(field && field != 'undefined' && field.attributes.type && field.attributes.type.nodeValue && (field.attributes.type.nodeValue == 'number')) {
+  var val = field.value;
+  var keyCode = event.keyCode;
+  if(keyCode == 8 || keyCode == 127) {
+    // backspace or delete
+    if(lastChar == '.') {
+      lastChar = '';
+    }
+    if(field.value.length == 3 && field.value[0] == '0' && field.value[1] == '.') {
+      // this handles a backspace on an input like ".5", which is saved internally as "0.5"
+      //   otherwise, if you leave the field after the backspace, it retains "0.5" as the value, most likely an iOS bug
+      field.value = ''; 
+    }
+  }
+}
+clrResults();
+}
+
+function clrValue(field) {
+ field.value = '';
+ lastChar = '';
+}
+
+var currenttimeout;
+
+function resetInTime(){
+if (currenttimeout) clearTimeout(currenttimeout);
+currenttimeout = setTimeout('minMaxCheck();', 2000);
+}
+
+
+
+var curelement;
+
+function togCB(thisid){
+thischeckbox = document.getElementById(thisid);
+if (thischeckbox.checked){ thischeckbox.checked = false; }
+else { thischeckbox.checked = true; }
+NEWS_fx();
+}
+
+function setRB(thisid){
+document.getElementById(thisid).checked = true;
+NEWS_fx();
+}
+
+
+var calctxt = ''; 
+var xmltxt = ''; 
+var xmlresult = '';
+var htmtxt = ''; 
+var postNow = false;
+var printing = false;
+var interptxt = '';
+var interphtm = '';
+var interpxml = '';
+var rbchk = false;
+var inputchktxt = '<br />&nbsp;<br /><b>Important:</b> Inputs must be complete to perform calculation. <br />'
+
+
+function aDelay(atxt, ffield){
+with (document.NEWS_form){
+clrResults();
+ffield.value = '';
+doCalc = false;
+setTimeout(function(){ alert(atxt); }, 100);
+document.getElementById('inputchk').innerHTML = inputchktxt;
+
+}}
+
+
+function NEWS_fx() {
+
+with(document.NEWS_form){
+
+
+doCalc = true;
+param_value = parseFloat(RR_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = RR_unit.options[RR_unit.selectedIndex].value.split('|');
+RR = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+rbchk = false;
+if (RespFailure_radio[0].checked){ rbchk = true; RespFailure = 1;  }
+if (RespFailure_radio[1].checked){ rbchk = true; RespFailure = 2;  }
+if (!rbchk) doCalc = false;
+rbchk = false;
+if (OnO2_radio[0].checked){ rbchk = true; OnO2 = 0;  }
+if (OnO2_radio[1].checked){ rbchk = true; OnO2 = 2;  }
+if (!rbchk) doCalc = false;
+param_value = parseFloat(O2Sat_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = O2Sat_unit.options[O2Sat_unit.selectedIndex].value.split('|');
+O2Sat = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+param_value = parseFloat(SBP_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = SBP_unit.options[SBP_unit.selectedIndex].value.split('|');
+SBP = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+param_value = parseFloat(HR_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = HR_unit.options[HR_unit.selectedIndex].value.split('|');
+HR = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+rbchk = false;
+if (Consciousness_radio[0].checked){ rbchk = true; Consciousness = 0;  }
+if (Consciousness_radio[1].checked){ rbchk = true; Consciousness = 3;  }
+if (!rbchk) doCalc = false;
+param_value = parseFloat(Temperature_param.value);
+if (isNaN(param_value)){param_value = ""; doCalc = false;}
+unit_parts = Temperature_unit.options[Temperature_unit.selectedIndex].value.split('|');
+Temperature = param_value * parseFloat(unit_parts[0]) + parseFloat(unit_parts[1]);
+dp = 0;
+var sbp_p = 0; var o2_p; var sbp_p; var hr_p = 0; var temp_p = 0;
+if (RR >= 25) rr_p = 3;
+else if (RR >= 21) rr_p = 2;
+else if (RR >= 12) rr_p = 0;
+else if (RR >= 9) rr_p = 1;
+else rr_p = 3;
+if (RespFailure == 1){
+if (O2Sat >= 96) o2_p = 0;
+else if (O2Sat >= 94) o2_p = 1;
+else if (O2Sat >= 92) o2_p = 2;
+else  o2_p = 3;
+}
+if	(RespFailure ==	2){
+if ((O2Sat >= 97) && (OnO2 == 2)) o2_p = 3;
+else if ((O2Sat >= 95) && (OnO2 == 2)) o2_p = 2;
+else if ((O2Sat >= 93) && (OnO2 == 2)) o2_p = 1;
+else if ((O2Sat >= 93)  && (OnO2 == 0)) o2_p = 0;
+else if (O2Sat >= 88) o2_p = 0;
+else if (O2Sat >= 86) o2_p = 1;
+else if (O2Sat >= 84) o2_p = 2;
+else  o2_p = 3;
+}
+if (SBP >= 220) sbp_p = 3;
+else if (SBP >= 111) sbp_p = 0;
+else if (SBP >= 101) sbp_p = 1;
+else if (SBP >= 91) sbp_p = 2;
+else sbp_p = 3;
+if (HR >= 131) hr_p = 3;
+else if (HR >= 111) hr_p = 2;
+else if (HR >= 91) hr_p = 1;
+else if (HR >= 51) hr_p = 0;
+else if (HR >= 41) hr_p = 1;
+else  hr_p = 3;
+if (Temperature >= 39.1) temp_p = 2;
+else if (Temperature >= 38.1) temp_p = 1;
+else if (Temperature >= 36.1) temp_p = 0;
+else if (Temperature >= 35.1) temp_p = 1;
+else temp_p = 3;
+Respiratory_rate_points =  rr_p;
+
+unit_parts = Respiratory_rate_points_unit.options[Respiratory_rate_points_unit.selectedIndex].value.split('|');
+if (doCalc) Respiratory_rate_points_param.value = fixDP((Respiratory_rate_points - parseFloat(unit_parts[1])) / parseFloat(unit_parts[0]), dp);
+
+
+
+Oxygen_saturation_points =  o2_p;
+
+unit_parts = Oxygen_saturation_points_unit.options[Oxygen_saturation_points_unit.selectedIndex].value.split('|');
+if (doCalc) Oxygen_saturation_points_param.value = fixDP((Oxygen_saturation_points - parseFloat(unit_parts[1])) / parseFloat(unit_parts[0]), dp);
+
+
+
+Oxygen_use_points =  OnO2;
+
+unit_parts = Oxygen_use_points_unit.options[Oxygen_use_points_unit.selectedIndex].value.split('|');
+if (doCalc) Oxygen_use_points_param.value = fixDP((Oxygen_use_points - parseFloat(unit_parts[1])) / parseFloat(unit_parts[0]), dp);
+
+
+
+Systolic_BP_points =  sbp_p;
+
+unit_parts = Systolic_BP_points_unit.options[Systolic_BP_points_unit.selectedIndex].value.split('|');
+if (doCalc) Systolic_BP_points_param.value = fixDP((Systolic_BP_points - parseFloat(unit_parts[1])) / parseFloat(unit_parts[0]), dp);
+
+
+
+Pulse_points =  hr_p;
+
+unit_parts = Pulse_points_unit.options[Pulse_points_unit.selectedIndex].value.split('|');
+if (doCalc) Pulse_points_param.value = fixDP((Pulse_points - parseFloat(unit_parts[1])) / parseFloat(unit_parts[0]), dp);
+
+
+
+Consciousness_points =  Consciousness;
+
+unit_parts = Consciousness_points_unit.options[Consciousness_points_unit.selectedIndex].value.split('|');
+if (doCalc) Consciousness_points_param.value = fixDP((Consciousness_points - parseFloat(unit_parts[1])) / parseFloat(unit_parts[0]), dp);
+
+
+
+Temperature_points =  temp_p;
+
+unit_parts = Temperature_points_unit.options[Temperature_points_unit.selectedIndex].value.split('|');
+if (doCalc) Temperature_points_param.value = fixDP((Temperature_points - parseFloat(unit_parts[1])) / parseFloat(unit_parts[0]), dp);
+
+
+
+NEWS2 =  Respiratory_rate_points + Oxygen_saturation_points + Oxygen_use_points + Systolic_BP_points + Pulse_points + Consciousness_points + Temperature_points;
+
+unit_parts = NEWS2_unit.options[NEWS2_unit.selectedIndex].value.split('|');
+if (doCalc) NEWS2_param.value = fixDP((NEWS2 - parseFloat(unit_parts[1])) / parseFloat(unit_parts[0]), dp);
+
+
+
+if (doCalc){
+rrclr();
+if ( 1 == 2 ){}
+else if ((NEWS2 <= 4) && (rr_p < 3) && (o2_p < 3) && (sbp_p < 3) &&  (hr_p < 3) && (temp_p < 3) && (Consciousness < 3)){
+document.getElementById('rr1_1').bgColor = '#cccccc';
+calctxt = calctxt + '\n\nNEWS2 interpretation: Low clinical risk. Ward based response.';
+xmltxt = xmltxt + '\n<Result_Interpretation>NEWS2 interpretation: Low clinical risk. Ward based response.<\/Result_Interpretation>\n';
+htmtxt = htmtxt + '\n<br />&nbsp;<br /><b>NEWS2 interpretation:<\/b>  Low clinical risk. Ward based response.\n';
+}
+else if (NEWS2 <= 4){
+document.getElementById('rr1_2').bgColor = '#cccccc';
+calctxt = calctxt + '\n\nNEWS2 interpretation: Low-medium clinical risk. Urgent ward based response.';
+xmltxt = xmltxt + '\n<Result_Interpretation>NEWS2 interpretation: Low-medium clinical risk. Urgent ward based response.<\/Result_Interpretation>\n';
+htmtxt = htmtxt + '\n<br />&nbsp;<br /><b>NEWS2 interpretation:<\/b>  Low-medium clinical risk. Urgent ward based response.\n';
+}
+else if (NEWS2 <= 6){
+document.getElementById('rr1_3').bgColor = '#cccccc';
+calctxt = calctxt + '\n\nNEWS2 interpretation: Medium clinical risk. Key threshold for urgent response.';
+xmltxt = xmltxt + '\n<Result_Interpretation>NEWS2 interpretation: Medium clinical risk. Key threshold for urgent response.<\/Result_Interpretation>\n';
+htmtxt = htmtxt + '\n<br />&nbsp;<br /><b>NEWS2 interpretation:<\/b>  Medium clinical risk. Key threshold for urgent response.\n';
+}
+else{
+document.getElementById('rr1_4').bgColor = '#cccccc';
+calctxt = calctxt + '\n\nNEWS2 interpretation: High clinical risk. Urgent or emergency response.';
+xmltxt = xmltxt + '\n<Result_Interpretation>NEW2S interpretation: High clinical risk. Urgent or emergency response.<\/Result_Interpretation>\n';
+htmtxt = htmtxt + '\n<br />&nbsp;<br /><b>NEWS2 interpretation:<\/b>  High clinical risk. Urgent or emergency response.\n';
+}
+}
+
+
+}
+
+
+if (doCalc) document.getElementById('inputchk').innerHTML = '';
+else document.getElementById('inputchk').innerHTML = inputchktxt;
+
+
+}
+
+function minMaxCheck(){
+if (printing) return;
+
+
+
+with(document.NEWS_form){
+
+if (RR_param.value && isNaN(RR_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', RR_param); }
+if (RR_param.value && (RR < (0 - 0.00001))) {
+RR = 0;
+ aDelay("The minimum value for Respiratory rate is 0 breaths/min.\n\nIf you are specifying a value with a different unit, change the unit selector first.", RR_param);
+}
+
+if (RR_param.value && RR > 200) {
+RR = 0;
+ aDelay("The maximum value for Respiratory rate is 200 breaths/min.\n\nIf you are specifying a value with a different unit, change the unit selector first.", RR_param);
+}
+
+if (O2Sat_param.value && isNaN(O2Sat_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', O2Sat_param); }
+if (O2Sat_param.value && (O2Sat < (0 - 0.00001))) {
+O2Sat = 0;
+ aDelay("The minimum value for O2 saturation is 0 %.\n\nIf you are specifying a value with a different unit, change the unit selector first.", O2Sat_param);
+}
+
+if (O2Sat_param.value && O2Sat > 100) {
+O2Sat = 0;
+ aDelay("The maximum value for O2 saturation is 100 %.\n\nIf you are specifying a value with a different unit, change the unit selector first.", O2Sat_param);
+}
+
+if (SBP_param.value && isNaN(SBP_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', SBP_param); }
+if (SBP_param.value && (SBP < (0 - 0.00001))) {
+SBP = 0;
+ aDelay("The minimum value for Systolic BP is 0 mmHg.\n\nIf you are specifying a value with a different unit, change the unit selector first.", SBP_param);
+}
+
+if (SBP_param.value && SBP > 400) {
+SBP = 0;
+ aDelay("The maximum value for Systolic BP is 400 mmHg.\n\nIf you are specifying a value with a different unit, change the unit selector first.", SBP_param);
+}
+
+if (HR_param.value && isNaN(HR_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', HR_param); }
+if (HR_param.value && (HR < (0 - 0.00001))) {
+HR = 0;
+ aDelay("The minimum value for Pulse is 0 beats/min.\n\nIf you are specifying a value with a different unit, change the unit selector first.", HR_param);
+}
+
+if (HR_param.value && HR > 400) {
+HR = 0;
+ aDelay("The maximum value for Pulse is 400 beats/min.\n\nIf you are specifying a value with a different unit, change the unit selector first.", HR_param);
+}
+
+if (Temperature_param.value && isNaN(Temperature_param.value)){ aDelay('This field is improperly formatted\n\nYou may only input the digits 0-9 and a decimal point', Temperature_param); }
+if (Temperature_param.value && (Temperature < (0 - 0.00001))) {
+Temperature = 0;
+ aDelay("The minimum value for Temperature is 0 degC.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Temperature_param);
+}
+
+if (Temperature_param.value && Temperature > 50) {
+Temperature = 0;
+ aDelay("The maximum value for Temperature is 50 degC.\n\nIf you are specifying a value with a different unit, change the unit selector first.", Temperature_param);
+}
+
+
+
+}
+
+}
+
+function clrResults(){
+
+
+with(document.NEWS_form){
+
+Respiratory_rate_points_param.value = '';
+Oxygen_saturation_points_param.value = '';
+Oxygen_use_points_param.value = '';
+Systolic_BP_points_param.value = '';
+Pulse_points_param.value = '';
+Consciousness_points_param.value = '';
+Temperature_points_param.value = '';
+NEWS2_param.value = '';
+
+rrclr();
+
+}
+
+}
+
+var RR = null,
+RespFailure = null,
+OnO2 = null,
+O2Sat = null,
+SBP = null,
+HR = null,
+Consciousness = null,
+Temperature = null,
+Respiratory_rate_points = null,
+Oxygen_saturation_points = null,
+Oxygen_use_points = null,
+Systolic_BP_points = null,
+Pulse_points = null,
+Consciousness_points = null,
+Temperature_points = null,
+NEWS2 = null,
+param_value = null;
+
+
+
+
+
+
+
+
+
+
+function rrclr(){
+document.getElementById('rr1_1').bgColor = '';
+document.getElementById('rr1_2').bgColor = '';
+document.getElementById('rr1_3').bgColor = '';
+document.getElementById('rr1_4').bgColor = '';
+document.getElementById('rr1_tag').ariaLabel = "This table highlights the result NEWS2 interpretation. No result is highlighted"; interptxt = '';
+}
+
+
+
+
+/* ]]> */
+</script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://medilib.ir/assets/js/jquery.min.js"></script><script src="https://medilib.ir/assets/js/popper.min.js"></script><script src="https://medilib.ir/assets/js/bootstrap.min.js"></script><script src="https://medilib.ir/assets/js/classy-nav.min.js"></script><script src="https://medilib.ir/assets/js/owl.carousel.min.js"></script><script src="https://medilib.ir/assets/js/jquery.magnific-popup.min.js"></script><script src="https://medilib.ir/assets/js/jquery.counterup.min.js"></script><script src="https://medilib.ir/assets/js/waypoints.min.js"></script><script src="https://medilib.ir/assets/js/form-validator.min.js"></script><script src="https://medilib.ir/assets/js/contact-form-script.js"></script><script src="https://medilib.ir/assets/js/main.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WFDJ5JLM3Q"></script><script>
+    window.addEventListener("load", () => {
+
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function (registrations) {
+                //returns installed service workers
+                if (registrations.length) {
+                    for (let registration of registrations) {
+                        if (
+                            registration.active.scriptURL.startsWith("/serviceWorker.js") &&
+                            !registration.active.scriptURL.endsWith("/serviceWorker.js?v=18")
+                        ) {
+                            registration.unregister();
+                        }
+                    }
+                }
+            });
+            navigator.serviceWorker.register('/serviceWorker.js?v=18', {
+                scope: '/'
+            })
+                .then(function (registration) {
+                    console.log('Registration successful, scope is:', registration.scope);
+                })
+                .catch(function (error) {
+                    console.log('Service worker registration failed, error:', error);
+                });
+        }
+    });
+    const promptElement = document.querySelector('.pwaprompt');
+    const footerPromptElement = document.querySelector('#footerPromptElement');
+    const scrollTopElement = document.querySelector('.scrolltop');
+    // const installButton = promptElement.querySelector('.prompt__install');
+    const closeButton = promptElement.querySelector('.prompt__close');
+    let installEvent;
+
+    function setWithExpiry(key, value, seconds) {
+        const now = new Date()
+
+        // `item` is an object which contains the original value
+        // as well as the time when it's supposed to expire
+        const item = {
+            value: value,
+            expiry: now.getTime() + (seconds * 1000),
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+    }
+
+    function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+        // if the item doesn't exist, return null
+        if (!itemStr) {
+            return null
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+        // compare the expiry time of the item with the current time
+        if (now.getTime() > item.expiry) {
+            // If the item is expired, delete the item from storage
+            // and return null
+            localStorage.removeItem(key)
+            return null
+        }
+        return item.value
+    }
+
+    // checks if the localStorage item has been set
+    function getVisited() {
+        return getWithExpiry('install-prompt')
+        // return localStorage.getItem('install-prompt');
+    }
+
+    // sets the localStorage item
+    function setVisited() {
+        fiveDay = 5 * (24 * (60 * 60))
+        setWithExpiry('install-prompt', true, fiveDay)
+        // localStorage.setItem('install-prompt', true);
+    }
+
+    closeButton.addEventListener('click', () => {
+        // set localStorage to true
+        setVisited();
+
+        // hide the prompt banner
+        promptElement.style.display = 'none';
+        scrollTopElement.style.bottom = '30px';
+
+        // installEvent = null;
+    });
+    // Detects if device is on iOS
+    const isIos = () => {
+        const userAgent = window.navigator.userAgent.toLowerCase();
+        return /iphone|ipad|ipod/.test(userAgent);
+    }
+    // Detects if device is in standalone mode
+    const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+
+    // Checks if should display install popup notification:
+    if (isIos() && !isInStandaloneMode()) {
+        if (!getVisited()) {
+            promptElement.style.display = 'block';
+            scrollTopElement.style.bottom = '80px';
+        }
+        footerPromptElement.style.display = 'block';
+    }
+
+
+    // this event will only fire if the user does not have the pwa installed
+    window.addEventListener('beforeinstallprompt', (event) => {
+        event.preventDefault();
+        // if no localStorage is set, first time visitor
+        if (!getVisited()) {
+            // show the prompt banner
+            promptElement.style.display = 'block';
+            scrollTopElement.style.bottom = '80px';
+
+            // store the event for later use
+
+        }
+        footerPromptElement.style.display = 'block';
+        installEvent = event;
+
+    });
+    $(document).on('click', '.prompt__install', function () {
+        promptElement.style.display = 'none';
+        scrollTopElement.style.bottom = '30px';
+
+        if (isIos() && !isInStandaloneMode()) {
+            setVisited();
+            $('#iphoneAddToHomeScreen').modal()
+        } else {
+
+            // trigger the prompt to show to the user
+            installEvent.prompt();
+            // check what choice the user made
+            installEvent.userChoice.then((choice) => {
+                // if the user declined, we don't want to show the button again
+                // set localStorage to true
+                if (choice.outcome !== 'accepted') {
+                    setVisited();
+                }
+
+                installEvent = null;
+            });
+        }
+
+    });
+</script><script>
+
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-WFDJ5JLM3Q');
+</script><script>
+      var topicReferences=[];
+
+      function refrence(id) {
+          var myReference=Object.values(topicReferences)[id];
+          console.log(myReference);
+          $("#pmid").attr("href",myReference['pmid']);
+          if (typeof myReference['description'] !== 'undefined' && myReference['description']!="") {
+            $("#myModalLabel34").html('Description : <p>' + myReference['description'] + "</p>");
+          }
+          if (typeof myReference['authors'] !== 'undefined' && myReference['authors']!="") {
+            $("#referenceAuthors").html('Authors : <p>' + myReference['authors'] + "</p>");
+          }
+          if (typeof myReference['source'] !== 'undefined' && myReference['source']!="") {
+            $("#referenceSource").html('Source : <p>' + myReference['source'] + "</p>");
+          }
+          if (typeof myReference['title'] !== 'undefined' && myReference['title']!="") {
+            $("#referenceTitle").html('Title : <p>' + myReference['title'] + "</p>");
+          }
+          if (typeof myReference['affiliation'] !== 'undefined' && myReference['affiliation']!="") {
+            $("#referenceAffiliation").html('Affiliation : <p>' + myReference['affiliation'] + "</p>");
+          }
+      }
+  </script><script>
+
+      var screenHeight = screen.height;
+
+      if (screenHeight > 700) {
+        // $document.getElementById("Uptodate_image").style.width = "100% !important;";
+        // $('.Uptodate_image').css('width', '100% !important;');
+        console.log("more");
+      }else{
+        console.log(screenHeight);
+      }
+    $(document).scroll(function()  {
+      var y = $(this).scrollTop();
+      if (y > 100) {
+        $('.goback').fadeIn();
+        $('.buyPackage').fadeIn();
+        // alert(document.getElementById('main_menu').style.zIndex);
+        document.getElementById("uptodate-area").style.padding = "0px 0 0 0";
+        document.getElementById('main_menu').style.zIndex=1;
+         document.getElementById('main_menu').style.display="none";
+        document.getElementById('navbar_menu').style.marginTop="70px"
+        document.getElementById('uptodate-area').style.marginTop="0px"
+        document.getElementById('uptodate-area').style.zIndex=999;
+        console.log('down');
+      } else {
+        $('.goback').fadeOut();
+        $('.buyPackage').fadeOut();
+        document.getElementById("uptodate-area").style.padding = "0px 0 0 0";
+        document.getElementById('navbar_menu').style.marginTop="0px"
+        document.getElementById('main_menu').style.display="";
+        document.getElementById('uptodate-area').style.zIndex=0;
+        console.log('up');
+      }
+    });
+    function goBack() {
+      window.history.back();
+    }
+    function buyPackage() {
+      window.open("https://medilib.ir/userPanel/package/uptodate/index",'_blank');
+    }
+  </script></body>
 </html>

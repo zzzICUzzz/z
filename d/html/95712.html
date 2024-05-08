@@ -1,541 +1,757 @@
 <!DOCTYPE html>
+
 <html lang="fa">
- <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
- <head>
-  <title>
-   Calculator: SI unit to conventional (gravimetric, imperial, US) unit conversions: Immunology lab values
-  </title>
-  <link href="d/css/1.css" rel="stylesheet"/>
- </head>
- <body>
-  <!-- Start Main Menu Area -->
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <div class="container">
-   <div class="row">
-   </div>
-  </div>
-  <section class="teacher-area ptb-10">
-   <div class="container">
-   </div>
-   <section class="course-details-area ptb-60">
-    <div class="container">
-     <div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
-      <h1 style="text-align:center">
-       Calculator: SI unit to conventional (gravimetric, imperial, US) unit conversions: Immunology lab values
-      </h1>
-      <div class="utdArticleSection" id="topicContentCalculator">
-       <div id="topicText">
-        <div id="mc3k">
-         <form action="" id="SI_Immuno_SI_form" name="SI_Immuno_SI_form" onkeydown="to_param.value='';" onkeyup="convertValues();" onsubmit="return false;">
-          <table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
-           <tbody>
-            <tr>
-             <td bgcolor="#eeeeee" width="1%">
-              <br/>
-             </td>
-             <td align="left" bgcolor="#eeeeee">
-              <span class="medCalcFontTitleBox">
-               Calculator: SI unit to conventional (gravimetric, imperial, US) unit conversions: Immunology lab values
-              </span>
-             </td>
-            </tr>
-           </tbody>
-          </table>
-          <br/>
-          <br/>
-          <table border="0" width="100%">
-           <tbody>
-            <tr>
-             <td align="center">
-              <table border="0">
-               <tbody>
-                <tr>
-                 <td align="left">
-                  <div id="calc_main">
-                   <div id="calc_input">
-                    <div id="cnvItm">
-                     <span class="medCalcFontOneBold">
-                      Select item to be converted:
-                     </span>
-                     <div>
-                      <select id="UCitem" name="UCitem">
-                       <option>
-                       </option>
-                      </select>
-                     </div>
-                    </div>
-                    <div id="cnvPnl">
-                     <div>
-                      <span class="medCalcFontOneBold">
-                       FROM:
-                      </span>
-                      <input id="from_param" name="from_param" type="text"/>
-                      <select id="UCfrmUnt" name="UCfrmUnt">
-                       <option>
-                       </option>
-                      </select>
-                     </div>
-                     <div>
-                      <span class="medCalcFontOneBold">
-                       TO:
-                      </span>
-                      <input id="to_param" name="to_param" readonly="readonly" type="text"/>
-                      <select disabled="disabled" id="UCtoUnt" name="UCtoUnt">
-                       <option>
-                       </option>
-                      </select>
-                     </div>
-                    </div>
-                   </div>
-                  </div>
-                  <br/>
-                  <span class="medCalcFontOneBold">
-                   Max display precision:
-                  </span>
-                  <select class="medCalcFontSelect" name="decpts" onchange="setDecPts();">
-                   <option>
-                    0
-                   </option>
-                   <option selected="selected">
-                    1
-                   </option>
-                   <option>
-                    2
-                   </option>
-                   <option>
-                    3
-                   </option>
-                  </select>
-                  <input onclick="resetPnl(); initCalc();" type="button" value="Reset"/>
-                 </td>
-                </tr>
-               </tbody>
-              </table>
-             </td>
-            </tr>
-           </tbody>
-          </table>
-          <input id="hfSrcIdx" name="hfSrcIdx" type="hidden" value="0"/>
-          <input id="hfTgtIdx" name="hfTgtIdx" type="hidden" value="0"/>
-         </form>
-         <br/>
-         <br/>
-         <div id="calc_hints">
-         </div>
-         <div id="calc_notes">
-          <span class="medCalcFontOneBold">
-           Notes
-          </span>
-          <ul class="medCalcFontOne">
-           <li>
-            SI units: Système Internationale d'Unités, or International System of Units.
-           </li>
-           <li>
-            US units: Gravimetric, imperial, or traditional English units.
-           </li>
-           <li>
-            ANCA: antineutrophil cytoplasmic antibodies; GBM: glomerular basement membrane; IgA: immunoglobulin A; IgE: immunoglobulin E; IgG: immunoglobulin G; IgM: immunoglobulin M.
-           </li>
-           <li>
-            To make immunology unit conversions, first choose from the top pull-down selector.
-           </li>
-           <li>
-            Next, select the starting unit and enter a value in the
-            <b>
-             FROM
-            </b>
-            input.
-           </li>
-           <li>
-            Select a
-            <b>
-             TO
-            </b>
-            unit from the lower right selector and the converted value will appear immediately in the
-            <b>
-             TO
-            </b>
-            box.
-           </li>
-           <li>
-            The conversion factor for any selected analyte can be found by entering 1.0 in the "FROM" input box for that analyte and viewing the conversion factor in the "TO" output box. Conversion is calculated by multiplying a value in the FROM units by the conversion factor.
-           </li>
-           <li>
-            <font color="#aa0000">
-             In this calculator, mcg is the abbreviation for micrograms.
-            </font>
-           </li>
-          </ul>
-         </div>
-         <br/>
-         <br/>
-         <div id="calc_refs">
-          <span class="medCalcFontRef">
-           <b>
-            References
-           </b>
-          </span>
-          <ol>
-           <li>
-            <span class="medCalcFontRef">
-             <a href="https://www.ncbi.nlm.nih.gov/pubmed/3789557" style="color: green; text-decoration: none;" target="_blank">
-              Young DS. Implementation of SI Units for Clinical Laboratory Data. Ann Int Med 1987; 106:114.
-             </a>
-            </span>
-           </li>
-          </ol>
-         </div>
-         <br/>
-         <br/>
-         <div class="calc_tables_supp">
-          <br/>
-          <br/>
-          <span class="medCalcFontOneBold">
-           Conversion factors
-          </span>
-          <br/>
-          <br/>
-          <table border="1" cellpadding="4" cellspacing="0" class="medCalcFontOne" summary="EBMcalc Table">
-           <tbody>
-            <tr>
-             <td align="left">
-              Alpha1-antitrypsin mg/dL
-             </td>
-             <td>
-              X
-             </td>
-             <td align="center">
-              0.01
-             </td>
-             <td>
-              =
-             </td>
-             <td align="left">
-              Alpha1-antitrypsin g/L
-             </td>
-            </tr>
-            <tr>
-             <td align="left">
-              ANCA, cytoplasmic (C-ANCA) U/mL
-             </td>
-             <td>
-              X
-             </td>
-             <td align="center">
-              1
-             </td>
-             <td>
-              =
-             </td>
-             <td align="left">
-              ANCA, cytoplasmic (C-ANCA) kU/L
-             </td>
-            </tr>
-            <tr>
-             <td align="left">
-              ANCA, perinuclear (P-ANCA) U/mL
-             </td>
-             <td>
-              X
-             </td>
-             <td align="center">
-              1
-             </td>
-             <td>
-              =
-             </td>
-             <td align="left">
-              ANCA, perinuclear (P-ANCA) kU/L
-             </td>
-            </tr>
-            <tr>
-             <td align="left">
-              Anti-GBM antibodies U/mL
-             </td>
-             <td>
-              X
-             </td>
-             <td align="center">
-              1
-             </td>
-             <td>
-              =
-             </td>
-             <td align="left">
-              Anti-GBM antibodies kU/L
-             </td>
-            </tr>
-            <tr>
-             <td align="left">
-              Antithyroid antibody IU/mL
-             </td>
-             <td>
-              X
-             </td>
-             <td align="center">
-              1
-             </td>
-             <td>
-              =
-             </td>
-             <td align="left">
-              Antithyroid antibody kIU/L
-             </td>
-            </tr>
-            <tr>
-             <td align="left">
-              Bence Jones protein (quantitative) mg/dL
-             </td>
-             <td>
-              X
-             </td>
-             <td align="center">
-              0.01
-             </td>
-             <td>
-              =
-             </td>
-             <td align="left">
-              Bence Jones protein (quantitative) g/L
-             </td>
-            </tr>
-            <tr>
-             <td align="left">
-              C1-esterase-inhibitor protein mg/dL
-             </td>
-             <td>
-              X
-             </td>
-             <td align="center">
-              0.01
-             </td>
-             <td>
-              =
-             </td>
-             <td align="left">
-              C1-esterase-inhibitor protein g/L
-             </td>
-            </tr>
-            <tr>
-             <td align="left">
-              C3 mg/dL
-             </td>
-             <td>
-              X
-             </td>
-             <td align="center">
-              0.01
-             </td>
-             <td>
-              =
-             </td>
-             <td align="left">
-              C3 g/L
-             </td>
-            </tr>
-            <tr>
-             <td align="left">
-              C4 mg/dL
-             </td>
-             <td>
-              X
-             </td>
-             <td align="center">
-              0.01
-             </td>
-             <td>
-              =
-             </td>
-             <td align="left">
-              C4 g/L
-             </td>
-            </tr>
-            <tr>
-             <td align="left">
-              Factor B mg/dL
-             </td>
-             <td>
-              X
-             </td>
-             <td align="center">
-              0.01
-             </td>
-             <td>
-              =
-             </td>
-             <td align="left">
-              Factor B g/L
-             </td>
-            </tr>
-            <tr>
-             <td align="left">
-              Haptoglobin mg/dL
-             </td>
-             <td>
-              X
-             </td>
-             <td align="center">
-              0.01
-             </td>
-             <td>
-              =
-             </td>
-             <td align="left">
-              Haptoglobin g/L
-             </td>
-            </tr>
-            <tr>
-             <td align="left">
-              IgA mg/dL
-             </td>
-             <td>
-              X
-             </td>
-             <td align="center">
-              0.01
-             </td>
-             <td>
-              =
-             </td>
-             <td align="left">
-              IgA g/L
-             </td>
-            </tr>
-            <tr>
-             <td align="left">
-              IgE IU/mL
-             </td>
-             <td>
-              X
-             </td>
-             <td align="center">
-              2.4
-             </td>
-             <td>
-              =
-             </td>
-             <td align="left">
-              IgE mcg/L
-             </td>
-            </tr>
-            <tr>
-             <td align="left">
-              IgG mg/dL
-             </td>
-             <td>
-              X
-             </td>
-             <td align="center">
-              0.01
-             </td>
-             <td>
-              =
-             </td>
-             <td align="left">
-              IgG g/L
-             </td>
-            </tr>
-            <tr>
-             <td align="left">
-              IgM mg/dL
-             </td>
-             <td>
-              X
-             </td>
-             <td align="center">
-              0.01
-             </td>
-             <td>
-              =
-             </td>
-             <td align="left">
-              IgM g/L
-             </td>
-            </tr>
-            <tr>
-             <td align="left">
-              Total complement U/mL
-             </td>
-             <td>
-              X
-             </td>
-             <td align="center">
-              1
-             </td>
-             <td>
-              =
-             </td>
-             <td align="left">
-              Total complement kU/L
-             </td>
-            </tr>
-           </tbody>
-          </table>
-         </div>
-        </div>
-        <span class="calculatorVendorId" id="T1678215892">
-        </span>
-       </div>
-       <div id="printDisclaimer">
-        <b>
-         Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.
-        </b>
-        <p>
-         Information on this page may not appear correctly if printed.
-        </p>
-       </div>
-       <div id="disclaimerCalculator">
-        <div class="medCalcFontTwo">
-         <p class="header">
-          Legal Notices and Disclaimer
-         </p>
-         <p>
-          All information contained in and produced by the EBMcalc system is provided
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<head><title>Calculator: SI unit to conventional (gravimetric, imperial, US) unit conversions: Immunology lab values</title></head>
+<body><section class="course-details-area ptb-60">
+<div class="container">
+<div class="uptodate2" style="padding:50px 0px 50px 0px;direction: ltr;text-align: left;">
+<h1 style="text-align:center">Calculator: SI unit to conventional (gravimetric, imperial, US) unit conversions: Immunology lab values</h1>
+<div class="utdArticleSection" id="topicContentCalculator"><div id="topicText">
+<div id="mc3k">
+<form action="" id="SI_Immuno_SI_form" name="SI_Immuno_SI_form" onkeydown="to_param.value='';" onkeyup="convertValues();" onsubmit="return false;">
+<table cellpadding="4" cellspacing="0" summary="EBMcalc Table" width="100%">
+<tbody><tr><td bgcolor="#eeeeee" width="1%"><br/></td>
+<td align="left" bgcolor="#eeeeee">
+<span class="medCalcFontTitleBox">
+
+Calculator: SI unit to conventional (gravimetric, imperial, US) unit conversions: Immunology lab values
+</span></td></tr></tbody></table><br/> <br/>
+<table border="0" width="100%">
+<tbody><tr>
+<td align="center">
+<table border="0">
+<tbody><tr>
+<td align="left">
+<div id="calc_main">
+<div id="calc_input">
+<div id="cnvItm">
+<span class="medCalcFontOneBold">Select item to be converted:</span>
+<div><select id="UCitem" name="UCitem"><option></option></select></div>
+</div>
+<div id="cnvPnl">
+<div>
+<span class="medCalcFontOneBold">FROM:</span>
+<input id="from_param" name="from_param" type="text"/>
+<select id="UCfrmUnt" name="UCfrmUnt"><option></option></select>
+</div>
+<div>
+<span class="medCalcFontOneBold">TO:</span>
+<input id="to_param" name="to_param" readonly="readonly" type="text"/>
+<select disabled="disabled" id="UCtoUnt" name="UCtoUnt"><option></option></select>
+</div>
+</div>
+</div>
+</div>
+<br/>
+<span class="medCalcFontOneBold">
+Max display precision:
+</span>
+<select class="medCalcFontSelect" name="decpts" onchange="setDecPts();">
+<option>0</option>
+<option selected="selected">1</option>
+<option>2</option>
+<option>3</option>
+</select>
+   
+<input onclick="resetPnl(); initCalc();" type="button" value="Reset"/>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<input id="hfSrcIdx" name="hfSrcIdx" type="hidden" value="0"/>
+<input id="hfTgtIdx" name="hfTgtIdx" type="hidden" value="0"/>
+</form>
+<br/> <br/>
+<div id="calc_hints">
+</div>
+<div id="calc_notes">
+<span class="medCalcFontOneBold">Notes</span>
+<ul class="medCalcFontOne">
+<li>SI units: Système Internationale d'Unités, or International System of Units.</li>
+<li>US units: Gravimetric, imperial, or traditional English units.</li>
+<li>ANCA: antineutrophil cytoplasmic antibodies; GBM: glomerular basement membrane; IgA: immunoglobulin A; IgE: immunoglobulin E; IgG: immunoglobulin G; IgM: immunoglobulin M.</li>
+<li>To make immunology unit conversions, first choose from the top pull-down selector.           </li>
+<li>Next, select the starting unit and enter a value in the <b>FROM</b> input.</li>
+<li>Select a <b>TO</b> unit from the lower right selector and the converted value will appear immediately in the <b>TO</b> box.</li>
+<li>The conversion factor for any selected analyte can be found by entering 1.0 in the "FROM" input box for that analyte and viewing the conversion factor in the "TO" output box. Conversion is calculated by multiplying a value in the FROM units by the conversion factor.</li>
+<li><font color="#aa0000">In this calculator, mcg is the abbreviation for micrograms.</font></li>
+</ul>
+</div>
+<br/> <br/>
+<div id="calc_refs"><span class="medCalcFontRef"><b>References</b></span>
+<ol><li><span class="medCalcFontRef"><a href="https://www.ncbi.nlm.nih.gov/pubmed/3789557" style="color: green; text-decoration: none;" target="_blank">Young DS. Implementation of SI Units for Clinical Laboratory Data. Ann Int Med 1987; 106:114.</a></span></li>
+</ol></div>
+<br/> <br/>
+<div class="calc_tables_supp">
+<br/> <br/>
+<span class="medCalcFontOneBold">Conversion factors</span>
+<br/> <br/>
+<table border="1" cellpadding="4" cellspacing="0" class="medCalcFontOne" summary="EBMcalc Table">
+<tbody><tr><td align="left">Alpha1-antitrypsin mg/dL</td><td>X</td><td align="center">0.01</td><td>=</td><td align="left">Alpha1-antitrypsin g/L</td></tr>
+<tr><td align="left">ANCA, cytoplasmic (C-ANCA) U/mL</td><td>X</td><td align="center">1</td><td>=</td><td align="left">ANCA, cytoplasmic (C-ANCA) kU/L</td></tr>
+<tr><td align="left">ANCA, perinuclear (P-ANCA) U/mL</td><td>X</td><td align="center">1</td><td>=</td><td align="left">ANCA, perinuclear (P-ANCA) kU/L</td></tr>
+<tr><td align="left">Anti-GBM antibodies U/mL</td><td>X</td><td align="center">1</td><td>=</td><td align="left">Anti-GBM antibodies kU/L</td></tr>
+<tr><td align="left">Antithyroid antibody IU/mL</td><td>X</td><td align="center">1</td><td>=</td><td align="left">Antithyroid antibody kIU/L</td></tr>
+<tr><td align="left">Bence Jones protein (quantitative) mg/dL</td><td>X</td><td align="center">0.01</td><td>=</td><td align="left">Bence Jones protein (quantitative) g/L</td></tr>
+<tr><td align="left">C1-esterase-inhibitor protein mg/dL</td><td>X</td><td align="center">0.01</td><td>=</td><td align="left">C1-esterase-inhibitor protein g/L</td></tr>
+<tr><td align="left">C3 mg/dL</td><td>X</td><td align="center">0.01</td><td>=</td><td align="left">C3 g/L</td></tr>
+<tr><td align="left">C4 mg/dL</td><td>X</td><td align="center">0.01</td><td>=</td><td align="left">C4 g/L</td></tr>
+<tr><td align="left">Factor B mg/dL</td><td>X</td><td align="center">0.01</td><td>=</td><td align="left">Factor B g/L</td></tr>
+<tr><td align="left">Haptoglobin mg/dL</td><td>X</td><td align="center">0.01</td><td>=</td><td align="left">Haptoglobin g/L</td></tr>
+<tr><td align="left">IgA mg/dL</td><td>X</td><td align="center">0.01</td><td>=</td><td align="left">IgA g/L</td></tr>
+<tr><td align="left">IgE IU/mL</td><td>X</td><td align="center">2.4</td><td>=</td><td align="left">IgE mcg/L</td></tr>
+<tr><td align="left">IgG mg/dL</td><td>X</td><td align="center">0.01</td><td>=</td><td align="left">IgG g/L</td></tr>
+<tr><td align="left">IgM mg/dL</td><td>X</td><td align="center">0.01</td><td>=</td><td align="left">IgM g/L</td></tr>
+<tr><td align="left">Total complement U/mL</td><td>X</td><td align="center">1</td><td>=</td><td align="left">Total complement kU/L</td></tr>
+</tbody></table>
+</div>
+</div>
+<span class="calculatorVendorId" id="T1678215892">
+</span></div><div id="printDisclaimer">
+<b>Only digits 0 to 9 and a single decimal point (".") are acceptable as numeric inputs. Attempted input of other characters into a numeric field may lead to an incorrect result.</b>
+<p>
+	Information on this page may not appear correctly if printed. </p>
+</div>
+<div id="disclaimerCalculator">
+<div class="medCalcFontTwo">
+<p class="header">Legal Notices and Disclaimer</p>
+<p>
+			All information contained in and produced by the EBMcalc system is provided
 			for educational purposes only. This information should not be used for the diagnosis or treatment
-			of any health problem or disease.
-          <b>
-           THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.
-          </b>
-          <a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">
-           Click here for full notice and disclaimer.
-          </a>
-         </p>
-         <p class="copy">
-          EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC
-         </p>
-        </div>
-       </div>
-       <div id="topicVersionRevision">
-        Topic 95712 Version 13.0
-       </div>
-      </div>
-     </div>
-    </div>
-   </section>
-  </section>
-  <!-- End Main Menu Area -->
-  <!-- Start Search Popup Area -->
-  <!-- End Footer Area -->
-  <!-- Back to top -->
-  <a class="scrolltop" href="#top">
-   <i class="icofont-hand-drawn-up">
-   </i>
-  </a>
-  <!-- End Back to top -->
-  <!-- jQuery Min JS -->
-  <!-- Prpper JS -->
-  <!-- Bootstrap Min JS -->
-  <!-- Classy Nav Min Js -->
-  <!-- Owl Carousel Min Js -->
-  <!-- Magnific Popup JS -->
-  <!-- CounterUp JS -->
-  <!-- Waypoints JS -->
-  <!-- Form Validator Min JS -->
-  <!-- Contact Form Min JS -->
-  <!-- Main JS -->
-  <!-- Global site tag (gtag.js) - Google Analytics -->
- </body>
+			of any health problem or disease. 
+			<b>THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE IN ANY MANNER.</b>
+<a class="medCalcDisclaimerLink" href="/legal/ebmcalc-disclaimer">Click here for full notice and disclaimer.</a>
+</p>
+<p class="copy">EBMcalc is Copyright © 1998-2024 Foundation Internet Services, LLC</p>
+</div>
+</div><div id="topicVersionRevision">Topic 95712 Version 13.0</div></div>
+</div>
+</div>
+</section><script>
+/* <![CDATA[ */
+
+
+
+
+
+
+var dp = 1;
+var ddSelItm;
+var ddSrcUnt;
+var ddTgtUnt;
+var tbSrcPrm;
+var tbTgtPrm;
+var hfSrcIdx;
+var hfTgtIdx;
+
+var gaUntItm = [
+
+{ 'name': 'Alpha1-antitrypsin', 'units':[
+{ 'label':'g/L', 'type':1, 'mult':1, 'prop':'SI', 'add':0 },
+{ 'label':'mg/dL', 'type':1, 'mult':0.01, 'prop':'US', 'add':0 }]},
+
+{ 'name': 'ANCA, cytoplasmic (C-ANCA)', 'units':[
+{ 'label':'kU/L', 'type':3, 'mult':1, 'prop':'SI', 'add':0 },
+{ 'label':'U/mL', 'type':3, 'mult':1, 'prop':'US', 'add':0 }]},
+
+{ 'name': 'ANCA, perinuclear (P-ANCA)', 'units':[
+{ 'label':'kU/L', 'type':4, 'mult':1, 'prop':'SI', 'add':0 },
+{ 'label':'U/mL', 'type':4, 'mult':1, 'prop':'US', 'add':0 }]},
+
+{ 'name': 'Anti-GBM antibodies', 'units':[
+{ 'label':'kU/L', 'type':2, 'mult':1, 'prop':'SI', 'add':0 },
+{ 'label':'U/mL', 'type':2, 'mult':1, 'prop':'US', 'add':0 }]},
+
+{ 'name': 'Antithyroid antibody', 'units':[
+{ 'label':'kIU/L', 'type':5, 'mult':1, 'prop':'SI', 'add':0 },
+{ 'label':'IU/mL', 'type':5, 'mult':1, 'prop':'US', 'add':0 }]},
+
+{ 'name': 'Bence Jones protein (quantitative)', 'units':[
+{ 'label':'g/L', 'type':6, 'mult':1, 'prop':'SI', 'add':0 },
+{ 'label':'mg/dL', 'type':6, 'mult':0.01, 'prop':'US', 'add':0 }]},
+
+{ 'name': 'C1-esterase-inhibitor protein', 'units':[
+{ 'label':'g/L', 'type':7, 'mult':1, 'prop':'SI', 'add':0 },
+{ 'label':'mg/dL', 'type':7, 'mult':0.01, 'prop':'US', 'add':0 }]},
+
+{ 'name': 'C3', 'units':[
+{ 'label':'g/L', 'type':8, 'mult':1, 'prop':'SI', 'add':0 },
+{ 'label':'mg/dL', 'type':8, 'mult':0.01, 'prop':'US', 'add':0 }]},
+
+{ 'name': 'C4', 'units':[
+{ 'label':'g/L', 'type':9, 'mult':1, 'prop':'SI', 'add':0 },
+{ 'label':'mg/dL', 'type':9, 'mult':0.01, 'prop':'US', 'add':0 }]},
+
+{ 'name': 'Factor B', 'units':[
+{ 'label':'g/L', 'type':11, 'mult':1, 'prop':'SI', 'add':0 },
+{ 'label':'mg/dL', 'type':11, 'mult':0.01, 'prop':'US', 'add':0 }]},
+
+{ 'name': 'Haptoglobin', 'units':[
+{ 'label':'g/L', 'type':12, 'mult':1, 'prop':'SI', 'add':0 },
+{ 'label':'mg/dL', 'type':12, 'mult':0.01, 'prop':'US', 'add':0 }]},
+
+{ 'name': 'IgA', 'units':[
+{ 'label':'g/L', 'type':13, 'mult':1, 'prop':'SI', 'add':0 },
+{ 'label':'mg/dL', 'type':13, 'mult':0.01, 'prop':'US', 'add':0 }]},
+
+{ 'name': 'IgE', 'units':[
+{ 'label':'mcg/L', 'type':14, 'mult':1, 'prop':'SI', 'add':0 },
+{ 'label':'IU/mL', 'type':14, 'mult':2.4, 'prop':'US', 'add':0 }]},
+
+{ 'name': 'IgG', 'units':[
+{ 'label':'g/L', 'type':15, 'mult':1, 'prop':'SI', 'add':0 },
+{ 'label':'mg/dL', 'type':15, 'mult':0.01, 'prop':'US', 'add':0 }]},
+
+{ 'name': 'IgM', 'units':[
+{ 'label':'g/L', 'type':16, 'mult':1, 'prop':'SI', 'add':0 },
+{ 'label':'mg/dL', 'type':16, 'mult':0.01, 'prop':'US', 'add':0 }]},
+
+{ 'name': 'Total complement', 'units':[
+{ 'label':'kU/L', 'type':10, 'mult':1, 'prop':'SI', 'add':0 },
+{ 'label':'U/mL', 'type':10, 'mult':1, 'prop':'US', 'add':0 }]}
+];
+
+
+
+function clearSelect( ele ){
+	while( ele.options.length ){
+		ele.remove(0);
+	}
+}
+
+function selectHasEntry( sel, seek ){
+	var bRet = false;
+	for (var idx = 0; idx < sel.options.length; idx++){
+		if (sel.options[idx].text == seek){
+			bRet = true;
+			break;
+		}
+	}
+	return bRet;
+}
+
+function doEvent(evtNme, element){
+	var event;
+	if (document.createEvent) {
+		event = document.createEvent("HTMLEvents");
+		event.initEvent(evtNme, true, true);
+	} else {
+		event = document.createEventObject();
+		event.eventType = evtNme;
+	}
+
+	event.eventName = eventName;
+	event.memo = memo || { };
+
+	if (document.createEvent) {
+		element.dispatchEvent(event);
+	} else {
+		element.fireEvent("on" + event.eventType, event);
+	}
+}
+
+function trim(value) {
+    return value.replace(/^\s+|\s+$/g,"");
+}
+
+function validFloat(val){
+	var fltCnd = parseFloat(val);
+	if(isNaN(val) || isNaN(fltCnd)) {
+		return false;
+	}
+	return true;
+}
+
+function stripNonNumeric(e){
+    var bVld = false;
+    if (typeof e == "undefined") {  // Older IE browsers...
+        e = window.event;
+        src = e.srcElement;
+        if (((e.keyCode >= 48) && (e.keyCode <= 57)) ||
+            ((e.keyCode == 46) && (src.value.indexOf(".") == -1))){    // Period, and one doesn't exist yet
+            bVld = true;
+        }
+    } else {
+        if (((e.which >= 48) && (e.which <= 57)) ||
+            (e.which == 8) ||       // Delete
+            (e.keyCode == 9) ||   // Tab
+	    ((e.keyCode == 13) && (e.target.value != "")) || //Enter+valid value
+            (e.keyCode == 35 && e.which != 35 && !e.shiftKey) ||  // End
+            (e.keyCode == 36 && e.which != 36 && !e.shiftKey) ||  // Home
+            (e.keyCode == 37 && !e.shiftKey) ||  // Left arrow
+            (e.keyCode == 39 && e.which == 0) ||  // Right arrow (for FF)
+            ((e.keyCode == 46) && (e.which == 0)) ||  // Delete (for FF)
+            ((e.which == 46) && (e.target.value.indexOf(".") == -1)) ||      // Period, and one doesn't exist yet
+            ((e.which == 97) && (e.ctrlKey))){  // Ctrl+A
+            bVld = true;
+        }
+    }
+    if (!bVld){
+                alert("This field is improperly formatted.\n\nYou may only input the digits 0-9 and a decimal point.");
+        if(e.preventDefault) {
+            e.preventDefault();
+        }
+        else {
+            e.returnValue = false;
+        }
+		convertValues();
+    }
+}
+
+
+function fixDP(r, dps) {
+	if (isNaN(r)) return "NaN";
+	var msign = '';
+	if (r < 0) msign = '-';
+	x = Math.abs(r);
+	if (x > Math.pow(10, 21)) 
+		return msign + x.toString();
+	var m = Math.round(x * Math.pow(10, dps)).toString();
+	if (dps == 0) 
+		return msign + m;
+	
+	while (m.length <= dps) {
+		m = "0" + m;
+	}
+
+	return msign + m.substring(0, m.length - dps) + "." + m.substring(m.length - dps);
+}
+
+function setDecPts(){
+	with (document.SI_Immuno_SI_form){
+		dp = decpts.options[decpts.selectedIndex].text;
+		convertValues();
+	}
+}
+
+function convertValues(){
+	var srcVal = trim(tbSrcPrm.value);
+	if (!validFloat(srcVal) && srcVal != "." && srcVal != ""){
+		tbSrcPrm.value = "";
+		alert("This field is improperly formatted.\n\nYou may only input the digits 0-9 and a decimal point.");
+		return false;
+	}
+
+	if (ddSelItm.selectedIndex * ddTgtUnt.selectedIndex * ddSrcUnt.selectIndex == 0){
+		return false;
+	}
+
+	var toVal = "";
+	if (trim(tbSrcPrm.value)){
+		var curItm = parseInt(ddSelItm.value);
+		var fUntIdx = parseInt(hfSrcIdx.value);
+		var tUntIdx = parseInt(hfTgtIdx.value);
+
+		var oItm = gaUntItm[curItm];
+
+		var fUnt = oItm.units[fUntIdx];
+		var tUnt = oItm.units[tUntIdx];
+
+		var fVal = parseFloat(tbSrcPrm.value);
+
+		toVal = ((fVal * fUnt.mult + fUnt.add) - tUnt.add) / tUnt.mult;		
+		if (isNaN(toVal)){
+			toVal = "";
+		} else {
+			toVal = fixDP(toVal, dp);
+		}
+	}
+
+	tbTgtPrm.value = toVal;
+}
+
+
+function synchIndexes(){
+	var srcLbl = ddSrcUnt.options[ddSrcUnt.selectedIndex].text;
+	var tgtLbl = ddTgtUnt.options[ddTgtUnt.selectedIndex].text;
+
+	var curItm = parseInt(ddSelItm.value);
+
+	var srcIdx = -1;
+	var tgtIdx = -1;
+
+	// First seek match for tgt
+	for (var tIdx in gaUntItm[curItm].units){
+		var tgtUnt = gaUntItm[curItm].units[tIdx];
+		if (tgtUnt.label == tgtLbl){
+			// See if we can find a src that matches this tgt type
+			for (var sIdx in gaUntItm[curItm].units){
+				var srcUnt = gaUntItm[curItm].units[sIdx];
+				if ((srcUnt.label == srcLbl) && (srcUnt.type == tgtUnt.type)){
+					tgtIdx = parseInt(tIdx);
+					srcIdx = parseInt(sIdx);
+					break;
+				}
+			}
+		}
+
+		if (srcIdx > -1 && tgtIdx > -1){
+			hfSrcIdx.value = srcIdx;
+			hfTgtIdx.value = tgtIdx;
+			break;
+		}
+	}
+}
+
+function addUnitsToList( ddCtrl, curItm, untPrp, untTyp ){
+	for (var idx in gaUntItm[curItm].units){
+		var curUnt = gaUntItm[curItm].units[idx];
+		if ((curUnt.prop == untPrp) && 
+			(!selectHasEntry( ddCtrl, curUnt.label )) &&
+			(((typeof untTyp != "undefined") && (curUnt.type == untTyp)) || (typeof untTyp === "undefined"))){
+			ddCtrl.options[ddCtrl.options.length] = new Option(curUnt.label, idx);
+		}
+	}
+}
+
+function buildFromList( curItm ){
+	clearSelect( ddSrcUnt );
+
+	// Populate FROM drop down with 'pref' unit entries
+	addUnitsToList( ddSrcUnt, curItm, 'SI' );
+
+	// Return label of first entry
+	return ddSrcUnt.options[0].text;
+}
+
+function buildToList(){
+	var curItm = parseInt(ddSelItm.value);
+	var frmLbl = ddSrcUnt.options[ddSrcUnt.selectedIndex].text;
+
+	clearSelect( ddTgtUnt );
+
+	for (var idx in gaUntItm[curItm].units){
+		var curUnt = gaUntItm[curItm].units[idx];
+
+		if (curUnt.label == frmLbl){
+			addUnitsToList( ddTgtUnt, curItm, (curUnt.prop=="US"?"SI":"US"), curUnt.type );
+		}
+	}
+
+	synchIndexes();
+}
+
+
+function resetPnl(){
+	var cnvPnl = document.getElementById("cnvPnl");
+	cnvPnl.style.display = "none";
+	document.SI_Immuno_SI_form.decpts.selectedIndex = 1;
+	dp = 1;
+}
+
+
+function setConvertItem(){
+
+	var cnvPnl = document.getElementById("cnvPnl");
+
+	var curItm = parseInt(ddSelItm.value);
+	if (curItm > -1){
+		buildFromList( curItm );
+
+		buildToList();
+
+		// Setup "FROM" and "TO" units select handlers
+		ddSrcUnt.onchange = function(){
+			buildToList();
+			convertValues();
+		}
+		ddTgtUnt.onchange = function(){
+			synchIndexes();
+			convertValues();
+		}
+
+		// Display conversion panel
+		cnvPnl.style.display = "block";
+
+
+		// Synch width of FROM and TO drop downs to whichever is larger
+
+		ddSrcUnt.style.width = "auto";
+		ddTgtUnt.style.width = "auto";
+		var iSrcWdt = ddSrcUnt.offsetWidth;
+		var iTgtWdt = ddTgtUnt.offsetWidth;
+		if (iSrcWdt > iTgtWdt) {
+		ddTgtUnt.style.width = iSrcWdt+'px';
+		} else {
+		ddSrcUnt.style.width = iTgtWdt+'px';
+		}
+
+
+
+		// Enable TO unit selector
+		ddTgtUnt.removeAttribute('disabled');
+
+		// Make sure to_param dimensions match from_param
+		//tbTgtPrm.style.width = tbSrcPrm.offsetWidth+'px';
+		//tbTgtPrm.style.height = tbSrcPrm.offsetHeight+'px';
+
+		// Set focus to the FROM input
+		tbSrcPrm.value = "";
+		tbTgtPrm.value = "";
+		tbSrcPrm.focus();
+	} else {
+		cnvPnl.style.display = "none";
+	}
+}
+
+function initCalc(){
+
+	ddSelItm = document.getElementById("UCitem");
+	clearSelect( ddSelItm );
+
+	ddSrcUnt = document.getElementById("UCfrmUnt");
+	ddTgtUnt = document.getElementById("UCtoUnt");
+	tbSrcPrm = document.getElementById("from_param");
+	tbTgtPrm = document.getElementById("to_param");
+	hfSrcIdx = document.getElementById("hfSrcIdx");
+	hfTgtIdx = document.getElementById("hfTgtIdx");
+
+	ddSelItm.options[ddSelItm.options.length] = new Option('-- Choose item to convert --','-1');
+	for (objItm in gaUntItm){
+		var itmEnt = gaUntItm[objItm].name;
+		ddSelItm.options[ddSelItm.options.length] = new Option(itmEnt, objItm);
+	}
+
+	// Make sure to capture up and down arrows on select control
+	ddSelItm.onkeyup = function(e){
+		if ((e.keyCode===38)||(e.keyCode===40)){
+			setConvertItem();
+		}
+	}
+
+	ddSelItm.onchange = setConvertItem;
+	tbSrcPrm.onkeyup = convertValues;
+	tbSrcPrm.onkeypress = stripNonNumeric;
+}
+
+function loadQueryParams(thisqs){
+if (thisqs) alert('Data panel values cannot be transferred to this calculator.');
+return;
+}
+
+/* ]]> */
+initCalc();</script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://medilib.ir/assets/js/jquery.min.js"></script><script src="https://medilib.ir/assets/js/popper.min.js"></script><script src="https://medilib.ir/assets/js/bootstrap.min.js"></script><script src="https://medilib.ir/assets/js/classy-nav.min.js"></script><script src="https://medilib.ir/assets/js/owl.carousel.min.js"></script><script src="https://medilib.ir/assets/js/jquery.magnific-popup.min.js"></script><script src="https://medilib.ir/assets/js/jquery.counterup.min.js"></script><script src="https://medilib.ir/assets/js/waypoints.min.js"></script><script src="https://medilib.ir/assets/js/form-validator.min.js"></script><script src="https://medilib.ir/assets/js/contact-form-script.js"></script><script src="https://medilib.ir/assets/js/main.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WFDJ5JLM3Q"></script><script>
+    window.addEventListener("load", () => {
+
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function (registrations) {
+                //returns installed service workers
+                if (registrations.length) {
+                    for (let registration of registrations) {
+                        if (
+                            registration.active.scriptURL.startsWith("/serviceWorker.js") &&
+                            !registration.active.scriptURL.endsWith("/serviceWorker.js?v=18")
+                        ) {
+                            registration.unregister();
+                        }
+                    }
+                }
+            });
+            navigator.serviceWorker.register('/serviceWorker.js?v=18', {
+                scope: '/'
+            })
+                .then(function (registration) {
+                    console.log('Registration successful, scope is:', registration.scope);
+                })
+                .catch(function (error) {
+                    console.log('Service worker registration failed, error:', error);
+                });
+        }
+    });
+    const promptElement = document.querySelector('.pwaprompt');
+    const footerPromptElement = document.querySelector('#footerPromptElement');
+    const scrollTopElement = document.querySelector('.scrolltop');
+    // const installButton = promptElement.querySelector('.prompt__install');
+    const closeButton = promptElement.querySelector('.prompt__close');
+    let installEvent;
+
+    function setWithExpiry(key, value, seconds) {
+        const now = new Date()
+
+        // `item` is an object which contains the original value
+        // as well as the time when it's supposed to expire
+        const item = {
+            value: value,
+            expiry: now.getTime() + (seconds * 1000),
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+    }
+
+    function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+        // if the item doesn't exist, return null
+        if (!itemStr) {
+            return null
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+        // compare the expiry time of the item with the current time
+        if (now.getTime() > item.expiry) {
+            // If the item is expired, delete the item from storage
+            // and return null
+            localStorage.removeItem(key)
+            return null
+        }
+        return item.value
+    }
+
+    // checks if the localStorage item has been set
+    function getVisited() {
+        return getWithExpiry('install-prompt')
+        // return localStorage.getItem('install-prompt');
+    }
+
+    // sets the localStorage item
+    function setVisited() {
+        fiveDay = 5 * (24 * (60 * 60))
+        setWithExpiry('install-prompt', true, fiveDay)
+        // localStorage.setItem('install-prompt', true);
+    }
+
+    closeButton.addEventListener('click', () => {
+        // set localStorage to true
+        setVisited();
+
+        // hide the prompt banner
+        promptElement.style.display = 'none';
+        scrollTopElement.style.bottom = '30px';
+
+        // installEvent = null;
+    });
+    // Detects if device is on iOS
+    const isIos = () => {
+        const userAgent = window.navigator.userAgent.toLowerCase();
+        return /iphone|ipad|ipod/.test(userAgent);
+    }
+    // Detects if device is in standalone mode
+    const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+
+    // Checks if should display install popup notification:
+    if (isIos() && !isInStandaloneMode()) {
+        if (!getVisited()) {
+            promptElement.style.display = 'block';
+            scrollTopElement.style.bottom = '80px';
+        }
+        footerPromptElement.style.display = 'block';
+    }
+
+
+    // this event will only fire if the user does not have the pwa installed
+    window.addEventListener('beforeinstallprompt', (event) => {
+        event.preventDefault();
+        // if no localStorage is set, first time visitor
+        if (!getVisited()) {
+            // show the prompt banner
+            promptElement.style.display = 'block';
+            scrollTopElement.style.bottom = '80px';
+
+            // store the event for later use
+
+        }
+        footerPromptElement.style.display = 'block';
+        installEvent = event;
+
+    });
+    $(document).on('click', '.prompt__install', function () {
+        promptElement.style.display = 'none';
+        scrollTopElement.style.bottom = '30px';
+
+        if (isIos() && !isInStandaloneMode()) {
+            setVisited();
+            $('#iphoneAddToHomeScreen').modal()
+        } else {
+
+            // trigger the prompt to show to the user
+            installEvent.prompt();
+            // check what choice the user made
+            installEvent.userChoice.then((choice) => {
+                // if the user declined, we don't want to show the button again
+                // set localStorage to true
+                if (choice.outcome !== 'accepted') {
+                    setVisited();
+                }
+
+                installEvent = null;
+            });
+        }
+
+    });
+</script><script>
+
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-WFDJ5JLM3Q');
+</script><script>
+      var topicReferences=[];
+
+      function refrence(id) {
+          var myReference=Object.values(topicReferences)[id];
+          console.log(myReference);
+          $("#pmid").attr("href",myReference['pmid']);
+          if (typeof myReference['description'] !== 'undefined' && myReference['description']!="") {
+            $("#myModalLabel34").html('Description : <p>' + myReference['description'] + "</p>");
+          }
+          if (typeof myReference['authors'] !== 'undefined' && myReference['authors']!="") {
+            $("#referenceAuthors").html('Authors : <p>' + myReference['authors'] + "</p>");
+          }
+          if (typeof myReference['source'] !== 'undefined' && myReference['source']!="") {
+            $("#referenceSource").html('Source : <p>' + myReference['source'] + "</p>");
+          }
+          if (typeof myReference['title'] !== 'undefined' && myReference['title']!="") {
+            $("#referenceTitle").html('Title : <p>' + myReference['title'] + "</p>");
+          }
+          if (typeof myReference['affiliation'] !== 'undefined' && myReference['affiliation']!="") {
+            $("#referenceAffiliation").html('Affiliation : <p>' + myReference['affiliation'] + "</p>");
+          }
+      }
+  </script><script>
+
+      var screenHeight = screen.height;
+
+      if (screenHeight > 700) {
+        // $document.getElementById("Uptodate_image").style.width = "100% !important;";
+        // $('.Uptodate_image').css('width', '100% !important;');
+        console.log("more");
+      }else{
+        console.log(screenHeight);
+      }
+    $(document).scroll(function()  {
+      var y = $(this).scrollTop();
+      if (y > 100) {
+        $('.goback').fadeIn();
+        $('.buyPackage').fadeIn();
+        // alert(document.getElementById('main_menu').style.zIndex);
+        document.getElementById("uptodate-area").style.padding = "0px 0 0 0";
+        document.getElementById('main_menu').style.zIndex=1;
+         document.getElementById('main_menu').style.display="none";
+        document.getElementById('navbar_menu').style.marginTop="70px"
+        document.getElementById('uptodate-area').style.marginTop="0px"
+        document.getElementById('uptodate-area').style.zIndex=999;
+        console.log('down');
+      } else {
+        $('.goback').fadeOut();
+        $('.buyPackage').fadeOut();
+        document.getElementById("uptodate-area").style.padding = "0px 0 0 0";
+        document.getElementById('navbar_menu').style.marginTop="0px"
+        document.getElementById('main_menu').style.display="";
+        document.getElementById('uptodate-area').style.zIndex=0;
+        console.log('up');
+      }
+    });
+    function goBack() {
+      window.history.back();
+    }
+    function buyPackage() {
+      window.open("https://medilib.ir/userPanel/package/uptodate/index",'_blank');
+    }
+  </script></body>
 </html>
