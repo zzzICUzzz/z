@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Calculator IV total parenteral children</title>
+    <title>Calculator IV total parenteral nutrition children</title>
     <style>
         body {
             display: flex;
@@ -18,12 +18,13 @@
             margin-bottom: 1em;
         }
         #healthForm > div {
-            flex: 1 0 20%;
+            flex: 0 0 20%;
             margin: 0.5em;
         }
         input[type="button"] {
             padding: 1em;
             font-size: 1.2em;
+            background-color: crimson;
         }
         table {
             margin: auto;
@@ -204,7 +205,7 @@
             Cglu1 = (mglu1 / V2) * 100;
             Vtruyenglu = ((mglu1 * 1000) / InW ) / (24 * 60);
             Vtruyen2 = V2 / 24;
-            if (Cglu1 <= 0.125) {
+            if (Cglu1 <= 0.125 && ALTT1 <= 900) {
                 loaivein = "Đường truyền ngoại biên";
             } else {
                 loaivein = "Đường truyền trung tâm";
