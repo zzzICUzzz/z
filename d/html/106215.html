@@ -55,8 +55,12 @@
                 <td><input type="number" id="InY" name="InY"></td>
             </tr>
             <tr>
-                <td>Dịch đã có trong ngày (ml):</td>
+                <td>Dịch nhập (Kháng sinh, vận mạch,...) (ml):</td>
                 <td><input type="number" id="Vid" name="Vid" required></td>
+            </tr>
+            <tr>
+                <td>Dịch xuất (Nước tiểu, phân,...) (ml):</td>
+                <td><input type="number" id="Vexp" name="Vexp" required></td>
             </tr>
             <tr>
                 <td>Năng lượng trong ngày:</td>
@@ -156,6 +160,7 @@
             var InW = parseFloat(document.getElementById('InW').value);
             var InY = parseInt(document.getElementById('InY').value);
             var Vid = parseInt(document.getElementById('Vid').value);
+            var Vexp = document.getElementById('Vexp').value;
             // Check if InW and Vid are not empty
             if (InW === "" || Vid === "") {
                 alert("Vui lòng nhập đầy đủ cân nặng và dịch đã có trong ngày.");
@@ -164,6 +169,7 @@
             // Convert input values to numbers
             InW = parseFloat(InW);
             Vid = parseFloat(Vid);
+            Vexp = parseFloat(Vexp);
             var lipid = document.getElementById('lipid').value;
             var protein = document.getElementById('protein').value;
             var calcium = document.getElementById('calcium').value;
@@ -173,14 +179,14 @@
             var nacl = document.getElementById('nacl').value;
             var kcl = document.getElementById('kcl').value;
             // Perform calculations
-            var nclipid,V, V2, K, K1 , LP1, VLP1, VtruyenLP, Vtruyen2, Prt1, VPrt1, Vnacl10, Vkcl10, Vca, Vglu1, Kglu1, mglu1, Vglu10, Vglu30, ALTT1, Cglu1, loaivein;
+            var nclipid,V, V2, K, K1 , LP1, VLP1, VtruyenLP, Vtruyen2, Vexp, Prt1, VPrt1, Vnacl10, Vkcl10, Vca, Vglu1, Kglu1, mglu1, Vglu10, Vglu30, ALTT1, Cglu1, loaivein;
             
             if (InW <= 10) {
-                V = InW * 100;
+                V = Vexp + InW * 100;
             } else if (InW > 10 && InW <= 20) {
-                V = 1000 + (InW - 10) * 50;
+                V = Vexp + 1000 + (InW - 10) * 50;
             } else {
-                V = 1500 + (InW - 20) * 20;
+                V = Vexp + 1500 + (InW - 20) * 20;
             }
         
             if  (nltn == "0.6"){
