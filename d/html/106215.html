@@ -59,8 +59,17 @@
                 <td><input type="number" id="Vid" name="Vid" required></td>
             </tr>
             <tr>
-                <td>Dịch xuất (Nước tiểu, phân,...) (ml):</td>
+                <td>Dịch xuất (Hô hấp, da, nước tiểu, phân,...) (ml):</td>
                 <td><input type="number" id="Vexp" name="Vexp" required></td>
+            </tr>
+            <tr>
+                <td>Loại đường truyền</td>
+                <td>
+                    <select id="vein" name="vein">
+                        <option value="PVC">Đường truyền tĩnh mạch ngoại biên</option>
+                        <option value="CVC">Đường truyền tĩnh mạch trung tâm</option>
+                    </select>
+                </td>
             </tr>
             <tr>
                 <td>Năng lượng trong ngày:</td>
@@ -178,8 +187,9 @@
             var ncprotein = document.getElementById('ncprotein').value;
             var nacl = document.getElementById('nacl').value;
             var kcl = document.getElementById('kcl').value;
+            var vein = document.getElementById('vein').value;
             // Perform calculations
-            var nclipid,V, V2, K, K1 , LP1, VLP1, VtruyenLP, Vtruyen2, Vexp, Prt1, VPrt1, Vnacl10, Vkcl10, Vca, Vglu1, Kglu1, mglu1, Vglu10, Vglu30, ALTT1, Cglu1, loaivein;
+            var nclipid, vein ,V, V2, K, K1 , LP1, VLP1, VtruyenLP, Vtruyen2, Vexp, Prt1, VPrt1, Vnacl10, Vkcl10, Vca, Vglu1, Kglu1, mglu1, Vglu10, Vglu30, ALTT1, Cglu1, loaivein;
             
             if (InW <= 10) {
                 V = Vexp + InW * 100;
@@ -250,10 +260,10 @@
             Cglu1 = (mglu1 / V2) * 100;
             Vtruyenglu = ((mglu1 * 1000) / InW ) / (24 * 60);
             Vtruyen2 = V2 / 24;
-            if (Cglu1 <= 0.125 && ALTT1 <= 900) {
+            if (Cglu1 <= 0.125 && ALTT1 <= 900 && vein == "PVC") {
                 loaivein = "Đường truyền ngoại biên";
             } else {
-                loaivein = "Đường truyền trung tâm";
+                loaivein = "Ưu tiên đường truyền trung tâm";
             }
                     // Check for negative values and update loaivein if necessary
             var values = [V, K1, LP1, VLP1, VtruyenLP, Prt1, VPrt1, Vnacl10, Vkcl10, Vca, V2, Vglu1, Kglu1, mglu1, Vglu30, Vglu10, ALTT1, Cglu1, Vtruyenglu, Vtruyen2];
@@ -274,7 +284,7 @@
             row1.insertCell(2).innerHTML = Math.round(VLP1) + " ml";
             row1.insertCell(3).innerHTML = Math.round(VtruyenLP) + "ml/h";
             var row2 = table.insertRow(-1);
-            row2.insertCell(0).innerHTML = "Đường truyền 2"+"<br>" + "<span style='color:red;'>" + loaivein + "</span>";
+            row2.insertCell(0).innerHTML = "Đường truyền 2";
             row2.insertCell(1).innerHTML = "Tổng thể tích Vein 2";
             row2.insertCell(2).innerHTML = Math.round(V2) + " ml";
             row2.insertCell(3).innerHTML = Math.round(Vtruyen2) + "ml/h";
@@ -287,14 +297,18 @@
                 row.insertCell(2).innerHTML = Math.round(values[i]) + " ml";
             }
             var row8 = table.insertRow(-1);
-            row8.insertCell(0).innerHTML = "";
-            row8.insertCell(1).innerHTML = "Nồng độ Glucose:";
-            row8.insertCell(2).innerHTML = parseFloat(Cglu1.toFixed(1))+"%";
-            row8.insertCell(3).innerHTML = Math.round(Vtruyenglu) + "mg/kg/Phút";
+            row8.insertCell(0).innerHTML = "Loại đường truyền";
+            row8.insertCell(1).innerHTML =  "<span style='color:red;'>" + loaivein + "</span>";
+            row8.cells[1].colSpan = 3;            
             var row9 = table.insertRow(-1);
             row9.insertCell(0).innerHTML = "";
-            row9.insertCell(1).innerHTML = "Áp lực thẩm thấu";
-            row9.insertCell(2).innerHTML = Math.round(ALTT1) + " mOsmol/L";
+            row9.insertCell(1).innerHTML = "Nồng độ Glucose:";
+            row9.insertCell(2).innerHTML = parseFloat(Cglu1.toFixed(1))+"%";
+            row9.insertCell(3).innerHTML = Math.round(Vtruyenglu) + "mg/kg/Phút";
+            var row10 = table.insertRow(-1);
+            row10.insertCell(0).innerHTML = "";
+            row10.insertCell(1).innerHTML = "Áp lực thẩm thấu";
+            row10.insertCell(2).innerHTML = Math.round(ALTT1) + " mOsmol/L";
 
         }
         
